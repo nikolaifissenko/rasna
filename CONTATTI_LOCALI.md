@@ -11,6 +11,11 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Miriam (e il figlio) | Affettati | il figlio produce gli affettati |
 | Costantino | Formaggi | esperienza casaro |
 | Renzo | Lavorazione del cuoio | esperienza borse/cinte fatte a mano |
+| Francesco Lierati | Da definire | da contattare |
+| La Torretta | Possibile partner (ristorazione/locale) | da contattare |
+| Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
+| Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
+| Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
