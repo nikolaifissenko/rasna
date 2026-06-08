@@ -82,8 +82,6 @@ Prima di ogni altra cosa, bisogna sedersi e definire insieme:
 2. Come dividere profitti e decisioni
 3. Come dovrebbe essere il primo viaggio pilota, e quando organizzarlo
 
-Da qui parte tutto il resto.
-
 ---
 
 *Questo è un punto di partenza per la conversazione — non un piano definitivo. L'obiettivo è costruirlo insieme, partendo da ciò che solo chi conosce davvero Blera e la sua gente può sapere.*
