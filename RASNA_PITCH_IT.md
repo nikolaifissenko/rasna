@@ -73,7 +73,7 @@ Un risultato davvero solido per un progetto gestito in poche settimane mirate di
 - **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, Nonna, B&B partner e contatti per la logistica e i trasporti
 - **Un accordo semplice e chiaro tra i partner** — su come dividere ruoli, decisioni e profitti (questo è il primo passo, prima di qualunque altra cosa)
 - **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la nostra storia e i materiali di presentazione
-- **Un investimento iniziale modesto** (circa €4.500–€11.500 in totale) — costituzione legale, licenze, un sito semplice, marketing
+- **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendoci d'accordo con le persone e le attività del territorio, non investendo capitale
 
 ## 7. La prima conversazione da fare
 
