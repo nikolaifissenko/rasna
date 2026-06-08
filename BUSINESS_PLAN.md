@@ -14,6 +14,10 @@ Small-group immersive travel experiences in and around Blera (northern Lazio, It
 - **December:** Italian Christmas traditions (food, customs, family rituals)
 - **January–May:** artichoke harvest (Carciofo Romanesco IGP) and seasonal cooking
 
+**Artisan experiences (not seasonal — can anchor or complement a trip year-round):**
+- A morning with a local cheesemaker — watching and helping make cheese, tasting straight from the source
+- A visit to a local "affettati" (cured meats) producer — seeing how salumi are made and cured the traditional way, with a tasting
+
 This calendar is the backbone of the business: it lets us run small-group trips across all 12 months — rather than concentrating everything into a few peak weeks — while keeping every activity tied to something genuinely happening on the land at that moment.
 
 **Local festivals and events — built-in marketing moments:** the Blera area already has a rich calendar of community celebrations that align naturally with the agricultural calendar above and add real festive energy to a trip:

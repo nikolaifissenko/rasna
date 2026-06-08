@@ -37,6 +37,10 @@ Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, costruito attorn
 - **Dicembre (inverno)** — Tradizioni del Natale italiano: cibo, usanze familiari, riti
 - **Gennaio–Maggio (inverno-primavera)** — Raccolta dei carciofi (Carciofo Romanesco IGP) e cucina tipica della stagione
 
+**Esperienze artigianali (non legate a una stagione — possono arricchire qualsiasi viaggio durante tutto l'anno):**
+- Una mattinata con un casaro del territorio — vedere e partecipare alla produzione del formaggio, con degustazione
+- Una visita da un produttore locale di affettati — scoprire come si preparano e si stagionano i salumi secondo la tradizione, con degustazione
+
 In questo modo, **non esiste un "periodo morto"**: ogni mese dell'anno ha una sua attività agricola autentica da offrire, e possiamo costruire un calendario di viaggi distribuito lungo tutti i 12 mesi, anziché concentrato in poche settimane.
 
 **E poi ci sono le feste e gli eventi del paese — momenti che il territorio crea già da solo:**
