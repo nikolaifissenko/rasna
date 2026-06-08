@@ -17,6 +17,7 @@ Small-group immersive travel experiences in and around Blera (northern Lazio, It
 **Artisan experiences (not seasonal — can anchor or complement a trip year-round):**
 - A morning with a local cheesemaker — watching and helping make cheese, tasting straight from the source
 - A visit to a local "affettati" (cured meats) producer — seeing how salumi are made and cured the traditional way, with a tasting
+- A hands-on session with a local leather craftsman — guests make and take home their own bag or belt, hand-worked under his guidance
 
 This calendar is the backbone of the business: it lets us run small-group trips across all 12 months — rather than concentrating everything into a few peak weeks — while keeping every activity tied to something genuinely happening on the land at that moment.
 
