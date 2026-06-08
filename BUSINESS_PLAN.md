@@ -4,12 +4,17 @@
 
 Small-group immersive travel experiences in and around Blera (northern Lazio, Italy), giving international tourists genuine participation in local seasonal life — not a sightseeing tour, but a "live like a local for a few days" experience.
 
-**Core seasonal experiences:**
-- August: tomato sauce making (passata day)
-- Autumn: olive harvest and oil pressing
-- Autumn/Winter: wine harvest and winemaking
-- December: Italian Christmas traditions (food, customs, family rituals)
-- Spring: planting season, traditional pig butchering and curing
+**Year-round agricultural calendar (one signature activity per period — no "dead season"):**
+- **March–June:** wild asparagus foraging in the Tuscia woods (a real local Easter-season tradition), spring planting, traditional pig butchering and curing
+- **June–July:** wheat harvest, following local tradition
+- **July–August:** tomato harvest and "sauce day" (passata) — pick, cook, preserve, all in one day, the way it's always been done
+- **Late August–September:** hazelnut harvest — the Tuscia's signature crop (~40% of Italy's national production)
+- **September–October:** grape harvest (vendemmia) and cellar visits
+- **October–December:** olive harvest, oil pressing, and "panonto" lunch cooked by Nonna in the field (the Italian "BBQ")
+- **December:** Italian Christmas traditions (food, customs, family rituals)
+- **January–May:** artichoke harvest (Carciofo Romanesco IGP) and seasonal cooking
+
+This calendar is the backbone of the business: it lets us run small-group trips across all 12 months — rather than concentrating everything into a few peak weeks — while keeping every activity tied to something genuinely happening on the land at that moment.
 
 **Supporting elements:** guided exploration of Etruscan ruins, rock-cut tombs, the Via Clodia, and the surrounding Lazio countryside.
 

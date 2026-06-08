@@ -61,7 +61,7 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 - Expect to reinvest much of this into building the website, marketing, and operations
 
 ### Year 2 — Established calendar (Phases 4–5)
-- 2–3 seasonal experiences running, roughly 1 group per month in season (8-month season)
+- 4–5 experiences running across the year-round agricultural calendar (asparagus, tomatoes, hazelnuts, grape harvest, olives, Christmas, artichokes — see `BUSINESS_PLAN.md`), roughly 1 group every 4–6 weeks
 - Estimate: **8 groups × €11,200 = ~€89,600 revenue**, **~€46,000 gross profit**
 
 ### Year 3+ — Mature, steady-state (Phase 6 — deliberate ceiling)
@@ -69,7 +69,7 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 - Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€92,000 gross profit**
 - From here, growth in *income* should come from the levers in Section 6 (premium pricing, add-ons, off-season products) — not from running more groups through the town
 
-*(These are directional planning estimates, not guarantees — actual results depend on demand, seasonality, and operational capacity. Note that ~€92,000/year in gross profit at a deliberately capped scale is a strong outcome for a two-person partnership built around a few weeks of hosting per season.)*
+*(These are directional planning estimates, not guarantees — actual results depend on demand and operational capacity. Because the agricultural calendar covers all 12 months — asparagus and pig-curing in spring, wheat and tomatoes in summer, hazelnuts and grapes in late summer/autumn, olives and Christmas in winter, artichokes into the new year — there's no true "off-season": income can be spread across the whole year rather than concentrated in a few peak weeks. Note that ~€92,000/year in gross profit at a deliberately capped scale is a strong outcome for a two-person partnership built around roughly one trip every few weeks, year-round.)*
 
 ## 4. Startup costs (one-time, Phase 0–2)
 
@@ -98,7 +98,7 @@ Since group volume is intentionally capped, income growth should come from incre
 - **Premium pricing over time:** as reputation, reviews, and demand build, raise the price (€1,400 → €1,800+) rather than the headcount. Scarcity justifies — and often increases — willingness to pay.
 - **Premium add-ons:** private/extended stays, exclusive small-batch experiences (e.g., a Christmas-only or harvest-only departure with a higher price tag and even smaller group)
 - **Multi-region itineraries:** combine Blera with Rome, Lago di Vico, Villa Lante, Tarquinia, or the coast for a longer, higher-priced package — spreads value across the region rather than concentrating pressure on the town itself
-- **Off-season income (zero impact on Blera):** virtual experiences (e.g., a guided online cooking session with Nonna), or selling merchandise (olive oil, wine, sauces from partner families) to past guests — pure margin, no additional footfall
+- **Year-round product, zero extra footfall:** since the agricultural calendar already spans all 12 months, there's no true off-season to fill — but you can still add pure-margin extras with no additional visitor impact, e.g. virtual experiences (a guided online cooking session with Nonna) or merchandise (olive oil, wine, hazelnuts, sauces from partner families) sold to past guests
 - **B2B / high-value bookings:** culinary schools, small travel agencies, or corporate retreats booking an entire exclusive departure at a premium rate — fewer, larger-ticket bookings instead of more, smaller ones
 - **Brand & storytelling value:** a strong, well-told brand lets you be selective about *which* groups you accept (the right kind of traveler — respectful, curious, small-footprint) rather than accepting anyone who can pay — itself a form of protecting Blera
 
