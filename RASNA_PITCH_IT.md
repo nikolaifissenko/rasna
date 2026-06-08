@@ -26,12 +26,18 @@ Da soli, nessuno dei due potrebbe farlo. Insieme, è un progetto completo.
 
 ## 3. Come si presenta l'esperienza
 
-Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, costruito attorno a un'attività simbolo per ogni stagione:
+Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, costruito attorno a un'attività agricola simbolo per ogni periodo dell'anno — il calendario dei raccolti del territorio diventa il calendario stesso dei nostri viaggi, permettendo di lavorare **tutto l'anno**, non solo in alta stagione:
 
-- **Fine estate** — Raccolta delle olive, e pranzo preparato da Nonna nei campi (panonto, il "barbecue" all'italiana)
-- **Autunno** — Vendemmia e visite in cantina
-- **Inverno** — Tradizioni del Natale italiano: cibo, usanze familiari, riti
-- **Primavera** — Semina, lavorazione e conservazione tradizionale del maiale
+- **Marzo–Giugno (primavera)** — Raccolta degli asparagi selvatici nei boschi della Tuscia (una vera tradizione locale, legata alla cucina pasquale), semina, e lavorazione tradizionale del maiale
+- **Giugno–Luglio** — Mietitura del grano, secondo la tradizione del territorio
+- **Luglio–Agosto (estate)** — Raccolta dei pomodori e giornata della salsa: si raccoglie, si cucina, si conserva, tutto insieme, come si è sempre fatto
+- **Fine Agosto–Settembre** — Raccolta delle nocciole, prodotto simbolo della Tuscia (40% della produzione nazionale italiana)
+- **Settembre–Ottobre (vendemmia)** — Raccolta dell'uva e visite in cantina
+- **Ottobre–Dicembre (autunno)** — Raccolta delle olive, frangitura, e pranzo preparato da Nonna nei campi (panonto, il "barbecue" all'italiana)
+- **Dicembre (inverno)** — Tradizioni del Natale italiano: cibo, usanze familiari, riti
+- **Gennaio–Maggio (inverno-primavera)** — Raccolta dei carciofi (Carciofo Romanesco IGP) e cucina tipica della stagione
+
+In questo modo, **non esiste un "periodo morto"**: ogni mese dell'anno ha una sua attività agricola autentica da offrire, e possiamo costruire un calendario di viaggi distribuito lungo tutti i 12 mesi, anziché concentrato in poche settimane.
 
 **E in ogni viaggio, sempre presenti:**
 - Passeggiate guidate alle tombe rupestri etrusche e lungo la Via Clodia
