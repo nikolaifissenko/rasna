@@ -84,10 +84,10 @@ These aren't separate attractions to manage — they're moments the town already
 2. Build repeatable operational checklists for each experience so it doesn't all depend on you being present every time.
 3. Start building a small bench of trained local hosts/guides so you can run more than one group per season.
 
-### Phase 6 — Grow (12+ months)
-1. Expand group capacity and frequency once demand and operations are proven.
-2. Explore adjacent towns/regions for additional seasonal offerings.
-3. Consider direct partnerships with travel agencies, culinary schools, or media (travel writers/influencers) for larger-scale exposure.
+### Phase 6 — Mature at a deliberate ceiling (12+ months)
+1. Settle into a steady-state rhythm of ~15–20 groups/year — a cap chosen on purpose to protect Blera's authenticity, not a limit to push past (see `FINANCIAL_PLAN.md` for the reasoning and numbers).
+2. Grow *income*, not volume: raise prices as reputation builds, add premium/exclusive departures, multi-region itineraries, and off-season-style extras (merchandise, virtual experiences) — see growth levers in `FINANCIAL_PLAN.md`.
+3. Be selective about which travel partners and guests you take on, prioritizing fit over scale.
 
 ## 6. Immediate next actions (this month)
 
