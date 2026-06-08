@@ -2,6 +2,19 @@
 
 Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo gruppo di persone disposte a partecipare al progetto. Non si tratta di "vendere" l'idea — si tratta di capire chi è davvero interessato e disponibile, e iniziare a costruire insieme.
 
+## 0. Lista delle persone già individuate
+
+| Nome | Ruolo nel progetto | Note |
+|---|---|---|
+| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice |
+| Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
+| Miriam (e il figlio) | Affettati | il figlio produce gli affettati |
+| Costantino | Formaggi | esperienza casaro |
+| Renzo | Lavorazione del cuoio | esperienza borse/cinte fatte a mano |
+
+*(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
+
+
 ## 1. Mappa le persone prima di parlarne
 
 Per ogni persona/attività che conosci, annota:
