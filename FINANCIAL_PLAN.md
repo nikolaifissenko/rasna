@@ -33,21 +33,24 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 | Item | Cost |
 |---|---|
 | Lodging (3 nights, partner BnB rate) | €170 |
-| Meals & local hosting fees (incl. Nonna's field lunch / panonto) | €220 |
+| Meals & local hosting fees (traditional-style cooking, panonto, etc. — fair pay for real hosts' time) | €220 |
 | Local guiding/transport (incl. day trips to Lago di Vico, Villa Lante, Tarquinia, etc.) | €140 |
-| Activity fees (olive picking access, equipment, etc.) | €90 |
+| Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
+| **Guest activity insurance** (hands-on/manual activities — confirmed as a real, necessary cost per Maria Grazia's feedback) | €40 |
 | Marketing & booking overhead (allocated) | €60 |
-| **Total cost per guest** | **~€680** |
+| **Total cost per guest** | **~€720** |
 
-**Gross margin per guest: ~€720 (≈51%)**
+**Gross margin per guest: ~€680 (≈49%)**
+
+**Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
 ## 2. Group economics
 
 Assume groups of **8 guests** average (range 6–10 — small enough to stay intimate, large enough to be efficient):
 
 - Revenue per group: 8 × €1,400 = **€11,200**
-- Cost per group: 8 × €680 = **€5,440**
-- **Gross profit per group: ~€5,760**
+- Cost per group: 8 × €720 = **€5,760**
+- **Gross profit per group: ~€5,440**
 
 This profit is split between you and Maria Grazia per your partnership agreement (e.g., 50/50, or weighted by role/investment — to be defined in Phase 0).
 
@@ -57,19 +60,19 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 
 ### Year 1 — Pilot & launch (Phases 1–3)
 - Run 1 pilot (discounted/break-even) + 3–4 paying groups in the second half of the year
-- Estimate: **4 groups × €11,200 = ~€44,800 revenue**, **~€23,000 gross profit**
+- Estimate: **4 groups × €11,200 = ~€44,800 revenue**, **~€21,800 gross profit**
 - Expect to reinvest much of this into building the website, marketing, and operations
 
 ### Year 2 — Established calendar (Phases 4–5)
 - 4–5 experiences running across the year-round agricultural calendar (asparagus, tomatoes, hazelnuts, grape harvest, olives, Christmas, artichokes — see `BUSINESS_PLAN.md`), roughly 1 group every 4–6 weeks
-- Estimate: **8 groups × €11,200 = ~€89,600 revenue**, **~€46,000 gross profit**
+- Estimate: **8 groups × €11,200 = ~€89,600 revenue**, **~€43,500 gross profit**
 
 ### Year 3+ — Mature, steady-state (Phase 6 — deliberate ceiling)
 - Settle into a sustainable rhythm: ~15–18 groups/year, never more — this is the target steady state, chosen to protect Blera rather than maximize throughput
-- Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€92,000 gross profit**
+- Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€87,000 gross profit**
 - From here, growth in *income* should come from the levers in Section 6 (premium pricing, add-ons, off-season products) — not from running more groups through the town
 
-*(These are directional planning estimates, not guarantees — actual results depend on demand and operational capacity. Because the agricultural calendar covers all 12 months — asparagus and pig-curing in spring, wheat and tomatoes in summer, hazelnuts and grapes in late summer/autumn, olives and Christmas in winter, artichokes into the new year — there's no true "off-season": income can be spread across the whole year rather than concentrated in a few peak weeks. Note that ~€92,000/year in gross profit at a deliberately capped scale is a strong outcome for a two-person partnership built around roughly one trip every few weeks, year-round.)*
+*(These are directional planning estimates, not guarantees — actual results depend on demand, operational capacity, and — importantly — on which candidate activities survive the validation process described in `BUSINESS_PLAN.md` Phase 1. The "12-month calendar" is a menu of possibilities, not a confirmed program; some activities (vendemmia, pig butchering, wheat harvest, "Nonna") may need to be dropped or reframed once we know what's realistically available, which could mean fewer but more concentrated departure windows than assumed here. The artisan experiences (cheese, affettati, leather) are the most reliably available building blocks and the safest to plan around early. Note that ~€87,000/year in gross profit at a deliberately capped scale is still a strong outcome for a two-person partnership — even if the calendar ends up more concentrated than the ideal 12-month spread.)*
 
 ## 4. Startup costs (one-time, Phase 0–2)
 
@@ -89,7 +92,7 @@ This is a relatively low-capital business to start — the main investment is ti
 
 ## 5. Break-even
 
-At ~€5,760 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
+At ~€5,440 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
 
 ## 6. Revenue growth levers that DON'T require running more groups
 

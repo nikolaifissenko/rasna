@@ -4,22 +4,35 @@
 
 Small-group immersive travel experiences in and around Blera (northern Lazio, Italy), giving international tourists genuine participation in local seasonal life — not a sightseeing tour, but a "live like a local for a few days" experience.
 
-**Year-round agricultural calendar (one signature activity per period — no "dead season"):**
-- **March–June:** wild asparagus foraging in the Tuscia woods (a real local Easter-season tradition), spring planting, traditional pig butchering and curing
-- **June–July:** wheat harvest, following local tradition
-- **July–August:** tomato harvest and "sauce day" (passata) — pick, cook, preserve, all in one day, the way it's always been done
+**Reality check (feedback from Maria Grazia, June 2026) — important constraints to design around:**
+- Several traditional activities described below are **rarely practiced anymore** at real scale in Blera today: vendemmia (now often done in a single day by whoever still does it), hand-harvesting wheat (essentially gone), and pig butchering (only a narrow Jan–Feb window, and increasingly hard to find people who still do it traditionally).
+- **Anyone who agrees to host an activity will reasonably expect to be paid** — this isn't a favor economy, it's real work and real time, and should be budgeted as such (already reflected in `FINANCIAL_PLAN.md`'s per-guest cost breakdown).
+- **Insurance for guests participating in hands-on activities is a real, non-negotiable cost** — manual work (harvesting, butchering, leatherwork, etc.) carries injury risk; this needs its own line item and to be confirmed with the commercialista/insurer before any activity is offered.
+- **A genuine "Nonna" — elderly, traditional, available long-term — is increasingly rare**, and relying on one specific person is fragile (availability, health, longevity). The honest, sustainable framing is to market experiences **"in the tradition of the nonne"** rather than promising a specific real grandmother — true to the spirit, without overpromising or depending on one irreplaceable person.
+
+**The implication:** the calendar below should be treated as a **menu of possibilities to validate one by one** — not a guaranteed year-round program. Some activities may need to be dropped, replaced, or reframed (e.g., "a day of vendemmia" rather than "the full grape season", "traditional-style cooking" rather than "Nonna's house") once we know who is realistically willing and able to host them, and at what cost. This validation is exactly what Phase 1 (below) is for.
+
+**Year-round agricultural calendar — candidate activities to validate (not a finished program):**
+- **March–June:** wild asparagus foraging in the Tuscia woods (a real, still-living local Easter-season tradition — strong candidate), spring planting
+- **January–February only, narrow window:** traditional pig butchering and curing — *to validate: does anyone still do this the traditional way, and would they host guests?*
+- **July–August:** tomato harvest and "sauce day" (passata) — still commonly done in family settings; good candidate
 - **Late August–September:** hazelnut harvest — the Tuscia's signature crop (~40% of Italy's national production)
-- **September–October:** grape harvest (vendemmia) and cellar visits
-- **October–December:** olive harvest, oil pressing, and "panonto" lunch cooked by Nonna in the field (the Italian "BBQ")
-- **December:** Italian Christmas traditions (food, customs, family rituals)
+- **A single day in September–October:** vendemmia (grape harvest) — frame as "a day of harvest", not an extended season, since it's now typically done in one day by whoever still does it; cellar visits remain a strong, more reliably available activity (see Cantine Festival below)
+- **October–December:** olive harvest and oil pressing — still widely practiced; one of the most reliable seasonal anchors
+- **December:** Italian Christmas traditions (food, customs, family rituals) — frame around real local customs and food, not a specific staged scene
 - **January–May:** artichoke harvest (Carciofo Romanesco IGP) and seasonal cooking
+- ~~Wheat harvest by hand~~ — **dropped**: no longer practiced; not viable as an authentic activity
 
-**Artisan experiences (not seasonal — can anchor or complement a trip year-round):**
-- A morning with a local cheesemaker — watching and helping make cheese, tasting straight from the source
-- A visit to a local "affettati" (cured meats) producer — seeing how salumi are made and cured the traditional way, with a tasting
-- A hands-on session with a local leather craftsman — guests make and take home their own bag or belt, hand-worked under his guidance
+**Cooking experiences — reframed:** rather than promising "Nonna's house", market these as **"cooking in the tradition of the nonne"** — e.g., a field lunch or panonto cooked in the traditional style by a local host (who may or may not be an actual grandmother). This stays true to the spirit guests are paying for, while not depending on — or overpromising — one specific, hard-to-find, hard-to-retain person.
 
-This calendar is the backbone of the business: it lets us run small-group trips across all 12 months — rather than concentrating everything into a few peak weeks — while keeping every activity tied to something genuinely happening on the land at that moment.
+**Artisan experiences (not seasonal — can anchor or complement a trip year-round, and don't depend on agricultural timing or a "Nonna"; among the most reliable building blocks of the offer):**
+- A morning with a local cheesemaker (Costantino) — watching and helping make cheese, tasting straight from the source
+- A visit to a local "affettati" (cured meats) producer (Miriam's son) — seeing how salumi are made and cured the traditional way, with a tasting
+- A hands-on session with a local leather craftsman (Renzo) — guests make and take home their own bag or belt, hand-worked under his guidance
+
+These artisan experiences are especially valuable right now: they're **available year-round, don't depend on agricultural seasons or a specific elderly host, and the people are already identified** (see `CONTATTI_LOCALI.md`). They should likely anchor the first pilot, while the agricultural activities are validated one at a time.
+
+This calendar is the backbone of the business — but it only works if it's built from **what's genuinely available**, validated person by person, rather than designed first and staffed later. Better to launch with 3–4 rock-solid, real experiences than to promise twelve months of activities that turn out to be difficult to deliver.
 
 **Local festivals and events — built-in marketing moments:** the Blera area already has a rich calendar of community celebrations that align naturally with the agricultural calendar above and add real festive energy to a trip:
 - **June:** Corpus Domini celebrations
@@ -58,10 +71,12 @@ These aren't separate attractions to manage — they're moments the town already
 3. Define who owns what: she owns local relationships/operations on the ground, you own marketing/sales/international guest relations.
 
 ### Phase 1 — Validate and design the offer (1–2 months)
-1. Pick ONE seasonal experience to pilot first (recommend: tomato sauce in August — closest, vivid, easy to film/market).
-2. Map out exactly what a 3-day pilot itinerary looks like hour by hour: who hosts, where guests sleep, what they eat, what they do.
-3. Identify and informally confirm 2–3 willing local families/artisans and 1–2 BnB/hotel partners for lodging.
-4. Price the pilot: calculate true costs (food, hosting fees to families, lodging, your time, transport) and set a price with margin.
+1. **Validate activities one by one before designing around them** — go through the candidate calendar above and confirm, for each: is there a real person willing to host it, what would they expect to be paid, and how often could they realistically do it? Drop or reframe anything that doesn't check out (this is where Maria Grazia's local knowledge is essential — she already flagged several to look at carefully: vendemmia, pig butchering, wheat harvest, "Nonna").
+2. Start the pilot design from the **most reliable building blocks already identified** — the artisan experiences (Costantino/cheese, Miriam's son/affettati, Renzo/leather), which don't depend on season or a hard-to-find host. Pick ONE to anchor the first pilot, plus one agricultural activity that's currently in season and confirmed available.
+3. Map out exactly what a 3-day pilot itinerary looks like hour by hour: who hosts, where guests sleep, what they eat, what they do.
+4. Identify and informally confirm 2–3 willing local hosts/artisans and 1–2 BnB/hotel partners for lodging — and agree on **fair compensation with each of them up front** (not as an afterthought).
+5. **Get an insurance quote for guest participation in hands-on activities** before running anything live — this is a real cost and a real liability question, not optional (loop in the commercialista/insurer early).
+6. Price the pilot: calculate true costs (hosting fees, food, lodging, insurance, your time, transport) and set a price with margin.
 
 ### Phase 2 — Run a pilot with a small real group (2–4 months)
 1. Recruit a small pilot group — friends-of-friends, past travel contacts, or a modest paid trial group (discounted in exchange for honest feedback and photos/testimonials).

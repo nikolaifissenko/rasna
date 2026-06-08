@@ -7,7 +7,7 @@
 
 ## 1. L'idea, in una frase
 
-Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — non semplicemente visitare — il ritmo autentico di un piccolo paese italiano**: raccogliere le olive, mangiare il panonto preparato da Nonna nei campi, camminare tra le tombe etrusche, esplorare il Lago di Vico, Villa Lante, Tarquinia, Viterbo, la costa — guidati da persone che questa vita la vivono davvero.
+Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — non semplicemente visitare — il ritmo autentico di un piccolo paese italiano**: raccogliere le olive, mangiare il panonto cucinato sul fuoco secondo la tradizione delle nonne, camminare tra le tombe etrusche, esplorare il Lago di Vico, Villa Lante, Tarquinia, Viterbo, la costa — guidati da persone che questa vita la vivono davvero.
 
 Non un tour in pullman. Non una lista di cose da vedere. Pochi giorni indimenticabili, da ospiti nella vita vera di qualcuno.
 
@@ -19,25 +19,25 @@ I viaggiatori internazionali sono stanchi di esperienze "autentiche" affollate e
 
 | | Cosa porta chi conosce il territorio | Cosa porta chi ha l'esperienza internazionale |
 |---|---|---|
-| **Conoscenza locale** | Relazioni profonde — famiglie, aziende agricole, B&B, Nonna, artigiani, autisti, tutte le persone che rendono vera l'esperienza | Vive il ritmo quotidiano di Blera; sa distinguere ciò che è davvero autentico da ciò che è costruito |
+| **Conoscenza locale** | Relazioni profonde — famiglie, aziende agricole, B&B, artigiani (casaro, affettati, cuoio), autisti, tutte le persone che rendono vera l'esperienza | Vive il ritmo quotidiano di Blera; sa distinguere ciò che è davvero autentico da ciò che è costruito |
 | **Visione internazionale** | Capacità di raggiungere un pubblico internazionale, marketing, comunicazione con gli ospiti, struttura del business e logistica | Sa come raccontare e presentare questa storia perché chi viene da fuori ne capisca il valore e sia disposto a pagarlo |
 
 Da soli, nessuno dei due potrebbe farlo. Insieme, è un progetto completo.
 
 ## 3. Come si presenta l'esperienza
 
-Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, costruito attorno a un'attività agricola simbolo per ogni periodo dell'anno — il calendario dei raccolti del territorio diventa il calendario stesso dei nostri viaggi, permettendo di lavorare **tutto l'anno**, non solo in alta stagione:
+Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, costruito attorno a un'attività simbolo per ogni periodo dell'anno. Questo è un **menu di possibilità da validare insieme, una per una** — sappiamo bene che alcune tradizioni si stanno perdendo (vendemmia ridotta a una giornata, lavorazione del maiale sempre più rara e legata a gennaio-febbraio, mietitura a mano ormai introvabile): per questo partiamo da ciò che è realisticamente disponibile oggi, e costruiamo il calendario insieme a chi conosce davvero chi c'è ancora e chi si presterebbe:
 
-- **Marzo–Giugno (primavera)** — Raccolta degli asparagi selvatici nei boschi della Tuscia (una vera tradizione locale, legata alla cucina pasquale), semina, e lavorazione tradizionale del maiale
-- **Giugno–Luglio** — Mietitura del grano, secondo la tradizione del territorio
-- **Luglio–Agosto (estate)** — Raccolta dei pomodori e giornata della salsa: si raccoglie, si cucina, si conserva, tutto insieme, come si è sempre fatto
+- **Marzo–Giugno (primavera)** — Raccolta degli asparagi selvatici nei boschi della Tuscia (tradizione ancora viva, legata alla cucina pasquale — ottimo punto di partenza)
+- **Gennaio–Febbraio (finestra stretta, da verificare)** — Lavorazione tradizionale del maiale, se troviamo chi ancora la pratica
+- **Luglio–Agosto (estate)** — Raccolta dei pomodori e giornata della salsa: si raccoglie, si cucina, si conserva, tutto insieme, come si fa ancora in molte famiglie
 - **Fine Agosto–Settembre** — Raccolta delle nocciole, prodotto simbolo della Tuscia (40% della produzione nazionale italiana)
-- **Settembre–Ottobre (vendemmia)** — Raccolta dell'uva e visite in cantina
-- **Ottobre–Dicembre (autunno)** — Raccolta delle olive, frangitura, e pranzo preparato da Nonna nei campi (panonto, il "barbecue" all'italiana)
+- **Una giornata, a Settembre–Ottobre** — Vendemmia (oggi si fa ormai in un solo giorno, da chi ancora la pratica) e visite in cantina
+- **Ottobre–Dicembre (autunno)** — Raccolta delle olive, frangitura, e panonto cucinato sul fuoco secondo la tradizione (il "barbecue" all'italiana)
 - **Dicembre (inverno)** — Tradizioni del Natale italiano: cibo, usanze familiari, riti
 - **Gennaio–Maggio (inverno-primavera)** — Raccolta dei carciofi (Carciofo Romanesco IGP) e cucina tipica della stagione
 
-**Esperienze artigianali (non legate a una stagione — possono arricchire qualsiasi viaggio durante tutto l'anno):**
+**Esperienze artigianali — il punto di partenza più solido:** non dipendono da una stagione né da una persona difficile da trovare, e le persone sono già individuate. Sono probabilmente la base più sicura su cui costruire il primo viaggio pilota:
 - Una mattinata con un casaro del territorio — vedere e partecipare alla produzione del formaggio, con degustazione
 - Una visita da un produttore locale di affettati — scoprire come si preparano e si stagionano i salumi secondo la tradizione, con degustazione
 - Un laboratorio con un artigiano del cuoio del territorio — gli ospiti realizzano con le proprie mani, sotto la sua guida, una borsa o una cintura da portare a casa
@@ -75,20 +75,20 @@ In altre parole: questo approccio rende Blera *più* preziosa, senza renderla *p
 
 *(Stime da affinare insieme una volta avviato un progetto pilota — ma questa è la struttura:)*
 
-**Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti)
-**Costo per ospite:** ~€680 → **~€720 di profitto per ospite**
-**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.760 di profitto**, da suddividere secondo l'accordo di partnership
+**Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti, assicurazione)
+**Costo per ospite:** ~€720 (include compensi equi a chi ospita le attività e assicurazione per le attività manuali) → **~€680 di profitto per ospite**
+**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto**, da suddividere secondo l'accordo di partnership
 
 **Percorso realistico:**
-- **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€23.000 di profitto
-- **Anno 2:** 8 gruppi all'anno → ~€46.000 di profitto
-- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€92.000/anno di profitto**, da condividere
+- **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€22.000 di profitto
+- **Anno 2:** 8 gruppi all'anno → ~€43.500 di profitto
+- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto**, da condividere
 
 Un risultato davvero solido per un progetto gestito in poche settimane mirate di accoglienza a stagione — non un lavoro a tempo pieno tutto l'anno.
 
 ## 6. Cosa serve per iniziare
 
-- **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, Nonna, B&B partner e contatti per la logistica e i trasporti
+- **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, B&B partner e contatti per la logistica e i trasporti — partendo da chi è già stato individuato (es. Costantino, Miriam, Renzo)
 - **Un accordo semplice e chiaro tra i partner** — su come dividere ruoli, decisioni e profitti (questo è il primo passo, prima di qualunque altra cosa)
 - **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la nostra storia e i materiali di presentazione
 - **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendoci d'accordo con le persone e le attività del territorio, non investendo capitale
