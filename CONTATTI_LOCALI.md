@@ -16,6 +16,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
+| Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
