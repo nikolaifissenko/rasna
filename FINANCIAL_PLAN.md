@@ -79,8 +79,11 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 | Licensing/insurance (tourism, food handling) | €500–€1,500 |
 | Website & branding | €500–€2,000 (or DIY for less) |
 | Pilot trip costs (discounted/break-even run) | €1,000–€2,000 |
+| Group transport (van purchase/lease, or via Maria Grazia's local contacts) | €0–€15,000 (see note below) |
 | Marketing launch (photos, video, ads) | €1,000–€3,000 |
 | **Total estimated startup investment** | **~€4,500–€11,500** |
+
+**Note on the van/transport:** before committing capital to buying a van, it's worth testing whether Maria Grazia's local logistics contacts can cover this — e.g., a local driver with their own vehicle hired per group, or a rental arrangement for departure weeks only. That keeps transport as a per-group variable cost (already included in the "local guiding/transport" line in Section 1) rather than a fixed asset you have to maintain, insure, and park year-round for a business that intentionally only runs ~15-20 trips a year. Buying a van only starts to make sense once you're running frequently enough that ownership is cheaper than hiring — worth revisiting in Year 2-3 once real per-group transport costs are known. If you do buy, factor in insurance, maintenance, and Italian commercial-vehicle/driver licensing requirements (to confirm with your commercialista).
 
 This is a relatively low-capital business to start — the main investment is time, relationship-building, and a modest marketing budget, not large fixed assets.
 
