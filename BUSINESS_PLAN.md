@@ -58,8 +58,8 @@ These aren't separate attractions to manage — they're moments the town already
 
 - **Differentiation:** most tour operators sell sights; you sell belonging and participation. Hard to replicate without genuine local ties.
 - **Two-founder fit:**
-  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community
-  - You — international audience know-how, marketing, logistics, English-speaking guest experience
+  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community; also contributes marketing content (photos and video from Blera throughout the year — an agreed part of her role, not an extra)
+  - You — international audience know-how, marketing, logistics, English-speaking guest experience, on-the-ground group accompaniment
 - **Asset-light start:** no need to own property; partner with existing BnBs/hotels for lodging, and local families/artisans for the experiences themselves.
 
 ## 3. Target customers

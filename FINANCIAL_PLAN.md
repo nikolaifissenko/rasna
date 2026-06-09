@@ -107,14 +107,18 @@ Since group volume is intentionally capped, income growth should come from incre
 - **B2B / high-value bookings:** culinary schools, small travel agencies, or corporate retreats booking an entire exclusive departure at a premium rate — fewer, larger-ticket bookings instead of more, smaller ones
 - **Brand & storytelling value:** a strong, well-told brand lets you be selective about *which* groups you accept (the right kind of traveler — respectful, curious, small-footprint) rather than accepting anyone who can pay — itself a form of protecting Blera
 
-## 7. Partnership split — to agree before the pilot
+## 7. Partnership split — **CONCORDATO: 50/50**
 
-**Proposta di Maria Grazia (giugno 2026):** percentuale più alta a chi accompagna il gruppo ogni giorno, data la gestione linguistica e la presenza continua con gli ospiti. Maria Grazia si occuperà degli accordi con i fornitori locali, della presenza nell'oliveto, e del pranzo campestre (panonto). Gli aperitivi/caffè presso il suo locale saranno fatturati separatamente al gruppo a prezzo dedicato.
+**Decisione presa (giugno 2026):** ripartizione 50/50 sul profitto netto per gruppo. Motivazione: i contributi sono complementari e di pari valore — senza le relazioni locali e la fiducia costruita da Maria Grazia nel territorio il prodotto non esiste; senza il canale internazionale, il marketing e la gestione degli ospiti non arriva nessuno. Due metà che si incastrano.
 
-**Da definire esplicitamente tra i partner:**
-- Percentuale esatta sulla quota di profitto netto per gruppo
-- Come vengono trattate le voci che Maria Grazia gestisce direttamente (es. aperitivi al suo locale, pranzo campestre) — come costo di fornitura a parte, o compensate nella quota di partnership?
-- Chi copre le spese vive in caso di gruppo non completo
+**Ruoli concordati:**
+- **Maria Grazia** — punto fermo sul territorio: relazioni con fornitori e comunità locale, coordinamento attività, presente nell'oliveto e per il panonto, aperitivi/caffè al suo locale (fatturati separatamente come fornitore). **Contributo al marketing: foto e video da Blera durante l'anno** — contenuti stagionali, vita del paese, attività. Parte integrante del ruolo, non un favore extra.
+- **Nikolai** — lato internazionale: marketing, vendite, comunicazione con gli ospiti in inglese, accompagnamento del gruppo durante il viaggio, logistica.
+
+**Regola sulle spese prima della divisione:**
+- Le spese dirette del viaggio (fornitori, trasporto, assicurazione) escono dal ricavo lordo *prima* di dividere il profitto
+- Il locale di Maria Grazia per aperitivi/caffè viene pagato come fornitore *prima* della divisione
+- Le spese anticipate da uno dei due vengono rimborsate prima della divisione
 
 ---
 
