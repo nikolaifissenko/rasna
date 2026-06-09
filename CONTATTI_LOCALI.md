@@ -6,11 +6,15 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 
 | Nome | Ruolo nel progetto | Note |
 |---|---|---|
-| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice |
+| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice; gestisce accordi con i fornitori locali, presente nell'oliveto e per il pranzo campestre (panonto) |
 | Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
-| Emiliano (figlio di Miriam) | Affettati | da risentire: capire quanto sarebbe interessato e se le dimostrazioni si possono fare tutto l'anno o solo in certi periodi |
+| Emiliano (figlio di Miriam) | Affettati | da risentire: capire quanto sarebbe interessato e se le dimostrazioni si possono fare tutto l'anno o solo in certi periodi — **costo da verificare** |
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — esperienza formaggi non più disponibile da questa fonte; valutare se cercare un altro casaro del territorio** |
-| Renzo | Lavorazione del cuoio (borse/cinte) | disponibilità alta — la dimostrazione potrebbe essere **gratuita**, dato che gli ospiti probabilmente acquisterebbero la sua merce dopo aver visto come la fa (vantaggioso per entrambi) |
+| Renzo | Lavorazione del cuoio (borse/cinte) | disponibilità alta — la dimostrazione potrebbe essere **gratuita**, dato che gli ospiti probabilmente acquisterebbero la sua merce; **costo da verificare/confermare** |
+| Pino | Da definire | citato da Maria Grazia tra i costi reali da verificare — **da chiarire ruolo e costo** |
+| **L'Olio di Blera** (frantoio) | **Frantoio per la frangitura delle olive** | **Preferito da Maria Grazia** rispetto a Colli Etruschi (Nicola): si trova sul terreno dell'agraria, in mezzo alla natura — esperienza più bella. Maria Grazia è stata presidente lì per 12 anni. **Da contattare: verificare se aprono il frantoio per il gruppo e a che costo** |
+| ~~Colli Etruschi (Nicola)~~ | ~~Frantoio (opzione alternativa)~~ | Sostituito da L'Olio di Blera come scelta preferenziale |
+| **Locale/bar di Maria Grazia** | **Aperitivi e caffè — location in piazzetta del centro storico** | Maria Grazia lo consiglia fortemente sulla base di 12 anni di esperienza con stranieri: location migliore, direttamente nella piazzetta del centro storico. **Farà un prezzo dedicato per il gruppo** — da includere nel preventivo come voce separata |
 | Maneggio Civitella Cesi | Passeggiate a cavallo | possibile attività complementare/escursione — da contattare per capire disponibilità e modalità con piccoli gruppi |
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
@@ -18,6 +22,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
+| **Tarquinia** | Escursione culturale | tariffe e orari facilmente verificabili sul sito ufficiale — da consultare per inserire il costo reale nel preventivo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 

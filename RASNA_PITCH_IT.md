@@ -36,6 +36,10 @@ Da soli, nessuno dei due potrebbe farlo. Insieme, è un progetto completo.
 
 *(Nota: l'esperienza dei formaggi con Costantino, purtroppo, non è più disponibile — è scomparso circa un anno fa. Da valutare se trovare un altro casaro del territorio disposto a ospitare gruppi.)*
 
+*(Nota sul frantoio: Maria Grazia porta le sue olive a **L'Olio di Blera** — il frantoio nuovo, situato sul terreno dell'agraria in mezzo alla natura. Preferito rispetto a Colli Etruschi (Nicola) sia per la location sia perché Maria Grazia è stata presidente lì per 12 anni. Da contattare per verificare disponibilità ad aprire per il gruppo e relativo costo.)*
+
+*(Nota sugli aperitivi: sulla base di 12 anni di esperienza con turisti stranieri, Maria Grazia consiglia fortemente aperitivi e caffè presso il suo locale in piazzetta — centro storico, location migliore. Farà un prezzo dedicato per il gruppo. Da includere come voce nel preventivo.)*
+
 **Questo è il programma reale da cui partire**: costruito su conversazioni dirette con le persone coinvolte, e aggiornato onestamente man mano che la realtà si chiarisce — non un calendario teorico di 12 mesi. Il resto del calendario stagionale (asparagi, vendemmia, Natale, carciofi, ecc.) resta un obiettivo a lungo termine da validare e aggiungere strada facendo, non un requisito per partire.
 
 ---

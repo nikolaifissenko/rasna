@@ -107,7 +107,37 @@ Since group volume is intentionally capped, income growth should come from incre
 - **B2B / high-value bookings:** culinary schools, small travel agencies, or corporate retreats booking an entire exclusive departure at a premium rate — fewer, larger-ticket bookings instead of more, smaller ones
 - **Brand & storytelling value:** a strong, well-told brand lets you be selective about *which* groups you accept (the right kind of traveler — respectful, curious, small-footprint) rather than accepting anyone who can pay — itself a form of protecting Blera
 
-## 7. Key assumptions to validate during the pilot
+## 7. Partnership split — to agree before the pilot
+
+**Proposta di Maria Grazia (giugno 2026):** percentuale più alta a chi accompagna il gruppo ogni giorno, data la gestione linguistica e la presenza continua con gli ospiti. Maria Grazia si occuperà degli accordi con i fornitori locali, della presenza nell'oliveto, e del pranzo campestre (panonto). Gli aperitivi/caffè presso il suo locale saranno fatturati separatamente al gruppo a prezzo dedicato.
+
+**Da definire esplicitamente tra i partner:**
+- Percentuale esatta sulla quota di profitto netto per gruppo
+- Come vengono trattate le voci che Maria Grazia gestisce direttamente (es. aperitivi al suo locale, pranzo campestre) — come costo di fornitura a parte, o compensate nella quota di partnership?
+- Chi copre le spese vive in caso di gruppo non completo
+
+---
+
+## 8. Costi reali da verificare (lista aperta — aggiornare man mano)
+
+Prima di fissare un listino definitivo, raccogliere preventivi reali per:
+
+| Voce | Stato |
+|---|---|
+| **Frantoio L'Olio di Blera** — disponibilità e costo per gruppo | da contattare |
+| **Renzo** — compenso per sessione borse/cuoio | da chiarire (potenzialmente gratuito se gli ospiti acquistano) |
+| **Emiliano** — compenso per dimostrazione affettati | da sentire |
+| **Pino** — ruolo e costo | da chiarire |
+| **Trasporto** — costo per gruppo (van noleggio o autista locale per ogni partenza) | **priorità alta** — impatta direttamente il margine |
+| **Aperitivi/caffè da Maria Grazia** — prezzo gruppo | da concordare con lei |
+| **Tarquinia** — biglietti ingresso | verificare sul sito ufficiale |
+| **Assicurazione attività manuali** — preventivo per ospiti | da richiedere al commercialista/assicuratore |
+
+**Nota Maria Grazia (giugno 2026):** verificare se a €850 a testa di costi ci si rientra bene — la stima attuale nel piano è ~€720, ma senza un costo reale del trasporto e degli aperitivi, il numero potrebbe salire. Meglio partire da costi reali prima di fissare il prezzo di vendita.
+
+---
+
+## 9. Key assumptions to validate during the pilot
 
 - Real per-guest costs (lodging, food, guiding, activity fees)
 - Achievable group size and how often you can realistically run experiences per season
