@@ -50,11 +50,11 @@ Smaller, more intimate. Home-style hospitality, garden terrace, local family fee
 |------|-------|------------------------|
 | Day 1 — Welcome dinner | Beccone Albergo | €240 |
 | Day 2 — Breakfast | Beccone Albergo | €60 |
-| Day 2 — Field lunch (at the mill) | Catered / grove host | €90 |
+| Day 2 — Panonto (BBQ sul campo, post-raccolta) | Grove / field | €90 |
 | Day 2 — Dinner | Beccone Albergo | €210 |
 | Day 3 — Breakfast | Beccone Albergo | €60 |
 | Day 3 — Lunch | Maria Grazia's kitchen / local host | €80 |
-| Day 3 — Dinner (light, post-affettati) | Beccone Albergo | €150 |
+| Day 3 — Dinner (light, post-affettati) | Pappetta (cantina) or La Torretta | €155 |
 | Day 4 — Breakfast | Beccone Albergo | €60 |
 | Day 4 — Lunch | Trattoria del Richiastro, Viterbo | €210 |
 | Day 4 — Dinner | Beccone Albergo | €210 |
@@ -115,7 +115,8 @@ Smaller, more intimate. Home-style hospitality, garden terrace, local family fee
 | 08:00 | Short drive or walk to the olive grove (5 min). Meet the landowner and family. Gloves and rakes distributed. | Olive grove, Blera territory |
 | 08:15 | **Olive harvest begins.** Lay nets, rake by hand, sort and clean. Maria Grazia explains varieties, tree age, how yield varies by year. Midway break with bread, oil, water at 10:30. | Olive grove |
 | 12:30 | Load crates. Drive to the **frantoio** (local oil press — Vetralla or Blera). Watch the full pressing cycle: washing, crushing, centrifuge separation. Taste fresh-pressed oil — green, peppery, intense. Each guest gets 1 bottle to take home. | Frantoio |
-| 14:00 | **Field lunch** on a long table outdoors (or inside the mill). Pane casereccio, olio appena franto, sale grosso, formaggi, prosciutto, vino. Simple and honest. | At the frantoio / grove |
+| 13:30 | Back to the grove or nearby field. Light the brace. **Panonto** — the traditional Lazio field BBQ. Pane casereccio from Blera sliced thick, grilled on the embers, rubbed with garlic, drenched in the oil they just pressed an hour ago. Salsicce alla brace, fettine di carne, verdure arrostite, vino locale. Guests cook alongside whoever is running the fire. | Grove / campo |
+| 15:00 | Digestivo, coffee, lay in the grass if the sun is out. | — |
 | 15:30 | Return to Beccone. Free afternoon. | Beccone Albergo |
 | 17:00 | Optional: walk to the **Etruscan necropolis** at the base of the ravine (15 min on foot). Maria Grazia explains the Rasna name origin and the Etruscan civilization. Free. | Blera necropolis |
 | 19:30 | **Dinner.** Acquacotta, tagliatelle al ragù, bistecca di manzo, patate arrosto, torta della nonna, vino della casa. | **Beccone Albergo** |
@@ -137,7 +138,7 @@ Smaller, more intimate. Home-style hospitality, garden terrace, local family fee
 | 15:00 | Visit to **Emiliano's** — tasting and guided explanation of his cured meats. How the animals are raised, the curing process, the role of salt and time. Full board: lonza, guanciale, coppa, salsiccia stagionata. Local wine to match each cut. | Emiliano's, Blera / surroundings |
 | 16:30 | Each guest takes home a vacuum-packed selection (~200g). | Emiliano's |
 | 17:00 | Return to Beccone. Free time. Sit on the terrace, read, nap. | Beccone Albergo |
-| 19:30 | **Dinner** — lighter evening after the tasting. Zuppa di legumi, bruschette varie, tagliere di affettati (Emiliano's), frutta di stagione, cantucci e vin santo. | **Beccone Albergo** |
+| 19:30 | **Dinner** — after the affettati tasting this afternoon, nobody needs a heavy meal. Two options depending on what's open: **Pappetta** (cantina) for wine and a tagliere underground, or **La Torretta** for a proper sit-down but lighter menu. Either way: vino locale, bruschette, zuppa, dolce. | **Pappetta or La Torretta** |
 
 ---
 
@@ -193,8 +194,8 @@ Smaller, more intimate. Home-style hospitality, garden terrace, local family fee
 | | Breakfast | Lunch | Dinner |
 |--|-----------|-------|--------|
 | **Day 1** | — (arrive 13:00) | — | Beccone Albergo |
-| **Day 2** | Beccone Albergo | Field lunch at the frantoio | Beccone Albergo |
-| **Day 3** | Beccone Albergo | Maria Grazia's kitchen | Beccone Albergo |
+| **Day 2** | Beccone Albergo | Panonto sul campo (grove) | Beccone Albergo |
+| **Day 3** | Beccone Albergo | Maria Grazia's kitchen | Pappetta (cantina) or La Torretta |
 | **Day 4** | Beccone Albergo | Trattoria del Richiastro, Viterbo | Beccone Albergo |
 | **Day 5** | Beccone Albergo | — (depart 10:45) | — |
 
