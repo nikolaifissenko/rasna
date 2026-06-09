@@ -120,14 +120,14 @@
 
 ## Contatti per le Escursioni a Piedi
 
-### Luigi Sanapo
+### Pino
 - **Chi è:** Marito di Antonella (partner B&B). Locale, conosce i sentieri del territorio in profondità.
 - **Uso:** Guida per hike — San Giovenale, Barbarano Romano / Norchia, necropoli di Blera, forre del Biedano
 - **Da fare:** Contattare tramite Antonella. Definire compenso per guida giornate.
 
-### Pino
-- **Chi è:** Locale, esperto dei sentieri della Tuscia
-- **Uso:** Guida alternativa o in coppia con Luigi per gruppi più grandi
+### Luigi Sanapo
+- **Chi è:** Locale esperto dei sentieri della Tuscia — figura separata da Pino
+- **Uso:** Guida alternativa o in coppia con Pino per gruppi più grandi
 - **Da fare:** Confermare disponibilità e compenso.
 
 ### Sentieri per Blera — Associazione Locale

@@ -12,8 +12,8 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — esperienza formaggi non più disponibile da questa fonte; valutare se cercare un altro casaro del territorio** |
 | Renzo | Lavorazione del cuoio (borse/cinte) | disponibilità alta — la dimostrazione potrebbe essere **gratuita**, dato che gli ospiti probabilmente acquisterebbero la sua merce dopo aver visto come la fa (vantaggioso per entrambi) |
 | Maneggio Civitella Cesi | Passeggiate a cavallo | possibile attività complementare/escursione — da contattare per capire disponibilità e modalità con piccoli gruppi |
-| Luigi Sanapo | Guida escursioni a piedi | marito di Antonella — conosce i sentieri in profondità: San Giovenale, Barbarano Romano / Norchia, forre del Biedano. Da contattare tramite Antonella. |
-| Pino | Guida escursioni a piedi | locale esperto dei sentieri — alternativa o in coppia con Luigi per gruppi. Da confermare disponibilità e compenso. |
+| Pino | Guida escursioni a piedi | marito di Antonella — conosce i sentieri in profondità: San Giovenale, Barbarano Romano / Norchia, forre del Biedano. Da contattare tramite Antonella. |
+| Luigi Sanapo | Guida escursioni a piedi | locale esperto dei sentieri — figura separata da Pino. Da confermare ruolo, disponibilità e compenso. |
 | Sentieri per Blera | Associazione — sentieri locali | associazione del territorio per valorizzazione e manutenzione sentieri. Potenziale partner per escursioni guidate. Da contattare per capire se offrono guide o solo manutenzione. |
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
