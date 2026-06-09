@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 10pt;
+    color: #222;
+    background: #fff;
+    line-height: 1.6;
+  }
+
+  .page {
+    width: 210mm;
+    padding: 16mm 17mm 14mm 17mm;
+  }
+
+  /* HEADER */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid #222;
+    padding-bottom: 9px;
+    margin-bottom: 18px;
+  }
+  .header-left { }
+  .brand {
+    font-size: 20pt;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .brand-sub {
+    font-size: 8pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #888;
+    margin-top: 3px;
+  }
+  .header-right {
+    text-align: right;
+    font-size: 8pt;
+    color: #888;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+  }
+  .doc-title {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #222;
+    letter-spacing: 0.05em;
+  }
+
+  /* OVERVIEW BOX */
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  .ov-cell {
+    padding: 8px 10px;
+    border-right: 1px solid #ddd;
+  }
+  .ov-cell:last-child { border-right: none; }
+  .ov-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 2px;
+  }
+  .ov-val {
+    font-size: 9pt;
+    font-weight: 500;
+  }
+
+  /* SECTION HEADER */
+  .section {
+    font-size: 7pt;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7a6245;
+    border-bottom: 1px solid #e0d5c5;
+    padding-bottom: 3px;
+    margin: 16px 0 9px 0;
+  }
+
+  /* DAY BLOCK */
+  .day-wrap { margin-bottom: 18px; page-break-inside: avoid; }
+  .day-head {
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+    margin-bottom: 7px;
+  }
+  .day-tag {
+    font-size: 6.5pt;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7a6245;
+    white-space: nowrap;
+  }
+  .day-name {
+    font-size: 11pt;
+    font-weight: 500;
+    color: #222;
+  }
+
+  /* SCHEDULE TABLE */
+  .sch {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+  }
+  .sch tr:nth-child(even) td { background: #fafaf7; }
+  .sch td {
+    padding: 4px 7px;
+    font-size: 9pt;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .sch td.t {
+    color: #7a6245;
+    font-weight: 500;
+    white-space: nowrap;
+    width: 46px;
+  }
+  .sch td.a { width: 58%; }
+  .sch td.a b { font-weight: 500; }
+  .sch td.v {
+    color: #777;
+    font-size: 8.5pt;
+    font-style: italic;
+    text-align: right;
+  }
+  .sch td.cost {
+    color: #555;
+    font-size: 8.5pt;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* CONTINGENCY */
+  .cont {
+    background: #f5f3ef;
+    border-left: 2.5px solid #c8b89a;
+    padding: 6px 10px;
+    margin: 4px 0 8px 0;
+    font-size: 8.5pt;
+    color: #555;
+    line-height: 1.55;
+  }
+  .cont strong { font-weight: 500; color: #333; }
+
+  /* NOTE */
+  .note {
+    background: #f0ede8;
+    border-left: 2.5px solid #7a6245;
+    padding: 6px 10px;
+    margin: 4px 0 8px 0;
+    font-size: 8.5pt;
+    color: #444;
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  /* GENERIC TABLE */
+  .tbl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+    font-size: 9pt;
+  }
+  .tbl th {
+    font-size: 6.5pt;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+    padding: 5px 7px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  .tbl th.r, .tbl td.r { text-align: right; }
+  .tbl td {
+    padding: 4px 7px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .tbl tr:last-child td { border-bottom: none; }
+  .tbl .total td {
+    font-weight: 500;
+    border-top: 1.5px solid #222;
+    border-bottom: none;
+    padding-top: 6px;
+  }
+
+  /* CHECKLIST */
+  .checklist {
+    column-count: 2;
+    column-gap: 16px;
+    margin-bottom: 8px;
+  }
+  .chk {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 8.8pt;
+    margin-bottom: 5px;
+    break-inside: avoid;
+    line-height: 1.4;
+  }
+  .chk-box {
+    width: 11px;
+    height: 11px;
+    border: 1.5px solid #aaa;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* COST SUMMARY BOX */
+  .cost-summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+  }
+  .cs-cell {
+    background: #fff;
+    padding: 9px 11px;
+    text-align: center;
+  }
+  .cs-label {
+    font-size: 6.5pt;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 2px;
+  }
+  .cs-val {
+    font-size: 13pt;
+    font-weight: 500;
+  }
+  .cs-val.green { color: #4a7245; }
+
+  /* PRICING TABLE */
+  .pricing {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+    font-size: 9pt;
+  }
+  .pricing th {
+    font-size: 6.5pt;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #aaa;
+    padding: 5px 7px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  .pricing td {
+    padding: 5px 7px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .pricing tr.rec td {
+    background: #f5f3ef;
+    font-weight: 500;
+  }
+
+  /* DYNAMICS TABLE */
+  .dyn {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8.8pt;
+    margin-bottom: 8px;
+  }
+  .dyn td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+  .dyn td:first-child {
+    font-weight: 500;
+    width: 38%;
+    color: #444;
+  }
+
+  /* AFTER PILOT TABLE */
+  .after {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    margin-bottom: 8px;
+  }
+  .after td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+  }
+  .after td:first-child { width: 65%; }
+  .after td:last-child {
+    font-style: italic;
+    color: #777;
+    font-size: 8.5pt;
+    text-align: right;
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid #ddd;
+    margin-top: 24px;
+    padding-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7pt;
+    color: #bbb;
+    letter-spacing: 0.08em;
+  }
+
+  .page-break { page-break-before: always; }
+  .highlight td { background: #f5f3ef !important; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div class="brand">Rasna</div>
+      <div class="brand-sub">Authentic Experiences — Blera, Lazio</div>
+    </div>
+    <div class="header-right">
+      <div class="doc-title">Pilot Program — Internal Working Document</div>
+      October 2026 · Confidential
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="overview">
+    <div class="ov-cell"><div class="ov-label">Group</div><div class="ov-val">6 guests</div></div>
+    <div class="ov-cell"><div class="ov-label">Duration</div><div class="ov-val">5 days / 4 nights</div></div>
+    <div class="ov-cell"><div class="ov-label">Base</div><div class="ov-val">Blera (VT)</div></div>
+    <div class="ov-cell"><div class="ov-label">Lodging</div><div class="ov-val">Antonella's B&B</div></div>
+    <div class="ov-cell"><div class="ov-label">Transport</div><div class="ov-val">Self-drive van</div></div>
+    <div class="ov-cell"><div class="ov-label">Pilot price</div><div class="ov-val">€850/person</div></div>
+  </div>
+
+  <!-- OBJECTIVES -->
+  <div class="section">Pilot Objectives</div>
+  <table class="tbl">
+    <tr><td style="width:3%;color:#7a6245;font-weight:500;">1</td><td>Confirm which activities actually work with a real group</td></tr>
+    <tr><td style="color:#7a6245;font-weight:500;">2</td><td>Build trust and lock in rates with local partners (Renzo, Emiliano, grove owner, Pino)</td></tr>
+    <tr><td style="color:#7a6245;font-weight:500;">3</td><td>Identify what to cut, improve, or reorder in the schedule</td></tr>
+    <tr><td style="color:#7a6245;font-weight:500;">4</td><td>Get photos, video, and written guest feedback for the website</td></tr>
+    <tr><td style="color:#7a6245;font-weight:500;">5</td><td>Test the van logistics end-to-end (FCO pickup, daily driving, ZTL, timing)</td></tr>
+  </table>
+
+  <!-- PRE-DEPARTURE CHECKLIST -->
+  <div class="section">Pre-Departure Checklist — Confirm Before Anyone Books a Flight</div>
+  <div class="checklist">
+    <div class="chk"><div class="chk-box"></div><span>Grove owner confirmed, dates locked, harvest window verified no more than 2 weeks before</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Frantoio pressing appointment reserved (books up in October)</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Renzo available — date and project scope agreed (keyring or card wallet, not full belt)</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Emiliano confirmed OR backup slot pre-arranged (horse riding / Norchia hike with Pino)</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Antonella's B&B — 3 rooms reserved, deposit paid, ZTL/parking clarified with Pino</span></div>
+    <div class="chk"><div class="chk-box"></div><span>9-seater van booked at FCO (Europcar/Hertz/Sixt) — confirmed it fits 6 adults + bags</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Activity insurance — policy read, hands-on work (harvest, leather) explicitly covered</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Cristina available for Day 4 dinner — menu and logistics agreed</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Toto available for Day 3 gnocchi session</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Paolo's number saved — taxi backup for individual transfers to FCO (€50/trip)</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Dietary restrictions collected in writing from every guest</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Cancellation policy sent and acknowledged by all guests</span></div>
+    <div class="chk"><div class="chk-box"></div><span>€850/person deposits received before booking anything non-refundable</span></div>
+    <div class="chk"><div class="chk-box"></div><span><strong>Next group date decided</strong> — set before the pilot departs, not after</span></div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="section">Day-by-Day Schedule</div>
+
+  <div class="day-wrap">
+    <div class="day-head"><span class="day-tag">Day 1</span><span class="day-name">Arrival &amp; First Impressions</span></div>
+    <table class="sch">
+      <tr><td class="t">13:00</td><td class="a">Pick up van at FCO — meet guests at Arrivals</td><td class="v">Fiumicino FCO</td><td class="cost">—</td></tr>
+      <tr><td class="t">13:30</td><td class="a">Drive north to Blera (~1h 20m) along the Aurelia</td><td class="v">Minivan</td><td class="cost">fuel incl.</td></tr>
+      <tr><td class="t">15:00</td><td class="a">Check in</td><td class="v">Antonella's B&B</td><td class="cost">—</td></tr>
+      <tr><td class="t">15:30</td><td class="a">Welcome walk — Piazza Roma, church, ravine viewpoint over the Biedano valley</td><td class="v">Blera centro</td><td class="cost">free</td></tr>
+      <tr><td class="t">16:30</td><td class="a">First espresso and aperitivo in the square</td><td class="v">Bar Etruria</td><td class="cost">€40</td></tr>
+      <tr class="highlight"><td class="t">19:30</td><td class="a"><b>Welcome dinner</b> — bruschetta, affettati, pasta al pomodoro, porchetta, dolce, local wine</td><td class="v">Beccone / La Torretta</td><td class="cost">€210</td></tr>
+    </table>
+    <div class="cont"><strong>Flight delayed / guests arrive late:</strong> Skip the walk. Go straight to Bar Etruria at 17:30 and push dinner to 20:00. The walk can slot in before Day 2's grove if needed.</div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-wrap">
+    <div class="day-head"><span class="day-tag">Day 2</span><span class="day-name">Olive Harvest &amp; Panonto</span></div>
+    <table class="sch">
+      <tr><td class="t">07:30</td><td class="a">Self-catered breakfast — cornetti from the bar, yogurt, fruit</td><td class="v">B&B / Bar Etruria</td><td class="cost">€35</td></tr>
+      <tr><td class="t">08:00</td><td class="a">Drive to olive grove (~5 min)</td><td class="v">Blera territory</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">08:15</td><td class="a"><b>Olive harvest</b> — nets, hand-raking, sorting. Midway break: bread, oil, water</td><td class="v">Olive grove</td><td class="cost">€150</td></tr>
+      <tr><td class="t">12:30</td><td class="a">Drive to frantoio</td><td class="v">Minivan</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">12:45</td><td class="a"><b>Oil pressing</b> — washing, crushing, centrifuge. Taste the fresh oil. Each guest takes home 1 bottle (250ml) of oil from today's press</td><td class="v">Frantoio locale</td><td class="cost">€130</td></tr>
+      <tr class="highlight"><td class="t">13:30</td><td class="a"><b>Panonto</b> — back at the grove. Light the embers. Bread grilled on the fire, rubbed with garlic, drenched in the oil just pressed. Salsicce, grilled vegetables, local wine. Guests cook alongside</td><td class="v">Grove / campo</td><td class="cost">€80</td></tr>
+      <tr><td class="t">15:30</td><td class="a">Return to B&B. Free afternoon.</td><td class="v">Antonella's B&B</td><td class="cost">—</td></tr>
+      <tr><td class="t">17:00</td><td class="a">Optional walk to the Etruscan necropolis (15 min on foot)</td><td class="v">Blera necropolis</td><td class="cost">free</td></tr>
+      <tr class="highlight"><td class="t">19:30</td><td class="a"><b>Dinner</b> — acquacotta, tagliatelle al ragù, bistecca, roast potatoes, torta della nonna, house wine</td><td class="v">Beccone Albergo</td><td class="cost">€180</td></tr>
+    </table>
+    <div class="cont"><strong>Rain on Day 2:</strong> Light rain — harvest goes ahead, it's messy and memorable. Heavy rain: swap harvest to Day 3 morning, move Renzo to Day 2 afternoon (indoors). Panonto in heavy rain doesn't work — covered lunch at Beccone instead (add ~€60). Agree the rain plan with the grove owner before the trip.</div>
+    <div class="cont"><strong>Olives not ready:</strong> Highest-probability risk. Confirm with grove owner 2 weeks AND 3 days before. Backup: San Giovenale hike with Pino (free, half day) + frantoio visit to taste last year's oil + standalone panonto in the evening.</div>
+    <div class="cont"><strong>Guest opts out of physical work:</strong> Don't push. Give them the photographer role. Most join once they see the others — don't make it awkward if they don't.</div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-wrap page-break">
+    <div class="day-head"><span class="day-tag">Day 3</span><span class="day-name">Artisans, Gnocchi &amp; Dinner on the Terrace</span></div>
+    <table class="sch">
+      <tr><td class="t">08:00</td><td class="a">Self-catered breakfast</td><td class="v">B&B</td><td class="cost">€35</td></tr>
+      <tr><td class="t">09:30</td><td class="a">Walk to Renzo's workshop</td><td class="v">Blera centro</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">09:45</td><td class="a"><b>Leather workshop with Renzo</b> (3h) — each guest makes one object (card wallet or keyring), keeps it. Renzo guides through cutting, hole-punching, waxed linen stitching, edge finishing</td><td class="v">Renzo's bottega</td><td class="cost">€300</td></tr>
+      <tr><td class="t">12:45</td><td class="a">Coffee in the square</td><td class="v">Bar Etruria</td><td class="cost">€20</td></tr>
+      <tr class="highlight"><td class="t">13:15</td><td class="a"><b>Lunch at Emiliano's</b> — full affettati board: lonza, guanciale, coppa, salsiccia stagionata. Homemade bread, local cheeses. Emiliano explains the curing process over the table</td><td class="v">Emiliano's</td><td class="cost">€180</td></tr>
+      <tr><td class="t">15:30</td><td class="a">Free time at B&B</td><td class="v">Antonella's B&B</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">18:00</td><td class="a"><b>Gnocchi with Toto</b> — guests make traditional Lazio gnocchi from scratch in the kitchen alongside Toto, a local friend. Make the dough, roll, cut, sauce</td><td class="v">Host kitchen</td><td class="cost">€40</td></tr>
+      <tr class="highlight"><td class="t">20:00</td><td class="a"><b>Dinner on the terrace</b> — eat the gnocchi just made. Host cooks the rest: secondo, vegetables, wine. Informal, private, the best evening of the trip</td><td class="v">Private terrace</td><td class="cost">€60</td></tr>
+    </table>
+    <div class="note">This is the evening guests will tell people about — gnocchi they made themselves, eaten on a terrace in a village they'd never heard of. It costs €100 total and no restaurant can replicate it.</div>
+    <div class="cont"><strong>Emiliano cancels (or was never confirmed):</strong> Activate backup 3 weeks before — not on the day. Option A: horseback riding at Maneggio Civitella Cesi (~€240–300). Option B: Norchia hike with Pino (free, half day, dramatic). Lunch becomes a simple self-catered spread (€30). Pre-book the backup and cancel it if Emiliano confirms.</div>
+    <div class="cont"><strong>Renzo runs long:</strong> Most likely overrun of the trip. Build in a 45-min buffer — push Emiliano's lunch to 14:00 if needed. The gnocchi evening at 18:00 is flexible by 30–45 min.</div>
+    <div class="cont"><strong>Toto unavailable:</strong> You run the gnocchi session yourself. Or swap to a dish you know well — cacio e pepe, pasta al pomodoro. The activity is cooking together, not the specific recipe.</div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-wrap">
+    <div class="day-head"><span class="day-tag">Day 4</span><span class="day-name">Tarquinia, Coast &amp; Cristina's</span></div>
+    <table class="sch">
+      <tr><td class="t">08:00</td><td class="a">Early self-catered breakfast</td><td class="v">B&B</td><td class="cost">€35</td></tr>
+      <tr><td class="t">08:15</td><td class="a">Drive to Tarquinia (~50 min)</td><td class="v">Minivan</td><td class="cost">fuel incl.</td></tr>
+      <tr class="highlight"><td class="t">09:15</td><td class="a"><b>Necropoli di Tarquinia</b> (UNESCO) — Etruscan painted tombs. 2,500-year-old frescoes: banquets, dolphins, dancers. Host-guided. Cool inside, no crowds in October</td><td class="v">Tarquinia necropolis</td><td class="cost">€72</td></tr>
+      <tr><td class="t">11:00</td><td class="a">Museo Nazionale Tarquiniense — terracotta winged horses, Etruscan artefacts</td><td class="v">Tarquinia centro</td><td class="cost">€36</td></tr>
+      <tr><td class="t">12:00</td><td class="a">Drive to the coast (~15 min)</td><td class="v">Minivan</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">12:30</td><td class="a"><b>Seafood lunch</b> — frittura di pesce, spaghetti alle vongole, white wine. October coast: quiet, locals only</td><td class="v">Sant'Agostino restaurant</td><td class="cost">€180</td></tr>
+      <tr><td class="t">14:30</td><td class="a">Beach — walk, sit, decompress after the tombs</td><td class="v">Sant'Agostino</td><td class="cost">free</td></tr>
+      <tr><td class="t">16:00</td><td class="a">Drive back to Blera (~55 min)</td><td class="v">Minivan</td><td class="cost">fuel incl.</td></tr>
+      <tr><td class="t">17:30</td><td class="a">Free time</td><td class="v">Antonella's B&B</td><td class="cost">—</td></tr>
+      <tr class="highlight"><td class="t">19:30</td><td class="a"><b>Dinner at Cristina's</b> — home restaurant. Private table, home cooking, back in Blera after a long day out. The most personal dinner of the trip</td><td class="v">Casa di Cristina</td><td class="cost">€150</td></tr>
+    </table>
+    <div class="cont"><strong>Rain on Day 4:</strong> Tarquinia is fully undercover — tombs and museum both work in any weather. Skip the beach, drive back after lunch. Optional afternoon stop: Palazzo dei Papi in Viterbo (interior, €4/person) on the way home.</div>
+    <div class="cont"><strong>Coast restaurant closed in October:</strong> Confirm before the trip. Fallback: eat in Tarquinia town — ask your contact for a reliable name.</div>
+    <div class="cont"><strong>Alternative day (if Tarquinia feels too far):</strong> Bulicame (free Dante thermal spring, 20 min) + Viterbo San Pellegrino quarter on foot + Lago di Vico in the afternoon. Dinner at Cristina's unchanged.</div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-wrap">
+    <div class="day-head"><span class="day-tag">Day 5</span><span class="day-name">Slow Morning &amp; Departure</span></div>
+    <table class="sch">
+      <tr><td class="t">08:00</td><td class="a">Long breakfast — no agenda</td><td class="v">B&B / Bar Etruria</td><td class="cost">€35</td></tr>
+      <tr><td class="t">09:15</td><td class="a">Final walk. Local shopping: honey, oil, wine, dried legumes</td><td class="v">Blera centro</td><td class="cost">—</td></tr>
+      <tr><td class="t">10:15</td><td class="a">Farewells. Group photo in the piazza.</td><td class="v">Piazza Roma</td><td class="cost">—</td></tr>
+      <tr><td class="t">10:45</td><td class="a">Drive to Fiumicino (~1h 30m)</td><td class="v">Minivan</td><td class="cost">fuel incl.</td></tr>
+      <tr><td class="t">12:15</td><td class="a">Drop at Departures. Return van to rental desk.</td><td class="v">FCO</td><td class="cost">—</td></tr>
+    </table>
+    <div class="cont"><strong>Guest with early flight (before 14:00):</strong> Paolo (local taxi, €50 Blera→FCO) takes them separately. Ask all guests for flight times at booking — not on Day 4. Keep Paolo's number in your phone from Day 1.</div>
+  </div>
+
+  <!-- TRANSPORT -->
+  <div class="section">Transport — Self-Drive Van</div>
+  <table class="tbl">
+    <tr><th>Item</th><th class="r">Cost</th></tr>
+    <tr><td>Van rental — 9-seater, 5 days, FCO pickup &amp; return (Europcar / Hertz / Sixt)</td><td class="r">€500</td></tr>
+    <tr><td>Diesel — ~310 km total, 34L @ €1.75/L + buffer</td><td class="r">€80</td></tr>
+    <tr><td>Motorway tolls (FCO↔Blera × 2)</td><td class="r">€16</td></tr>
+    <tr><td>Parking (Viterbo / Tarquinia + Blera ZTL area)</td><td class="r">€15</td></tr>
+    <tr class="total"><td><strong>Transport total</strong></td><td class="r"><strong>€611</strong></td></tr>
+  </table>
+  <div class="note">Hiring a driver for 5 days costs ~€1,400. Self-drive saves €789. Book the van at least 3 weeks ahead — October is busy. Confirm ZTL parking with Pino or Antonella before arrival so you don't get fined by camera.</div>
+
+  <!-- COST SUMMARY -->
+  <div class="section">Full Cost Summary — Group of 6</div>
+  <table class="tbl">
+    <tr><th>Category</th><th class="r">Group total</th><th class="r">Per person</th></tr>
+    <tr><td>Transport (van + fuel + tolls)</td><td class="r">€611</td><td class="r">€102</td></tr>
+    <tr><td>Lodging — Antonella's B&B (3 rooms × 4 nights @ €65/room)</td><td class="r">€780</td><td class="r">€130</td></tr>
+    <tr><td>Meals (all meals, 5 days)</td><td class="r">€1,110</td><td class="r">€185</td></tr>
+    <tr><td>Activities (grove, frantoio, oil, Renzo, Emiliano, Tarquinia entry)</td><td class="r">€778</td><td class="r">€130</td></tr>
+    <tr><td>Staff (Maria Grazia flat fee + Pino + Toto)</td><td class="r">€400</td><td class="r">€67</td></tr>
+    <tr><td>Activity insurance</td><td class="r">€240</td><td class="r">€40</td></tr>
+    <tr><td>Miscellaneous / buffer (5%)</td><td class="r">€146</td><td class="r">€24</td></tr>
+    <tr class="total"><td><strong>Total cost</strong></td><td class="r"><strong>€4,065</strong></td><td class="r"><strong>€678</strong></td></tr>
+  </table>
+
+  <div class="cost-summary">
+    <div class="cs-cell"><div class="cs-label">Pilot price / person</div><div class="cs-val">€850</div></div>
+    <div class="cs-cell"><div class="cs-label">Total revenue</div><div class="cs-val">€5,100</div></div>
+    <div class="cs-cell"><div class="cs-label">Buffer / profit</div><div class="cs-val green">€1,035</div></div>
+  </div>
+
+  <!-- PRICING OPTIONS -->
+  <div class="section">Pricing Options</div>
+  <table class="pricing">
+    <tr><th>Option</th><th>Price/person</th><th>Revenue</th><th>Result</th><th>Use when</th></tr>
+    <tr><td>At cost</td><td>€700</td><td>€4,200</td><td>Breakeven</td><td>Pure test, close friends only</td></tr>
+    <tr class="rec"><td>Friends rate ✓ recommended</td><td>€850</td><td>€5,100</td><td>+€1,035</td><td>Trusted contacts, small buffer for what goes wrong</td></tr>
+    <tr><td>Soft launch</td><td>€1,000</td><td>€6,000</td><td>+€1,935</td><td>First paying guests outside your circle</td></tr>
+  </table>
+
+  <div class="note" style="margin-bottom:12px;">
+    <strong>Cancellation policy (send before guests confirm):</strong> Full refund if cancelled 30+ days before. 50% refund 15–30 days before. No refund inside 14 days — costs are already committed.
+  </div>
+
+  <!-- GROUP DYNAMICS -->
+  <div class="section">Group Dynamics — What to Watch For</div>
+  <table class="dyn">
+    <tr><td>One person dominates with locals</td><td>Rotate who asks questions. Brief the group before Renzo and Emiliano: "let him explain first, then ask."</td></tr>
+    <tr><td>Tension between two guests</td><td>Don't take sides. Free time every afternoon is built in — let people decompress independently.</td></tr>
+    <tr><td>Someone disengages from an activity</td><td>Acknowledge it privately. Give them something useful: photos, carrying things, talking to the host. Don't make it a group moment.</td></tr>
+    <tr><td>The group goes quiet in a good way</td><td>Stop. Don't narrate it or move on. Let it breathe. These are the moments that become testimonials.</td></tr>
+    <tr><td>Minor injury (blister, cut at Renzo's, twisted ankle)</td><td>First aid kit in the van. Farmacia in Blera. Hospital: Ospedale di Viterbo, ~25 min drive.</td></tr>
+  </table>
+
+  <!-- DOCUMENTATION -->
+  <div class="section">What to Document During the Pilot</div>
+  <div class="checklist">
+    <div class="chk"><div class="chk-box"></div><span>Photo of every activity: harvest, panonto fire, press, Renzo's hands, affettati board, gnocchi, terrace dinner</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Short video: oil coming out of the press, the embers being lit, Renzo stitching leather</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Note exact timings — when each session started and ended vs planned</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Note any moment where energy dropped or someone disengaged</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Note every moment where the group went quiet in a good way</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Guest feedback form within 48h of return (5 questions: highlight? what to cut? would you recommend? what would you pay? one word for the trip?)</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Confirm with each partner: do they want to continue, and at what rate?</span></div>
+    <div class="chk"><div class="chk-box"></div><span>Identify which activities were genuinely participatory vs which ones guests just watched</span></div>
+  </div>
+
+  <!-- AFTER PILOT -->
+  <div class="section">After the Pilot — Before Life Gets in the Way</div>
+  <table class="after">
+    <tr><td>Debrief with Maria Grazia and Cristina</td><td>Within 1 week</td></tr>
+    <tr><td>Send thank-you + feedback form to all guests</td><td>Within 48 hours of return</td></tr>
+    <tr><td>Revise the itinerary based on what actually happened</td><td>Within 2 weeks</td></tr>
+    <tr><td>Lock the date for the next group</td><td>Already decided before the pilot</td></tr>
+    <tr><td>Start building the website / landing page</td><td>Within 1 month</td></tr>
+  </table>
+  <div class="note">The most common failure mode isn't a bad experience — it's losing momentum after the pilot. Set the next group date before anyone gets on the plane home.</div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Rasna Authentic Experiences — Blera, Lazio — rasna.it</span>
+    <span>Pilot Program · Internal · October 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
