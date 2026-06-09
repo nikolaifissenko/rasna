@@ -77,6 +77,8 @@ These are the things that will kill the pilot if you haven't confirmed them.
 
 *(Compare: hired minivan + driver = €1,400. Self-drive saving: €789.)*
 
+> **Paolo — local taxi backup:** Paolo is a local cab driver who can do Blera→Rome/FCO for ~€50 per trip. Use him for individual guests with early flights, late arrivals, or anyone who needs a separate transfer. Much cheaper than reorganising the van. Keep his number active throughout the trip.
+
 ---
 
 ## Lodging — Antonella's B&B
@@ -104,11 +106,12 @@ These are the things that will kill the pilot if you haven't confirmed them.
 | **Day 2 — Panonto lunch** | In the field — brace, salsicce, pane, vino | €80 |
 | **Day 2 — Dinner** | Beccone Albergo | €180 |
 | **Day 3 — Breakfast** | Self-catered | €35 |
-| **Day 3 — Lunch** | Maria Grazia's kitchen | €70 |
-| **Day 3 — Dinner** | Pappetta cantina (vino + tagliere) | €130 |
+| **Day 3 — Lunch** | Emiliano's — affettati, pane, formaggi (eat at his place) | €180 *(combined with activity fee)* |
+| **Day 3 — Gnocchi with Toto** | Your kitchen — guests make gnocchi with Toto, ingredients | €40 |
+| **Day 3 — Dinner on your terrace** | You cook. Gnocchi + secondo + vino. | €60 |
 | **Day 4 — Breakfast** | Self-catered | €35 |
-| **Day 4 — Lunch** | Trattoria del Richiastro, Viterbo | €180 |
-| **Day 4 — Dinner** | Self-catered at B&B — affettati, formaggi, pane, vino comprato | €60 |
+| **Day 4 — Lunch** | Seaside restaurant, coast near Tarquinia | €180 |
+| **Day 4 — Dinner** | Beccone Albergo or La Torretta | €180 |
 | **Day 5 — Breakfast** | Self-catered | €35 |
 | Bar Etruria (coffees + aperitivi across the week) | Bar Etruria | €60 |
 | **Meals total** | | **€1,110** |
@@ -141,10 +144,15 @@ These are the things that will kill the pilot if you haven't confirmed them.
 
 | Role | Pilot arrangement | Cost |
 |------|-------------------|------|
-| Maria Grazia — guiding + local coordination | Reduced pilot rate. She participates as co-founder building the product. Propose: €70/person (deferred to €140 once paying groups run). | €420 |
-| Pino — hike guide (1 outing) | Negotiate a pilot rate or offer reciprocal future promotion | €80 |
+| Maria Grazia — logistics coordination | Her role is still being defined. She has strong logistics capacity but it's unclear whether she wants to be a full partner or a paid coordinator. For the pilot: use her for what she does well (local contacts, introductions, logistics) and pay her a flat coordinator fee. Do not build the business model around her being a co-founder until that conversation has happened clearly. Proposed pilot fee: €300 flat. | €300 |
+| Pino — hike guide / local support | Pilot rate or goodwill | €80 |
+| Toto — gnocchi session | Friend rate — a bottle of good wine, dinner on the terrace | ~€20 |
 
-**Staff total: €500**
+**Staff total: €400**
+
+> **Note on Maria Grazia:** The original plan positions her as co-founder at €140/person. Before committing to that structure, have an explicit conversation about what she actually wants — a share of the business, a per-group fee, or a logistics/coordination role at a flat rate. Her value is real (local relationships, logistics knowledge) but the terms should be agreed before the first paying group, not assumed.
+
+> **Note on you as guide:** Tarquinia and the Etruscan sites — you guide these yourself. This cuts guide costs and makes the experience more personal. The terrace dinner and the cooking session are yours. The more of the experience that comes directly from you, the less the business depends on any single partner.
 
 > **Contingency — Maria Grazia unavailable for a session:** She is the linchpin. If she's sick or has a family issue on a specific day, the experience loses its local voice. Discuss in advance: for the harvest, the grove owner can host directly. For Renzo and Emiliano, they speak — you translate with Google Translate if needed. For the walk, Pino takes over. The only session that truly needs her is the welcome and the meal at her kitchen — those cannot be easily replaced. Have a phone number for a local backup contact she trusts.
 
@@ -170,7 +178,7 @@ These are the things that will kill the pilot if you haven't confirmed them.
 | Lodging (Antonella's B&B, 4 nights) | €780 | €130 |
 | Meals (simplified, 5 days) | €1,110 | €185 |
 | Activities | €778 | €130 |
-| Staff (Maria Grazia + Pino) | €500 | €83 |
+| Staff (Maria Grazia coordinator + Pino + Toto) | €400 | €67 |
 | Insurance | €240 | €40 |
 | Miscellaneous / buffer (5%) | €151 | €25 |
 | **TOTAL COST** | **€4,170** | **€695** |
@@ -245,7 +253,7 @@ These are the things that will kill the pilot if you haven't confirmed them.
 
 ---
 
-### Day 3 — Artisans
+### Day 3 — Artisans & Cooking Evening
 
 | Time | Activity | Cost |
 |------|----------|------|
@@ -253,45 +261,62 @@ These are the things that will kill the pilot if you haven't confirmed them.
 | 09:30 | Walk to Renzo's bottega | — |
 | 09:45 | **Leather workshop** (3h, simple object) | €300 |
 | 12:45 | Coffee | Bar Etruria — €20 |
-| 13:15 | **Lunch** at Maria Grazia's kitchen | €70 |
-| 15:00 | **Emiliano's** — affettati tasting | €180 |
-| 17:00 | Free time at B&B | — |
-| 19:30 | **Pappetta** — cantina, vino, tagliere | €130 |
+| 13:00 | **Lunch at Emiliano's** — affettati board, pane casereccio, formaggi locali. Eat at his place. Simple, no separate restaurant needed. | €180 |
+| 15:30 | Free time at B&B | — |
+| 18:00 | **Gnocchi with Toto** — guests join you and Toto (local, knows traditional gnocchi) in the kitchen. Hands-on: make the dough, roll, sauce. | €40 (ingredients) |
+| 20:00 | **Dinner on your terrace** — eat the gnocchi you just made. You cook the rest: a secondo, vegetables, wine. Informal, personal, the most memorable evening of the trip. | €60 (food + wine) |
+
+> **This is the best evening of the pilot.** Guests eating on a private terrace, gnocchi they made with their own hands, in a village they didn't know existed a week ago. It costs almost nothing and it's the thing they'll tell people about. No restaurant can replicate it.
 
 > **Contingency — Emiliano cancels or was never confirmed:**
-> Do not leave this open until Day 3. If he hasn't confirmed 3 weeks before the trip, activate the backup: **horseback riding at Maneggio Civitella Cesi** (~€240–300 for 2h, group of 6). Book it at the same time you book everything else, then cancel if Emiliano confirms. Alternatively: Pino leads a **Barbarano Romano / Norchia hike** (free, half day, dramatic Etruscan tombs). Decide which backup you prefer and pre-arrange it.
+> Do not leave this open until Day 3. If he hasn't confirmed 3 weeks before the trip, activate the backup: **horseback riding at Maneggio Civitella Cesi** (~€240–300 for 2h). Book it at the same time you book everything else, then cancel if Emiliano confirms. Alternatively: Pino leads a **Barbarano Romano / Norchia hike** (free, half day). In either case, lunch becomes a simple self-catered spread at the B&B (bread, cheese, cured meats bought at the market — €30).
+
+> **Contingency — Toto unavailable on Day 3 evening:**
+> You teach the gnocchi yourself — it's your terrace and your kitchen. Or swap to a different dish you know well (pasta al pomodoro, cacio e pepe). The activity is the cooking together, not the specific dish.
 
 > **Contingency — Renzo runs long:**
-> Renzo's workshop is the most likely session to overrun. Build a 45-minute buffer into Day 3 by making lunch with Maria Grazia flexible (13:15 or 14:00). If workshop finishes at 13:30, push lunch to 14:00 and start Emiliano at 16:00 instead of 15:00. Emiliano's session is flexible on timing — just call ahead.
-
-> **Contingency — Pappetta is closed or not available for a private group:**
-> Fallback: La Torretta for dinner (pre-book for 19:30). Same cost bracket. Less atmosphere, still good.
+> Renzo's workshop is the most likely session to overrun. If it goes to 13:30, push lunch at Emiliano's to 14:00 and shorten the free time slot. The evening is protected — Toto at 18:00 is flexible by 30–45 minutes.
 
 ---
 
-### Day 4 — Viterbo & The Lake
+### Day 4 — Tarquinia & The Coast (or Lago di Vico)
+
+*October is the right time for Tarquinia — no heat, no crowds, the painted tombs are at their best. You guide this day yourself.*
+
+**Option A — Tarquinia + Coast (recommended for October)**
 
 | Time | Activity | Cost |
 |------|----------|------|
 | 08:00 | Self-catered breakfast | €35 |
-| 08:30 | Drive to Viterbo (~25 min) | Fuel included |
-| 09:00 | **Bulicame** — free natural thermal spring, Dante stop, 20 min | Free |
-| 09:30 | **Viterbo on foot** — Quartiere San Pellegrino, 1.5h | Free |
-| 11:15 | Drive to Bagnaia (~10 min) | — |
-| 11:30 | Villa Lante gardens (exterior walk free; entry €5/person if group wants to go in) | €0–30 |
-| 13:00 | **Lunch** — Trattoria del Richiastro | €180 |
-| 14:30 | Drive to Lago di Vico (~20 min) | Fuel included |
-| 15:00 | Lake walk — trail, foliage, chestnuts | €18 (reserve entry) |
-| 17:00 | Drive back to Blera | — |
-| 19:30 | Self-catered dinner at B&B | €60 |
+| 08:15 | Drive to Tarquinia (~50 min) | Fuel ~€10 extra |
+| 09:15 | **Necropoli di Tarquinia** — UNESCO Etruscan painted tombs. You guide the visit. 2,500-year-old frescoes: banquets, dolphins, dancers. One of the most remarkable things in Italy. | €12/person → €72 |
+| 11:00 | Optional: **Museo Nazionale Tarquiniense** (palace with terracotta winged horses) | €6/person → €36 |
+| 12:00 | Drive to coast — Sant'Agostino or Tarquinia Lido (~15 min) | — |
+| 12:30 | **Lunch** — seaside restaurant (your local contact). Frittura di pesce, spaghetti alle vongole, vino bianco. | ~€180 |
+| 14:30 | Beach — walk, sit, decompress after the tombs | Free |
+| 16:00 | Drive back to Blera (~55 min) | Fuel included |
+| 17:30 | Arrive Blera. Free time. | — |
+| 19:30 | **Dinner** — Beccone Albergo or La Torretta | €180 |
 
-> **Day 4 is the most overloaded day.** Five stops. If anything runs over, the first thing to cut is **Bulicame** (interesting but not essential — 20-min stop, skip it if behind schedule). The second thing to cut is **Villa Lante** (exterior walk only on the pilot anyway). **Do not cut the lake** — it's the best 45 minutes of the day and costs almost nothing.
+**Option B — Lago di Vico (if Tarquinia feels too far or group prefers nature)**
+
+| Time | Activity | Cost |
+|------|----------|------|
+| 08:30 | Drive to Viterbo (~25 min) | — |
+| 09:00 | Bulicame + San Pellegrino quarter on foot | Free |
+| 13:00 | Lunch — Trattoria del Richiastro | €180 |
+| 14:30 | Drive to Lago di Vico (~20 min) | — |
+| 15:00 | Lake walk — foliage, chestnuts, snack | €18 |
+| 17:00 | Drive back to Blera | — |
+| 19:30 | Dinner at Beccone | €180 |
+
+> **For October: Option A.** Tarquinia in October is uncrowded and the tombs are cool inside. The coast at Tarquinia Lido is quiet and genuinely beautiful — not the summer beach crowd. You as guide makes the tombs a completely different experience from a standard tour. If your coast restaurant contact closes in October, confirm before the trip — some seaside spots shut after September.
 
 > **Contingency — it rains on Day 4:**
-> Viterbo's San Pellegrino quarter works in rain — it's a medieval alley walk, umbrellas are fine, and it actually looks better in wet weather. The lake walk does not work in heavy rain. Replacement: skip the lake and instead visit the **Palazzo dei Papi** in Viterbo (interior, undercover, €4/person) or extend lunch and go straight back to Blera for an early, relaxed evening.
+> Tarquinia works perfectly in rain — the tombs and museum are both undercover. Skip the beach, drive straight back after lunch. Swap the afternoon for a visit to Viterbo's Palazzo dei Papi (interior, €4/person) on the way home.
 
-> **Contingency — Trattoria del Richiastro is closed or full:**
-> Book the restaurant before the trip, not on the day. If unavailable: **Osteria del Vecchio Orologio** or another central Viterbo trattoria — ask Maria Grazia for the name of whoever she trusts in Viterbo. Always have a backup restaurant in the same city.
+> **Contingency — restaurant at the coast is closed in October:**
+> Eat in Tarquinia town instead — there are decent trattorias in the centro storico. Ask your contact for a name before the trip.
 
 ---
 
@@ -306,7 +331,7 @@ These are the things that will kill the pilot if you haven't confirmed them.
 | 12:15 | Drop guests at Departures. Return van to rental desk. | — |
 
 > **Contingency — someone has an early flight (before 14:00):**
-> Ask all guests for their flight times when they book, not on Day 4. If anyone has a flight before 14:00, they either need to arrange their own taxi from Blera (there are local drivers — ask Pino/Antonella for a number) or the whole group departs earlier. Do not reorganise the van around one person's flight unless the whole group agrees.
+> Ask all guests for their flight times when they book, not on Day 4. If anyone has a flight before 14:00, **Paolo** (local taxi driver, ~€50 Blera→Rome/FCO) can take them separately. This is cleaner than reorganising the whole group's departure. Keep Paolo's number in your phone from Day 1.
 
 > **Contingency — van return timing:**
 > FCO rental desks typically close by 21:00–22:00. The Day 5 schedule is comfortable — but if anything on Day 4 runs badly late and the group doesn't get back to Blera until 20:00, check the rental desk closing time in advance. Some desks allow key drop after hours.

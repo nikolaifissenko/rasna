@@ -15,6 +15,8 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Pino | Guida escursioni a piedi | marito di Antonella — conosce i sentieri in profondità: San Giovenale, Barbarano Romano / Norchia, forre del Biedano. Da contattare tramite Antonella. |
 | Luigi Sanapo | Guida escursioni a piedi | locale esperto dei sentieri — figura separata da Pino. Da confermare ruolo, disponibilità e compenso. |
 | Sentieri per Blera | Associazione — sentieri locali | associazione del territorio per valorizzazione e manutenzione sentieri. Potenziale partner per escursioni guidate. Da contattare per capire se offrono guide o solo manutenzione. |
+| Toto | Gnocchi / cucina tradizionale | amico locale, sa fare i gnocchi tradizionali. Potenziale attività: i guests fanno i gnocchi con lui in cucina. Compenso: cena sul terrazzo + bottiglia di vino. |
+| Paolo | Tassista / trasporto locale | autista locale disponibile per corse a Roma — ~€50 a tratta. Utile come alternativa al van per guests con voli early o per trasferimenti singoli. |
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
