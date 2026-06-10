@@ -6,7 +6,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 
 | Nome | Ruolo nel progetto | Note |
 |---|---|---|
-| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice |
+| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice; ha fornito tariffe trasporto: transfer Fiumicino/Blera minivan 7 pax €220+IVA10%, tour Blera/Tarquinia €50/ora+IVA10% (100km inclusi) — vedi `FINANCIAL_PLAN.md` |
 | Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
 | Emiliano (figlio di Miriam) | Affettati | da risentire: capire quanto sarebbe interessato e se le dimostrazioni si possono fare tutto l'anno o solo in certi periodi |
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — esperienza formaggi non più disponibile da questa fonte; valutare se cercare un altro casaro del territorio** |
