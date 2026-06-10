@@ -21,6 +21,21 @@ styles.add(ParagraphStyle(name="BulletItem", fontSize=10, leading=14.5, spaceAft
 styles.add(ParagraphStyle(name="Small", fontSize=8.5, leading=12, textColor=colors.HexColor("#666666")))
 
 def table(data, col_widths=None, header=True):
+    wrapped = []
+    for r, row in enumerate(data):
+        new_row = []
+        for cell in row:
+            if isinstance(cell, str):
+                style_name = "Small" if r == 0 and header else "Body"
+                if r == 0 and header:
+                    cell_style = ParagraphStyle("CellHeader", parent=styles["Body"], fontSize=9, leading=11.5, textColor=colors.white, fontName="Helvetica-Bold")
+                else:
+                    cell_style = ParagraphStyle("Cell", parent=styles["Body"], fontSize=9, leading=11.5, spaceAfter=0)
+                new_row.append(Paragraph(cell, cell_style))
+            else:
+                new_row.append(cell)
+        wrapped.append(new_row)
+    data = wrapped
     t = Table(data, colWidths=col_widths, hAlign="LEFT")
     style = [
         ("FONTSIZE", (0, 0), (-1, -1), 9),
@@ -333,9 +348,16 @@ story.append(Paragraph(
     "The founders welcome the opportunity to discuss this plan further and to provide updated, "
     "validated figures following the Phase 1–2 pilot.", styles["Body"]))
 
+def add_page_number(canvas, doc):
+    canvas.saveState()
+    canvas.setFont("Helvetica", 8)
+    canvas.setFillColor(colors.HexColor("#888888"))
+    canvas.drawCentredString(A4[0]/2, 10*mm, str(canvas.getPageNumber()))
+    canvas.restoreState()
+
 doc = SimpleDocTemplate(DOC, pagesize=A4,
                          topMargin=20*mm, bottomMargin=18*mm,
                          leftMargin=20*mm, rightMargin=20*mm,
                          title="Rasna Business Plan", author="Rasna")
-doc.build(story)
+doc.build(story, onFirstPage=add_page_number, onLaterPages=add_page_number)
 print("done")
