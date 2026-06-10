@@ -241,7 +241,7 @@ story.append(table([
     ["Year 1 — Pilot &amp; launch", "4", "~€44,800", "~€21,800", "1 pilot (discounted/break-even) + 3–4 paying groups"],
     ["Year 2 — Established calendar", "8", "~€89,600", "~€43,500", "4–5 experiences across the seasonal calendar, ~1 group every 4–6 weeks"],
     ["Year 3+ — Mature steady state", "16", "~€179,200", "~€87,000", "Deliberate ceiling of ~15–20 groups/year, chosen to protect the destination"],
-], col_widths=[55*mm, 22*mm, 28*mm, 28*mm, 47*mm]))
+], col_widths=[50*mm, 20*mm, 26*mm, 26*mm, 48*mm]))
 story.append(Paragraph(
     "These figures are directional planning estimates. They intentionally plateau rather than grow "
     "indefinitely — beyond Year 3, growth is expected to come from the levers described in Section 5.8, "
@@ -290,7 +290,7 @@ story.append(table([
     ["4 — Formalize the business", "Once bookings exist", "Choose Italian legal structure (e.g. SRL) with a local commercialista; finalize licensing/insurance; formalize partner agreements"],
     ["5 — Build out the seasonal calendar", "6–12 months", "Add second/third seasonal experiences; build operational checklists; develop a bench of trained local hosts"],
     ["6 — Mature at a deliberate ceiling", "12+ months", "Settle into ~15–20 groups/year; grow income via pricing and add-ons rather than volume; prioritize fit over scale"],
-], col_widths=[55*mm, 28*mm, 97*mm]))
+], col_widths=[48*mm, 24*mm, 98*mm]))
 
 # -------------------- 7. LOCAL NETWORK --------------------
 story.append(Paragraph("7. Local Network &amp; Partnerships", styles["H1"]))
