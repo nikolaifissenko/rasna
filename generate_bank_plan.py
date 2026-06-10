@@ -70,7 +70,7 @@ story.append(Paragraph("Authentic Small-Group Travel Experiences in Blera, North
 story.append(Spacer(1, 10*mm))
 story.append(Paragraph("Business Plan & Financial Projections", styles["CoverSub"]))
 story.append(Spacer(1, 30*mm))
-story.append(Paragraph("Prepared for: Banking / Financing Partner Review", styles["Small"]))
+story.append(Paragraph("Project Overview", styles["Small"]))
 story.append(Paragraph("Founders: Maria Grazia (local operations &amp; relationships) and Nikolai Fissenko (international markets, marketing &amp; logistics)", styles["Small"]))
 story.append(Paragraph("Location: Blera, Province of Viterbo, Lazio, Italy", styles["Small"]))
 story.append(PageBreak())
@@ -335,17 +335,15 @@ story.append(table([
     ["Over-growth eroding the authenticity that drives demand", "Hard cap of ~15–20 groups/year is a deliberate strategic choice, with growth levers focused on price and value rather than volume"],
 ], col_widths=[80*mm, 80*mm]))
 
-# -------------------- 9. THE ASK --------------------
-story.append(Paragraph("9. Financing Request", styles["H1"]))
+# -------------------- 9. SUMMARY --------------------
+story.append(Paragraph("9. Summary", styles["H1"]))
 story.append(Paragraph(
-    "Rasna is seeking financing in the range of <b>€4,500–€11,500</b> to cover legal setup, "
-    "licensing and insurance, website and branding, a pilot trip, and initial marketing. Given the "
-    "low fixed-cost, asset-light structure and an estimated break-even after approximately two "
-    "successful group departures, the financing requirement is modest relative to the projected "
-    "gross profit at maturity (~€87,000/year at a deliberately capped scale of ~16 groups/year).",
-    styles["Body"]))
+    "Rasna is a low-capital, asset-light business with a clear path to profitability: an estimated "
+    "startup investment of <b>€4,500–€11,500</b>, a break-even point after roughly two successful "
+    "group departures, and an estimated <b>~€87,000/year</b> in gross profit at a deliberately "
+    "capped, mature scale of ~16 groups/year.", styles["Body"]))
 story.append(Paragraph(
-    "The founders welcome the opportunity to discuss this plan further and to provide updated, "
+    "The founders welcome the opportunity to discuss this plan further and to share updated, "
     "validated figures following the Phase 1–2 pilot.", styles["Body"]))
 
 def add_page_number(canvas, doc):
