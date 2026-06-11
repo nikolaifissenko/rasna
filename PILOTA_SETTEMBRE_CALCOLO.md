@@ -16,7 +16,7 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 
 ### Giorno 1 — Cammino dei Tre Villaggi (giornata intera)
 - **Colazione:** Bar Paradiso
-- Cammino dei Tre Villaggi (~20km, 5-8h) con me come guida — Villa San Giovanni in Tuscia, Barbarano Romano, Blera, passando per l'acropoli di San Giovenale, il Ponte del Diavolo, il Parco di Marturanum
+- Cammino dei Tre Villaggi (~20km, 5-8h) con me come guida — Villa San Giovanni in Tuscia, Barbarano Romano, Blera, passando per il Ponte del Diavolo e il Parco di Marturanum
 - **Pranzo:** al sacco lungo il percorso
 - Attestato finale "Testimonium del Viandante Etrusco" (€5/persona, con timbri raccolti nei tre paesi)
 - **Aperitivo:** Bar Paradiso (terrazzo Casa Blera)
@@ -34,9 +34,9 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 ### Giorno 3 — Giornata culinaria + Renzo + chiusura anniversario
 - **Colazione:** Bar Paradiso
 - Mattina: Emiliano — fattoria e affettati, dimostrazione + degustazione (da confermare disponibilità) — funge anche da **pranzo leggero**
-- Pomeriggio: Renzo — laboratorio cuoio, fanno la propria borsa/cintura (probabile gratuito)
+- Pomeriggio: Renzo — dimostrazione di lavorazione del cuoio, realizzano un piccolo oggetto (es. portafoglio/cintura) — da confermare con lui cosa è disposto a fare
 - **Aperitivo:** Bar Paradiso
-- **Cena:** cena speciale 30° anniversario organizzata con Maria Grazia (gesto dedicato: es. brindisi/dolce speciale)
+- **Cena:** cena speciale 30° anniversario nella cantina di Maria Grazia, con luci, fiori e una torta speciale fatta da lei
 
 *(Da validare con Maria Grazia: disponibilità Emiliano e Renzo per le date specifiche di settembre, e organizzazione cena con Cristina e cena anniversario)*
 
