@@ -19,13 +19,14 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 - Cammino dei Tre Villaggi (~20km, 5-8h) con me come guida — Villa San Giovanni in Tuscia, Barbarano Romano, Blera, passando per l'acropoli di San Giovenale, il Ponte del Diavolo, il Parco di Marturanum
 - **Pranzo:** al sacco lungo il percorso
 - Attestato finale "Testimonium del Viandante Etrusco" (€5/persona, con timbri raccolti nei tre paesi)
-- **Cena:** Maria Grazia cucina in cantina da lei
+- **Aperitivo:** terrazzo Casa Blera
+- **Cena:** a casa mia (down below)
 
 ### Giorno 2 — Gita in provincia: Tarquinia + altra meta
 - Visita a Tarquinia (necropoli/centro storico)
 - **Pranzo:** a Tarquinia (locale da scegliere sul posto)
 - Altra tappa in provincia da definire (es. Lago di Vico, Terme, Civita di Bagnoregio)
-- **Cena:** rientro a Blera — La Torretta o Bar Etruria (da prenotare)
+- **Cena:** home cooked meal da Cristina
 
 *(Da definire: la seconda meta del giorno)*
 
@@ -33,9 +34,9 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 - **Colazione:** Bar Paradiso
 - Mattina: Emiliano — fattoria e affettati, dimostrazione + degustazione (da confermare disponibilità) — funge anche da **pranzo leggero**
 - Pomeriggio: Renzo — laboratorio cuoio, fanno la propria borsa/cintura (probabile gratuito)
-- **Cena:** cena speciale 30° anniversario — La Torretta (da prenotare con gesto dedicato: es. brindisi/dolce speciale)
+- **Cena:** cena speciale 30° anniversario organizzata con Maria Grazia (gesto dedicato: es. brindisi/dolce speciale)
 
-*(Da validare con Maria Grazia: disponibilità Emiliano e Renzo per le date specifiche di settembre, e prenotazioni La Torretta/Bar Etruria)*
+*(Da validare con Maria Grazia: disponibilità Emiliano e Renzo per le date specifiche di settembre, e organizzazione cena con Cristina e cena anniversario)*
 
 ---
 
