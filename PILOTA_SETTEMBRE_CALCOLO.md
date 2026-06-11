@@ -21,10 +21,20 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 - Attestato finale "Testimonium del Viandante Etrusco" (€5/persona, con timbri raccolti nei tre paesi)
 - Cena: Maria Grazia ha proposto di cucinare in cantina da lei
 
-### Giorno 2 — Vendemmia (giornata di raccolta) + cantina
-- Mattina: una giornata di vendemmia con chi ancora la fa — esperienza fisica, vera, non replicabile da turisti
-- Pomeriggio/sera: visita a una cantina con degustazione — accesso facilitato dal contatto diretto, magari abbinata a Cantine Festival se le date coincidono
-- Cena con vino della giornata
+### Giorno 2 — da definire (opzioni)
+
+**Possibili attività (da combinare in base a disponibilità/tempo):**
+- **Vendemmia** — giornata di raccolta, esperienza fisica autentica
+- **Renzo (cuoio)** — laboratorio, fanno la propria borsa/cintura (probabile gratuito)
+- **Emiliano (affettati)** — dimostrazione + degustazione (da confermare disponibilità)
+- **Fare la pasta in casa** — esperienza culinaria pratica, "in stile Nonna"
+- **Maneggio Civitella Cesi** — passeggiata a cavallo (da contattare per gruppi piccoli)
+- **Terme** — relax, da individuare quale (es. Terme dei Papi a Viterbo o terme libere della zona)
+- **Lago di Vico** — giornata/pomeriggio al lago, eventualmente cena lì
+
+**Possibile combinazione:** mattina attività "unica" (vendemmia o pasta in casa o Renzo), pomeriggio relax/natura (terme o lago di Vico), con cena sul posto se si va al lago.
+
+*(Da restringere insieme a Maria Grazia in base a cosa è realisticamente disponibile per le date)*
 
 ### Giorno 3 — Cucina "in stile Nonna" + chiusura anniversario
 - Giornata/cena cucinata insieme a una famiglia locale (panonto, ricette tradizionali) — accesso a una casa privata, impossibile da prenotare online
