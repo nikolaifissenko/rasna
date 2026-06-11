@@ -21,25 +21,19 @@ Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchi
 - Attestato finale "Testimonium del Viandante Etrusco" (€5/persona, con timbri raccolti nei tre paesi)
 - Cena: Maria Grazia ha proposto di cucinare in cantina da lei
 
-### Giorno 2 — Gita in provincia
+### Giorno 2 — Gita in provincia: Tarquinia + altra meta
+- Visita a Tarquinia (necropoli/centro storico)
+- Altra tappa in provincia da definire (es. Lago di Vico, Terme, Civita di Bagnoregio o simile)
+- Eventuale vendemmia se i tempi/disponibilità lo permettono
 
-**Possibili mete/attività (da combinare in base a disponibilità/tempo):**
-- **Vendemmia** — giornata di raccolta, esperienza fisica autentica
-- **Renzo (cuoio)** — laboratorio, fanno la propria borsa/cintura (probabile gratuito)
-- **Maneggio Civitella Cesi** — passeggiata a cavallo (da contattare per gruppi piccoli)
-- **Terme** — relax, da individuare quale (es. Terme dei Papi a Viterbo o terme libere della zona)
-- **Lago di Vico** — giornata/pomeriggio al lago, eventualmente cena lì
+*(Da definire: la seconda meta e se inserire la vendemmia)*
 
-**Possibile combinazione:** mattina attività "unica" (vendemmia o Renzo o maneggio), pomeriggio relax/natura (terme o lago di Vico), con cena sul posto se si va al lago.
+### Giorno 3 — Giornata culinaria + Renzo + chiusura anniversario
+- Mattina: Emiliano — fattoria e affettati, dimostrazione + degustazione (da confermare disponibilità)
+- Pomeriggio: Renzo — laboratorio cuoio, fanno la propria borsa/cintura (probabile gratuito)
+- Sera: cena speciale per i 30 anni di matrimonio, organizzata con qualcuno del posto (es. in cantina o a casa, con un gesto dedicato)
 
-*(Da restringere insieme a Maria Grazia in base a cosa è realisticamente disponibile per le date)*
-
-### Giorno 3 — Giornata culinaria + chiusura anniversario
-- Giornata cucinando insieme a una famiglia locale (es. fare la pasta in casa, panonto, ricette tradizionali "in stile Nonna") — accesso a una casa privata, impossibile da prenotare online
-- Possibile tappa da Emiliano per affettati/degustazione (da confermare disponibilità)
-- Sera: brindisi/cena speciale per i 30 anni di matrimonio, organizzato con qualcuno del posto (es. in cantina o a casa, con un gesto dedicato)
-
-*(Da validare con Maria Grazia: disponibilità vendemmia ed Emiliano per le date specifiche di settembre)*
+*(Da validare con Maria Grazia: disponibilità Emiliano e Renzo per le date specifiche di settembre)*
 
 ---
 
