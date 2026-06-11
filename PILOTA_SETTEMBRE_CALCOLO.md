@@ -10,23 +10,26 @@ Obiettivo: stimare i costi vivi (cibo + eventuali compensi attività) e definire
 
 ---
 
-## Bozza itinerario 3 giorni
+## Programma 3 giorni — solo cose che possono fare SOLO con me
 
-### Giorno 1 — Arrivo + Passeggiata dei Tre Paesi
-- Arrivo, sistemazione a casa
-- Pomeriggio: Passeggiata dei Tre Paesi (trekking)
-- Cena: a casa o locale convenzionato
+Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchina, se vogliono). Ogni giornata è costruita su accesso a persone/luoghi privati che richiedono me come ponte.
 
-### Giorno 2 — Esperienza culinaria locale
-- Mattina/giornata: esperienza che non potrebbero fare da soli (es. giornata della salsa di pomodoro / cucina tradizionale con famiglia locale, guidata da Maria Grazia)
-- Pranzo/cena con la famiglia ospitante
+### Giorno 1 — Passeggiata dei Tre Paesi + Renzo
+- Pomeriggio: Passeggiata dei Tre Paesi con me come guida — non solo il percorso, ma le storie, le persone, i posti che solo chi è del posto conosce
+- Tappa da Renzo: laboratorio di lavorazione del cuoio, fanno la propria borsa/cintura (probabile gratuito — comprano i suoi prodotti)
+- Cena a casa
 
-### Giorno 3 — Attività artigianale + chiusura
-- Esperienza con Renzo (lavorazione del cuoio — potenzialmente gratuita per noi, vedi BUSINESS_PLAN)
-- Eventuale escursione/cantina nel pomeriggio
-- Cena di chiusura (festeggiamento 30° anniversario)
+### Giorno 2 — Vendemmia (giornata di raccolta) + cantina
+- Mattina: una giornata di vendemmia con chi ancora la fa — esperienza fisica, vera, non replicabile da turisti
+- Pomeriggio/sera: visita a una cantina con degustazione — accesso facilitato dal contatto diretto, magari abbinata a Cantine Festival se le date coincidono
+- Cena con vino della giornata
 
-*(Da affinare insieme — ordine e attività indicative)*
+### Giorno 3 — Cucina "in stile Nonna" + chiusura anniversario
+- Giornata/cena cucinata insieme a una famiglia locale (panonto, ricette tradizionali) — accesso a una casa privata, impossibile da prenotare online
+- Possibile tappa da Emiliano per affettati/degustazione (da confermare disponibilità)
+- Sera: brindisi/cena speciale per i 30 anni di matrimonio, organizzato con qualcuno del posto (es. in cantina o a casa, con un gesto dedicato)
+
+*(Da validare con Maria Grazia: disponibilità vendemmia ed Emiliano per le date specifiche di settembre)*
 
 ---
 
