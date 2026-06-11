@@ -14,10 +14,12 @@ Obiettivo: stimare i costi vivi (cibo + eventuali compensi attività) e definire
 
 Filosofia: niente attrazioni "fai-da-te" (quelle le vedono da soli con la macchina, se vogliono). Ogni giornata è costruita su accesso a persone/luoghi privati che richiedono me come ponte.
 
-### Giorno 1 — Passeggiata dei Tre Paesi + Renzo
-- Pomeriggio: Passeggiata dei Tre Paesi con me come guida — non solo il percorso, ma le storie, le persone, i posti che solo chi è del posto conosce
-- Tappa da Renzo: laboratorio di lavorazione del cuoio, fanno la propria borsa/cintura (probabile gratuito — comprano i suoi prodotti)
-- Cena a casa
+### Giorno 1 — Cammino dei Tre Villaggi (giornata intera)
+- Colazione al Bar Paradiso
+- Cammino dei Tre Villaggi (~20km, 5-8h) con me come guida — Villa San Giovanni in Tuscia, Barbarano Romano, Blera, passando per l'acropoli di San Giovenale, il Ponte del Diavolo, il Parco di Marturanum
+- Pranzo al sacco lungo il percorso
+- Attestato finale "Testimonium del Viandante Etrusco" (€5/persona, con timbri raccolti nei tre paesi)
+- Cena: Maria Grazia ha proposto di cucinare in cantina da lei
 
 ### Giorno 2 — Vendemmia (giornata di raccolta) + cantina
 - Mattina: una giornata di vendemmia con chi ancora la fa — esperienza fisica, vera, non replicabile da turisti
