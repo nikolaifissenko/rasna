@@ -42,7 +42,7 @@ Prima di contattare chiunque altro, è importante:
 ## 3. Come presentare il progetto (semplice, senza promesse premature)
 
 Quando parli con qualcuno, l'idea è:
-- Raccontare in due frasi cosa vuoi fare (gruppi piccoli, esperienza autentica, niente Positano — vedi `RASNA_PITCH_IT.md` per il messaggio completo)
+- Raccontare in due frasi cosa vuoi fare (gruppi piccoli, esperienza autentica, niente Positano — vedi `BUSINESS_PLAN.md` per il messaggio completo)
 - Spiegare **cosa significherebbe per loro concretamente**: ospitare un piccolo gruppo per qualche ora/un pasto/una giornata, in cambio di un compenso
 - Essere chiari che è all'inizio: stai costruendo, non vendendo qualcosa di già pronto — questo li mette a loro agio e li fa sentire parte della costruzione, non un fornitore
 
