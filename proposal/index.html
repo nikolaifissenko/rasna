@@ -22,8 +22,8 @@
     padding: 40px 20px 20px;
   }
   .logo-mark {
-    width: 90px;
-    height: 90px;
+    width: 160px;
+    height: auto;
     margin: 0 auto 12px;
     display: block;
   }
@@ -34,6 +34,12 @@
     font-size: 2.2rem;
     color: var(--wine);
     text-transform: uppercase;
+  }
+  .section-note {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6b4f4f;
+    margin-bottom: 24px;
   }
   .tagline {
     color: var(--bronze);
@@ -134,15 +140,7 @@
 <body>
 
 <header>
-  <svg class="logo-mark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="50" cy="50" r="46" fill="none" stroke="#b08d57" stroke-width="3"/>
-    <circle cx="50" cy="50" r="38" fill="none" stroke="#5e2b2b" stroke-width="2"/>
-    <!-- simple tomb-facade placeholder icon -->
-    <path d="M30 65 L30 45 Q50 28 70 45 L70 65 Z" fill="none" stroke="#5e2b2b" stroke-width="2.5"/>
-    <line x1="30" y1="65" x2="70" y2="65" stroke="#5e2b2b" stroke-width="2.5"/>
-    <rect x="45" y="50" width="10" height="15" fill="none" stroke="#5e2b2b" stroke-width="2"/>
-  </svg>
-  <div class="brand">Rasna</div>
+  <img class="logo-mark" src="assets/logo.png" alt="Rasna">
   <div class="tagline">Live the Tuscia, the way it has always been lived</div>
 </header>
 
@@ -166,45 +164,75 @@
   <div class="activities">
 
     <div class="card">
-      <input type="checkbox" id="olive" name="activity" value="Olive Harvest">
-      <label for="olive">Olive Harvest</label>
-      <p>Join a local family in the groves for a hands-on morning of olive picking,
-      followed by a visit to the press to see the oil made — and tasted — fresh.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="tomato" name="activity" value="Tomato &amp; Sauce Day">
-      <label for="tomato">Tomato &amp; Sauce Day</label>
-      <p>A late-summer tradition: pick ripe tomatoes from the field and spend the
-      day making passata the old way, with the family that grew them.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="leather" name="activity" value="Leatherwork with Renzo">
-      <label for="leather">Renzo's Leatherwork</label>
-      <p>Work alongside Renzo, a local artisan, to hand-craft and take home your
-      own leather bag — a skill and souvenir in one.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="affettati" name="activity" value="Affettati with Emiliano">
-      <label for="affettati">Emiliano's Affettati</label>
-      <p>See how traditional cured meats are made and aged, with a tasting of
-      salumi straight from the curing room.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="horse" name="activity" value="Horseback Riding">
-      <label for="horse">Horseback Riding</label>
-      <p>Explore the countryside around Civitella Cesi on horseback, through the
-      woods and pastures that surround Blera.</p>
-    </div>
-
-    <div class="card">
       <input type="checkbox" id="tombs" name="activity" value="Etruscan Tombs Walk">
       <label for="tombs">Etruscan Tombs Walk</label>
       <p>A guided walk through the rock-cut Etruscan tombs and the ancient Via
       Clodia, tracing the roots of this land's first people — the Rasna.</p>
+    </div>
+
+    <div class="card">
+      <input type="checkbox" id="vico" name="activity" value="Lago di Vico &amp; Palazzo Farnese">
+      <label for="vico">Lago di Vico &amp; Palazzo Farnese</label>
+      <p>An overview of the volcanic Lago di Vico, set within its own nature
+      reserve, followed by a visit to the Renaissance Palazzo Farnese in
+      Caprarola — one of Lazio's grandest villas.</p>
+    </div>
+
+    <div class="card">
+      <input type="checkbox" id="viterbo" name="activity" value="Viterbo Medieval Quarter Walk">
+      <label for="viterbo">Viterbo Medieval Quarter Walk</label>
+      <p>Wander the San Pellegrino district, one of Italy's best-preserved
+      medieval quarters, with its stone houses, outdoor staircases, and the Papal
+      Palace.</p>
+    </div>
+
+    <div class="card">
+      <input type="checkbox" id="tarquinia" name="activity" value="Tarquinia Painted Tombs &amp; Medieval Town">
+      <label for="tarquinia">Tarquinia: Painted Tombs &amp; Medieval Town</label>
+      <p>Descend into the UNESCO-listed Etruscan painted tombs of Tarquinia,
+      then explore the medieval town above, with its towers and views over
+      the Maremma coast.</p>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Originally Proposed</h2>
+  <p class="section-note">
+    For reference, here is what was originally on offer, drawn from
+    everyday life in Blera itself rather than nearby sights:
+  </p>
+  <div class="activities">
+
+    <div class="card">
+      <label>Olive Harvest</label>
+      <p>Join a local family in the groves for a hands-on morning of olive
+      picking, followed by a visit to the press to see the oil made — and
+      tasted — fresh.</p>
+    </div>
+
+    <div class="card">
+      <label>Tomato &amp; Sauce Day</label>
+      <p>A late-summer tradition: pick ripe tomatoes from the field and
+      spend the day making passata the old way, with the family that grew
+      them.</p>
+    </div>
+
+    <div class="card">
+      <label>Renzo's Leatherwork</label>
+      <p>Work alongside Renzo, a local artisan, to hand-craft and take home
+      your own leather bag — a skill and souvenir in one.</p>
+    </div>
+
+    <div class="card">
+      <label>Emiliano's Affettati</label>
+      <p>See how traditional cured meats are made and aged, with a tasting
+      of salumi straight from the curing room.</p>
+    </div>
+
+    <div class="card">
+      <label>Horseback Riding</label>
+      <p>Explore the countryside around Civitella Cesi on horseback, through
+      the woods and pastures that surround Blera.</p>
     </div>
 
   </div>
