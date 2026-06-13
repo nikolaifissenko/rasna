@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RASNA — Authentic Blera Experiences</title>
+<style>
+  :root {
+    --wine: #5e2b2b;
+    --bronze: #b08d57;
+    --olive: #6b7a3a;
+    --cream: #f5ede0;
+    --tufo: #c9a875;
+    --ink: #2b2420;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: var(--cream);
+    color: var(--wine);
+  }
+  .logo {
+    font-size: 3.4rem;
+    letter-spacing: 0.3em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--wine);
+  }
+  .logo-symbol {
+    display: block;
+    margin: 0 auto 12px;
+    width: 90px;
+    height: 70px;
+  }
+  .tagline {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    margin-top: 10px;
+    opacity: 0.75;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+  .intro {
+    max-width: 720px;
+    margin: 50px auto;
+    padding: 0 24px;
+    text-align: center;
+  }
+  .intro h2 {
+    color: var(--wine);
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+  .activities {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 24px;
+  }
+  .activities h2 {
+    text-align: center;
+    color: var(--wine);
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--tufo);
+    border-radius: 8px;
+    padding: 20px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+  .card:has(input:checked) {
+    border-color: var(--bronze);
+    box-shadow: 0 0 0 2px var(--bronze) inset;
+  }
+  .card label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+  }
+  .card input[type="checkbox"] {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--bronze);
+  }
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--wine);
+    margin-bottom: 6px;
+  }
+  .card-desc {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+    opacity: 0.85;
+  }
+  .summary {
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 30px 24px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--tufo);
+  }
+  .summary h3 {
+    color: var(--wine);
+    margin-bottom: 14px;
+  }
+  #selected-list {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.95rem;
+  }
+  #selected-list li {
+    padding: 4px 0;
+  }
+  #selected-list:empty::before {
+    content: "Select the experiences above that interest you most.";
+    color: #999;
+    font-style: italic;
+  }
+  .pay-btn {
+    display: inline-block;
+    background: var(--bronze);
+    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 30px;
+    letter-spacing: 0.05em;
+    transition: background 0.2s;
+  }
+  .pay-btn:hover {
+    background: var(--wine);
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--olive);
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <svg class="logo-symbol" viewBox="0 0 130 100" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#b08d57" stroke-width="3" stroke-linejoin="round">
+    <!-- Etruscan tomb facade: lintel beams + doorway -->
+    <line x1="10" y1="14" x2="120" y2="14"/>
+    <line x1="20" y1="24" x2="110" y2="24"/>
+    <path d="M40 90 V40 H90 V90"/>
+  </svg>
+  <div class="logo">RASNA</div>
+  <div class="tagline">Authentic Experiences in Blera, Tuscia</div>
+</header>
+
+<section class="intro">
+  <h2>Live it, don't just see it.</h2>
+  <p>
+    "Rasna" was what the Etruscans called themselves — the people who first carved this land
+    out of the tufo, nearly 2,800 years ago. Blera still carries their mark: the tombs, the
+    Via Clodia, the cliffs. We invite a small number of travelers each year to step into the
+    real rhythm of this place — harvesting, cooking, walking among the Etruscan tombs, and
+    sharing meals with the people who live this life every day.
+  </p>
+</section>
+
+<section class="activities">
+  <h2>Choose what calls to you</h2>
+  <div class="grid">
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Olive Harvest &amp; Panonto" data-price="0">
+        <div>
+          <div class="card-title">🫒 Olive Harvest &amp; Panonto</div>
+          <div class="card-desc">Hand-pick olives in the autumn groves, then gather around the fire for panonto — bread cooked over olive wood, the way it's always been done here.</div>
+        </div>
+      </label>
+    </div>
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Tomato &amp; Sauce Day" data-price="0">
+        <div>
+          <div class="card-title">🍅 Tomato &amp; Sauce Day</div>
+          <div class="card-desc">A full day of harvesting, cooking, and preserving tomatoes into sauce — exactly as Blera families do every August.</div>
+        </div>
+      </label>
+    </div>
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Leather Bag-Making with Renzo" data-price="0">
+        <div>
+          <div class="card-title">👜 Leather Bag-Making with Renzo</div>
+          <div class="card-desc">Make your own leather bag by hand, guided by a local artisan — a one-of-a-kind souvenir you'll carry home.</div>
+        </div>
+      </label>
+    </div>
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Cured Meats with Emiliano" data-price="0">
+        <div>
+          <div class="card-title">🥓 Cured Meats with Emiliano</div>
+          <div class="card-desc">Discover the traditional process behind Tuscia's affettati, with a tasting of meats cured the local way.</div>
+        </div>
+      </label>
+    </div>
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Horseback Riding — Civitella Cesi" data-price="0">
+        <div>
+          <div class="card-title">🐴 Horseback Riding — Civitella Cesi</div>
+          <div class="card-desc">A ride through the countryside surrounding Blera, departing from a nearby family-run riding stable.</div>
+        </div>
+      </label>
+    </div>
+    <div class="card">
+      <label>
+        <input type="checkbox" data-name="Etruscan Tombs &amp; Via Clodia" data-price="0">
+        <div>
+          <div class="card-title">🏛️ Etruscan Tombs &amp; Via Clodia</div>
+          <div class="card-desc">A guided walk through the rock-cut tombs and ancient road that give Rasna its name — the oldest layer of this land.</div>
+        </div>
+      </label>
+    </div>
+  </div>
+</section>
+
+<section class="summary">
+  <h3>Your selection</h3>
+  <ul id="selected-list"></ul>
+  <a id="pay-link" class="pay-btn" href="#" target="_blank" rel="noopener">Reserve with a deposit</a>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.85rem; margin-top: 16px; color: #777;">
+    Selecting experiences helps us tailor your itinerary — the deposit secures your spot
+    on a 4-day small-group departure (6–10 guests, all-inclusive).
+  </p>
+</section>
+
+<footer>
+  RASNA — Esperienze Autentiche a Blera · Tuscia, Lazio, Italy
+</footer>
+
+<script>
+  // TODO: replace with your real Stripe Payment Link
+  const STRIPE_PAYMENT_LINK = "https://buy.stripe.com/REPLACE_WITH_YOUR_LINK";
+
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  const list = document.getElementById('selected-list');
+  const payLink = document.getElementById('pay-link');
+
+  function update() {
+    list.innerHTML = '';
+    const selected = [];
+    checkboxes.forEach(cb => {
+      if (cb.checked) selected.push(cb.dataset.name);
+    });
+    selected.forEach(name => {
+      const li = document.createElement('li');
+      li.textContent = '✓ ' + name;
+      list.appendChild(li);
+    });
+
+    const url = new URL(STRIPE_PAYMENT_LINK);
+    if (selected.length) {
+      url.searchParams.set('client_reference_id', selected.join(', '));
+    }
+    payLink.href = url.toString();
+  }
+
+  checkboxes.forEach(cb => cb.addEventListener('change', update));
+  update();
+</script>
+
+</body>
+</html>
