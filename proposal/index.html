@@ -73,6 +73,57 @@
     padding-bottom: 10px;
     margin-bottom: 24px;
   }
+  .day-block {
+    margin-bottom: 32px;
+  }
+  .day-block h3 {
+    color: var(--wine);
+    font-size: 1.15rem;
+    border-bottom: 1px solid #e3d6c2;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+  }
+  .day-block ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .day-block li {
+    padding: 4px 0 4px 22px;
+    position: relative;
+  }
+  .day-block li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--bronze);
+  }
+  .option-group {
+    margin-bottom: 28px;
+  }
+  .option-group h3 {
+    color: var(--wine);
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+  }
+  .option-row {
+    background: #fff;
+    border: 1px solid #e3d6c2;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .option-row:hover {
+    border-color: var(--bronze);
+  }
+  .option-row input {
+    margin-right: 10px;
+    accent-color: var(--wine);
+  }
+  .option-row label {
+    cursor: pointer;
+  }
   .activities {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -155,77 +206,111 @@
       passed down for generations.
     </p>
     <p style="margin-top: 16px;">
-      Below is your proposed itinerary. Each item is checked by default —
-      simply uncheck anything you'd rather skip. Further down, you'll find
-      other options you can add or swap in instead.
+      Below is your proposed itinerary. Further down, you'll find options
+      to swap in for the open slots, or to add on top.
     </p>
   </section>
 
   <h2 class="section-title">Your Proposed Itinerary</h2>
-  <div class="activities">
 
-    <div class="card">
-      <input type="checkbox" id="tombs" name="activity" value="Etruscan Tombs Walk" checked>
-      <label for="tombs">Etruscan Tombs Walk</label>
-      <p>A guided walk through the rock-cut Etruscan tombs and the ancient Via
-      Clodia, tracing the roots of this land's first people — the Rasna.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="vico" name="activity" value="Lago di Vico &amp; Palazzo Farnese" checked>
-      <label for="vico">Lago di Vico &amp; Palazzo Farnese</label>
-      <p>An overview of the volcanic Lago di Vico, set within its own nature
-      reserve, followed by a visit to the Renaissance Palazzo Farnese in
-      Caprarola — one of Lazio's grandest villas.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="viterbo" name="activity" value="Viterbo Medieval Quarter Walk" checked>
-      <label for="viterbo">Viterbo Medieval Quarter Walk</label>
-      <p>Wander the San Pellegrino district, one of Italy's best-preserved
-      medieval quarters, with its stone houses, outdoor staircases, and the Papal
-      Palace.</p>
-    </div>
-
-    <div class="card">
-      <input type="checkbox" id="tarquinia" name="activity" value="Tarquinia Painted Tombs &amp; Medieval Town" checked>
-      <label for="tarquinia">Tarquinia: Painted Tombs &amp; Medieval Town</label>
-      <p>Descend into the UNESCO-listed Etruscan painted tombs of Tarquinia,
-      then explore the medieval town above, with its towers and views over
-      the Maremma coast.</p>
-    </div>
-
+  <div class="day-block">
+    <h3>Day 1 — The Three Villages Walk</h3>
+    <ul>
+      <li>Breakfast at Bar Paradiso</li>
+      <li>Full-day guided hike on the Cammino dei Tre Villaggi (~20km, 5–8 hours):
+        Villa San Giovanni in Tuscia → Barbarano Romano → Blera, passing the
+        Etruscan acropolis of San Giovenale, the "Devil's Bridge," and
+        Marturanum Regional Park</li>
+      <li>Packed lunch along the trail</li>
+      <li>Your own "Etruscan Wanderer" certificate, stamped at each village</li>
+      <li>Sunset aperitivo at Bar Paradiso (Casa Blera terrace)</li>
+      <li>Dinner at our home</li>
+    </ul>
   </div>
 
-  <h2 class="section-title">Other Options — Add or Substitute</h2>
+  <div class="day-block">
+    <h3>Day 2 — A Day in the Province</h3>
+    <ul>
+      <li>Breakfast at Bar Paradiso</li>
+      <li>Morning visit to Tarquinia (Etruscan necropolis, historic center), lunch there</li>
+      <li>Afternoon: a second stop nearby (see options below)</li>
+      <li>Aperitivo at Bar Paradiso</li>
+      <li>Home-cooked dinner with Cristina</li>
+    </ul>
+  </div>
+
+  <div class="day-block">
+    <h3>Day 3 — Artisans &amp; Anniversary Celebration</h3>
+    <ul>
+      <li>Breakfast at Bar Paradiso</li>
+      <li>Morning: tasting of traditional cured meats at Emiliano's farm (doubles as lunch)</li>
+      <li>Afternoon: hands-on leatherworking with Renzo — make your own bag or belt</li>
+      <li>Aperitivo at Bar Paradiso</li>
+      <li>Special anniversary dinner (see options below)</li>
+    </ul>
+  </div>
+
+  <h2 class="section-title">Other Options to Consider</h2>
   <p class="section-note">
-    These are additional experiences rooted in everyday life in Blera.
-    Check any you'd like to add, or to swap in for an item above.
+    This is YOUR trip, so let us know if you'd rather swap anything in or out.
   </p>
-  <div class="activities">
 
-    <div class="card">
-      <input type="checkbox" id="leather" name="activity" value="Renzo's Leatherwork">
-      <label for="leather">Renzo's Leatherwork</label>
-      <p>Work alongside Renzo, a local artisan, to hand-craft and take home
-      your own leather bag — a skill and souvenir in one.</p>
+  <div class="option-group">
+    <h3>For Day 2's afternoon stop:</h3>
+    <div class="option-row">
+      <input type="checkbox" id="opt-vico" name="day2" value="Lake Vico">
+      <label for="opt-vico">Lake Vico — scenic walk around the volcanic lake</label>
     </div>
-
-    <div class="card">
-      <input type="checkbox" id="affettati" name="activity" value="Emiliano's Affettati">
-      <label for="affettati">Emiliano's Affettati</label>
-      <p>See how traditional cured meats are made and aged, with a tasting
-      of salumi straight from the curing room.</p>
+    <div class="option-row">
+      <input type="checkbox" id="opt-thermal" name="day2" value="Thermal baths">
+      <label for="opt-thermal">Thermal baths — relax and unwind</label>
     </div>
-
-    <div class="card">
-      <input type="checkbox" id="horse" name="activity" value="Horseback Riding">
-      <label for="horse">Horseback Riding</label>
-      <p>Explore the countryside around Civitella Cesi on horseback, through
-      the woods and pastures that surround Blera.</p>
+    <div class="option-row">
+      <input type="checkbox" id="opt-civita" name="day2" value="Civita di Bagnoregio">
+      <label for="opt-civita">Civita di Bagnoregio — the famous "dying town"</label>
     </div>
-
+    <div class="option-row">
+      <input type="checkbox" id="opt-vendemmia" name="day2" value="Grape harvest">
+      <label for="opt-vendemmia">Grape harvest (vendemmia) — join a real harvest day, if timing allows</label>
+    </div>
+    <div class="option-row">
+      <input type="checkbox" id="opt-horse" name="day2" value="Horseback riding">
+      <label for="opt-horse">Horseback riding at Maneggio Civitella Cesi</label>
+    </div>
   </div>
+
+  <div class="option-group">
+    <h3>For the anniversary dinner:</h3>
+    <div class="option-row">
+      <input type="checkbox" id="opt-family" name="dinner" value="Dinner with a local family">
+      <label for="opt-family">Intimate dinner with a local family</label>
+    </div>
+    <div class="option-row">
+      <input type="checkbox" id="opt-cantina" name="dinner" value="Dinner in a wine cellar">
+      <label for="opt-cantina">Dinner in a wine cellar (cantina), with tastings</label>
+    </div>
+    <div class="option-row">
+      <input type="checkbox" id="opt-sunset" name="dinner" value="Sunset toast">
+      <label for="opt-sunset">A scenic spot with a sunset toast</label>
+    </div>
+  </div>
+
+  <div class="option-group">
+    <h3>Other things we could add or swap in:</h3>
+    <div class="option-row">
+      <input type="checkbox" id="opt-wine" name="extras" value="Wine cellar tasting">
+      <label for="opt-wine">A wine cellar tasting</label>
+    </div>
+    <div class="option-row">
+      <input type="checkbox" id="opt-oil" name="extras" value="Olive oil tasting">
+      <label for="opt-oil">Olive oil tasting (if available this time of year)</label>
+    </div>
+  </div>
+
+  <p class="section-note" style="margin-top: 24px;">
+    Just let us know what sounds good and we'll build it into the plan.
+    Looking forward to having you here.
+  </p>
 
   <div class="cta">
     <a id="reserve-btn" href="#" target="_blank" rel="noopener">Reserve with a Deposit</a>
