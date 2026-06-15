@@ -22,11 +22,13 @@ This reframes the brand: guests aren't just buying a Blera itinerary, they're bu
 **UPDATE — concrete starting point agreed with Maria Grazia (latest check-in):**
 
 1. **Olive harvest** — the one genuine field/agricultural activity we can reliably count on right now
-2. **Tomatoes / "sauce day" (August)** — confirmed reliably available; Maria Grazia is confident this can happen even if she has to plant the tomatoes herself 😂 — a strong, low-risk anchor for the August departure
+2. ~~**Tomatoes / "sauce day" (August)**~~ — **dropped** from the current starting program (revisit later if a willing host re-emerges)
 3. ~~**Costantino — cheese**~~ — **sadly passed away about a year ago; this experience is no longer available from this source.** We'll need to either find another local cheesemaker willing to host guests, or drop cheese-making as a planned activity (cheese tasting via partner producers/shops remains possible as a lighter-touch alternative).
 4. **Emiliano (Miriam's son) — cured meats/affettati** — to follow up directly with him: gauge his actual interest/availability, and critically, **whether demonstrations can run year-round or only in certain periods** (this affects how reliably we can build a trip around it).
-5. **Renzo — leatherwork / bag-making** — high availability, and a great economic model: **his demonstration could be offered for free**, since guests would likely buy his goods afterward — a win-win that needs no negotiation over a hosting fee. Reframed specifically around bag-making based on a direct market signal: when running tours in Rome, American guests consistently ask for an authentic Italian leather bag — a hands-on session making their own turns this into one of the most marketable single activities in the whole offer.
+5. ~~**Renzo — leatherwork / bag-making**~~ — **dropped** from the current starting program
 6. **Horseback riding — Maneggio di Civitella Cesi** — a new candidate complementary activity/excursion (not town-based, but nearby); to contact and assess fit, availability, and how they'd handle small international groups.
+7. **Mosaic-making with a local artisan** — **new candidate**: we've found a local woman who does mosaic work — to follow up on availability/cost to host a hands-on session for guests.
+8. **Three villages hike** — **new candidate**: a walking route connecting three Tuscia villages through the countryside/Etruscan landscape — a strong, no-host-dependency excursion option.
 
 This is the **real, evolving starting program** — built from direct conversations with the people involved, adjusted as we learn more (e.g., losing Costantino, confirming tomatoes, clarifying Emiliano's and the maneggio's availability). The rest of the seasonal calendar remains a longer-term ambition to validate and add over time (see Phase 5), not a launch requirement.
 
@@ -47,12 +49,13 @@ This is the **real, evolving starting program** — built from direct conversati
 - **Hand-made pasta workshop** — guests make fresh pasta (e.g., tagliatelle/ravioli) from scratch with a local cook, then eat what they made; classic, highly marketable, easy to host repeatedly
 - **Pizza-making workshop** — guests stretch and top their own pizzas, baked in a wood-fired oven if a local host has one (several households/agriturismi in the area likely do) — strong fun/social activity, good fit for an evening
 - **Traditional dessert-baking workshop** — baking local sweets (e.g., crostata, ciambelline al vino, biscotti) with a local host; pairs well as a relaxed afternoon activity and gives guests a take-home treat
-- These three are good candidates to validate alongside Emiliano/Renzo as **reliable, year-round, non-agricultural building blocks** — to confirm: which local hosts have the right kitchen/oven setup and would be willing to run these regularly
+- These three are good candidates to validate alongside Emiliano and the mosaic artisan as **reliable, year-round, non-agricultural building blocks** — to confirm: which local hosts have the right kitchen/oven setup and would be willing to run these regularly
 
 **Artisan experiences (not seasonal — can anchor or complement a trip year-round, and don't depend on agricultural timing or a "Nonna"; among the most reliable building blocks of the offer):**
 - ~~A morning with a local cheesemaker (Costantino)~~ — **no longer available** (Costantino passed away ~1 year ago); to replace with another local cheesemaker if one can be found, or drop
 - A visit with Emiliano (Miriam's son) — affettati/cured meats — seeing how salumi are made and cured the traditional way, with a tasting (availability and year-round feasibility to be confirmed directly with him)
-- A hands-on bag-making session with Renzo — guests make and take home their own leather bag or belt, hand-worked under his guidance (potentially offered free of charge, with guests purchasing his goods afterward — a natural win-win)
+- A hands-on mosaic-making session with a local artisan (a woman we've recently identified) — guests try traditional mosaic art and take home their own piece (availability and cost to be confirmed)
+- **Three villages hike** — a guided walking route connecting three nearby Tuscia villages through the countryside and Etruscan landscape — year-round, no host dependency
 
 These artisan experiences are especially valuable right now: they're **available year-round, don't depend on agricultural seasons or a specific elderly host, and the people are already identified** (see `CONTATTI_LOCALI.md`). They should likely anchor the first pilot, while the agricultural activities are validated one at a time.
 
