@@ -7,7 +7,7 @@
 
 ## 1. L'idea, in una frase
 
-Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — non semplicemente visitare — il ritmo autentico di un piccolo paese italiano**: raccogliere le olive, mangiare il panonto cucinato sul fuoco secondo la tradizione delle nonne, camminare tra le tombe etrusche, esplorare il Lago di Vico, Villa Lante, Tarquinia, Viterbo, la costa — guidati da persone che questa vita la vivono davvero.
+Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — non semplicemente visitare — la vita etrusca**: laboratori artigianali, camminate tra le tombe etrusche, escursioni al Lago di Vico, Villa Lante, Tarquinia, Viterbo — pianificato insieme, vissuto insieme, ricordato insieme.
 
 Non un tour in pullman. Non una lista di cose da vedere. Pochi giorni indimenticabili, da ospiti nella vita vera di qualcuno.
 
@@ -72,7 +72,7 @@ Non sono attrazioni da organizzare: sono momenti che il paese vive comunque, e i
 
 **E in ogni viaggio, sempre presenti:**
 - Passeggiate guidate alle tombe rupestri etrusche e lungo la Via Clodia
-- Escursioni giornaliere al Lago di Vico, Villa Lante, Palazzo Farnese, Viterbo, Tarquinia e la costa
+- Escursioni giornaliere, ognuna proposta come opzione a sé: Lago di Vico, Villa Lante, Tarquinia, Viterbo
 - Pernottamento presso B&B partner, pasti con famiglie locali e in luoghi di fiducia del territorio
 
 **Tutto incluso** in un unico prezzo — gli ospiti arrivano, e a tutto il resto pensiamo noi.

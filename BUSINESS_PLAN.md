@@ -68,7 +68,13 @@ This calendar is the backbone of the business — but it only works if it's buil
 
 These aren't separate attractions to manage — they're moments the town already creates for itself, which guests get to experience simply by being there at the right time. They make certain departure dates especially compelling and easy to market (e.g., "join us for Cantine Festival weekend").
 
-**Supporting elements:** guided exploration of Etruscan ruins, rock-cut tombs, the Via Clodia, and the surrounding Lazio countryside.
+**Supporting elements — day trips (each offered as its own option):**
+- Lago di Vico — a volcanic lake surrounded by beech forest
+- Villa Lante — one of the finest Renaissance gardens in Italy, near Bagnaia
+- Tarquinia — Etruscan necropolis and painted tombs, UNESCO World Heritage site
+- Viterbo — medieval walled city with its papal palace and historic center
+
+Plus guided exploration of the Etruscan rock-cut tombs, the Via Clodia, and the surrounding Lazio countryside.
 
 ## 2. Why this works
 
