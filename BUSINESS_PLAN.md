@@ -36,6 +36,12 @@ This is the **real, evolving starting program** — built from direct conversati
 
 **Cooking experiences — reframed:** rather than promising "Nonna's house", market these as **"cooking in the tradition of the nonne"** — e.g., a field lunch or panonto cooked in the traditional style by a local host (who may or may not be an actual grandmother). This stays true to the spirit guests are paying for, while not depending on — or overpromising — one specific, hard-to-find, hard-to-retain person.
 
+**New hands-on cooking workshops (year-round, not season- or person-dependent — strong candidates to broaden the cooking lineup):**
+- **Hand-made pasta workshop** — guests make fresh pasta (e.g., tagliatelle/ravioli) from scratch with a local cook, then eat what they made; classic, highly marketable, easy to host repeatedly
+- **Pizza-making workshop** — guests stretch and top their own pizzas, baked in a wood-fired oven if a local host has one (several households/agriturismi in the area likely do) — strong fun/social activity, good fit for an evening
+- **Traditional dessert-baking workshop** — baking local sweets (e.g., crostata, ciambelline al vino, biscotti) with a local host; pairs well as a relaxed afternoon activity and gives guests a take-home treat
+- These three are good candidates to validate alongside Emiliano/Renzo as **reliable, year-round, non-agricultural building blocks** — to confirm: which local hosts have the right kitchen/oven setup and would be willing to run these regularly
+
 **Artisan experiences (not seasonal — can anchor or complement a trip year-round, and don't depend on agricultural timing or a "Nonna"; among the most reliable building blocks of the offer):**
 - ~~A morning with a local cheesemaker (Costantino)~~ — **no longer available** (Costantino passed away ~1 year ago); to replace with another local cheesemaker if one can be found, or drop
 - A visit with Emiliano (Miriam's son) — affettati/cured meats — seeing how salumi are made and cured the traditional way, with a tasting (availability and year-round feasibility to be confirmed directly with him)

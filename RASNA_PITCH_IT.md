@@ -55,6 +55,11 @@ Un viaggio di **4 giorni, in piccoli gruppi (6–10 persone)**, può comunque cr
 - Una visita con Emiliano — scoprire come si preparano e si stagionano gli affettati secondo la tradizione, con degustazione (disponibilità e periodi da confermare con lui)
 - Un laboratorio con Renzo — gli ospiti realizzano con le proprie mani, sotto la sua guida, una borsa di pelle da portare a casa (potenzialmente offerto gratuitamente, dato che gli ospiti probabilmente acquisterebbero anche la sua merce)
 
+**Nuovi laboratori di cucina (disponibili tutto l'anno, da validare):**
+- 🍝 **Laboratorio di pasta fresca fatta a mano** — gli ospiti preparano la pasta da zero con un cuoco/a del posto e poi la mangiano
+- 🍕 **Laboratorio di pizza** — gli ospiti stendono e farciscono la propria pizza, idealmente cotta in un forno a legna locale
+- 🍰 **Laboratorio di dolci tradizionali** — preparazione di dolci tipici (es. crostata, ciambelline al vino) con un host locale, da portare a casa
+
 In questo modo, **non esiste un "periodo morto"**: ogni mese dell'anno ha una sua attività agricola autentica da offrire, e possiamo costruire un calendario di viaggi distribuito lungo tutti i 12 mesi, anziché concentrato in poche settimane.
 
 **E poi ci sono le feste e gli eventi del paese — momenti che il territorio crea già da solo:**
