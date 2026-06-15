@@ -42,6 +42,14 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **Gross margin per guest: ~€680 (≈49%)**
 
+### Transport rates (quoted by Maria Grazia)
+| Service | Rate |
+|---|---|
+| Transfer Fiumicino ↔ Blera, 7-pax Mercedes minivan | €220,00 + IVA 10% |
+| Tour Blera/Tarquinia | €50,00/ora + IVA 10%, con 100 km inclusi |
+
+These rates can be used to refine the "local guiding/transport" line item above and to price the airport transfer as an optional add-on for guests arriving via Fiumicino.
+
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
 **A nice exception worth flagging — Renzo's leather/bag-making session:** this one could realistically run at **little or no hosting cost to us**, since guests are likely to purchase his goods after seeing how they're made — meaning he benefits directly from hosting, without needing a separate fee. This is the kind of win-win arrangement worth replicating wherever possible (it's also a good model to discuss with other artisans/producers — e.g. whether a tasting that leads to a sale could substitute for, or reduce, a hosting fee).
