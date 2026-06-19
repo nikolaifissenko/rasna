@@ -2,7 +2,9 @@
 
 ## 1. Concept
 
-Small-group immersive travel experiences in and around Blera (northern Lazio, Italy), giving international tourists genuine participation in local seasonal life — not a sightseeing tour, but a "live like a local for a few days" experience.
+Blera come la vivono i blerani. Portiamo piccoli gruppi di viaggiatori internazionali a Blera non per visitarla, ma per essere **accolti** — partecipare alle attività che rendono il territorio speciale e unico, incontrare le persone che le rendono possibili, e tornare a casa ricordandosi di Blera per la sua comunità, prima ancora che per i suoi paesaggi.
+
+Queste esperienze esistono solo grazie ai blerani. Il nostro ruolo è portare un turismo sano — poche persone alla volta, soldi da fuori che restano sul territorio — con il rispetto di chi è di Blera anche se è internazionale, e vuole valorizzarla, non sfruttarla.
 
 **Reality check (feedback from Maria Grazia, June 2026) — important constraints to design around:**
 - Several traditional activities described below are **rarely practiced anymore** at real scale in Blera today: vendemmia (now often done in a single day by whoever still does it), hand-harvesting wheat (essentially gone), and pig butchering (only a narrow Jan–Feb window, and increasingly hard to find people who still do it traditionally).

@@ -3,91 +3,61 @@
 
 ---
 
-### Chi siamo
+### La nostra idea
 
-Siamo un piccolo progetto che porta **gruppi ristretti di viaggiatori internazionali** (6–10 persone, principalmente americani, inglesi, australiani) a Blera per vivere esperienze autentiche — non un tour turistico, ma qualche giorno immersi nella vita vera del paese.
+Vogliamo che i viaggiatori internazionali vivano Blera come la vivono i blerani — non che la visitino e basta. Che vengano **accolti**, non accompagnati. Che si ricordino di Blera perché hanno incontrato la sua gente e hanno visto quanto è speciale questa comunità.
 
-Il progetto nasce dalla collaborazione tra chi conosce il territorio e le sue persone, e chi sa raggiungere e gestire un pubblico internazionale.
+Queste esperienze sono possibili solo grazie a voi — alle persone che rendono il territorio unico. Il nostro ruolo è portare un turismo sano: poche persone alla volta, soldi da fuori che restano a Blera, con il rispetto di chi è di qui e vuole valorizzare il paese, non sfruttarlo.
 
 ---
 
-### Cosa facciamo, in pratica
+### In pratica
 
-Organizziamo **viaggi di 4 giorni, tutto incluso**, in cui i nostri ospiti:
+Organizziamo **viaggi di 4 giorni per piccoli gruppi** (6–10 persone, mai di più), tutto incluso. Gli ospiti partecipano alle attività del territorio, mangiano con la gente del posto, visitano i luoghi della zona e dormono in alloggi locali.
 
-- Partecipano ad attività vere del territorio (raccolta olive, preparazione della salsa, laboratori artigianali)
-- Mangiano con persone del posto
-- Visitano i luoghi della zona (tombe etrusche, Via Clodia, Lago di Vico, Viterbo, Tarquinia)
-- Dormono in B&B e alloggi locali
-
-**Non è turismo di massa.** Facciamo al massimo 15–20 gruppi all'anno, di proposito. Blera resta Blera — noi portiamo poche persone, selezionate, che vogliono davvero capire questo posto.
+**Al massimo 15–20 gruppi all'anno**, di proposito. Blera resta Blera.
 
 ---
 
 ### Cosa chiediamo a te
 
-Cerchiamo persone del territorio disposte a **condividere quello che già fanno** con i nostri piccoli gruppi di ospiti. Non chiediamo di mettere in scena niente — chiediamo di fare quello che fai già, con qualcuno che guarda, partecipa, e impara.
+Fare quello che fai già, con qualcuno che guarda, partecipa e impara. Niente da mettere in scena — è autentico o non funziona.
 
-Alcuni esempi concreti:
-
-| Attività | Cosa significherebbe per te |
+| Attività | Cosa significherebbe |
 |---|---|
-| **Produzione artigianale** (affettati, formaggi, cuoio, ecc.) | Ospitare un piccolo gruppo per qualche ora: mostrare come lavori, far provare, offrire un assaggio o una degustazione |
-| **Attività agricola** (olive, pomodori, orto, ecc.) | Accogliere gli ospiti per una giornata o mezza giornata di raccolta/lavorazione insieme a te |
-| **Cucina tradizionale** | Cucinare insieme agli ospiti un pasto della tradizione — a casa tua, in un locale, o dove preferisci |
-| **Alloggio** (B&B, agriturismo, albergo) | Ospitare il gruppo per 3 notti, a una tariffa concordata |
-| **Ristorazione / locale** | Accogliere il gruppo per un pasto o una serata |
-| **Escursioni / attività complementari** (cavallo, natura, ecc.) | Organizzare un'uscita per il gruppo, con le modalità che preferisci |
+| **Artigianato** (affettati, formaggi, cuoio…) | Ospitare un piccolo gruppo per qualche ora: mostrare, far provare, degustare |
+| **Agricoltura** (olive, pomodori, orto…) | Una giornata o mezza giornata di raccolta/lavorazione insieme |
+| **Cucina tradizionale** | Cucinare insieme un pasto della tradizione |
+| **Alloggio / ristorazione** | Ospitare il gruppo per notti o pasti, a tariffa concordata |
+| **Escursioni** (cavallo, natura…) | Un'uscita per il gruppo, come preferisci |
 
 ---
 
 ### Cosa ci guadagni
 
-- **Un compenso equo e concordato insieme** per ogni gruppo che ospiti — non è volontariato, è un lavoro pagato, e il compenso lo decidiamo insieme prima di iniziare
-- **Visibilità internazionale** — i nostri ospiti raccontano le loro esperienze a casa, lasciano recensioni, e spesso tornano o mandano amici
-- **Nessun investimento da parte tua** — non devi comprare niente, non devi cambiare niente di quello che fai. Ci pensiamo noi a portare gli ospiti, gestire la logistica e le comunicazioni
-- **Flessibilità totale** — decidi tu quando sei disponibile e quando no. Non c'è nessun obbligo fisso: se un mese non puoi, nessun problema
-- **Per chi vende prodotti propri** (cuoio, olio, salumi, formaggi, vino, ecc.) — gli ospiti che vedono come lavori spesso comprano direttamente da te, e questo è un guadagno in più che resta interamente tuo
+- **Compenso equo e concordato** per ogni gruppo — è un lavoro pagato, decidiamo insieme prima di iniziare
+- **Visibilità internazionale** — gli ospiti raccontano, recensiscono, tornano, mandano amici
+- **Nessun investimento** — non devi comprare o cambiare niente; a logistica e comunicazioni pensiamo noi
+- **Flessibilità** — decidi tu quando sei disponibile; nessun obbligo fisso
+- **Chi vende prodotti propri** — gli ospiti spesso comprano direttamente da te, guadagno che resta tuo
 
 ---
 
-### Quanto e come spesso
+### Come funziona
 
-- Gruppi di **6–10 persone**, mai di più
-- Ogni visita dura **poche ore o una giornata** — non settimane
-- Al massimo **15–20 gruppi all'anno in totale** (non tutti vengono da te — dipende dalla stagione e dall'attività)
-- In pratica, per la maggior parte dei collaboratori parliamo di **poche volte all'anno**, in date concordate in anticipo
+1. **Ci incontriamo** e ti spieghiamo il progetto
+2. **Decidiamo insieme** se e come inserire la tua attività
+3. **Concordiamo un compenso** giusto
+4. **Facciamo una prova** con un piccolo gruppo amichevole
+5. **Se funziona**, continuiamo — sempre con libertà di dire no
 
----
-
-### Come funziona il rapporto
-
-1. **Ci incontriamo** e ti spieghiamo il progetto (questo documento è il primo passo)
-2. **Decidiamo insieme** se e come la tua attività si inserisce nel programma
-3. **Concordiamo un compenso** che sia giusto per il tuo tempo e il tuo lavoro
-4. **Facciamo una prova** con un primo piccolo gruppo amichevole — senza impegno definitivo, per vedere come funziona
-5. **Se funziona per entrambi**, continuiamo — sempre con la libertà di dire "questo mese no" o "facciamo diversamente"
-
-Non chiediamo contratti vincolanti né impegni a lungo termine. Chiediamo una disponibilità di massima e la voglia di provare.
-
----
-
-### Cosa NON siamo
-
-- **Non siamo un tour operator da pullman** — niente gruppi da 40 persone, niente bandierine
-- **Non vogliamo cambiare Blera** — vogliamo che resti esattamente com'è, e che le poche persone che portiamo la apprezzino per quello che è davvero
-- **Non chiediamo di recitare** — l'esperienza funziona proprio perché è vera. Se smette di essere vera, non funziona più neanche per noi
-- **Non siamo in competizione con nessuno** — siamo un ponte tra chi vive qui e chi viene da fuori e vuole capire davvero come si vive qui
+Nessun contratto vincolante. Solo la voglia di provare.
 
 ---
 
 ### Contatti
 
-Per qualsiasi domanda, curiosità, o per dirci "mi interessa, parliamone":
-
-**[Il tuo nome]**
-📞 [telefono]
-📧 [email]
+**[Il tuo nome]** — [telefono] — [email]
 
 Insieme a **Maria Grazia**, che molti di voi già conoscono.
 

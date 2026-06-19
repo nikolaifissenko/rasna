@@ -7,9 +7,11 @@
 
 ## 1. L'idea, in una frase
 
-Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — non semplicemente visitare — il ritmo autentico di un piccolo paese italiano**: raccogliere le olive, mangiare il panonto cucinato sul fuoco secondo la tradizione delle nonne, camminare tra le tombe etrusche, esplorare il Lago di Vico, Villa Lante, Tarquinia, Viterbo, la costa — guidati da persone che questa vita la vivono davvero.
+Blera come la vivono i blerani. Portiamo piccoli gruppi di viaggiatori internazionali a Blera non per visitarla, ma per essere **accolti** — partecipare alle attività che rendono il territorio speciale e unico, e incontrare le persone che le rendono possibili.
 
-Non un tour in pullman. Non una lista di cose da vedere. Pochi giorni indimenticabili, da ospiti nella vita vera di qualcuno.
+Chi viene da noi non si ricorda di Blera perché ha visto un bel paesaggio — se la ricorda perché ha incontrato i blerani, ha lavorato con loro, ha mangiato con loro, e ha capito quanto è speciale questa comunità.
+
+Queste esperienze esistono solo grazie alla gente di Blera. Il nostro ruolo è portare un turismo sano — poche persone alla volta, soldi da fuori che restano sul territorio — con il rispetto di chi è di Blera anche se è internazionale, e vuole valorizzarla, non sfruttarla.
 
 ## 2. Perché ora, perché noi
 
