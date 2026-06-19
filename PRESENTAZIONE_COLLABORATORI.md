@@ -47,8 +47,6 @@ Fare quello che fai già, con qualcuno che guarda, partecipa e impara. Niente da
 
 **Nikolai Fissenko** — 349 101 6416 — nikolai.fissenko1@gmail.com
 
-Insieme a **Maria Grazia**, che molti di voi già conoscono.
-
 ---
 
 *Rasna — dal nome che gli Etruschi davano a se stessi. Blera porta ancora la loro impronta. Questo progetto porta avanti la stessa idea: far conoscere questo territorio per quello che è davvero.*
