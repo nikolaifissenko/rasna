@@ -36,8 +36,10 @@ Small-group immersive travel experiences in and around Blera (northern Lazio, It
 | 6 | Tombe etrusche — Tarquinia | — | Culturale / archeologica |
 | 7 | Lago di Vico — passeggiata | — | Natura / escursione |
 | 8 | Palazzo Farnese (Caprarola) | — | Culturale / storica |
+| 9 | Passata fatta in casa | Totò + Maria Grazia | Gastronomica (stagionale lug–ago) |
+| 10 | Gnocchi fatti in casa | Totò + Maria Grazia | Gastronomica |
 
-Queste 8 attività formano il nucleo dell'offerta proponibile fin da subito, con un buon mix di esperienze hands-on (formaggi, olive), gastronomiche (panonto), natura (asini, Lago di Vico) e cultura (tre villaggi, Tarquinia, Palazzo Farnese). Sufficienti per costruire itinerari da 3–5 giorni con varietà.
+Queste 10 attività formano il nucleo dell'offerta proponibile fin da subito, con un buon mix di esperienze hands-on (formaggi, olive, passata, gnocchi), gastronomiche (panonto), natura (asini, Lago di Vico) e cultura (tre villaggi, Tarquinia, Palazzo Farnese). Sufficienti per costruire itinerari da 3–5 giorni con varietà.
 
 This is the **real, evolving starting program** — built from direct conversations with the people involved, adjusted as we learn more (e.g., losing Costantino, confirming tomatoes, clarifying Emiliano's and the maneggio's availability). The rest of the seasonal calendar remains a longer-term ambition to validate and add over time (see Phase 5), not a launch requirement.
 
