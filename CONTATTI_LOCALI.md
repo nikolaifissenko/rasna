@@ -10,7 +10,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
 | Emiliano (figlio di Miriam) | Affettati | da risentire: capire quanto sarebbe interessato e se le dimostrazioni si possono fare tutto l'anno o solo in certi periodi |
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — sostituito da Davide Paolocci (vedi sotto)** |
-| **Davide Paolocci** | Formaggio e carne — Civitella Cesi | ✅ CONFERMATO — disponibile a collaborare; sostituisce Costantino |
+| **Davide Paolocci** | Formaggio — Civitella Cesi | ✅ CONFERMATO — disponibile a collaborare; sostituisce Costantino |
 | **Nicolò Lenarda** | Partner / Board — asset multipli (olio, cavalli, asini, panonto) | ✅ IN BOARD |
 | **Totò** | Casa affitto + gnocchi + olive | DA VALIDARE |
 | **Miriam** (madre di Emiliano) | Affettati (tramite Emiliano) | contatto riscaldato — Emiliano DA VALIDARE operativamente |
@@ -83,11 +83,11 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### DAVIDE PAOLOCCI
 - **Tel:** +39 327 752 2499
-- **Settore:** Formaggio e carne
+- **Settore:** Formaggio
 - **Luogo:** Civitella Cesi
 - **Stato:** ✅ CONFERMATO — disponibile a collaborare
 - **Attività confermate:**
-  - Degustazione formaggi e carne ✅
+  - Degustazione formaggi ✅
   - Lavorazione hands-on con i visitatori ✅
   - Visita sito archeologico vicino ✅
 - **Note:** Sostituisce Costantino (formaggi). Attività completa da sola (mezza giornata).
