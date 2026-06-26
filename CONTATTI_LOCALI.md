@@ -21,6 +21,11 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
+| Luca Torelli | Da definire | da contattare |
+| Anna Torelli | Da definire | da contattare |
+| Mignone | Da definire | da contattare |
+| Antonella Pino | Da definire | da contattare |
+| Luigi Sanapo | Funghi (foraging) | da contattare — esperto di funghi |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
@@ -106,6 +111,32 @@ Alla fine di questo giro di conversazioni, dovresti avere:
   - Casa da affittare (potenziale alloggio gruppi)
   - Gnocchi fatti in casa (attività cucina) ✅ confermato
   - Olive — DA VALIDARE stagionalità
+
+### LUCA TORELLI
+- **Tel:** (da raccogliere)
+- **Stato:** DA CONTATTARE
+- **Note:** da definire ruolo e disponibilità
+
+### ANNA TORELLI
+- **Tel:** (da raccogliere)
+- **Stato:** DA CONTATTARE
+- **Note:** da definire ruolo e disponibilità
+
+### MIGNONE
+- **Tel:** (da raccogliere)
+- **Stato:** DA CONTATTARE
+- **Note:** da definire ruolo e disponibilità
+
+### ANTONELLA PINO
+- **Tel:** (da raccogliere)
+- **Stato:** DA CONTATTARE
+- **Note:** da definire ruolo e disponibilità
+
+### LUIGI SANAPO
+- **Tel:** (da raccogliere)
+- **Stato:** DA CONTATTARE
+- **Settore:** Funghi
+- **Note:** esperto di funghi — potenziale attività di foraging/raccolta funghi
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** contatto riscaldato — Emiliano rimane DA VALIDARE operativamente
