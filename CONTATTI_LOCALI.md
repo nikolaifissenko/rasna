@@ -143,6 +143,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Tel:** (da raccogliere)
 - **Settore:** Guida naturalistica
 - **Stato:** ✅ CONFERMATO
+- **Formazione:** Laurea in Scienze Forestali
+- **Rapporto:** amico stretto
 - **Note:** Guida per escursioni nella natura (trekking, foraging, ecc.)
 
 ### MIRIAM (madre di Emiliano — affettati)
