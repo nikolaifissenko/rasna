@@ -12,7 +12,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — sostituito da Davide Paolocci (vedi sotto)** |
 | **Davide Paolocci** | Formaggio — Civitella Cesi | ✅ CONFERMATO — disponibile a collaborare; sostituisce Costantino |
 | **Nicolò Lenarda** | Partner / Board — asset multipli (olio, cavalli, asini, panonto) | ✅ IN BOARD |
-| **Totò** | Casa affitto + gnocchi + olive | DA VALIDARE |
+| **Totò** | Casa affitto + pasta fatta in casa + olive | DA VALIDARE |
 | **Miriam** (madre di Emiliano) | Affettati (tramite Emiliano) | contatto riscaldato — Emiliano DA VALIDARE operativamente |
 | Renzo | Lavorazione del cuoio (borse/cinte) | disponibilità alta — la dimostrazione potrebbe essere **gratuita**, dato che gli ospiti probabilmente acquisterebbero la sua merce dopo aver visto come la fa (vantaggioso per entrambi) |
 | Maneggio Civitella Cesi | Passeggiate a cavallo | possibile attività complementare/escursione — da contattare per capire disponibilità e modalità con piccoli gruppi |
@@ -110,7 +110,7 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Stato:** DA VALIDARE
 - **Asset:**
   - Casa da affittare (potenziale alloggio gruppi)
-  - Gnocchi fatti in casa (attività cucina) ✅ confermato
+  - Pasta fatta in casa (attività cucina) ✅ confermato
   - Olive — DA VALIDARE stagionalità
 
 ### LUCA TORELLI
