@@ -26,6 +26,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Fiume Mignone | Escursione — trekking lungo il fiume | attività confermata |
 | Antonella Pino | Da definire | da contattare |
 | Luigi Sanapo | Funghi (foraging) | da contattare — esperto di funghi |
+| Leonardo Gentili | Guida naturalistica | ✅ CONFERMATO |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
@@ -137,6 +138,12 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Stato:** DA CONTATTARE
 - **Settore:** Funghi
 - **Note:** esperto di funghi — potenziale attività di foraging/raccolta funghi
+
+### LEONARDO GENTILI
+- **Tel:** (da raccogliere)
+- **Settore:** Guida naturalistica
+- **Stato:** ✅ CONFERMATO
+- **Note:** Guida per escursioni nella natura (trekking, foraging, ecc.)
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** contatto riscaldato — Emiliano rimane DA VALIDARE operativamente
