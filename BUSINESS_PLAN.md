@@ -4,7 +4,7 @@
 
 Small-group immersive travel experiences in and around Blera (northern Lazio, Italy), giving international tourists genuine participation in local seasonal life — not a sightseeing tour, but a "live like a local for a few days" experience.
 
-**Core principle: exclusive access.** Every activity we offer must be something guests could only do through us. They can't walk into Blera and find Davide's cheesemaking or Nicolò's donkey trek on their own — we are the access point to these people and experiences. This is the value proposition and the reason the price is justified. If an activity is something a tourist could easily arrange independently, it doesn't belong in the core offer.
+**Core principle: exclusive access.** The business revolves around Nikolai — a qualified historical guide with deep roots in Blera and personal relationships with every artisan, farmer, and local involved. Guests can't walk into Blera and find Davide's cheesemaking or Nicolò's donkey trek on their own — Nikolai is the access point to these people and experiences. Everyone else (Leonardo Gentili, Maria Grazia, Davide, Nicolò, etc.) are collaborators, not the business. This personal access is the value proposition and the reason the price is justified. If an activity is something a tourist could easily arrange independently, it doesn't belong in the core offer.
 
 **Three phases of enjoyment:** the experience delivers value across three moments — the **anticipation** (planning and looking forward to it), the **experience** (doing it), and the **memory** (looking back on it). Every touchpoint should be designed with all three in mind.
 
