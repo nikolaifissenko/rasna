@@ -23,7 +23,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Luca Torelli | Da definire | da contattare |
 | Anna Torelli | Da definire | da contattare |
-| Mignone | Da definire | da contattare |
+| Mignone | Escursioni | da contattare |
 | Antonella Pino | Da definire | da contattare |
 | Luigi Sanapo | Funghi (foraging) | da contattare — esperto di funghi |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
@@ -100,8 +100,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Attività confermate:**
   - Degustazione olio ✅
   - Azienda olearia (raccolta olive) — DA VALIDARE stagionalità
-  - 2 cavalli — DA VALIDARE logistica gruppi
-  - Compagna + asini (trekking) — DA VALIDARE disponibilità
+  - 2 cavalli ✅
+  - Compagna + asini (trekking) ✅
   - Panonto a San Giovenale — DA VALIDARE formato + data
 
 ### TOTÒ
@@ -125,7 +125,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 ### MIGNONE
 - **Tel:** (da raccogliere)
 - **Stato:** DA CONTATTARE
-- **Note:** da definire ruolo e disponibilità
+- **Settore:** Escursioni
+- **Note:** attività escursionistica
 
 ### ANTONELLA PINO
 - **Tel:** (da raccogliere)
