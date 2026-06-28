@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main, claude/session-context-tuea7c]
+    branches: [main]
 
 permissions:
   contents: read
