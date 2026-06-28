@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rasna — Plan Your Experience in Blera</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #faf8f5;
+      color: #2c2c2c;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #3d2b1f 0%, #5c4033 50%, #6b4e37 100%);
+      color: #faf8f5;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      font-weight: 300;
+      opacity: 0.9;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 3rem 2rem 1rem;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #3d2b1f;
+    }
+
+    .intro p {
+      font-size: 1.05rem;
+      color: #555;
+      font-weight: 300;
+    }
+
+    .categories {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    .category {
+      margin-bottom: 2.5rem;
+    }
+
+    .category h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #3d2b1f;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #d4c5b2;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .activity-card {
+      background: #fff;
+      border: 2px solid #e8e0d6;
+      border-radius: 12px;
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .activity-card:hover {
+      border-color: #b89d7e;
+      box-shadow: 0 4px 16px rgba(93, 64, 55, 0.1);
+    }
+
+    .activity-card.selected {
+      border-color: #6b4e37;
+      background: #f5f0ea;
+      box-shadow: 0 4px 16px rgba(93, 64, 55, 0.15);
+    }
+
+    .activity-card.selected::after {
+      content: '\2713';
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: #6b4e37;
+      color: #fff;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .activity-card .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .activity-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      color: #3d2b1f;
+      padding-right: 2rem;
+    }
+
+    .activity-card p {
+      font-size: 0.9rem;
+      color: #777;
+      font-weight: 300;
+    }
+
+    .activity-card .season {
+      display: inline-block;
+      margin-top: 0.6rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #8b7355;
+      background: #f0e8dc;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+    }
+
+    .form-section {
+      max-width: 600px;
+      margin: 1rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .form-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #3d2b1f;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .form-section .subtitle {
+      text-align: center;
+      color: #888;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+      color: #444;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e0d6cc;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      background: #fff;
+      color: #2c2c2c;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #6b4e37;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .selected-summary {
+      background: #f5f0ea;
+      border: 2px solid #d4c5b2;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      min-height: 3rem;
+    }
+
+    .selected-summary .label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #8b7355;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.4rem;
+    }
+
+    .selected-summary .items {
+      font-size: 0.95rem;
+      color: #3d2b1f;
+    }
+
+    .selected-summary .empty {
+      font-size: 0.9rem;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: #6b4e37;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    .submit-btn:hover {
+      background: #5a3f2e;
+    }
+
+    .submit-btn:disabled {
+      background: #c4b5a4;
+      cursor: not-allowed;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      color: #aaa;
+      font-size: 0.8rem;
+      border-top: 1px solid #e8e0d6;
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 3rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .success-message h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #3d2b1f;
+      margin-bottom: 1rem;
+    }
+
+    .success-message p {
+      font-size: 1.1rem;
+      color: #666;
+      font-weight: 300;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .activity-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>RASNA</h1>
+    <p class="tagline">Authentic experiences in Blera, Italy — live like a local, not like a tourist.</p>
+  </div>
+
+  <div class="intro">
+    <h2>3 Ways to Have Fun</h2>
+    <p>Pick the experiences that excite you most. We'll put together a personalized all-inclusive package — accommodation, food, activities, transport — and send you a quote within a few days.</p>
+  </div>
+
+  <form id="experience-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+    <div class="categories">
+
+      <div class="category">
+        <h3>Farm & Field</h3>
+        <div class="activity-grid">
+
+          <div class="activity-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
+            <div class="emoji">&#127810;</div>
+            <h4>Olive Harvest</h4>
+            <p>Pick olives by hand and watch them pressed into fresh oil — then taste it on bruschetta, the way it's meant to be.</p>
+            <span class="season">Oct &ndash; Dec</span>
+          </div>
+
+          <div class="activity-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
+            <div class="emoji">&#127813;</div>
+            <h4>Tomato &amp; Sauce Day</h4>
+            <p>Harvest tomatoes and make passata from scratch with a local family — a real Italian summer tradition.</p>
+            <span class="season">August</span>
+          </div>
+
+          <div class="activity-card" data-activity="Hazelnut Harvest" onclick="toggleCard(this)">
+            <div class="emoji">&#127792;</div>
+            <h4>Hazelnut Harvest</h4>
+            <p>The Tuscia is Italy's hazelnut heartland. Join the harvest of this prized autumn crop.</p>
+            <span class="season">Late Aug &ndash; Sep</span>
+          </div>
+
+          <div class="activity-card" data-activity="Wild Asparagus Foraging" onclick="toggleCard(this)">
+            <div class="emoji">&#127807;</div>
+            <h4>Wild Asparagus Foraging</h4>
+            <p>Walk the Tuscia woods in spring, foraging wild asparagus — a living local Easter tradition.</p>
+            <span class="season">Mar &ndash; Jun</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Artisan &amp; Food</h3>
+        <div class="activity-grid">
+
+          <div class="activity-card" data-activity="Charcuterie Degustation with Emiliano" onclick="toggleCard(this)">
+            <div class="emoji">&#129385;</div>
+            <h4>Charcuterie Degustation</h4>
+            <p>Taste homemade salumi and cured meats with Emiliano — made the traditional way, right here in Blera.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Cheese &amp; Charcuterie with Davide (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="emoji">&#129472;</div>
+            <h4>Cheese &amp; Charcuterie in Civitella Cesi</h4>
+            <p>A half-day with Davide Paolocci: hands-on cheesemaking, meat tasting, and a visit to a nearby Etruscan archaeological site.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Cooking in the Tradition of the Nonne" onclick="toggleCard(this)">
+            <div class="emoji">&#127858;</div>
+            <h4>Traditional Cooking</h4>
+            <p>Cook a meal the way it's been done for generations — handmade pasta, wood-fired panonto, seasonal recipes from the territory.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Oil Tasting with Nicol&ograve;" onclick="toggleCard(this)">
+            <div class="emoji">&#129367;</div>
+            <h4>Olive Oil Tasting</h4>
+            <p>A guided degustazione of local extra-virgin olive oils with Nicol&ograve;, straight from the grove.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="category">
+        <h3>Culture &amp; Outdoors</h3>
+        <div class="activity-grid">
+
+          <div class="activity-card" data-activity="Etruscan Tombs &amp; Via Clodia Walk" onclick="toggleCard(this)">
+            <div class="emoji">&#127963;</div>
+            <h4>Etruscan Tombs &amp; Via Clodia</h4>
+            <p>Walk among rock-cut tombs carved 2,800 years ago and follow the ancient Roman road through the countryside.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="emoji">&#128014;</div>
+            <h4>Horseback Riding</h4>
+            <p>Ride through the hills around Civitella Cesi — a beautiful way to see the landscape the slow way.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Lago di Vico, Viterbo, Tarquinia, or the Coast" onclick="toggleCard(this)">
+            <div class="emoji">&#127754;</div>
+            <h4>Day Trips</h4>
+            <p>Lago di Vico, Villa Lante, Palazzo Farnese, Viterbo, Tarquinia, or the Tyrrhenian coast — all within easy reach.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Local Festival / Sagra" onclick="toggleCard(this)">
+            <div class="emoji">&#127878;</div>
+            <h4>Local Festivals</h4>
+            <p>Time your visit with a sagra or the famous Festa delle Cantine — the town's cellars open, and everyone eats and drinks together.</p>
+            <span class="season">Seasonal events</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-section">
+      <h2>Tell Us About Your Trip</h2>
+      <p class="subtitle">We'll build a custom all-inclusive package just for you.</p>
+
+      <div class="selected-summary">
+        <div class="label">Your Selected Experiences</div>
+        <div class="items" id="selected-display">
+          <span class="empty">Click the activities above to select them</span>
+        </div>
+      </div>
+
+      <input type="hidden" name="selected_activities" id="selected-activities-input">
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <select id="guests" name="guests" required>
+            <option value="">Select...</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dates">Preferred Dates / Month</label>
+          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. October 2026, flexible">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn" id="submit-btn" disabled>Select at least one experience to continue</button>
+    </div>
+
+  </form>
+
+  <div class="success-message" id="success-message">
+    <h2>Grazie!</h2>
+    <p>We've received your selections. We'll put together a personalized quote and get back to you within a few days with your all-inclusive package and payment link.</p>
+  </div>
+
+  <div class="footer">
+    Rasna &mdash; Authentic Experiences in Blera, Italy
+  </div>
+
+  <script>
+    const selectedActivities = new Set();
+
+    function toggleCard(card) {
+      const activity = card.dataset.activity;
+      card.classList.toggle('selected');
+      if (selectedActivities.has(activity)) {
+        selectedActivities.delete(activity);
+      } else {
+        selectedActivities.add(activity);
+      }
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      const display = document.getElementById('selected-display');
+      const input = document.getElementById('selected-activities-input');
+      const btn = document.getElementById('submit-btn');
+
+      if (selectedActivities.size === 0) {
+        display.innerHTML = '<span class="empty">Click the activities above to select them</span>';
+        btn.disabled = true;
+        btn.textContent = 'Select at least one experience to continue';
+      } else {
+        const items = Array.from(selectedActivities);
+        display.textContent = items.join(' · ');
+        input.value = items.join(', ');
+        btn.disabled = false;
+        btn.textContent = 'Send My Selections →';
+      }
+    }
+
+    document.getElementById('experience-form').addEventListener('submit', function(e) {
+      if (selectedActivities.size === 0) {
+        e.preventDefault();
+        return;
+      }
+
+      e.preventDefault();
+      const form = this;
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.querySelector('.intro').style.display = 'none';
+          document.getElementById('success-message').style.display = 'block';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
