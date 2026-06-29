@@ -73,7 +73,7 @@ These aren't separate attractions to manage — they're moments the town already
 
 ## 4. Business model
 
-- Sell fixed-departure or on-demand small-group experiences (e.g., 4–10 people, 3–5 days)
+- Sell fixed-departure or on-demand small-group experiences (e.g., 2–7 people, 3–5 days)
 - Package = experience(s) + local guiding + meals with families + lodging via partner BnBs/hotels (you act as curator/coordinator, taking a margin or referral fee from partners, plus your own experience fee)
 - Possible upsell: multi-stop itineraries (Blera + Rome + other Lazio towns)
 
