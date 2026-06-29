@@ -6,7 +6,7 @@
   <title>RASNA — Blera, Italy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Letterhend+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --tufo:       #E8DCC8;
@@ -16,17 +16,22 @@
       --stone:      #A69882;
       --cream:      #F5F0E8;
       --deep:       #1A120B;
+      --olive:      #5C6B3C;
+      --rust:       #9B3D2B;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-family: 'Inter', sans-serif;
       background: var(--cream);
       color: var(--earth);
       -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, .exp-name, .detail-value, .pricing-amount, .way-title {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
     }
 
     /* ── Hero ── */
@@ -49,120 +54,144 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse at 30% 70%, rgba(184,89,62,0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 30%, rgba(196,162,101,0.1) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 80%, rgba(92,107,60,0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(184,89,62,0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(196,162,101,0.05) 0%, transparent 70%);
     }
 
-    .hero-content { position: relative; z-index: 1; }
+    .hero-content { position: relative; z-index: 1; max-width: 700px; }
 
     .hero h1 {
       font-size: clamp(3.5rem, 8vw, 7rem);
       font-weight: 300;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.3em;
       text-transform: uppercase;
-      margin-bottom: 0.3em;
+      margin-bottom: 0.4em;
       color: var(--gold);
     }
 
     .hero .tagline {
-      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
       font-weight: 300;
-      font-style: italic;
-      letter-spacing: 0.12em;
-      opacity: 0.75;
-      max-width: 28em;
-    }
-
-    .hero .divider {
-      width: 60px;
-      height: 1px;
-      background: var(--gold);
-      margin: 2.5rem auto;
-      opacity: 0.5;
+      letter-spacing: 0.03em;
+      line-height: 1.7;
+      opacity: 0.8;
+      max-width: 30em;
+      margin: 0 auto;
     }
 
     .hero .subtitle {
-      font-size: clamp(0.8rem, 1.3vw, 0.95rem);
-      letter-spacing: 0.3em;
+      font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+      letter-spacing: 0.35em;
       text-transform: uppercase;
-      font-weight: 400;
-      opacity: 0.5;
+      font-weight: 500;
+      opacity: 0.45;
     }
 
-    /* ── Etruscan border motif (meander / Greek key) ── */
+    .hero .divider {
+      width: 50px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2rem auto;
+      opacity: 0.4;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 1rem 2.5rem;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      cursor: pointer;
+      background: transparent;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .cta-button:hover {
+      background: var(--gold);
+      color: var(--deep);
+    }
+
+    /* ── Etruscan borders ── */
     .etruscan-border {
-      height: 32px;
+      height: 28px;
       background: var(--tufo);
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
     }
-
-    .etruscan-border svg { height: 32px; width: 100%; }
+    .etruscan-border svg { height: 28px; width: 100%; }
 
     .etruscan-border-dark {
-      height: 32px;
+      height: 28px;
       background: var(--deep);
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
     }
+    .etruscan-border-dark svg { height: 28px; width: 100%; }
 
-    .etruscan-border-dark svg { height: 32px; width: 100%; }
-
-    /* ── Etruscan decorative SVG elements ── */
     .etruscan-ornament {
       display: block;
       margin: 0 auto;
-      opacity: 0.25;
+      opacity: 0.2;
     }
 
-    .hero .etruscan-ornament { opacity: 0.15; }
+    .hero .etruscan-ornament { opacity: 0.12; }
 
     .etruscan-corner {
       position: absolute;
-      opacity: 0.06;
+      opacity: 0.05;
     }
-
     .etruscan-corner.top-left { top: 2rem; left: 2rem; }
     .etruscan-corner.top-right { top: 2rem; right: 2rem; transform: scaleX(-1); }
     .etruscan-corner.bottom-left { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
     .etruscan-corner.bottom-right { bottom: 2rem; right: 2rem; transform: scale(-1); }
 
     /* ── Sections ── */
-    section {
-      padding: 6rem 2rem;
-    }
+    section { padding: 5rem 2rem; }
 
     .section-inner {
-      max-width: 680px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-wide {
+      max-width: 960px;
       margin: 0 auto;
     }
 
     .section-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.4em;
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--stone);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
+      font-weight: 500;
     }
 
     section h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 300;
-      line-height: 1.2;
-      margin-bottom: 1.5rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
       color: var(--earth);
     }
 
     section p {
-      font-size: 1.15rem;
-      line-height: 1.85;
+      font-size: 1rem;
+      line-height: 1.8;
       font-weight: 300;
       color: var(--earth);
-      opacity: 0.85;
+      opacity: 0.8;
     }
 
     /* ── Intro ── */
@@ -172,61 +201,283 @@
     }
 
     .intro p {
-      max-width: 520px;
+      max-width: 560px;
       margin: 0 auto;
-      font-style: italic;
-      font-size: 1.25rem;
+      font-size: 1.1rem;
+      line-height: 1.9;
     }
 
-    /* ── Experiences ── */
-    .experiences {
+    /* ── 3 Ways ── */
+    .three-ways {
       background: var(--deep);
       color: var(--tufo);
     }
 
-    .experiences .section-label { color: var(--gold); opacity: 0.6; }
-    .experiences h2 { color: var(--tufo); }
+    .three-ways .section-label { color: var(--gold); opacity: 0.5; }
+    .three-ways h2 { color: var(--tufo); }
 
-    .exp-list {
-      list-style: none;
-      margin-top: 3rem;
-    }
-
-    .exp-list li {
-      padding: 2.2rem 0;
-      border-bottom: 1px solid rgba(196,162,101,0.12);
+    .ways-grid {
       display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 1.5rem;
-      align-items: baseline;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
     }
 
-    .exp-list li:last-child { border-bottom: none; }
+    .way-card {
+      border: 1px solid rgba(196,162,101,0.15);
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
 
-    .exp-season {
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
+    .way-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
       opacity: 0.7;
-      min-width: 5.5em;
-      padding-top: 0.35em;
     }
 
-    .exp-name {
-      font-size: 1.4rem;
-      font-weight: 400;
-      letter-spacing: 0.03em;
-      color: var(--tufo);
-      margin-bottom: 0.4rem;
+    .way-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
     }
 
-    .exp-desc {
-      font-size: 0.95rem;
+    .way-desc {
+      font-size: 0.85rem;
       font-weight: 300;
       line-height: 1.7;
-      opacity: 0.55;
+      opacity: 0.5;
       color: var(--tufo);
+    }
+
+    /* ── Experiences (selectable) ── */
+    .experiences {
+      background: var(--cream);
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .exp-card {
+      background: #fff;
+      border: 2px solid var(--tufo);
+      padding: 1.5rem;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+      user-select: none;
+    }
+
+    .exp-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(44,30,18,0.08);
+    }
+
+    .exp-card.selected {
+      border-color: var(--terracotta);
+      background: #fdf8f2;
+      box-shadow: 0 4px 20px rgba(184,89,62,0.12);
+    }
+
+    .exp-card.selected::after {
+      content: '\2713';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--terracotta);
+      color: #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .exp-card .exp-season {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--olive);
+      background: rgba(92,107,60,0.12);
+      padding: 0.2em 0.6em;
+      border-radius: 2px;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+    }
+
+    .exp-card .exp-way {
+      display: inline-block;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      background: rgba(184,89,62,0.1);
+      padding: 0.2em 0.6em;
+      border-radius: 2px;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      margin-left: 0.3rem;
+    }
+
+    .exp-card .exp-name {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--earth);
+      margin-bottom: 0.4rem;
+      padding-right: 2rem;
+    }
+
+    .exp-card .exp-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.65;
+      opacity: 0.6;
+      color: var(--earth);
+    }
+
+    .exp-hint {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      opacity: 0.45;
+      font-weight: 400;
+    }
+
+    /* ── What's included ── */
+    .what-you-get {
+      background: var(--tufo);
+    }
+
+    .included-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .included-item {
+      padding: 1.5rem;
+      background: rgba(245,240,232,0.7);
+      border-left: 3px solid var(--terracotta);
+    }
+
+    .included-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+      color: var(--earth);
+    }
+
+    .included-item p {
+      font-size: 0.82rem;
+      line-height: 1.6;
+      opacity: 0.6;
+    }
+
+    /* ── Details strip ── */
+    .details {
+      background: var(--cream);
+      padding: 3.5rem 2rem;
+    }
+
+    .details-grid {
+      max-width: 720px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .detail-item .detail-value {
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--terracotta);
+      margin-bottom: 0.2rem;
+    }
+
+    .detail-item .detail-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--stone);
+      font-weight: 400;
+    }
+
+    /* ── Pricing ── */
+    .pricing {
+      background: var(--deep);
+      color: var(--tufo);
+      text-align: center;
+    }
+
+    .pricing .section-label { color: var(--gold); opacity: 0.5; }
+    .pricing h2 { color: var(--tufo); }
+
+    .pricing-card {
+      max-width: 420px;
+      margin: 2.5rem auto 0;
+      border: 1px solid rgba(196,162,101,0.2);
+      padding: 2.5rem 2rem;
+    }
+
+    .pricing-amount {
+      font-size: 3.2rem;
+      font-weight: 300;
+      color: var(--gold);
+      margin-bottom: 0.2rem;
+    }
+
+    .pricing-amount span { font-size: 1.2rem; opacity: 0.5; }
+
+    .pricing-per {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.4;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-includes {
+      list-style: none;
+      text-align: left;
+      font-size: 0.85rem;
+      font-weight: 300;
+      opacity: 0.6;
+    }
+
+    .pricing-includes li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(196,162,101,0.08);
+      padding-left: 1.2rem;
+      position: relative;
+    }
+    .pricing-includes li:last-child { border-bottom: none; }
+    .pricing-includes li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 5px;
+      height: 5px;
+      background: var(--terracotta);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .pricing-note {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      opacity: 0.3;
+      font-style: italic;
     }
 
     /* ── Philosophy ── */
@@ -235,150 +486,192 @@
     }
 
     .philosophy blockquote {
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 300;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 2.8vw, 2rem);
+      font-weight: 400;
       font-style: italic;
       line-height: 1.5;
       color: var(--terracotta);
-      border-left: 2px solid var(--gold);
+      border-left: 3px solid var(--olive);
       padding-left: 1.5rem;
-      margin: 2rem 0;
+      margin: 1.5rem 0;
     }
 
-    /* ── Details strip ── */
-    .details {
-      background: var(--tufo);
-      padding: 4rem 2rem;
-    }
-
-    .details-grid {
-      max-width: 680px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .detail-item .detail-value {
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: var(--terracotta);
-      margin-bottom: 0.3rem;
-    }
-
-    .detail-item .detail-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--stone);
-    }
-
-    /* ── Contact ── */
+    /* ── Contact / Form ── */
     .contact {
       background: var(--deep);
       color: var(--tufo);
       text-align: center;
-      padding: 7rem 2rem;
+      padding: 6rem 2rem;
     }
 
     .contact h2 {
       color: var(--gold);
       font-size: clamp(1.8rem, 3.5vw, 2.5rem);
       font-weight: 300;
-      margin-bottom: 1rem;
     }
 
     .contact p {
       color: var(--tufo);
-      opacity: 0.6;
-      font-size: 1rem;
+      opacity: 0.55;
+      font-size: 0.95rem;
       font-weight: 300;
-    }
-
-    .contact a {
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(196,162,101,0.3);
-      transition: border-color 0.3s;
-    }
-
-    .contact a:hover {
-      border-color: var(--gold);
     }
 
     .contact .divider {
       width: 40px;
       height: 1px;
       background: var(--gold);
-      margin: 2rem auto;
-      opacity: 0.3;
+      margin: 1.5rem auto;
+      opacity: 0.25;
+    }
+
+    .contact-form {
+      max-width: 480px;
+      margin: 2rem auto 0;
+      text-align: left;
+    }
+
+    .contact-form .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: rgba(232,220,200,0.08);
+      border: 1px solid rgba(196,162,101,0.2);
+      color: var(--tufo);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: var(--gold);
+    }
+
+    .contact-form textarea { resize: vertical; min-height: 80px; }
+
+    .contact-form select option {
+      background: var(--deep);
+      color: var(--tufo);
+    }
+
+    .selected-activities-summary {
+      background: rgba(184,89,62,0.1);
+      border: 1px solid rgba(184,89,62,0.2);
+      padding: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--tufo);
+      opacity: 0.8;
+    }
+
+    .selected-activities-summary strong {
+      font-weight: 500;
+      color: var(--gold);
+    }
+
+    .no-selection {
+      opacity: 0.35;
+      font-style: italic;
+    }
+
+    .form-submit {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .form-submit .cta-button {
+      margin-top: 0;
+    }
+
+    .contact .email-link {
+      display: block;
+      margin-top: 2rem;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.8rem;
+      opacity: 0.4;
+      letter-spacing: 0.05em;
     }
 
     /* ── Footer ── */
     footer {
       background: var(--deep);
-      border-top: 1px solid rgba(196,162,101,0.08);
+      border-top: 1px solid rgba(196,162,101,0.06);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.7rem;
+      padding: 1.5rem;
+      font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--stone);
-      opacity: 0.4;
+      opacity: 0.35;
     }
 
     /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .ways-grid { grid-template-columns: 1fr; gap: 1rem; }
+    }
     @media (max-width: 600px) {
-      section { padding: 4rem 1.5rem; }
-      .exp-list li { grid-template-columns: 1fr; gap: 0.3rem; }
-      .details-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      section { padding: 3.5rem 1.5rem; }
+      .exp-grid { grid-template-columns: 1fr; }
+      .details-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+      .included-grid { grid-template-columns: 1fr; }
     }
 
-    /* ── Subtle entrance animations ── */
+    /* ── Animations ── */
     .fade-in {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
       animation: fadeInFallback 0.01s 1s forwards;
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-      animation: none;
-    }
-    @keyframes fadeInFallback {
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
+    @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
-  <!-- Reusable SVG definitions -->
+  <!-- SVG defs -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <defs>
-      <!-- Etruscan meander / Greek key pattern tile -->
-      <pattern id="meander" x="0" y="0" width="40" height="32" patternUnits="userSpaceOnUse">
-        <path d="M0,16 h8 v-8 h8 v16 h8 v-16 h8 v8 h8" fill="none" stroke="#C4A265" stroke-width="1.5"/>
-        <path d="M0,24 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.5"/>
+      <pattern id="meander" x="0" y="0" width="40" height="28" patternUnits="userSpaceOnUse">
+        <path d="M0,14 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#C4A265" stroke-width="1.3"/>
+        <path d="M0,21 h3.5 v-14 h7 v14 h7 v-14 h7 v14 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
       </pattern>
-      <pattern id="meander-light" x="0" y="0" width="40" height="32" patternUnits="userSpaceOnUse">
-        <path d="M0,16 h8 v-8 h8 v16 h8 v-16 h8 v8 h8" fill="none" stroke="#2C1E12" stroke-width="1.5"/>
-        <path d="M0,24 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.5"/>
+      <pattern id="meander-light" x="0" y="0" width="40" height="28" patternUnits="userSpaceOnUse">
+        <path d="M0,14 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#2C1E12" stroke-width="1.3"/>
+        <path d="M0,21 h3.5 v-14 h7 v14 h7 v-14 h7 v14 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
       </pattern>
-      <!-- Etruscan palmette -->
       <symbol id="palmette" viewBox="0 0 80 60">
         <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1"/>
         <path d="M40,55 C40,40 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
         <path d="M40,55 C40,40 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
         <ellipse cx="40" cy="56" rx="6" ry="2" fill="none" stroke="currentColor" stroke-width="0.8"/>
       </symbol>
-      <!-- Etruscan wave / scroll -->
       <pattern id="wave" x="0" y="0" width="48" height="20" patternUnits="userSpaceOnUse">
         <path d="M0,10 C8,2 16,2 24,10 C32,18 40,18 48,10" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
         <path d="M0,14 C8,6 16,6 24,14 C32,22 40,22 48,14" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
       </pattern>
-      <!-- Corner ornament (Etruscan volute/spiral) -->
       <symbol id="corner-ornament" viewBox="0 0 120 120">
         <path d="M10,110 C10,60 10,10 60,10 C90,10 110,30 110,50 C110,70 95,80 80,80 C65,80 55,70 55,58 C55,48 62,42 70,42 C78,42 82,48 82,54" fill="none" stroke="currentColor" stroke-width="1.2"/>
         <path d="M10,110 L10,90 C10,50 30,20 60,20" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
@@ -389,103 +682,144 @@
 
   <!-- Hero -->
   <section class="hero">
-    <!-- Corner ornaments -->
-    <svg class="etruscan-corner top-left" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner top-right" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner bottom-left" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner bottom-right" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner top-left" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner top-right" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-left" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-right" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
 
     <div class="hero-content">
-      <div class="subtitle">Blera, Northern Lazio</div>
+      <div class="subtitle">Blera &middot; Northern Lazio &middot; Italy</div>
       <div class="divider"></div>
-      <!-- Palmette above title -->
-      <svg class="etruscan-ornament" width="60" height="45" style="color:var(--gold); margin-bottom:1rem"><use href="#palmette"/></svg>
+      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
-      <p class="tagline">Live the ancient rhythm of an Italian village — not as a tourist, but as a guest.</p>
-      <!-- Wave ornament below tagline -->
-      <svg class="etruscan-ornament" width="200" height="20" style="color:var(--gold); margin-top:2rem">
-        <rect width="200" height="20" fill="url(#wave)"/>
-      </svg>
+      <p class="tagline">Harvest olives with local families. Hike through 2,800-year-old Etruscan tombs. Make your own leather bag with a village artisan. This isn't a tour — it's four days of doing the real thing.</p>
+      <a href="#pick" class="cta-button">Pick your adventure</a>
     </div>
   </section>
 
-  <!-- Meander border (dark bg) -->
   <div class="etruscan-border">
-    <svg width="100%" height="32"><rect width="100%" height="32" fill="url(#meander-light)"/></svg>
+    <svg width="100%" height="28"><rect width="100%" height="28" fill="url(#meander-light)"/></svg>
   </div>
 
   <!-- Intro -->
   <section class="intro">
     <div class="section-inner fade-in">
-      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--terracotta); margin-bottom:2rem"><use href="#palmette"/></svg>
-      <p>"Rasna" is what the Etruscans called themselves — the people who first carved this land from tufo, nearly 2,800 years ago. Their tombs, their roads, their spirit still live here. So does ours.</p>
+      <svg class="etruscan-ornament" width="45" height="34" style="color:var(--terracotta); margin-bottom:1.5rem"><use href="#palmette"/></svg>
+      <p>"Rasna" is what the Etruscans called themselves — the civilization that carved cities into volcanic rock here nearly three millennia ago. Their tombs still line the ravines. Their roads still cut through the forest. You'll walk them yourself.</p>
     </div>
   </section>
 
-  <!-- Experiences -->
-  <section class="experiences">
-    <div class="section-inner">
-      <div class="section-label fade-in">The Experiences</div>
-      <h2 class="fade-in">A few things,<br>done truly.</h2>
-      <ul class="exp-list">
-        <li class="fade-in">
-          <span class="exp-season">Autumn</span>
-          <div>
-            <div class="exp-name">The Olive Harvest</div>
-            <div class="exp-desc">Pick olives by hand with a local family, press them at the frantoio, taste the new oil on bread grilled over fire.</div>
-          </div>
-        </li>
-        <li class="fade-in">
-          <span class="exp-season">Summer</span>
-          <div>
-            <div class="exp-name">The Sauce Day</div>
-            <div class="exp-desc">August tomatoes, a wood fire, and the ritual of making passata — the way families here have done it for generations.</div>
-          </div>
-        </li>
-        <li class="fade-in">
-          <span class="exp-season">Year-round</span>
-          <div>
-            <div class="exp-name">Leather & Craft</div>
-            <div class="exp-desc">Work leather under the hands of a local artisan. Cut, stitch, and leave with a bag you made yourself.</div>
-          </div>
-        </li>
-        <li class="fade-in">
-          <span class="exp-season">Year-round</span>
-          <div>
-            <div class="exp-name">The Etruscan Walk</div>
-            <div class="exp-desc">Rock-cut tombs, the ancient Via Clodia, and the silence of a landscape that has barely changed in millennia.</div>
-          </div>
-        </li>
-        <li class="fade-in">
-          <span class="exp-season">Year-round</span>
-          <div>
-            <div class="exp-name">Cheese & Cured Meats</div>
-            <div class="exp-desc">Visit a small producer in Civitella Cesi. Watch, taste, learn — then sit down to eat what you just saw made.</div>
-          </div>
-        </li>
-      </ul>
+  <!-- 3 Ways to Have Fun -->
+  <section class="three-ways">
+    <div class="section-wide">
+      <div class="section-label fade-in" style="text-align:center">Three ways to have fun</div>
+      <h2 class="fade-in" style="text-align:center">Pick your kind of adventure.</h2>
+      <div class="ways-grid fade-in">
+        <div class="way-card">
+          <div class="way-icon">&#x1F33F;</div>
+          <div class="way-title">Work the Land</div>
+          <p class="way-desc">Get into the groves and fields. Harvest olives, crush tomatoes, forage asparagus — seasonal, physical, real.</p>
+        </div>
+        <div class="way-card">
+          <div class="way-icon">&#x1F9ED;</div>
+          <div class="way-title">Explore the Ancient</div>
+          <p class="way-desc">Hike Etruscan trails, descend into rock-cut tombs, walk the Via Clodia — paths carved before Rome existed.</p>
+        </div>
+        <div class="way-card">
+          <div class="way-icon">&#x1F9F0;</div>
+          <div class="way-title">Make Something</div>
+          <p class="way-desc">Leather bags with a local artisan. Cheese at a family farm. Passata from scratch. Take home what you built.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Meander border (on dark bg) -->
   <div class="etruscan-border-dark">
-    <svg width="100%" height="32"><rect width="100%" height="32" fill="url(#meander)"/></svg>
+    <svg width="100%" height="28"><rect width="100%" height="28" fill="url(#meander)"/></svg>
   </div>
 
-  <!-- Philosophy -->
-  <section class="philosophy">
-    <div class="section-inner fade-in">
-      <div class="section-label">Our Promise</div>
-      <h2>Intentionally small.</h2>
-      <blockquote>We are not building the next Positano. We stay small on purpose — so the experience stays real.</blockquote>
-      <p>No buses. No crowds. No staged performances. Just a few guests at a time, welcomed into the actual daily life of a village that has been here since the Etruscans carved it from stone.</p>
-      <svg class="etruscan-ornament" width="160" height="20" style="color:var(--terracotta); margin-top:2.5rem">
-        <rect width="160" height="20" fill="url(#wave)"/>
-      </svg>
+  <!-- Pick your activities -->
+  <section class="experiences" id="pick">
+    <div class="section-wide">
+      <div class="section-label fade-in">Build your trip</div>
+      <h2 class="fade-in">Select the experiences you want.</h2>
+      <p class="fade-in" style="margin-bottom:0.5rem">Click to select — we'll build your 4-day itinerary around your choices.</p>
+      <div class="exp-grid fade-in">
+
+        <div class="exp-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
+          <span class="exp-season">Oct–Dec</span>
+          <span class="exp-way">Work the Land</span>
+          <div class="exp-name">The Olive Harvest</div>
+          <div class="exp-desc">Climb into the groves with a local family. Pick by hand, haul crates to the frantoio, watch your oil pressed — then taste it on bread grilled over open fire.</div>
+        </div>
+
+        <div class="exp-card" data-activity="Sauce Day" onclick="toggleCard(this)">
+          <span class="exp-season">August</span>
+          <span class="exp-way">Make Something</span>
+          <div class="exp-name">The Sauce Day</div>
+          <div class="exp-desc">Bushels of ripe tomatoes, a wood fire, and a family ritual unchanged for generations. Crush, cook, bottle — eat what you made that night.</div>
+        </div>
+
+        <div class="exp-card" data-activity="Leather Workshop" onclick="toggleCard(this)">
+          <span class="exp-season">All year</span>
+          <span class="exp-way">Make Something</span>
+          <div class="exp-name">The Leather Workshop</div>
+          <div class="exp-desc">Renzo's been making bags by hand for decades. He'll put tools in your hands — cut, stitch, and take home a leather bag you built yourself.</div>
+        </div>
+
+        <div class="exp-card" data-activity="Etruscan Trail" onclick="toggleCard(this)">
+          <span class="exp-season">All year</span>
+          <span class="exp-way">Explore the Ancient</span>
+          <div class="exp-name">The Etruscan Trail</div>
+          <div class="exp-desc">Hike into ravines carved from tufo. Explore rock-cut tombs untouched for centuries. Walk a stretch of the Via Clodia — the ancient road Rome built over Etruscan paths.</div>
+        </div>
+
+        <div class="exp-card" data-activity="Farm to Table" onclick="toggleCard(this)">
+          <span class="exp-season">All year</span>
+          <span class="exp-way">Make Something</span>
+          <div class="exp-name">Farm to Table — Literally</div>
+          <div class="exp-desc">At Davide's farm in Civitella Cesi: watch cheese being made, see how salumi are cured, then sit down and eat everything you just saw produced.</div>
+        </div>
+
+        <div class="exp-card" data-activity="Horseback Riding" onclick="toggleCard(this)">
+          <span class="exp-season">All year</span>
+          <span class="exp-way">Explore the Ancient</span>
+          <div class="exp-name">Horseback Through the Hills</div>
+          <div class="exp-desc">Ride through the Tuscia countryside on horseback from the Civitella Cesi stables — past Etruscan ruins, olive groves, and views most tourists never see.</div>
+        </div>
+
+      </div>
+      <p class="exp-hint fade-in">Your selections will be included in the booking form below.</p>
     </div>
   </section>
 
-  <!-- Details -->
+  <!-- What's included -->
+  <section class="what-you-get">
+    <div class="section-inner">
+      <div class="section-label fade-in">What's included</div>
+      <h2 class="fade-in">You show up. We handle everything.</h2>
+      <div class="included-grid fade-in">
+        <div class="included-item">
+          <h3>Accommodation</h3>
+          <p>4 nights at a local B&B or agriturismo — no chain hotels, real places run by real people.</p>
+        </div>
+        <div class="included-item">
+          <h3>All meals</h3>
+          <p>Breakfast, lunch, dinner — cooked by local families, at farms, or at the sagra festivals.</p>
+        </div>
+        <div class="included-item">
+          <h3>All experiences</h3>
+          <p>Every hands-on activity you selected: harvesting, workshops, farm visits, guided hikes.</p>
+        </div>
+        <div class="included-item">
+          <h3>Local transport</h3>
+          <p>Pickup from Rome or Viterbo, all transfers between sites and villages during your stay.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details strip -->
   <div class="details">
     <div class="details-grid fade-in">
       <div class="detail-item">
@@ -494,24 +828,109 @@
       </div>
       <div class="detail-item">
         <div class="detail-value">6–10</div>
-        <div class="detail-label">Guests</div>
+        <div class="detail-label">People max</div>
       </div>
       <div class="detail-item">
-        <div class="detail-value">All</div>
-        <div class="detail-label">Inclusive</div>
+        <div class="detail-value">100%</div>
+        <div class="detail-label">Hands-on</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-value">0</div>
+        <div class="detail-label">Tour buses</div>
       </div>
     </div>
   </div>
 
-  <!-- Contact -->
-  <section class="contact">
+  <!-- Pricing -->
+  <section class="pricing">
+    <div class="section-inner">
+      <div class="section-label fade-in">Investment</div>
+      <h2 class="fade-in">One price. Everything in.</h2>
+      <div class="pricing-card fade-in">
+        <div class="pricing-amount"><span>&euro;</span>1,450</div>
+        <div class="pricing-per">per person &middot; 4 days all-inclusive</div>
+        <ul class="pricing-includes">
+          <li>4 nights accommodation</li>
+          <li>All meals (breakfast, lunch, dinner)</li>
+          <li>All hands-on experiences &amp; workshops</li>
+          <li>Guided Etruscan site hikes</li>
+          <li>Transport from Rome or Viterbo</li>
+          <li>All local transfers</li>
+          <li>English-speaking host throughout</li>
+        </ul>
+        <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="etruscan-border-dark">
+    <svg width="100%" height="28"><rect width="100%" height="28" fill="url(#meander)"/></svg>
+  </div>
+
+  <!-- Philosophy -->
+  <section class="philosophy">
     <div class="section-inner fade-in">
-      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:1.5rem"><use href="#palmette"/></svg>
-      <h2>Begin here.</h2>
+      <div class="section-label">Why we stay small</div>
+      <h2>This is not mass tourism.</h2>
+      <blockquote>We take 10 people at a time — because that's how many can actually fit around a family's table, or work a real olive grove without turning it into a show.</blockquote>
+      <p>No staged performances. No gift shops. No Instagram setups. You'll be sweating in an olive grove, getting flour on your hands, and eating dinner with the people whose land you worked that day.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Formspree -->
+  <section class="contact" id="contact">
+    <div class="section-inner fade-in">
+      <svg class="etruscan-ornament" width="45" height="34" style="color:var(--gold); margin-bottom:1rem"><use href="#palmette"/></svg>
+      <h2>Ready to go?</h2>
       <div class="divider"></div>
-      <p>Write to us to reserve your place<br>or to ask anything at all.</p>
-      <br>
-      <p><a href="mailto:info@rasna.it">info@rasna.it</a></p>
+      <p>Fill in your details and we'll get back to you<br>with available dates and next steps.</p>
+
+      <form class="contact-form" action="https://formspree.io/f/myourformid" method="POST">
+        <input type="hidden" name="_subject" value="New RASNA booking inquiry">
+        <input type="hidden" name="selected_activities" id="hidden-activities" value="">
+
+        <div class="selected-activities-summary" id="activities-summary">
+          <span class="no-selection">No activities selected yet — <a href="#pick" style="color:var(--gold)">pick some above</a></span>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required placeholder="Full name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="travelers">Number of travelers</label>
+          <select id="travelers" name="travelers">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6+">6+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dates">Preferred dates or season</label>
+          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. October 2026, flexible, etc.">
+        </div>
+
+        <div class="form-group">
+          <label for="message">Anything else?</label>
+          <textarea id="message" name="message" placeholder="Questions, dietary needs, special requests..."></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="cta-button">Send my request</button>
+        </div>
+      </form>
+
+      <a href="mailto:nikolai.fissenko1@gmail.com" class="email-link">or email us directly: nikolai.fissenko1@gmail.com</a>
     </div>
   </section>
 
@@ -520,9 +939,35 @@
   </footer>
 
   <script>
+    const selectedActivities = new Set();
+
+    function toggleCard(el) {
+      const activity = el.dataset.activity;
+      el.classList.toggle('selected');
+      if (el.classList.contains('selected')) {
+        selectedActivities.add(activity);
+      } else {
+        selectedActivities.delete(activity);
+      }
+      updateSummary();
+    }
+
+    function updateSummary() {
+      const summary = document.getElementById('activities-summary');
+      const hidden = document.getElementById('hidden-activities');
+      if (selectedActivities.size === 0) {
+        summary.innerHTML = '<span class="no-selection">No activities selected yet — <a href="#pick" style="color:var(--gold)">pick some above</a></span>';
+        hidden.value = '';
+      } else {
+        const list = Array.from(selectedActivities);
+        summary.innerHTML = '<strong>Your picks:</strong> ' + list.join(' · ');
+        hidden.value = list.join(', ');
+      }
+    }
+
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 
