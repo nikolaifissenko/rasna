@@ -1,32 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" id="html-root">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Rasna — immersive travel experiences in Blera, Italy -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasna — Plan Your Experience in Blera</title>
-  <meta name="description" content="Small-group immersive experiences in Blera, Italy. Pick your activities, we'll build your all-inclusive trip.">
-  <meta property="og:title" content="Rasna — Plan Your Experience in Blera">
-  <meta property="og:description" content="Live like a local in a small Italian village. Pick olive harvests, charcuterie tastings, Etruscan walks, and more — we'll handle the rest.">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏺</text></svg>">
+  <title>RASNA — Blera, Italy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Letterhend+Sans:wght@300;400&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+    :root {
+      --tufo:       #E8DCC8;
+      --terracotta: #B8593E;
+      --earth:      #2C1E12;
+      --gold:       #C4A265;
+      --stone:      #A69882;
+      --cream:      #F5F0E8;
+      --deep:       #1A120B;
+    }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f2eb;
-      color: #2a2017;
-      line-height: 1.6;
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      background: var(--cream);
+      color: var(--earth);
+      -webkit-font-smoothing: antialiased;
     }
 
+    /* ── Hero ── */
     .hero {
-      background: linear-gradient(160deg, #1a1410 0%, #2d1f15 40%, #4a2c1a 100%);
-      color: #f0e6d6;
-      padding: 4rem 2rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 4rem 2rem;
+      background: var(--deep);
+      color: var(--tufo);
       position: relative;
       overflow: hidden;
     }
@@ -34,824 +47,483 @@
     .hero::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
+      inset: 0;
       background:
-        repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(191,130,70,0.06) 40px, rgba(191,130,70,0.06) 42px),
-        repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(191,130,70,0.06) 40px, rgba(191,130,70,0.06) 42px);
-      pointer-events: none;
+        radial-gradient(ellipse at 30% 70%, rgba(184,89,62,0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(196,162,101,0.1) 0%, transparent 50%);
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 4px;
-      background: repeating-linear-gradient(90deg, #bf8246 0px, #bf8246 12px, #1a1410 12px, #1a1410 16px, #c45a3c 16px, #c45a3c 28px, #1a1410 28px, #1a1410 32px);
-    }
+    .hero-content { position: relative; z-index: 1; }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.6rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      margin-bottom: 0.5rem;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300;
+      letter-spacing: 0.35em;
       text-transform: uppercase;
-      position: relative;
+      margin-bottom: 0.3em;
+      color: var(--gold);
     }
 
     .hero .tagline {
-      font-size: 1.05rem;
+      font-size: clamp(1rem, 2vw, 1.35rem);
       font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.12em;
+      opacity: 0.75;
+      max-width: 28em;
+    }
+
+    .hero .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2.5rem auto;
+      opacity: 0.5;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      font-weight: 400;
+      opacity: 0.5;
+    }
+
+    /* ── Etruscan border motif (meander / Greek key) ── */
+    .etruscan-border {
+      height: 32px;
+      background: var(--tufo);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .etruscan-border svg { height: 32px; width: 100%; }
+
+    .etruscan-border-dark {
+      height: 32px;
+      background: var(--deep);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .etruscan-border-dark svg { height: 32px; width: 100%; }
+
+    /* ── Etruscan decorative SVG elements ── */
+    .etruscan-ornament {
+      display: block;
+      margin: 0 auto;
+      opacity: 0.25;
+    }
+
+    .hero .etruscan-ornament { opacity: 0.15; }
+
+    .etruscan-corner {
+      position: absolute;
+      opacity: 0.06;
+    }
+
+    .etruscan-corner.top-left { top: 2rem; left: 2rem; }
+    .etruscan-corner.top-right { top: 2rem; right: 2rem; transform: scaleX(-1); }
+    .etruscan-corner.bottom-left { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
+    .etruscan-corner.bottom-right { bottom: 2rem; right: 2rem; transform: scale(-1); }
+
+    /* ── Sections ── */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 1.5rem;
+    }
+
+    section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--earth);
+    }
+
+    section p {
+      font-size: 1.15rem;
+      line-height: 1.85;
+      font-weight: 300;
+      color: var(--earth);
       opacity: 0.85;
-      max-width: 500px;
-      margin: 0 auto;
-      letter-spacing: 0.02em;
     }
 
+    /* ── Intro ── */
     .intro {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 3rem 2rem 1rem;
+      background: var(--cream);
       text-align: center;
-    }
-
-    .intro h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.9rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: #4a2c1a;
     }
 
     .intro p {
-      font-size: 1.05rem;
-      color: #5a4a3a;
-      font-weight: 300;
-    }
-
-    .categories {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 2rem;
-    }
-
-    .category {
-      margin-bottom: 2.5rem;
-    }
-
-    .category h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #4a2c1a;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid #c45a3c;
-      display: inline-block;
-    }
-
-    .activity-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-    }
-
-    .activity-card {
-      background: #fefcf8;
-      border: 2px solid #ddd2c2;
-      border-radius: 4px;
-      padding: 1.5rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      position: relative;
-    }
-
-    .activity-card:hover {
-      border-color: #bf8246;
-      box-shadow: 0 4px 16px rgba(74, 44, 26, 0.1);
-    }
-
-    .activity-card.selected {
-      border-color: #c45a3c;
-      background: #faf3ec;
-      box-shadow: 0 4px 16px rgba(196, 90, 60, 0.15);
-    }
-
-    .activity-card.selected::after {
-      content: '\2713';
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      background: #c45a3c;
-      color: #fefcf8;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-
-    .activity-card h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-      color: #2a2017;
-      padding-right: 2rem;
-    }
-
-    .activity-card p {
-      font-size: 0.9rem;
-      color: #6b5c4c;
-      font-weight: 300;
-    }
-
-    .activity-card .season {
-      display: inline-block;
-      margin-top: 0.6rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: #8b6914;
-      background: #f5ecd5;
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-    }
-
-    .form-section {
-      max-width: 600px;
-      margin: 1rem auto 4rem;
-      padding: 0 2rem;
-    }
-
-    .form-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: #4a2c1a;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .form-section .subtitle {
-      text-align: center;
-      color: #7a6a5a;
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      font-weight: 300;
-    }
-
-    .form-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .form-group label {
-      display: block;
-      font-weight: 500;
-      font-size: 0.9rem;
-      margin-bottom: 0.4rem;
-      color: #3d2e20;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 2px solid #ddd2c2;
-      border-radius: 4px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      background: #fefcf8;
-      color: #2a2017;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      outline: none;
-      border-color: #c45a3c;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .selected-summary {
-      background: #faf3ec;
-      border: 2px solid #d4b896;
-      border-radius: 4px;
-      padding: 1rem 1.2rem;
-      margin-bottom: 1.5rem;
-      min-height: 3rem;
-    }
-
-    .selected-summary .label {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: #8b6914;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 0.4rem;
-    }
-
-    .selected-summary .items {
-      font-size: 0.95rem;
-      color: #2a2017;
-    }
-
-    .selected-summary .empty {
-      font-size: 0.9rem;
-      color: #a89880;
+      max-width: 520px;
+      margin: 0 auto;
       font-style: italic;
+      font-size: 1.25rem;
     }
 
-    .submit-btn {
-      width: 100%;
-      padding: 1rem;
-      background: #c45a3c;
-      color: #fefcf8;
-      border: none;
-      border-radius: 4px;
-      font-family: 'Inter', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 0.5rem;
-      letter-spacing: 0.03em;
+    /* ── Experiences ── */
+    .experiences {
+      background: var(--deep);
+      color: var(--tufo);
+    }
+
+    .experiences .section-label { color: var(--gold); opacity: 0.6; }
+    .experiences h2 { color: var(--tufo); }
+
+    .exp-list {
+      list-style: none;
+      margin-top: 3rem;
+    }
+
+    .exp-list li {
+      padding: 2.2rem 0;
+      border-bottom: 1px solid rgba(196,162,101,0.12);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+
+    .exp-list li:last-child { border-bottom: none; }
+
+    .exp-season {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
       text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.7;
+      min-width: 5.5em;
+      padding-top: 0.35em;
     }
 
-    .submit-btn:hover {
-      background: #a84830;
+    .exp-name {
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: var(--tufo);
+      margin-bottom: 0.4rem;
     }
 
-    .submit-btn:disabled {
-      background: #c9b8a4;
-      cursor: not-allowed;
+    .exp-desc {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.7;
+      opacity: 0.55;
+      color: var(--tufo);
     }
 
-    .footer {
+    /* ── Philosophy ── */
+    .philosophy {
+      background: var(--cream);
+    }
+
+    .philosophy blockquote {
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--terracotta);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    /* ── Details strip ── */
+    .details {
+      background: var(--tufo);
+      padding: 4rem 2rem;
+    }
+
+    .details-grid {
+      max-width: 680px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+
+    .detail-item .detail-value {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--terracotta);
+      margin-bottom: 0.3rem;
+    }
+
+    .detail-item .detail-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* ── Contact ── */
+    .contact {
+      background: var(--deep);
+      color: var(--tufo);
+      text-align: center;
+      padding: 7rem 2rem;
+    }
+
+    .contact h2 {
+      color: var(--gold);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .contact p {
+      color: var(--tufo);
+      opacity: 0.6;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .contact a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196,162,101,0.3);
+      transition: border-color 0.3s;
+    }
+
+    .contact a:hover {
+      border-color: var(--gold);
+    }
+
+    .contact .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2rem auto;
+      opacity: 0.3;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--deep);
+      border-top: 1px solid rgba(196,162,101,0.08);
       text-align: center;
       padding: 2rem;
-      color: #9a8a7a;
-      font-size: 0.8rem;
-      border-top: 3px solid #c45a3c;
-      background: #1a1410;
-      color: #a89880;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--stone);
+      opacity: 0.4;
     }
 
-    .success-message {
-      display: none;
-      text-align: center;
-      padding: 3rem 2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .success-message h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: #4a2c1a;
-      margin-bottom: 1rem;
-    }
-
-    .success-message p {
-      font-size: 1.1rem;
-      color: #5a4a3a;
-      font-weight: 300;
-    }
-
+    /* ── Responsive ── */
     @media (max-width: 600px) {
-      .hero h1 { font-size: 2.6rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .activity-grid { grid-template-columns: 1fr; }
+      section { padding: 4rem 1.5rem; }
+      .exp-list li { grid-template-columns: 1fr; gap: 0.3rem; }
+      .details-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* ── Subtle entrance animations ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInFallback 0.01s 1s forwards;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+      animation: none;
+    }
+    @keyframes fadeInFallback {
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero">
-    <h1>RASNA</h1>
-    <p class="tagline" data-i18n="tagline">Authentic experiences in Blera, Italy — live like a local, not like a tourist.</p>
-  </div>
+  <!-- Reusable SVG definitions -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <defs>
+      <!-- Etruscan meander / Greek key pattern tile -->
+      <pattern id="meander" x="0" y="0" width="40" height="32" patternUnits="userSpaceOnUse">
+        <path d="M0,16 h8 v-8 h8 v16 h8 v-16 h8 v8 h8" fill="none" stroke="#C4A265" stroke-width="1.5"/>
+        <path d="M0,24 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.5"/>
+      </pattern>
+      <pattern id="meander-light" x="0" y="0" width="40" height="32" patternUnits="userSpaceOnUse">
+        <path d="M0,16 h8 v-8 h8 v16 h8 v-16 h8 v8 h8" fill="none" stroke="#2C1E12" stroke-width="1.5"/>
+        <path d="M0,24 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.5"/>
+      </pattern>
+      <!-- Etruscan palmette -->
+      <symbol id="palmette" viewBox="0 0 80 60">
+        <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M40,55 C40,40 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+        <path d="M40,55 C40,40 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+        <ellipse cx="40" cy="56" rx="6" ry="2" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      </symbol>
+      <!-- Etruscan wave / scroll -->
+      <pattern id="wave" x="0" y="0" width="48" height="20" patternUnits="userSpaceOnUse">
+        <path d="M0,10 C8,2 16,2 24,10 C32,18 40,18 48,10" fill="none" stroke="currentColor" stroke-width="1" opacity="0.4"/>
+        <path d="M0,14 C8,6 16,6 24,14 C32,22 40,22 48,14" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.2"/>
+      </pattern>
+      <!-- Corner ornament (Etruscan volute/spiral) -->
+      <symbol id="corner-ornament" viewBox="0 0 120 120">
+        <path d="M10,110 C10,60 10,10 60,10 C90,10 110,30 110,50 C110,70 95,80 80,80 C65,80 55,70 55,58 C55,48 62,42 70,42 C78,42 82,48 82,54" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M10,110 L10,90 C10,50 30,20 60,20" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+        <circle cx="82" cy="54" r="2" fill="currentColor" opacity="0.3"/>
+      </symbol>
+    </defs>
+  </svg>
 
-  <div class="intro">
-    <h2 data-i18n="intro_title">3 Ways to Have Fun</h2>
-    <p data-i18n="intro_text">Planning, experiencing, and remembering — those are the three stages of any great trip. We want to do all three together. So let's start here: pick the experiences that excite you most, and we'll plan the fun together. We'll put together a personalized all-inclusive package — accommodation, food, activities, transport — and send you a quote within a few days.</p>
-    <p style="margin-top: 1rem; font-size: 0.95rem; color: #6b5c4c;" data-i18n="intro_meals">Every meal during your stay is a traditional home-cooked meal with local, seasonal ingredients — that's not an option, it's just how we do things. If there's a local festival or sagra happening while you're here, we'll take you.</p>
-  </div>
+  <!-- Hero -->
+  <section class="hero">
+    <!-- Corner ornaments -->
+    <svg class="etruscan-corner top-left" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner top-right" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-left" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-right" width="120" height="120" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
 
-  <form id="experience-form" action="https://formspree.io/f/xlgynpjo" method="POST">
-
-    <div class="categories">
-
-      <div class="category">
-        <h3 data-i18n="cat_farm">Farm & Field</h3>
-        <div class="activity-grid">
-
-          <div class="activity-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
-            <h4 data-i18n="olive_t">Olive Harvest</h4>
-            <p data-i18n="olive_d">Pick olives by hand in the morning, then head to the mill and watch the oil from your olives being pressed. You take it home.</p>
-            <span class="season" data-i18n="s_oct_dec">Oct – Dec</span>
-          </div>
-
-          <div class="activity-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
-            <h4 data-i18n="tomato_t">Tomato &amp; Sauce Day</h4>
-            <p data-i18n="tomato_d">Harvest tomatoes and make passata from scratch with a local family — a real Italian summer tradition.</p>
-            <span class="season" data-i18n="s_aug">August</span>
-          </div>
-
-          <div class="activity-card" data-activity="Grape Harvest" onclick="toggleCard(this)">
-            <h4 data-i18n="grape_t">Grape Harvest</h4>
-            <p data-i18n="grape_d">Pick grapes in the vineyard, then visit the cantina to see the winemaking process. You take home a bottle from the previous year's harvest.</p>
-            <span class="season" data-i18n="s_sep_oct">Sep – Oct</span>
-          </div>
-
-          <div class="activity-card" data-activity="Wild Asparagus Foraging" onclick="toggleCard(this)">
-            <h4 data-i18n="asparagus_t">Wild Asparagus Foraging</h4>
-            <p data-i18n="asparagus_d">Walk the Tuscia woods in spring, foraging wild asparagus — a living local Easter tradition.</p>
-            <span class="season" data-i18n="s_mar_jun">Mar – Jun</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="category">
-        <h3 data-i18n="cat_food">Artisan &amp; Food</h3>
-        <div class="activity-grid">
-
-          <div class="activity-card" data-activity="Charcuterie Degustation" onclick="toggleCard(this)">
-            <h4 data-i18n="charc_t">Charcuterie Degustation</h4>
-            <p data-i18n="charc_d">Taste homemade salumi and cured meats — made the traditional way, right here in Blera.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Cheese &amp; Charcuterie in Civitella Cesi" onclick="toggleCard(this)">
-            <h4 data-i18n="cheese_t">Cheese &amp; Charcuterie in Civitella Cesi</h4>
-            <p data-i18n="cheese_d">A half-day experience: hands-on cheesemaking, meat tasting, and a visit to a nearby Etruscan archaeological site.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Pasta Making" onclick="toggleCard(this)">
-            <h4 data-i18n="pasta_t">Pasta Making</h4>
-            <p data-i18n="pasta_d">Learn to make pasta by hand the way it's been done here for generations — from dough to plate.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="category">
-        <h3 data-i18n="cat_culture">Culture &amp; Outdoors</h3>
-        <div class="activity-grid">
-
-          <div class="activity-card" data-activity="Cammino dei Tre Villaggi" onclick="toggleCard(this)">
-            <h4 data-i18n="c3v_t">Cammino dei Tre Villaggi</h4>
-            <p data-i18n="c3v_d">Italy's shortest cammino — a 20 km circular trail through Blera, Barbarano Romano, and Villa San Giovanni. Etruscan vie cave, tuff gorges, and the San Giuliano necropolis. You earn the "Etruscan Wanderer" certificate at the end.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="San Giovenale Hike &amp; Panonto" onclick="toggleCard(this)">
-            <h4 data-i18n="giovenale_t">San Giovenale Hike &amp; Panonto</h4>
-            <p data-i18n="giovenale_d">Hike to the Etruscan site of San Giovenale, then finish with a panonto — a traditional Bleran-style wood-fire barbecue picnic.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
-            <h4 data-i18n="horse_t">Horseback Riding</h4>
-            <p data-i18n="horse_d">Ride through the hills around Civitella Cesi — a beautiful way to see the landscape the slow way.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="category">
-        <h3 data-i18n="cat_daytrips">Day Trips</h3>
-        <div class="activity-grid">
-
-          <div class="activity-card" data-activity="Day Trip: Lago di Vico" onclick="toggleCard(this)">
-            <h4 data-i18n="vico_t">Lago di Vico</h4>
-            <p data-i18n="vico_d">A volcanic lake surrounded by forest — swim, hike, or just take in the view.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Day Trip: Viterbo" onclick="toggleCard(this)">
-            <h4 data-i18n="viterbo_t">Viterbo</h4>
-            <p data-i18n="viterbo_d">Medieval quarter, the Papal Palace, thermal baths, and great food — one of Tuscia's finest cities.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Day Trip: Tarquinia" onclick="toggleCard(this)">
-            <h4 data-i18n="tarquinia_t">Tarquinia</h4>
-            <p data-i18n="tarquinia_d">UNESCO-listed Etruscan painted tombs, the archaeological museum, and a medieval hilltop city overlooking the sea.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Day Trip: Villa Lante &amp; Palazzo Farnese" onclick="toggleCard(this)">
-            <h4 data-i18n="lante_t">Villa Lante &amp; Palazzo Farnese</h4>
-            <p data-i18n="lante_d">Renaissance gardens and one of Italy's most impressive fortified palaces, both nearby.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
-            <h4 data-i18n="coast_t">Tyrrhenian Coast</h4>
-            <p data-i18n="coast_d">Beaches and seaside towns along the coast — an easy escape for a day by the water.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-          <div class="activity-card" data-activity="Day Trip: Your Choice" onclick="toggleCard(this)">
-            <h4 data-i18n="yourchoice_t">Your Own Day Trip</h4>
-            <p data-i18n="yourchoice_d">Have somewhere else in mind? Tell us in the notes and we'll make it happen.</p>
-            <span class="season" data-i18n="s_year">Year-round</span>
-          </div>
-
-        </div>
-      </div>
-
+    <div class="hero-content">
+      <div class="subtitle">Blera, Northern Lazio</div>
+      <div class="divider"></div>
+      <!-- Palmette above title -->
+      <svg class="etruscan-ornament" width="60" height="45" style="color:var(--gold); margin-bottom:1rem"><use href="#palmette"/></svg>
+      <h1>Rasna</h1>
+      <p class="tagline">Live the ancient rhythm of an Italian village — not as a tourist, but as a guest.</p>
+      <!-- Wave ornament below tagline -->
+      <svg class="etruscan-ornament" width="200" height="20" style="color:var(--gold); margin-top:2rem">
+        <rect width="200" height="20" fill="url(#wave)"/>
+      </svg>
     </div>
+  </section>
 
-    <div class="form-section">
-      <h2 data-i18n="form_title">Tell Us About Your Trip</h2>
-      <p class="subtitle" data-i18n="form_subtitle">We'll build a custom all-inclusive package just for you.</p>
+  <!-- Meander border (dark bg) -->
+  <div class="etruscan-border">
+    <svg width="100%" height="32"><rect width="100%" height="32" fill="url(#meander-light)"/></svg>
+  </div>
 
-      <div class="selected-summary">
-        <div class="label" data-i18n="form_selected">Your Selected Experiences</div>
-        <div class="items" id="selected-display">
-          <span class="empty" data-i18n="form_empty">Click the activities above to select them</span>
-        </div>
-      </div>
-
-      <input type="hidden" name="selected_activities" id="selected-activities-input">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name" data-i18n="form_name">Your Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email" data-i18n="form_email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="guests" data-i18n="form_guests">Number of Guests</label>
-          <select id="guests" name="guests" required>
-            <option value="" data-i18n="form_select">Select...</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="7">7</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="dates" data-i18n="form_dates">Preferred Dates / Month</label>
-          <input type="text" id="dates" name="preferred_dates" data-i18n-placeholder="form_dates_ph" placeholder="e.g. October 2026, flexible">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="dietary" data-i18n="form_dietary">Dietary Preferences or Allergies</label>
-        <textarea id="dietary" name="dietary_preferences" data-i18n-placeholder="form_dietary_ph" placeholder="Vegetarian, gluten-free, lactose intolerant, allergies, anything we should know about food..."></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="notes" data-i18n="form_notes">Anything else we should know?</label>
-        <textarea id="notes" name="notes" data-i18n-placeholder="form_notes_ph" placeholder="Special interests, how many days you're thinking, questions..."></textarea>
-      </div>
-
-      <button type="submit" class="submit-btn" id="submit-btn" disabled data-i18n="form_btn_disabled">Select at least one experience to continue</button>
+  <!-- Intro -->
+  <section class="intro">
+    <div class="section-inner fade-in">
+      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--terracotta); margin-bottom:2rem"><use href="#palmette"/></svg>
+      <p>"Rasna" is what the Etruscans called themselves — the people who first carved this land from tufo, nearly 2,800 years ago. Their tombs, their roads, their spirit still live here. So does ours.</p>
     </div>
+  </section>
 
-  </form>
+  <!-- Experiences -->
+  <section class="experiences">
+    <div class="section-inner">
+      <div class="section-label fade-in">The Experiences</div>
+      <h2 class="fade-in">A few things,<br>done truly.</h2>
+      <ul class="exp-list">
+        <li class="fade-in">
+          <span class="exp-season">Autumn</span>
+          <div>
+            <div class="exp-name">The Olive Harvest</div>
+            <div class="exp-desc">Pick olives by hand with a local family, press them at the frantoio, taste the new oil on bread grilled over fire.</div>
+          </div>
+        </li>
+        <li class="fade-in">
+          <span class="exp-season">Summer</span>
+          <div>
+            <div class="exp-name">The Sauce Day</div>
+            <div class="exp-desc">August tomatoes, a wood fire, and the ritual of making passata — the way families here have done it for generations.</div>
+          </div>
+        </li>
+        <li class="fade-in">
+          <span class="exp-season">Year-round</span>
+          <div>
+            <div class="exp-name">Leather & Craft</div>
+            <div class="exp-desc">Work leather under the hands of a local artisan. Cut, stitch, and leave with a bag you made yourself.</div>
+          </div>
+        </li>
+        <li class="fade-in">
+          <span class="exp-season">Year-round</span>
+          <div>
+            <div class="exp-name">The Etruscan Walk</div>
+            <div class="exp-desc">Rock-cut tombs, the ancient Via Clodia, and the silence of a landscape that has barely changed in millennia.</div>
+          </div>
+        </li>
+        <li class="fade-in">
+          <span class="exp-season">Year-round</span>
+          <div>
+            <div class="exp-name">Cheese & Cured Meats</div>
+            <div class="exp-desc">Visit a small producer in Civitella Cesi. Watch, taste, learn — then sit down to eat what you just saw made.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="success-message" id="success-message">
-    <h2>Grazie!</h2>
-    <p data-i18n="success_text">We've received your selections. We'll put together a personalized quote and get back to you within a few days with your all-inclusive package and payment link.</p>
+  <!-- Meander border (on dark bg) -->
+  <div class="etruscan-border-dark">
+    <svg width="100%" height="32"><rect width="100%" height="32" fill="url(#meander)"/></svg>
   </div>
 
-  <div class="footer" data-i18n="footer">
-    Rasna — Authentic Experiences in Blera, Italy
+  <!-- Philosophy -->
+  <section class="philosophy">
+    <div class="section-inner fade-in">
+      <div class="section-label">Our Promise</div>
+      <h2>Intentionally small.</h2>
+      <blockquote>We are not building the next Positano. We stay small on purpose — so the experience stays real.</blockquote>
+      <p>No buses. No crowds. No staged performances. Just a few guests at a time, welcomed into the actual daily life of a village that has been here since the Etruscans carved it from stone.</p>
+      <svg class="etruscan-ornament" width="160" height="20" style="color:var(--terracotta); margin-top:2.5rem">
+        <rect width="160" height="20" fill="url(#wave)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <div class="details">
+    <div class="details-grid fade-in">
+      <div class="detail-item">
+        <div class="detail-value">4</div>
+        <div class="detail-label">Days</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-value">6–10</div>
+        <div class="detail-label">Guests</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-value">All</div>
+        <div class="detail-label">Inclusive</div>
+      </div>
+    </div>
   </div>
+
+  <!-- Contact -->
+  <section class="contact">
+    <div class="section-inner fade-in">
+      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:1.5rem"><use href="#palmette"/></svg>
+      <h2>Begin here.</h2>
+      <div class="divider"></div>
+      <p>Write to us to reserve your place<br>or to ask anything at all.</p>
+      <br>
+      <p><a href="mailto:info@rasna.it">info@rasna.it</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Rasna &mdash; Blera, Italia</span>
+  </footer>
 
   <script>
-    const selectedActivities = new Set();
-
-    function toggleCard(card) {
-      const activity = card.dataset.activity;
-      card.classList.toggle('selected');
-      if (selectedActivities.has(activity)) {
-        selectedActivities.delete(activity);
-      } else {
-        selectedActivities.add(activity);
-      }
-      updateDisplay();
-    }
-
-    function updateDisplay() {
-      const display = document.getElementById('selected-display');
-      const input = document.getElementById('selected-activities-input');
-      const btn = document.getElementById('submit-btn');
-
-      if (selectedActivities.size === 0) {
-        var d = window._i18n || {};
-        display.innerHTML = '<span class="empty">' + (d.form_empty || 'Click the activities above to select them') + '</span>';
-        btn.disabled = true;
-        btn.textContent = d.form_btn_disabled || 'Select at least one experience to continue';
-      } else {
-        var d = window._i18n || {};
-        const items = Array.from(selectedActivities);
-        display.textContent = items.join(' · ');
-        input.value = items.join(', ');
-        btn.disabled = false;
-        btn.textContent = d.form_btn_enabled || 'Send My Selections →';
-      }
-    }
-
-    const T = {
-      en: {},
-      it: {
-        tagline: "Esperienze autentiche a Blera, Italia — vivi come un locale, non come un turista.",
-        intro_title: "3 Modi per Divertirsi",
-        intro_text: "Pianificare, vivere e ricordare — queste sono le tre fasi di ogni grande viaggio. Noi vogliamo fare tutte e tre insieme. Iniziamo da qui: scegli le esperienze che ti entusiasmano di più e pianifichiamo il divertimento insieme. Metteremo insieme un pacchetto personalizzato tutto incluso — alloggio, cibo, attività, trasporto — e ti invieremo un preventivo entro pochi giorni.",
-        intro_meals: "Ogni pasto durante il soggiorno è un pasto tradizionale fatto in casa con ingredienti locali e di stagione — non è un'opzione, è semplicemente il nostro modo di fare. Se c'è una sagra o festa locale durante la tua visita, ti ci portiamo.",
-        cat_farm: "Campi & Raccolti",
-        olive_t: "Raccolta delle Olive",
-        olive_d: "Raccogli le olive a mano la mattina, poi vai al frantoio e guardi l'olio delle tue olive appena franto. Te lo porti a casa.",
-        tomato_t: "Giornata del Pomodoro & Passata",
-        tomato_d: "Raccogli pomodori e fai la passata da zero con una famiglia locale — una vera tradizione estiva italiana.",
-        grape_t: "Vendemmia",
-        grape_d: "Raccogli l'uva nel vigneto, poi visita la cantina per vedere il processo di vinificazione. Porti a casa una bottiglia dell'annata precedente.",
-        asparagus_t: "Raccolta Asparagi Selvatici",
-        asparagus_d: "Cammina nei boschi della Tuscia in primavera, raccogliendo asparagi selvatici — una tradizione pasquale ancora viva.",
-        cat_food: "Artigianato & Cibo",
-        charc_t: "Degustazione Salumi",
-        charc_d: "Assaggia salumi e insaccati fatti in casa — preparati nel modo tradizionale, proprio qui a Blera.",
-        cheese_t: "Formaggi & Salumi a Civitella Cesi",
-        cheese_d: "Un'esperienza di mezza giornata: caseificazione, degustazione di salumi e visita a un sito archeologico etrusco nelle vicinanze.",
-        pasta_t: "Fare la Pasta",
-        pasta_d: "Impara a fare la pasta a mano come si fa qui da generazioni — dall'impasto al piatto.",
-        cat_culture: "Cultura & Aria Aperta",
-        c3v_t: "Cammino dei Tre Villaggi",
-        c3v_d: "Il cammino più piccolo d'Italia — un percorso circolare di 20 km attraverso Blera, Barbarano Romano e Villa San Giovanni. Vie cave etrusche, gole di tufo e la necropoli di San Giuliano. Alla fine ottieni il certificato di \"Viandante Etrusco\".",
-        giovenale_t: "Escursione San Giovenale & Panonto",
-        giovenale_d: "Escursione al sito etrusco di San Giovenale, poi si finisce con un panonto — un tipico barbecue-picnic blerano alla brace.",
-        horse_t: "Passeggiata a Cavallo",
-        horse_d: "Cavalca tra le colline intorno a Civitella Cesi — un modo bellissimo per scoprire il paesaggio con calma.",
-        cat_daytrips: "Gite di un Giorno",
-        vico_t: "Lago di Vico",
-        vico_d: "Un lago vulcanico circondato dal bosco — nuota, cammina, o semplicemente goditi il panorama.",
-        viterbo_t: "Viterbo",
-        viterbo_d: "Quartiere medievale, il Palazzo dei Papi, terme e ottimo cibo — una delle città più belle della Tuscia.",
-        tarquinia_t: "Tarquinia",
-        tarquinia_d: "Tombe dipinte etrusche patrimonio UNESCO, il museo archeologico e una città medievale collinare che guarda il mare.",
-        lante_t: "Villa Lante & Palazzo Farnese",
-        lante_d: "Giardini rinascimentali e uno dei palazzi fortificati più impressionanti d'Italia, entrambi nelle vicinanze.",
-        coast_t: "Costa Tirrenica",
-        coast_d: "Spiagge e borghi sul mare — una fuga facile per una giornata in riva al mare.",
-        yourchoice_t: "La Tua Gita",
-        yourchoice_d: "Hai in mente un'altra meta? Scrivicelo nelle note e la organizziamo noi.",
-        form_title: "Raccontaci del Tuo Viaggio",
-        form_subtitle: "Creeremo un pacchetto tutto incluso su misura per te.",
-        form_selected: "Le Tue Esperienze Selezionate",
-        form_empty: "Clicca sulle attività qui sopra per selezionarle",
-        form_name: "Il Tuo Nome",
-        form_email: "Email",
-        form_guests: "Numero di Ospiti",
-        form_select: "Seleziona...",
-        form_dates: "Date Preferite / Mese",
-        form_dates_ph: "es. Ottobre 2026, flessibile",
-        form_dietary: "Preferenze Alimentari o Allergie",
-        form_dietary_ph: "Vegetariano, senza glutine, intollerante al lattosio, allergie, qualsiasi cosa dobbiamo sapere sul cibo...",
-        form_notes: "Altro da farci sapere?",
-        form_notes_ph: "Interessi particolari, quanti giorni pensate, domande...",
-        form_btn_disabled: "Seleziona almeno un'esperienza per continuare",
-        form_btn_enabled: "Invia le Mie Selezioni →",
-        success_text: "Abbiamo ricevuto le tue selezioni. Prepareremo un preventivo personalizzato e ti ricontatteremo entro pochi giorni con il tuo pacchetto tutto incluso e il link per il pagamento.",
-        footer: "Rasna — Esperienze Autentiche a Blera, Italia",
-        s_oct_dec: "Ott – Dic", s_aug: "Agosto", s_sep_oct: "Set – Ott", s_mar_jun: "Mar – Giu", s_year: "Tutto l'anno"
-      },
-      de: {
-        tagline: "Authentische Erlebnisse in Blera, Italien — lebe wie ein Einheimischer, nicht wie ein Tourist.",
-        intro_title: "3 Wege, Spaß zu haben",
-        intro_text: "Planen, erleben und erinnern — das sind die drei Phasen jeder großartigen Reise. Wir möchten alle drei gemeinsam machen. Fangen wir hier an: Wähle die Erlebnisse, die dich am meisten begeistern, und wir planen den Spaß zusammen. Wir stellen ein personalisiertes All-Inclusive-Paket zusammen — Unterkunft, Essen, Aktivitäten, Transport — und senden dir innerhalb weniger Tage ein Angebot.",
-        intro_meals: "Jede Mahlzeit während deines Aufenthalts ist ein traditionelles, hausgemachtes Essen mit lokalen, saisonalen Zutaten — das ist keine Option, so machen wir es einfach. Wenn während deines Besuchs ein lokales Fest oder eine Sagra stattfindet, nehmen wir dich mit.",
-        cat_farm: "Feld & Ernte",
-        olive_t: "Olivenernte",
-        olive_d: "Pflücke morgens Oliven von Hand, dann ab zur Mühle — sieh zu, wie aus deinen Oliven Öl gepresst wird. Du nimmst es mit nach Hause.",
-        tomato_t: "Tomaten- & Soßentag",
-        tomato_d: "Ernte Tomaten und mache Passata von Grund auf mit einer lokalen Familie — eine echte italienische Sommertradition.",
-        grape_t: "Weinlese",
-        grape_d: "Pflücke Trauben im Weinberg, dann besuche die Cantina und erlebe den Weinherstellungsprozess. Du nimmst eine Flasche vom Vorjahr mit nach Hause.",
-        asparagus_t: "Wildspargel Sammeln",
-        asparagus_d: "Wandere im Frühling durch die Wälder der Tuscia und sammle wilden Spargel — eine lebendige lokale Ostertradition.",
-        cat_food: "Handwerk & Essen",
-        charc_t: "Wurstwaren-Degustation",
-        charc_d: "Probiere hausgemachte Salumi und Wurstwaren — traditionell hergestellt, direkt hier in Blera.",
-        cheese_t: "Käse & Wurstwaren in Civitella Cesi",
-        cheese_d: "Ein halbtägiges Erlebnis: Käseherstellung, Wurstverkostung und Besuch einer nahegelegenen etruskischen Ausgrabungsstätte.",
-        pasta_t: "Pasta Machen",
-        pasta_d: "Lerne, Pasta von Hand zu machen, wie es hier seit Generationen gemacht wird — vom Teig bis zum Teller.",
-        cat_culture: "Kultur & Natur",
-        c3v_t: "Cammino dei Tre Villaggi",
-        c3v_d: "Italiens kürzester Cammino — ein 20 km langer Rundweg durch Blera, Barbarano Romano und Villa San Giovanni. Etruskische Hohlwege, Tuffschluchten und die Nekropole von San Giuliano. Am Ende erhältst du das Zertifikat \"Etruskischer Wanderer\".",
-        giovenale_t: "Wanderung San Giovenale & Panonto",
-        giovenale_d: "Wandere zur etruskischen Stätte San Giovenale, dann ein Panonto — ein traditionelles Bleranisches Holzfeuer-Grill-Picknick.",
-        horse_t: "Reiten",
-        horse_d: "Reite durch die Hügel um Civitella Cesi — eine wunderbare Art, die Landschaft langsam zu entdecken.",
-        cat_daytrips: "Tagesausflüge",
-        vico_t: "Lago di Vico", vico_d: "Ein vulkanischer See umgeben von Wald — schwimmen, wandern oder einfach die Aussicht genießen.",
-        viterbo_t: "Viterbo", viterbo_d: "Mittelalterliches Viertel, der Papstpalast, Thermalquellen und großartiges Essen — eine der schönsten Städte der Tuscia.",
-        tarquinia_t: "Tarquinia", tarquinia_d: "UNESCO-gelistete etruskische bemalte Gräber, das archäologische Museum und eine mittelalterliche Hügelstadt mit Blick aufs Meer.",
-        lante_t: "Villa Lante & Palazzo Farnese", lante_d: "Renaissance-Gärten und einer der beeindruckendsten befestigten Paläste Italiens, beide in der Nähe.",
-        coast_t: "Tyrrhenische Küste", coast_d: "Strände und Küstenorte — ein einfacher Ausflug für einen Tag am Meer.",
-        yourchoice_t: "Dein eigener Ausflug", yourchoice_d: "Hast du ein anderes Ziel im Sinn? Schreib es in die Notizen und wir organisieren es.",
-        form_title: "Erzähl uns von deiner Reise", form_subtitle: "Wir erstellen ein maßgeschneidertes All-Inclusive-Paket für dich.",
-        form_selected: "Deine ausgewählten Erlebnisse", form_empty: "Klicke oben auf die Aktivitäten, um sie auszuwählen",
-        form_name: "Dein Name", form_email: "E-Mail", form_guests: "Anzahl der Gäste", form_select: "Auswählen...",
-        form_dates: "Bevorzugte Daten / Monat", form_dates_ph: "z.B. Oktober 2026, flexibel",
-        form_dietary: "Ernährungspräferenzen oder Allergien", form_dietary_ph: "Vegetarisch, glutenfrei, laktoseintolerant, Allergien...",
-        form_notes: "Noch etwas, das wir wissen sollten?", form_notes_ph: "Besondere Interessen, wie viele Tage ihr denkt, Fragen...",
-        form_btn_disabled: "Wähle mindestens ein Erlebnis aus", form_btn_enabled: "Meine Auswahl senden →",
-        success_text: "Wir haben deine Auswahl erhalten. Wir erstellen ein personalisiertes Angebot und melden uns innerhalb weniger Tage mit deinem All-Inclusive-Paket und Zahlungslink.",
-        footer: "Rasna — Authentische Erlebnisse in Blera, Italien",
-        s_oct_dec: "Okt – Dez", s_aug: "August", s_sep_oct: "Sep – Okt", s_mar_jun: "Mär – Jun", s_year: "Ganzjährig"
-      },
-      fr: {
-        tagline: "Expériences authentiques à Blera, Italie — vivez comme un local, pas comme un touriste.",
-        intro_title: "3 Façons de S'amuser",
-        intro_text: "Planifier, vivre et se souvenir — ce sont les trois étapes de tout grand voyage. Nous voulons les vivre ensemble. Commençons ici : choisissez les expériences qui vous enthousiasment le plus, et planifions le plaisir ensemble. Nous préparerons un forfait personnalisé tout compris — hébergement, repas, activités, transport — et vous enverrons un devis sous quelques jours.",
-        intro_meals: "Chaque repas pendant votre séjour est un repas traditionnel fait maison avec des ingrédients locaux et de saison — ce n'est pas une option, c'est simplement notre façon de faire. S'il y a une fête locale ou une sagra pendant votre visite, on vous y emmène.",
-        cat_farm: "Champs & Récoltes",
-        olive_t: "Récolte des Olives", olive_d: "Cueillez les olives à la main le matin, puis direction le moulin pour voir l'huile de vos olives pressée. Vous la ramenez chez vous.",
-        tomato_t: "Journée Tomates & Sauce", tomato_d: "Récoltez des tomates et faites la passata de A à Z avec une famille locale — une vraie tradition estivale italienne.",
-        grape_t: "Vendanges", grape_d: "Cueillez le raisin dans le vignoble, puis visitez la cantina pour découvrir le processus de vinification. Vous repartez avec une bouteille de l'année précédente.",
-        asparagus_t: "Cueillette d'Asperges Sauvages", asparagus_d: "Parcourez les bois de la Tuscia au printemps pour cueillir des asperges sauvages — une tradition pascale locale bien vivante.",
-        cat_food: "Artisanat & Gastronomie",
-        charc_t: "Dégustation de Charcuterie", charc_d: "Goûtez des salumi et charcuteries maison — préparés de façon traditionnelle, ici même à Blera.",
-        cheese_t: "Fromages & Charcuterie à Civitella Cesi", cheese_d: "Une expérience d'une demi-journée : fabrication de fromage, dégustation de charcuterie et visite d'un site archéologique étrusque à proximité.",
-        pasta_t: "Fabrication de Pâtes", pasta_d: "Apprenez à faire les pâtes à la main comme on le fait ici depuis des générations — de la pâte à l'assiette.",
-        cat_culture: "Culture & Plein Air",
-        c3v_t: "Cammino dei Tre Villaggi", c3v_d: "Le plus court cammino d'Italie — un circuit de 20 km à travers Blera, Barbarano Romano et Villa San Giovanni. Voies creusées étrusques, gorges de tuf et la nécropole de San Giuliano. À la fin, vous recevez le certificat de \"Randonneur Étrusque\".",
-        giovenale_t: "Randonnée San Giovenale & Panonto", giovenale_d: "Randonnée jusqu'au site étrusque de San Giovenale, puis un panonto — un barbecue-pique-nique traditionnel de Blera au feu de bois.",
-        horse_t: "Balade à Cheval", horse_d: "Chevauchez à travers les collines autour de Civitella Cesi — une belle façon de découvrir le paysage en douceur.",
-        cat_daytrips: "Excursions d'une Journée",
-        vico_t: "Lago di Vico", vico_d: "Un lac volcanique entouré de forêt — nagez, randonnez, ou profitez simplement de la vue.",
-        viterbo_t: "Viterbo", viterbo_d: "Quartier médiéval, le Palais des Papes, thermes et excellente cuisine — l'une des plus belles villes de la Tuscia.",
-        tarquinia_t: "Tarquinia", tarquinia_d: "Tombes peintes étrusques classées UNESCO, le musée archéologique et une cité médiévale perchée face à la mer.",
-        lante_t: "Villa Lante & Palazzo Farnese", lante_d: "Jardins Renaissance et l'un des palais fortifiés les plus impressionnants d'Italie, tous deux à proximité.",
-        coast_t: "Côte Tyrrhénienne", coast_d: "Plages et villages côtiers — une escapade facile pour une journée au bord de l'eau.",
-        yourchoice_t: "Votre Propre Excursion", yourchoice_d: "Vous avez un autre endroit en tête ? Dites-le-nous dans les notes et nous l'organiserons.",
-        form_title: "Parlez-nous de Votre Voyage", form_subtitle: "Nous créerons un forfait tout compris sur mesure pour vous.",
-        form_selected: "Vos Expériences Sélectionnées", form_empty: "Cliquez sur les activités ci-dessus pour les sélectionner",
-        form_name: "Votre Nom", form_email: "E-mail", form_guests: "Nombre de Personnes", form_select: "Sélectionner...",
-        form_dates: "Dates Préférées / Mois", form_dates_ph: "ex. Octobre 2026, flexible",
-        form_dietary: "Préférences Alimentaires ou Allergies", form_dietary_ph: "Végétarien, sans gluten, intolérant au lactose, allergies...",
-        form_notes: "Autre chose à nous dire ?", form_notes_ph: "Centres d'intérêt, nombre de jours envisagé, questions...",
-        form_btn_disabled: "Sélectionnez au moins une expérience pour continuer", form_btn_enabled: "Envoyer Mes Sélections →",
-        success_text: "Nous avons reçu vos sélections. Nous préparerons un devis personnalisé et reviendrons vers vous sous quelques jours avec votre forfait tout compris et le lien de paiement.",
-        footer: "Rasna — Expériences Authentiques à Blera, Italie",
-        s_oct_dec: "Oct – Déc", s_aug: "Août", s_sep_oct: "Sep – Oct", s_mar_jun: "Mar – Juin", s_year: "Toute l'année"
-      },
-      es: {
-        tagline: "Experiencias auténticas en Blera, Italia — vive como un local, no como un turista.",
-        intro_title: "3 Formas de Pasarlo Bien",
-        intro_text: "Planificar, vivir y recordar — esas son las tres etapas de todo gran viaje. Queremos hacer las tres juntos. Empecemos aquí: elige las experiencias que más te emocionen y planifiquemos la diversión juntos. Prepararemos un paquete personalizado todo incluido — alojamiento, comida, actividades, transporte — y te enviaremos un presupuesto en pocos días.",
-        intro_meals: "Cada comida durante tu estancia es una comida tradicional casera con ingredientes locales y de temporada — no es una opción, es simplemente como hacemos las cosas. Si hay una fiesta local o sagra durante tu visita, te llevamos.",
-        cat_farm: "Campo & Cosechas",
-        olive_t: "Cosecha de Aceitunas", olive_d: "Recoge aceitunas a mano por la mañana, luego ve al molino y mira cómo se prensa el aceite de tus aceitunas. Te lo llevas a casa.",
-        tomato_t: "Día del Tomate & Salsa", tomato_d: "Cosecha tomates y haz passata desde cero con una familia local — una auténtica tradición veraniega italiana.",
-        grape_t: "Vendimia", grape_d: "Recoge uvas en el viñedo, luego visita la cantina para ver el proceso de vinificación. Te llevas a casa una botella de la cosecha anterior.",
-        asparagus_t: "Recolección de Espárragos Silvestres", asparagus_d: "Recorre los bosques de la Tuscia en primavera recogiendo espárragos silvestres — una tradición pascual local que sigue viva.",
-        cat_food: "Artesanía & Gastronomía",
-        charc_t: "Degustación de Embutidos", charc_d: "Prueba salumi y embutidos caseros — hechos de forma tradicional, aquí mismo en Blera.",
-        cheese_t: "Quesos & Embutidos en Civitella Cesi", cheese_d: "Una experiencia de medio día: elaboración de queso, degustación de embutidos y visita a un sitio arqueológico etrusco cercano.",
-        pasta_t: "Hacer Pasta", pasta_d: "Aprende a hacer pasta a mano como se ha hecho aquí durante generaciones — de la masa al plato.",
-        cat_culture: "Cultura & Aire Libre",
-        c3v_t: "Cammino dei Tre Villaggi", c3v_d: "El cammino más corto de Italia — un sendero circular de 20 km a través de Blera, Barbarano Romano y Villa San Giovanni. Vías excavadas etruscas, gargantas de toba y la necrópolis de San Giuliano. Al final recibes el certificado de \"Caminante Etrusco\".",
-        giovenale_t: "Excursión San Giovenale & Panonto", giovenale_d: "Caminata hasta el sitio etrusco de San Giovenale, y luego un panonto — una barbacoa-picnic tradicional de Blera a la leña.",
-        horse_t: "Paseo a Caballo", horse_d: "Cabalga por las colinas alrededor de Civitella Cesi — una forma hermosa de descubrir el paisaje con calma.",
-        cat_daytrips: "Excursiones de un Día",
-        vico_t: "Lago di Vico", vico_d: "Un lago volcánico rodeado de bosque — nada, camina o simplemente disfruta de la vista.",
-        viterbo_t: "Viterbo", viterbo_d: "Barrio medieval, el Palacio Papal, termas y gran comida — una de las ciudades más bellas de la Tuscia.",
-        tarquinia_t: "Tarquinia", tarquinia_d: "Tumbas pintadas etruscas declaradas Patrimonio UNESCO, el museo arqueológico y una ciudad medieval en la colina frente al mar.",
-        lante_t: "Villa Lante & Palazzo Farnese", lante_d: "Jardines renacentistas y uno de los palacios fortificados más impresionantes de Italia, ambos cercanos.",
-        coast_t: "Costa Tirrena", coast_d: "Playas y pueblos costeros — una escapada fácil para un día junto al mar.",
-        yourchoice_t: "Tu Propia Excursión", yourchoice_d: "¿Tienes otro destino en mente? Cuéntanos en las notas y lo organizamos.",
-        form_title: "Cuéntanos sobre Tu Viaje", form_subtitle: "Crearemos un paquete todo incluido a tu medida.",
-        form_selected: "Tus Experiencias Seleccionadas", form_empty: "Haz clic en las actividades de arriba para seleccionarlas",
-        form_name: "Tu Nombre", form_email: "Email", form_guests: "Número de Personas", form_select: "Seleccionar...",
-        form_dates: "Fechas Preferidas / Mes", form_dates_ph: "ej. Octubre 2026, flexible",
-        form_dietary: "Preferencias Alimentarias o Alergias", form_dietary_ph: "Vegetariano, sin gluten, intolerante a la lactosa, alergias...",
-        form_notes: "¿Algo más que debamos saber?", form_notes_ph: "Intereses especiales, cuántos días estáis pensando, preguntas...",
-        form_btn_disabled: "Selecciona al menos una experiencia para continuar", form_btn_enabled: "Enviar Mis Selecciones →",
-        success_text: "Hemos recibido tus selecciones. Prepararemos un presupuesto personalizado y te contactaremos en pocos días con tu paquete todo incluido y el enlace de pago.",
-        footer: "Rasna — Experiencias Auténticas en Blera, Italia",
-        s_oct_dec: "Oct – Dic", s_aug: "Agosto", s_sep_oct: "Sep – Oct", s_mar_jun: "Mar – Jun", s_year: "Todo el año"
-      },
-      nl: {
-        tagline: "Authentieke ervaringen in Blera, Italië — leef als een local, niet als een toerist.",
-        intro_title: "3 Manieren om Plezier te Hebben",
-        intro_text: "Plannen, beleven en herinneren — dat zijn de drie fases van elke geweldige reis. Wij willen alle drie samen doen. Laten we hier beginnen: kies de ervaringen die je het meest aanspreken en we plannen het plezier samen. We stellen een gepersonaliseerd all-inclusive pakket samen — accommodatie, eten, activiteiten, vervoer — en sturen je binnen een paar dagen een offerte.",
-        intro_meals: "Elke maaltijd tijdens je verblijf is een traditionele, huisgemaakte maaltijd met lokale, seizoensgebonden ingrediënten — dat is geen optie, zo doen we het gewoon. Als er een lokaal festival of sagra plaatsvindt tijdens je bezoek, nemen we je mee.",
-        cat_farm: "Veld & Oogst",
-        olive_t: "Olijvenoogst", olive_d: "Pluk 's ochtends olijven met de hand, ga dan naar de molen en kijk hoe de olie van jouw olijven wordt geperst. Je neemt het mee naar huis.",
-        tomato_t: "Tomaten- & Sausdag", tomato_d: "Oogst tomaten en maak passata helemaal zelf met een lokale familie — een echte Italiaanse zomertraditie.",
-        grape_t: "Druivenoogst", grape_d: "Pluk druiven in de wijngaard, bezoek dan de cantina om het wijnmaakproces te zien. Je neemt een fles van het vorige jaar mee naar huis.",
-        asparagus_t: "Wilde Asperges Zoeken", asparagus_d: "Wandel in de lente door de bossen van de Tuscia en zoek wilde asperges — een levende lokale paastraditie.",
-        cat_food: "Ambacht & Eten",
-        charc_t: "Vleeswaren Proeverij", charc_d: "Proef huisgemaakte salumi en vleeswaren — op de traditionele manier gemaakt, hier in Blera.",
-        cheese_t: "Kaas & Vleeswaren in Civitella Cesi", cheese_d: "Een halfdaagse ervaring: kaas maken, vleeswaren proeven en een bezoek aan een nabijgelegen Etruskische archeologische site.",
-        pasta_t: "Pasta Maken", pasta_d: "Leer pasta met de hand maken zoals het hier al generaties lang wordt gedaan — van deeg tot bord.",
-        cat_culture: "Cultuur & Natuur",
-        c3v_t: "Cammino dei Tre Villaggi", c3v_d: "De kortste cammino van Italië — een circulair pad van 20 km door Blera, Barbarano Romano en Villa San Giovanni. Etruskische holle wegen, tufsteen kloven en de San Giuliano necropolis. Aan het eind ontvang je het \"Etruskische Wandelaar\" certificaat.",
-        giovenale_t: "Wandeling San Giovenale & Panonto", giovenale_d: "Wandel naar de Etruskische site van San Giovenale, dan een panonto — een traditionele houtvuur-barbecue picknick uit Blera.",
-        horse_t: "Paardrijden", horse_d: "Rijd door de heuvels rond Civitella Cesi — een prachtige manier om het landschap rustig te ontdekken.",
-        cat_daytrips: "Dagtrips",
-        vico_t: "Lago di Vico", vico_d: "Een vulkanisch meer omringd door bos — zwemmen, wandelen of gewoon genieten van het uitzicht.",
-        viterbo_t: "Viterbo", viterbo_d: "Middeleeuws kwartier, het Pauselijk Paleis, thermale baden en geweldig eten — een van de mooiste steden van de Tuscia.",
-        tarquinia_t: "Tarquinia", tarquinia_d: "UNESCO-genoteerde Etruskische beschilderde graven, het archeologisch museum en een middeleeuwse heuvelstad met uitzicht op zee.",
-        lante_t: "Villa Lante & Palazzo Farnese", lante_d: "Renaissance tuinen en een van de meest indrukwekkende versterkte paleizen van Italië, beide vlakbij.",
-        coast_t: "Tyrrheense Kust", coast_d: "Stranden en kustplaatsjes — een makkelijk uitstapje voor een dag aan het water.",
-        yourchoice_t: "Je Eigen Dagtrip", yourchoice_d: "Heb je een andere bestemming in gedachten? Schrijf het in de notities en wij regelen het.",
-        form_title: "Vertel Ons over Je Reis", form_subtitle: "We maken een op maat gemaakt all-inclusive pakket voor je.",
-        form_selected: "Je Geselecteerde Ervaringen", form_empty: "Klik op de activiteiten hierboven om ze te selecteren",
-        form_name: "Je Naam", form_email: "E-mail", form_guests: "Aantal Gasten", form_select: "Selecteer...",
-        form_dates: "Voorkeursdatums / Maand", form_dates_ph: "bijv. Oktober 2026, flexibel",
-        form_dietary: "Dieetvoorkeuren of Allergieën", form_dietary_ph: "Vegetarisch, glutenvrij, lactose-intolerant, allergieën...",
-        form_notes: "Nog iets dat we moeten weten?", form_notes_ph: "Bijzondere interesses, hoeveel dagen je denkt, vragen...",
-        form_btn_disabled: "Selecteer minstens één ervaring om door te gaan", form_btn_enabled: "Mijn Selecties Versturen →",
-        success_text: "We hebben je selecties ontvangen. We stellen een gepersonaliseerde offerte op en nemen binnen een paar dagen contact op met je all-inclusive pakket en betaallink.",
-        footer: "Rasna — Authentieke Ervaringen in Blera, Italië",
-        s_oct_dec: "Okt – Dec", s_aug: "Augustus", s_sep_oct: "Sep – Okt", s_mar_jun: "Mrt – Jun", s_year: "Hele jaar"
-      }
-    };
-
-    function detectLang() {
-      var lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
-      return T[lang] ? lang : 'en';
-    }
-
-    function applyTranslations() {
-      var lang = detectLang();
-      if (lang === 'en') return;
-      var dict = T[lang];
-      document.getElementById('html-root').setAttribute('lang', lang);
-      document.querySelectorAll('[data-i18n]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n');
-        if (dict[key]) el.textContent = dict[key];
-      });
-      document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
-        var key = el.getAttribute('data-i18n-placeholder');
-        if (dict[key]) el.placeholder = dict[key];
-      });
-      window._i18n = dict;
-    }
-
-    applyTranslations();
-
-    document.getElementById('experience-form').addEventListener('submit', function(e) {
-      if (selectedActivities.size === 0) {
-        e.preventDefault();
-        return;
-      }
-
-      e.preventDefault();
-      const form = this;
-      const data = new FormData(form);
-
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          form.style.display = 'none';
-          document.querySelector('.intro').style.display = 'none';
-          document.getElementById('success-message').style.display = 'block';
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-      });
-    });
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
 
 </body>
