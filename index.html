@@ -93,7 +93,7 @@
     .hero h1 {
       font-size: clamp(4.5rem, 12vw, 10rem);
       font-weight: 600;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--parch);
       text-shadow: 0 0 80px rgba(201,149,58,0.2);
@@ -140,7 +140,7 @@
       padding: 6rem 2rem;
     }
     .intro .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--terra); margin-bottom: 1rem; opacity: 0.85;
     }
     .intro h2 {
@@ -168,7 +168,7 @@
     }
     .three-ways .inner { max-width: 1060px; margin: 0 auto; }
     .three-ways .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--gold); text-align: center;
       margin-bottom: 0.8rem; opacity: 0.75;
     }
@@ -215,7 +215,7 @@
     .catalog .inner { max-width: 1060px; margin: 0 auto; }
     .cat-intro { text-align: center; margin-bottom: 3.5rem; }
     .cat-intro .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--terra); margin-bottom: 0.8rem; opacity: 0.85;
     }
     .cat-intro h2 {
@@ -241,10 +241,8 @@
     }
     .cat-header .rule {
       flex: 1; height: 1px;
-      background: repeating-linear-gradient(90deg,
-        var(--terra) 0, var(--terra) 5px,
-        transparent 5px, transparent 10px);
-      opacity: 0.4;
+      background: var(--terra);
+      opacity: 0.22;
     }
 
     .act-grid {
@@ -262,7 +260,7 @@
       position: relative;
       user-select: none;
       transition: background 0.2s;
-      border-top: 3px solid transparent;
+      border-top: 2px solid transparent;
     }
     .act-card:hover { background: #F0E4CF; border-top-color: var(--gold); }
     .act-card.selected {
@@ -322,7 +320,7 @@
     }
     .included .inner { max-width: 800px; margin: 0 auto; }
     .included .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--terra); margin-bottom: 0.8rem;
     }
     .included h2 {
@@ -380,7 +378,7 @@
     }
     .philo .inner { max-width: 680px; margin: 0 auto; }
     .philo .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.65;
     }
     .philo h2 {
@@ -408,7 +406,7 @@
       text-align: center;
     }
     .pricing .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
       font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.6;
     }
     .pricing h2 {
@@ -425,10 +423,9 @@
     .price-card::before {
       content: '';
       position: absolute; top: -1px; left: 20%; right: 20%;
-      height: 2px;
-      background: repeating-linear-gradient(90deg,
-        var(--terra) 0, var(--terra) 6px,
-        transparent 6px, transparent 12px);
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
     }
     .price-num {
       font-family: 'Cormorant Garamond', serif;
