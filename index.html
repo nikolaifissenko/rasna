@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasna — Plan Your Expedition in Blera, Italy</title>
+  <title>Rasna — Expedition in Blera, Italy</title>
   <meta name="description" content="Small-group expeditions in Blera, Italy. Pick your activities, we'll build your all-inclusive trip.">
-  <meta property="og:title" content="Rasna — Plan Your Expedition in Blera">
-  <meta property="og:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride horses through ruins, explore rock-cut tombs — we handle the rest.">
+  <meta property="og:title" content="Rasna — Expedition in Blera, Italy">
+  <meta property="og:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride through ruins, descend into tombs.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --tufo:       #E5D8C2;
-      --terracotta: #B8593E;
-      --earth:      #2C1E12;
-      --gold:       #C4A265;
-      --stone:      #8C7B66;
-      --cream:      #EDE3D0;
-      --deep:       #160F09;
-      --olive:      #5C6B3C;
-      --rust:       #9B3D2B;
-      --parchment:  #D9CBAE;
-      --soot:       #1E1409;
+      --terra:    #B84C2A;   /* dominant terracotta */
+      --sienna:   #7A2E10;   /* deep sienna */
+      --gold:     #C9953A;   /* warm Etruscan gold */
+      --parch:    #E8D8BC;   /* parchment — warm reading bg */
+      --sand:     #D4BFA0;   /* darker parchment */
+      --ink:      #1E1008;   /* near-black, warm */
+      --earth:    #2E1C0C;   /* deep earth */
+      --smoke:    #4A3420;   /* mid earth */
+      --cream:    #F4EDE0;   /* light cream */
+      --olive:    #5C6B3C;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,658 +30,688 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--soot);
-      color: var(--tufo);
+      background: var(--ink);
+      color: var(--parch);
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
     }
 
-    h1, h2, h3, h4, .pricing-amount {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
+    h1, h2, h3, h4, blockquote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
     }
 
-    /* ── Hero ── */
+    /* ─── MEANDER BANDS ─────────────────────────── */
+    .band {
+      height: 36px;
+      width: 100%;
+      display: block;
+      overflow: hidden;
+    }
+    .band svg { width: 100%; height: 36px; display: block; }
+
+    /* ─── HERO ───────────────────────────────────── */
     .hero {
-      min-height: 96vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      min-height: 100vh;
+      background: var(--earth);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
       text-align: center;
-      padding: 5rem 2rem;
-      background:
-        radial-gradient(ellipse at 50% 0%, #3a2214 0%, var(--deep) 55%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23100a05'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23180e07' opacity='0.4'/%3E%3C/svg%3E");
-      color: var(--tufo);
+      padding: 6rem 2rem 4rem;
       position: relative;
       overflow: hidden;
     }
 
-    .hero::after {
+    /* terracotta glow */
+    .hero::before {
       content: '';
       position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 3px;
-      background: repeating-linear-gradient(90deg, var(--terracotta) 0, var(--terracotta) 8px, transparent 8px, transparent 14px);
-      opacity: 0.6;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,76,42,0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(122,46,16,0.18) 0%, transparent 60%);
+      pointer-events: none;
     }
 
-    .hero-content { position: relative; z-index: 1; max-width: 720px; }
+    .hero-inner { position: relative; z-index: 1; max-width: 780px; }
 
-    .hero .subtitle {
-      font-size: clamp(0.68rem, 1.2vw, 0.78rem);
-      letter-spacing: 0.5em;
-      text-transform: uppercase;
-      font-weight: 500;
-      opacity: 0.45;
-      color: var(--gold);
+    .hero-loc {
+      font-size: 0.68rem; letter-spacing: 0.55em;
+      text-transform: uppercase; font-weight: 500;
+      color: var(--terra); opacity: 0.8; margin-bottom: 2rem;
     }
 
-    .hero .divider {
-      width: 60px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 2rem auto; opacity: 0.5;
+    /* Etruscan palmette ornament row */
+    .hero-ornament {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.6rem; margin-bottom: 1.8rem; opacity: 0.35;
+    }
+    .hero-ornament .line {
+      flex: 1; max-width: 120px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--terra));
+    }
+    .hero-ornament .line.right {
+      background: linear-gradient(90deg, var(--terra), transparent);
     }
 
     .hero h1 {
-      font-size: clamp(3.8rem, 10vw, 8.5rem);
+      font-size: clamp(4.5rem, 12vw, 10rem);
       font-weight: 600;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      margin-bottom: 0.3em;
-      color: var(--gold);
-      text-shadow: 0 0 60px rgba(196,162,101,0.2), 0 2px 0 rgba(0,0,0,0.5);
-    }
-
-    .hero .tagline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0.01em;
-      line-height: 1.8;
-      opacity: 0.8;
-      max-width: 30em;
-      margin: 0 auto;
-      color: var(--tufo);
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 2.8rem;
-      padding: 1rem 3rem;
-      border: 1px solid rgba(196,162,101,0.5);
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      transition: all 0.35s;
-      cursor: pointer;
-      background: rgba(196,162,101,0.04);
-      font-family: 'Inter', sans-serif;
-      position: relative;
-    }
-    .cta-button::before {
-      content: '';
-      position: absolute;
-      inset: -4px;
-      border: 1px solid rgba(196,162,101,0.12);
-    }
-    .cta-button:hover {
-      background: var(--terracotta);
-      border-color: var(--terracotta);
-      color: #fff;
       letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--parch);
+      text-shadow: 0 0 80px rgba(201,149,58,0.2);
+      line-height: 0.95;
+      margin-bottom: 0.5em;
     }
 
-    .etruscan-corner { position: absolute; opacity: 0.07; color: var(--gold); }
-    .etruscan-corner.top-left { top: 2.5rem; left: 2.5rem; }
-    .etruscan-corner.top-right { top: 2.5rem; right: 2.5rem; transform: scaleX(-1); }
-    .etruscan-corner.bottom-left { bottom: 2.5rem; left: 2.5rem; transform: scaleY(-1); }
-    .etruscan-corner.bottom-right { bottom: 2.5rem; right: 2.5rem; transform: scale(-1); }
-
-    /* ── Meander band ── */
-    .meander-band {
-      height: 28px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-    .meander-band svg { width: 100%; height: 28px; }
-    .meander-band.on-dark { background: var(--deep); }
-    .meander-band.on-soot { background: var(--soot); }
-    .meander-band.on-earth { background: var(--earth); }
-    .meander-band.on-cream { background: var(--cream); }
-
-    /* ── Shared section styles ── */
-    section { padding: 5.5rem 2rem; }
-    .section-inner { max-width: 740px; margin: 0 auto; }
-    .section-wide  { max-width: 1080px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
-      color: var(--terracotta); margin-bottom: 0.9rem; font-weight: 600;
-      opacity: 0.8;
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 400; font-style: italic;
+      color: var(--parch); opacity: 0.65;
+      line-height: 1.75; max-width: 28em; margin: 0 auto;
     }
 
-    .etruscan-ornament { display: block; margin: 0 auto; }
+    .hero-cta {
+      display: inline-block; margin-top: 3rem;
+      padding: 1rem 3.2rem;
+      border: 1px solid var(--terra);
+      color: var(--parch);
+      text-decoration: none;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.35em; text-transform: uppercase;
+      transition: all 0.3s;
+      background: rgba(184,76,42,0.08);
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-cta:hover {
+      background: var(--terra);
+      color: var(--cream);
+      letter-spacing: 0.4em;
+    }
 
-    /* ── Intro ── */
+    /* corner volutes */
+    .volute { position: absolute; color: var(--terra); opacity: 0.12; }
+    .volute.tl { top: 2rem; left: 2rem; }
+    .volute.tr { top: 2rem; right: 2rem; transform: scaleX(-1); }
+    .volute.bl { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
+    .volute.br { bottom: 2rem; right: 2rem; transform: scale(-1); }
+
+    /* ─── INTRO ──────────────────────────────────── */
     .intro {
-      background: var(--earth);
+      background: var(--parch);
+      color: var(--earth);
       text-align: center;
-      border-bottom: 1px solid rgba(196,162,101,0.08);
+      padding: 6rem 2rem;
+    }
+    .intro .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--terra); margin-bottom: 1rem; opacity: 0.85;
     }
     .intro h2 {
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      font-weight: 500; color: var(--tufo); margin-bottom: 1.2rem; line-height: 1.25;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 500; color: var(--sienna);
+      margin-bottom: 1.4rem; line-height: 1.15;
     }
     .intro p {
       max-width: 560px; margin: 0 auto;
-      font-size: 1.05rem; line-height: 1.9; font-weight: 300;
-      color: var(--tufo); opacity: 0.65;
+      font-size: 1.05rem; line-height: 1.95;
+      font-weight: 300; color: var(--smoke);
+    }
+    .intro .palmette-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1.2rem; margin-bottom: 2rem; color: var(--terra); opacity: 0.45;
+    }
+    .intro .palmette-row .hr {
+      width: 60px; height: 1px; background: var(--terra);
     }
 
-    /* ── 3 Ways ── */
-    .three-ways { background: var(--deep); }
-    .three-ways .section-label { color: var(--gold); text-align: center; }
-    .three-ways .section-h2 {
-      font-family: 'Cormorant Garamond', serif;
+    /* ─── THREE WAYS ─────────────────────────────── */
+    .three-ways {
+      background: var(--sienna);
+      color: var(--parch);
+      padding: 5.5rem 2rem;
+    }
+    .three-ways .inner { max-width: 1060px; margin: 0 auto; }
+    .three-ways .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--gold); text-align: center;
+      margin-bottom: 0.8rem; opacity: 0.75;
+    }
+    .three-ways h2 {
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500; color: var(--tufo); text-align: center;
-      margin-bottom: 0.8rem; line-height: 1.2;
+      font-weight: 500; text-align: center;
+      color: var(--parch); margin-bottom: 0.7rem; line-height: 1.2;
     }
-    .three-ways .section-sub {
-      text-align: center; max-width: 560px; margin: 0 auto 2.8rem;
-      font-size: 0.95rem; font-weight: 300; opacity: 0.5; color: var(--tufo);
-      line-height: 1.8;
+    .three-ways .sub {
+      text-align: center; max-width: 520px; margin: 0 auto 3rem;
+      font-size: 0.9rem; font-weight: 300;
+      color: var(--parch); opacity: 0.5; line-height: 1.8;
     }
-
     .ways-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
-      border: 1px solid rgba(196,162,101,0.14);
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(201,149,58,0.25);
     }
-
     .way-card {
-      padding: 2.4rem 1.8rem;
-      text-align: center;
-      border-right: 1px solid rgba(196,162,101,0.14);
+      padding: 2.6rem 2rem; text-align: center;
+      border-right: 1px solid rgba(201,149,58,0.25);
       position: relative;
     }
     .way-card:last-child { border-right: none; }
-    .way-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%; transform: translateX(-50%);
-      width: 40px; height: 2px;
-      background: var(--terracotta);
-      opacity: 0.6;
+    .way-card .top-dash {
+      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 30px; height: 3px; background: var(--gold); opacity: 0.5;
     }
-
-    .way-icon {
-      width: 46px; height: 46px; margin: 0 auto 1.2rem;
-      color: var(--terracotta); opacity: 0.9;
-    }
+    .way-icon { width: 44px; height: 44px; margin: 0 auto 1.2rem; color: var(--gold); }
     .way-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem; font-weight: 600;
-      color: var(--gold); margin-bottom: 0.7rem;
+      font-size: 1.6rem; font-weight: 600;
+      color: var(--gold); margin-bottom: 0.6rem;
     }
     .way-desc {
       font-size: 0.82rem; font-weight: 300;
-      line-height: 1.75; color: var(--tufo); opacity: 0.48;
+      color: var(--parch); opacity: 0.5; line-height: 1.8;
     }
 
-    /* ── Catalog ── */
-    .catalog { background: var(--soot); }
-
-    .catalog-intro { text-align: center; margin-bottom: 3.5rem; }
-    .catalog-intro .section-h2 {
-      font-family: 'Cormorant Garamond', serif;
+    /* ─── CATALOG ────────────────────────────────── */
+    .catalog {
+      background: var(--cream);
+      color: var(--earth);
+      padding: 5.5rem 2rem;
+    }
+    .catalog .inner { max-width: 1060px; margin: 0 auto; }
+    .cat-intro { text-align: center; margin-bottom: 3.5rem; }
+    .cat-intro .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--terra); margin-bottom: 0.8rem; opacity: 0.85;
+    }
+    .cat-intro h2 {
       font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500; color: var(--tufo); margin-bottom: 0.7rem;
+      font-weight: 500; color: var(--sienna); margin-bottom: 0.6rem;
     }
-    .catalog-intro p {
-      max-width: 560px; margin: 0 auto;
-      font-size: 0.9rem; font-weight: 300; opacity: 0.42; color: var(--tufo);
-      line-height: 1.8;
+    .cat-intro p {
+      max-width: 500px; margin: 0 auto;
+      font-size: 0.88rem; font-weight: 300;
+      color: var(--smoke); opacity: 0.7; line-height: 1.8;
     }
 
-    .category { margin-bottom: 3.8rem; }
-
-    .category-header {
+    /* category */
+    .category { margin-bottom: 3.5rem; }
+    .cat-header {
       display: flex; align-items: center; gap: 1.2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
-    .category-header h3 {
+    .cat-header h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem; font-weight: 600;
-      color: var(--gold); white-space: nowrap;
-      letter-spacing: 0.02em;
+      font-size: 1.5rem; font-weight: 600;
+      color: var(--sienna); white-space: nowrap;
+      letter-spacing: 0.03em;
     }
-    .category-header .rule {
+    .cat-header .rule {
       flex: 1; height: 1px;
       background: repeating-linear-gradient(90deg,
-        rgba(196,162,101,0.4) 0, rgba(196,162,101,0.4) 5px,
+        var(--terra) 0, var(--terra) 5px,
         transparent 5px, transparent 10px);
+      opacity: 0.4;
     }
 
-    .activity-grid {
+    /* grid */
+    .act-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       gap: 1px;
-      border: 1px solid rgba(196,162,101,0.12);
-      background: rgba(196,162,101,0.12);
+      background: var(--sand);
+      border: 1px solid var(--sand);
     }
 
-    .activity-card {
-      background: #1c1108;
-      padding: 1.7rem 1.6rem;
+    /* card */
+    .act-card {
+      background: var(--parch);
+      padding: 1.6rem 1.5rem 1.5rem;
       cursor: pointer;
-      transition: background 0.2s;
       position: relative;
       user-select: none;
+      transition: background 0.2s;
+      border-top: 3px solid transparent;
     }
-    .activity-card:hover { background: #251608; }
-
-    .activity-card.selected {
-      background: #2e1408;
+    .act-card:hover { background: #F0E4CF; border-top-color: var(--gold); }
+    .act-card.selected {
+      background: #EDD5BE;
+      border-top-color: var(--terra);
     }
-    .activity-card.selected::after {
+    .act-card.selected::after {
       content: '\2713';
-      position: absolute; top: 14px; right: 14px;
-      background: var(--terracotta); color: #fff;
+      position: absolute; top: 12px; right: 12px;
+      background: var(--terra); color: #fff;
       width: 22px; height: 22px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.72rem; font-weight: 700;
+      font-size: 0.7rem; font-weight: 700;
     }
-    .activity-card.selected .card-top-line { background: var(--terracotta); opacity: 1; }
 
-    .card-top-line {
-      position: absolute; top: 0; left: 0; right: 0;
-      height: 2px; background: var(--gold); opacity: 0;
-      transition: opacity 0.2s;
-    }
-    .activity-card:hover .card-top-line { opacity: 0.3; }
-
-    .activity-card .icon-badge {
-      width: 34px; height: 34px;
-      border: 1px solid rgba(196,162,101,0.2);
+    .act-icon {
+      width: 32px; height: 32px;
+      border: 1px solid rgba(184,76,42,0.35);
       display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1rem;
-      color: var(--terracotta);
-      background: rgba(184,89,62,0.06);
+      color: var(--terra); margin-bottom: 0.9rem;
+      background: rgba(184,76,42,0.05);
     }
-    .activity-card .icon-badge svg { width: 18px; height: 18px; }
+    .act-icon svg { width: 16px; height: 16px; }
 
-    .activity-card h4 {
-      font-size: 1.2rem; font-weight: 600;
-      margin-bottom: 0.5rem;
-      color: var(--tufo); padding-right: 1.8rem;
-      letter-spacing: 0.01em;
+    .act-card h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.22rem; font-weight: 600;
+      color: var(--sienna); margin-bottom: 0.4rem;
+      padding-right: 1.6rem; line-height: 1.2;
     }
-
-    .activity-card p {
-      font-size: 0.84rem; color: var(--tufo); opacity: 0.45;
-      font-weight: 300; line-height: 1.7; margin-bottom: 0.9rem;
+    .act-card p {
+      font-size: 0.82rem; color: var(--smoke);
+      font-weight: 300; line-height: 1.7;
+      margin-bottom: 0.8rem; opacity: 0.85;
     }
-
-    .activity-card .season {
-      display: inline-block;
-      font-size: 0.6rem; font-weight: 600;
+    .act-season {
+      font-size: 0.58rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.12em;
       color: var(--olive);
-      border: 1px solid rgba(92,107,60,0.3);
-      padding: 0.2rem 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      border: 1px solid rgba(92,107,60,0.35);
+      padding: 0.18rem 0.55rem;
+      display: inline-block;
     }
 
-    /* day trips single card spans full row */
-    .day-trips-card {
-      grid-column: 1 / -1;
-    }
-    .day-trips-list {
-      display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem;
-    }
-    .day-trips-list .dest {
-      font-size: 0.78rem; font-weight: 400;
-      color: var(--gold); opacity: 0.65;
-      border: 1px solid rgba(196,162,101,0.18);
-      padding: 0.25rem 0.7rem;
-      letter-spacing: 0.05em;
+    /* day trips card */
+    .day-card { grid-column: 1 / -1; }
+    .dest-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
+    .dest-pill {
+      font-size: 0.75rem; font-weight: 400;
+      color: var(--sienna); border: 1px solid rgba(122,46,16,0.3);
+      padding: 0.2rem 0.65rem; letter-spacing: 0.04em;
     }
 
-    /* ── What's included ── */
-    .what-you-get { background: var(--earth); }
-    .what-you-get .section-h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      font-weight: 500; color: var(--tufo);
-      margin-bottom: 2rem; line-height: 1.25;
-    }
-    .included-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 1px; background: rgba(196,162,101,0.1);
-      border: 1px solid rgba(196,162,101,0.1);
-    }
-    .included-item {
-      padding: 1.6rem 1.4rem;
+    /* ─── INCLUDED ───────────────────────────────── */
+    .included {
       background: var(--earth);
-      border-top: 2px solid var(--terracotta);
+      color: var(--parch);
+      padding: 5.5rem 2rem;
     }
-    .included-item h3 {
-      font-size: 1.1rem; font-weight: 600; margin-bottom: 0.4rem;
-      color: var(--gold); letter-spacing: 0.01em;
+    .included .inner { max-width: 800px; margin: 0 auto; }
+    .included .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--terra); margin-bottom: 0.8rem;
     }
-    .included-item p { font-size: 0.82rem; line-height: 1.65; opacity: 0.5; color: var(--tufo); }
+    .included h2 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 500; color: var(--parch);
+      margin-bottom: 2rem; line-height: 1.2;
+    }
+    .inc-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: rgba(201,149,58,0.15);
+      border: 1px solid rgba(201,149,58,0.15);
+    }
+    .inc-item {
+      background: var(--earth);
+      padding: 1.6rem 1.4rem;
+      border-top: 2px solid var(--terra);
+    }
+    .inc-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 600;
+      color: var(--gold); margin-bottom: 0.4rem;
+    }
+    .inc-item p {
+      font-size: 0.82rem; font-weight: 300;
+      color: var(--parch); opacity: 0.5; line-height: 1.7;
+    }
 
-    /* ── Details strip ── */
-    .details {
-      background: var(--soot);
+    /* ─── STATS ──────────────────────────────────── */
+    .stats {
+      background: var(--parch);
+      color: var(--earth);
       padding: 3.5rem 2rem;
-      border-top: 1px solid rgba(196,162,101,0.06);
-      border-bottom: 1px solid rgba(196,162,101,0.06);
+      border-top: 1px solid var(--sand);
+      border-bottom: 1px solid var(--sand);
     }
-    .details-grid {
-      max-width: 680px; margin: 0 auto;
+    .stats-grid {
+      max-width: 700px; margin: 0 auto;
       display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1.4rem; text-align: center;
+      text-align: center; gap: 1rem;
     }
-    .detail-item .detail-value {
+    .stat-val {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem; font-weight: 600;
-      color: var(--terracotta); margin-bottom: 0.3rem;
-      line-height: 1;
+      font-size: 2.4rem; font-weight: 600;
+      color: var(--terra); line-height: 1; margin-bottom: 0.35rem;
     }
-    .detail-item .detail-label {
-      font-size: 0.6rem; letter-spacing: 0.25em;
-      text-transform: uppercase; color: var(--stone);
-      font-weight: 600; opacity: 0.7;
+    .stat-lbl {
+      font-size: 0.58rem; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--smoke);
+      font-weight: 600; opacity: 0.65;
     }
 
-    /* ── Philosophy ── */
-    .philosophy { background: var(--deep); }
-    .philosophy .section-label { color: var(--stone); }
-    .philosophy h2 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      font-weight: 500; color: var(--tufo);
-      margin-bottom: 1.2rem; line-height: 1.2;
+    /* ─── PHILOSOPHY ─────────────────────────────── */
+    .philo {
+      background: var(--sienna);
+      color: var(--parch);
+      padding: 5.5rem 2rem;
     }
-    .philosophy blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-      font-weight: 500; font-style: italic; line-height: 1.55;
-      color: var(--terracotta);
-      border-left: 2px solid var(--terracotta);
-      padding-left: 1.4rem; margin: 1.6rem 0;
-      opacity: 0.9;
+    .philo .inner { max-width: 680px; margin: 0 auto; }
+    .philo .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.65;
     }
-    .philosophy p {
-      font-size: 0.95rem; line-height: 1.85;
-      font-weight: 300; opacity: 0.45;
-      color: var(--tufo);
+    .philo h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      font-weight: 500; color: var(--parch);
+      margin-bottom: 1.4rem; line-height: 1.2;
+    }
+    .philo blockquote {
+      font-size: clamp(1.3rem, 2.5vw, 1.85rem);
+      font-weight: 400; font-style: italic;
+      color: var(--gold);
+      border-left: 2px solid var(--gold);
+      padding-left: 1.4rem; margin: 0 0 1.5rem;
+      line-height: 1.55; opacity: 0.9;
+    }
+    .philo p {
+      font-size: 0.9rem; font-weight: 300;
+      color: var(--parch); opacity: 0.5; line-height: 1.9;
     }
 
-    /* ── Pricing ── */
-    .pricing { background: var(--soot); text-align: center; }
-    .pricing .section-label { color: var(--gold); opacity: 0.5; }
-    .pricing .section-h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
-      font-weight: 500; color: var(--tufo); margin-bottom: 0.5rem;
+    /* ─── PRICING ────────────────────────────────── */
+    .pricing {
+      background: var(--ink);
+      color: var(--parch);
+      padding: 5.5rem 2rem;
+      text-align: center;
     }
-    .pricing-card {
+    .pricing .eyebrow {
+      font-size: 0.65rem; letter-spacing: 0.45em; text-transform: uppercase;
+      font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.6;
+    }
+    .pricing h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+      font-weight: 500; color: var(--parch); margin-bottom: 0.4rem;
+    }
+    .price-card {
       max-width: 420px; margin: 2.5rem auto 0;
-      border: 1px solid rgba(196,162,101,0.15);
+      border: 1px solid rgba(201,149,58,0.2);
       padding: 2.8rem 2.4rem;
-      background: rgba(196,162,101,0.025);
+      background: rgba(201,149,58,0.025);
       position: relative;
     }
-    .pricing-card::before {
+    .price-card::before {
       content: '';
-      position: absolute;
-      top: -1px; left: 20%; right: 20%;
+      position: absolute; top: -1px; left: 20%; right: 20%;
       height: 2px;
-      background: repeating-linear-gradient(90deg, var(--terracotta) 0, var(--terracotta) 6px, transparent 6px, transparent 11px);
+      background: repeating-linear-gradient(90deg,
+        var(--terra) 0, var(--terra) 6px,
+        transparent 6px, transparent 12px);
     }
-    .pricing-amount {
-      font-size: 3.8rem; font-weight: 500;
-      color: var(--gold); margin-bottom: 0.2rem; line-height: 1;
+    .price-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 500; color: var(--gold);
+      line-height: 1; margin-bottom: 0.15rem;
     }
-    .pricing-amount span { font-size: 1.4rem; opacity: 0.5; vertical-align: super; }
-    .pricing-per {
-      font-size: 0.68rem; letter-spacing: 0.2em;
-      text-transform: uppercase; opacity: 0.35;
-      color: var(--tufo); margin-bottom: 1.8rem;
+    .price-num sup { font-size: 1.5rem; vertical-align: super; opacity: 0.55; }
+    .price-per {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      opacity: 0.35; color: var(--parch); margin-bottom: 1.8rem;
     }
-    .pricing-includes {
+    .price-list {
       list-style: none; text-align: left;
-      font-size: 0.84rem; font-weight: 300;
-      color: var(--tufo); opacity: 0.55;
+      font-size: 0.84rem; font-weight: 300; color: var(--parch); opacity: 0.55;
     }
-    .pricing-includes li {
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(196,162,101,0.06);
-      padding-left: 1.2rem; position: relative;
+    .price-list li {
+      padding: 0.5rem 0 0.5rem 1.2rem;
+      border-bottom: 1px solid rgba(201,149,58,0.07);
+      position: relative;
     }
-    .pricing-includes li:last-child { border-bottom: none; }
-    .pricing-includes li::before {
+    .price-list li:last-child { border-bottom: none; }
+    .price-list li::before {
       content: '';
       position: absolute; left: 0; top: 50%;
-      width: 4px; height: 4px;
-      background: var(--terracotta);
+      width: 4px; height: 4px; background: var(--terra);
       transform: translateY(-50%);
     }
-    .pricing-note { margin-top: 1.6rem; font-size: 0.75rem; opacity: 0.25; font-style: italic; color: var(--tufo); }
+    .price-note { margin-top: 1.5rem; font-size: 0.72rem; opacity: 0.25; font-style: italic; }
 
-    /* ── Contact ── */
-    .contact { background: var(--deep); color: var(--tufo); padding: 6rem 2rem 5rem; }
-    .contact-header { text-align: center; max-width: 600px; margin: 0 auto; }
+    /* ─── CONTACT ────────────────────────────────── */
+    .contact {
+      background: var(--earth);
+      color: var(--parch);
+      padding: 6rem 2rem 5rem;
+    }
+    .contact-head { text-align: center; max-width: 560px; margin: 0 auto; }
+    .contact-head .palmette-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 1rem; margin-bottom: 1.5rem; color: var(--gold); opacity: 0.25;
+    }
+    .contact-head .palmette-row .hr {
+      width: 50px; height: 1px; background: var(--gold);
+    }
     .contact h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
       font-weight: 500; color: var(--gold);
     }
-    .contact-header p { opacity: 0.42; font-size: 0.9rem; font-weight: 300; margin-top: 0.8rem; }
-    .contact .divider {
+    .contact-head p {
+      margin-top: 0.8rem; font-size: 0.88rem;
+      font-weight: 300; opacity: 0.42; line-height: 1.8;
+    }
+    .contact-divider {
       width: 40px; height: 1px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
       margin: 1.6rem auto; opacity: 0.3;
     }
 
-    .contact-form { max-width: 540px; margin: 2.5rem auto 0; text-align: left; }
+    .cform { max-width: 520px; margin: 2.5rem auto 0; }
 
-    .selected-activities-summary {
-      background: rgba(184,89,62,0.08);
-      border: 1px solid rgba(184,89,62,0.2);
-      border-left: 3px solid var(--terracotta);
-      padding: 1rem 1.2rem;
-      margin-bottom: 1.6rem;
-      font-size: 0.86rem; font-weight: 300; color: var(--tufo);
+    .sel-summary {
+      background: rgba(184,76,42,0.1);
+      border: 1px solid rgba(184,76,42,0.22);
+      border-left: 3px solid var(--terra);
+      padding: 1rem 1.2rem; margin-bottom: 1.5rem;
+      font-size: 0.85rem; font-weight: 300; color: var(--parch);
     }
-    .selected-activities-summary .summary-label {
-      font-size: 0.6rem; font-weight: 600; letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--terracotta); display: block; margin-bottom: 0.4rem;
+    .sel-summary .lbl {
+      font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--terra);
+      display: block; margin-bottom: 0.4rem;
     }
-    .no-selection { opacity: 0.35; font-style: italic; }
+    .sel-empty { opacity: 0.35; font-style: italic; }
 
-    .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .contact-form .form-group { margin-bottom: 1.1rem; }
-
-    .contact-form label {
-      display: block; font-size: 0.62rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--stone);
-      margin-bottom: 0.5rem; font-weight: 600; opacity: 0.7;
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .fg { margin-bottom: 1rem; }
+    .fg label {
+      display: block; font-size: 0.6rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--sand);
+      margin-bottom: 0.45rem; font-weight: 600; opacity: 0.65;
     }
-
-    .contact-form input, .contact-form textarea, .contact-form select {
-      width: 100%; padding: 0.85rem 1rem;
-      background: rgba(232,220,200,0.04);
-      border: 1px solid rgba(196,162,101,0.18);
-      border-bottom-color: rgba(196,162,101,0.3);
-      color: var(--tufo);
-      font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 300;
-      outline: none; transition: border-color 0.25s;
+    .fg input, .fg textarea, .fg select {
+      width: 100%; padding: 0.82rem 0.9rem;
+      background: rgba(232,216,188,0.05);
+      border: 1px solid rgba(201,149,58,0.18);
+      border-bottom-color: rgba(201,149,58,0.3);
+      color: var(--parch);
+      font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 300;
+      outline: none; transition: border-color 0.2s;
     }
-    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus {
-      border-color: rgba(196,162,101,0.5);
+    .fg input:focus, .fg textarea:focus, .fg select:focus {
+      border-color: rgba(201,149,58,0.45);
     }
-    .contact-form textarea { resize: vertical; min-height: 90px; }
-    .contact-form select option { background: var(--deep); color: var(--tufo); }
+    .fg textarea { resize: vertical; min-height: 85px; }
+    .fg select option { background: var(--earth); color: var(--parch); }
 
-    .form-submit { margin-top: 1.8rem; }
-    .form-submit .submit-btn {
+    .submit-wrap { margin-top: 1.8rem; }
+    .sbtn {
       width: 100%; padding: 1.1rem;
-      background: var(--terracotta); color: #fff; border: none;
-      font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      cursor: pointer; transition: background 0.25s, letter-spacing 0.25s;
+      background: var(--terra); color: #fff; border: none;
+      font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.25s, letter-spacing 0.2s;
     }
-    .form-submit .submit-btn:hover { background: var(--rust); letter-spacing: 0.28em; }
-    .form-submit .submit-btn:disabled {
-      background: #2e2016; cursor: not-allowed; opacity: 0.5;
-      letter-spacing: 0.22em;
+    .sbtn:hover { background: var(--sienna); letter-spacing: 0.3em; }
+    .sbtn:disabled {
+      background: rgba(184,76,42,0.2); cursor: not-allowed;
+      color: rgba(232,216,188,0.3); letter-spacing: 0.25em;
     }
 
-    .contact .email-link {
+    .email-alt {
       display: block; text-align: center; margin-top: 2.5rem;
       color: var(--gold); text-decoration: none;
-      font-size: 0.75rem; opacity: 0.3; letter-spacing: 0.08em;
+      font-size: 0.72rem; opacity: 0.28; letter-spacing: 0.06em;
+      transition: opacity 0.2s;
     }
-    .contact .email-link:hover { opacity: 0.6; }
+    .email-alt:hover { opacity: 0.55; }
 
-    .success-message {
-      display: none;
-      text-align: center;
-      max-width: 540px;
-      margin: 2.5rem auto 0;
+    .success-msg {
+      display: none; text-align: center;
+      max-width: 520px; margin: 2.5rem auto 0;
       padding: 3rem 2rem;
-      border: 1px solid rgba(196,162,101,0.2);
+      border: 1px solid rgba(201,149,58,0.2);
     }
-    .success-message h3 {
+    .success-msg h3 {
       font-family: 'Cormorant Garamond', serif;
-      color: var(--gold); font-size: 2rem; font-weight: 500; margin-bottom: 0.8rem;
+      color: var(--gold); font-size: 2.2rem; font-weight: 500; margin-bottom: 0.8rem;
     }
-    .success-message p { color: var(--tufo); opacity: 0.55; font-size: 0.92rem; font-weight: 300; }
+    .success-msg p { opacity: 0.5; font-size: 0.9rem; font-weight: 300; }
 
-    /* ── Footer ── */
+    /* ─── FOOTER ─────────────────────────────────── */
     footer {
-      background: var(--soot);
-      border-top: 1px solid rgba(196,162,101,0.06);
+      background: var(--ink);
+      border-top: 1px solid rgba(201,149,58,0.07);
       text-align: center; padding: 1.8rem;
-      font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase;
-      color: var(--stone); opacity: 0.3;
+      font-size: 0.58rem; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--smoke); opacity: 0.5;
     }
 
-    /* ── Responsive ── */
+    /* ─── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 768px) {
       .ways-grid { grid-template-columns: 1fr; }
-      .way-card { border-right: none; border-bottom: 1px solid rgba(196,162,101,0.14); }
+      .way-card { border-right: none; border-bottom: 1px solid rgba(201,149,58,0.2); }
       .way-card:last-child { border-bottom: none; }
     }
     @media (max-width: 600px) {
-      section { padding: 3.5rem 1.5rem; }
-      .activity-grid { grid-template-columns: 1fr; }
-      .details-grid { grid-template-columns: repeat(2, 1fr); }
-      .included-grid { grid-template-columns: 1fr; }
-      .contact-form .form-row { grid-template-columns: 1fr; }
+      .act-grid { grid-template-columns: 1fr; }
+      .inc-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
+      .frow { grid-template-columns: 1fr; }
+      section, .catalog, .included, .intro, .three-ways, .philo, .pricing, .contact { padding-left: 1.4rem; padding-right: 1.4rem; }
     }
 
-    /* ── Animations ── */
-    .fade-in {
-      opacity: 0; transform: translateY(14px);
-      animation: fadeInFallback 0.01s 1s forwards;
-      transition: opacity 0.65s ease, transform 0.65s ease;
+    /* ─── FADE IN ────────────────────────────────── */
+    .fi {
+      opacity: 0; transform: translateY(12px);
+      animation: fif 0.01s 1.2s forwards;
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
-    @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
+    .fi.vis { opacity: 1; transform: none; animation: none; }
+    @keyframes fif { to { opacity: 1; transform: none; } }
   </style>
 </head>
 <body>
 
-  <!-- SVG defs -->
-  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <!-- SVG symbol library -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <pattern id="meander-dark" x="0" y="0" width="40" height="28" patternUnits="userSpaceOnUse">
-        <path d="M0,14 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#C4A265" stroke-width="1.4"/>
-        <path d="M0,20 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.35"/>
+      <!-- Meander pattern — dominant, readable -->
+      <pattern id="mdr" x="0" y="0" width="44" height="36" patternUnits="userSpaceOnUse">
+        <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M2,26 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
       </pattern>
-      <pattern id="meander-earth" x="0" y="0" width="40" height="28" patternUnits="userSpaceOnUse">
-        <path d="M0,14 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#C4A265" stroke-width="1.4" opacity="0.5"/>
-        <path d="M0,20 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.7" opacity="0.25"/>
-      </pattern>
-      <symbol id="palmette" viewBox="0 0 80 60">
-        <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
-        <path d="M40,55 C40,40 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.65" opacity="0.5"/>
-        <path d="M40,55 C40,40 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.65" opacity="0.5"/>
-        <ellipse cx="40" cy="56" rx="6" ry="2" fill="none" stroke="currentColor" stroke-width="0.8"/>
+
+      <!-- Palmette -->
+      <symbol id="palm" viewBox="0 0 80 60">
+        <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M40,55 C40,42 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
+        <path d="M40,55 C40,42 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
+        <ellipse cx="40" cy="57" rx="6" ry="2.5" fill="none" stroke="currentColor" stroke-width="0.9"/>
       </symbol>
-      <symbol id="corner-ornament" viewBox="0 0 120 120">
-        <path d="M10,110 C10,60 10,10 60,10 C90,10 110,30 110,50 C110,70 95,80 80,80 C65,80 55,70 55,58 C55,48 62,42 70,42 C78,42 82,48 82,54" fill="none" stroke="currentColor" stroke-width="1.3"/>
-        <path d="M10,110 L10,90 C10,50 30,20 60,20" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
-        <circle cx="82" cy="54" r="2.5" fill="currentColor" opacity="0.25"/>
+
+      <!-- Volute / corner -->
+      <symbol id="vlt" viewBox="0 0 120 120">
+        <path d="M10,110 C10,55 10,10 60,10 C92,10 112,30 112,52 C112,72 96,82 80,82 C65,82 54,72 54,60 C54,50 61,43 70,43 C79,43 83,50 83,56" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <path d="M10,110 L10,88 C10,48 32,18 62,18" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
+        <circle cx="83" cy="56" r="3" fill="currentColor" opacity="0.3"/>
       </symbol>
-      <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M4 20c8-1 14-7 16-16-9 1-15 7-16 16zM4 20c2-5 5-9 9-12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-      <symbol id="icon-hammer" viewBox="0 0 24 24"><path d="M14 6 L19 11 L12 18 L7 13 Z M4 21 L9 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-      <symbol id="icon-tomb" viewBox="0 0 24 24"><path d="M4 21 V11 C4 6 8 3 12 3 C16 3 20 6 20 11 V21" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="2" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.6"/></symbol>
-      <symbol id="icon-horse" viewBox="0 0 24 24"><path d="M5 21 L6 14 C5 10 7 6 11 5 C13 4.5 15 5 16 7 L19 7 L18 9 L16 9 L16 14 L18 21 M9 21 L9 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-      <symbol id="icon-flask" viewBox="0 0 24 24"><path d="M9 3 H15 M10 3 V9 L5 19 C4.5 20.2 5.4 21 6.5 21 H17.5 C18.6 21 19.5 20.2 19 19 L14 9 V3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
-      <symbol id="icon-bonfire" viewBox="0 0 24 24"><path d="M12 2 C12 2 8 7 8 11 C8 13.2 9.8 15 12 15 C14.2 15 16 13.2 16 11 C16 9 14.5 7.5 14 7 C14 9 12.5 10 12 9 C11.5 8 12 6 12 2 Z M5 21 H19 M4 18 L8 21 M20 18 L16 21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-      <symbol id="icon-trail" viewBox="0 0 24 24"><path d="M3 20 C7 16 9 16 12 12 C15 8 17 8 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="3" cy="20" r="1.8" fill="currentColor"/><circle cx="21" cy="4" r="1.8" fill="currentColor"/></symbol>
-      <symbol id="icon-map" viewBox="0 0 24 24"><path d="M3 6 L9 3 L15 6 L21 3 V18 L15 21 L9 18 L3 21 V6 Z M9 3 V18 M15 6 V21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+
+      <!-- Icons -->
+      <symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M4 20c8-1 14-7 16-16-9 1-15 7-16 16zM4 20c2-5 5-9 9-12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+      <symbol id="ico-tomb" viewBox="0 0 24 24"><path d="M4 21V11C4 6 8 3 12 3c4 0 8 3 8 8v10" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="2" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.7"/></symbol>
+      <symbol id="ico-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 19c-.5 1.2.4 2 1.5 2h11c1.1 0 2-.8 1.5-2L14 9V3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="ico-fire" viewBox="0 0 24 24"><path d="M12 2c0 0-4 5-4 9 0 2.2 1.8 4 4 4s4-1.8 4-4c0-2-1.5-3.5-2-4 0 2-1.5 3-2 2-.5-1 0-3 0-7zM5 21h14M4 18l4 3M20 18l-4 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="ico-horse" viewBox="0 0 24 24"><path d="M5 21l1-7C5 10 7 6 11 5c2-.5 4 0 5 2h3l-1 2h-2v5l2 7M9 21v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="ico-trail" viewBox="0 0 24 24"><path d="M3 20C7 16 9 16 12 12c3-4 5-4 9-8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="3" cy="20" r="2" fill="currentColor"/><circle cx="21" cy="4" r="2" fill="currentColor"/></symbol>
+      <symbol id="ico-map" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6zM9 3v18M15 6v15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
     </defs>
   </svg>
 
-  <!-- Hero -->
+  <!-- ═══ HERO ════════════════════════════════════ -->
   <section class="hero">
-    <svg class="etruscan-corner top-left" width="110" height="110"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner top-right" width="110" height="110"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner bottom-left" width="110" height="110"><use href="#corner-ornament"/></svg>
-    <svg class="etruscan-corner bottom-right" width="110" height="110"><use href="#corner-ornament"/></svg>
+    <svg class="volute tl" width="100" height="100"><use href="#vlt"/></svg>
+    <svg class="volute tr" width="100" height="100"><use href="#vlt"/></svg>
+    <svg class="volute bl" width="100" height="100"><use href="#vlt"/></svg>
+    <svg class="volute br" width="100" height="100"><use href="#vlt"/></svg>
 
-    <div class="hero-content">
-      <div class="subtitle">Blera &middot; Northern Lazio &middot; Italy</div>
-      <div class="divider"></div>
-      <svg class="etruscan-ornament" width="52" height="39" style="color:var(--gold); opacity:0.3; margin-bottom:1rem"><use href="#palmette"/></svg>
+    <div class="hero-inner">
+      <div class="hero-loc">Blera &middot; Northern Lazio &middot; Italy</div>
+      <div class="hero-ornament">
+        <div class="line"></div>
+        <svg width="40" height="30" style="color:var(--terra)"><use href="#palm"/></svg>
+        <div class="line right"></div>
+      </div>
       <h1>Rasna</h1>
-      <p class="tagline">Harvest olives with local families. Descend into 2,800-year-old Etruscan tombs. Ride horseback through ancient ruins. An expedition into the oldest part of Italy.</p>
-      <a href="#catalog" class="cta-button">Build your expedition</a>
+      <p class="hero-sub">Harvest olives with local families. Descend into 2,800-year-old Etruscan tombs. Ride horseback through ancient ruins. An expedition into the oldest part of Italy.</p>
+      <a href="#catalog" class="hero-cta">Build your expedition</a>
     </div>
   </section>
 
-  <div class="meander-band on-soot"><svg><rect width="100%" height="28" fill="url(#meander-dark)"/></svg></div>
+  <!-- meander band -->
+  <div class="band" style="background:var(--earth)">
+    <svg width="100%" height="36"><rect width="100%" height="36" fill="url(#mdr)" style="color:var(--terra)"/></svg>
+  </div>
 
-  <!-- Intro -->
+  <!-- ═══ INTRO ════════════════════════════════════ -->
   <section class="intro">
-    <div class="section-inner fade-in">
-      <svg class="etruscan-ornament" width="44" height="33" style="color:var(--terracotta); opacity:0.5; margin-bottom:1.6rem"><use href="#palmette"/></svg>
+    <div style="max-width:640px; margin:0 auto" class="fi">
+      <div class="palmette-row">
+        <div class="hr"></div>
+        <svg width="36" height="27"><use href="#palm"/></svg>
+        <div class="hr"></div>
+      </div>
+      <div class="eyebrow">The name</div>
       <h2>Before Rome, there was Rasna.</h2>
       <p>"Rasna" is what the Etruscans called themselves — the civilization that carved cities into volcanic rock here nearly three millennia ago. Their tombs still line the ravines. Their roads still cut through the forest. We take a handful of guests at a time to live among what they left behind.</p>
     </div>
   </section>
 
-  <!-- 3 Ways -->
+  <!-- meander on parch→sienna -->
+  <svg style="display:block;width:100%;height:36px;background:var(--sienna)" viewBox="0 0 1440 36" preserveAspectRatio="none">
+    <rect width="1440" height="36" fill="var(--sienna)"/>
+    <line x1="0" y1="6" x2="1440" y2="6" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
+    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(201,149,58,0.45)" stroke-width="1.6"/>
+  </svg>
+
+  <!-- ═══ THREE WAYS ════════════════════════════════ -->
   <section class="three-ways">
-    <div class="section-wide">
-      <div class="section-label fade-in">Three ways to have fun</div>
-      <h2 class="section-h2 fade-in">Planning, doing, remembering.</h2>
-      <p class="section-sub fade-in">Let's plan it together. Pick what excites you below — we'll build the rest around you. Every trip is different. Every trip is yours.</p>
-      <div class="ways-grid fade-in">
+    <div class="inner">
+      <div class="eyebrow fi">Three ways to have fun</div>
+      <h2 class="fi">Planning, doing, remembering.</h2>
+      <p class="sub fi">Let's plan it together. Pick what excites you below — we'll build the rest around you. Every trip is different. Every trip is yours.</p>
+      <div class="ways-grid fi">
         <div class="way-card">
-          <svg class="way-icon"><use href="#icon-leaf"/></svg>
+          <div class="top-dash"></div>
+          <svg class="way-icon"><use href="#ico-leaf"/></svg>
           <div class="way-title">Planning</div>
           <p class="way-desc">Tell us what you want. We handle everything else — lodging, meals, guides, logistics. You just choose.</p>
         </div>
         <div class="way-card">
-          <svg class="way-icon"><use href="#icon-tomb"/></svg>
+          <div class="top-dash"></div>
+          <svg class="way-icon"><use href="#ico-tomb"/></svg>
           <div class="way-title">Doing</div>
           <p class="way-desc">Harvest olives, descend into tombs, ride through ruins, forage in the woods. Real work. Real places. Real people.</p>
         </div>
         <div class="way-card">
-          <svg class="way-icon"><use href="#icon-flask"/></svg>
+          <div class="top-dash"></div>
+          <svg class="way-icon"><use href="#ico-flask"/></svg>
           <div class="way-title">Remembering</div>
           <p class="way-desc">You leave with oil you pressed, wine you harvested, pasta you made. The stories last longer than any souvenir.</p>
         </div>
@@ -690,168 +719,159 @@
     </div>
   </section>
 
-  <div class="meander-band on-soot"><svg><rect width="100%" height="28" fill="url(#meander-dark)"/></svg></div>
+  <!-- meander sienna→cream -->
+  <svg style="display:block;width:100%;height:36px;background:var(--cream)" viewBox="0 0 1440 36" preserveAspectRatio="none">
+    <rect width="1440" height="36" fill="var(--cream)"/>
+    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(184,76,42,0.35)" stroke-width="1.6"/>
+  </svg>
 
-  <!-- Catalog + Form -->
-  <form id="experience-form" action="https://formspree.io/f/xlgynpjo" method="POST">
+  <!-- ═══ CATALOG ═══════════════════════════════════ -->
+  <form id="xform" action="https://formspree.io/f/xlgynpjo" method="POST">
 
   <section class="catalog" id="catalog">
-    <div class="section-wide">
-      <div class="catalog-intro fade-in">
-        <div class="section-label">Build your expedition</div>
-        <h2 class="section-h2">Select your experiences.</h2>
-        <p>Click any activity to add it to your trip. Mix and match — we'll handle the rest.</p>
+    <div class="inner">
+      <div class="cat-intro fi">
+        <div class="eyebrow">Build your expedition</div>
+        <h2>Select your experiences.</h2>
+        <p>Click any activity to add it to your trip. Mix and match — we handle the rest.</p>
       </div>
 
       <!-- Farm & Field -->
-      <div class="category fade-in">
-        <div class="category-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
-        <div class="activity-grid">
+      <div class="category fi">
+        <div class="cat-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
+        <div class="act-grid">
 
-          <div class="activity-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-leaf"/></svg></div>
+          <div class="act-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-leaf"/></svg></div>
             <h4>Olive Harvest</h4>
             <p>Pick olives by hand, watch them pressed into oil at the mill, take a bottle home.</p>
-            <span class="season">Oct &ndash; Dec</span>
+            <span class="act-season">Oct &ndash; Dec</span>
           </div>
 
-          <div class="activity-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-bonfire"/></svg></div>
+          <div class="act-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-fire"/></svg></div>
             <h4>Tomato &amp; Sauce Day</h4>
             <p>Harvest tomatoes and make passata from scratch with a local family. A real Italian summer day.</p>
-            <span class="season">August</span>
+            <span class="act-season">August</span>
           </div>
 
-          <div class="activity-card" data-activity="Grape Harvest" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-flask"/></svg></div>
+          <div class="act-card" data-activity="Grape Harvest" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
             <h4>Grape Harvest</h4>
-            <p>A day of vendemmia with a local cantina — pick grapes, tour the cellar, take home a bottle from last year.</p>
-            <span class="season">Sep &ndash; Oct</span>
+            <p>A day of vendemmia — pick grapes, tour the cellar, take home a bottle from last year.</p>
+            <span class="act-season">Sep &ndash; Oct</span>
           </div>
 
-          <div class="activity-card" data-activity="Foraging" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-leaf"/></svg></div>
+          <div class="act-card" data-activity="Foraging" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-leaf"/></svg></div>
             <h4>Foraging</h4>
-            <p>Walk the Tuscia woods hunting wild asparagus, truffles, mushrooms — whatever the season offers. Cooked into lunch the same day.</p>
-            <span class="season">Spring &amp; Autumn</span>
+            <p>Hunt truffles, wild asparagus, mushrooms in the Tuscia woods — whatever the season gives. Cooked into lunch the same day.</p>
+            <span class="act-season">Spring &amp; Autumn</span>
           </div>
 
         </div>
       </div>
 
       <!-- Artisan & Food -->
-      <div class="category fade-in">
-        <div class="category-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
-        <div class="activity-grid">
+      <div class="category fi">
+        <div class="cat-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
+        <div class="act-grid">
 
-          <div class="activity-card" data-activity="Charcuterie Degustation with Emiliano" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-flask"/></svg></div>
+          <div class="act-card" data-activity="Charcuterie Degustation" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
             <h4>Charcuterie Degustation</h4>
-            <p>Taste homemade salumi and cured meats with Emiliano — made the traditional way, right here in Blera.</p>
-            <span class="season">Year-round</span>
+            <p>Taste homemade salumi and cured meats — made the traditional way, right here in Blera.</p>
+            <span class="act-season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Cheese &amp; Charcuterie with Davide (Civitella Cesi)" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-flask"/></svg></div>
+          <div class="act-card" data-activity="Cheese &amp; Charcuterie (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
             <h4>Cheese &amp; Charcuterie</h4>
-            <p>Half a day with Davide Paolocci in Civitella Cesi: hands-on cheesemaking, tasting, and a nearby Etruscan site.</p>
-            <span class="season">Year-round</span>
+            <p>Half a day in Civitella Cesi: hands-on cheesemaking, tasting, and a nearby Etruscan archaeological site.</p>
+            <span class="act-season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Pasta Making" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-bonfire"/></svg></div>
+          <div class="act-card" data-activity="Pasta Making" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-fire"/></svg></div>
             <h4>Pasta Making</h4>
             <p>Make pasta by hand the old way — flour on the board, rolling by feel, eating what you made.</p>
-            <span class="season">Year-round</span>
+            <span class="act-season">Year-round</span>
           </div>
 
         </div>
       </div>
 
       <!-- Culture & Outdoors -->
-      <div class="category fade-in">
-        <div class="category-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
-        <div class="activity-grid">
+      <div class="category fi">
+        <div class="cat-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
+        <div class="act-grid">
 
-          <div class="activity-card" data-activity="Cammino dei Tre Villaggi" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-trail"/></svg></div>
+          <div class="act-card" data-activity="Cammino dei Tre Villaggi" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-trail"/></svg></div>
             <h4>Cammino dei Tre Villaggi</h4>
-            <p>20 km circular trail through Blera, Barbarano Romano and Villa San Giovanni. Earn the “Etruscan Wanderer” certificate.</p>
-            <span class="season">Year-round</span>
+            <p>20 km trail through Blera, Barbarano Romano and Villa San Giovanni. Earn the "Etruscan Wanderer" certificate.</p>
+            <span class="act-season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="San Giovenale Hike &amp; Panonto" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-tomb"/></svg></div>
+          <div class="act-card" data-activity="San Giovenale &amp; Panonto" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-tomb"/></svg></div>
             <h4>San Giovenale &amp; Panonto</h4>
-            <p>Hike to the Etruscan plateau of San Giovenale, then lunch on panonto — wood-fire bruschetta cooked the Bleran way.</p>
-            <span class="season">Year-round</span>
+            <p>Hike to the Etruscan plateau of San Giovenale, then lunch on panonto — wood-fire bruschetta the Bleran way.</p>
+            <span class="act-season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-horse"/></svg></div>
+          <div class="act-card" data-activity="Horseback Riding" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-horse"/></svg></div>
             <h4>Horseback Riding</h4>
             <p>Ride through the hills around Civitella Cesi — the slowest, most rewarding way to see this landscape.</p>
-            <span class="season">Year-round</span>
+            <span class="act-season">Year-round</span>
           </div>
 
         </div>
       </div>
 
       <!-- Day Trips -->
-      <div class="category fade-in">
-        <div class="category-header"><h3>Day Trips</h3><div class="rule"></div></div>
-        <div class="activity-grid">
-
-          <div class="activity-card day-trips-card" data-activity="Day Trips" onclick="toggleCard(this)">
-            <div class="card-top-line"></div>
-            <div class="icon-badge"><svg width="18" height="18"><use href="#icon-map"/></svg></div>
+      <div class="category fi">
+        <div class="cat-header"><h3>Day Trips</h3><div class="rule"></div></div>
+        <div class="act-grid">
+          <div class="act-card day-card" data-activity="Day Trip" onclick="toggleCard(this)">
+            <div class="act-icon"><svg><use href="#ico-map"/></svg></div>
             <h4>Add a day trip</h4>
-            <p>The surrounding region is extraordinary. Tell us where you want to go and we'll organise it — transport, guides, everything.</p>
-            <div class="day-trips-list">
-              <span class="dest">Lago di Vico</span>
-              <span class="dest">Viterbo</span>
-              <span class="dest">Tarquinia</span>
-              <span class="dest">Villa Lante &amp; Palazzo Farnese</span>
-              <span class="dest">Tyrrhenian Coast</span>
-              <span class="dest">Your choice</span>
+            <p>The region around Blera is extraordinary. Tell us where you want to go — we organise transport, guides, everything.</p>
+            <div class="dest-list">
+              <span class="dest-pill">Lago di Vico</span>
+              <span class="dest-pill">Viterbo</span>
+              <span class="dest-pill">Tarquinia</span>
+              <span class="dest-pill">Villa Lante &amp; Palazzo Farnese</span>
+              <span class="dest-pill">Tyrrhenian Coast</span>
+              <span class="dest-pill">Your choice</span>
             </div>
           </div>
-
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- What's included -->
-  <section class="what-you-get">
-    <div class="section-inner">
-      <div class="section-label fade-in">What's included</div>
-      <h2 class="section-h2 fade-in">You show up. We handle everything.</h2>
-      <div class="included-grid fade-in">
-        <div class="included-item">
+  <!-- ═══ INCLUDED ══════════════════════════════════ -->
+  <section class="included">
+    <div class="inner">
+      <div class="eyebrow fi">What's included</div>
+      <h2 class="fi">You show up. We handle everything.</h2>
+      <div class="inc-grid fi">
+        <div class="inc-item">
           <h3>Accommodation</h3>
           <p>Nights at a local B&amp;B or agriturismo — real places run by real people, no chain hotels.</p>
         </div>
-        <div class="included-item">
+        <div class="inc-item">
           <h3>All meals</h3>
           <p>Breakfast, lunch, dinner — cooked by local families, at farms, or at the sagra festivals.</p>
         </div>
-        <div class="included-item">
+        <div class="inc-item">
           <h3>All experiences</h3>
           <p>Every activity you select: harvesting, tastings, guided hikes, day trips.</p>
         </div>
-        <div class="included-item">
+        <div class="inc-item">
           <h3>Local transport</h3>
           <p>Pickup from Rome or Viterbo, plus all transfers during your stay.</p>
         </div>
@@ -859,39 +879,41 @@
     </div>
   </section>
 
-  <div class="meander-band on-earth"><svg><rect width="100%" height="28" fill="url(#meander-earth)"/></svg></div>
-
-  <!-- Details -->
-  <div class="details">
-    <div class="details-grid fade-in">
-      <div class="detail-item"><div class="detail-value">6&ndash;10</div><div class="detail-label">People max</div></div>
-      <div class="detail-item"><div class="detail-value">100%</div><div class="detail-label">Hands-on</div></div>
-      <div class="detail-item"><div class="detail-value">0</div><div class="detail-label">Tour buses</div></div>
-      <div class="detail-item"><div class="detail-value">2,800</div><div class="detail-label">Years of history</div></div>
+  <!-- ═══ STATS ══════════════════════════════════════ -->
+  <div class="stats">
+    <div class="stats-grid fi">
+      <div><div class="stat-val">6&ndash;10</div><div class="stat-lbl">People max</div></div>
+      <div><div class="stat-val">100%</div><div class="stat-lbl">Hands-on</div></div>
+      <div><div class="stat-val">0</div><div class="stat-lbl">Tour buses</div></div>
+      <div><div class="stat-val">2,800</div><div class="stat-lbl">Years of history</div></div>
     </div>
   </div>
 
-  <!-- Philosophy -->
-  <section class="philosophy">
-    <div class="section-inner fade-in">
-      <div class="section-label">Why we stay small</div>
+  <!-- ═══ PHILOSOPHY ════════════════════════════════ -->
+  <section class="philo">
+    <div class="inner fi">
+      <div class="eyebrow">Why we stay small</div>
       <h2>This is not mass tourism.</h2>
       <blockquote>We take 10 people at a time — because that's how many can actually fit around a family's table, or work a real olive grove without turning it into a show.</blockquote>
       <p>No staged performances. No gift shops. No Instagram setups. You'll be sweating in an olive grove, getting flour on your hands, eating dinner with the people whose land you worked. The scale stays small so the experience stays real — and rare.</p>
     </div>
   </section>
 
-  <div class="meander-band on-soot"><svg><rect width="100%" height="28" fill="url(#meander-dark)"/></svg></div>
+  <!-- meander sienna→ink -->
+  <svg style="display:block;width:100%;height:36px;background:var(--ink)" viewBox="0 0 1440 36" preserveAspectRatio="none">
+    <rect width="1440" height="36" fill="var(--ink)"/>
+    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(201,149,58,0.4)" stroke-width="1.6"/>
+  </svg>
 
-  <!-- Pricing -->
+  <!-- ═══ PRICING ════════════════════════════════════ -->
   <section class="pricing">
-    <div class="section-inner">
-      <div class="section-label fade-in">Investment</div>
-      <h2 class="section-h2 fade-in">One price. Everything in.</h2>
-      <div class="pricing-card fade-in">
-        <div class="pricing-amount"><span>&euro;</span>1,450</div>
-        <div class="pricing-per">per person &middot; starting at 4 days, all-inclusive</div>
-        <ul class="pricing-includes">
+    <div style="max-width:740px;margin:0 auto">
+      <div class="eyebrow fi">Investment</div>
+      <h2 class="fi">One price. Everything in.</h2>
+      <div class="price-card fi">
+        <div class="price-num"><sup>&euro;</sup>1,450</div>
+        <div class="price-per">per person &middot; starting at 4 days, all-inclusive</div>
+        <ul class="price-list">
           <li>Accommodation for your full stay</li>
           <li>All meals (breakfast, lunch, dinner)</li>
           <li>Every experience you select</li>
@@ -900,143 +922,122 @@
           <li>All local transfers</li>
           <li>English-speaking host throughout</li>
         </ul>
-        <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
+        <p class="price-note">Not included: flights, travel insurance, personal purchases</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- ═══ CONTACT ═══════════════════════════════════ -->
   <section class="contact" id="contact">
-    <div class="contact-header fade-in">
-      <svg class="etruscan-ornament" width="44" height="33" style="color:var(--gold); opacity:0.22; margin-bottom:1.2rem"><use href="#palmette"/></svg>
+    <div class="contact-head fi">
+      <div class="palmette-row">
+        <div class="hr"></div>
+        <svg width="36" height="27" style="color:var(--gold)"><use href="#palm"/></svg>
+        <div class="hr"></div>
+      </div>
       <h2>Tell us about your trip.</h2>
-      <div class="divider"></div>
+      <div class="contact-divider"></div>
       <p>We'll build a custom all-inclusive package around your selections and send a quote within a few days.</p>
     </div>
 
-    <div class="contact-form fade-in">
-      <div class="selected-activities-summary" id="activities-summary">
-        <span class="summary-label">Your Selected Experiences</span>
-        <span class="no-selection">Click the activities above to select them</span>
+    <div class="cform fi">
+      <div class="sel-summary" id="sel-summary">
+        <span class="lbl">Your Selected Experiences</span>
+        <span class="sel-empty">Click the activities above to select them</span>
       </div>
 
-      <input type="hidden" name="selected_activities" id="hidden-activities" value="">
+      <input type="hidden" name="selected_activities" id="hidden-acts" value="">
       <input type="hidden" name="_subject" value="New RASNA expedition inquiry">
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" required placeholder="Full name">
+      <div class="frow">
+        <div class="fg">
+          <label for="nm">Your name</label>
+          <input type="text" id="nm" name="name" required placeholder="Full name">
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        <div class="fg">
+          <label for="em">Email</label>
+          <input type="email" id="em" name="email" required placeholder="your@email.com">
         </div>
       </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="guests">Number of guests</label>
-          <select id="guests" name="guests" required>
+      <div class="frow">
+        <div class="fg">
+          <label for="gs">Number of guests</label>
+          <select id="gs" name="guests" required>
             <option value="">Select...</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
+            <option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option>
+            <option>8</option><option>9</option><option>10</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="dates">Preferred dates / month</label>
-          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. October 2026, flexible">
+        <div class="fg">
+          <label for="dt">Preferred dates / month</label>
+          <input type="text" id="dt" name="preferred_dates" placeholder="e.g. October 2026, flexible">
         </div>
       </div>
 
-      <div class="form-group">
-        <label for="notes">Anything else we should know?</label>
-        <textarea id="notes" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
+      <div class="fg">
+        <label for="nt">Anything else we should know?</label>
+        <textarea id="nt" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
       </div>
 
-      <div class="form-submit">
-        <button type="submit" class="submit-btn" id="submit-btn" disabled>Select at least one experience to continue</button>
+      <div class="submit-wrap">
+        <button type="submit" class="sbtn" id="sbtn" disabled>Select at least one experience to continue</button>
       </div>
     </div>
 
-    <div class="success-message" id="success-message">
+    <div class="success-msg" id="ok-msg">
       <h3>Grazie.</h3>
-      <p>We've received your selections. We'll put together a personalized quote and get back to you within a few days.</p>
+      <p>We've received your selections. We'll put together a personalized quote and be in touch within a few days.</p>
     </div>
 
-    <a href="mailto:nikolai.fissenko1@gmail.com" class="email-link">or email us directly: nikolai.fissenko1@gmail.com</a>
+    <a href="mailto:nikolai.fissenko1@gmail.com" class="email-alt">or email us directly: nikolai.fissenko1@gmail.com</a>
   </section>
 
   </form>
 
-  <footer>
-    <span>Rasna &mdash; Blera, Italia</span>
-  </footer>
+  <footer>Rasna &mdash; Blera, Italia</footer>
 
   <script>
-    const selectedActivities = new Set();
+    const sel = new Set();
 
-    function toggleCard(card) {
-      const activity = card.dataset.activity;
-      card.classList.toggle('selected');
-      if (selectedActivities.has(activity)) {
-        selectedActivities.delete(activity);
-      } else {
-        selectedActivities.add(activity);
-      }
-      updateDisplay();
+    function toggleCard(c) {
+      const a = c.dataset.activity;
+      c.classList.toggle('selected');
+      sel.has(a) ? sel.delete(a) : sel.add(a);
+      sync();
     }
 
-    function updateDisplay() {
-      const summary = document.getElementById('activities-summary');
-      const hidden  = document.getElementById('hidden-activities');
-      const btn     = document.getElementById('submit-btn');
-
-      if (selectedActivities.size === 0) {
-        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span><span class="no-selection">Click the activities above to select them</span>';
-        hidden.value = '';
-        btn.disabled = true;
+    function sync() {
+      const box = document.getElementById('sel-summary');
+      const hid = document.getElementById('hidden-acts');
+      const btn = document.getElementById('sbtn');
+      if (sel.size === 0) {
+        box.innerHTML = '<span class="lbl">Your Selected Experiences</span><span class="sel-empty">Click the activities above to select them</span>';
+        hid.value = ''; btn.disabled = true;
         btn.textContent = 'Select at least one experience to continue';
       } else {
-        const items = Array.from(selectedActivities);
-        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span>' + items.join(' &middot; ');
-        hidden.value = items.join(', ');
-        btn.disabled = false;
+        const arr = [...sel];
+        box.innerHTML = '<span class="lbl">Your Selected Experiences</span>' + arr.join(' &middot; ');
+        hid.value = arr.join(', '); btn.disabled = false;
         btn.textContent = 'Send My Selections →';
       }
     }
 
-    document.getElementById('experience-form').addEventListener('submit', function(e) {
+    document.getElementById('xform').addEventListener('submit', function(e) {
       e.preventDefault();
-      if (selectedActivities.size === 0) return;
-      const form = this;
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(function(r) {
-        if (r.ok) {
+      if (!sel.size) return;
+      fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} })
+        .then(r => { if (r.ok) {
           document.getElementById('catalog').style.display = 'none';
-          document.querySelector('.contact-form').style.display = 'none';
-          document.getElementById('success-message').style.display = 'block';
-          window.scrollTo({ top: document.getElementById('contact').offsetTop - 40, behavior: 'smooth' });
-        }
-      });
+          document.querySelector('.cform').style.display = 'none';
+          document.getElementById('ok-msg').style.display = 'block';
+          window.scrollTo({ top: document.getElementById('contact').offsetTop - 40, behavior:'smooth' });
+        }});
     });
 
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fi').forEach(el => io.observe(el));
   </script>
-
 </body>
 </html>
