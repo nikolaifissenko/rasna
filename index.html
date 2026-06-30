@@ -13,16 +13,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --terra:    #B84C2A;   /* dominant terracotta */
-      --sienna:   #7A2E10;   /* deep sienna */
-      --gold:     #C9953A;   /* warm Etruscan gold */
-      --parch:    #E8D8BC;   /* parchment — warm reading bg */
-      --sand:     #D4BFA0;   /* darker parchment */
-      --ink:      #1E1008;   /* near-black, warm */
-      --earth:    #2E1C0C;   /* deep earth */
-      --smoke:    #4A3420;   /* mid earth */
-      --cream:    #F4EDE0;   /* light cream */
+      --terra:    #B84C2A;
+      --sienna:   #7A2E10;
+      --gold:     #C9953A;
+      --parch:    #E8D8BC;
+      --sand:     #D4BFA0;
+      --ink:      #1E1008;
+      --earth:    #2E1C0C;
+      --smoke:    #4A3420;
+      --cream:    #F4EDE0;
       --olive:    #5C6B3C;
+      --noir:     #14100B;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,16 +41,14 @@
       font-family: 'Cormorant Garamond', Georgia, serif;
     }
 
-    /* ─── MEANDER BANDS ─────────────────────────── */
     .band {
-      height: 36px;
+      height: 14px;
       width: 100%;
       display: block;
       overflow: hidden;
     }
-    .band svg { width: 100%; height: 36px; display: block; }
+    .band svg { width: 100%; height: 14px; display: block; }
 
-    /* ─── HERO ───────────────────────────────────── */
     .hero {
       min-height: 100vh;
       background: var(--earth);
@@ -61,7 +60,6 @@
       overflow: hidden;
     }
 
-    /* terracotta glow */
     .hero::before {
       content: '';
       position: absolute;
@@ -80,7 +78,6 @@
       color: var(--terra); opacity: 0.8; margin-bottom: 2rem;
     }
 
-    /* Etruscan palmette ornament row */
     .hero-ornament {
       display: flex; align-items: center; justify-content: center;
       gap: 0.6rem; margin-bottom: 1.8rem; opacity: 0.35;
@@ -130,14 +127,12 @@
       letter-spacing: 0.4em;
     }
 
-    /* corner volutes */
-    .volute { position: absolute; color: var(--terra); opacity: 0.12; }
+    .volute { position: absolute; color: var(--noir); opacity: 0.22; }
     .volute.tl { top: 2rem; left: 2rem; }
     .volute.tr { top: 2rem; right: 2rem; transform: scaleX(-1); }
     .volute.bl { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
     .volute.br { bottom: 2rem; right: 2rem; transform: scale(-1); }
 
-    /* ─── INTRO ──────────────────────────────────── */
     .intro {
       background: var(--parch);
       color: var(--earth);
@@ -166,7 +161,6 @@
       width: 60px; height: 1px; background: var(--terra);
     }
 
-    /* ─── THREE WAYS ─────────────────────────────── */
     .three-ways {
       background: var(--sienna);
       color: var(--parch);
@@ -213,7 +207,6 @@
       color: var(--parch); opacity: 0.5; line-height: 1.8;
     }
 
-    /* ─── CATALOG ────────────────────────────────── */
     .catalog {
       background: var(--cream);
       color: var(--earth);
@@ -235,7 +228,6 @@
       color: var(--smoke); opacity: 0.7; line-height: 1.8;
     }
 
-    /* category */
     .category { margin-bottom: 3.5rem; }
     .cat-header {
       display: flex; align-items: center; gap: 1.2rem;
@@ -255,7 +247,6 @@
       opacity: 0.4;
     }
 
-    /* grid */
     .act-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -264,7 +255,6 @@
       border: 1px solid var(--sand);
     }
 
-    /* card */
     .act-card {
       background: var(--parch);
       padding: 1.6rem 1.5rem 1.5rem;
@@ -277,25 +267,25 @@
     .act-card:hover { background: #F0E4CF; border-top-color: var(--gold); }
     .act-card.selected {
       background: #EDD5BE;
-      border-top-color: var(--terra);
+      border-top-color: var(--noir);
     }
     .act-card.selected::after {
-      content: '\2713';
-      position: absolute; top: 12px; right: 12px;
-      background: var(--terra); color: #fff;
-      width: 22px; height: 22px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.7rem; font-weight: 700;
+      content: '';
+      position: absolute; top: 16px; right: 16px;
+      background: var(--noir);
+      width: 7px; height: 7px;
+      border-radius: 50%;
     }
 
     .act-icon {
-      width: 32px; height: 32px;
-      border: 1px solid rgba(184,76,42,0.35);
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(20,16,11,0.4);
       display: flex; align-items: center; justify-content: center;
-      color: var(--terra); margin-bottom: 0.9rem;
-      background: rgba(184,76,42,0.05);
+      color: var(--noir); margin-bottom: 0.9rem;
+      background: rgba(184,76,42,0.06);
     }
-    .act-icon svg { width: 16px; height: 16px; }
+    .act-icon svg { width: 15px; height: 15px; }
 
     .act-card h4 {
       font-family: 'Cormorant Garamond', serif;
@@ -317,7 +307,6 @@
       display: inline-block;
     }
 
-    /* day trips card */
     .day-card { grid-column: 1 / -1; }
     .dest-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
     .dest-pill {
@@ -326,7 +315,6 @@
       padding: 0.2rem 0.65rem; letter-spacing: 0.04em;
     }
 
-    /* ─── INCLUDED ───────────────────────────────── */
     .included {
       background: var(--earth);
       color: var(--parch);
@@ -362,7 +350,6 @@
       color: var(--parch); opacity: 0.5; line-height: 1.7;
     }
 
-    /* ─── STATS ──────────────────────────────────── */
     .stats {
       background: var(--parch);
       color: var(--earth);
@@ -386,7 +373,6 @@
       font-weight: 600; opacity: 0.65;
     }
 
-    /* ─── PHILOSOPHY ─────────────────────────────── */
     .philo {
       background: var(--sienna);
       color: var(--parch);
@@ -415,7 +401,6 @@
       color: var(--parch); opacity: 0.5; line-height: 1.9;
     }
 
-    /* ─── PRICING ────────────────────────────────── */
     .pricing {
       background: var(--ink);
       color: var(--parch);
@@ -473,7 +458,6 @@
     }
     .price-note { margin-top: 1.5rem; font-size: 0.72rem; opacity: 0.25; font-style: italic; }
 
-    /* ─── CONTACT ────────────────────────────────── */
     .contact {
       background: var(--earth);
       color: var(--parch);
@@ -573,7 +557,6 @@
     }
     .success-msg p { opacity: 0.5; font-size: 0.9rem; font-weight: 300; }
 
-    /* ─── FOOTER ─────────────────────────────────── */
     footer {
       background: var(--ink);
       border-top: 1px solid rgba(201,149,58,0.07);
@@ -582,7 +565,6 @@
       text-transform: uppercase; color: var(--smoke); opacity: 0.5;
     }
 
-    /* ─── RESPONSIVE ─────────────────────────────── */
     @media (max-width: 768px) {
       .ways-grid { grid-template-columns: 1fr; }
       .way-card { border-right: none; border-bottom: 1px solid rgba(201,149,58,0.2); }
@@ -596,7 +578,6 @@
       section, .catalog, .included, .intro, .three-ways, .philo, .pricing, .contact { padding-left: 1.4rem; padding-right: 1.4rem; }
     }
 
-    /* ─── FADE IN ────────────────────────────────── */
     .fi {
       opacity: 0; transform: translateY(12px);
       animation: fif 0.01s 1.2s forwards;
@@ -608,16 +589,13 @@
 </head>
 <body>
 
-  <!-- SVG symbol library -->
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <!-- Meander pattern — dominant, readable -->
       <pattern id="mdr" x="0" y="0" width="44" height="36" patternUnits="userSpaceOnUse">
         <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <path d="M2,26 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
       </pattern>
 
-      <!-- Palmette -->
       <symbol id="palm" viewBox="0 0 80 60">
         <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
         <path d="M40,55 C40,42 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
@@ -625,14 +603,12 @@
         <ellipse cx="40" cy="57" rx="6" ry="2.5" fill="none" stroke="currentColor" stroke-width="0.9"/>
       </symbol>
 
-      <!-- Volute / corner -->
       <symbol id="vlt" viewBox="0 0 120 120">
         <path d="M10,110 C10,55 10,10 60,10 C92,10 112,30 112,52 C112,72 96,82 80,82 C65,82 54,72 54,60 C54,50 61,43 70,43 C79,43 83,50 83,56" fill="none" stroke="currentColor" stroke-width="1.5"/>
         <path d="M10,110 L10,88 C10,48 32,18 62,18" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
         <circle cx="83" cy="56" r="3" fill="currentColor" opacity="0.3"/>
       </symbol>
 
-      <!-- Icons -->
       <symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M4 20c8-1 14-7 16-16-9 1-15 7-16 16zM4 20c2-5 5-9 9-12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
       <symbol id="ico-tomb" viewBox="0 0 24 24"><path d="M4 21V11C4 6 8 3 12 3c4 0 8 3 8 8v10" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="2" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.7"/></symbol>
       <symbol id="ico-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 19c-.5 1.2.4 2 1.5 2h11c1.1 0 2-.8 1.5-2L14 9V3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
@@ -643,7 +619,6 @@
     </defs>
   </svg>
 
-  <!-- ═══ HERO ════════════════════════════════════ -->
   <section class="hero">
     <svg class="volute tl" width="100" height="100"><use href="#vlt"/></svg>
     <svg class="volute tr" width="100" height="100"><use href="#vlt"/></svg>
@@ -663,12 +638,13 @@
     </div>
   </section>
 
-  <!-- meander band -->
-  <div class="band" style="background:var(--earth)">
-    <svg width="100%" height="36"><rect width="100%" height="36" fill="url(#mdr)" style="color:var(--terra)"/></svg>
-  </div>
+  <svg style="display:block;width:100%;height:14px;background:var(--earth)" viewBox="0 0 1440 14" preserveAspectRatio="none">
+    <rect width="1440" height="14" fill="var(--earth)"/>
+    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(184,76,42,0.4)" stroke-width="1"/>
+    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(184,76,42,0.4)" stroke-width="1"/>
+    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(20,16,11,0.55)" stroke-width="1.1"/>
+  </svg>
 
-  <!-- ═══ INTRO ════════════════════════════════════ -->
   <section class="intro">
     <div style="max-width:640px; margin:0 auto" class="fi">
       <div class="palmette-row">
@@ -682,15 +658,13 @@
     </div>
   </section>
 
-  <!-- meander on parch→sienna -->
-  <svg style="display:block;width:100%;height:36px;background:var(--sienna)" viewBox="0 0 1440 36" preserveAspectRatio="none">
-    <rect width="1440" height="36" fill="var(--sienna)"/>
-    <line x1="0" y1="6" x2="1440" y2="6" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
-    <line x1="0" y1="30" x2="1440" y2="30" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
-    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(201,149,58,0.45)" stroke-width="1.6"/>
+  <svg style="display:block;width:100%;height:14px;background:var(--sienna)" viewBox="0 0 1440 14" preserveAspectRatio="none">
+    <rect width="1440" height="14" fill="var(--sienna)"/>
+    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(201,149,58,0.35)" stroke-width="1"/>
+    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(201,149,58,0.35)" stroke-width="1"/>
+    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(232,216,188,0.4)" stroke-width="1.1"/>
   </svg>
 
-  <!-- ═══ THREE WAYS ════════════════════════════════ -->
   <section class="three-ways">
     <div class="inner">
       <div class="eyebrow fi">Three ways to have fun</div>
@@ -719,13 +693,13 @@
     </div>
   </section>
 
-  <!-- meander sienna→cream -->
-  <svg style="display:block;width:100%;height:36px;background:var(--cream)" viewBox="0 0 1440 36" preserveAspectRatio="none">
-    <rect width="1440" height="36" fill="var(--cream)"/>
-    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(184,76,42,0.35)" stroke-width="1.6"/>
+  <svg style="display:block;width:100%;height:14px;background:var(--cream)" viewBox="0 0 1440 14" preserveAspectRatio="none">
+    <rect width="1440" height="14" fill="var(--cream)"/>
+    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(184,76,42,0.3)" stroke-width="1"/>
+    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(184,76,42,0.3)" stroke-width="1"/>
+    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(20,16,11,0.45)" stroke-width="1.1"/>
   </svg>
 
-  <!-- ═══ CATALOG ═══════════════════════════════════ -->
   <form id="xform" action="https://formspree.io/f/xlgynpjo" method="POST">
 
   <section class="catalog" id="catalog">
@@ -736,7 +710,6 @@
         <p>Click any activity to add it to your trip. Mix and match — we handle the rest.</p>
       </div>
 
-      <!-- Farm & Field -->
       <div class="category fi">
         <div class="cat-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
         <div class="act-grid">
@@ -772,7 +745,6 @@
         </div>
       </div>
 
-      <!-- Artisan & Food -->
       <div class="category fi">
         <div class="cat-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
         <div class="act-grid">
@@ -801,7 +773,6 @@
         </div>
       </div>
 
-      <!-- Culture & Outdoors -->
       <div class="category fi">
         <div class="cat-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
         <div class="act-grid">
@@ -830,7 +801,6 @@
         </div>
       </div>
 
-      <!-- Day Trips -->
       <div class="category fi">
         <div class="cat-header"><h3>Day Trips</h3><div class="rule"></div></div>
         <div class="act-grid">
@@ -853,7 +823,6 @@
     </div>
   </section>
 
-  <!-- ═══ INCLUDED ══════════════════════════════════ -->
   <section class="included">
     <div class="inner">
       <div class="eyebrow fi">What's included</div>
@@ -879,7 +848,6 @@
     </div>
   </section>
 
-  <!-- ═══ STATS ══════════════════════════════════════ -->
   <div class="stats">
     <div class="stats-grid fi">
       <div><div class="stat-val">6&ndash;10</div><div class="stat-lbl">People max</div></div>
@@ -889,7 +857,6 @@
     </div>
   </div>
 
-  <!-- ═══ PHILOSOPHY ════════════════════════════════ -->
   <section class="philo">
     <div class="inner fi">
       <div class="eyebrow">Why we stay small</div>
@@ -899,13 +866,13 @@
     </div>
   </section>
 
-  <!-- meander sienna→ink -->
-  <svg style="display:block;width:100%;height:36px;background:var(--ink)" viewBox="0 0 1440 36" preserveAspectRatio="none">
-    <rect width="1440" height="36" fill="var(--ink)"/>
-    <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="rgba(201,149,58,0.4)" stroke-width="1.6"/>
+  <svg style="display:block;width:100%;height:14px;background:var(--ink)" viewBox="0 0 1440 14" preserveAspectRatio="none">
+    <rect width="1440" height="14" fill="var(--ink)"/>
+    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
+    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
+    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(201,149,58,0.4)" stroke-width="1.1"/>
   </svg>
 
-  <!-- ═══ PRICING ════════════════════════════════════ -->
   <section class="pricing">
     <div style="max-width:740px;margin:0 auto">
       <div class="eyebrow fi">Investment</div>
@@ -927,7 +894,6 @@
     </div>
   </section>
 
-  <!-- ═══ CONTACT ═══════════════════════════════════ -->
   <section class="contact" id="contact">
     <div class="contact-head fi">
       <div class="palmette-row">
