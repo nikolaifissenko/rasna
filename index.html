@@ -133,16 +133,6 @@
       opacity: 0.55;
     }
 
-    .price-corner {
-      position: absolute;
-      color: var(--gold);
-      opacity: 0.65;
-    }
-    .price-corner.tl { top: 8px; left: 8px; }
-    .price-corner.tr { top: 8px; right: 8px; }
-    .price-corner.bl { bottom: 8px; left: 8px; }
-    .price-corner.br { bottom: 8px; right: 8px; }
-
     .volute { position: absolute; color: var(--noir); opacity: 0.22; }
     .volute.tl { top: 2rem; left: 2rem; }
     .volute.tr { top: 2rem; right: 2rem; transform: scaleX(-1); }
@@ -437,62 +427,6 @@
       color: var(--parch); opacity: 0.5; line-height: 1.9;
     }
 
-    .pricing {
-      background: var(--ink);
-      color: var(--parch);
-      padding: 5.5rem 2rem;
-      text-align: center;
-    }
-    .pricing .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.6;
-    }
-    .pricing h2 {
-      font-size: clamp(1.9rem, 3.5vw, 2.7rem);
-      font-weight: 500; color: var(--parch); margin-bottom: 0.4rem;
-    }
-    .price-card {
-      max-width: 420px; margin: 2.5rem auto 0;
-      border: 1px solid rgba(201,149,58,0.2);
-      padding: 2.8rem 2.4rem;
-      background: rgba(201,149,58,0.025);
-      position: relative;
-    }
-    .price-card::before {
-      content: '';
-      position: absolute; top: -1px; left: 20%; right: 20%;
-      height: 1px;
-      background: var(--gold);
-      opacity: 0.5;
-    }
-    .price-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 4rem; font-weight: 500; color: var(--gold);
-      line-height: 1; margin-bottom: 0.15rem;
-    }
-    .price-num sup { font-size: 1.5rem; vertical-align: super; opacity: 0.55; }
-    .price-per {
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      opacity: 0.35; color: var(--parch); margin-bottom: 1.8rem;
-    }
-    .price-list {
-      list-style: none; text-align: left;
-      font-size: 0.84rem; font-weight: 300; color: var(--parch); opacity: 0.55;
-    }
-    .price-list li {
-      padding: 0.5rem 0 0.5rem 1.2rem;
-      border-bottom: 1px solid rgba(201,149,58,0.07);
-      position: relative;
-    }
-    .price-list li:last-child { border-bottom: none; }
-    .price-list li::before {
-      content: '';
-      position: absolute; left: 0; top: 50%;
-      width: 4px; height: 4px; background: var(--terra);
-      transform: translateY(-50%);
-    }
-    .price-note { margin-top: 1.5rem; font-size: 0.72rem; opacity: 0.25; font-style: italic; }
-
     .contact {
       background: var(--earth);
       color: var(--parch);
@@ -610,7 +544,7 @@
       .inc-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
       .frow { grid-template-columns: 1fr; }
-      section, .catalog, .included, .intro, .three-ways, .philo, .pricing, .contact { padding-left: 1.4rem; padding-right: 1.4rem; }
+      section, .catalog, .included, .intro, .three-ways, .philo, .contact { padding-left: 1.4rem; padding-right: 1.4rem; }
     }
 
     .fi {
@@ -938,38 +872,6 @@
     </div>
   </section>
 
-  <svg style="display:block;width:100%;height:14px;background:var(--ink)" viewBox="0 0 1440 14" preserveAspectRatio="none">
-    <rect width="1440" height="14" fill="var(--ink)"/>
-    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
-    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(201,149,58,0.3)" stroke-width="1"/>
-    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(201,149,58,0.4)" stroke-width="1.1"/>
-  </svg>
-
-  <section class="pricing">
-    <div style="max-width:740px;margin:0 auto">
-      <div class="eyebrow fi">Investment</div>
-      <h2 class="fi">One price. Everything in.</h2>
-      <div class="price-card fi">
-        <svg class="price-corner tl" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3,19 L3,3 L19,3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="3" cy="3" r="1.8" fill="currentColor"/></svg>
-        <svg class="price-corner tr" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19,19 L19,3 L3,3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="3" r="1.8" fill="currentColor"/></svg>
-        <svg class="price-corner bl" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3,3 L3,19 L19,19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="3" cy="19" r="1.8" fill="currentColor"/></svg>
-        <svg class="price-corner br" width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M19,3 L19,19 L3,19" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="19" cy="19" r="1.8" fill="currentColor"/></svg>
-        <div class="price-num"><sup>&euro;</sup>1,450</div>
-        <div class="price-per">per person &middot; starting at 4 days, all-inclusive</div>
-        <ul class="price-list">
-          <li>Accommodation for your full stay</li>
-          <li>All meals (breakfast, lunch, dinner)</li>
-          <li>Every experience you select</li>
-          <li>Guided Etruscan site visits</li>
-          <li>Transport from Rome or Viterbo</li>
-          <li>All local transfers</li>
-          <li>English-speaking host throughout</li>
-        </ul>
-        <p class="price-note">Not included: flights, travel insurance, personal purchases</p>
-      </div>
-    </div>
-  </section>
-
   <section class="contact" id="contact">
     <div class="contact-head fi">
       <div class="palmette-row">
@@ -979,7 +881,7 @@
       </div>
       <h2>Tell us about your trip.</h2>
       <div class="contact-divider"></div>
-      <p>We'll build a custom all-inclusive package around your selections and send a quote within a few days.</p>
+      <p>Select your activities above, then send us your details. We'll build a custom quote based on what you've chosen and get back to you within a few days.</p>
     </div>
 
     <div class="cform fi">
