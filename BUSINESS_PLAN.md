@@ -164,3 +164,37 @@ These aren't separate attractions to manage — they're moments the town already
 3. Finalize lodging partners (Beccone, Antonella, others from CONTATTI_LOCALI.md).
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
+
+## 8. Contingency: fall launch plan (if a competing commitment falls through)
+
+If a planned September commitment doesn't materialize, that gap becomes runway to compress Phases 1–3 and launch in the fall instead of waiting for next year. Fall is actually a strong natural anchor: olive harvest (Oct–Dec) is already one of the two rock-solid confirmed activities, and the Cantine Festival (2nd weekend of November) is a built-in, dated marketing hook.
+
+**Sequence:**
+1. Lock a pilot itinerary fast (2–3 weeks) around the confirmed anchors — olive harvest, Davide Paolocci (cheese/meat), Emiliano (charcuterie) — plus lodging (Beccone/Antonella) and the outstanding insurance quote.
+2. Run the pilot in September with a low-stakes group rather than cold paying strangers — priced near cost (~€720/guest, not the €1,400 full price), in exchange for flexibility and an honest debrief. The goal of this trip is proof (photos, video, testimonial), not margin.
+3. **A home-exchange group my mom has coming is a candidate for this pilot** — already a warm, trusted, internationally-minded audience that fits the target customer profile. If it falls through, fall back to direct outreach (below).
+4. Promote through October using the pilot's real content, targeting a first paying group timed to Cantine Festival weekend (November) as a concrete, dated launch moment rather than a vague "fall" target.
+
+### Client acquisition — who to actually ask (not just "your network")
+
+Cold organic traffic to the landing page won't produce a first booking at a €1,300–1,800/guest premium price with zero reviews. The first booking has to be sourced directly:
+- People who already buy this kind of trip: anyone who's done a cooking vacation, wine trip, small-group tour, or home exchange (pre-sold on the concept, just need the destination).
+- Parents' friends, not just your own — the classic buyer for this price point is 50s–60s, has the money and taste for "authentic" over "resort."
+- Extended family/family-friends with Italian heritage — an easy emotional hook.
+- Foodie/wine social circles (cooking classes, wine clubs, supper clubs) — already pay for this kind of experience domestically.
+- Study-abroad/alumni networks and Facebook groups.
+- Niche online communities where trust already exists: r/ItalyTravel, r/travel, "Slow Travel Italy" / "Italy Travel Planning" Facebook groups, Fodor's/TripAdvisor Lazio forums — post the real story, not a sales pitch.
+- One comped spot for a food/travel content creator in exchange for posts — borrowed visibility in lieu of an ad budget.
+
+### Tour marketplaces (OTAs) — later, not now
+
+Multi-day tour marketplaces (TourRadar, Evaneos) are the right category once the business is formalized (Phase 4: legal entity, insurance, licensing) — they typically expect a registered operator, not just an idea, and TourRadar in particular runs a waitlist rather than instant signup. Not a near-term channel for the very first booking; a second-booking-onward channel once there's a real, insured business and proof from the pilot to show.
+
+### Content — the actual prerequisite for promotion
+
+Content needs to start now, before the pilot, not after:
+- Ask Maria Grazia and local contacts to film their normal work as it happens (Davide's cheese, Emiliano's charcuterie, Renzo's leatherwork, the olive harvest) — authentic and requires no live guests.
+- Document the build itself ("building an authentic Italy trip with my mom's friend in her hometown") — founder-story content works pre-launch.
+- Shoot the place (tombs, Via Clodia, countryside) independent of any activity.
+- Phone-quality, vertical, 15–30 sec clips — authenticity over production value.
+- See `CONTENT_PLAN.md` for the Instagram setup and first five scripted posts.
