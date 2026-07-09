@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasna — Expedition in Blera, Italy</title>
+  <title>Rasna — Plan Your Expedition in Blera, Italy</title>
   <meta name="description" content="Small-group expeditions in Blera, Italy. Pick your activities, we'll build your all-inclusive trip.">
-  <meta property="og:title" content="Rasna — Expedition in Blera, Italy">
-  <meta property="og:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride through ruins, descend into tombs.">
+  <meta property="og:title" content="Rasna — Plan Your Expedition in Blera">
+  <meta property="og:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride horses through ruins, explore rock-cut tombs — we handle the rest.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --terra:    #B84C2A;
-      --sienna:   #7A2E10;
-      --gold:     #C9953A;
-      --parch:    #E8D8BC;
-      --sand:     #D4BFA0;
-      --ink:      #1E1008;
-      --earth:    #2E1C0C;
-      --smoke:    #4A3420;
-      --cream:    #F4EDE0;
-      --olive:    #5C6B3C;
-      --noir:     #14100B;
+      --tufo:       #E5D8C2;
+      --terracotta: #B8593E;
+      --earth:      #2C1E12;
+      --gold:       #C4A265;
+      --stone:      #8C7B66;
+      --cream:      #F2EBDD;
+      --deep:       #160F09;
+      --olive:      #5C6B3C;
+      --rust:       #9B3D2B;
+      --card-bg:    #FBF7EF;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -31,31 +30,30 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--ink);
-      color: var(--parch);
+      background: var(--cream);
+      color: var(--earth);
       -webkit-font-smoothing: antialiased;
       line-height: 1.6;
     }
 
-    h1, h2, h3, h4, blockquote {
-      font-family: 'Cormorant Garamond', Georgia, serif;
+    h1, h2, h3, h4 {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
     }
 
-    .band {
-      height: 14px;
-      width: 100%;
-      display: block;
-      overflow: hidden;
-    }
-    .band svg { width: 100%; height: 14px; display: block; }
-
+    /* ── Hero ── */
     .hero {
-      min-height: 100vh;
-      background: var(--earth);
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 6rem 2rem 4rem;
+      padding: 4rem 2rem;
+      background-color: var(--deep);
+      background-image: url('images/hero.jpg');
+      background-size: cover;
+      background-position: center 60%;
+      color: var(--tufo);
       position: relative;
       overflow: hidden;
     }
@@ -65,88 +63,71 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(184,76,42,0.22) 0%, transparent 65%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(122,46,16,0.18) 0%, transparent 60%);
+        radial-gradient(ellipse at 50% 0%, rgba(42,28,16,0.55) 0%, rgba(22,15,9,0.88) 65%),
+        radial-gradient(ellipse at 15% 85%, rgba(92,107,60,0.18) 0%, transparent 50%),
+        radial-gradient(ellipse at 85% 15%, rgba(184,89,62,0.15) 0%, transparent 50%);
       pointer-events: none;
     }
 
-    .hero-inner { position: relative; z-index: 1; max-width: 780px; }
+    .hero-content { position: relative; z-index: 1; max-width: 720px; }
 
-    .hero-loc {
-      font-size: 0.68rem; letter-spacing: 0.55em;
-      text-transform: uppercase; font-weight: 500;
-      color: var(--terra); opacity: 0.8; margin-bottom: 2rem;
+    .hero .subtitle {
+      font-size: clamp(0.72rem, 1.2vw, 0.85rem);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      font-weight: 600;
+      opacity: 0.5;
+      color: var(--gold);
     }
 
-    .hero-ornament {
-      display: flex; align-items: center; justify-content: center;
-      gap: 0.6rem; margin-bottom: 1.8rem; opacity: 0.35;
-    }
-    .hero-ornament .line {
-      flex: 1; max-width: 120px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--terra));
-    }
-    .hero-ornament .line.right {
-      background: linear-gradient(90deg, var(--terra), transparent);
-    }
+    .hero .divider { width: 50px; height: 1px; background: var(--gold); margin: 1.8rem auto; opacity: 0.45; }
 
     .hero h1 {
-      font-size: clamp(4.5rem, 12vw, 10rem);
+      font-size: clamp(3.4rem, 9vw, 7.5rem);
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--parch);
-      text-shadow: 0 0 80px rgba(201,149,58,0.2);
-      line-height: 0.95;
-      margin-bottom: 0.5em;
+      margin-bottom: 0.4em;
+      color: var(--gold);
+      text-shadow: 0 2px 24px rgba(196,162,101,0.25);
     }
 
-    .hero-sub {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
-      font-weight: 400; font-style: italic;
-      color: var(--parch); opacity: 0.65;
-      line-height: 1.75; max-width: 28em; margin: 0 auto;
+    .hero .tagline {
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+      line-height: 1.75;
+      opacity: 0.85;
+      max-width: 32em;
+      margin: 0 auto;
     }
 
-    .hero-cta {
-      display: inline-block; margin-top: 3rem;
-      padding: 1rem 3.2rem;
-      border: 1px solid var(--terra);
-      color: var(--parch);
+    .cta-button {
+      display: inline-block;
+      margin-top: 2.5rem;
+      padding: 1.05rem 2.8rem;
+      border: 1.5px solid var(--gold);
+      color: var(--gold);
       text-decoration: none;
-      font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.35em; text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
       transition: all 0.3s;
-      background: rgba(184,76,42,0.08);
+      cursor: pointer;
+      background: transparent;
       font-family: 'Inter', sans-serif;
     }
-    .hero-cta:hover {
-      background: var(--terra);
-      color: var(--cream);
-      letter-spacing: 0.4em;
-    }
-
-    .hero-frieze {
-      margin: 2.4rem auto 0;
-      color: var(--terra);
-      opacity: 0.55;
-    }
-
-    .volute { position: absolute; color: var(--noir); opacity: 0.22; }
-    .volute.tl { top: 2rem; left: 2rem; }
-    .volute.tr { top: 2rem; right: 2rem; transform: scaleX(-1); }
-    .volute.bl { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
-    .volute.br { bottom: 2rem; right: 2rem; transform: scale(-1); }
+    .cta-button:hover { background: var(--gold); color: var(--deep); }
 
     /* ── Sticky nav ── */
     .site-nav {
       position: sticky; top: 0; z-index: 50;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0.9rem 1.6rem;
-      background: rgba(30,16,8,0.94);
+      background: rgba(22,15,9,0.94);
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(201,149,58,0.18);
+      border-bottom: 1px solid rgba(196,162,101,0.15);
     }
     .site-nav .nav-logo {
       font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.1em;
@@ -154,19 +135,18 @@
     }
     .site-nav .nav-links { display: flex; align-items: center; gap: 1.6rem; }
     .site-nav .nav-links a {
-      color: var(--parch); opacity: 0.65; text-decoration: none;
+      color: var(--tufo); opacity: 0.65; text-decoration: none;
       font-size: 0.76rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.2s;
     }
     .site-nav .nav-links a:hover { opacity: 1; }
     .site-nav .nav-cta { display: flex; align-items: center; gap: 0.9rem; }
     .site-nav .nav-count { font-size: 0.72rem; color: var(--gold); opacity: 0.85; white-space: nowrap; }
     .site-nav .nav-btn {
-      padding: 0.5rem 1.1rem; border: 1px solid var(--terra); color: var(--parch);
+      padding: 0.5rem 1.1rem; border: 1px solid var(--gold); color: var(--gold);
       font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
       text-decoration: none; transition: all 0.25s; white-space: nowrap;
-      background: rgba(184,76,42,0.08);
     }
-    .site-nav .nav-btn:hover { background: var(--terra); color: var(--cream); }
+    .site-nav .nav-btn:hover { background: var(--gold); color: var(--deep); }
     @media (max-width: 820px) { .site-nav .nav-links { display: none; } }
     @media (max-width: 480px) { .site-nav .nav-count { display: none; } }
 
@@ -175,443 +155,544 @@
     /* ── Catalog quick nav ── */
     .catalog-quicknav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3rem; }
     .catalog-quicknav a {
-      padding: 0.5rem 1.1rem; border: 1px solid rgba(74,52,32,0.3); border-radius: 999px;
-      color: var(--sienna); text-decoration: none; font-size: 0.78rem; opacity: 0.75; transition: all 0.2s;
+      padding: 0.5rem 1.1rem; border: 1px solid rgba(140,123,102,0.3); border-radius: 999px;
+      color: var(--earth); text-decoration: none; font-size: 0.78rem; opacity: 0.75; transition: all 0.2s;
     }
-    .catalog-quicknav a:hover { border-color: var(--terra); color: var(--terra); opacity: 1; }
+    .catalog-quicknav a:hover { border-color: var(--terracotta); color: var(--terracotta); opacity: 1; }
 
     /* ── Trip stats (merged into What's Included) ── */
     .trip-stats {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; text-align: center;
-      margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid rgba(201,149,58,0.15);
-    }
-    .trip-stats .stat-val {
-      font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600;
-      color: var(--terra); line-height: 1; margin-bottom: 0.35rem;
-    }
-    .trip-stats .stat-lbl {
-      font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase;
-      color: var(--parch); font-weight: 600; opacity: 0.5;
+      margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid rgba(140,123,102,0.25);
     }
 
-    .three-ways {
-      background: var(--sienna);
-      color: var(--parch);
-      padding: 5.5rem 2rem;
+    /* ── Etruscan borders ── */
+    .etruscan-border, .etruscan-border-dark {
+      height: 26px;
+      display: flex; justify-content: center; align-items: center; overflow: hidden;
     }
-    .three-ways .inner { max-width: 1060px; margin: 0 auto; }
-    .three-ways .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--gold); text-align: center;
-      margin-bottom: 0.8rem; opacity: 0.75;
+    .etruscan-border { background: var(--cream); }
+    .etruscan-border-dark { background: var(--deep); }
+    .etruscan-border svg, .etruscan-border-dark svg { height: 26px; width: 100%; }
+
+    .etruscan-ornament { display: block; margin: 0 auto; opacity: 0.25; }
+    .hero .etruscan-ornament { opacity: 0.15; }
+
+    .etruscan-corner { position: absolute; opacity: 0.06; }
+    .etruscan-corner.top-left { top: 2rem; left: 2rem; }
+    .etruscan-corner.top-right { top: 2rem; right: 2rem; transform: scaleX(-1); }
+    .etruscan-corner.bottom-left { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
+    .etruscan-corner.bottom-right { bottom: 2rem; right: 2rem; transform: scale(-1); }
+
+    /* ── Sections ── */
+    section { padding: 5.5rem 2rem; }
+    .section-inner { max-width: 740px; margin: 0 auto; }
+    .section-wide { max-width: 1080px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.38em; text-transform: uppercase;
+      color: var(--stone); margin-bottom: 1.1rem; font-weight: 600;
     }
-    .three-ways h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500; text-align: center;
-      color: var(--parch); margin-bottom: 0.7rem; line-height: 1.2;
+
+    section h2 {
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-weight: 500; line-height: 1.2; margin-bottom: 1.1rem; color: var(--earth);
     }
-    .three-ways .sub {
-      text-align: center; max-width: 520px; margin: 0 auto 3rem;
-      font-size: 0.9rem; font-weight: 300;
-      color: var(--parch); opacity: 0.5; line-height: 1.8;
+
+    section > .section-wide > p, section > .section-inner > p {
+      font-size: 1.02rem; line-height: 1.85; font-weight: 300; opacity: 0.78;
     }
-    .ways-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      border: 1px solid rgba(201,149,58,0.25);
-    }
+
+    /* ── 3 Ways ── */
+    .three-ways { background: var(--deep); color: var(--tufo); }
+    .three-ways .section-label { color: var(--gold); opacity: 0.55; text-align: center; }
+    .three-ways h2 { color: var(--tufo); text-align: center; }
+    .three-ways > .section-wide > p { text-align: center; max-width: 600px; margin: 0 auto; }
+
+    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 2.8rem; }
+
     .way-card {
-      padding: 2.6rem 2rem; text-align: center;
-      border-right: 1px solid rgba(201,149,58,0.25);
+      border: 1px solid rgba(196,162,101,0.18);
+      padding: 2.2rem 1.6rem;
+      text-align: center;
+      background: rgba(196,162,101,0.03);
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .way-card:hover { border-color: rgba(196,162,101,0.4); background: rgba(196,162,101,0.06); }
+
+    .way-icon { width: 44px; height: 44px; margin: 0 auto 1rem; color: var(--gold); opacity: 0.85; }
+    .way-title { font-size: 1.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.6rem; }
+    .way-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.7; opacity: 0.55; color: var(--tufo); }
+
+    /* ── Photo break (full-bleed chapter divider) ── */
+    .photo-break {
       position: relative;
+      min-height: 46vh;
+      background-color: var(--earth);
+      background-image: url('images/chapter-break.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 0;
     }
-    .way-card:last-child { border-right: none; }
-    .way-card .top-dash {
-      position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 30px; height: 3px; background: var(--gold); opacity: 0.5;
-    }
-    .way-icon { width: 44px; height: 44px; margin: 0 auto 1.2rem; color: var(--gold); }
-    .way-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem; font-weight: 600;
-      color: var(--gold); margin-bottom: 0.6rem;
-    }
-    .way-desc {
-      font-size: 0.82rem; font-weight: 300;
-      color: var(--parch); opacity: 0.5; line-height: 1.8;
-    }
-
-    .catalog {
-      background: var(--cream);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M20 0L40 20L20 40L0 20Z' fill='none' stroke='%23B84C2A' stroke-opacity='.14' stroke-width='.8'/%3E%3C/svg%3E");
-      color: var(--earth);
-      padding: 5.5rem 2rem;
-    }
-    .catalog .inner { max-width: 1060px; margin: 0 auto; }
-    .cat-intro { text-align: center; margin-bottom: 3.5rem; }
-    .cat-intro .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--terra); margin-bottom: 0.8rem; opacity: 0.85;
-    }
-    .cat-intro h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 500; color: var(--sienna); margin-bottom: 0.6rem;
-    }
-    .cat-intro p {
-      max-width: 500px; margin: 0 auto;
-      font-size: 0.88rem; font-weight: 300;
-      color: var(--smoke); opacity: 0.7; line-height: 1.8;
-    }
-
-    .category { margin-bottom: 3.5rem; }
-    .cat-header {
-      display: flex; align-items: center; gap: 1.2rem;
-      margin-bottom: 1.4rem;
-    }
-    .cat-header h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem; font-weight: 600;
-      color: var(--sienna); white-space: nowrap;
-      letter-spacing: 0.03em;
-    }
-    .cat-header h3::before {
+    .photo-break::before {
       content: '';
-      display: inline-block;
-      width: 6px; height: 6px;
-      border: 1px solid var(--terra);
-      border-radius: 50%;
-      margin-right: 0.65rem;
-      vertical-align: middle;
-      opacity: 0.6;
-      position: relative; top: -1px;
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(22,15,9,0.05) 0%, rgba(22,15,9,0.75) 100%);
     }
-    .cat-header .rule {
-      flex: 1; height: 1px;
-      background: var(--terra);
-      opacity: 0.18;
+    .photo-break-caption {
+      position: relative; z-index: 1;
+      padding: 2.4rem 2rem;
+      max-width: 740px; margin: 0 auto;
+      text-align: center; width: 100%;
+    }
+    .photo-break-caption p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+      color: var(--tufo);
+      opacity: 0.92;
     }
 
-    .act-grid {
+    /* ── Moments gallery ── */
+    .moments { background: var(--tufo); }
+    .moments-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(7, minmax(160px, 1fr));
+      gap: 0.9rem;
+      margin-top: 2.4rem;
+      height: 1456px;
+    }
+    .moment {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(44,30,18,0.15);
+      background-size: cover;
+      background-position: center;
+    }
+    .moment::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(22,15,9,0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .moment img { display: none; }
+    .moment-1 { grid-row: 1 / 4; grid-column: 1; background-image: url('images/moment-1.jpg'); }
+    .moment-2 { grid-row: 1; grid-column: 2; background-image: url('images/moment-2.jpg'); }
+    .moment-3 { grid-row: 1; grid-column: 3; background-image: url('images/moment-3.jpg'); }
+    .moment-4 { grid-row: 2; grid-column: 2 / 4; background-image: url('images/moment-4.jpg'); }
+    .moment-5 { grid-row: 3; grid-column: 2; background-image: url('images/moment-5.jpg'); }
+    .moment-6 { grid-row: 3; grid-column: 3; background-image: url('images/moment-6.jpg'); }
+    .moment-9 { grid-row: 4 / 8; grid-column: 1; background-image: url('images/moment-9.jpg'); }
+    .moment-7 { grid-row: 4; grid-column: 2; background-image: url('images/moment-7.jpg'); }
+    .moment-8 { grid-row: 4; grid-column: 3; background-image: url('images/moment-8.jpg'); }
+    .moment-10 { grid-row: 5; grid-column: 2 / 4; background-image: url('images/moment-10.jpg'); }
+    .moment-11 { grid-row: 6; grid-column: 2; background-image: url('images/moment-11.png'); }
+    .moment-12 { grid-row: 6; grid-column: 3; background-image: url('images/moment-12.png'); }
+    .moment-13 { grid-row: 7; grid-column: 2; background-image: url('images/moment-13.jpg'); }
+    .moment-14 { grid-row: 7; grid-column: 3; background-image: url('images/moment-14.jpg'); }
+    .moment-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.76rem; letter-spacing: 0.05em; color: var(--tufo);
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.35s, transform 0.35s;
+      z-index: 1;
+    }
+    .moment:hover::after { opacity: 1; }
+    .moment:hover .moment-caption { opacity: 0.92; transform: translateY(0); }
+    .moment:hover { transform: scale(1.01); }
+    .moment { transition: transform 0.5s ease; }
+
+    @media (max-width: 760px) {
+      .moments-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(9, 220px); height: auto; }
+      .moment-1 { grid-row: 1; grid-column: 1 / 3; }
+      .moment-2 { grid-row: 2; grid-column: 1; }
+      .moment-3 { grid-row: 2; grid-column: 2; }
+      .moment-4 { grid-row: 3; grid-column: 1 / 3; }
+      .moment-5 { grid-row: 4; grid-column: 1; }
+      .moment-6 { grid-row: 4; grid-column: 2; }
+      .moment-9 { grid-row: 5; grid-column: 1 / 3; }
+      .moment-7 { grid-row: 6; grid-column: 1; }
+      .moment-8 { grid-row: 6; grid-column: 2; }
+      .moment-10 { grid-row: 7; grid-column: 1 / 3; }
+      .moment-11 { grid-row: 8; grid-column: 1; }
+      .moment-12 { grid-row: 8; grid-column: 2; }
+      .moment-13 { grid-row: 9; grid-column: 1; }
+      .moment-14 { grid-row: 9; grid-column: 2; }
+    }
+
+    /* ── Day trips gallery ── */
+    .trips-gallery { background: var(--cream); }
+    .trips-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: repeat(2, minmax(160px, 1fr)) minmax(200px, 1fr);
+      gap: 0.9rem;
+      margin-top: 2.4rem;
+      height: 720px;
+    }
+    .trip {
+      position: relative;
+      overflow: hidden;
+      background-color: rgba(44,30,18,0.15);
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+    }
+    .trip::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(22,15,9,0.7) 100%);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .trip-1 { grid-row: 1 / 3; grid-column: 1; background-image: url('images/trip-1.jpg'); }
+    .trip-2 { grid-row: 1; grid-column: 2; background-image: url('images/trip-2.jpg'); }
+    .trip-3 { grid-row: 1; grid-column: 3; background-image: url('images/trip-3.jpg'); }
+    .trip-4 { grid-row: 2; grid-column: 2; background-image: url('images/trip-4.jpg'); }
+    .trip-5 { grid-row: 2; grid-column: 3; background-image: url('images/trip-5.jpg'); }
+    .trip-6 { grid-row: 3; grid-column: 1 / 4; background-image: url('images/trip-6.jpg'); }
+    .trip-caption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      padding: 0.9rem 1.1rem;
+      font-size: 0.76rem; letter-spacing: 0.05em; color: var(--tufo);
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.35s, transform 0.35s;
+      z-index: 1;
+    }
+    .trip:hover::after { opacity: 1; }
+    .trip:hover .trip-caption { opacity: 0.92; transform: translateY(0); }
+    .trip:hover { transform: scale(1.01); }
+
+    @media (max-width: 760px) {
+      .trips-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 220px); height: auto; }
+      .trip-1 { grid-row: 1; grid-column: 1 / 3; }
+      .trip-2 { grid-row: 2; grid-column: 1; }
+      .trip-3 { grid-row: 2; grid-column: 2; }
+      .trip-4 { grid-row: 3; grid-column: 1; }
+      .trip-5 { grid-row: 3; grid-column: 2; }
+      .trip-6 { grid-row: 4; grid-column: 1 / 3; }
+    }
+
+    /* ── Catalog ── */
+    .catalog { background: var(--cream); }
+
+    .catalog-intro { text-align: center; margin-bottom: 3rem; }
+    .catalog-intro p { max-width: 600px; margin: 0.8rem auto 0; }
+
+    .category { margin-bottom: 3.2rem; }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .category-header h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--earth);
+      white-space: nowrap;
+    }
+
+    .category-header .rule {
+      flex: 1;
+      height: 1px;
+      background: repeating-linear-gradient(90deg, var(--terracotta) 0, var(--terracotta) 6px, transparent 6px, transparent 11px);
+      opacity: 0.5;
+    }
+
+    .activity-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 1px;
-      background: rgba(184,76,42,0.15);
-      border: 1px solid rgba(184,76,42,0.15);
-    }
-    .act-grid.col-4 { grid-template-columns: repeat(4, 1fr); }
-    @media (max-width: 900px) {
-      .act-grid.col-4 { grid-template-columns: repeat(2, 1fr); }
+      gap: 1.1rem;
     }
 
-    .act-card {
-      background: var(--parch);
-      padding: 1.6rem 1.5rem 1.4rem;
+    .activity-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--tufo);
+      padding: 1.6rem;
       cursor: pointer;
+      transition: all 0.25s;
       position: relative;
       user-select: none;
-      transition: background 0.2s;
-      border-top: 2px solid transparent;
-      background-image: linear-gradient(180deg, rgba(255,255,255,0.18) 0%, transparent 60%);
     }
-    .act-card:hover {
-      background-color: #EFE3CE;
-      border-top-color: var(--gold);
+
+    .activity-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 28px rgba(44,30,18,0.1);
+      transform: translateY(-2px);
     }
-    .act-card.selected {
-      background-color: #E8CEAF;
-      border-top-color: var(--noir);
+
+    .activity-card.selected {
+      border-color: var(--terracotta);
+      background: #FBEFE6;
+      box-shadow: 0 8px 28px rgba(184,89,62,0.16);
     }
-    .act-card.selected::after {
+
+    .activity-card.selected::after {
+      content: '\2713';
+      position: absolute; top: 14px; right: 14px;
+      background: var(--terracotta); color: #fff;
+      width: 24px; height: 24px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.78rem; font-weight: 700;
+      z-index: 2;
+    }
+
+    /* ── Activity card photo reveal (hover only) ── */
+    .activity-card.has-photo { overflow: hidden; }
+    .activity-card.has-photo::before {
       content: '';
-      position: absolute; top: 16px; right: 16px;
-      background: var(--noir);
-      width: 7px; height: 7px;
-      border-radius: 50%;
+      position: absolute; inset: 0;
+      background-image: linear-gradient(180deg, rgba(22,15,9,0.3) 0%, rgba(22,15,9,0.9) 100%), var(--photo);
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+      pointer-events: none;
     }
+    .activity-card.has-photo:hover::before { opacity: 1; }
+    .activity-card.has-photo > * { position: relative; z-index: 1; }
+    .activity-card.has-photo:hover h4 { color: var(--tufo); }
+    .activity-card.has-photo:hover p { color: var(--tufo); opacity: 0.85; }
+    .activity-card.has-photo:hover .icon-badge { background: rgba(255,255,255,0.18); color: var(--gold); }
+    .activity-card.has-photo:hover .season { background: rgba(255,255,255,0.22); color: var(--gold); }
 
-    .act-icon {
-      width: 34px; height: 34px;
+    .activity-card .icon-badge {
+      width: 38px; height: 38px;
       border-radius: 50%;
-      border: 1px solid rgba(20,16,11,0.35);
+      background: rgba(184,89,62,0.1);
       display: flex; align-items: center; justify-content: center;
-      color: var(--noir); margin-bottom: 0.9rem;
-      background: rgba(184,76,42,0.07);
-      box-shadow: 0 0 0 3px rgba(184,76,42,0.06);
+      margin-bottom: 0.9rem;
+      color: var(--terracotta);
     }
-    .act-icon svg { width: 15px; height: 15px; }
+    .activity-card .icon-badge svg { width: 20px; height: 20px; }
 
-    .act-card h4 {
-      font-family: 'Cormorant Garamond', serif;
+    .activity-card h4 {
       font-size: 1.22rem; font-weight: 600;
-      color: var(--sienna); margin-bottom: 0.4rem;
-      padding-right: 1.6rem; line-height: 1.2;
+      margin-bottom: 0.45rem; color: var(--earth); padding-right: 1.5rem;
     }
-    .act-card p {
-      font-size: 0.82rem; color: var(--smoke);
-      font-weight: 300; line-height: 1.7;
-      margin-bottom: 0.8rem; opacity: 0.85;
+
+    .activity-card p {
+      font-size: 0.88rem; color: var(--earth); opacity: 0.65;
+      font-weight: 300; line-height: 1.65; margin-bottom: 0.8rem;
     }
-    .act-season {
-      font-size: 0.57rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.14em;
-      color: var(--olive);
-      border: 1px solid rgba(92,107,60,0.3);
-      padding: 0.16rem 0.5rem;
+
+    .activity-card .season {
       display: inline-block;
-      background: rgba(92,107,60,0.05);
+      font-size: 0.66rem; font-weight: 600;
+      color: var(--olive);
+      background: rgba(92,107,60,0.12);
+      padding: 0.25rem 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    .day-card { grid-column: 1 / -1; }
-    .dest-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
-    .dest-pill {
-      font-size: 0.75rem; font-weight: 400;
-      color: var(--sienna); border: 1px solid rgba(122,46,16,0.3);
-      padding: 0.2rem 0.65rem; letter-spacing: 0.04em;
-    }
+    /* ── What's included ── */
+    .what-you-get { background: var(--tufo); }
+    .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2rem; }
+    .included-item { padding: 1.5rem; background: rgba(245,240,232,0.6); border-left: 3px solid var(--terracotta); }
+    .included-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--earth); }
+    .included-item p { font-size: 0.83rem; line-height: 1.6; opacity: 0.62; }
 
-    .included {
-      background: var(--earth);
-      color: var(--parch);
-      padding: 5.5rem 2rem;
+    /* ── Trip stats item ── */
+    .detail-item .detail-value { font-size: 1.7rem; font-weight: 500; color: var(--terracotta); margin-bottom: 0.2rem; }
+    .detail-item .detail-label { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
+
+    /* ── Pricing ── */
+    .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
+    .pricing .section-label { color: var(--gold); opacity: 0.5; }
+    .pricing h2 { color: var(--tufo); }
+    .pricing-intro { max-width: 480px; margin: 0 auto; opacity: 0.65; font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
+    .pricing-card { max-width: 440px; margin: 2rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
+    .pricing-includes { list-style: none; text-align: left; font-size: 0.85rem; font-weight: 300; opacity: 0.62; }
+    .pricing-includes li { padding: 0.5rem 0; border-bottom: 1px solid rgba(196,162,101,0.08); padding-left: 1.2rem; position: relative; }
+    .pricing-includes li:last-child { border-bottom: none; }
+    .pricing-includes li::before { content: ''; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; background: var(--terracotta); border-radius: 50%; transform: translateY(-50%); }
+    .pricing-note { margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.3; font-style: italic; }
+    .pricing-cta { margin-top: 2.2rem; }
+
+    /* ── Philosophy ── */
+    .philosophy {
+      position: relative;
+      background-color: var(--earth);
+      background-image: url('images/philosophy-bg.jpg');
+      background-size: cover;
+      background-position: center 35%;
+      color: var(--tufo);
     }
-    .included .inner { max-width: 800px; margin: 0 auto; }
-    .included .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--terra); margin-bottom: 0.8rem;
+    .philosophy::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(120deg, rgba(22,15,9,0.9) 0%, rgba(22,15,9,0.55) 55%, rgba(22,15,9,0.82) 100%);
     }
-    .included h2 {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 500; color: var(--parch);
-      margin-bottom: 2rem; line-height: 1.2;
-    }
-    .inc-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 1px; background: rgba(201,149,58,0.15);
-      border: 1px solid rgba(201,149,58,0.15);
-    }
-    .inc-item {
-      background: var(--earth);
-      padding: 1.6rem 1.4rem;
-      border-top: 2px solid var(--terra);
-    }
-    .inc-item h3 {
+    .philosophy .section-inner { position: relative; z-index: 1; }
+    .philosophy .section-label { color: var(--gold); opacity: 0.65; }
+    .philosophy h2 { color: var(--tufo); }
+    .philosophy blockquote {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem; font-weight: 600;
-      color: var(--gold); margin-bottom: 0.4rem;
-    }
-    .inc-item p {
-      font-size: 0.82rem; font-weight: 300;
-      color: var(--parch); opacity: 0.5; line-height: 1.7;
-    }
-
-    .stat-val {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.4rem; font-weight: 600;
-      color: var(--terra); line-height: 1; margin-bottom: 0.35rem;
-    }
-    .stat-lbl {
-      font-size: 0.58rem; letter-spacing: 0.22em;
-      text-transform: uppercase; color: var(--smoke);
-      font-weight: 600; opacity: 0.65;
+      font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+      font-weight: 500; font-style: italic; line-height: 1.5;
+      color: var(--gold); border-left: 3px solid var(--gold);
+      padding-left: 1.5rem; margin: 1.5rem 0;
+      opacity: 0.95;
     }
 
-    .philo {
-      background: var(--sienna);
-      color: var(--parch);
-      padding: 5.5rem 2rem;
+    /* ── Form / Contact ── */
+    .contact { background: var(--deep); color: var(--tufo); padding: 6rem 2rem 4rem; }
+    .contact-header { text-align: center; max-width: 600px; margin: 0 auto; }
+    .contact h2 { color: var(--gold); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500; }
+    .contact-header p { opacity: 0.55; font-size: 0.95rem; font-weight: 300; }
+    .contact .section-label { color: var(--gold); opacity: 0.55; text-align: center; }
+    .contact .divider { width: 40px; height: 1px; background: var(--gold); margin: 1.5rem auto; opacity: 0.25; }
+
+    .contact-form { max-width: 560px; margin: 2.5rem auto 0; text-align: left; }
+
+    .selected-activities-summary {
+      background: rgba(184,89,62,0.1);
+      border: 1px solid rgba(184,89,62,0.25);
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1.4rem;
+      font-size: 0.88rem; font-weight: 300; color: var(--tufo); opacity: 0.9;
     }
-    .philo .inner { max-width: 680px; margin: 0 auto; }
-    .philo .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--gold); margin-bottom: 0.8rem; opacity: 0.65;
+    .selected-activities-summary .summary-label {
+      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 0.4rem; opacity: 0.8;
     }
-    .philo h2 {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 500; color: var(--parch);
-      margin-bottom: 1.4rem; line-height: 1.2;
-    }
-    .philo blockquote {
-      font-size: clamp(1.3rem, 2.5vw, 1.85rem);
-      font-weight: 400; font-style: italic;
-      color: var(--gold);
-      border-left: 2px solid var(--gold);
-      padding-left: 1.4rem; margin: 0 0 1.5rem;
-      line-height: 1.55; opacity: 0.9;
-    }
-    .philo p {
-      font-size: 0.9rem; font-weight: 300;
-      color: var(--parch); opacity: 0.5; line-height: 1.9;
+    .no-selection { opacity: 0.4; font-style: italic; }
+    .no-selection a { color: var(--gold); }
+
+    .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .contact-form .form-group { margin-bottom: 1.2rem; }
+
+    .contact-form label {
+      display: block; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--stone); margin-bottom: 0.5rem; font-weight: 600;
     }
 
-    .contact {
-      background: var(--earth);
-      color: var(--parch);
-      padding: 6rem 2rem 5rem;
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%; padding: 0.85rem 1rem;
+      background: rgba(232,220,200,0.06);
+      border: 1px solid rgba(196,162,101,0.25);
+      color: var(--tufo);
+      font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 300;
+      outline: none; transition: border-color 0.3s;
     }
-    .contact-head { text-align: center; max-width: 560px; margin: 0 auto; }
-    .contact-head .palmette-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 1rem; margin-bottom: 1.5rem; color: var(--gold); opacity: 0.25;
-    }
-    .contact-head .palmette-row .hr {
-      width: 50px; height: 1px; background: var(--gold);
-    }
-    .contact h2 {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 500; color: var(--gold);
-    }
-    .contact-head .eyebrow {
-      font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
-      font-weight: 600; color: var(--terra); margin-bottom: 0.8rem; opacity: 0.85;
-    }
-    .contact-head p {
-      margin-top: 0.8rem; font-size: 0.88rem;
-      font-weight: 300; opacity: 0.42; line-height: 1.8;
-    }
-    .contact-divider {
-      width: 40px; height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      margin: 1.6rem auto; opacity: 0.3;
-    }
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--gold); }
+    .contact-form textarea { resize: vertical; min-height: 90px; }
+    .contact-form select option { background: var(--deep); color: var(--tufo); }
 
-    .cform { max-width: 520px; margin: 2.5rem auto 0; }
-
-    .sel-summary {
-      background: rgba(184,76,42,0.1);
-      border: 1px solid rgba(184,76,42,0.22);
-      border-left: 3px solid var(--terra);
-      padding: 1rem 1.2rem; margin-bottom: 1.5rem;
-      font-size: 0.85rem; font-weight: 300; color: var(--parch);
-    }
-    .sel-summary .lbl {
-      font-size: 0.58rem; font-weight: 600; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--terra);
-      display: block; margin-bottom: 0.4rem;
-    }
-    .sel-empty { opacity: 0.35; font-style: italic; }
-
-    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .fg { margin-bottom: 1rem; }
-    .fg label {
-      display: block; font-size: 0.6rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--sand);
-      margin-bottom: 0.45rem; font-weight: 600; opacity: 0.65;
-    }
-    .fg input, .fg textarea, .fg select {
-      width: 100%; padding: 0.82rem 0.9rem;
-      background: rgba(232,216,188,0.05);
-      border: 1px solid rgba(201,149,58,0.18);
-      border-bottom-color: rgba(201,149,58,0.3);
-      color: var(--parch);
-      font-family: 'Inter', sans-serif; font-size: 0.88rem; font-weight: 300;
-      outline: none; transition: border-color 0.2s;
-    }
-    .fg input:focus, .fg textarea:focus, .fg select:focus {
-      border-color: rgba(201,149,58,0.45);
-    }
-    .fg textarea { resize: vertical; min-height: 85px; }
-    .fg select option { background: var(--earth); color: var(--parch); }
-
-    .submit-wrap { margin-top: 1.8rem; }
-    .sbtn {
+    .form-submit { text-align: center; margin-top: 1.8rem; }
+    .form-submit .submit-btn {
       width: 100%; padding: 1.1rem;
-      background: var(--terra); color: #fff; border: none;
-      font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.25em; text-transform: uppercase;
-      cursor: pointer; transition: background 0.25s, letter-spacing 0.2s;
+      background: var(--terracotta); color: #fff; border: none;
+      font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      cursor: pointer; transition: background 0.25s;
     }
-    .sbtn:hover { background: var(--sienna); letter-spacing: 0.3em; }
-    .sbtn:disabled {
-      background: rgba(184,76,42,0.2); cursor: not-allowed;
-      color: rgba(232,216,188,0.3); letter-spacing: 0.25em;
+    .form-submit .submit-btn:hover { background: var(--rust); }
+    .form-submit .submit-btn:disabled { background: #5a4a3a; cursor: not-allowed; opacity: 0.6; }
+
+    .contact .email-link {
+      display: block; text-align: center; margin-top: 2rem;
+      color: var(--gold); text-decoration: none; font-size: 0.8rem; opacity: 0.4; letter-spacing: 0.05em;
     }
 
-    .email-alt {
-      display: block; text-align: center; margin-top: 2.5rem;
-      color: var(--gold); text-decoration: none;
-      font-size: 0.72rem; opacity: 0.28; letter-spacing: 0.06em;
-      transition: opacity 0.2s;
+    .success-message {
+      display: none;
+      text-align: center;
+      max-width: 560px;
+      margin: 2.5rem auto 0;
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(196,162,101,0.25);
+      background: rgba(196,162,101,0.04);
     }
-    .email-alt:hover { opacity: 0.55; }
+    .success-message h3 { color: var(--gold); font-size: 1.8rem; font-weight: 500; margin-bottom: 0.8rem; }
+    .success-message p { color: var(--tufo); opacity: 0.65; font-size: 0.95rem; font-weight: 300; }
 
-    .success-msg {
-      display: none; text-align: center;
-      max-width: 520px; margin: 2.5rem auto 0;
-      padding: 3rem 2rem;
-      border: 1px solid rgba(201,149,58,0.2);
-    }
-    .success-msg h3 {
-      font-family: 'Cormorant Garamond', serif;
-      color: var(--gold); font-size: 2.2rem; font-weight: 500; margin-bottom: 0.8rem;
-    }
-    .success-msg p { opacity: 0.5; font-size: 0.9rem; font-weight: 300; }
-
+    /* ── Footer ── */
     footer {
-      background: var(--ink);
-      border-top: 1px solid rgba(201,149,58,0.07);
-      text-align: center; padding: 1.8rem;
-      font-size: 0.58rem; letter-spacing: 0.3em;
-      text-transform: uppercase; color: var(--smoke); opacity: 0.5;
+      background: var(--deep);
+      border-top: 1px solid rgba(196,162,101,0.06);
+      text-align: center; padding: 1.6rem;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--stone); opacity: 0.4;
     }
 
+    /* ── Responsive ── */
     @media (max-width: 768px) {
-      .ways-grid { grid-template-columns: 1fr; }
-      .way-card { border-right: none; border-bottom: 1px solid rgba(201,149,58,0.2); }
-      .way-card:last-child { border-bottom: none; }
+      .ways-grid { grid-template-columns: 1fr; gap: 1rem; }
     }
     @media (max-width: 600px) {
-      .act-grid { grid-template-columns: 1fr; }
-      .inc-grid { grid-template-columns: 1fr; }
-      .trip-stats { grid-template-columns: repeat(2,1fr); gap: 1.5rem; }
-      .frow { grid-template-columns: 1fr; }
-      section, .catalog, .included, .intro, .three-ways, .philo, .contact { padding-left: 1.4rem; padding-right: 1.4rem; }
+      section { padding: 3.5rem 1.5rem; }
+      .activity-grid { grid-template-columns: 1fr; }
+      .trip-stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+      .included-grid { grid-template-columns: 1fr; }
+      .contact-form .form-row { grid-template-columns: 1fr; }
+      .category-header h3 { font-size: 1.3rem; }
     }
 
-    .fi {
-      opacity: 0; transform: translateY(12px);
-      animation: fif 0.01s 1.2s forwards;
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fi.vis { opacity: 1; transform: none; animation: none; }
-    @keyframes fif { to { opacity: 1; transform: none; } }
+    /* ── Animations ── */
+    .fade-in { opacity: 0; transform: translateY(16px); animation: fadeInFallback 0.01s 1s forwards; transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
+    @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
 <body>
 
-  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+  <!-- SVG defs -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <defs>
-      <pattern id="mdr" x="0" y="0" width="44" height="36" patternUnits="userSpaceOnUse">
-        <path d="M0,18 h8 v-9 h8 v18 h8 v-18 h8 v9 h8" fill="none" stroke="currentColor" stroke-width="1.8"/>
-        <path d="M2,26 h4 v-16 h8 v16 h8 v-16 h8 v16 h4" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
+      <pattern id="meander" x="0" y="0" width="40" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#C4A265" stroke-width="1.3"/>
+        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
       </pattern>
-
-      <symbol id="palm" viewBox="0 0 80 60">
-        <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
-        <path d="M40,55 C40,42 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
-        <path d="M40,55 C40,42 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.5"/>
-        <ellipse cx="40" cy="57" rx="6" ry="2.5" fill="none" stroke="currentColor" stroke-width="0.9"/>
+      <pattern id="meander-light" x="0" y="0" width="40" height="26" patternUnits="userSpaceOnUse">
+        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#2C1E12" stroke-width="1.3"/>
+        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
+      </pattern>
+      <symbol id="palmette" viewBox="0 0 80 60">
+        <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1"/>
+        <path d="M40,55 C40,40 28,38 25,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+        <path d="M40,55 C40,40 52,38 55,22" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.5"/>
+        <ellipse cx="40" cy="56" rx="6" ry="2" fill="none" stroke="currentColor" stroke-width="0.8"/>
       </symbol>
-
-      <symbol id="vlt" viewBox="0 0 120 120">
-        <path d="M10,110 C10,55 10,10 60,10 C92,10 112,30 112,52 C112,72 96,82 80,82 C65,82 54,72 54,60 C54,50 61,43 70,43 C79,43 83,50 83,56" fill="none" stroke="currentColor" stroke-width="1.5"/>
-        <path d="M10,110 L10,88 C10,48 32,18 62,18" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
-        <circle cx="83" cy="56" r="3" fill="currentColor" opacity="0.3"/>
+      <symbol id="corner-ornament" viewBox="0 0 120 120">
+        <path d="M10,110 C10,60 10,10 60,10 C90,10 110,30 110,50 C110,70 95,80 80,80 C65,80 55,70 55,58 C55,48 62,42 70,42 C78,42 82,48 82,54" fill="none" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M10,110 L10,90 C10,50 30,20 60,20" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+        <circle cx="82" cy="54" r="2" fill="currentColor" opacity="0.3"/>
       </symbol>
-
-      <symbol id="ico-leaf" viewBox="0 0 24 24"><path d="M4 20c8-1 14-7 16-16-9 1-15 7-16 16zM4 20c2-5 5-9 9-12" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
-      <symbol id="ico-tomb" viewBox="0 0 24 24"><path d="M4 21V11C4 6 8 3 12 3c4 0 8 3 8 8v10" fill="none" stroke="currentColor" stroke-width="1.7"/><line x1="2" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.7"/></symbol>
-      <symbol id="ico-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L5 19c-.5 1.2.4 2 1.5 2h11c1.1 0 2-.8 1.5-2L14 9V3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
-      <symbol id="ico-fire" viewBox="0 0 24 24"><path d="M12 2c0 0-4 5-4 9 0 2.2 1.8 4 4 4s4-1.8 4-4c0-2-1.5-3.5-2-4 0 2-1.5 3-2 2-.5-1 0-3 0-7zM5 21h14M4 18l4 3M20 18l-4 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-      <symbol id="ico-horse" viewBox="0 0 24 24"><path d="M5 21l1-7C5 10 7 6 11 5c2-.5 4 0 5 2h3l-1 2h-2v5l2 7M9 21v-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
-      <symbol id="ico-trail" viewBox="0 0 24 24"><path d="M3 20C7 16 9 16 12 12c3-4 5-4 9-8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="3" cy="20" r="2" fill="currentColor"/><circle cx="21" cy="4" r="2" fill="currentColor"/></symbol>
-      <symbol id="ico-map" viewBox="0 0 24 24"><path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6zM9 3v18M15 6v15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <!-- Adventure icons (line art, Etruscan-ish economy of stroke) -->
+      <symbol id="icon-leaf" viewBox="0 0 24 24"><path d="M4 20c8-1 14-7 16-16-9 1-15 7-16 16zM4 20c2-5 5-9 9-12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-mountain" viewBox="0 0 24 24"><path d="M2 20 L9 8 L13 14 L16 9 L22 20 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-hammer" viewBox="0 0 24 24"><path d="M14 6 L19 11 L12 18 L7 13 Z M4 21 L9 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="icon-tomb" viewBox="0 0 24 24"><path d="M4 21 V11 C4 6 8 3 12 3 C16 3 20 6 20 11 V21" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="2" y1="21" x2="22" y2="21" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="icon-horse" viewBox="0 0 24 24"><path d="M5 21 L6 14 C5 10 7 6 11 5 C13 4.5 15 5 16 7 L19 7 L18 9 L16 9 L16 14 L18 21 M9 21 L9 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="icon-flask" viewBox="0 0 24 24"><path d="M9 3 H15 M10 3 V9 L5 19 C4.5 20.2 5.4 21 6.5 21 H17.5 C18.6 21 19.5 20.2 19 19 L14 9 V3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-bonfire" viewBox="0 0 24 24"><path d="M12 2 C12 2 8 7 8 11 C8 13.2 9.8 15 12 15 C14.2 15 16 13.2 16 11 C16 9 14.5 7.5 14 7 C14 9 12.5 10 12 9 C11.5 8 12 6 12 2 Z M5 21 H19 M4 18 L8 21 M20 18 L16 21" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+      <symbol id="icon-festival" viewBox="0 0 24 24"><path d="M3 10 L12 4 L21 10 M5 10 V20 H19 V10 M9 20 V14 H15 V20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-lake" viewBox="0 0 24 24"><path d="M2 18 C5 16 7 19 10 17 C13 15 15 19 18 17 C20 16 21 17 22 18 M12 3 L12 13 M8 13 L16 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-castle" viewBox="0 0 24 24"><path d="M4 21 V10 H7 V7 H9 V10 H11 V6 H13 V10 H15 V7 H17 V10 H20 V21 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-tombpath" viewBox="0 0 24 24"><path d="M3 20 C7 16 9 16 12 12 C15 8 17 8 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="3" cy="20" r="1.6" fill="currentColor"/><circle cx="21" cy="4" r="1.6" fill="currentColor"/></symbol>
+      <symbol id="icon-wave-sea" viewBox="0 0 24 24"><path d="M2 16 C5 14 7 18 10 16 C13 14 15 18 18 16 C20 15 21 16 22 17 M2 20 C5 18 7 22 10 20 C13 18 15 22 18 20 C20 19 21 20 22 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+      <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22 C12 22 19 14.5 19 9 C19 5.1 15.9 2 12 2 C8.1 2 5 5.1 5 9 C5 14.5 12 22 12 22 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
     </defs>
   </svg>
 
+  <!-- Sticky nav -->
   <nav class="site-nav">
     <a href="#top" class="nav-logo">Rasna</a>
     <div class="nav-links">
       <a href="#catalog">Experiences</a>
       <a href="#included">Included</a>
+      <a href="#pricing">Pricing</a>
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
@@ -620,385 +701,437 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <section class="hero" id="top">
-    <svg class="volute tl" width="100" height="100"><use href="#vlt"/></svg>
-    <svg class="volute tr" width="100" height="100"><use href="#vlt"/></svg>
-    <svg class="volute bl" width="100" height="100"><use href="#vlt"/></svg>
-    <svg class="volute br" width="100" height="100"><use href="#vlt"/></svg>
+    <svg class="etruscan-corner top-left" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner top-right" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-left" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
+    <svg class="etruscan-corner bottom-right" width="100" height="100" style="color:var(--gold)"><use href="#corner-ornament"/></svg>
 
-    <div class="hero-inner">
-      <div class="hero-loc">Blera &middot; Northern Lazio &middot; Italy</div>
-      <div class="hero-ornament">
-        <div class="line"></div>
-        <svg width="40" height="30" style="color:var(--terra)"><use href="#palm"/></svg>
-        <div class="line right"></div>
-      </div>
+    <div class="hero-content">
+      <div class="subtitle">Blera &middot; Northern Lazio &middot; Italy</div>
+      <div class="divider"></div>
+      <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
-      <p class="hero-sub">Harvest olives with local families. Descend into 2,800-year-old Etruscan tombs. Ride horseback through ancient ruins. An expedition into the oldest part of Italy.</p>
-      <div class="hero-frieze">
-        <svg width="280" height="18" viewBox="0 0 280 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <line x1="0" y1="9" x2="10" y2="9" stroke="currentColor" stroke-width="0.5"/>
-          <path d="M14,4 L18,9 L14,14 L10,9Z M42,4 L46,9 L42,14 L38,9Z M70,4 L74,9 L70,14 L66,9Z M98,4 L102,9 L98,14 L94,9Z M126,4 L130,9 L126,14 L122,9Z M154,4 L158,9 L154,14 L150,9Z M182,4 L186,9 L182,14 L178,9Z M210,4 L214,9 L210,14 L206,9Z M238,4 L242,9 L238,14 L234,9Z M266,4 L270,9 L266,14 L262,9Z" stroke="currentColor" stroke-width="1"/>
-          <path d="M18,9 L38,9 M46,9 L66,9 M74,9 L94,9 M102,9 L122,9 M130,9 L150,9 M158,9 L178,9 M186,9 L206,9 M214,9 L234,9 M242,9 L262,9" stroke="currentColor" stroke-width="0.5"/>
-          <line x1="270" y1="9" x2="280" y2="9" stroke="currentColor" stroke-width="0.5"/>
-          <circle cx="28" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="56" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="84" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="112" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="140" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="168" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="196" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="224" cy="9" r="1.2" fill="currentColor"/>
-          <circle cx="252" cy="9" r="1.2" fill="currentColor"/>
-        </svg>
-      </div>
-      <a href="#catalog" class="hero-cta">Build your expedition</a>
+      <p class="tagline">Harvest olives with local families. Descend into 2,800-year-old Etruscan tombs. Ride horseback through ancient ruins. This is an expedition into the oldest part of Italy — built for people who want more than a sightseeing trip.</p>
+      <a href="#catalog" class="cta-button">Build your expedition</a>
     </div>
   </section>
 
-  <svg style="display:block;width:100%;height:14px;background:var(--earth)" viewBox="0 0 1440 14" preserveAspectRatio="none">
-    <rect width="1440" height="14" fill="var(--earth)"/>
-    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(184,76,42,0.4)" stroke-width="1"/>
-    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(184,76,42,0.4)" stroke-width="1"/>
-    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(20,16,11,0.55)" stroke-width="1.1"/>
-  </svg>
+  <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
 
-  <section class="three-ways">
-    <div class="inner">
-      <div class="eyebrow fi">Before Rome, there was Rasna</div>
-      <div class="fi" style="display:flex;align-items:center;justify-content:center;margin-bottom:0.7rem;color:var(--gold);opacity:0.45">
-        <svg width="160" height="12" viewBox="0 0 160 12" fill="none">
-          <line x1="0" y1="6" x2="8" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <path d="M12,2 L16,6 L12,10 L8,6Z M32,2 L36,6 L32,10 L28,6Z M52,2 L56,6 L52,10 L48,6Z M72,2 L76,6 L72,10 L68,6Z M88,2 L92,6 L88,10 L84,6Z M108,2 L112,6 L108,10 L104,6Z M128,2 L132,6 L128,10 L124,6Z M148,2 L152,6 L148,10 L144,6Z" stroke="currentColor" stroke-width="1" fill="none"/>
-          <line x1="16" y1="6" x2="28" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="36" y1="6" x2="48" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="56" y1="6" x2="68" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="76" y1="6" x2="84" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="92" y1="6" x2="104" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="112" y1="6" x2="124" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="132" y1="6" x2="144" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <line x1="152" y1="6" x2="160" y2="6" stroke="currentColor" stroke-width="0.7"/>
-          <circle cx="22" cy="6" r="1.3" fill="currentColor"/>
-          <circle cx="42" cy="6" r="1.3" fill="currentColor"/>
-          <circle cx="62" cy="6" r="1.3" fill="currentColor"/>
-          <circle cx="96" cy="6" r="1.3" fill="currentColor"/>
-          <circle cx="116" cy="6" r="1.3" fill="currentColor"/>
-          <circle cx="136" cy="6" r="1.3" fill="currentColor"/>
-        </svg>
-      </div>
-      <h2 class="fi">Planning, doing, remembering.</h2>
-      <p class="sub fi">"Rasna" is what the Etruscans called themselves — the people who carved this land into volcanic rock nearly three millennia ago. We take a handful of guests at a time to live among what they left behind. Pick what excites you below — we'll build the rest around you.</p>
-      <div class="ways-grid fi">
+  <!-- How it works (merged intro + 3 ways) -->
+  <section class="three-ways" id="how-it-works">
+    <div class="section-wide">
+      <div class="section-label fade-in">How Rasna works</div>
+      <h2 class="fade-in">Planning, experiencing, remembering.</h2>
+      <p class="fade-in">"Rasna" is what the Etruscans called themselves — the people who carved this land into volcanic rock nearly three millennia ago. We take small groups to live among what they left behind. Pick the experiences that excite you below, and we'll build an all-inclusive itinerary — lodging, meals, transport, everything — and send you a quote within days.</p>
+      <div class="ways-grid fade-in">
         <div class="way-card">
-          <div class="top-dash"></div>
-          <svg class="way-icon"><use href="#ico-leaf"/></svg>
-          <div class="way-title">Planning</div>
-          <p class="way-desc">Tell us what you want. We handle everything else — lodging, meals, guides, logistics. You just choose.</p>
+          <svg class="way-icon"><use href="#icon-leaf"/></svg>
+          <div class="way-title">Work the Land</div>
+          <p class="way-desc">Get into the groves and fields. Harvest olives, crush tomatoes, forage wild asparagus — seasonal, physical, unforgettable.</p>
         </div>
         <div class="way-card">
-          <div class="top-dash"></div>
-          <svg class="way-icon"><use href="#ico-tomb"/></svg>
-          <div class="way-title">Doing</div>
-          <p class="way-desc">Harvest olives, descend into tombs, ride through ruins, forage in the woods. Real work. Real places. Real people.</p>
+          <svg class="way-icon"><use href="#icon-tomb"/></svg>
+          <div class="way-title">Explore the Ancient</div>
+          <p class="way-desc">Descend into rock-cut tombs, ride through ruins, walk the Via Clodia — paths carved before Rome ever existed.</p>
         </div>
         <div class="way-card">
-          <div class="top-dash"></div>
-          <svg class="way-icon"><use href="#ico-flask"/></svg>
-          <div class="way-title">Remembering</div>
-          <p class="way-desc">You leave with oil you pressed, wine you harvested, pasta you made. The stories last longer than any souvenir.</p>
+          <svg class="way-icon"><use href="#icon-hammer"/></svg>
+          <div class="way-title">Make Something</div>
+          <p class="way-desc">Cure meat, press oil, make cheese with a master artisan. Take home what you built with your own hands.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <svg style="display:block;width:100%;height:14px;background:var(--cream)" viewBox="0 0 1440 14" preserveAspectRatio="none">
-    <rect width="1440" height="14" fill="var(--cream)"/>
-    <line x1="0" y1="3" x2="1440" y2="3" stroke="rgba(184,76,42,0.3)" stroke-width="1"/>
-    <line x1="0" y1="11" x2="1440" y2="11" stroke="rgba(184,76,42,0.3)" stroke-width="1"/>
-    <path d="M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5 M0,7 h5 v-3 h5 v6 h5 v-6 h5 v3 h5" fill="none" stroke="rgba(20,16,11,0.45)" stroke-width="1.1"/>
-  </svg>
+  <!-- Photo break -->
+  <div class="photo-break">
+    <div class="photo-break-caption fade-in">
+      <p>"Blera has stood on this tufo cliff for three thousand years — and it still looks like it."</p>
+    </div>
+  </div>
 
-  <form id="xform" action="https://formspree.io/f/xlgynpjo" method="POST">
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
+  <!-- Catalog + Form -->
+  <form id="experience-form" action="https://formspree.io/f/xlgynpjo" method="POST">
 
   <section class="catalog" id="catalog">
-    <div class="inner">
-      <div class="cat-intro fi">
-        <div class="eyebrow">Step 1 &middot; Build your expedition</div>
+    <div class="section-wide">
+      <div class="catalog-intro fade-in">
+        <div class="section-label">Step 1 &middot; Build your trip</div>
         <h2>Select your experiences.</h2>
-        <p>Click any activity to add it to your trip. Mix and match — we handle the rest.</p>
+        <p>Click any activity to add it to your itinerary. Mix and match across categories — we'll handle the logistics.</p>
       </div>
 
-      <div class="catalog-quicknav fi">
+      <div class="catalog-quicknav fade-in">
         <a href="#cat-farm">Farm &amp; Field</a>
         <a href="#cat-artisan">Artisan &amp; Food</a>
         <a href="#cat-culture">Culture &amp; Outdoors</a>
         <a href="#cat-daytrips">Day Trips</a>
       </div>
 
-      <div class="category fi" id="cat-farm">
-        <div class="cat-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
-        <div class="act-grid col-4">
+      <div class="category fade-in" id="cat-farm">
+        <div class="category-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
+        <div class="activity-grid">
 
-          <div class="act-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-leaf"/></svg></div>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-9.jpg')" data-activity="Olive Harvest" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
             <h4>Olive Harvest</h4>
-            <p>Pick olives by hand, watch them pressed into oil at the mill, take a bottle home.</p>
-            <span class="act-season">Oct &ndash; Dec</span>
+            <p>Pick olives by hand and watch them pressed into fresh oil — then taste it on bruschetta, the way it's meant to be.</p>
+            <span class="season">Oct &ndash; Dec</span>
           </div>
 
-          <div class="act-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-fire"/></svg></div>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-14.jpg')" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
             <h4>Tomato &amp; Sauce Day</h4>
-            <p>Harvest tomatoes and make passata from scratch with a local family. A real Italian summer day.</p>
-            <span class="act-season">August</span>
+            <p>Harvest tomatoes and make passata from scratch with a local family — a real Italian summer tradition.</p>
+            <span class="season">August</span>
           </div>
 
-          <div class="act-card" data-activity="Grape Harvest" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
-            <h4>Grape Harvest</h4>
-            <p>A day of vendemmia — pick grapes, tour the cellar, take home a bottle from last year.</p>
-            <span class="act-season">Sep &ndash; Oct</span>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-7.jpg')" data-activity="Vendange (Grape Harvest)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
+            <h4>Vendange</h4>
+            <p>Join the grape harvest in the vineyard rows — cut bunches by hand, haul the crates, and taste the season's first pressing.</p>
+            <span class="season">Sep &ndash; Oct</span>
           </div>
 
-          <div class="act-card" data-activity="Foraging" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-leaf"/></svg></div>
-            <h4>Foraging</h4>
-            <p>Hunt truffles, wild asparagus, mushrooms in the Tuscia woods — whatever the season gives. Cooked into lunch the same day.</p>
-            <span class="act-season">Spring &amp; Autumn</span>
+          <div class="activity-card has-photo" style="--photo:url('images/card-foraging.jpg')" data-activity="Wild Asparagus Foraging" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
+            <h4>Wild Asparagus Foraging</h4>
+            <p>Walk the Tuscia woods in spring, foraging wild asparagus — a living local Easter tradition.</p>
+            <span class="season">Mar &ndash; Jun</span>
           </div>
 
         </div>
       </div>
 
-      <div class="category fi" id="cat-artisan">
-        <div class="cat-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
-        <div class="act-grid">
+      <div class="category fade-in" id="cat-artisan">
+        <div class="category-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
+        <div class="activity-grid">
 
-          <div class="act-card" data-activity="Charcuterie Degustation" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
+          <div class="activity-card has-photo" style="--photo:url('images/card-charcuterie.png')" data-activity="Charcuterie Degustation with Emiliano" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
             <h4>Charcuterie Degustation</h4>
-            <p>Taste homemade salumi and cured meats — made the traditional way, right here in Blera.</p>
-            <span class="act-season">Year-round</span>
+            <p>Taste homemade salumi and cured meats with Emiliano — made the traditional way, right here in Blera.</p>
+            <span class="season">Year-round</span>
           </div>
 
-          <div class="act-card" data-activity="Cheese Making or Tasting (Civitella Cesi)" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-flask"/></svg></div>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-11.png')" data-activity="Cheese Making or Tasting with Davide (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
             <h4>Cheese Making or Tasting</h4>
-            <p>In Civitella Cesi — go hands-on and make your own cheese, or keep it easy with a guided tasting. Your call on how involved you want to be.</p>
-            <span class="act-season">Year-round</span>
+            <p>With Davide Paolocci in Civitella Cesi — go hands-on and make your own cheese, or keep it easy with a guided tasting. Your call on how involved you want to be.</p>
+            <span class="season">Year-round</span>
           </div>
 
-          <div class="act-card" data-activity="Pasta Making" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-fire"/></svg></div>
-            <h4>Pasta Making</h4>
-            <p>Make pasta by hand the old way — flour on the board, rolling by feel, eating what you made.</p>
-            <span class="act-season">Year-round</span>
+          <div class="activity-card has-photo" style="--photo:url('images/card-nonne.jpg')" data-activity="Cooking in the Tradition of the Nonne" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Traditional Cooking</h4>
+            <p>Cook a meal the way it's been done for generations — handmade pasta, wood-fired panonto, seasonal recipes from the territory.</p>
+            <span class="season">Year-round</span>
           </div>
 
         </div>
       </div>
 
-      <div class="category fi" id="cat-culture">
-        <div class="cat-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
-        <div class="act-grid">
+      <div class="category fade-in" id="cat-culture">
+        <div class="category-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
+        <div class="activity-grid">
 
-          <div class="act-card" data-activity="Cammino dei Tre Villaggi" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-trail"/></svg></div>
-            <h4>Cammino dei Tre Villaggi</h4>
-            <p>20 km trail through Blera, Barbarano Romano and Villa San Giovanni. Earn the "Etruscan Wanderer" certificate.</p>
-            <span class="act-season">Year-round</span>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-2.jpg')" data-activity="Etruscan Tombs &amp; Via Clodia Walk" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tomb"/></svg></div>
+            <h4>Etruscan Tombs &amp; Via Clodia</h4>
+            <p>Walk among rock-cut tombs carved 2,800 years ago and follow the ancient Roman road through the countryside.</p>
+            <span class="season">Year-round</span>
           </div>
 
-          <div class="act-card" data-activity="San Giovenale &amp; Panonto" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-tomb"/></svg></div>
-            <h4>San Giovenale &amp; Panonto</h4>
-            <p>Hike to the Etruscan plateau of San Giovenale, then lunch on panonto — wood-fire bruschetta the Bleran way.</p>
-            <span class="act-season">Year-round</span>
+          <div class="activity-card" data-activity="San Giovenale Excursion with Donkeys &amp; Panonto" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
+            <h4>San Giovenale by Donkey</h4>
+            <p>Trek by donkey to the Etruscan ruins of San Giovenale, stopping along the way for panonto — wood-fired bread drizzled with fresh local olive oil.</p>
+            <span class="season">Year-round</span>
           </div>
 
-          <div class="act-card" data-activity="Horseback Riding" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-horse"/></svg></div>
+          <div class="activity-card has-photo" style="--photo:url('images/moment-4.jpg')" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-horse"/></svg></div>
             <h4>Horseback Riding</h4>
-            <p>Ride through the hills around Civitella Cesi — the slowest, most rewarding way to see this landscape.</p>
-            <span class="act-season">Year-round</span>
+            <p>Ride through the hills around Civitella Cesi — a beautiful way to see the landscape the slow way.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/moment-6.jpg')" data-activity="Local Festival / Sagra" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Local Festivals</h4>
+            <p>Time your visit with a sagra or the famous Festa delle Cantine — the town's cellars open, and everyone eats and drinks together.</p>
+            <span class="season">Seasonal events</span>
           </div>
 
         </div>
       </div>
 
-      <div class="category fi" id="cat-daytrips">
-        <div class="cat-header"><h3>Day Trips</h3><div class="rule"></div></div>
-        <div class="act-grid">
-          <div class="act-card day-card" data-activity="Day Trip" onclick="toggleCard(this)">
-            <div class="act-icon"><svg><use href="#ico-map"/></svg></div>
-            <h4>Add a day trip</h4>
-            <p>The region around Blera is extraordinary. Tell us where you want to go — we organise transport, guides, everything.</p>
-            <div class="dest-list">
-              <span class="dest-pill">Lago di Vico</span>
-              <span class="dest-pill">Viterbo</span>
-              <span class="dest-pill">Tarquinia</span>
-              <span class="dest-pill">Villa Lante &amp; Palazzo Farnese</span>
-              <span class="dest-pill">Tyrrhenian Coast</span>
-              <span class="dest-pill">Wherever you want</span>
-            </div>
+      <div class="category fade-in" id="cat-daytrips">
+        <div class="category-header"><h3>Day Trips</h3><div class="rule"></div></div>
+        <div class="activity-grid">
+
+          <div class="activity-card has-photo" style="--photo:url('images/trip-6.jpg')" data-activity="Day Trip (planned together)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-pin"/></svg></div>
+            <h4>A Day Trip, Your Way</h4>
+            <p>Lago di Vico, Viterbo, Tarquinia, Villa Lante, the Tyrrhenian coast, or somewhere else entirely — tell us what interests you and we'll plan the day together.</p>
+            <span class="season">Year-round</span>
           </div>
+
         </div>
       </div>
 
     </div>
   </section>
 
-  <section class="included" id="included">
-    <div class="inner">
-      <div class="eyebrow fi">What's included</div>
-      <h2 class="fi">You show up. We handle everything.</h2>
-      <div class="inc-grid fi">
-        <div class="inc-item">
+  <!-- What's included -->
+  <section class="what-you-get" id="included">
+    <div class="section-inner">
+      <div class="section-label fade-in">What's included</div>
+      <h2 class="fade-in">You show up. We handle everything.</h2>
+      <div class="included-grid fade-in">
+        <div class="included-item">
           <h3>Accommodation</h3>
-          <p>Nights at a local B&amp;B or agriturismo — real places run by real people, no chain hotels.</p>
+          <p>Nights at a local B&amp;B or agriturismo — no chain hotels, real places run by real people.</p>
         </div>
-        <div class="inc-item">
+        <div class="included-item">
           <h3>All meals</h3>
           <p>Breakfast, lunch, dinner — cooked by local families, at farms, or at the sagra festivals.</p>
         </div>
-        <div class="inc-item">
+        <div class="included-item">
           <h3>All experiences</h3>
-          <p>Every activity you select: harvesting, tastings, guided hikes, day trips.</p>
+          <p>Every activity you select below: harvesting, workshops, farm visits, guided hikes, day trips.</p>
         </div>
-        <div class="inc-item">
+        <div class="included-item">
           <h3>Local transport</h3>
-          <p>Pickup from Rome or Viterbo, plus all transfers during your stay.</p>
+          <p>Pickup from Rome or Viterbo, plus all transfers between sites and villages during your stay.</p>
         </div>
       </div>
-      <div class="trip-stats fi">
-        <div><div class="stat-val">9</div><div class="stat-lbl">People max</div></div>
-        <div><div class="stat-val">100%</div><div class="stat-lbl">Hands-on</div></div>
-        <div><div class="stat-val">0</div><div class="stat-lbl">Tour buses</div></div>
-        <div><div class="stat-val">2,800</div><div class="stat-lbl">Years of history</div></div>
+      <div class="trip-stats fade-in">
+        <div class="detail-item"><div class="detail-value">6&ndash;10</div><div class="detail-label">People max</div></div>
+        <div class="detail-item"><div class="detail-value">100%</div><div class="detail-label">Hands-on</div></div>
+        <div class="detail-item"><div class="detail-value">0</div><div class="detail-label">Tour buses</div></div>
+        <div class="detail-item"><div class="detail-value">2,800</div><div class="detail-label">Years of history</div></div>
       </div>
     </div>
   </section>
 
-  <section class="philo">
-    <div class="inner fi">
-      <div class="eyebrow">Why we stay small</div>
+  <!-- Moments gallery -->
+  <section class="moments">
+    <div class="section-inner fade-in">
+      <div class="section-label">A few moments</div>
+      <h2>What it actually looks like.</h2>
+      <div class="moments-grid">
+        <div class="moment moment-1"><div class="moment-caption">The vicoli of Blera</div></div>
+        <div class="moment moment-2"><div class="moment-caption">The path to the tombs</div></div>
+        <div class="moment moment-3"><div class="moment-caption">Inside a 2,800-year-old tomb</div></div>
+        <div class="moment moment-4"><div class="moment-caption">A local tradition, still alive</div></div>
+        <div class="moment moment-5"><div class="moment-caption">Descending into the via cava</div></div>
+        <div class="moment moment-6"><div class="moment-caption">Festa delle Cantine — the cellars open</div></div>
+        <div class="moment moment-7"><div class="moment-caption">Vendemmia — grape harvest season</div></div>
+        <div class="moment moment-8"><div class="moment-caption">Straight from the vine</div></div>
+        <div class="moment moment-9"><div class="moment-caption">Up in the olive trees</div></div>
+        <div class="moment moment-10"><div class="moment-caption">The whole grove turns out for the harvest</div></div>
+        <div class="moment moment-11"><div class="moment-caption">Fresh cheese, shaped by hand</div></div>
+        <div class="moment moment-12"><div class="moment-caption">Aging on the shelf</div></div>
+        <div class="moment moment-13"><div class="moment-caption">Passata, jarred by afternoon</div></div>
+        <div class="moment moment-14"><div class="moment-caption">Tomatoes in by the crate</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day trips gallery -->
+  <section class="trips-gallery">
+    <div class="section-inner fade-in">
+      <div class="section-label">Worth the detour</div>
+      <h2>And when you want to range further.</h2>
+      <p>Rome is close, but so is a different world of hilltop towns, papal palaces, and Renaissance gardens — all within an easy day trip.</p>
+      <div class="trips-grid">
+        <div class="trip trip-1"><div class="trip-caption">Palazzo Farnese, Caprarola</div></div>
+        <div class="trip trip-2"><div class="trip-caption">Villa Lante's Renaissance water gardens</div></div>
+        <div class="trip trip-3"><div class="trip-caption">Palazzo dei Papi, Viterbo</div></div>
+        <div class="trip trip-4"><div class="trip-caption">Painted tombs of Tarquinia, 6th century BC</div></div>
+        <div class="trip trip-5"><div class="trip-caption">Viterbo's medieval quarter</div></div>
+        <div class="trip trip-6"><div class="trip-caption">Civita di Bagnoregio, the dying town</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="philosophy">
+    <div class="section-inner fade-in">
+      <div class="section-label">Why we stay small</div>
       <h2>This is not mass tourism.</h2>
-      <blockquote>We take 9 people at a time — enough to fit around a family's table without turning it into a show. No staged performances, no gift shops — just real work and real meals with the people whose land you worked.</blockquote>
+      <blockquote>We take 6&ndash;10 people at a time — enough to fit around a family's table without turning it into a show. No staged performances, no gift shops — just real work and real meals with the people whose land you worked that day.</blockquote>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <div class="contact-head fi">
-      <div class="palmette-row">
-        <div class="hr"></div>
-        <svg width="36" height="27" style="color:var(--gold)"><use href="#palm"/></svg>
-        <div class="hr"></div>
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="section-inner">
+      <div class="section-label fade-in">Investment</div>
+      <h2 class="fade-in">Priced around your trip.</h2>
+      <p class="pricing-intro fade-in">There's no flat rate — your price depends on how many days you stay and which experiences you choose. Tell us your picks and we'll send a custom, all-inclusive quote.</p>
+      <div class="pricing-card fade-in">
+        <ul class="pricing-includes">
+          <li>Accommodation for your full stay</li>
+          <li>All meals (breakfast, lunch, dinner)</li>
+          <li>Every experience you select</li>
+          <li>Guided Etruscan site visits</li>
+          <li>Transport from Rome or Viterbo</li>
+          <li>All local transfers</li>
+          <li>English-speaking host throughout</li>
+        </ul>
+        <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
       </div>
-      <div class="eyebrow">Step 2 &middot; Your details</div>
+      <a href="#contact" class="cta-button pricing-cta">Get Your Custom Quote</a>
+    </div>
+  </section>
+
+  <!-- Contact / Form submit -->
+  <section class="contact" id="contact">
+    <div class="contact-header fade-in">
+      <svg class="etruscan-ornament" width="45" height="34" style="color:var(--gold); margin-bottom:1rem"><use href="#palmette"/></svg>
+      <div class="section-label">Step 2 &middot; Your details</div>
       <h2>Tell us about your trip.</h2>
-      <div class="contact-divider"></div>
-      <p>Select your activities above, then send us your details. We'll build a custom quote based on what you've chosen and get back to you within a few days.</p>
+      <div class="divider"></div>
+      <p>We'll build a custom all-inclusive package around your selections above and send a quote within a few days.</p>
     </div>
 
-    <div class="cform fi">
-      <div class="sel-summary" id="sel-summary">
-        <span class="lbl">Your Selected Experiences</span>
-        <span class="sel-empty">Click the activities above to select them</span>
+    <div class="contact-form fade-in">
+      <div class="selected-activities-summary" id="activities-summary">
+        <span class="summary-label">Your Selected Experiences</span>
+        <span class="no-selection">Click the activities above to select them</span>
       </div>
 
-      <input type="hidden" name="selected_activities" id="hidden-acts" value="">
+      <input type="hidden" name="selected_activities" id="hidden-activities" value="">
       <input type="hidden" name="_subject" value="New RASNA expedition inquiry">
 
-      <div class="frow">
-        <div class="fg">
-          <label for="nm">Your name</label>
-          <input type="text" id="nm" name="name" required placeholder="Full name">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" required placeholder="Full name">
         </div>
-        <div class="fg">
-          <label for="em">Email</label>
-          <input type="email" id="em" name="email" required placeholder="your@email.com">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
         </div>
       </div>
 
-      <div class="frow">
-        <div class="fg">
-          <label for="gs">Number of guests</label>
-          <select id="gs" name="guests" required>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="guests">Number of guests</label>
+          <select id="guests" name="guests" required>
             <option value="">Select...</option>
-            <option>2</option><option>3</option><option>4</option>
-            <option>5</option><option>6</option><option>7</option>
-            <option>8</option><option>9</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
           </select>
         </div>
-        <div class="fg">
-          <label for="dt">Preferred dates / month</label>
-          <input type="text" id="dt" name="preferred_dates" placeholder="e.g. October 2026, flexible">
+        <div class="form-group">
+          <label for="dates">Preferred dates / month</label>
+          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. October 2026, flexible">
         </div>
       </div>
 
-      <div class="fg">
-        <label for="nt">Anything else we should know?</label>
-        <textarea id="nt" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
+      <div class="form-group">
+        <label for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
       </div>
 
-      <div class="submit-wrap">
-        <button type="submit" class="sbtn" id="sbtn" disabled>Select at least one experience to continue</button>
+      <div class="form-submit">
+        <button type="submit" class="submit-btn" id="submit-btn" disabled>Select at least one experience to continue</button>
       </div>
     </div>
 
-    <div class="success-msg" id="ok-msg">
-      <h3>Grazie.</h3>
-      <p>We've received your selections. We'll put together a personalized quote and be in touch within a few days.</p>
+    <div class="success-message" id="success-message">
+      <h3>Grazie!</h3>
+      <p>We've received your selections. We'll put together a personalized quote and get back to you within a few days with your all-inclusive package and payment link.</p>
     </div>
 
-    <a href="mailto:nikolai.fissenko1@gmail.com" class="email-alt">or email us directly: nikolai.fissenko1@gmail.com</a>
+    <a href="mailto:nikolai.fissenko1@gmail.com" class="email-link">or email us directly: nikolai.fissenko1@gmail.com</a>
   </section>
 
   </form>
 
-  <footer>Rasna &mdash; Blera, Italia</footer>
+  <footer>
+    <span>Rasna &mdash; Blera, Italia</span>
+  </footer>
 
   <script>
-    const sel = new Set();
+    const selectedActivities = new Set();
 
-    function toggleCard(c) {
-      const a = c.dataset.activity;
-      c.classList.toggle('selected');
-      sel.has(a) ? sel.delete(a) : sel.add(a);
-      sync();
+    function toggleCard(card) {
+      const activity = card.dataset.activity;
+      card.classList.toggle('selected');
+      if (selectedActivities.has(activity)) {
+        selectedActivities.delete(activity);
+      } else {
+        selectedActivities.add(activity);
+      }
+      updateDisplay();
     }
 
-    function sync() {
-      const box = document.getElementById('sel-summary');
-      const hid = document.getElementById('hidden-acts');
-      const btn = document.getElementById('sbtn');
-      document.getElementById('nav-count').textContent = sel.size + ' selected';
-      if (sel.size === 0) {
-        box.innerHTML = '<span class="lbl">Your Selected Experiences</span><span class="sel-empty">Click the activities above to select them</span>';
-        hid.value = ''; btn.disabled = true;
+    function updateDisplay() {
+      const summary = document.getElementById('activities-summary');
+      const hidden = document.getElementById('hidden-activities');
+      const btn = document.getElementById('submit-btn');
+      const navCount = document.getElementById('nav-count');
+
+      navCount.textContent = selectedActivities.size + ' selected';
+
+      if (selectedActivities.size === 0) {
+        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span><span class="no-selection">Click the activities above to select them</span>';
+        hidden.value = '';
+        btn.disabled = true;
         btn.textContent = 'Select at least one experience to continue';
       } else {
-        const arr = [...sel];
-        box.innerHTML = '<span class="lbl">Your Selected Experiences</span>' + arr.join(' &middot; ');
-        hid.value = arr.join(', '); btn.disabled = false;
+        const items = Array.from(selectedActivities);
+        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span>' + items.join(' &middot; ');
+        hidden.value = items.join(', ');
+        btn.disabled = false;
         btn.textContent = 'Send My Selections →';
       }
     }
 
-    document.getElementById('xform').addEventListener('submit', function(e) {
+    document.getElementById('experience-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      if (!sel.size) return;
-      fetch(this.action, { method:'POST', body: new FormData(this), headers:{'Accept':'application/json'} })
-        .then(r => { if (r.ok) {
+      if (selectedActivities.size === 0) return;
+
+      const form = this;
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
           document.getElementById('catalog').style.display = 'none';
-          document.querySelector('.cform').style.display = 'none';
-          document.getElementById('ok-msg').style.display = 'block';
-          window.scrollTo({ top: document.getElementById('contact').offsetTop - 40, behavior:'smooth' });
-        }});
+          document.querySelector('.contact-form').style.display = 'none';
+          document.getElementById('success-message').style.display = 'block';
+          window.scrollTo({ top: document.getElementById('contact').offsetTop - 40, behavior: 'smooth' });
+        }
+      });
     });
 
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.1 });
-    document.querySelectorAll('.fi').forEach(el => io.observe(el));
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
+
 </body>
 </html>
