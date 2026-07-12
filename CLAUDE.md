@@ -12,7 +12,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 ## Standing rules (never re-ask)
 
 - Pricing: **no fixed price**. Flow is select activities → contact form → custom quote based on days + activities chosen
-- Group size: **6–10 people max**
+- Group size: **8 people max**
 - Formspree endpoint: `https://formspree.io/f/xlgynpjo`
 - Contact email: `nikolai.fissenko1@gmail.com`
 - Design language: warm editorial (cream/tufo/terracotta/gold on dark earth-tone sections), Cormorant Garamond + Inter, Etruscan meander/palmette SVG ornaments — **not** the old terra/sienna/lozenge-grid design (that version was replaced this session, see below)
