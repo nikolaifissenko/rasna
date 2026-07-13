@@ -224,6 +224,37 @@
     .way-title { font-size: 1.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.6rem; }
     .way-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.7; opacity: 0.55; color: var(--tufo); }
 
+    /* ── About / Founder ── */
+    .about { background: var(--tufo); }
+    .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.2rem; align-items: start; margin-top: 0.5rem; }
+    .about-media { position: relative; }
+    .about-photo-main {
+      width: 100%; aspect-ratio: 4 / 5;
+      background-size: cover; background-position: center;
+      box-shadow: 0 20px 40px rgba(44,30,18,0.28);
+    }
+    .about-photo-accent {
+      position: absolute; right: -1.6rem; bottom: -1.8rem;
+      width: 48%; aspect-ratio: 3 / 4;
+      background-size: cover; background-position: center top;
+      border: 6px solid var(--cream);
+      box-shadow: 0 16px 32px rgba(44,30,18,0.3);
+    }
+    .about-text .section-label { color: var(--terracotta); opacity: 0.75; }
+    .about-text p { font-size: 1.02rem; line-height: 1.85; font-weight: 300; opacity: 0.78; margin-bottom: 1.15rem; }
+    .about-text blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 500; font-style: italic; line-height: 1.5;
+      color: var(--terracotta); border-left: 3px solid var(--olive);
+      padding-left: 1.5rem; margin-top: 1.8rem;
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
+      .about-photo-accent { width: 55%; right: 0; }
+      .about-media { margin-bottom: 1.6rem; }
+    }
+
     /* ── Photo break (full-bleed chapter divider) ── */
     .photo-break {
       position: relative;
@@ -709,6 +740,7 @@
   <nav class="site-nav">
     <a href="#top" class="nav-logo">Rasna</a>
     <div class="nav-links">
+      <a href="#about">About</a>
       <a href="#catalog">Experiences</a>
       <a href="#included">Included</a>
       <a href="#pricing">Pricing</a>
@@ -764,6 +796,31 @@
       </div>
     </div>
   </section>
+
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
+  <!-- About / Founder -->
+  <section class="about" id="about">
+    <div class="section-wide">
+      <div class="about-grid">
+        <div class="about-media fade-in">
+          <div class="about-photo-main" style="background-image:url('images/about-nikolai-portrait.jpg')"></div>
+          <div class="about-photo-accent" style="background-image:url('images/about-nikolai-bar.jpg')"></div>
+        </div>
+        <div class="about-text fade-in">
+          <div class="section-label">Founder</div>
+          <h2>Born on this cliff. He never really left.</h2>
+          <p>Nikolai was born in Tarquinia and grew up in Blera until he was nine, a Russian father, a French mother, a Spanish grandfather, and a childhood split between the village and Paris. Most days meant the woods, the countryside on a bike, and the Etruscan tombs that ring the village, his actual playground. The whole town looked out for him. When relatives visited from Paris or Saint Petersburg, he was already their guide, leading them through the tombs and into Rome at nine years old.</p>
+          <p>At nine, he moved to the US with his mother, became an American citizen, and gained a stepfather from Chicago, a steady, important presence in his life growing up. He was raised steeped in the South's Black and Hispanic cultures and learning music before a last year in California. At sixteen, he chose to come back, finishing high school in Viterbo, living with his father in Blera. The same thing happened again, except now it was curiosity, not just childhood habit: friends and family would visit, and he'd show them the region and Rome, studying its history for the love of it.</p>
+          <p>College in Rome came next, political science and international relations, alongside a band and doing a thesis in jazz diplomacy. A day job that had him interact with tour companies, taken to pay the bills, after a while he started freelancing with them. It showed him something: guiding wasn't a skill he was picking up, it was something he'd been doing his whole life. He doesn't just speak the languages his guests speak, he belongs to the cultures behind them.</p>
+          <p>Rasna started with a memory. A friend reminded him how he'd once taken his Russian sister olive picking, taught a French friend to make tomato sauce, showed his American stepbrother how to make gnocchi from scratch, and how those moments meant something because they were real, not staged. That's when it clicked: a business that's a win for him (work he actually loves), a win for Blera (real support for the local economy), and a win for his guests, not another holiday, but a real, tailored slice of life here, lived alongside the people who call this place home.</p>
+          <blockquote>"I'm not showing people a culture. I'm doing what I've done since I was nine, bringing people I care about into the community I grew up in."</blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
 
   <!-- Photo break -->
   <div class="photo-break">
