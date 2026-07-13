@@ -55,6 +55,7 @@
       <symbol id="icon-spa" viewBox="0 0 24 24"><path d="M9 10 C9 8 11 8 10 6 C9 4 11 3 11 3 M14 10 C14 8 16 8 15 6 C14 4 16 3 16 3 M3 18 C6 16 8 20 12 18 C16 16 18 20 21 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-wine" viewBox="0 0 24 24"><path d="M7 3 H17 C17 8 15 11 12 11 C9 11 7 8 7 3 Z M12 11 V19 M8 21 H16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 4 L3 6 V20 L9 18 L15 20 L21 18 V4 L15 6 L9 4 Z M9 4 V18 M15 6 V20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="11" r="1.6" fill="currentColor"/></symbol>
+      <symbol id="icon-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="19" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
     </defs>
   </svg>
 
@@ -264,14 +265,70 @@
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card has-photo" style="--photo:url('images/moment-6.jpg')" data-activity="Local Festival / Sagra" onclick="toggleCard(this)">
-            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
-            <h4>Local Festivals</h4>
-            <p>Time your visit with a sagra or the famous Festa delle Cantine — the town's cellars open, and everyone eats and drinks together.</p>
-            <span class="season">Seasonal events</span>
+          <div class="activity-card" data-activity="Il Pellegrinaggio (Easter Monday)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
+            <h4>Il Pellegrinaggio</h4>
+            <p>A springtime procession through Piazza Santa Maria on Easter Monday — one of Blera's oldest living traditions.</p>
+            <span class="season">Easter Monday</span>
           </div>
 
-          <div class="activity-card" data-activity="Il Mignone Hike with Antonella &amp; Pino" onclick="toggleCard(this)">
+          <div class="activity-card" data-activity="L'Infiorata di Blera (Corpus Domini)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flower"/></svg></div>
+            <h4>L'Infiorata di Blera</h4>
+            <p>For Corpus Domini, the whole town — kids, elders, everyone — lays elaborate flower-petal carpets through the streets for the procession.</p>
+            <span class="season">Corpus Domini (May/Jun)</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/moment-6.jpg')" data-activity="Festa di San Senzia" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa di San Senzia</h4>
+            <p>Blera's co-patron saint is honored with three days of traditional food and community celebration.</p>
+            <span class="season">Jun 16&ndash;18</span>
+          </div>
+
+          <div class="activity-card" data-activity="Sagra della Coda alla Vaccinara e del Porceddu" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Coda alla Vaccinara &amp; Porceddu</h4>
+            <p>A weekend built around two hearty traditions: Roman oxtail stew and Sardinian roast suckling pig, cooked for the whole town.</p>
+            <span class="season">Jul 24&ndash;26</span>
+          </div>
+
+          <div class="activity-card" data-activity="Festa del Volontariato" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa del Volontariato</h4>
+            <p>A community festival run by Blera's volunteer associations — food, music, and the town out in force.</p>
+            <span class="season">Aug 2&ndash;4</span>
+          </div>
+
+          <div class="activity-card" data-activity="Sagra dello Stratto al Tartufo e dello Gnocco al Castrato" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Stratto al Tartufo &amp; Gnocco al Castrato</h4>
+            <p>Handmade stratti pasta with truffle and gnocchi in castrated-lamb ragù, run by Blera's horse-lovers' association in the main square.</p>
+            <span class="season">Aug 4&ndash;6</span>
+          </div>
+
+          <div class="activity-card" data-activity="Sagra delle Fettuccine al Tartufo (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Fettuccine al Tartufo</h4>
+            <p>In the hamlet of Civitella Cesi, long communal tables fill with truffle fettuccine, local meat, and live music.</p>
+            <span class="season">Aug 11&ndash;14</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/moment-6.jpg')" data-activity="Festa di Sant'Ermete &amp; Festa del Tartufo" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa di Sant'Ermete</h4>
+            <p>Blera's biggest weekend: mass and a relic procession for the patron saint, followed by fireworks, the town band, a livestock fair, ottava rima poetry, and the truffle and organic-produce festival.</p>
+            <span class="season">Last Sun of Aug</span>
+          </div>
+
+          <div class="activity-card" data-activity="Festa delle Cantine" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Festa delle Cantine</h4>
+            <p>Blera's wine cellars throw open their doors and everyone eats and drinks inside them, alongside tastings of the season's new wine and just-pressed olive oil.</p>
+            <span class="season">2nd weekend of Nov</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-mignone.jpg')" data-activity="Il Mignone Hike with Antonella &amp; Pino" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-mountain"/></svg></div>
             <h4>Il Mignone Hike</h4>
             <p>Walk the wooded banks of the Mignone river with local guides Antonella and Pino — a quieter, wilder side of the Tuscia countryside.</p>
@@ -320,7 +377,7 @@
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-coast.jpg')" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wave-sea"/></svg></div>
             <h4>Tyrrhenian Coast</h4>
             <p>Beaches and seaside towns along the coast — an easy escape for a day by the water.</p>
