@@ -5,7 +5,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 **Live URL:** https://nikolaifissenko.github.io/rasna/
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
 **File:** `index.html` (~1060 lines) + `images/` — the only things that matter
-**Dev branch:** `claude/landing-page-cf6ys0` — this session's working branch, kept in sync with `main` (both should have identical trees; push changes to both, or treat `main` as primary going forward)
+**Dev branch:** `claude/about-us-experience-updates-lqrgpa` — this session's working branch, kept in sync with `main` (both should have identical trees; push changes to both, or treat `main` as primary going forward)
 
 ---
 
@@ -19,14 +19,18 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 
 ---
 
-## Activity catalog (must match BUSINESS_PLAN.md intent, not necessarily verbatim)
+## Activity catalog (as of 2026-07-13 — now deliberately granular, not consolidated)
 
-- **Farm & Field:** Olive Harvest, Tomato & Sauce Day, Vendange (Grape Harvest), Wild Asparagus Foraging
-- **Artisan & Food:** Charcuterie Degustation with Emiliano, Cheese Making or Tasting with Davide (Civitella Cesi), Cooking in the Tradition of the Nonne
-- **Culture & Outdoors:** Etruscan Tombs & Via Clodia Walk, San Giovenale Excursion with Donkeys & Panonto, Horseback Riding (Civitella Cesi), Local Festival / Sagra
-- **Day Trips:** single card "A Day Trip, Your Way" — destination decided together with the guest, not a fixed list (Lago di Vico / Viterbo / Tarquinia / Villa Lante / coast are namedropped in the card copy and in the separate "Worth the Detour" inspirational photo gallery further down the page, but none of those are individually selectable)
+Consultant feedback pushed the catalog from a few combined cards toward one-activity-per-card, and from a single "pick a day trip" card to individually selectable destinations. Don't re-merge these without asking — it was a deliberate split.
 
-NO Hazelnut Harvest (replaced by Vendange). NO standalone Olive Oil Tasting (folded into San Giovenale card).
+- **Farm & Field:** Olive Harvest, Tomato & Sauce Day, Grape Harvest, Wild Asparagus Foraging, Mushroom Foraging
+- **Artisan & Food:** Charcuterie Tasting with Emiliano, Cheese Making or Tasting with Davide (Civitella Cesi), Pasta Making with the Nonne, Gnocchi Making with the Nonne (split from one "Traditional Cooking" card), Wine Tasting, Cantina Tour
+- **Culture & Outdoors:** Etruscan Tombs & Via Clodia Walk, San Giovenale Excursion with Donkeys & Panonto, Horseback Riding (Civitella Cesi), Local Festival / Sagra, Il Mignone Hike with Antonella & Pino, Tombaroli Experience (necropolis scavenger hunt — card copy explains who Blera's tombaroli/tomb raiders historically were)
+- **Day Trips:** now one card per destination — Lago di Vico, Viterbo, Tarquinia, Villa Lante & Palazzo Farnese, Tyrrhenian Coast, Terme dei Papi, Bulicame, Terme della Tuscia — plus a "Wherever You Want to Go" custom-request card. (The old single "A Day Trip, Your Way" card and its `.day-trip-card`/`.day-trip-thumbs` CSS are gone.)
+
+NO Hazelnut Harvest (replaced by Grape Harvest, renamed from "Vendange" per consultant feedback — English name, no French). NO standalone Olive Oil Tasting (folded into San Giovenale card). "Degustation" was replaced with plain English "Tasting" throughout (consultant asked for English wording, not Italian/French terms).
+
+User said the consultant's activity list wasn't fully relayed yet ("i dont remember what else was on the list") — expect more additions in follow-up sessions.
 
 ---
 
