@@ -226,16 +226,17 @@
 
     /* ── About / Founder ── */
     .about { background: var(--tufo); }
-    .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3.2rem; align-items: start; margin-top: 0.5rem; }
-    .about-media { display: flex; flex-direction: column; gap: 1.4rem; }
+    .about-content { max-width: 640px; margin: 0 auto; }
     .about-photo-main {
-      width: 100%; aspect-ratio: 4 / 5;
+      width: 100%; max-width: 420px; margin: 0 auto 2.6rem;
+      aspect-ratio: 4 / 5;
       background-size: cover; background-position: center;
       box-shadow: 0 20px 40px rgba(44,30,18,0.28);
     }
     .about-photo-accent {
-      width: 100%; aspect-ratio: 4 / 3;
-      background-size: cover; background-position: center top;
+      display: block;
+      width: 100%; height: auto;
+      margin: 2.6rem 0 0;
       box-shadow: 0 16px 32px rgba(44,30,18,0.3);
     }
     .about-text .section-label { color: var(--terracotta); opacity: 0.75; }
@@ -246,10 +247,6 @@
       font-weight: 500; font-style: italic; line-height: 1.5;
       color: var(--terracotta); border-left: 3px solid var(--olive);
       padding-left: 1.5rem; margin-top: 1.8rem;
-    }
-    @media (max-width: 768px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2.6rem; }
-      .about-media { margin-bottom: 1.6rem; }
     }
 
     /* ── Photo break (full-bleed chapter divider) ── */
@@ -798,13 +795,10 @@
 
   <!-- About / Founder -->
   <section class="about" id="about">
-    <div class="section-wide">
-      <div class="about-grid">
-        <div class="about-media fade-in">
-          <div class="about-photo-main" style="background-image:url('images/about-nikolai-portrait.jpg')"></div>
-          <div class="about-photo-accent" style="background-image:url('images/about-nikolai-bar.jpg')"></div>
-        </div>
-        <div class="about-text fade-in">
+    <div class="section-inner">
+      <div class="about-content fade-in">
+        <div class="about-photo-main" style="background-image:url('images/about-nikolai-portrait.jpg')"></div>
+        <div class="about-text">
           <div class="section-label">Founder</div>
           <h2>Born on this cliff. He never really left.</h2>
           <p>Nikolai was born in Tarquinia and grew up in Blera until he was nine, a Russian father, a French mother, a Spanish grandfather, and a childhood split between the village and Paris. Most days meant the woods, the countryside on a bike, and the Etruscan tombs that ring the village, his actual playground. The whole town looked out for him. When relatives visited from Paris or Saint Petersburg, he was already their guide, leading them through the tombs and into Rome at nine years old.</p>
@@ -813,6 +807,7 @@
           <p>Rasna started with a memory. A friend reminded him how he'd once taken his Russian sister olive picking, taught a French friend to make tomato sauce, showed his American stepbrother how to make gnocchi from scratch, and how those moments meant something because they were real, not staged. That's when it clicked: a business that's a win for him (work he actually loves), a win for Blera (real support for the local economy), and a win for his guests, not another holiday, but a real, tailored slice of life here, lived alongside the people who call this place home.</p>
           <blockquote>"I'm not showing people a culture. I'm doing what I've done since I was nine, bringing people I care about into the community I grew up in."</blockquote>
         </div>
+        <img class="about-photo-accent" src="images/about-nikolai-bar.jpg" alt="Nikolai">
       </div>
     </div>
   </section>
