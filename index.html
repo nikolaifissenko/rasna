@@ -520,25 +520,6 @@
       text-transform: uppercase;
     }
 
-    /* ── Day trip card (wide, always-visible photo strip) ── */
-    .day-trip-card { grid-column: 1 / -1; }
-    .day-trip-card h4 { padding-right: 0; }
-    .day-trip-thumbs {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 0.5rem;
-      margin-top: 1.1rem;
-    }
-    .day-trip-thumbs div {
-      aspect-ratio: 1;
-      background-size: cover;
-      background-position: center;
-      border: 1px solid rgba(140,123,102,0.25);
-    }
-    @media (max-width: 600px) {
-      .day-trip-thumbs { grid-template-columns: repeat(3, 1fr); }
-    }
-
     /* ── What's included ── */
     .what-you-get { background: var(--tufo); }
     .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2rem; }
@@ -727,6 +708,10 @@
       <symbol id="icon-tombpath" viewBox="0 0 24 24"><path d="M3 20 C7 16 9 16 12 12 C15 8 17 8 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="3" cy="20" r="1.6" fill="currentColor"/><circle cx="21" cy="4" r="1.6" fill="currentColor"/></symbol>
       <symbol id="icon-wave-sea" viewBox="0 0 24 24"><path d="M2 16 C5 14 7 18 10 16 C13 14 15 18 18 16 C20 15 21 16 22 17 M2 20 C5 18 7 22 10 20 C13 18 15 22 18 20 C20 19 21 20 22 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
       <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22 C12 22 19 14.5 19 9 C19 5.1 15.9 2 12 2 C8.1 2 5 5.1 5 9 C5 14.5 12 22 12 22 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="icon-mushroom" viewBox="0 0 24 24"><path d="M4 11 C4 6 8 3 12 3 C16 3 20 6 20 11 C20 12.1 19.1 12 18 12 H6 C4.9 12 4 12.1 4 11 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12 V18 C9 19.7 10.3 21 12 21 C13.7 21 15 19.7 15 18 V12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-spa" viewBox="0 0 24 24"><path d="M9 10 C9 8 11 8 10 6 C9 4 11 3 11 3 M14 10 C14 8 16 8 15 6 C14 4 16 3 16 3 M3 18 C6 16 8 20 12 18 C16 16 18 20 21 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-wine" viewBox="0 0 24 24"><path d="M7 3 H17 C17 8 15 11 12 11 C9 11 7 8 7 3 Z M12 11 V19 M8 21 H16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 4 L3 6 V20 L9 18 L15 20 L21 18 V4 L15 6 L9 4 Z M9 4 V18 M15 6 V20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="11" r="1.6" fill="currentColor"/></symbol>
     </defs>
   </svg>
 
@@ -873,6 +858,13 @@
             <span class="season">Mar &ndash; Jun</span>
           </div>
 
+          <div class="activity-card" data-activity="Mushroom Foraging" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-mushroom"/></svg></div>
+            <h4>Mushroom Foraging</h4>
+            <p>Head into the Tuscia woods after the autumn rains to hunt porcini and other wild mushrooms with a local forager, then cook the day's find together.</p>
+            <span class="season">Sep &ndash; Nov</span>
+          </div>
+
         </div>
       </div>
 
@@ -894,10 +886,31 @@
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card has-photo" style="--photo:url('images/card-nonne.jpg')" data-activity="Cooking in the Tradition of the Nonne" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-nonne.jpg')" data-activity="Pasta Making with the Nonne" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
-            <h4>Traditional Cooking</h4>
-            <p>Cook a meal the way it's been done for generations — handmade pasta, wood-fired panonto, seasonal recipes from the territory.</p>
+            <h4>Pasta Making</h4>
+            <p>Roll, cut, and shape fresh pasta by hand with a local nonna, using recipes passed down for generations.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-nonne.jpg')" data-activity="Gnocchi Making with the Nonne" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Gnocchi Making</h4>
+            <p>Learn to shape potato gnocchi the traditional way with a local nonna, then sit down to eat what you made.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Wine Tasting" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Wine Tasting</h4>
+            <p>A guided tasting of local Tuscia wines, poured by the people who make them.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Cantina Tour" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Cantina Tour</h4>
+            <p>Step into a working wine cellar and see how the region's wine is actually made, any time of year.</p>
             <span class="season">Year-round</span>
           </div>
 
@@ -936,6 +949,20 @@
             <span class="season">Seasonal events</span>
           </div>
 
+          <div class="activity-card" data-activity="Il Mignone Hike with Antonella &amp; Pino" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-mountain"/></svg></div>
+            <h4>Il Mignone Hike</h4>
+            <p>Walk the wooded banks of the Mignone river with local guides Antonella and Pino — a quieter, wilder side of the Tuscia countryside.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Tombaroli Experience: Necropolis Scavenger Hunt" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-map"/></svg></div>
+            <h4>Tombaroli Scavenger Hunt</h4>
+            <p>For generations, Blera's tombaroli dug through these necropoli by night, hunting Etruscan treasure long before archaeologists ever arrived. We turn their legend into a game: a guided scavenger hunt through the tombs, following clues the way they once followed rumors.</p>
+            <span class="season">Year-round</span>
+          </div>
+
         </div>
       </div>
 
@@ -943,18 +970,67 @@
         <div class="category-header"><h3>Day Trips</h3><div class="rule"></div></div>
         <div class="activity-grid">
 
-          <div class="activity-card day-trip-card" data-activity="Day Trip (planned together)" onclick="toggleCard(this)">
-            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-pin"/></svg></div>
-            <h4>A Day Trip, Your Way</h4>
-            <p>Lago di Vico, Viterbo, Tarquinia, Villa Lante, the Tyrrhenian coast, or somewhere else entirely — tell us what interests you and we'll plan the day together.</p>
+          <div class="activity-card" data-activity="Day Trip: Lago di Vico" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-lake"/></svg></div>
+            <h4>Lago di Vico</h4>
+            <p>A volcanic lake ringed by forest in the Cimini mountains — swim, hike, or just take in the view.</p>
             <span class="season">Year-round</span>
-            <div class="day-trip-thumbs">
-              <div style="background-image:url('images/trip-3.jpg')"></div>
-              <div style="background-image:url('images/trip-2.jpg')"></div>
-              <div style="background-image:url('images/trip-4.jpg')"></div>
-              <div style="background-image:url('images/trip-6.jpg')"></div>
-              <div style="background-image:url('images/trip-1.jpg')"></div>
-            </div>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/trip-3.jpg')" data-activity="Day Trip: Viterbo" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-castle"/></svg></div>
+            <h4>Viterbo</h4>
+            <p>The medieval papal city — thermal baths, a stunning stone old quarter, and some of the best food in the Tuscia.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/trip-4.jpg')" data-activity="Day Trip: Tarquinia" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
+            <h4>Tarquinia</h4>
+            <p>UNESCO-listed Etruscan painted tombs and a hilltop town overlooking the sea.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/trip-2.jpg')" data-activity="Day Trip: Villa Lante &amp; Palazzo Farnese" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-castle"/></svg></div>
+            <h4>Villa Lante &amp; Palazzo Farnese</h4>
+            <p>Renaissance water gardens and one of Italy's great fortified palaces, both a short drive away.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wave-sea"/></svg></div>
+            <h4>Tyrrhenian Coast</h4>
+            <p>Beaches and seaside towns along the coast — an easy escape for a day by the water.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Terme dei Papi" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-spa"/></svg></div>
+            <h4>Terme dei Papi</h4>
+            <p>A thermal spa resort just outside Viterbo, fed by the same volcanic springs the popes once soaked in.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Bulicame" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-spa"/></svg></div>
+            <h4>Bulicame</h4>
+            <p>A free, open-air sulfur hot spring outside Viterbo — steaming pools mentioned by Dante himself.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Terme della Tuscia" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-spa"/></svg></div>
+            <h4>Terme della Tuscia</h4>
+            <p>Another of the Tuscia's thermal spots — tell us your pace and we'll pick the right one for the day.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Wherever You Want to Go" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-pin"/></svg></div>
+            <h4>Wherever You Want to Go</h4>
+            <p>Have somewhere else in mind? Tell us in the notes and we'll build the day around it.</p>
+            <span class="season">Year-round</span>
           </div>
 
         </div>
