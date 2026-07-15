@@ -46,6 +46,8 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **A nice exception worth flagging — Renzo's leather/bag-making session:** this one could realistically run at **little or no hosting cost to us**, since guests are likely to purchase his goods after seeing how they're made — meaning he benefits directly from hosting, without needing a separate fee. This is the kind of win-win arrangement worth replicating wherever possible (it's also a good model to discuss with other artisans/producers — e.g. whether a tasting that leads to a sale could substitute for, or reduce, a hosting fee).
 
+**TerraArte (sculpture park aperitivo/lunch) — confirmed pricing structure:** €10/person + a flat €50 fee to the owner per group (independent of group size). For a group of 8: 8×€10 + €50 = **€130 total, ≈€16.25/guest all-in**. See `CONTATTI_LOCALI.md` for details — status still DA VALIDARE.
+
 ## 2. Group economics
 
 Assume groups of **8 guests** average (range 6–10 — small enough to stay intimate, large enough to be efficient):

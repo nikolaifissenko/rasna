@@ -22,6 +22,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
+| TerraArte | Parco delle sculture — aperitivo/pranzo nell'uliveto | DA VALIDARE — €10/persona + €50 fisso per il proprietario |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -109,3 +110,13 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
+- **Portion planning:** budget ~100g of charcuterie per person for the degustazione (generous tasting across 3–4 varieties, not a full meal) → for a max group of 8, that's ~800g; round up to **1kg** to allow for variety and seconds. Confirm with Emiliano what mix of salumi he'd serve at that quantity.
+
+### TERRAARTE (art park — aperitivo/lunch in the olive grove)
+- **Tel:** (in rubrica)
+- **Attività:** Visita al parco delle sculture + aperitivo o pranzo servito nell'uliveto
+- **Stato:** DA VALIDARE
+- **Costo:**
+  - €10 a persona (guest price)
+  - **+€50 flat fee per il proprietario** (host fee, per gruppo, indipendente dal numero di ospiti)
+- **Note:** per un gruppo di 8, costo totale attività ≈ €80 (8×€10) + €50 = **€130** → ~€16.25/persona all-in. Da confermare cosa include esattamente l'aperitivo/pranzo per quel prezzo.
