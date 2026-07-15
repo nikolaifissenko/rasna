@@ -21,6 +21,16 @@ Assume a 4-day / 3-night small-group package: seasonal activity (e.g., tomato sa
 
 Recommended starting price: **€1,400/guest, all-inclusive** — covers lodging, all meals (whether at partner restaurants or with local families), guiding/transport during the trip, and all activity/artisan fees. The guest's only extra cost is getting to/from Blera and personal spending (souvenirs, drinks beyond what's included, etc.). All-inclusive pricing is also a strong selling point for this type of niche travel — guests don't want to do logistics, they want to show up and be taken care of.
 
+**Margin at each end of the range** (against the ~€720/guest cost baseline below — this is profit-inclusive pricing, not a break-even range):
+
+| Price point | Cost/guest | Profit/guest | Margin |
+|---|---|---|---|
+| €1,300 (low end) | €720 | €580 | 44.6% |
+| €1,400 (recommended anchor) | €720 | €680 | 48.6% |
+| €1,800 (high end) | €720 | €1,080 | 60% |
+
+Even the bottom of the range clears a healthy ~45% margin — the range published on the landing page (`index.html`, Section "Investment") is not a floor-to-survive number, it's a floor-to-profit number.
+
 **Note on licensing — informal "Nonna's house" cooking classes:** this is the heart of the experience, but it's also exactly the kind of activity Italian food-safety/tourism rules are designed to regulate (cooking for paying foreign guests in a private home, repeatedly, as part of a commercial package). "Informal" works for a one-off favor between friends — once you're charging guests as part of a paid product, it stops being informal in the eyes of the law, even if it feels casual on the day.
 
 Two practical paths, to weigh with a local commercialista in Phase 4:
