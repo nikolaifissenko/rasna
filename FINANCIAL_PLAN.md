@@ -164,3 +164,9 @@ Rasna sells the trip **all-inclusive — all meals plus lodging** are already bu
 - Olive harvest: €80–110/person, consistent with regional comparables
 
 Stacking 4–5 of these across a 4-day trip is easily **€300+ in comparable market value alone** — before lodging, meals, guiding, or transport, all of which the €1,400 all-inclusive price also covers. That's a strong data point for defending the price point against "why so expensive" pushback.
+
+## 9. Day-trip entry costs
+
+| Day trip | Entry cost/person | Note |
+|---|---|---|
+| Terme della Tuscia (thermal baths) | **€14 weekdays / €20 prefestivi & festivi** (day before public holidays and public holidays) | Only thermal-baths option kept on the landing page — Terme dei Papi and Bulicame removed from the day-trip roster |

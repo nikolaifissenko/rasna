@@ -11,454 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --tufo:       #E5D8C2;
-      --terracotta: #B8593E;
-      --earth:      #2C1E12;
-      --gold:       #C4A265;
-      --stone:      #8C7B66;
-      --cream:      #F2EBDD;
-      --deep:       #160F09;
-      --olive:      #5C6B3C;
-      --rust:       #9B3D2B;
-      --card-bg:    #FBF7EF;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--earth);
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3, h4, .pricing-amount {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      min-height: 92vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      background: radial-gradient(ellipse at 50% 0%, #2a1c10 0%, var(--deep) 60%);
-      color: var(--tufo);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 15% 85%, rgba(92,107,60,0.18) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 15%, rgba(184,89,62,0.15) 0%, transparent 50%);
-      pointer-events: none;
-    }
-
-    .hero-content { position: relative; z-index: 1; max-width: 720px; }
-
-    .hero .subtitle {
-      font-size: clamp(0.72rem, 1.2vw, 0.85rem);
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-      font-weight: 600;
-      opacity: 0.5;
-      color: var(--gold);
-    }
-
-    .hero .divider { width: 50px; height: 1px; background: var(--gold); margin: 1.8rem auto; opacity: 0.45; }
-
-    .hero h1 {
-      font-size: clamp(3.4rem, 9vw, 7.5rem);
-      font-weight: 600;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      margin-bottom: 0.4em;
-      color: var(--gold);
-      text-shadow: 0 2px 24px rgba(196,162,101,0.25);
-    }
-
-    .hero .tagline {
-      font-size: clamp(1.05rem, 2vw, 1.3rem);
-      font-weight: 300;
-      letter-spacing: 0.01em;
-      line-height: 1.75;
-      opacity: 0.85;
-      max-width: 32em;
-      margin: 0 auto;
-    }
-
-    .hero .motto {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
-      font-style: italic;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      color: var(--gold);
-      opacity: 0.9;
-      margin-top: 1.6rem;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin-top: 2.5rem;
-      padding: 1.05rem 2.8rem;
-      border: 1.5px solid var(--gold);
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      cursor: pointer;
-      background: transparent;
-      font-family: 'Inter', sans-serif;
-    }
-    .cta-button:hover { background: var(--gold); color: var(--deep); }
-
-    /* ── Sticky nav ── */
-    .site-nav {
-      position: sticky; top: 0; z-index: 50;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0.9rem 1.6rem;
-      background: rgba(22,15,9,0.94);
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(196,162,101,0.15);
-    }
-    .site-nav .nav-logo {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.1em;
-      color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600;
-    }
-    .site-nav .nav-links { display: flex; align-items: center; gap: 1.6rem; }
-    .site-nav .nav-links a {
-      color: var(--tufo); opacity: 0.65; text-decoration: none;
-      font-size: 0.76rem; letter-spacing: 0.05em; text-transform: uppercase; transition: opacity 0.2s;
-    }
-    .site-nav .nav-links a:hover { opacity: 1; }
-    .site-nav .nav-cta { display: flex; align-items: center; gap: 0.9rem; }
-    .site-nav .nav-count { font-size: 0.72rem; color: var(--gold); opacity: 0.85; white-space: nowrap; }
-    .site-nav .nav-btn {
-      padding: 0.5rem 1.1rem; border: 1px solid var(--gold); color: var(--gold);
-      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-      text-decoration: none; transition: all 0.25s; white-space: nowrap;
-    }
-    .site-nav .nav-btn:hover { background: var(--gold); color: var(--deep); }
-    @media (max-width: 820px) { .site-nav .nav-links { display: none; } }
-    @media (max-width: 480px) { .site-nav .nav-count { display: none; } }
-
-    section[id], .category[id] { scroll-margin-top: 78px; }
-
-    /* ── Catalog quick nav ── */
-    .catalog-quicknav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3rem; }
-    .catalog-quicknav a {
-      padding: 0.5rem 1.1rem; border: 1px solid rgba(140,123,102,0.3); border-radius: 999px;
-      color: var(--earth); text-decoration: none; font-size: 0.78rem; opacity: 0.75; transition: all 0.2s;
-    }
-    .catalog-quicknav a:hover { border-color: var(--terracotta); color: var(--terracotta); opacity: 1; }
-
-    /* ── Trip stats (merged into What's Included) ── */
-    .trip-stats {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; text-align: center;
-      margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid rgba(140,123,102,0.25);
-    }
-
-    /* ── Etruscan borders ── */
-    .etruscan-border, .etruscan-border-dark {
-      height: 26px;
-      display: flex; justify-content: center; align-items: center; overflow: hidden;
-    }
-    .etruscan-border { background: var(--cream); }
-    .etruscan-border-dark { background: var(--deep); }
-    .etruscan-border svg, .etruscan-border-dark svg { height: 26px; width: 100%; }
-
-    .etruscan-ornament { display: block; margin: 0 auto; opacity: 0.25; }
-    .hero .etruscan-ornament { opacity: 0.15; }
-
-    .etruscan-corner { position: absolute; opacity: 0.06; }
-    .etruscan-corner.top-left { top: 2rem; left: 2rem; }
-    .etruscan-corner.top-right { top: 2rem; right: 2rem; transform: scaleX(-1); }
-    .etruscan-corner.bottom-left { bottom: 2rem; left: 2rem; transform: scaleY(-1); }
-    .etruscan-corner.bottom-right { bottom: 2rem; right: 2rem; transform: scale(-1); }
-
-    /* ── Sections ── */
-    section { padding: 5.5rem 2rem; }
-    .section-inner { max-width: 740px; margin: 0 auto; }
-    .section-wide { max-width: 1080px; margin: 0 auto; }
-
-    .section-label {
-      font-size: 0.7rem; letter-spacing: 0.38em; text-transform: uppercase;
-      color: var(--stone); margin-bottom: 1.1rem; font-weight: 600;
-    }
-
-    section h2 {
-      font-size: clamp(2rem, 4vw, 2.9rem);
-      font-weight: 500; line-height: 1.2; margin-bottom: 1.1rem; color: var(--earth);
-    }
-
-    section > .section-wide > p, section > .section-inner > p {
-      font-size: 1.02rem; line-height: 1.85; font-weight: 300; opacity: 0.78;
-    }
-
-    /* ── 3 Ways ── */
-    .three-ways { background: var(--deep); color: var(--tufo); }
-    .three-ways .section-label { color: var(--gold); opacity: 0.55; text-align: center; }
-    .three-ways h2 { color: var(--tufo); text-align: center; }
-    .three-ways > .section-wide > p { text-align: center; max-width: 600px; margin: 0 auto; }
-
-    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 2.8rem; }
-
-    .way-card {
-      border: 1px solid rgba(196,162,101,0.18);
-      padding: 2.2rem 1.6rem;
-      text-align: center;
-      background: rgba(196,162,101,0.03);
-      transition: border-color 0.3s, background 0.3s;
-    }
-    .way-card:hover { border-color: rgba(196,162,101,0.4); background: rgba(196,162,101,0.06); }
-
-    .way-icon { width: 44px; height: 44px; margin: 0 auto 1rem; color: var(--gold); opacity: 0.85; }
-    .way-title { font-size: 1.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.6rem; }
-    .way-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.7; opacity: 0.55; color: var(--tufo); }
-
-    /* ── Catalog ── */
-    .catalog { background: var(--cream); }
-
-    .catalog-intro { text-align: center; margin-bottom: 3rem; }
-    .catalog-intro p { max-width: 600px; margin: 0.8rem auto 0; }
-
-    .category { margin-bottom: 3.2rem; }
-
-    .category-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .category-header h3 {
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--earth);
-      white-space: nowrap;
-    }
-
-    .category-header .rule {
-      flex: 1;
-      height: 1px;
-      background: repeating-linear-gradient(90deg, var(--terracotta) 0, var(--terracotta) 6px, transparent 6px, transparent 11px);
-      opacity: 0.5;
-    }
-
-    .activity-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 1.1rem;
-    }
-
-    .activity-card {
-      background: var(--card-bg);
-      border: 1.5px solid var(--tufo);
-      padding: 1.6rem;
-      cursor: pointer;
-      transition: all 0.25s;
-      position: relative;
-      user-select: none;
-    }
-
-    .activity-card:hover {
-      border-color: var(--gold);
-      box-shadow: 0 8px 28px rgba(44,30,18,0.1);
-      transform: translateY(-2px);
-    }
-
-    .activity-card.selected {
-      border-color: var(--terracotta);
-      background: #FBEFE6;
-      box-shadow: 0 8px 28px rgba(184,89,62,0.16);
-    }
-
-    .activity-card.selected::after {
-      content: '\2713';
-      position: absolute; top: 14px; right: 14px;
-      background: var(--terracotta); color: #fff;
-      width: 24px; height: 24px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 0.78rem; font-weight: 700;
-    }
-
-    .activity-card .icon-badge {
-      width: 38px; height: 38px;
-      border-radius: 50%;
-      background: rgba(184,89,62,0.1);
-      display: flex; align-items: center; justify-content: center;
-      margin-bottom: 0.9rem;
-      color: var(--terracotta);
-    }
-    .activity-card .icon-badge svg { width: 20px; height: 20px; }
-
-    .activity-card h4 {
-      font-size: 1.22rem; font-weight: 600;
-      margin-bottom: 0.45rem; color: var(--earth); padding-right: 1.5rem;
-    }
-
-    .activity-card p {
-      font-size: 0.88rem; color: var(--earth); opacity: 0.65;
-      font-weight: 300; line-height: 1.65; margin-bottom: 0.8rem;
-    }
-
-    .activity-card .season {
-      display: inline-block;
-      font-size: 0.66rem; font-weight: 600;
-      color: var(--olive);
-      background: rgba(92,107,60,0.12);
-      padding: 0.25rem 0.65rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    /* ── What's included ── */
-    .what-you-get { background: var(--tufo); }
-    .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-top: 2rem; }
-    .included-item { padding: 1.5rem; background: rgba(245,240,232,0.6); border-left: 3px solid var(--terracotta); }
-    .included-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--earth); }
-    .included-item p { font-size: 0.83rem; line-height: 1.6; opacity: 0.62; }
-
-    /* ── Trip stats item ── */
-    .detail-item .detail-value { font-size: 1.7rem; font-weight: 500; color: var(--terracotta); margin-bottom: 0.2rem; }
-    .detail-item .detail-label { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
-
-    /* ── Pricing ── */
-    .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
-    .pricing .section-label { color: var(--gold); opacity: 0.5; }
-    .pricing h2 { color: var(--tufo); }
-    .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
-    .pricing-amount { font-size: clamp(2.1rem, 6vw, 3.4rem); font-weight: 500; color: var(--gold); margin-bottom: 0.2rem; white-space: nowrap; }
-    .pricing-amount span { font-size: 1.2rem; opacity: 0.5; }
-    .pricing-per { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.4; margin-bottom: 1.6rem; }
-    .pricing-includes { list-style: none; text-align: left; font-size: 0.85rem; font-weight: 300; opacity: 0.62; }
-    .pricing-includes li { padding: 0.5rem 0; border-bottom: 1px solid rgba(196,162,101,0.08); padding-left: 1.2rem; position: relative; }
-    .pricing-includes li:last-child { border-bottom: none; }
-    .pricing-includes li::before { content: ''; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; background: var(--terracotta); border-radius: 50%; transform: translateY(-50%); }
-    .pricing-note { margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.3; font-style: italic; }
-
-    /* ── Philosophy ── */
-    .philosophy { background: var(--cream); }
-    .philosophy blockquote {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-      font-weight: 500; font-style: italic; line-height: 1.5;
-      color: var(--terracotta); border-left: 3px solid var(--olive);
-      padding-left: 1.5rem; margin: 1.5rem 0;
-    }
-
-    /* ── Form / Contact ── */
-    .contact { background: var(--deep); color: var(--tufo); padding: 6rem 2rem 4rem; }
-    .contact-header { text-align: center; max-width: 600px; margin: 0 auto; }
-    .contact h2 { color: var(--gold); font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 500; }
-    .contact-header p { opacity: 0.55; font-size: 0.95rem; font-weight: 300; }
-    .contact .section-label { color: var(--gold); opacity: 0.55; text-align: center; }
-    .contact .divider { width: 40px; height: 1px; background: var(--gold); margin: 1.5rem auto; opacity: 0.25; }
-
-    .contact-form { max-width: 560px; margin: 2.5rem auto 0; text-align: left; }
-
-    .selected-activities-summary {
-      background: rgba(184,89,62,0.1);
-      border: 1px solid rgba(184,89,62,0.25);
-      padding: 1.1rem 1.2rem;
-      margin-bottom: 1.4rem;
-      font-size: 0.88rem; font-weight: 300; color: var(--tufo); opacity: 0.9;
-    }
-    .selected-activities-summary .summary-label {
-      font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--gold); display: block; margin-bottom: 0.4rem; opacity: 0.8;
-    }
-    .no-selection { opacity: 0.4; font-style: italic; }
-    .no-selection a { color: var(--gold); }
-
-    .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .contact-form .form-group { margin-bottom: 1.2rem; }
-
-    .contact-form label {
-      display: block; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
-      color: var(--stone); margin-bottom: 0.5rem; font-weight: 600;
-    }
-
-    .contact-form input, .contact-form textarea, .contact-form select {
-      width: 100%; padding: 0.85rem 1rem;
-      background: rgba(232,220,200,0.06);
-      border: 1px solid rgba(196,162,101,0.25);
-      color: var(--tufo);
-      font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 300;
-      outline: none; transition: border-color 0.3s;
-    }
-    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--gold); }
-    .contact-form textarea { resize: vertical; min-height: 90px; }
-    .contact-form select option { background: var(--deep); color: var(--tufo); }
-
-    .form-submit { text-align: center; margin-top: 1.8rem; }
-    .form-submit .submit-btn {
-      width: 100%; padding: 1.1rem;
-      background: var(--terracotta); color: #fff; border: none;
-      font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 600;
-      letter-spacing: 0.15em; text-transform: uppercase;
-      cursor: pointer; transition: background 0.25s;
-    }
-    .form-submit .submit-btn:hover { background: var(--rust); }
-    .form-submit .submit-btn:disabled { background: #5a4a3a; cursor: not-allowed; opacity: 0.6; }
-
-    .contact .email-link {
-      display: block; text-align: center; margin-top: 2rem;
-      color: var(--gold); text-decoration: none; font-size: 0.8rem; opacity: 0.4; letter-spacing: 0.05em;
-    }
-
-    .success-message {
-      display: none;
-      text-align: center;
-      max-width: 560px;
-      margin: 2.5rem auto 0;
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(196,162,101,0.25);
-      background: rgba(196,162,101,0.04);
-    }
-    .success-message h3 { color: var(--gold); font-size: 1.8rem; font-weight: 500; margin-bottom: 0.8rem; }
-    .success-message p { color: var(--tufo); opacity: 0.65; font-size: 0.95rem; font-weight: 300; }
-
-    /* ── Footer ── */
-    footer {
-      background: var(--deep);
-      border-top: 1px solid rgba(196,162,101,0.06);
-      text-align: center; padding: 1.6rem;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--stone); opacity: 0.4;
-    }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .ways-grid { grid-template-columns: 1fr; gap: 1rem; }
-    }
-    @media (max-width: 600px) {
-      section { padding: 3.5rem 1.5rem; }
-      .activity-grid { grid-template-columns: 1fr; }
-      .trip-stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
-      .included-grid { grid-template-columns: 1fr; }
-      .contact-form .form-row { grid-template-columns: 1fr; }
-      .category-header h3 { font-size: 1.3rem; }
-    }
-
-    /* ── Animations ── */
-    .fade-in { opacity: 0; transform: translateY(16px); animation: fadeInFallback 0.01s 1s forwards; transition: opacity 0.7s ease, transform 0.7s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
-    @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -498,6 +51,11 @@
       <symbol id="icon-tombpath" viewBox="0 0 24 24"><path d="M3 20 C7 16 9 16 12 12 C15 8 17 8 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="3" cy="20" r="1.6" fill="currentColor"/><circle cx="21" cy="4" r="1.6" fill="currentColor"/></symbol>
       <symbol id="icon-wave-sea" viewBox="0 0 24 24"><path d="M2 16 C5 14 7 18 10 16 C13 14 15 18 18 16 C20 15 21 16 22 17 M2 20 C5 18 7 22 10 20 C13 18 15 22 18 20 C20 19 21 20 22 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
       <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22 C12 22 19 14.5 19 9 C19 5.1 15.9 2 12 2 C8.1 2 5 5.1 5 9 C5 14.5 12 22 12 22 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="icon-mushroom" viewBox="0 0 24 24"><path d="M4 11 C4 6 8 3 12 3 C16 3 20 6 20 11 C20 12.1 19.1 12 18 12 H6 C4.9 12 4 12.1 4 11 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12 V18 C9 19.7 10.3 21 12 21 C13.7 21 15 19.7 15 18 V12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-spa" viewBox="0 0 24 24"><path d="M9 10 C9 8 11 8 10 6 C9 4 11 3 11 3 M14 10 C14 8 16 8 15 6 C14 4 16 3 16 3 M3 18 C6 16 8 20 12 18 C16 16 18 20 21 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-wine" viewBox="0 0 24 24"><path d="M7 3 H17 C17 8 15 11 12 11 C9 11 7 8 7 3 Z M12 11 V19 M8 21 H16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="icon-map" viewBox="0 0 24 24"><path d="M9 4 L3 6 V20 L9 18 L15 20 L21 18 V4 L15 6 L9 4 Z M9 4 V18 M15 6 V20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="11" r="1.6" fill="currentColor"/></symbol>
+      <symbol id="icon-flower" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="19" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="19" cy="12" r="2.6" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
       <symbol id="icon-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M12 6 L16 9 L14.5 14 L9.5 14 L8 9 Z M12 6 V3 M16 9 L19 7 M14.5 14 L17 18 M9.5 14 L7 18 M8 9 L5 7" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/></symbol>
       <symbol id="icon-sculpture" viewBox="0 0 24 24"><path d="M9 3 H15 L14 8 C14 8 16 9 16 12 C16 15 14 16 12 16 C10 16 8 15 8 12 C8 9 10 8 10 8 Z M12 16 V19 M8 21 H16 M6 21 H18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/></symbol>
       <symbol id="icon-coffee" viewBox="0 0 24 24"><path d="M4 9 H17 V15 C17 18 14.5 20 12 20 H9 C6.5 20 4 18 4 15 Z M17 10 H19 C20.5 10 21 11 21 12 C21 13 20.5 14 19 14 H17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 3 C8 4.5 9.5 4.5 9.5 6 M12 3 C12 4.5 13.5 4.5 13.5 6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></symbol>
@@ -506,8 +64,9 @@
 
   <!-- Sticky nav -->
   <nav class="site-nav">
-    <a href="#top" class="nav-logo">Rasna</a>
+    <a href="#catalog" class="nav-logo">Rasna</a>
     <div class="nav-links">
+      <a href="about.html">About</a>
       <a href="#catalog">Experiences</a>
       <a href="#included">Included</a>
       <a href="#pricing">Pricing</a>
@@ -531,7 +90,7 @@
       <div class="divider"></div>
       <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
-      <p class="tagline">Harvest olives, descend into 2,800-year-old tombs, ride horseback through ancient ruins. A hands-on expedition into the oldest part of Italy.</p>
+      <p class="tagline">This isn't a tour — it's living Blera, not just visiting it. A real, unscripted slice of a place shaped by three thousand years of history, led by someone who's called it home since he was born, sharing it with the people he loves ever since.</p>
       <p class="motto">Join a village, not a resort.</p>
       <a href="#catalog" class="cta-button">Build your expedition</a>
     </div>
@@ -544,7 +103,7 @@
     <div class="section-wide">
       <div class="section-label fade-in">How Rasna works</div>
       <h2 class="fade-in">Planning, experiencing, remembering.</h2>
-      <p class="fade-in">Pick the experiences that excite you below. We'll build an all-inclusive itinerary — lodging, meals, transport, everything — and send you a quote within days.</p>
+      <p class="fade-in">"Rasna" is what the Etruscans called themselves — the people who carved this land into volcanic rock nearly three millennia ago. We take small groups to live among what they left behind. Pick the experiences that excite you below, and we'll build an all-inclusive itinerary — lodging, meals, transport, everything — and send you a quote within days.</p>
       <div class="ways-grid fade-in">
         <div class="way-card">
           <svg class="way-icon"><use href="#icon-leaf"/></svg>
@@ -567,6 +126,15 @@
 
   <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
 
+  <!-- Photo break -->
+  <div class="photo-break">
+    <div class="photo-break-caption fade-in">
+      <p>"Blera has stood on this tufo cliff for three thousand years — and it still looks like it."</p>
+    </div>
+  </div>
+
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
   <!-- Catalog + Form -->
   <form id="experience-form" action="https://formspree.io/f/xlgynpjo" method="POST">
 
@@ -575,13 +143,14 @@
       <div class="catalog-intro fade-in">
         <div class="section-label">Step 1 &middot; Build your trip</div>
         <h2>Select your experiences.</h2>
-        <p>Click any activity to add it. Mix and match — we'll handle the rest.</p>
+        <p>Click any activity to add it to your itinerary. Mix and match across categories — we'll handle the logistics.</p>
       </div>
 
       <div class="catalog-quicknav fade-in">
         <a href="#cat-farm">Farm &amp; Field</a>
         <a href="#cat-artisan">Artisan &amp; Food</a>
         <a href="#cat-culture">Culture &amp; Outdoors</a>
+        <a href="#cat-festivals">Festivals &amp; Sagre</a>
         <a href="#cat-daytrips">Day Trips</a>
       </div>
 
@@ -589,32 +158,39 @@
         <div class="category-header"><h3>Farm &amp; Field</h3><div class="rule"></div></div>
         <div class="activity-grid">
 
-          <div class="activity-card" data-activity="Olive Harvest" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/moment-9.jpg')" data-activity="Olive Harvest" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
             <h4>Olive Harvest</h4>
             <p>Pick olives by hand and watch them pressed into fresh oil — then taste it on bruschetta, the way it's meant to be.</p>
             <span class="season">Oct &ndash; Dec</span>
           </div>
 
-          <div class="activity-card" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/moment-14.jpg')" data-activity="Tomato &amp; Sauce Day" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
             <h4>Tomato &amp; Sauce Day</h4>
             <p>Harvest tomatoes and make passata from scratch with a local family — a real Italian summer tradition.</p>
             <span class="season">August</span>
           </div>
 
-          <div class="activity-card" data-activity="Hazelnut Harvest" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/moment-7.jpg')" data-activity="Grape Harvest" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
-            <h4>Hazelnut Harvest</h4>
-            <p>The Tuscia is Italy's hazelnut heartland. Join the harvest of this prized autumn crop.</p>
-            <span class="season">Late Aug &ndash; Sep</span>
+            <h4>Grape Harvest</h4>
+            <p>Join the grape harvest in the vineyard rows — cut bunches by hand and taste the season's first pressing.</p>
+            <span class="season">Sep &ndash; Oct</span>
           </div>
 
-          <div class="activity-card" data-activity="Wild Asparagus Foraging" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-foraging.jpg')" data-activity="Wild Asparagus Foraging" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
             <h4>Wild Asparagus Foraging</h4>
             <p>Walk the Tuscia woods in spring, foraging wild asparagus — a living local Easter tradition.</p>
             <span class="season">Mar &ndash; Jun</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-mushroom.jpg')" data-activity="Mushroom Foraging" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-mushroom"/></svg></div>
+            <h4>Mushroom Foraging</h4>
+            <p>Head into the Tuscia woods after the autumn rains to hunt porcini and other wild mushrooms with a local forager, then cook the day's find together.</p>
+            <span class="season">Sep &ndash; Nov</span>
           </div>
 
         </div>
@@ -624,31 +200,45 @@
         <div class="category-header"><h3>Artisan &amp; Food</h3><div class="rule"></div></div>
         <div class="activity-grid">
 
-          <div class="activity-card" data-activity="Charcuterie Degustation with Emiliano" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-charcuterie.png')" data-activity="Charcuterie Tasting with Emiliano" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
-            <h4>Charcuterie Degustation</h4>
-            <p>Taste homemade salumi and cured meats with Emiliano — made the traditional way, right here in Blera.</p>
+            <h4>Charcuterie Tasting</h4>
+            <p>Taste local, homemade salumi and cured meats with Emiliano — made the traditional way, right here in Blera.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Cheese Making or Tasting with Davide (Civitella Cesi)" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/moment-11.png')" data-activity="Cheese Making or Tasting with Davide (Civitella Cesi)" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
             <h4>Cheese Making or Tasting</h4>
             <p>With Davide Paolocci in Civitella Cesi — go hands-on and make your own cheese, or keep it easy with a guided tasting. Your call on how involved you want to be.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Cooking in the Tradition of the Nonne" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-pasta.jpg')" data-activity="Pasta Making with the Nonne" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
-            <h4>Traditional Cooking</h4>
-            <p>Cook a meal the way it's been done for generations — handmade pasta, wood-fired panonto, seasonal recipes from the territory.</p>
+            <h4>Pasta Making</h4>
+            <p>Roll, cut, and shape fresh pasta by hand with a local nonna, using recipes passed down for generations.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Oil Tasting with Nicol&ograve;" onclick="toggleCard(this)">
-            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
-            <h4>Olive Oil Tasting</h4>
-            <p>A guided degustazione of local extra-virgin olive oils with Nicol&ograve;, straight from the grove.</p>
+          <div class="activity-card has-photo" style="--photo:url('images/card-gnocchi.jpg')" data-activity="Gnocchi Making with the Nonne" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Gnocchi Making</h4>
+            <p>Learn to shape potato gnocchi the traditional way with a local nonna, then sit down to eat what you made.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-winetasting.jpg')" data-activity="Wine Tasting" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Wine Tasting</h4>
+            <p>A guided tasting of local Tuscia wines, poured by the people who make them.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-cantinatour.jpg')" data-activity="Cantina Tour" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Cantina Tour</h4>
+            <p>Step into a working wine cellar and see how the region's wine is actually made, any time of year.</p>
             <span class="season">Year-round</span>
           </div>
 
@@ -666,25 +256,39 @@
         <div class="category-header"><h3>Culture &amp; Outdoors</h3><div class="rule"></div></div>
         <div class="activity-grid">
 
-          <div class="activity-card" data-activity="Etruscan Tombs &amp; Via Clodia Walk" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-etruscantombs.jpg')" data-activity="Etruscan Tombs &amp; Via Clodia Walk" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tomb"/></svg></div>
             <h4>Etruscan Tombs &amp; Via Clodia</h4>
             <p>Walk among rock-cut tombs carved 2,800 years ago and follow the ancient Roman road through the countryside.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-sangiovenale.jpg')" data-activity="San Giovenale Excursion with Donkeys &amp; Panonto" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
+            <h4>San Giovenale by Donkey</h4>
+            <p>Trek by donkey to the Etruscan ruins of San Giovenale, stopping along the way for panonto — wood-fired bread drizzled with fresh local olive oil.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/moment-4.jpg')" data-activity="Horseback Riding (Civitella Cesi)" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-horse"/></svg></div>
             <h4>Horseback Riding</h4>
             <p>Ride through the hills around Civitella Cesi — a beautiful way to see the landscape the slow way.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Local Festival / Sagra" onclick="toggleCard(this)">
-            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
-            <h4>Local Festivals</h4>
-            <p>Time your visit with a sagra or the famous Festa delle Cantine — the town's cellars open, and everyone eats and drinks together.</p>
-            <span class="season">Seasonal events</span>
+          <div class="activity-card has-photo" style="--photo:url('images/card-mignone.jpg')" data-activity="Il Mignone Hike with Antonella &amp; Pino" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-mountain"/></svg></div>
+            <h4>Il Mignone Hike</h4>
+            <p>Walk the wooded banks of the Mignone river with local guides Antonella and Pino — a quieter, wilder side of the Tuscia countryside.</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-tombaroli.jpg')" data-activity="Tomb Raiding: Necropolis Scavenger Hunt" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-map"/></svg></div>
+            <h4>Tomb Raiding</h4>
+            <p>Blera's tombaroli were real: for generations, locals dug through these necropoli by night, hunting Etruscan treasure long before archaeologists ever arrived. This is a scavenger hunt built on their story — you'll search the tombs and follow clues the way they once followed rumors, based on the real tomb raiders of Blera.</p>
+            <span class="season">Year-round</span>
           </div>
 
           <div class="activity-card" data-activity="Pickup Football with Locals" onclick="toggleCard(this)">
@@ -704,6 +308,76 @@
         </div>
       </div>
 
+      <div class="category fade-in" id="cat-festivals">
+        <div class="category-header"><h3>Festivals &amp; Sagre</h3><div class="rule"></div></div>
+        <div class="activity-grid">
+
+          <div class="activity-card" data-activity="Il Pellegrinaggio (Easter Monday)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
+            <h4>Il Pellegrinaggio</h4>
+            <p>A springtime procession through Piazza Santa Maria on Easter Monday — one of Blera's oldest living traditions.</p>
+            <span class="season">Easter Monday</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-infiorata.jpg')" data-activity="L'Infiorata di Blera (Corpus Domini)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flower"/></svg></div>
+            <h4>L'Infiorata di Blera</h4>
+            <p>For Corpus Domini, the whole town — kids, elders, everyone — lays elaborate flower-petal carpets through the streets for the procession.</p>
+            <span class="season">Corpus Domini (May/Jun)</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/moment-6.jpg')" data-activity="Festa di San Senzia" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa di San Senzia</h4>
+            <p>Blera's co-patron saint is honored with three days of traditional food and community celebration.</p>
+            <span class="season">Jun 16&ndash;18</span>
+          </div>
+
+          <div class="activity-card" data-activity="Sagra della Coda alla Vaccinara e del Porceddu" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Coda alla Vaccinara &amp; Porceddu</h4>
+            <p>A weekend built around two hearty traditions: Roman oxtail stew and Sardinian roast suckling pig, cooked for the whole town.</p>
+            <span class="season">Jul 24&ndash;26</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-volontariato.jpg')" data-activity="Festa del Volontariato" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa del Volontariato</h4>
+            <p>A community festival run by Blera's volunteer associations — food, music, and the town out in force.</p>
+            <span class="season">Aug 2&ndash;4</span>
+          </div>
+
+          <div class="activity-card" data-activity="Sagra dello Stratto al Tartufo e dello Gnocco al Castrato" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Stratto al Tartufo &amp; Gnocco al Castrato</h4>
+            <p>Handmade stratti pasta with truffle and gnocchi in castrated-lamb ragù, run by Blera's horse-lovers' association in the main square.</p>
+            <span class="season">Aug 4&ndash;6</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-civitellacesi.jpg')" data-activity="Sagra delle Fettuccine al Tartufo (Civitella Cesi)" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-bonfire"/></svg></div>
+            <h4>Fettuccine al Tartufo</h4>
+            <p>In the hamlet of Civitella Cesi, long communal tables fill with truffle fettuccine, local meat, and live music.</p>
+            <span class="season">Aug 11&ndash;14</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-santermete.jpg')" data-activity="Festa di Sant'Ermete &amp; Festa del Tartufo" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-festival"/></svg></div>
+            <h4>Festa di Sant'Ermete</h4>
+            <p>Blera's biggest weekend: mass and a relic procession for the patron saint, followed by fireworks, the town band, a livestock fair, ottava rima poetry, and the truffle and organic-produce festival.</p>
+            <span class="season">Last Sun of Aug</span>
+          </div>
+
+          <div class="activity-card has-photo" style="--photo:url('images/card-cantinefestival.jpg')" data-activity="Festa delle Cantine" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wine"/></svg></div>
+            <h4>Festa delle Cantine</h4>
+            <p>Blera's wine cellars throw open their doors and everyone eats and drinks inside them, alongside tastings of the season's new wine and just-pressed olive oil.</p>
+            <span class="season">2nd weekend of Nov</span>
+          </div>
+
+        </div>
+      </div>
+
       <div class="category fade-in" id="cat-daytrips">
         <div class="category-header"><h3>Day Trips</h3><div class="rule"></div></div>
         <div class="activity-grid">
@@ -711,42 +385,49 @@
           <div class="activity-card" data-activity="Day Trip: Lago di Vico" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-lake"/></svg></div>
             <h4>Lago di Vico</h4>
-            <p>A volcanic lake surrounded by forest — swim, hike, or just take in the view.</p>
+            <p>A volcanic lake ringed by forest in the Cimini mountains — swim, hike, or just take in the view.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Viterbo" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/trip-3.jpg')" data-activity="Day Trip: Viterbo" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-castle"/></svg></div>
             <h4>Viterbo</h4>
-            <p>Medieval papal city with thermal baths, a stunning old quarter, and great food.</p>
+            <p>The medieval papal city — thermal baths, a stunning stone old quarter, and some of the best food in the Tuscia.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Tarquinia" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/trip-4.jpg')" data-activity="Day Trip: Tarquinia" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-tombpath"/></svg></div>
             <h4>Tarquinia</h4>
-            <p>UNESCO-listed Etruscan painted tombs and a charming hilltop town overlooking the sea.</p>
+            <p>UNESCO-listed Etruscan painted tombs and a hilltop town overlooking the sea.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Villa Lante &amp; Palazzo Farnese" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/trip-2.jpg')" data-activity="Day Trip: Villa Lante &amp; Palazzo Farnese" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-castle"/></svg></div>
             <h4>Villa Lante &amp; Palazzo Farnese</h4>
-            <p>Renaissance gardens and one of Italy's most impressive fortified palaces, both nearby.</p>
+            <p>Renaissance water gardens and one of Italy's great fortified palaces, both a short drive away.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
+          <div class="activity-card has-photo" style="--photo:url('images/card-coast.jpg')" data-activity="Day Trip: Tyrrhenian Coast" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-wave-sea"/></svg></div>
             <h4>Tyrrhenian Coast</h4>
             <p>Beaches and seaside towns along the coast — an easy escape for a day by the water.</p>
             <span class="season">Year-round</span>
           </div>
 
-          <div class="activity-card" data-activity="Day Trip: Your Choice" onclick="toggleCard(this)">
+          <div class="activity-card" data-activity="Day Trip: Terme della Tuscia" onclick="toggleCard(this)">
+            <div class="icon-badge"><svg width="20" height="20"><use href="#icon-spa"/></svg></div>
+            <h4>Terme della Tuscia</h4>
+            <p>Soak in the Tuscia's volcanic thermal waters. &euro;14 on weekdays, &euro;20 on prefestivi/festivi (day before public holidays and public holidays).</p>
+            <span class="season">Year-round</span>
+          </div>
+
+          <div class="activity-card" data-activity="Day Trip: Wherever You Want to Go" onclick="toggleCard(this)">
             <div class="icon-badge"><svg width="20" height="20"><use href="#icon-pin"/></svg></div>
-            <h4>Your Own Day Trip</h4>
-            <p>Have somewhere else in mind? Tell us in the notes and we'll make it happen.</p>
+            <h4>Wherever You Want to Go</h4>
+            <p>Have somewhere else in mind? Tell us in the notes and we'll build the day around it.</p>
             <span class="season">Year-round</span>
           </div>
 
@@ -788,6 +469,47 @@
     </div>
   </section>
 
+  <!-- Moments gallery -->
+  <section class="moments">
+    <div class="section-inner fade-in">
+      <div class="section-label">A few moments</div>
+      <h2>What it actually looks like.</h2>
+      <div class="moments-grid">
+        <div class="moment moment-1"><div class="moment-caption">The vicoli of Blera</div></div>
+        <div class="moment moment-2"><div class="moment-caption">The path to the tombs</div></div>
+        <div class="moment moment-3"><div class="moment-caption">Inside a 2,800-year-old tomb</div></div>
+        <div class="moment moment-4"><div class="moment-caption">A local tradition, still alive</div></div>
+        <div class="moment moment-5"><div class="moment-caption">Descending into the via cava</div></div>
+        <div class="moment moment-6"><div class="moment-caption">Festa delle Cantine — the cellars open</div></div>
+        <div class="moment moment-7"><div class="moment-caption">Vendemmia — grape harvest season</div></div>
+        <div class="moment moment-8"><div class="moment-caption">Straight from the vine</div></div>
+        <div class="moment moment-9"><div class="moment-caption">Up in the olive trees</div></div>
+        <div class="moment moment-10"><div class="moment-caption">The whole grove turns out for the harvest</div></div>
+        <div class="moment moment-11"><div class="moment-caption">Fresh cheese, shaped by hand</div></div>
+        <div class="moment moment-12"><div class="moment-caption">Aging on the shelf</div></div>
+        <div class="moment moment-13"><div class="moment-caption">Passata, jarred by afternoon</div></div>
+        <div class="moment moment-14"><div class="moment-caption">Tomatoes in by the crate</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Day trips gallery -->
+  <section class="trips-gallery">
+    <div class="section-inner fade-in">
+      <div class="section-label">Worth the detour</div>
+      <h2>And when you want to range further.</h2>
+      <p>Rome is close, but so is a different world of hilltop towns, papal palaces, and Renaissance gardens — all within an easy day trip.</p>
+      <div class="trips-grid">
+        <div class="trip trip-1"><div class="trip-caption">Palazzo Farnese, Caprarola</div></div>
+        <div class="trip trip-2"><div class="trip-caption">Villa Lante's Renaissance water gardens</div></div>
+        <div class="trip trip-3"><div class="trip-caption">Palazzo dei Papi, Viterbo</div></div>
+        <div class="trip trip-4"><div class="trip-caption">Painted tombs of Tarquinia, 6th century BC</div></div>
+        <div class="trip trip-5"><div class="trip-caption">Viterbo's medieval quarter</div></div>
+        <div class="trip trip-6"><div class="trip-caption">Civita di Bagnoregio, the dying town</div></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Philosophy -->
   <section class="philosophy">
     <div class="section-inner fade-in">
@@ -803,7 +525,8 @@
   <section class="pricing" id="pricing">
     <div class="section-inner">
       <div class="section-label fade-in">Investment</div>
-      <h2 class="fade-in">Your investment. Nothing hidden.</h2>
+      <h2 class="fade-in">Priced around your trip.</h2>
+      <p class="pricing-intro fade-in">Your price depends on how many days you stay and which experiences you choose. Tell us your picks and we'll send a custom, all-inclusive quote.</p>
       <div class="pricing-card fade-in">
         <div class="pricing-amount"><span>&euro;</span>1,300&ndash;1,800</div>
         <div class="pricing-per">per person &middot; 4 days, all-inclusive &middot; varies by season &amp; group size</div>
@@ -818,6 +541,7 @@
         </ul>
         <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
       </div>
+      <a href="#contact" class="cta-button pricing-cta">Get Your Custom Quote</a>
     </div>
   </section>
 
