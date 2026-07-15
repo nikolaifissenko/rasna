@@ -60,9 +60,9 @@ These aren't separate attractions to manage — they're moments the town already
 ## 2. Why this works
 
 - **Differentiation:** most tour operators sell sights; you sell belonging and participation. Hard to replicate without genuine local ties.
-- **Two-founder fit:**
-  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community
-  - You — international audience know-how, marketing, logistics, English-speaking guest experience
+- **Founder + paid local operator:**
+  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community; **paid per service/activity she personally delivers** (same model as other local hosts — Emiliano, TerraArte, Davide, etc.), not an equity partner
+  - You — sole owner; international audience know-how, marketing, logistics, English-speaking guest experience, and full remaining profit after all activity/host fees (including Maria Grazia's) are paid
 - **Asset-light start:** no need to own property; partner with existing BnBs/hotels for lodging, and local families/artisans for the experiences themselves.
 
 ## 3. Target customers
@@ -80,9 +80,9 @@ These aren't separate attractions to manage — they're moments the town already
 ## 5. Step-by-step phases
 
 ### Phase 0 — Align with Maria Grazia (now)
-1. Have an explicit conversation: roles, decision-making, and how profits/costs are split.
-2. Agree on a simple written partnership understanding (doesn't need to be a lawyer-drafted contract yet — just a shared doc both sign off on).
-3. Define who owns what: she owns local relationships/operations on the ground, you own marketing/sales/international guest relations.
+1. Have an explicit conversation: roles, decision-making, and how she's compensated — **a paid-per-service arrangement, not a profit split.** Her pay scales with which activities/coordination tasks she personally handles on a given departure (same fee-per-activity logic as Emiliano, TerraArte, etc.), rather than a flat day rate or equity share.
+2. Agree on a simple written service agreement (doesn't need to be a lawyer-drafted contract yet — just a shared doc both sign off on) specifying what's paid for what.
+3. Define who owns what: she's the paid local operations lead — relationships/operations on the ground — you own the business, marketing/sales, and international guest relations.
 
 ### Phase 1 — Validate and design the offer (1–2 months)
 1. **Validate activities one by one before designing around them** — go through the candidate calendar above and confirm, for each: is there a real person willing to host it, what would they expect to be paid, and how often could they realistically do it? Drop or reframe anything that doesn't check out (this is where Maria Grazia's local knowledge is essential — she already flagged several to look at carefully: vendemmia, pig butchering, wheat harvest, "Nonna").
@@ -106,7 +106,7 @@ These aren't separate attractions to manage — they're moments the town already
 ### Phase 4 — Formalize the business (once you have real bookings)
 1. Choose a legal structure in Italy (and your home country if relevant) — likely a small Italian business entity (e.g., SRL or similar) with help from a local commercialista (accountant) who knows tourism.
 2. Sort out licensing/insurance for hosting tourists and food-related activities (Italy has specific rules for agriturismo / food handling / guiding — a local consultant will save you huge time here).
-3. Formalize partnership terms with Maria Grazia, BnBs, and local families/artisans (written agreements, even simple ones).
+3. Formalize service/compensation terms with Maria Grazia, BnBs, and local families/artisans (written agreements, even simple ones).
 
 ### Phase 5 — Build out the seasonal calendar (6–12 months)
 1. Add a second and third seasonal experience (e.g., olive harvest, then Christmas) using the same playbook from the pilot.

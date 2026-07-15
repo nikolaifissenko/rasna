@@ -39,7 +39,7 @@ Even the bottom of the range clears a healthy ~45% margin — the range publishe
 | €1,400 (anchor) | €907.50 | €492.50 | 35.2% |
 | €1,800 | €907.50 | €892.50 | 49.6% |
 
-Still profitable, but thinner — and whatever's left after this still gets split with Maria Grazia per the partnership agreement (Phase 0), so actual take-home per guest is smaller again. Open question to resolve in Phase 0: is founder/partner time paid off the top as a cost line (like a day rate), or only compensated through the profit split? This matters more as the day-rate estimate rises toward the €400/day end of the stated range.
+Still profitable, but thinner — and this **is** your actual take-home per guest, since Maria Grazia is paid per-activity (already inside the €720 baseline), not via a profit split. No further division needed once your own opportunity cost is accounted for above.
 
 **Note on licensing — informal "Nonna's house" cooking classes:** this is the heart of the experience, but it's also exactly the kind of activity Italian food-safety/tourism rules are designed to regulate (cooking for paying foreign guests in a private home, repeatedly, as part of a commercial package). "Informal" works for a one-off favor between friends — once you're charging guests as part of a paid product, it stops being informal in the eyes of the law, even if it feels casual on the day.
 
@@ -78,7 +78,7 @@ Assume groups of **8 guests** average (range 6–10 — small enough to stay int
 - Cost per group: 8 × €720 = **€5,760**
 - **Gross profit per group: ~€5,440**
 
-This profit is split between you and Maria Grazia per your partnership agreement (e.g., 50/50, or weighted by role/investment — to be defined in Phase 0).
+**Maria Grazia is a paid service provider, not an equity partner.** Her pay scales with the specific activities/coordination she personally delivers on a given departure (same per-activity fee model as Emiliano, TerraArte, etc. — see `CONTATTI_LOCALI.md`), and is already captured inside the "Meals & local hosting fees" and "Activity fees" lines in the €720/guest cost baseline above. There is **no 50/50 profit split** — once all activity/host fees (including hers) are paid, **the remaining ~€5,440/group profit is yours.**
 
 ## 3. Revenue projections by year (deliberately capped growth)
 
