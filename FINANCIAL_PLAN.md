@@ -31,6 +31,16 @@ Recommended starting price: **€1,400/guest, all-inclusive** — covers lodging
 
 Even the bottom of the range clears a healthy ~45% margin — the range published on the landing page (`index.html`, Section "Investment") is not a floor-to-survive number, it's a floor-to-profit number.
 
+**Accounting for founder opportunity cost (not just "sweat equity"):** the ~€720/guest cost baseline above doesn't include the value of your own time running the departure — days you can't work elsewhere. At an estimated **€300/day** (your stated €200–400/day range) × **5 days/group** (4-day trip + 1 day prep/wrap-up) = **€1,500/group ≈ €187.50/guest**, true margin looks like:
+
+| Price point | Cost (€720) + your time (€187.50) | Profit/guest | Margin |
+|---|---|---|---|
+| €1,300 | €907.50 | €392.50 | 30.2% |
+| €1,400 (anchor) | €907.50 | €492.50 | 35.2% |
+| €1,800 | €907.50 | €892.50 | 49.6% |
+
+Still profitable, but thinner — and whatever's left after this still gets split with Maria Grazia per the partnership agreement (Phase 0), so actual take-home per guest is smaller again. Open question to resolve in Phase 0: is founder/partner time paid off the top as a cost line (like a day rate), or only compensated through the profit split? This matters more as the day-rate estimate rises toward the €400/day end of the stated range.
+
 **Note on licensing — informal "Nonna's house" cooking classes:** this is the heart of the experience, but it's also exactly the kind of activity Italian food-safety/tourism rules are designed to regulate (cooking for paying foreign guests in a private home, repeatedly, as part of a commercial package). "Informal" works for a one-off favor between friends — once you're charging guests as part of a paid product, it stops being informal in the eyes of the law, even if it feels casual on the day.
 
 Two practical paths, to weigh with a local commercialista in Phase 4:
