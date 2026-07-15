@@ -114,7 +114,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Costo (stima, DA CONFERMARE con preventivo reale):**
   - Prodotto: **€80** (salumi misti per gruppo di 8)
   - **+€50 flat fee per Emiliano** (host fee, per gruppo)
-  - Totale stimato per gruppo di 8: **€130 ≈ €16.25/persona all-in** — sostituire con il preventivo reale di Emiliano appena disponibile
+  - **+€25 vino** (~2 bottiglie di vino locale @ ~€12, per gruppo di 8)
+  - Totale stimato per gruppo di 8: **€155 ≈ €19.35/persona all-in** — sostituire con il preventivo reale di Emiliano appena disponibile
 
 ### TERRAARTE (art park — aperitivo/lunch in the olive grove)
 - **Tel:** (in rubrica)
