@@ -148,6 +148,26 @@
 
     section[id], .category[id] { scroll-margin-top: 78px; }
 
+    /* ── Tab switcher ── */
+    .tab-switcher-wrap {
+      background: var(--deep); display: flex; justify-content: center;
+      padding: 0 2rem 3rem;
+    }
+    .tab-switcher {
+      display: inline-flex; gap: 0.3rem;
+      border: 1px solid rgba(196,162,101,0.25);
+      padding: 0.35rem; scroll-margin-top: 78px;
+    }
+    .tab-btn {
+      padding: 0.75rem 1.7rem; background: transparent; border: none;
+      color: var(--tufo); opacity: 0.6; font-family: 'Inter', sans-serif;
+      font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.25s;
+    }
+    .tab-btn:hover { opacity: 0.9; }
+    .tab-btn.active { background: var(--gold); color: var(--deep); opacity: 1; }
+    @media (max-width: 480px) { .tab-btn { padding: 0.7rem 1.1rem; font-size: 0.7rem; } }
+
     /* ── Catalog quick nav ── */
     .catalog-quicknav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3rem; }
     .catalog-quicknav a {
@@ -345,7 +365,6 @@
     .day-card h4 { font-size: 1.08rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--earth); }
     .day-card p { font-size: 0.85rem; opacity: 0.68; font-weight: 300; line-height: 1.6; }
 
-    .featured-trip-cta { text-align: center; margin-top: 3rem; }
     .cta-button-solid {
       display: inline-block; padding: 1.05rem 2.8rem;
       background: var(--terracotta); color: #fff; border: none;
@@ -353,7 +372,37 @@
       letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.25s;
     }
     .cta-button-solid:hover { background: var(--rust); }
-    .featured-trip-note { margin-top: 0.9rem; font-size: 0.78rem; color: var(--stone); opacity: 0.85; }
+
+    /* ── Festival week booking form (light theme, standalone) ── */
+    .festival-book {
+      max-width: 560px; margin: 3.5rem auto 0; text-align: left;
+      background: var(--card-bg); border: 1.5px solid var(--tufo); padding: 2.6rem 2.2rem;
+    }
+    .festival-book h3 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.6rem; color: var(--earth); }
+    .festival-book > p { font-size: 0.88rem; opacity: 0.68; font-weight: 300; line-height: 1.6; margin-bottom: 1.8rem; }
+
+    .festival-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .festival-form .form-group { margin-bottom: 1.2rem; }
+    .festival-form label {
+      display: block; font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--stone); margin-bottom: 0.5rem; font-weight: 600;
+    }
+    .festival-form input, .festival-form select, .festival-form textarea {
+      width: 100%; padding: 0.85rem 1rem; background: #fff;
+      border: 1px solid rgba(140,123,102,0.35); color: var(--earth);
+      font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 300;
+      outline: none; transition: border-color 0.3s;
+    }
+    .festival-form input:focus, .festival-form select:focus, .festival-form textarea:focus { border-color: var(--terracotta); }
+    .festival-form textarea { resize: vertical; min-height: 80px; }
+    .festival-submit { width: 100%; border: none; margin-top: 0.4rem; }
+
+    .festival-success {
+      display: none; max-width: 560px; margin: 3.5rem auto 0; text-align: center;
+      background: var(--card-bg); border: 1.5px solid var(--tufo); padding: 2.6rem 2.2rem;
+    }
+    .festival-success h3 { color: var(--terracotta); font-size: 1.6rem; font-weight: 600; margin-bottom: 0.6rem; }
+    .festival-success p { font-size: 0.9rem; opacity: 0.68; font-weight: 300; }
 
     .hero-secondary {
       display: block; margin-top: 1rem; font-size: 0.8rem; color: var(--tufo);
@@ -542,15 +591,15 @@
   <nav class="site-nav">
     <a href="#top" class="nav-logo">Rasna</a>
     <div class="nav-links">
-      <a href="#festival-week">Nov Departure</a>
-      <a href="#catalog">Experiences</a>
-      <a href="#included">Included</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="#catalog" onclick="showTab('build','catalog'); return false;">Experiences</a>
+      <a href="#included" onclick="showTab('build','included'); return false;">Included</a>
+      <a href="#pricing" onclick="showTab('build','pricing'); return false;">Pricing</a>
+      <a href="#contact" onclick="showTab('build','contact'); return false;">Contact</a>
+      <a href="#festival-week" onclick="showTab('trips'); return false;">Planned Trips</a>
     </div>
     <div class="nav-cta">
       <span class="nav-count" id="nav-count">0 selected</span>
-      <a href="#contact" class="nav-btn">Get a Quote</a>
+      <a href="#contact" class="nav-btn" onclick="showTab('build','contact'); return false;">Get a Quote</a>
     </div>
   </nav>
 
@@ -567,76 +616,22 @@
       <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
       <p class="tagline">Harvest olives, descend into 2,800-year-old tombs, ride horseback through ancient ruins. A hands-on expedition into the oldest part of Italy.</p>
-      <a href="#catalog" class="cta-button">Build your expedition</a>
-      <a href="#festival-week" class="hero-secondary">Or join our fixed Nov 9&ndash;15 Cantine Festival Week departure &rarr;</a>
+      <a href="#catalog" class="cta-button" onclick="showTab('build','catalog'); return false;">Build your expedition</a>
+      <a href="#festival-week" class="hero-secondary" onclick="showTab('trips'); return false;">Or book our fixed Nov 9&ndash;15 Cantine Festival Week departure &rarr;</a>
     </div>
   </section>
+
+  <!-- Tab switcher -->
+  <div class="tab-switcher-wrap">
+    <div class="tab-switcher" id="tab-switcher">
+      <button type="button" class="tab-btn active" data-tab="build" onclick="showTab('build')">Build Your Own</button>
+      <button type="button" class="tab-btn" data-tab="trips" onclick="showTab('trips')">Planned Trips</button>
+    </div>
+  </div>
+
+  <div id="panel-build">
 
   <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
-
-  <!-- Featured trip: fixed departure -->
-  <section class="featured-trip" id="festival-week">
-    <div class="section-wide">
-      <div class="featured-trip-header fade-in">
-        <div class="featured-trip-badge">Fixed Departure &middot; Nov 9&ndash;15, 2026</div>
-        <div class="section-label">Rasna's first pilot expedition</div>
-        <h2>Cantine Festival Week</h2>
-        <p>One set week, one small group, everything arranged. Land in Blera in time for the town's biggest weekend of the year &mdash; when every wine cellar throws open its doors and the whole town eats and drinks together &mdash; bookended by six days of olive harvesting, Etruscan tombs, thermal baths, and hands-on cooking with local families. Capped at 8 guests.</p>
-      </div>
-
-      <div class="itinerary-grid fade-in">
-        <div class="day-card">
-          <div class="day-label">Mon &middot; Nov 9</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
-          <h4>Arrival in Blera</h4>
-          <p>Airport pickup and transfer to Blera. Welcome aperitivo in the piazza, dinner at a local trattoria.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Tue &middot; Nov 10</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-tombpath"/></svg></div>
-          <h4>Tomb Raider &amp; Tarquinia</h4>
-          <p>A town scavenger hunt through Blera's rock-cut tombs, then a day trip to Tarquinia's UNESCO-listed painted tombs.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Wed &middot; Nov 11</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-leaf"/></svg></div>
-          <h4>Olive Harvest Day</h4>
-          <p>An Italian farmer's breakfast, hand-picking olives at a local grove, a farmhouse lunch of fresh focaccia with local cold cuts and cheese, an afternoon mill tour and pressing, then a relaxed dinner cooked by a local chef.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Thu &middot; Nov 12</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-lake"/></svg></div>
-          <h4>Thermal Baths &amp; Pasta Making</h4>
-          <p>Breakfast at the bar, an afternoon at Tuscia Terme's thermal baths, lunch at the spa, then a hands-on pasta-making class.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Fri &middot; Nov 13</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-mountain"/></svg></div>
-          <h4>San Giovenale Hike &amp; Panonto</h4>
-          <p>A guided hike to the Etruscan site of San Giovenale, then panonto for lunch — Tuscia's answer to bruschetta, thick bread toasted over embers and drizzled with new-pressed olive oil. Dinner at Cantina Il Cavone as the festival kicks off.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Sat &middot; Nov 14</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-festival"/></svg></div>
-          <h4>Cantine Festival</h4>
-          <p>A slow morning, then a free day to wander Blera's Cantine Festival as the town's wine cellars open their doors. Goodbye dinner at Trattoria La Torretta.</p>
-        </div>
-        <div class="day-card">
-          <div class="day-label">Sun &middot; Nov 15</div>
-          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
-          <h4>Departure</h4>
-          <p>One last breakfast together, then farewells.</p>
-        </div>
-      </div>
-
-      <div class="featured-trip-cta fade-in">
-        <button type="button" class="cta-button-solid" onclick="reserveFestivalWeek()">Reserve Your Spot &rarr;</button>
-        <p class="featured-trip-note">Only 8 spots for this departure &middot; a deposit secures your place</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
 
   <!-- How it works (merged intro + 3 ways) -->
   <section class="three-ways" id="how-it-works">
@@ -969,11 +964,145 @@
 
   </form>
 
+  </div><!-- /panel-build -->
+
+  <div id="panel-trips" style="display:none">
+
+  <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
+
+  <!-- Featured trip: fixed departure -->
+  <section class="featured-trip" id="festival-week">
+    <div class="section-wide">
+      <div class="featured-trip-header fade-in">
+        <div class="featured-trip-badge">Fixed Departure &middot; Nov 9&ndash;15, 2026</div>
+        <div class="section-label">Rasna's first pilot expedition</div>
+        <h2>Cantine Festival Week</h2>
+        <p>One set week, one small group, everything arranged. Land in Blera in time for the town's biggest weekend of the year &mdash; when every wine cellar throws open its doors and the whole town eats and drinks together &mdash; bookended by six days of olive harvesting, Etruscan tombs, thermal baths, and hands-on cooking with local families. Capped at 8 guests.</p>
+      </div>
+
+      <div class="itinerary-grid fade-in">
+        <div class="day-card">
+          <div class="day-label">Mon &middot; Nov 9</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
+          <h4>Arrival in Blera</h4>
+          <p>Airport pickup and transfer to Blera. Welcome aperitivo in the piazza, dinner at a local trattoria.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Tue &middot; Nov 10</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-tombpath"/></svg></div>
+          <h4>Tomb Raider &amp; Tarquinia</h4>
+          <p>A town scavenger hunt through Blera's rock-cut tombs, then a day trip to Tarquinia's UNESCO-listed painted tombs.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Wed &middot; Nov 11</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-leaf"/></svg></div>
+          <h4>Olive Harvest Day</h4>
+          <p>An Italian farmer's breakfast, hand-picking olives at a local grove, a farmhouse lunch of fresh focaccia with local cold cuts and cheese, an afternoon mill tour and pressing, then a relaxed dinner cooked by a local chef.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Thu &middot; Nov 12</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-lake"/></svg></div>
+          <h4>Thermal Baths &amp; Pasta Making</h4>
+          <p>Breakfast at the bar, an afternoon at Tuscia Terme's thermal baths, lunch at the spa, then a hands-on pasta-making class.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Fri &middot; Nov 13</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-mountain"/></svg></div>
+          <h4>San Giovenale Hike &amp; Panonto</h4>
+          <p>A guided hike to the Etruscan site of San Giovenale, then panonto for lunch — Tuscia's answer to bruschetta, thick bread toasted over embers and drizzled with new-pressed olive oil. Dinner at Cantina Il Cavone as the festival kicks off.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Sat &middot; Nov 14</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-festival"/></svg></div>
+          <h4>Cantine Festival</h4>
+          <p>A slow morning, then a free day to wander Blera's Cantine Festival as the town's wine cellars open their doors. Goodbye dinner at Trattoria La Torretta.</p>
+        </div>
+        <div class="day-card">
+          <div class="day-label">Sun &middot; Nov 15</div>
+          <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
+          <h4>Departure</h4>
+          <p>One last breakfast together, then farewells.</p>
+        </div>
+      </div>
+
+      <div class="festival-book fade-in" id="festival-book">
+        <div class="section-label">Reserve your spot</div>
+        <h3>Book the November 9&ndash;15 departure</h3>
+        <p>Only 8 spots for this departure. A deposit secures your place &mdash; we'll follow up with availability and payment details after you submit.</p>
+
+        <form id="festival-form" action="https://formspree.io/f/xlgynpjo" method="POST" class="festival-form">
+          <input type="hidden" name="trip" value="November 9-15, 2026 - Cantine Festival Week">
+          <input type="hidden" name="_subject" value="RASNA - November 9-15 departure booking">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fw-name">Your name</label>
+              <input type="text" id="fw-name" name="name" required placeholder="Full name">
+            </div>
+            <div class="form-group">
+              <label for="fw-email">Email</label>
+              <input type="email" id="fw-email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="fw-guests">Number of guests</label>
+            <select id="fw-guests" name="guests" required>
+              <option value="">Select...</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="fw-notes">Anything else we should know?</label>
+            <textarea id="fw-notes" name="notes" placeholder="Dietary needs, questions about the trip..."></textarea>
+          </div>
+
+          <button type="submit" class="cta-button-solid festival-submit">Reserve My Spot &rarr;</button>
+        </form>
+
+        <div class="festival-success" id="festival-success">
+          <h3>Grazie!</h3>
+          <p>We've received your request for the Nov 9&ndash;15 departure. We'll follow up within a few days with availability confirmation and a deposit link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
+  </div><!-- /panel-trips -->
+
   <footer>
     <span>Rasna &mdash; Blera, Italia</span>
   </footer>
 
   <script>
+    function showTab(tab, scrollToId) {
+      const build = document.getElementById('panel-build');
+      const trips = document.getElementById('panel-trips');
+      const btnBuild = document.querySelector('.tab-btn[data-tab="build"]');
+      const btnTrips = document.querySelector('.tab-btn[data-tab="trips"]');
+
+      const showBuild = tab === 'build';
+      build.style.display = showBuild ? '' : 'none';
+      trips.style.display = showBuild ? 'none' : '';
+      btnBuild.classList.toggle('active', showBuild);
+      btnTrips.classList.toggle('active', !showBuild);
+
+      requestAnimationFrame(function() {
+        const target = scrollToId ? document.getElementById(scrollToId) : document.getElementById('tab-switcher');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
     const selectedActivities = new Set();
 
     function toggleCard(card) {
@@ -1009,27 +1138,23 @@
       }
     }
 
-    function selectCardByActivity(name) {
-      const card = document.querySelector('.activity-card[data-activity="' + name + '"]');
-      if (card && !card.classList.contains('selected')) {
-        toggleCard(card);
-      }
-    }
+    document.getElementById('festival-form').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-    function reserveFestivalWeek() {
-      ['Olive Harvest', 'Local Festival / Sagra', 'Day Trip: Tarquinia', 'Etruscan Tombs & Via Clodia Walk', 'Cooking in the Tradition of the Nonne', 'Oil Tasting with Nicolò'].forEach(selectCardByActivity);
+      const form = this;
+      const data = new FormData(form);
 
-      const dates = document.getElementById('dates');
-      dates.value = 'November 9–15, 2026 — Cantine Festival Week';
-
-      const notes = document.getElementById('notes');
-      if (!notes.value) {
-        notes.value = 'I’d like to reserve a spot on the Nov 9–15, 2026 Cantine Festival Week departure.';
-      }
-
-      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-      document.getElementById('guests').focus();
-    }
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('festival-success').style.display = 'block';
+        }
+      });
+    });
 
     document.getElementById('experience-form').addEventListener('submit', function(e) {
       e.preventDefault();
