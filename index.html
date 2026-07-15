@@ -341,7 +341,7 @@
     .pricing .section-label { color: var(--gold); opacity: 0.5; }
     .pricing h2 { color: var(--tufo); }
     .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
-    .pricing-amount { font-size: 3.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.2rem; }
+    .pricing-amount { font-size: clamp(2.1rem, 6vw, 3.4rem); font-weight: 500; color: var(--gold); margin-bottom: 0.2rem; white-space: nowrap; }
     .pricing-amount span { font-size: 1.2rem; opacity: 0.5; }
     .pricing-per { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.4; margin-bottom: 1.6rem; }
     .pricing-includes { list-style: none; text-align: left; font-size: 0.85rem; font-weight: 300; opacity: 0.62; }
@@ -803,10 +803,10 @@
   <section class="pricing" id="pricing">
     <div class="section-inner">
       <div class="section-label fade-in">Investment</div>
-      <h2 class="fade-in">One price. Everything in.</h2>
+      <h2 class="fade-in">Your investment. Nothing hidden.</h2>
       <div class="pricing-card fade-in">
-        <div class="pricing-amount"><span>&euro;</span>1,450</div>
-        <div class="pricing-per">per person &middot; starting at 4 days, all-inclusive</div>
+        <div class="pricing-amount"><span>&euro;</span>1,300&ndash;1,800</div>
+        <div class="pricing-per">per person &middot; 4 days, all-inclusive &middot; varies by season &amp; group size</div>
         <ul class="pricing-includes">
           <li>Accommodation for your full stay</li>
           <li>All meals (breakfast, lunch, dinner)</li>
