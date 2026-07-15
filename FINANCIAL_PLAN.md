@@ -48,7 +48,7 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **TerraArte (sculpture park aperitivo/lunch) — confirmed pricing structure:** €10/person + a flat €50 fee to the owner per group (independent of group size). For a group of 8: 8×€10 + €50 = **€130 total, ≈€16.25/guest all-in**. See `CONTATTI_LOCALI.md` for details — status still DA VALIDARE.
 
-**Emiliano (charcuterie degustazione) — estimated pricing structure:** ~1kg mixed salumi @ ~€25–35/kg (~€30 product cost) + a flat **€50 host fee**. For a group of 8: **~€80 total, ≈€10/guest all-in**. Product cost is an estimate pending Emiliano's actual preventivo — replace once confirmed. See `CONTATTI_LOCALI.md` for details.
+**Emiliano (charcuterie degustazione) — estimated pricing structure:** €80 product cost (mixed salumi for a group of 8) + a flat **€50 host fee**. For a group of 8: **€130 total, ≈€16.25/guest all-in**. Product cost is an estimate pending Emiliano's actual preventivo — replace once confirmed. See `CONTATTI_LOCALI.md` for details.
 
 ## 2. Group economics
 
