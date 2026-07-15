@@ -30,8 +30,8 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ## Friday, November 13
 - Breakfast
 - Hike: San Giovenale
-- Panonto lunch (Nicolò) — panonto: bread toasted over embers, drizzled with new-pressed olive oil
-- Dinner: **Il Cavone (confirmed)** — festival BBQ (sausages, ventresca, cheap-cut beef steak, pork steak, bread), plus Nicolò's time
+- **Panonto BBQ lunch with Nicolò** — panonto (bread toasted over embers, drizzled with new-pressed olive oil) plus a BBQ: sausages, ventresca, cheap-cut beef steak, pork steak, bread; see cost estimate below
+- Dinner: **Il Cavone (confirmed, cantina)** — quoted ~€25/person, ~€200 for 8 guests
 
 ## Saturday, November 14
 - Breakfast, plus hangover cure
@@ -47,12 +47,14 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ### Open items to resolve before this is guest-ready
 - Confirm who's running the olive harvest on Wednesday (name placeholder above)
 - Confirm the residence chef for Wednesday dinner ("Nico"?)
-- ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone**
+- ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone, ~€25/person**
 - ~~Confirm Saturday's goodbye dinner venue~~ — **confirmed: Trattoria La Torretta, ~€35/person**
 - Confirm lunch spot/logistics for Tuesday (before and after Tarquinia) and dinner venue
 - ~~Confirm thermal baths venue and booking for Thursday~~ — **confirmed: Tuscia Terme, ~€14/person entry**
 
-### Friday BBQ at Il Cavone — cost estimate (max 8 guests)
+### Friday panonto BBQ with Nicolò — cost estimate (max 8 guests)
+
+This is a separate meal from Friday's Il Cavone dinner — the lunchtime panonto/BBQ hosted by Nicolò.
 
 Food costs are estimates at typical Tuscia-area butcher/market pricing — swap in real quotes once you have them.
 
@@ -77,8 +79,9 @@ Assumptions to sanity-check against Il Cavone/Nicolò directly:
 | Day | Item | Cost | Per guest |
 |---|---|---|---|
 | Thu Nov 12 | Tuscia Terme (thermal baths entry) | €112 (quoted €14/pp) | €14 |
-| Fri Nov 13 | Il Cavone (BBQ dinner) | ~€196–220 (mid ~€205) | ~€25–27 |
+| Fri Nov 13 (lunch) | Panonto BBQ with Nicolò | ~€196–220 (mid ~€205) | ~€25–27 |
+| Fri Nov 13 (dinner) | Il Cavone (cantina) | €200 (quoted €25/pp) | €25 |
 | Sat Nov 14 | Trattoria La Torretta (goodbye dinner) | €280 (quoted €35/pp) | €35 |
-| **Running total** | | **~€588–612** | **~€74–76** |
+| **Running total** | | **~€788–812** | **~€99–101** |
 
-Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these three items alone already use ~34% of the combined €310/guest budget.
+Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these four items alone already use ~32% of the combined €310/guest budget.
