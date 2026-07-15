@@ -111,6 +111,10 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
 - **Portion planning:** budget ~100g of charcuterie per person for the degustazione (generous tasting across 3–4 varieties, not a full meal) → for a max group of 8, that's ~800g; round up to **1kg** to allow for variety and seconds. Confirm with Emiliano what mix of salumi he'd serve at that quantity.
+- **Costo (stima, DA CONFERMARE con preventivo reale):**
+  - Prodotto: ~1kg salumi misti @ ~€25–35/kg → **~€30**
+  - **+€50 flat fee per Emiliano** (host fee, per gruppo)
+  - Totale stimato per gruppo di 8: **~€80 ≈ €10/persona all-in** — sostituire con il preventivo reale di Emiliano appena disponibile
 
 ### TERRAARTE (art park — aperitivo/lunch in the olive grove)
 - **Tel:** (in rubrica)
