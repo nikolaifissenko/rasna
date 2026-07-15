@@ -4,8 +4,8 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 
 **Live URL:** https://nikolaifissenko.github.io/rasna/
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
-**File:** `index.html` (~1060 lines) + `images/` — the only things that matter
-**Dev branch:** `claude/about-us-experience-updates-lqrgpa` — this session's working branch, kept in sync with `main` (both should have identical trees; push changes to both, or treat `main` as primary going forward)
+**Files:** `index.html` + `style.css` + `images/` — the only things that matter for the live site. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
+**Dev branch:** none currently — as of 2026-07-15, work is pushed directly to `main`. (A prior session's `claude/italy-trip-itinerary-ve6z8z` branch was based on a stale, months-old snapshot that had diverged heavily from `main` — its useful work was manually reapplied to `main` and the branch is now safe to ignore/delete. Before assuming any `claude/*` branch is current, diff it against `origin/main` first.)
 
 ---
 
@@ -52,6 +52,21 @@ Every section uses CSS `background-image: url('images/X.jpg')` (not `<img>` tags
 On 2026-07-12, `moment-2.jpg`, `moment-3.jpg`, and the new `card-etruscantombs.jpg` (Etruscan Tombs card hover photo) were replaced with the user's own photos of the real Necropoli G. Porcini near Blera — first owned photos on the site, chip away at the licensing risk above when more become available. The user also supplied a photo of a person posing at a tomb that was deliberately **not** published (unconfirmed consent to show an identifiable face on a public marketing site) — ask before adding it if revisited.
 
 Known dead ends: Facebook and Instagram photo links reliably fail to resolve (auth-walled) — don't spend time retrying those, ask for a different source.
+
+---
+
+## Planned Events tab (added 2026-07-15)
+
+The page now has two tabs, toggled by `showTab('build'|'trips', scrollToId)` in the `<script>` block, via a switcher (`.tab-switcher`) placed right under the hero:
+
+- **Build Your Own** (`#panel-build`) — the original activity-picker flow: How It Works, Photo Break, Catalog + `#experience-form`, Included, Moments, Trips Gallery, Philosophy, Pricing, Contact. Default-visible tab.
+- **Planned Events** (`#panel-trips`, `display:none` by default) — pre-built fixed-departure itineraries. Currently one: **Italian Autumn Experience** (subtitle "Cantine Festival Week"), Nov 9–15 2026, `#festival-week`. Has its own day-by-day `.itinerary-grid` of `.day-card`s and a **standalone** booking form (`#festival-form`, separate Formspree submit handler) — deliberately not wired to the activity-catalog selection state, since it's a fixed package, not a build-your-own quote.
+
+Nav links and the hero's secondary CTA call `showTab(...)` instead of plain anchor `href` jumps, since anchor-scrolling into a `display:none` panel doesn't work — always route through `showTab` when linking to anything inside either panel.
+
+To add a second planned event: duplicate the `.featured-trip` section structure inside `#panel-trips` (or turn the single trip into a card that expands, if there end up being several) — nothing today assumes there's only one.
+
+Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Terme, Il Cavone, Trattoria La Torretta, Tarquinia tombs entry, the Nicolò-hosted panonto BBQ) lives in `ITINERARY_NOV2026.md`, checked against the €310/guest meals+activities budget in `FINANCIAL_PLAN.md`. That doc is operational/internal — none of its cost figures are shown on the live site.
 
 ---
 
