@@ -117,3 +117,26 @@ Since group volume is intentionally capped, income growth should come from incre
 - Achievable group size and how often you can realistically run experiences per season
 - Actual willingness-to-pay at your target price point
 - Conversion rate from marketing/inquiries to paid bookings
+
+## 8. Market-benchmarked activity value (reference, not a la carte pricing)
+
+Rasna sells the trip **all-inclusive — all meals plus lodging** are already bundled into the €1,400/guest price (Section 1), not sold per-activity. The table below isn't a price list for guests; it's a reference for what comparable standalone "authentic local experience" products charge on the open market (Airbnb Experiences, GetYourGuide, farm-tour operators), based on July 2026 market research. It's useful for (a) sanity-checking that our activity roster is priced fairly for hosts, and (b) justifying the all-inclusive package price if it's ever questioned — these comparables **exclude lodging and meals**, which Rasna includes on top.
+
+| Activity type | Market comparable | Typical price/person (standalone, no lodging/meals) |
+|---|---|---|
+| Pasta-making with a local family/nonna | Airbnb Experiences (Rome, Milan, Florence) | €35–72 |
+| Cheese/charcuterie + wine tasting | GetYourGuide small-group tastings | €45–55 |
+| Aperitivo / food-and-wine tour (2–3 hrs) | GetYourGuide (Milan, Cinque Terre, Venice) | €48–95 |
+| Olive harvest (half/full day, hands-on) | Sabina, Tuscany farm tours | €100+ |
+| Olive oil guided tasting only | Puglia farm tours | €25+ |
+| Private barista/coffee workshop | Rome/Florence coffee workshops | €50–90 |
+| General Airbnb Experience baseline (2–3 hrs, small group) | Platform-wide | €28–75 |
+
+**Rasna-specific value estimate** (ours run more casual/community-embedded than a polished commercial tour, so skew toward the lower-to-mid end of comparables):
+- TerraArte (sculpture park + aperitivo/lunch): €35–50/person
+- Emiliano (charcuterie + wine tasting): €35–55/person
+- Coffee/barista lesson with Maria Grazia: €25–40/person
+- Pickup football with locals: €0–15/person (community goodwill activity, not a real revenue line — maybe a token amount for pitch/water)
+- Olive harvest: €80–110/person, consistent with regional comparables
+
+Stacking 4–5 of these across a 4-day trip is easily **€300+ in comparable market value alone** — before lodging, meals, guiding, or transport, all of which the €1,400 all-inclusive price also covers. That's a strong data point for defending the price point against "why so expensive" pushback.
