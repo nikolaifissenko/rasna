@@ -166,6 +166,10 @@
     }
     .featured-trip-header { max-width: 700px; }
     .featured-trip-header p { margin-top: 1rem; }
+    .featured-trip-subtitle {
+      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-size: 1.15rem; color: var(--terracotta); opacity: 0.85; margin-top: -0.3rem;
+    }
 
     .itinerary-grid {
       display: grid;
