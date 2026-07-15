@@ -143,6 +143,8 @@ These aren't separate attractions to manage — they're moments the town already
 - Cammino dei Tre Villaggi — 20 km circular trail (Blera, Barbarano Romano, Villa San Giovanni), "Etruscan Wanderer" certificate
 - San Giovenale Hike & Panonto — Etruscan site + traditional Bleran wood-fire BBQ picnic
 - Horseback Riding (Civitella Cesi)
+- Pickup Football with Locals — casual pickup game on the town pitch
+- TerraArte Sculpture Park & Olive Grove Lunch — open-air sculpture park, lunch or aperitivo laid out in the olive grove
 
 *Day Trips:*
 - Lago di Vico, Viterbo, Tarquinia, Villa Lante & Palazzo Farnese, Tyrrhenian Coast, + client's own choice
