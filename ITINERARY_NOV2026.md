@@ -23,7 +23,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 
 ## Thursday, November 12
 - Breakfast at the bar
-- Local thermal baths
+- **Tuscia Terme (confirmed)** — thermal baths, ~€14/person entry, ~€112 for 8 guests
 - Lunch at spa, followed by relax time
 - Pasta making
 
@@ -36,7 +36,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ## Saturday, November 14
 - Breakfast, plus hangover cure
 - Free day / Cantine Festival
-- Goodbye dinner at another cantina
+- Goodbye dinner: **Trattoria La Torretta (confirmed)** — quoted ~€35/person, ~€280 for 8 guests
 
 ## Sunday, November 15
 - Last breakfast
@@ -47,9 +47,10 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ### Open items to resolve before this is guest-ready
 - Confirm who's running the olive harvest on Wednesday (name placeholder above)
 - Confirm the residence chef for Wednesday dinner ("Nico"?)
-- ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone**. Saturday's goodbye dinner venue still open.
+- ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone**
+- ~~Confirm Saturday's goodbye dinner venue~~ — **confirmed: Trattoria La Torretta, ~€35/person**
 - Confirm lunch spot/logistics for Tuesday (before and after Tarquinia) and dinner venue
-- Confirm thermal baths venue and booking for Thursday
+- ~~Confirm thermal baths venue and booking for Thursday~~ — **confirmed: Tuscia Terme, ~€14/person entry**
 
 ### Friday BBQ at Il Cavone — cost estimate (max 8 guests)
 
@@ -70,3 +71,14 @@ Assumptions to sanity-check against Il Cavone/Nicolò directly:
 - Generous BBQ portions (~670g meat/guest across four proteins) — could trim quantities if that reads as too much food
 - Rural Tuscia butcher pricing, not Rome-supermarket pricing
 - Nicolò's €150 covers his time only, not ingredients (assumed bought separately or supplied by Il Cavone)
+
+### Confirmed venue costs so far (8 guests)
+
+| Day | Item | Cost | Per guest |
+|---|---|---|---|
+| Thu Nov 12 | Tuscia Terme (thermal baths entry) | €112 (quoted €14/pp) | €14 |
+| Fri Nov 13 | Il Cavone (BBQ dinner) | ~€196–220 (mid ~€205) | ~€25–27 |
+| Sat Nov 14 | Trattoria La Torretta (goodbye dinner) | €280 (quoted €35/pp) | €35 |
+| **Running total** | | **~€588–612** | **~€74–76** |
+
+Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these three items alone already use ~34% of the combined €310/guest budget.
