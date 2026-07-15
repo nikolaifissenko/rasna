@@ -11,7 +11,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 - Breakfast
 - Town scavenger hunt / tomb raider experience
 - Lunch
-- Tarquinia day trip
+- Tarquinia day trip — **Etruscan Necropolis/tombs entry confirmed: €13/person, ~€104 for 8 guests**
 - Dinner
 
 ## Wednesday, November 11
@@ -49,6 +49,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 - Confirm the residence chef for Wednesday dinner ("Nico"?)
 - ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone, ~€25/person**
 - ~~Confirm Saturday's goodbye dinner venue~~ — **confirmed: Trattoria La Torretta, ~€35/person**
+- ~~Confirm Tarquinia tombs entry cost~~ — **confirmed: €13/person**
 - Confirm lunch spot/logistics for Tuesday (before and after Tarquinia) and dinner venue
 - ~~Confirm thermal baths venue and booking for Thursday~~ — **confirmed: Tuscia Terme, ~€14/person entry**
 
@@ -78,10 +79,11 @@ Assumptions to sanity-check against Il Cavone/Nicolò directly:
 
 | Day | Item | Cost | Per guest |
 |---|---|---|---|
+| Tue Nov 10 | Tarquinia tombs entry | €104 (confirmed €13/pp) | €13 |
 | Thu Nov 12 | Tuscia Terme (thermal baths entry) | €112 (quoted €14/pp) | €14 |
 | Fri Nov 13 (lunch) | Panonto BBQ with Nicolò | ~€196–220 (mid ~€205) | ~€25–27 |
 | Fri Nov 13 (dinner) | Il Cavone (cantina) | €200 (quoted €25/pp) | €25 |
 | Sat Nov 14 | Trattoria La Torretta (goodbye dinner) | €280 (quoted €35/pp) | €35 |
-| **Running total** | | **~€788–812** | **~€99–101** |
+| **Running total** | | **~€892–916** | **~€112–114** |
 
-Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these four items alone already use ~32% of the combined €310/guest budget.
+Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these five items alone already use ~36% of the combined €310/guest budget.
