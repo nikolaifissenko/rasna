@@ -138,6 +138,7 @@ These aren't separate attractions to manage — they're moments the town already
 - Charcuterie Degustation (Emiliano — confirmed)
 - Cheese & Charcuterie in Civitella Cesi (Davide Paolocci — confirmed)
 - Pasta Making — homemade, hands-on
+- Barista Lesson with Maria Grazia — one-on-one espresso/cappuccino lesson at the bar's machine; strong guests could even serve real customers
 
 *Culture & Outdoors:*
 - Cammino dei Tre Villaggi — 20 km circular trail (Blera, Barbarano Romano, Villa San Giovanni), "Etruscan Wanderer" certificate

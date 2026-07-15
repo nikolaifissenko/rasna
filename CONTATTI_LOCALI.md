@@ -23,6 +23,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 | TerraArte | Parco delle sculture — aperitivo/pranzo nell'uliveto | DA VALIDARE — €10/persona + €50 fisso per il proprietario |
+| Maria Grazia (bar) | Lezione di caffè italiano — espresso/cappuccino alla macchina del bar | ✅ OFFERTO da Maria Grazia — uno alla volta; i migliori potrebbero anche servire i clienti veri del bar |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
