@@ -411,17 +411,47 @@
       color: var(--gold); text-decoration: none; font-size: 0.8rem; opacity: 0.4; letter-spacing: 0.05em;
     }
 
-    .success-message {
-      display: none;
-      text-align: center;
-      max-width: 560px;
-      margin: 2.5rem auto 0;
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(196,162,101,0.25);
-      background: rgba(196,162,101,0.04);
+    /* ── Booking tabs ── */
+    .booking-tabs { display: flex; gap: 0.8rem; max-width: 560px; margin: 0 auto 2rem; }
+    .booking-tab {
+      flex: 1; padding: 0.95rem 1rem;
+      background: transparent; border: 1px solid rgba(196,162,101,0.3);
+      color: var(--tufo); font-family: 'Inter', sans-serif;
+      font-size: 0.76rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.25s; opacity: 0.6;
     }
-    .success-message h3 { color: var(--gold); font-size: 1.8rem; font-weight: 500; margin-bottom: 0.8rem; }
-    .success-message p { color: var(--tufo); opacity: 0.65; font-size: 0.95rem; font-weight: 300; }
+    .booking-tab:hover { opacity: 0.9; border-color: var(--gold); }
+    .booking-tab.active { background: var(--gold); color: var(--deep); border-color: var(--gold); opacity: 1; }
+
+    .booking-panel { display: none; }
+    .booking-panel.active { display: block; }
+
+    .departure-card {
+      border: 1px solid rgba(196,162,101,0.25); background: rgba(196,162,101,0.04);
+      padding: 1.5rem 1.6rem; margin-bottom: 1.6rem;
+    }
+    .departure-card .departure-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--gold); margin-bottom: 0.3rem; }
+    .departure-card .departure-meta { font-size: 0.85rem; opacity: 0.6; font-weight: 300; }
+    .spots-badge {
+      display: inline-block; margin-top: 0.8rem;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.32rem 0.75rem; border-radius: 999px;
+    }
+    .spots-badge.available { background: rgba(92,107,60,0.22); color: #a9d489; }
+    .spots-badge.low { background: rgba(184,89,62,0.22); color: #eda180; }
+    .spots-badge.soldout { background: rgba(184,89,62,0.35); color: #f5b39a; }
+
+    .booking-note { font-size: 0.8rem; opacity: 0.45; font-weight: 300; margin-top: 1rem; text-align: center; }
+
+    .booking-error {
+      display: none; margin-top: 1.2rem; padding: 0.9rem 1.1rem;
+      border: 1px solid rgba(184,89,62,0.45); background: rgba(184,89,62,0.12);
+      color: #f5b39a; font-size: 0.85rem; font-weight: 300;
+    }
+    .booking-error.visible { display: block; }
+
+    .price-preview { margin-top: 1.3rem; font-size: 0.85rem; opacity: 0.65; font-weight: 300; text-align: right; }
+    .price-preview strong { color: var(--gold); font-size: 1.15rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; }
 
     /* ── Footer ── */
     footer {
@@ -452,6 +482,10 @@
   </style>
 </head>
 <body>
+
+  <!-- Booking API base URL — set this to your deployed backend once it's
+       live (see server/README.md). Falls back to localhost for local dev. -->
+  <script>window.RASNA_API_BASE = 'http://localhost:4242';</script>
 
   <!-- SVG defs -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -503,7 +537,7 @@
     </div>
     <div class="nav-cta">
       <span class="nav-count" id="nav-count">0 selected</span>
-      <a href="#contact" class="nav-btn">Get a Quote</a>
+      <a href="#contact" class="nav-btn">Book Now</a>
     </div>
   </nav>
 
@@ -554,9 +588,7 @@
 
   <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
 
-  <!-- Catalog + Form -->
-  <form id="experience-form" action="https://formspree.io/f/xlgynpjo" method="POST">
-
+  <!-- Catalog -->
   <section class="catalog" id="catalog">
     <div class="section-wide">
       <div class="catalog-intro fade-in">
@@ -787,82 +819,129 @@
     </div>
   </section>
 
-  <!-- Contact / Form submit -->
+  <!-- Booking -->
   <section class="contact" id="contact">
     <div class="contact-header fade-in">
       <svg class="etruscan-ornament" width="45" height="34" style="color:var(--gold); margin-bottom:1rem"><use href="#palmette"/></svg>
-      <div class="section-label">Step 2 &middot; Your details</div>
-      <h2>Tell us about your trip.</h2>
+      <div class="section-label">Step 2 &middot; Reserve your spot</div>
+      <h2>Book your expedition.</h2>
       <div class="divider"></div>
-      <p>We'll build a custom all-inclusive package around your selections above and send a quote within a few days.</p>
+      <p>Join our fixed November departure, or lock in your own dates. Either way, checkout is secure via Stripe and your spot is confirmed the moment payment goes through.</p>
     </div>
 
     <div class="contact-form fade-in">
       <div class="selected-activities-summary" id="activities-summary">
         <span class="summary-label">Your Selected Experiences</span>
-        <span class="no-selection">Click the activities above to select them</span>
+        <span class="no-selection">Click the activities above to select them (optional — you can also just tell us in the notes)</span>
       </div>
 
-      <input type="hidden" name="selected_activities" id="hidden-activities" value="">
-      <input type="hidden" name="_subject" value="New RASNA expedition inquiry">
+      <div class="booking-tabs" role="tablist">
+        <button type="button" class="booking-tab active" id="tab-btn-fixed" role="tab" aria-selected="true" onclick="switchTab('fixed')">November Departure</button>
+        <button type="button" class="booking-tab" id="tab-btn-custom" role="tab" aria-selected="false" onclick="switchTab('custom')">Choose Your Own Dates</button>
+      </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Your name</label>
-          <input type="text" id="name" name="name" required placeholder="Full name">
+      <!-- Fixed departure panel -->
+      <div class="booking-panel active" id="panel-fixed" role="tabpanel">
+        <div class="departure-card" id="departure-card">
+          <div class="departure-title">Loading departure details&hellip;</div>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="your@email.com">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fixed-name">Your name</label>
+            <input type="text" id="fixed-name" required placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="fixed-email">Email</label>
+            <input type="email" id="fixed-email" required placeholder="your@email.com">
+          </div>
         </div>
-      </div>
 
-      <div class="form-row">
-        <div class="form-group">
-          <label for="guests">Number of guests</label>
-          <select id="guests" name="guests" required>
-            <option value="">Select...</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fixed-guests">Number of guests</label>
+            <select id="fixed-guests" required></select>
+          </div>
         </div>
+
         <div class="form-group">
-          <label for="dates">Preferred dates / month</label>
-          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. October 2026, flexible">
+          <label for="fixed-notes">Anything else we should know?</label>
+          <textarea id="fixed-notes" placeholder="Dietary needs, special interests..."></textarea>
         </div>
+
+        <div class="price-preview" id="fixed-price-preview"></div>
+        <div class="booking-error" id="fixed-error"></div>
+
+        <div class="form-submit">
+          <button type="button" class="submit-btn" id="fixed-submit-btn" onclick="submitBooking('fixed')">Pay &amp; Reserve My Spot →</button>
+        </div>
+        <p class="booking-note">Full payment is collected securely via Stripe. Your spot is confirmed once payment completes.</p>
       </div>
 
-      <div class="form-group">
-        <label for="notes">Anything else we should know?</label>
-        <textarea id="notes" name="notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
-      </div>
+      <!-- Custom dates panel -->
+      <div class="booking-panel" id="panel-custom" role="tabpanel">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="custom-name">Your name</label>
+            <input type="text" id="custom-name" required placeholder="Full name">
+          </div>
+          <div class="form-group">
+            <label for="custom-email">Email</label>
+            <input type="email" id="custom-email" required placeholder="your@email.com">
+          </div>
+        </div>
 
-      <div class="form-submit">
-        <button type="submit" class="submit-btn" id="submit-btn" disabled>Select at least one experience to continue</button>
-      </div>
-    </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="custom-guests">Number of guests</label>
+            <select id="custom-guests" required>
+              <option value="">Select...</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="custom-dates">Preferred dates / month</label>
+            <input type="text" id="custom-dates" placeholder="e.g. October 2026, flexible">
+          </div>
+        </div>
 
-    <div class="success-message" id="success-message">
-      <h3>Grazie!</h3>
-      <p>We've received your selections. We'll put together a personalized quote and get back to you within a few days with your all-inclusive package and payment link.</p>
+        <div class="form-group">
+          <label for="custom-notes">Anything else we should know?</label>
+          <textarea id="custom-notes" placeholder="Dietary needs, special interests, how many days you're thinking..."></textarea>
+        </div>
+
+        <div class="price-preview" id="custom-price-preview"></div>
+        <div class="booking-error" id="custom-error"></div>
+
+        <div class="form-submit">
+          <button type="button" class="submit-btn" id="custom-submit-btn" onclick="submitBooking('custom')">Pay &amp; Book Now →</button>
+        </div>
+        <p class="booking-note">Full payment (&euro;1,450 per person) is collected securely via Stripe at booking. We'll confirm exact activity availability for your chosen dates right after.</p>
+      </div>
     </div>
 
     <a href="mailto:nikolai.fissenko1@gmail.com" class="email-link">or email us directly: nikolai.fissenko1@gmail.com</a>
   </section>
-
-  </form>
 
   <footer>
     <span>Rasna &mdash; Blera, Italia</span>
   </footer>
 
   <script>
+    // Base URL of the Rasna booking API (Node/Express + Stripe server).
+    // Update this to your deployed API's URL — see server/README.md.
+    const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
+
+    const PRICE_PER_PERSON = 1450; // keep in sync with server/.env CUSTOM_PRICE_PER_PERSON
+
     const selectedActivities = new Set();
+    let currentDeparture = null; // populated from /api/departures
 
     function toggleCard(card) {
       const activity = card.dataset.activity;
@@ -877,46 +956,148 @@
 
     function updateDisplay() {
       const summary = document.getElementById('activities-summary');
-      const hidden = document.getElementById('hidden-activities');
-      const btn = document.getElementById('submit-btn');
       const navCount = document.getElementById('nav-count');
 
       navCount.textContent = selectedActivities.size + ' selected';
 
       if (selectedActivities.size === 0) {
-        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span><span class="no-selection">Click the activities above to select them</span>';
-        hidden.value = '';
-        btn.disabled = true;
-        btn.textContent = 'Select at least one experience to continue';
+        summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span><span class="no-selection">Click the activities above to select them (optional — you can also just tell us in the notes)</span>';
       } else {
         const items = Array.from(selectedActivities);
         summary.innerHTML = '<span class="summary-label">Your Selected Experiences</span>' + items.join(' &middot; ');
-        hidden.value = items.join(', ');
-        btn.disabled = false;
-        btn.textContent = 'Send My Selections →';
       }
     }
 
-    document.getElementById('experience-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (selectedActivities.size === 0) return;
+    // ── Tabs ──
+    function switchTab(tab) {
+      document.getElementById('tab-btn-fixed').classList.toggle('active', tab === 'fixed');
+      document.getElementById('tab-btn-custom').classList.toggle('active', tab === 'custom');
+      document.getElementById('tab-btn-fixed').setAttribute('aria-selected', tab === 'fixed');
+      document.getElementById('tab-btn-custom').setAttribute('aria-selected', tab === 'custom');
+      document.getElementById('panel-fixed').classList.toggle('active', tab === 'fixed');
+      document.getElementById('panel-custom').classList.toggle('active', tab === 'custom');
+    }
 
-      const form = this;
-      const data = new FormData(form);
+    // ── Fixed departure: load live availability ──
+    function renderDepartureCard() {
+      const card = document.getElementById('departure-card');
+      const guestSelect = document.getElementById('fixed-guests');
+      const submitBtn = document.getElementById('fixed-submit-btn');
 
-      fetch(form.action, {
+      if (!currentDeparture) {
+        card.innerHTML = '<div class="departure-title">No fixed departure is currently open for booking.</div><p style="opacity:0.6;font-size:0.85rem;margin-top:0.5rem">Try the "Choose Your Own Dates" tab instead.</p>';
+        guestSelect.innerHTML = '';
+        submitBtn.disabled = true;
+        return;
+      }
+
+      const d = currentDeparture;
+      const soldOut = d.remaining <= 0;
+      const badgeClass = soldOut ? 'soldout' : (d.remaining <= 2 ? 'low' : 'available');
+      const badgeText = soldOut ? 'Fully booked' : (d.remaining + ' spot' + (d.remaining === 1 ? '' : 's') + ' left of ' + d.capacity);
+
+      card.innerHTML =
+        '<div class="departure-title">' + d.label + '</div>' +
+        '<div class="departure-meta">&euro;' + d.price_per_person + ' per person &middot; full amount due at booking</div>' +
+        '<span class="spots-badge ' + badgeClass + '">' + badgeText + '</span>';
+
+      guestSelect.innerHTML = '<option value="">Select...</option>';
+      const max = Math.min(d.remaining, 8);
+      for (let i = 1; i <= max; i++) {
+        guestSelect.innerHTML += '<option value="' + i + '">' + i + '</option>';
+      }
+
+      submitBtn.disabled = soldOut;
+      submitBtn.textContent = soldOut ? 'Fully Booked' : 'Pay & Reserve My Spot →';
+    }
+
+    function loadDepartures() {
+      fetch(API_BASE + '/api/departures')
+        .then((r) => r.json())
+        .then((data) => {
+          currentDeparture = (data.departures && data.departures[0]) || null;
+          renderDepartureCard();
+        })
+        .catch(() => {
+          document.getElementById('departure-card').innerHTML =
+            '<div class="departure-title">Could not load departure availability.</div><p style="opacity:0.6;font-size:0.85rem;margin-top:0.5rem">Please refresh, or email us directly.</p>';
+        });
+    }
+
+    function updatePricePreview(previewId, guests) {
+      const el = document.getElementById(previewId);
+      const n = Number(guests);
+      if (!n) { el.textContent = ''; return; }
+      el.innerHTML = n + ' guest' + (n > 1 ? 's' : '') + ' &times; &euro;' + PRICE_PER_PERSON + ' = <strong>&euro;' + (n * PRICE_PER_PERSON).toLocaleString() + '</strong>';
+    }
+
+    document.getElementById('fixed-guests').addEventListener('change', (e) => updatePricePreview('fixed-price-preview', e.target.value));
+    document.getElementById('custom-guests').addEventListener('change', (e) => updatePricePreview('custom-price-preview', e.target.value));
+
+    function showError(elId, message) {
+      const el = document.getElementById(elId);
+      el.textContent = message;
+      el.classList.add('visible');
+    }
+    function clearError(elId) {
+      const el = document.getElementById(elId);
+      el.textContent = '';
+      el.classList.remove('visible');
+    }
+
+    function submitBooking(kind) {
+      const isFixed = kind === 'fixed';
+      const errId = isFixed ? 'fixed-error' : 'custom-error';
+      const btnId = isFixed ? 'fixed-submit-btn' : 'custom-submit-btn';
+      clearError(errId);
+
+      const name = document.getElementById(isFixed ? 'fixed-name' : 'custom-name').value.trim();
+      const email = document.getElementById(isFixed ? 'fixed-email' : 'custom-email').value.trim();
+      const guests = Number(document.getElementById(isFixed ? 'fixed-guests' : 'custom-guests').value);
+      const notes = document.getElementById(isFixed ? 'fixed-notes' : 'custom-notes').value.trim();
+
+      if (!name) return showError(errId, 'Please enter your name.');
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showError(errId, 'Please enter a valid email.');
+      if (!guests || guests < 1 || guests > 8) return showError(errId, 'Please select the number of guests.');
+
+      const payload = {
+        name, email, num_guests: guests, notes,
+        activities: Array.from(selectedActivities),
+      };
+
+      let url = API_BASE + '/api/bookings/custom';
+      if (isFixed) {
+        if (!currentDeparture) return showError(errId, 'No departure is available to book right now.');
+        payload.departure_id = currentDeparture.id;
+        url = API_BASE + '/api/bookings/fixed';
+      } else {
+        payload.preferred_dates = document.getElementById('custom-dates').value.trim();
+      }
+
+      const btn = document.getElementById(btnId);
+      btn.disabled = true;
+      const originalText = btn.textContent;
+      btn.textContent = 'Redirecting to secure checkout…';
+
+      fetch(url, {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          document.getElementById('catalog').style.display = 'none';
-          document.querySelector('.contact-form').style.display = 'none';
-          document.getElementById('success-message').style.display = 'block';
-          window.scrollTo({ top: document.getElementById('contact').offsetTop - 40, behavior: 'smooth' });
-        }
-      });
-    });
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(async (r) => {
+          const data = await r.json();
+          if (!r.ok) throw new Error(data.error || 'Something went wrong. Please try again.');
+          window.location.href = data.url; // → Stripe Checkout
+        })
+        .catch((err) => {
+          showError(errId, err.message || 'Something went wrong. Please try again.');
+          btn.disabled = false;
+          btn.textContent = originalText;
+          if (isFixed) loadDepartures(); // refresh remaining spots in case it was a capacity conflict
+        });
+    }
+
+    loadDepartures();
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
