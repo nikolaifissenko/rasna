@@ -224,7 +224,7 @@
     .cm-day-list li:last-child { margin-bottom: 0; }
     .cm-time-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--olive); margin-right: 0.5rem; }
 
-    @media (max-width: 900px) {
+    @media (max-width: 680px) {
       #festival-week .section-wide { max-width: 1080px; }
       .calendar-grid-wrap { display: none; }
       .calendar-mobile-list { display: block; }
