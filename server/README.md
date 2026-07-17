@@ -63,10 +63,10 @@ restart the server (or redeploy) after editing:
 ```json
 [
   {
-    "id": "2026-11-placeholder",
-    "label": "November 9–13, 2026",
+    "id": "2026-11-09",
+    "label": "November 9–15, 2026",
     "start_date": "2026-11-09",
-    "end_date": "2026-11-13",
+    "end_date": "2026-11-15",
     "capacity": 8,
     "price_per_person": 1450,
     "currency": "eur",
@@ -75,11 +75,10 @@ restart the server (or redeploy) after editing:
 ]
 ```
 
-The dates currently in the file are **placeholders** — replace `label`,
-`start_date`, and `end_date` with the real confirmed dates before going
-live. Add more objects to the array to open more fixed departures later;
-each gets its own independent 8-person pool. Set `"active": false` to
-close a departure without deleting its history.
+This is the current, confirmed launch departure. Add more objects to
+the array to open more fixed departures later; each gets its own
+independent 8-person pool. Set `"active": false` to close a departure
+without deleting its history.
 
 ## 4. Environment variables
 
