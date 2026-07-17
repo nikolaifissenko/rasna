@@ -89,20 +89,20 @@
       <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
       <p class="tagline">This isn't a tour. It's living Blera, not just visiting it. A real, unscripted slice of a place shaped by three thousand years of history, led by someone who's called it home since he was born, sharing it with the people he loves ever since.</p>
-      <a href="#catalog" class="cta-button" onclick="showTab('build','catalog'); return false;">Build your expedition</a>
-      <a href="#festival-week" class="hero-secondary" onclick="showTab('trips'); return false;">Or book our fixed Nov 9 to 15 Italian Autumn Experience departure &rarr;</a>
+      <a href="#festival-week" class="cta-button" onclick="showTab('trips'); return false;">Book the Nov 9 to 15 Italian Autumn Experience</a>
+      <a href="#catalog" class="hero-secondary" onclick="showTab('build','catalog'); return false;">Or build your own custom trip &rarr;</a>
     </div>
   </section>
 
   <!-- Tab switcher -->
   <div class="tab-switcher-wrap">
     <div class="tab-switcher" id="tab-switcher">
-      <button type="button" class="tab-btn active" data-tab="build" onclick="showTab('build')">Build Your Own</button>
-      <button type="button" class="tab-btn" data-tab="trips" onclick="showTab('trips')">Planned Events</button>
+      <button type="button" class="tab-btn active" data-tab="trips" onclick="showTab('trips')">Italian Autumn Experience</button>
+      <button type="button" class="tab-btn" data-tab="build" onclick="showTab('build')">Build Your Own Trip</button>
     </div>
   </div>
 
-  <div id="panel-build">
+  <div id="panel-build" style="display:none">
 
   <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
 
@@ -630,7 +630,7 @@
 
   </div><!-- /panel-build -->
 
-  <div id="panel-trips" style="display:none">
+  <div id="panel-trips">
 
   <div class="etruscan-border"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander-light)"/></svg></div>
 
@@ -645,113 +645,78 @@
         <p>One set week, one small group, everything arranged. Land in Blera in time for the town's biggest weekend of the year, when every wine cellar throws open its doors and the whole town eats and drinks together, bookended by six days of olive harvesting, Etruscan tombs, thermal baths, and hands-on cooking with local families. Capped at 8 guests.</p>
       </div>
 
-      <div class="itinerary-timeline fade-in">
+      <div class="calendar-week fade-in">
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">1</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Mon &middot; Nov 9</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
-              <h4>Arrival in Blera</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>Airport pickup and transfer to Blera.</li>
-              <li><span class="time-tag">Evening</span>Welcome aperitivo in the piazza, dinner at a local trattoria.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Mon</span><span class="calendar-date">9</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-pin"/></svg></div>
+          <div class="calendar-day-title">Arrival in Blera</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>Airport pickup and transfer to Blera.</li>
+            <li><span class="calendar-time-tag">Evening</span>Welcome aperitivo, dinner at a local trattoria.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">2</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Tue &middot; Nov 10</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-tombpath"/></svg></div>
-              <h4>Tomb Raider &amp; Tarquinia</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>A town scavenger hunt through Blera's rock-cut tombs.</li>
-              <li><span class="time-tag">Afternoon</span>Day trip to Tarquinia's UNESCO-listed painted tombs.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Tue</span><span class="calendar-date">10</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-tombpath"/></svg></div>
+          <div class="calendar-day-title">Tomb Raider &amp; Tarquinia</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>Scavenger hunt through Blera's rock-cut tombs.</li>
+            <li><span class="calendar-time-tag">PM</span>Day trip to Tarquinia's painted tombs.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">3</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Wed &middot; Nov 11</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-leaf"/></svg></div>
-              <h4>Olive Harvest &amp; Thermal Baths</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>An Italian farmer's breakfast, then hand-picking olives at a local grove.</li>
-              <li><span class="time-tag">Lunch</span>A farmhouse lunch of fresh focaccia with local cold cuts and cheese.</li>
-              <li><span class="time-tag">Afternoon</span>Relax at Tuscia Terme's thermal baths.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Wed</span><span class="calendar-date">11</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-leaf"/></svg></div>
+          <div class="calendar-day-title">Olive Harvest &amp; Thermal Baths</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>Farmer's breakfast, then hand-picking olives.</li>
+            <li><span class="calendar-time-tag">Lunch</span>Fresh focaccia, local cold cuts and cheese.</li>
+            <li><span class="calendar-time-tag">PM</span>Relax at Tuscia Terme's thermal baths.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">4</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Thu &middot; Nov 12</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-hammer"/></svg></div>
-              <h4>Olive Mill &amp; Pasta Making</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>Breakfast at the bar, then a visit to the frantoio to collect the oil pressed from the olives you harvested the day before.</li>
-              <li><span class="time-tag">Afternoon</span>A hands-on pasta-making class.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Thu</span><span class="calendar-date">12</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-hammer"/></svg></div>
+          <div class="calendar-day-title">Olive Mill &amp; Pasta Making</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>Frantoio visit for the oil pressed from yesterday's harvest.</li>
+            <li><span class="calendar-time-tag">PM</span>Hands-on pasta-making class.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">5</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Fri &middot; Nov 13</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-mountain"/></svg></div>
-              <h4>San Giovenale Hike &amp; Panonto</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>A guided hike to the Etruscan site of San Giovenale.</li>
-              <li><span class="time-tag">Lunch</span>Panonto, Tuscia's answer to bruschetta: thick bread toasted over embers and drizzled with new-pressed olive oil.</li>
-              <li><span class="time-tag">Evening</span>Dinner at Cantina Il Cavone as the festival kicks off.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Fri</span><span class="calendar-date">13</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-mountain"/></svg></div>
+          <div class="calendar-day-title">San Giovenale Hike &amp; Panonto</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>Guided hike to the Etruscan site of San Giovenale.</li>
+            <li><span class="calendar-time-tag">Lunch</span>Panonto: bread toasted over embers, new-pressed oil.</li>
+            <li><span class="calendar-time-tag">Evening</span>Dinner at Cantina Il Cavone as the festival kicks off.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">6</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Sat &middot; Nov 14</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-festival"/></svg></div>
-              <h4>Cantine Festival</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>A slow morning.</li>
-              <li><span class="time-tag">Afternoon</span>Free time to wander Blera's Cantine Festival as the town's wine cellars open their doors.</li>
-              <li><span class="time-tag">Evening</span>Goodbye dinner at Trattoria La Torretta.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Sat</span><span class="calendar-date">14</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-festival"/></svg></div>
+          <div class="calendar-day-title">Cantine Festival</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>A slow morning.</li>
+            <li><span class="calendar-time-tag">PM</span>Free time to wander the Cantine Festival.</li>
+            <li><span class="calendar-time-tag">Evening</span>Goodbye dinner at Trattoria La Torretta.</li>
+          </ul>
         </div>
 
-        <div class="itinerary-day">
-          <div class="itinerary-marker"><div class="itinerary-daynum">7</div></div>
-          <div class="itinerary-content">
-            <div class="itinerary-date">Sun &middot; Nov 15</div>
-            <div class="itinerary-heading">
-              <div class="icon-badge"><svg width="18" height="18"><use href="#icon-pin"/></svg></div>
-              <h4>Departure</h4>
-            </div>
-            <ul class="day-schedule">
-              <li><span class="time-tag">Morning</span>One last breakfast together, then farewells.</li>
-            </ul>
-          </div>
+        <div class="calendar-day">
+          <div class="calendar-day-header"><span class="calendar-dow">Sun</span><span class="calendar-date">15</span></div>
+          <div class="calendar-day-icon"><svg width="16" height="16"><use href="#icon-pin"/></svg></div>
+          <div class="calendar-day-title">Departure</div>
+          <ul class="calendar-day-list">
+            <li><span class="calendar-time-tag">AM</span>One last breakfast together, then farewells.</li>
+          </ul>
         </div>
 
       </div>
