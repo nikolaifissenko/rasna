@@ -18,14 +18,14 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 - Italian farmer's breakfast
 - Olive harvest with `TODO: confirm name` (likely Nicolò Lenarda — has the olive oil operation, per `CONTATTI_LOCALI.md`)
 - A farmer's lunch: fresh focaccia panini with local cold cuts, cheeses and sauces
-- Afternoon mill tour and olive pressing
-- Relax time; dinner by residence chef `TODO: confirm — "Nico"?`
+- **Afternoon: Tuscia Terme (confirmed)** — thermal baths, ~€14/person entry, ~€112 for 8 guests, to relax after the harvest
+- Dinner by residence chef `TODO: confirm — "Nico"?`
 
 ## Thursday, November 12
 - Breakfast at the bar
-- **Tuscia Terme (confirmed)** — thermal baths, ~€14/person entry, ~€112 for 8 guests
-- Lunch at spa, followed by relax time
-- Pasta making
+- Morning at the frantoio (olive mill) to collect the oil pressed from Wednesday's harvest
+- Lunch
+- Afternoon: pasta making
 
 ## Friday, November 13
 - Breakfast
