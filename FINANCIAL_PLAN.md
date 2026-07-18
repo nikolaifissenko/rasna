@@ -32,15 +32,17 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 ### Per-guest cost breakdown (estimate)
 | Item | Cost |
 |---|---|
-| Lodging (3 nights, partner BnB rate) | €170 |
+| Lodging (3 nights @ €56/night — La Ripa, Antonella, confirmed via Booking.com) | €168 |
 | Meals & local hosting fees (traditional-style cooking, panonto, etc. — fair pay for real hosts' time) | €220 |
 | Local guiding/transport (incl. day trips to Lago di Vico, Villa Lante, Tarquinia, etc.) | €140 |
 | Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
 | **Guest activity insurance** (hands-on/manual activities — confirmed as a real, necessary cost per Maria Grazia's feedback) | €40 |
 | Marketing & booking overhead (allocated) | €60 |
-| **Total cost per guest** | **~€720** |
+| **Total cost per guest** | **~€718** |
 
-**Gross margin per guest: ~€680 (≈49%)**
+**Gross margin per guest: ~€682 (≈49%)**
+
+**Note on lodging:** this is now a real, confirmed rate (La Ripa, run by Antonella — €56/night per Booking.com) rather than an estimate, replacing the earlier €170/~€57 placeholder. Assumes single-occupancy-equivalent per-guest pricing at this nightly rate; confirm actual per-room/per-guest terms directly with Antonella once ready to formalize (see `CONTATTI_LOCALI.md`).
 
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
@@ -51,8 +53,8 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 Assume groups of **8 guests** average (range 6–10 — small enough to stay intimate, large enough to be efficient):
 
 - Revenue per group: 8 × €1,400 = **€11,200**
-- Cost per group: 8 × €720 = **€5,760**
-- **Gross profit per group: ~€5,440**
+- Cost per group: 8 × €718 = **€5,744**
+- **Gross profit per group: ~€5,456**
 
 This profit is split between you and Maria Grazia per your partnership agreement (e.g., 50/50, or weighted by role/investment — to be defined in Phase 0).
 
@@ -94,7 +96,7 @@ This is a relatively low-capital business to start — the main investment is ti
 
 ## 5. Break-even
 
-At ~€5,440 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
+At ~€5,456 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
 
 ## 6. Revenue growth levers that DON'T require running more groups
 

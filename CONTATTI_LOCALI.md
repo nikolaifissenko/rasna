@@ -20,7 +20,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
-| Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
+| Antonella (La Ripa) | Partner — B&B | ✅ VERIFICATO — La Ripa, gestito da Antonella, €56/notte (tariffa confermata su Booking.com, 18 luglio 2026) |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
@@ -109,3 +109,10 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
+
+### LA RIPA (Antonella) — alloggio
+- **Settore:** B&B
+- **Gestita da:** Antonella
+- **Stato:** ✅ VERIFICATO — tariffa confermata su Booking.com
+- **Prezzo:** €56/notte
+- **Note:** candidato concreto per l'alloggio del gruppo (vedi `FINANCIAL_PLAN.md` per l'impatto sul costo per ospite)
