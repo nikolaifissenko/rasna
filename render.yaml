@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: rasna-booking-api
+    runtime: node
+    plan: starter
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    disk:
+      name: rasna-booking-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DB_PATH
+        value: /data/bookings.db
+      - key: SITE_URL
+        value: https://nikolaifissenko.github.io/rasna
+      - key: CORS_ORIGIN
+        value: https://nikolaifissenko.github.io
+      - key: CUSTOM_PRICE_PER_PERSON
+        value: "1450"
+      - key: ADMIN_USER
+        value: admin
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

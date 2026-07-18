@@ -5,6 +5,48 @@ record (SQLite), and enforces the 8-person cap on the fixed November
 departure. The marketing site (`index.html` at the repo root) stays static
 and calls this API over HTTP.
 
+## Go-live checklist (do this to open real bookings)
+
+A `render.yaml` blueprint at the repo root is already wired up to deploy
+this API to [Render](https://render.com) with a persistent disk, pointed
+at `https://rasna-booking-api.onrender.com` — `index.html` already
+expects that exact URL. These are the only steps left, and only you can
+do them (they need your accounts and payment details):
+
+1. **Deploy the API.** On [render.com](https://dashboard.render.com/blueprints),
+   New → Blueprint → connect the `rasna` GitHub repo → Render reads
+   `render.yaml` and proposes the `rasna-booking-api` service with a 1GB
+   disk. Requires Render's **Starter** plan (~$7/mo) — the free tier has
+   no persistent disk, and the SQLite file would be wiped on every
+   restart without one.
+2. **Add the three secrets Render will prompt for** (it won't deploy
+   without them, and these are exactly the ones marked `sync: false` in
+   `render.yaml` so they're never committed to the repo):
+   - `STRIPE_SECRET_KEY` — from Stripe Dashboard → Developers → API keys.
+     Start with `sk_test_...`, switch to `sk_live_...` once you've done a
+     real test booking (step 5).
+   - `STRIPE_WEBHOOK_SECRET` — from step 3 below.
+   - `ADMIN_PASSWORD` — pick something strong; unlocks `/admin`, which
+     shows guest names, emails, and payment amounts.
+3. **Create the Stripe webhook.** Stripe Dashboard → Developers →
+   Webhooks → Add endpoint → URL `https://rasna-booking-api.onrender.com/webhook/stripe`,
+   events `checkout.session.completed` and `checkout.session.expired`.
+   Copy the signing secret (`whsec_...`) into `STRIPE_WEBHOOK_SECRET` on
+   Render (step 2). **Without this, payments go through but bookings
+   never flip from "pending" to "paid," and capacity never updates.**
+4. **Merge the PR** (or make sure `index.html` on your GitHub Pages
+   branch already points `window.RASNA_API_BASE` at
+   `https://rasna-booking-api.onrender.com`) so the live site talks to
+   the deployed API.
+5. **Test with a real (test-mode) payment** before flipping to live
+   keys — see §7 below. Card `4242 4242 4242 4242`, any future expiry,
+   any CVC.
+6. **Switch to live Stripe keys** on Render once the test booking shows
+   up correctly on `/admin` and Stripe decrements `remaining` on
+   `/api/departures`.
+
+Everything else in this file is reference detail for the steps above.
+
 ## What it does
 
 - `GET /api/departures` — live availability for the fixed departure(s)
@@ -97,23 +139,25 @@ See `.env.example` for the full list. The important ones:
 
 This is a plain Node process with a local SQLite file — it needs a host
 with a **persistent disk**, not a stateless serverless function (the
-SQLite file would vanish between invocations). Recommended, in order of
-simplicity:
+SQLite file would vanish between invocations).
 
-- **Render** (Web Service, Node) — attach a small persistent disk mounted
-  at `/data`, set `DB_PATH=/data/bookings.db`. Cheapest paid tier is
-  enough for this traffic volume.
+**Default path: Render, via `render.yaml`** (see the go-live checklist
+above) — it already declares the service, the disk, and the env var
+names; you just supply the three secrets in Render's dashboard.
+
+Alternatives, if you'd rather not use Render:
 - **Railway** — similar: a service with a volume.
 - **Fly.io** — a small VM with a volume.
 - Any VPS you already have — `npm install && npm start` behind a
   reverse proxy (Caddy/nginx) with TLS, run under `pm2` or a systemd
   service so it restarts on crash/reboot.
 
-Whichever you pick:
+If you use one of these instead of Render, remember to:
 1. Deploy this `server/` directory as its own service.
 2. Set all the env vars above on that host (never commit `.env`).
 3. Point the Stripe webhook at that service's public URL.
-4. Update `RASNA_API_BASE` (see below) to that service's URL.
+4. Update `RASNA_API_BASE` in `index.html` (see below) to that service's
+   URL instead of the Render one it currently points to.
 
 The static site (`index.html`, `success.html`, `cancel.html` at the repo
 root) can keep living wherever it already does — GitHub Pages, Netlify,

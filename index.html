@@ -483,9 +483,10 @@
 </head>
 <body>
 
-  <!-- Booking API base URL — set this to your deployed backend once it's
-       live (see server/README.md). Falls back to localhost for local dev. -->
-  <script>window.RASNA_API_BASE = 'http://localhost:4242';</script>
+  <!-- Booking API base URL. Points at the Render deploy of server/ (see
+       render.yaml + server/README.md). If you rename the Render service,
+       or host it elsewhere, update this to match. -->
+  <script>window.RASNA_API_BASE = 'https://rasna-booking-api.onrender.com';</script>
 
   <!-- SVG defs -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
