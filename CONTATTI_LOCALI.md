@@ -6,7 +6,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 
 | Nome | Ruolo nel progetto | Note |
 |---|---|---|
-| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice |
+| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice — Bar Paradiso |
 | Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
 | Emiliano (figlio di Miriam) | Affettati — degustazione salumi homemade | ✅ CONFERMATO — disponibile per degustazioni dei suoi prodotti di salumeria artigianale |
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — sostituito da Davide Paolocci (vedi sotto)** |
@@ -22,6 +22,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
+| **Sandro Scarmiglia** | Terrarte — parco di sculture all'aria aperta | Offre pranzo nell'oliveto o aperitivo (€10/persona) — DA VALIDARE |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -97,7 +98,21 @@ Alla fine di questo giro di conversazioni, dovresti avere:
   - Azienda olearia (raccolta olive) — DA VALIDARE stagionalità
   - 2 cavalli — DA VALIDARE logistica gruppi
   - Compagna + asini (trekking) — DA VALIDARE disponibilità
-  - Panonto a San Giovenale — DA VALIDARE formato + data
+  - Panonto a San Giovenale — ✅ PREVENTIVO RICEVUTO (vedi sotto)
+
+- **Preventivo confermato — Pranzo a San Giovenale con doppia presenza a cavallo (abito tradizionale):**
+  - **€250 flat, per la giornata** (non a persona)
+  - Include: pranzo a San Giovenale + 2 cavalieri in abito tradizionale presenti per tutta la giornata
+  - **Costo per gruppo di 8** (all-inclusive, non pro-capite): **€250/gruppo** → **€31,25/persona**
+
+- **Preventivo confermato — Asini (escursione someggiata) + degustazione olio** *(messaggio del 15/07/2026, tariffa agenzia — Rasna conta come agenzia)*:
+  | Pacchetto | Prezzo pubblico | Prezzo agenzia (Rasna, -€5) |
+  |---|---|---|
+  | Training + escursione someggiata con asini | €25/persona | **€20/persona** |
+  | Training + escursione con asini + degustazione olio EVO | €35/persona | **€30/persona** |
+  | Degustazione olio EVO bio (da sola) | €15/persona | €15/persona *(nessuno sconto indicato)* |
+  - **Ragazzi under 14: €15/persona** (indipendentemente dal pacchetto, come indicato da Nicolò)
+  - **Costo per gruppo di 8 adulti** (pacchetto asini + olio, tariffa agenzia): 8 × €30 = **€240/gruppo**
 
 ### TOTÒ
 - **Tel:** (in rubrica)

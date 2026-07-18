@@ -129,7 +129,7 @@ These aren't separate attractions to manage — they're moments the town already
 **Activities on the landing page (client-facing, finalized):**
 
 *Farm & Field:*
-- Olive Harvest — morning picking, then to the mill, take the oil home
+- Olive Harvest — two-day experience: Day 1 morning picking, lunch break, then an afternoon at the terme to relax; Day 2 visit to the frantoio (mill) to collect the oil pressed from what you harvested the day before
 - Tomato & Sauce Day — August passata tradition
 - Grape Harvest — vendemmia + cantina visit, take a bottle from the previous year
 - Wild Asparagus Foraging — spring/Easter tradition
