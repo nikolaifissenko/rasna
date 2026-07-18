@@ -1,0 +1,7 @@
+# Copy to `.dev.vars` for local `npm run dev` testing (never commit the
+# real file — it's gitignored). In production these same names are set
+# with `wrangler secret put <NAME>` instead, see README.md.
+
+STRIPE_SECRET_KEY=sk_test_replace_me
+STRIPE_WEBHOOK_SECRET=whsec_replace_me
+ADMIN_PASSWORD=change_me_locally
