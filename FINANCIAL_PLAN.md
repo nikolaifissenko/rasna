@@ -42,7 +42,7 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **Gross margin per guest: ~€682 (≈49%)**
 
-**Note on lodging:** this is now a real, confirmed rate (La Ripa, run by Antonella — €56/night per Booking.com) rather than an estimate, replacing the earlier €170/~€57 placeholder. Assumes single-occupancy-equivalent per-guest pricing at this nightly rate; confirm actual per-room/per-guest terms directly with Antonella once ready to formalize (see `CONTATTI_LOCALI.md`).
+**Note on lodging:** this is now a real, confirmed rate (La Ripa, run by Antonella — €56/night per Booking.com, single-adult/single-room search) rather than an estimate, replacing the earlier €170/~€57 placeholder. Two caveats to resolve before locking this in: (1) La Ripa is in **Barbarano Romano**, not Blera itself (~8 km away) — factor this into the guiding/transport plan; (2) the €56 rate is for 1 adult/1 room/1 night — confirm actual per-room or group rates directly with Antonella, since group bookings may price differently than a single-room search. See `CONTATTI_LOCALI.md` for the source link and details.
 
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
