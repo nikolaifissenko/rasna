@@ -19,7 +19,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
-| Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
+| Beccone Albergo | Possibile partner — alloggio | tariffe indicative trovate online (non su Booking.com — vedi sezione 7), da confermare direttamente; 20 camere/fino a 60 posti, include singole |
 | Antonella (La Ripa) | Partner — B&B | ✅ VERIFICATO — La Ripa, gestito da Antonella, €56/notte (tariffa confermata su Booking.com, 18 luglio 2026) |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
@@ -120,3 +120,16 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Capacità stimata:** ~2 coppie (4 ospiti) — non copre da sola un gruppo intero da 6–10 (vedi `BUSINESS_PLAN.md`/`FINANCIAL_PLAN.md`); serve almeno un secondo partner B&B (es. Beccone Albergo) per coprire il resto del gruppo
 - **Limite:** non ospita singoli — solo coppie/doppie. Ospiti singoli nel gruppo vanno alloggiati altrove
 - **Note:** candidato concreto per l'alloggio del gruppo (vedi `FINANCIAL_PLAN.md` per l'impatto sul costo per ospite)
+
+### BECCONE ALBERGO — alloggio
+- **Settore:** Albergo/ristorante/pizzeria
+- **Località:** Blera (Via G. Marconi 26)
+- **Contatti:** 0761 479210, beccone@gmail.com
+- **Stato:** ⚠️ NON VERIFICATO — non presente su Booking.com per Blera (controllato 18 luglio 2026); tariffe sotto trovate su un sito terzo (hotel-ami.com), da riconfermare direttamente con l'albergo prima di usarle nel piano
+- **Tariffe indicative (colazione inclusa):**
+  - Singola: €35–40/notte
+  - Doppia: €54–60/notte
+  - Tripla: €68–78/notte
+  - Family: €75–88/notte
+- **Capacità:** ~20 camere, fino a 60 posti letto — a differenza di La Ripa, include camere singole
+- **Note:** copre sia la capacità mancante di La Ripa per gruppi da 6–10 sia gli ospiti singoli che La Ripa non può ospitare (vedi `FINANCIAL_PLAN.md`)
