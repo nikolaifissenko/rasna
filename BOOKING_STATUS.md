@@ -60,18 +60,32 @@ the design/content work that only existed on `main`.
   (wrangler dev + local D1): 5 concurrent requests at 1 remaining spot
   → exactly 1 succeeded.
 - `/admin` correctly requires auth (401 without credentials).
+- **Real end-to-end test through the live site, browser-driven**
+  (headless Chromium, not curl): nikolaifissenko.github.io/rasna →
+  filled the "Book the November 9 to 15 departure" form → real Stripe
+  Checkout session opened → paid with test card `4242 4242 4242 4242`
+  → redirected to `success.html?session_id=cs_test_...` with the
+  "Grazie! Your payment went through" message. `/api/departures`
+  `remaining` dropped from 8 to 3 during testing (one genuine paid
+  booking + three abandoned test attempts that briefly hold a spot
+  each — those auto-release themselves ~30 min after creation per
+  `PENDING_HOLD_MINUTES` in `worker/src/db.js`, no cleanup needed).
+  Have not independently confirmed via `/admin` that the paid booking
+  shows `status: paid` (don't have the admin password in this
+  session) — the webhook-driven status flip is inferred from reaching
+  `success.html` with a real session id, not directly observed in the
+  database.
 
 ## Not yet done — pick up here next
 
-1. **Run one real end-to-end test through the actual site UI**
-   (nikolaifissenko.github.io/rasna → Italian Autumn Experience tab →
-   fill the "Book the November 9 to 15 departure" form → pay with
-   Stripe test card `4242 4242 4242 4242` → confirm it lands on
-   `success.html` and `/admin` + `/api/departures` reflect the booking).
-2. **Switch Stripe to Live mode** once step 1 passes: get the live
-   secret key and create a second (live-mode) webhook destination at
-   the same URL/events, then update `STRIPE_SECRET_KEY` and
-   `STRIPE_WEBHOOK_SECRET` in Cloudflare with the live values.
+1. Optional: confirm via `/admin` (Basic Auth: `admin` / the Cloudflare
+   password) that the test booking from 2026-07-18 shows `status: paid`
+   with a `stripe_session_id`, for full end-to-end confidence beyond
+   what the automated browser test could see.
+2. **Switch Stripe to Live mode**: get the live secret key and create a
+   second (live-mode) webhook destination at the same URL/events, then
+   update `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` in Cloudflare
+   with the live values.
 3. Decide what to do with `claude/magical-franklin-58SKM` now that its
    work has been folded into `main` — either repoint the Cloudflare
    Worker's auto-deploy at `main` and retire that branch, or keep using
