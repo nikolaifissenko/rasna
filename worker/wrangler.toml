@@ -3,12 +3,10 @@ main = "src/index.js"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 
-# Created by `wrangler d1 create rasna-bookings` — paste the database_id
-# it prints into the line below before your first deploy.
 [[d1_databases]]
 binding = "DB"
 database_name = "rasna-bookings"
-database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+database_id = "9b39d9d8-6732-4b3f-8024-1667d171e49f"
 
 # Non-secret config. Secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
 # ADMIN_PASSWORD) are set separately with `wrangler secret put <NAME>` —
