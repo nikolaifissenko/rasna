@@ -88,11 +88,17 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 | Licensing/insurance (tourism, food handling) | €500–€1,500 |
 | Website & branding | €500–€2,000 (or DIY for less) |
 | Pilot trip costs (discounted/break-even run) | €1,000–€2,000 |
-| Group transport (van purchase/lease, or via Maria Grazia's local contacts) | €0–€15,000 (see note below) |
+| Group transport (9-seat van rental, per trip — see note below) | €0 upfront (variable per-trip cost, not a startup cost) |
 | Marketing launch (photos, video, ads) | €1,000–€3,000 |
 | **Total estimated startup investment** | **~€4,500–€11,500** |
 
-**Note on the van/transport:** before committing capital to buying a van, it's worth testing whether Maria Grazia's local logistics contacts can cover this — e.g., a local driver with their own vehicle hired per group, or a rental arrangement for departure weeks only. That keeps transport as a per-group variable cost (already included in the "local guiding/transport" line in Section 1) rather than a fixed asset you have to maintain, insure, and park year-round for a business that intentionally only runs ~15-20 trips a year. Buying a van only starts to make sense once you're running frequently enough that ownership is cheaper than hiring — worth revisiting in Year 2-3 once real per-group transport costs are known. If you do buy, factor in insurance, maintenance, and Italian commercial-vehicle/driver licensing requirements (to confirm with your commercialista).
+**Note on the van/transport — rental, not purchase:** given the business intentionally runs only ~15-20 trips/year, renting a 9-seat van per trip (rather than buying or leasing long-term) is the right model — it keeps transport as a per-group variable cost (already included in the "local guiding/transport" line in Section 1) instead of a fixed asset you maintain, insure, and park year-round.
+
+Indicative rates found online (Italy, July 2026, unverified — get real quotes before locking into the plan):
+- **Short-term/daily rental (the relevant option for per-trip use):** ~€100–150/day for a 9-seat van. At 4 days/trip, that's roughly **€400–600 per group trip** (before fuel, extra-km charges, insurance excess, or deposit).
+- **Long-term lease (noleggio lungo termine), for comparison only — not the right fit here:** ~€489–779/month + IVA depending on model (Fiat Doblò Combi 9 posti at the low end, Fiat Ducato 9 posti at the high end), typically 48-60 month terms with maintenance/insurance/road tax included. This only starts to beat per-trip rental if running far more frequently than the planned ~15-20 trips/year.
+
+Also worth testing whether Maria Grazia's local logistics contacts can cover this even more cheaply — e.g., a local driver with their own vehicle hired per group. Revisit buying only in Year 2-3 once real per-group transport costs are known and volume might justify ownership; if you do buy, factor in insurance, maintenance, and Italian commercial-vehicle/driver licensing requirements (to confirm with your commercialista).
 
 This is a relatively low-capital business to start — the main investment is time, relationship-building, and a modest marketing budget, not large fixed assets.
 
