@@ -23,8 +23,8 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Antonella (La Ripa) | Partner — B&B | ✅ VERIFICATO — La Ripa, gestito da Antonella, €56/notte (tariffa confermata su Booking.com, 18 luglio 2026) |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 | Il Casale del Mignone | ✅ Scelto — alloggio per gruppi famiglia | casa vacanze intera con cucina propria, Località Pratarello, Blera; ~€86/notte stimato (non confermato su Booking.com), 2 camere/2 bagni; opzione separata dal pool La Ripa+Beccone per gruppi standard |
-| Casamatta a Blera | ⭐ Candidato forte — da contattare | nel centro di Blera, 2 appartamenti collegati, **capienza totale 9 ospiti** — potrebbe coprire quasi l'intero gruppo da sola; ~€86/notte (fonte terza, non confermato), niente animali, bambini benvenuti; tel. +39 338 447 6764 |
-| La Dimora degli Etruschi | Possibile alloggio — DA VERIFICARE | relais/agriturismo a Civitella Cesi (frazione di Blera, ~7 km dal centro), piscina, camere rurali con ingresso privato; nominato anche come "ostello" in una fonte — da verificare se accetta gruppi e a che prezzo |
+| Casamatta a Blera | ✅ Aggiunta come opzione — priorità alta da contattare | nel centro di Blera, 2 appartamenti collegati, **capienza totale 9 ospiti** — potrebbe coprire quasi l'intero gruppo da sola; ~€86/notte (fonte terza, non confermato), niente animali, bambini benvenuti; tel. +39 338 447 6764 |
+| La Dimora degli Etruschi | ✅ Aggiunta come opzione — da verificare | relais/agriturismo a Civitella Cesi (frazione di Blera, ~7 km dal centro), piscina, camere rurali con ingresso privato; nominato anche come "ostello" in una fonte — da verificare se accetta gruppi e a che prezzo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -145,17 +145,19 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Valutazione ospiti:** 9.3/10 circa (fonti terze)
 - **Uso previsto:** l'opzione scelta specificamente per i gruppi/prenotazioni **famiglia** — casa privata con cucina propria, spazio esterno e camere separate, più adatta a una famiglia che alle camere condivise di La Ripa/Beccone; non fa parte del pool standard per gruppi da 6-10 (quello resta La Ripa + Beccone), è un'opzione a parte per quel profilo di ospite. Capienza reale (2 camere, probabilmente 4-6 posti) e prezzo da confermare prima di usarli nel piano dei costi
 
-### CASAMATTA A BLERA — alloggio (candidato forte, da contattare)
+### CASAMATTA A BLERA — alloggio ✅ AGGIUNTA COME OPZIONE (priorità alta)
 - **Tipo:** casa vacanze nel centro storico di Blera, ristrutturata in legno, su più piani con scale interne — pensata esplicitamente per ospitare **più nuclei familiari/gruppi di amici insieme**; 2 appartamenti collegati
 - **Capacità:** **9 ospiti totali** tra i 2 appartamenti — potenzialmente sufficiente da sola per l'intero gruppo standard da 8 ospiti
 - **Località:** Vicolo di Civitella 22/26, Blera (VT) — centro paese
 - **Contatti:** +39 338 447 6764, casamattablera@gmail.com
+- **Link:** sito ufficiale https://www.casamattablera.com/ · Booking.com https://www.booking.com/hotel/it/casamatta-a-blera.it.html · Airbnb https://www.airbnb.com/rooms/18153044
 - **Servizi:** cucina attrezzata (frigo, piano cottura, utensili), Wi-Fi gratuito, parcheggio auto/moto su strada, deposito bici; check-in 14:00-21:00, check-out entro le 10:00; bambini di tutte le età benvenuti; **animali NON ammessi**
-- **Stato:** ⚠️ NON VERIFICATO — prezzo (~€86/notte) trovato su una fonte terza (ricerca aggregata), non confermato su Booking.com o dal sito ufficiale (irraggiungibile via ricerca automatica); listato anche su Airbnb e Booking.com — da contattare direttamente per tariffa di gruppo/più notti e conferma capienza reale
+- **Stato:** ⚠️ Prezzo NON VERIFICATO — (~€86/notte) trovato su una fonte terza (ricerca aggregata), non confermato su Booking.com o dal sito ufficiale (irraggiungibile via ricerca automatica) — da contattare direttamente per tariffa di gruppo/più notti e conferma capienza reale
 - **Nota:** il candidato più promettente trovato finora per centralizzare l'alloggio del gruppo in un unico posto (in centro a Blera, non fuori paese come La Ripa/Beccone) — priorità alta da verificare prima delle altre opzioni
 
-### LA DIMORA DEGLI ETRUSCHI — alloggio (da verificare)
+### LA DIMORA DEGLI ETRUSCHI — alloggio ✅ AGGIUNTA COME OPZIONE (da verificare)
 - **Tipo:** relais/agriturismo in stile rurale, con piscina; camere con ingresso privato e bagno privato; una fonte la elenca anche come "ostello" (Ostello La Dimora degli Etruschi), il che suggerirebbe una configurazione adatta a gruppi/più posti letto — da confermare
 - **Località:** Civitella Cesi, frazione di Blera (~7 km dal centro di Blera, ~45 min da Viterbo)
+- **Link:** Booking.com https://www.booking.com/hotel/it/la-dimora-degli-etruschi.it.html · agriturismo.com https://www.agriturismo.com/dettaglioAgriturismo.asp?id=3539 — attenzione: esiste una struttura omonima diversa a Celle sul Rigo (Toscana), non confondere
 - **Stato:** ⚠️ NON VERIFICATO — nessun prezzo trovato; da contattare direttamente per tariffe e capienza
 - **Nota:** essendo a Civitella Cesi (come Davide Paolocci e il Maneggio), potrebbe combinarsi bene logisticamente con quelle attività se il gruppo alloggia lì
