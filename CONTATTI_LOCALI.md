@@ -22,6 +22,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | ✅ Scelto — secondo partner alloggio | miglior opzione per singoli + resto del gruppo; tariffe indicative trovate online (non su Booking.com — vedi sezione 7), da confermare direttamente; 20 camere/fino a 60 posti, include singole |
 | Antonella (La Ripa) | Partner — B&B | ✅ VERIFICATO — La Ripa, gestito da Antonella, €56/notte (tariffa confermata su Booking.com, 18 luglio 2026) |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
+| Il Casale del Mignone | Possibile alloggio — sotto valutazione | casa vacanze intera (non B&B a camere), Località Pratarello, Blera; ~€86/notte stimato (non confermato su Booking.com), 2 camere/2 bagni + cucina; da verificare capienza reale e tariffa |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -133,3 +134,11 @@ Alla fine di questo giro di conversazioni, dovresti avere:
   - Family: €75–88/notte
 - **Capacità:** ~20 camere, fino a 60 posti letto — a differenza di La Ripa, include camere singole
 - **Note:** copre sia la capacità mancante di La Ripa per gruppi da 6–10 sia gli ospiti singoli che La Ripa non può ospitare (vedi `FINANCIAL_PLAN.md`)
+
+### IL CASALE DEL MIGNONE — alloggio (sotto valutazione)
+- **Tipo:** casa vacanze intera (non B&B/albergo a camere) — 2 camere da letto, 2 bagni, cucina completamente attrezzata (forno, ecc.), soggiorno, giardino, terrazza, parcheggio privato gratuito, animali ammessi
+- **Località:** Località Pratarello snc, Blera
+- **Link:** https://www.booking.com/hotel/it/il-casale-del-mignone-blera2.it.html
+- **Stato:** ⚠️ NON VERIFICATO — prezzo non confermato direttamente su Booking.com (pagina non accessibile via ricerca automatica); stima ~€86/notte da un aggregatore terzo basata sulla media regionale del Lazio, da riconfermare
+- **Valutazione ospiti:** 9.3/10 circa (fonti terze)
+- **Nota:** profilo diverso da La Ripa/Beccone — è una casa intera con cucina propria, quindi capienza reale (probabilmente 4-6 ospiti) e adatta più a un piccolo sotto-gruppo o a un uso specifico (es. base per un'attività di cucina) che all'intero gruppo da 6-10; da verificare capienza esatta e prezzo reale prima di includerla nel piano dei costi
