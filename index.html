@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>window.RASNA_API_BASE = 'https://rasna-booking-api.nikolai-fissenko1.workers.dev';</script>
 </head>
 <body>
 
@@ -782,13 +783,10 @@
 
       <div class="festival-book fade-in" id="festival-book">
         <div class="section-label">Reserve your spot</div>
-        <h3>Book the November 9 to 15 departure</h3>
-        <p>Only 8 spots for this departure. A &euro;300/guest deposit secures your place. After you submit, you'll be taken to secure checkout to pay it.</p>
+        <h3 id="festival-book-heading">Book the November 9 to 15 departure</h3>
+        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure &middot; &euro;1,450 per person, all-inclusive. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
 
-        <form id="festival-form" action="https://formspree.io/f/xlgynpjo" method="POST" class="festival-form">
-          <input type="hidden" name="trip" value="November 9-15, 2026 - Italian Autumn Experience (Cantine Festival Week)">
-          <input type="hidden" name="_subject" value="RASNA - Italian Autumn Experience booking (Nov 9-15)">
-
+        <form id="festival-form" class="festival-form">
           <div class="form-row">
             <div class="form-group">
               <label for="fw-name">Your name</label>
@@ -820,12 +818,14 @@
             <textarea id="fw-notes" name="notes" placeholder="Dietary needs, questions about the trip..."></textarea>
           </div>
 
-          <button type="submit" class="cta-button-solid festival-submit" id="festival-submit-btn">Reserve My Spot &amp; Pay Deposit &rarr;</button>
+          <div class="booking-error" id="festival-error" style="display:none; color:#c0392b; margin-bottom:1rem;"></div>
+
+          <button type="submit" class="cta-button-solid festival-submit" id="festival-submit-btn">Pay &amp; Reserve My Spot &rarr;</button>
         </form>
 
         <div class="festival-success" id="festival-success">
           <h3>Grazie!</h3>
-          <p>Taking you to secure checkout to pay your deposit now&hellip;</p>
+          <p>Taking you to secure checkout now&hellip;</p>
         </div>
       </div>
     </div>
@@ -919,40 +919,66 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-    const STRIPE_DEPOSIT_LINK = 'https://buy.stripe.com/test_4gMfZhcbW6GN93O2GB38401';
-    const DEPOSIT_PER_GUEST = 300;
+    const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
+    const DEPARTURE_ID = '2026-11-09';
+
+    fetch(API_BASE + '/api/departures')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        const departure = (data.departures || []).find(function(d) { return d.id === DEPARTURE_ID; });
+        if (!departure) return;
+        document.getElementById('festival-remaining').textContent = departure.remaining;
+        if (departure.remaining <= 0) {
+          document.getElementById('festival-book-heading').textContent = 'This departure is fully booked';
+          document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for November 9–15, 2026 are taken. Get in touch if you’d like to be notified about future departures.';
+          document.getElementById('festival-form').style.display = 'none';
+        }
+      })
+      .catch(function() { /* leave defaults if the API is unreachable */ });
 
     document.getElementById('festival-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
       const form = this;
       const data = new FormData(form);
-      const email = data.get('email');
-      const guests = data.get('guests');
       const btn = document.getElementById('festival-submit-btn');
+      const errorBox = document.getElementById('festival-error');
+      errorBox.style.display = 'none';
       btn.disabled = true;
-      btn.textContent = 'Sending...';
+      btn.textContent = 'Processing...';
 
-      fetch(form.action, {
+      fetch(API_BASE + '/api/bookings/fixed', {
         method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response) {
-        if (response.ok) {
-          form.style.display = 'none';
-          document.getElementById('festival-success').style.display = 'block';
-
-          const checkoutUrl = new URL(STRIPE_DEPOSIT_LINK);
-          if (email) checkoutUrl.searchParams.set('prefilled_email', email);
-          if (guests) checkoutUrl.searchParams.set('quantity', guests);
-          setTimeout(function() {
-            window.location.href = checkoutUrl.toString();
-          }, 1200);
-        } else {
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          departure_id: DEPARTURE_ID,
+          name: data.get('name'),
+          email: data.get('email'),
+          num_guests: Number(data.get('guests')),
+          notes: data.get('notes') || ''
+        })
+      })
+        .then(function(response) {
+          return response.json().then(function(body) { return { ok: response.ok, body: body }; });
+        })
+        .then(function(result) {
+          if (result.ok && result.body.url) {
+            form.style.display = 'none';
+            document.getElementById('festival-success').style.display = 'block';
+            window.location.href = result.body.url;
+          } else {
+            errorBox.textContent = result.body.error || 'Something went wrong. Please try again.';
+            errorBox.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Pay & Reserve My Spot →';
+          }
+        })
+        .catch(function() {
+          errorBox.textContent = 'Could not reach the booking service. Please try again shortly.';
+          errorBox.style.display = 'block';
           btn.disabled = false;
-          btn.textContent = 'Reserve My Spot & Pay Deposit →';
-        }
-      });
+          btn.textContent = 'Pay & Reserve My Spot →';
+        });
     });
   </script>
 
