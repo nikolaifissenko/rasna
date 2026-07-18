@@ -783,7 +783,7 @@
       <div class="festival-book fade-in" id="festival-book">
         <div class="section-label">Reserve your spot</div>
         <h3>Book the November 9 to 15 departure</h3>
-        <p>Only 8 spots for this departure. A deposit secures your place. We'll follow up with availability and payment details after you submit.</p>
+        <p>Only 8 spots for this departure. A &euro;300/guest deposit secures your place. After you submit, you'll be taken to secure checkout to pay it.</p>
 
         <form id="festival-form" action="https://formspree.io/f/xlgynpjo" method="POST" class="festival-form">
           <input type="hidden" name="trip" value="November 9-15, 2026 - Italian Autumn Experience (Cantine Festival Week)">
@@ -820,12 +820,12 @@
             <textarea id="fw-notes" name="notes" placeholder="Dietary needs, questions about the trip..."></textarea>
           </div>
 
-          <button type="submit" class="cta-button-solid festival-submit">Reserve My Spot &rarr;</button>
+          <button type="submit" class="cta-button-solid festival-submit" id="festival-submit-btn">Reserve My Spot &amp; Pay Deposit &rarr;</button>
         </form>
 
         <div class="festival-success" id="festival-success">
           <h3>Grazie!</h3>
-          <p>We've received your request for the Nov 9 to 15 departure. We'll follow up within a few days with availability confirmation and a deposit link.</p>
+          <p>Taking you to secure checkout to pay your deposit now&hellip;</p>
         </div>
       </div>
     </div>
@@ -919,11 +919,19 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
+    const STRIPE_DEPOSIT_LINK = 'https://buy.stripe.com/test_4gMfZhcbW6GN93O2GB38401';
+    const DEPOSIT_PER_GUEST = 300;
+
     document.getElementById('festival-form').addEventListener('submit', function(e) {
       e.preventDefault();
 
       const form = this;
       const data = new FormData(form);
+      const email = data.get('email');
+      const guests = data.get('guests');
+      const btn = document.getElementById('festival-submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
 
       fetch(form.action, {
         method: 'POST',
@@ -933,6 +941,16 @@
         if (response.ok) {
           form.style.display = 'none';
           document.getElementById('festival-success').style.display = 'block';
+
+          const checkoutUrl = new URL(STRIPE_DEPOSIT_LINK);
+          if (email) checkoutUrl.searchParams.set('prefilled_email', email);
+          if (guests) checkoutUrl.searchParams.set('quantity', guests);
+          setTimeout(function() {
+            window.location.href = checkoutUrl.toString();
+          }, 1200);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Reserve My Spot & Pay Deposit →';
         }
       });
     });
