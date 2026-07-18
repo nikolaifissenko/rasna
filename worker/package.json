@@ -1,0 +1,19 @@
+{
+  "name": "rasna-booking-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Booking + Stripe payment API for the Rasna site, running on Cloudflare Workers + D1",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate:local": "wrangler d1 migrations apply rasna-bookings --local",
+    "db:migrate:remote": "wrangler d1 migrations apply rasna-bookings --remote"
+  },
+  "dependencies": {
+    "hono": "^4.6.9",
+    "stripe": "^17.3.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.112.0"
+  }
+}

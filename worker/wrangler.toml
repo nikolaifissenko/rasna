@@ -1,0 +1,20 @@
+name = "rasna-booking-api"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Created by `wrangler d1 create rasna-bookings` — paste the database_id
+# it prints into the line below before your first deploy.
+[[d1_databases]]
+binding = "DB"
+database_name = "rasna-bookings"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Non-secret config. Secrets (STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET,
+# ADMIN_PASSWORD) are set separately with `wrangler secret put <NAME>` —
+# never put those here, this file is committed to the repo.
+[vars]
+SITE_URL = "https://nikolaifissenko.github.io/rasna"
+CORS_ORIGIN = "https://nikolaifissenko.github.io"
+CUSTOM_PRICE_PER_PERSON = "1450"
+ADMIN_USER = "admin"
