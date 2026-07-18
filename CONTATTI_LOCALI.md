@@ -113,7 +113,7 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 ### LA RIPA (Antonella) — alloggio
 - **Settore:** B&B
 - **Gestita da:** Antonella
-- **Località:** Barbarano Romano (comune limitrofo a Blera, ~8 km — non a Blera stessa: da tenere in conto per la logistica/trasporto del gruppo)
+- **Località:** Blera
 - **Stato:** ✅ VERIFICATO — tariffa confermata su Booking.com
 - **Prezzo:** €56/notte (verificato per 1 adulto, 1 camera, 1 notte — da riconfermare il prezzo per camera/gruppo con Antonella direttamente)
 - **Link:** https://www.booking.com/hotel/it/la-ripa-barbarano-romano.it.html
