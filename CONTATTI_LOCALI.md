@@ -118,4 +118,5 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Prezzo:** €56/notte (verificato per 1 adulto, 1 camera, 1 notte — da riconfermare il prezzo per camera/gruppo con Antonella direttamente)
 - **Link:** https://www.booking.com/hotel/it/la-ripa-barbarano-romano.it.html
 - **Capacità stimata:** ~2 coppie (4 ospiti) — non copre da sola un gruppo intero da 6–10 (vedi `BUSINESS_PLAN.md`/`FINANCIAL_PLAN.md`); serve almeno un secondo partner B&B (es. Beccone Albergo) per coprire il resto del gruppo
+- **Limite:** non ospita singoli — solo coppie/doppie. Ospiti singoli nel gruppo vanno alloggiati altrove
 - **Note:** candidato concreto per l'alloggio del gruppo (vedi `FINANCIAL_PLAN.md` per l'impatto sul costo per ospite)
