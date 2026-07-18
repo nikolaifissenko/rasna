@@ -19,7 +19,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
-| Beccone Albergo | Possibile partner — alloggio | tariffe indicative trovate online (non su Booking.com — vedi sezione 7), da confermare direttamente; 20 camere/fino a 60 posti, include singole |
+| Beccone Albergo | ✅ Scelto — secondo partner alloggio | miglior opzione per singoli + resto del gruppo; tariffe indicative trovate online (non su Booking.com — vedi sezione 7), da confermare direttamente; 20 camere/fino a 60 posti, include singole |
 | Antonella (La Ripa) | Partner — B&B | ✅ VERIFICATO — La Ripa, gestito da Antonella, €56/notte (tariffa confermata su Booking.com, 18 luglio 2026) |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
@@ -125,7 +125,7 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Settore:** Albergo/ristorante/pizzeria
 - **Località:** Blera (Via G. Marconi 26)
 - **Contatti:** 0761 479210, beccone@gmail.com
-- **Stato:** ⚠️ NON VERIFICATO — non presente su Booking.com per Blera (controllato 18 luglio 2026); tariffe sotto trovate su un sito terzo (hotel-ami.com), da riconfermare direttamente con l'albergo prima di usarle nel piano
+- **Stato:** ✅ SCELTO come secondo partner alloggio (miglior opzione per coprire singoli + resto del gruppo) — ma tariffe ancora ⚠️ NON VERIFICATE: non presente su Booking.com per Blera (controllato 18 luglio 2026); tariffe sotto trovate su un sito terzo (hotel-ami.com), da riconfermare direttamente con l'albergo prima di usarle nel piano
 - **Tariffe indicative (colazione inclusa):**
   - Singola: €35–40/notte
   - Doppia: €54–60/notte
