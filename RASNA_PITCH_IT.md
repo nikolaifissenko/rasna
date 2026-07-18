@@ -89,20 +89,20 @@ In altre parole: questo approccio rende Blera *più* preziosa, senza renderla *p
 *(Stime da affinare insieme una volta avviato un progetto pilota — ma questa è la struttura:)*
 
 **Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti, assicurazione)
-**Costo per ospite:** ~€720 (include compensi equi a chi ospita le attività e assicurazione per le attività manuali) → **~€680 di profitto per ospite**
-**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto**, da suddividere secondo l'accordo di partnership
+**Costo per ospite:** ~€718 (include compensi equi a chi ospita le attività, il compenso di Maria Grazia per il suo ruolo, e assicurazione per le attività manuali) → **~€682 di profitto per ospite**
+**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.456 di profitto**
 
 **Percorso realistico:**
 - **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€22.000 di profitto
 - **Anno 2:** 8 gruppi all'anno → ~€43.500 di profitto
-- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto**, da condividere
+- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto**
 
 Un risultato davvero solido per un progetto gestito in poche settimane mirate di accoglienza a stagione — non un lavoro a tempo pieno tutto l'anno.
 
 ## 6. Cosa serve per iniziare
 
 - **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, B&B partner e contatti per la logistica e i trasporti — partendo da chi è già stato individuato (es. Emiliano, Renzo, e gli alloggi già mappati)
-- **Un accordo semplice e chiaro tra i partner** — su come dividere ruoli, decisioni e profitti (questo è il primo passo, prima di qualunque altra cosa)
+- **Un accordo semplice e chiaro sul compenso di Maria Grazia** — un compenso equo (fee per gruppo/attività) per il suo ruolo e le sue relazioni sul territorio, definito prima di qualunque altra cosa
 - **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la nostra storia e i materiali di presentazione
 - **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendoci d'accordo con le persone e le attività del territorio, non investendo capitale
 

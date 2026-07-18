@@ -6,7 +6,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 
 | Nome | Ruolo nel progetto | Note |
 |---|---|---|
-| Maria Grazia | Partner — relazioni locali, conoscenza del territorio | co-fondatrice |
+| Maria Grazia | Collaboratrice pagata — relazioni locali, conoscenza del territorio | non co-fondatrice: ruolo retribuito (compenso/fee per gruppo o attività), non partecipa agli utili |
 | Cristina Damiani | Manager / coordinamento operativo | da coinvolgere su come si inserisce nei ruoli con Maria Grazia |
 | Emiliano (figlio di Miriam) | Affettati — degustazione salumi homemade | ✅ CONFERMATO — disponibile per degustazioni dei suoi prodotti di salumeria artigianale |
 | ~~Costantino~~ | ~~Formaggi~~ | **scomparso un anno fa — sostituito da Davide Paolocci (vedi sotto)** |
