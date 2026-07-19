@@ -38,9 +38,12 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 | Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
 | **Guest activity insurance** (hands-on/manual activities — confirmed as a real, necessary cost per Maria Grazia's feedback) | €40 |
 | Marketing & booking overhead (allocated) | €60 |
-| **Total cost per guest** | **~€718** |
+| **Payment processing (Stripe)** | €46 |
+| **Total cost per guest** | **~€764** |
 
-**Gross margin per guest: ~€682 (≈49%)**
+**Gross margin per guest: ~€636 (≈45%)**
+
+**Note on Stripe fees:** since the target guests are US/UK/Australia/Canada travelers (per `BUSINESS_PLAN.md` Section 3), most payments will be on non-EEA international cards, which Stripe charges at **3.25% + €0.25** per transaction (vs. 1.5% + €0.25 for standard EEA/European cards) — on a €1,400 charge that's ~€45.75, rounded to €46. This assumes a single charge in EUR with no currency-conversion/multi-currency-presentment fee (that would add another ~2% if used); if a lower share of guests turn out to be EU cardholders, or if payment is split into deposit + balance (two transactions, two flat fees), revisit this line.
 
 **Note on the "local guiding/transport" line (€140/guest = €1,120/group):** this now has a real breakdown behind it —
 - **Van rental (weekly, 9-seat):** ~€500–800 (local Viterbo pickup) or ~€500–750 (Fiumicino pickup) — see Section 4 for the full comparison.
@@ -66,8 +69,8 @@ See `CONTATTI_LOCALI.md` for contact info and links for both.
 Assume groups of **8 guests** average (range 6–10 — small enough to stay intimate, large enough to be efficient):
 
 - Revenue per group: 8 × €1,400 = **€11,200**
-- Cost per group: 8 × €718 = **€5,744**
-- **Gross profit per group: ~€5,456**
+- Cost per group: 8 × €764 = **€6,112**
+- **Gross profit per group: ~€5,088**
 
 This profit is not split with Maria Grazia — it's yours in full. (Note: this changes her role from profit-sharing co-founder/partner to a paid/fee-based collaborator elsewhere in the plan — worth revisiting the "co-fondatrice"/partner language in `BUSINESS_PLAN.md`, `CONTATTI_LOCALI.md`, and `RASNA_PITCH_IT.md` once her actual compensation structure is decided, so the docs stay consistent.)
 
@@ -77,19 +80,19 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 
 ### Year 1 — Pilot & launch (Phases 1–3)
 - Run 1 pilot (discounted/break-even) + 3–4 paying groups in the second half of the year
-- Estimate: **4 groups × €11,200 = ~€44,800 revenue**, **~€21,800 gross profit**
+- Estimate: **4 groups × €11,200 = ~€44,800 revenue**, **~€20,400 gross profit**
 - Expect to reinvest much of this into building the website, marketing, and operations
 
 ### Year 2 — Established calendar (Phases 4–5)
 - 4–5 experiences running across the year-round agricultural calendar (asparagus, tomatoes, hazelnuts, grape harvest, olives, Christmas, artichokes — see `BUSINESS_PLAN.md`), roughly 1 group every 4–6 weeks
-- Estimate: **8 groups × €11,200 = ~€89,600 revenue**, **~€43,500 gross profit**
+- Estimate: **8 groups × €11,200 = ~€89,600 revenue**, **~€40,700 gross profit**
 
 ### Year 3+ — Mature, steady-state (Phase 6 — deliberate ceiling)
 - Settle into a sustainable rhythm: ~15–18 groups/year, never more — this is the target steady state, chosen to protect Blera rather than maximize throughput
-- Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€87,000 gross profit**
+- Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€81,400 gross profit**
 - From here, growth in *income* should come from the levers in Section 6 (premium pricing, add-ons, off-season products) — not from running more groups through the town
 
-*(These are directional planning estimates, not guarantees — actual results depend on demand, operational capacity, and — importantly — on which candidate activities survive the validation process described in `BUSINESS_PLAN.md` Phase 1. The "12-month calendar" is a menu of possibilities, not a confirmed program; some activities (vendemmia, pig butchering, wheat harvest, "Nonna") may need to be dropped or reframed once we know what's realistically available, which could mean fewer but more concentrated departure windows than assumed here. The artisan experiences (cheese, affettati, leather) are the most reliably available building blocks and the safest to plan around early. Note that ~€87,000/year in gross profit at a deliberately capped scale is still a strong outcome — even if the calendar ends up more concentrated than the ideal 12-month spread.)*
+*(These are directional planning estimates, not guarantees — actual results depend on demand, operational capacity, and — importantly — on which candidate activities survive the validation process described in `BUSINESS_PLAN.md` Phase 1. The "12-month calendar" is a menu of possibilities, not a confirmed program; some activities (vendemmia, pig butchering, wheat harvest, "Nonna") may need to be dropped or reframed once we know what's realistically available, which could mean fewer but more concentrated departure windows than assumed here. The artisan experiences (cheese, affettati, leather) are the most reliably available building blocks and the safest to plan around early. Note that ~€81,400/year in gross profit at a deliberately capped scale is still a strong outcome — even if the calendar ends up more concentrated than the ideal 12-month spread.)*
 
 ## 4. Startup costs (one-time, Phase 0–2)
 
@@ -120,7 +123,7 @@ This is a relatively low-capital business to start — the main investment is ti
 
 ## 5. Break-even
 
-At ~€5,456 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
+At ~€5,088 gross profit per group, you'd cover a ~€10,000 startup investment after roughly **2 successful groups** — realistically achievable within Year 1.
 
 ## 6. Revenue growth levers that DON'T require running more groups
 

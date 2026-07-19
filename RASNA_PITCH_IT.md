@@ -89,13 +89,13 @@ In altre parole: questo approccio rende Blera *più* preziosa, senza renderla *p
 *(Stime da affinare insieme una volta avviato un progetto pilota — ma questa è la struttura:)*
 
 **Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti, assicurazione)
-**Costo per ospite:** ~€718 (include compensi equi a chi ospita le attività, il compenso di Maria Grazia per il suo ruolo, e assicurazione per le attività manuali) → **~€682 di profitto per ospite**
-**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.456 di profitto**
+**Costo per ospite:** ~€764 (include compensi equi a chi ospita le attività, il compenso di Maria Grazia per il suo ruolo, assicurazione per le attività manuali, e commissioni di pagamento) → **~€636 di profitto per ospite**
+**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.088 di profitto**
 
 **Percorso realistico:**
-- **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€22.000 di profitto
-- **Anno 2:** 8 gruppi all'anno → ~€43.500 di profitto
-- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto**
+- **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€20.400 di profitto
+- **Anno 2:** 8 gruppi all'anno → ~€40.700 di profitto
+- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€81.400/anno di profitto**
 
 Un risultato davvero solido per un progetto gestito in poche settimane mirate di accoglienza a stagione — non un lavoro a tempo pieno tutto l'anno.
 
