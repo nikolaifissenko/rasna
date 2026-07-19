@@ -3,4 +3,4 @@ Allow: /
 Disallow: /success.html
 Disallow: /cancel.html
 
-Sitemap: https://nikolaifissenko.github.io/rasna/sitemap.xml
+Sitemap: https://rasnaexperience.com/sitemap.xml
