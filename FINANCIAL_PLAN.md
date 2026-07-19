@@ -72,7 +72,7 @@ Assume groups of **8 guests** average (range 6–10 — small enough to stay int
 - Cost per group: 8 × €764 = **€6,112**
 - **Gross profit per group: ~€5,088**
 
-This profit is not split with Maria Grazia — it's yours in full. (Note: this changes her role from profit-sharing co-founder/partner to a paid/fee-based collaborator elsewhere in the plan — worth revisiting the "co-fondatrice"/partner language in `BUSINESS_PLAN.md`, `CONTATTI_LOCALI.md`, and `RASNA_PITCH_IT.md` once her actual compensation structure is decided, so the docs stay consistent.)
+This profit is not split with Maria Grazia — it's yours in full. She's compensated as a paid collaborator (fees per group/activity), not a profit-sharing co-founder — reflected consistently across `BUSINESS_PLAN.md`, `CONTATTI_LOCALI.md`, and `RASNA_PITCH_IT.md`.
 
 ## 3. Revenue projections by year (deliberately capped growth)
 
