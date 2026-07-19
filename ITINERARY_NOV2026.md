@@ -9,7 +9,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 
 ## Tuesday, November 10
 - Breakfast
-- Town scavenger hunt / tomb raider experience
+- Tomb raiding scavenger hunt: starts in the medieval village, follows clues down into the rock-cut tombs, host-guided
 - Lunch
 - Tarquinia day trip — **Etruscan Necropolis/tombs entry confirmed: €13/person, ~€104 for 8 guests**
 - Dinner in Tarquinia
