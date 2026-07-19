@@ -236,6 +236,18 @@
     .cm-day-list li:last-child { margin-bottom: 0; }
     .cm-time-tag { display: inline-block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--olive); margin-right: 0.5rem; }
 
+    .festival-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-top: 3rem; height: 200px; }
+    .fg-photo { position: relative; overflow: hidden; background-color: rgba(44,30,18,0.15); background-size: cover; background-position: center; transition: transform 0.5s ease; }
+    .fg-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(22,15,9,0.75) 100%); opacity: 0; transition: opacity 0.35s; }
+    .fg-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.7rem 0.85rem; font-size: 0.72rem; letter-spacing: 0.03em; color: var(--tufo); opacity: 0; transform: translateY(6px); transition: opacity 0.35s, transform 0.35s; z-index: 1; }
+    .fg-photo:hover::after { opacity: 1; }
+    .fg-photo:hover .fg-caption { opacity: 0.92; transform: translateY(0); }
+    .fg-photo:hover { transform: scale(1.01); }
+    @media (max-width: 680px) {
+      .festival-gallery { grid-template-columns: repeat(2, 1fr); height: auto; }
+      .fg-photo { height: 150px; }
+    }
+
     @media (max-width: 680px) {
       #festival-week .section-wide { max-width: 1080px; }
       .calendar-grid-wrap { display: none; }
