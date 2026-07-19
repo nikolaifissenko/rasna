@@ -667,6 +667,8 @@
     .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
     .pricing .section-label { color: var(--gold); opacity: 0.5; }
     .pricing h2 { color: var(--tufo); }
+    .pricing-range { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 500; color: var(--gold); margin: 1.1rem 0 0.4rem; }
+    .pricing-range-note { display: block; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-top: 0.4rem; }
     .pricing-intro { max-width: 480px; margin: 0 auto; opacity: 0.65; font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
     .pricing-card { max-width: 440px; margin: 2rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
     .pricing-includes { list-style: none; text-align: left; font-size: 0.85rem; font-weight: 300; opacity: 0.62; }
