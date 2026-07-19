@@ -1,99 +1,113 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-18_
+_Last updated: 2026-07-19_
 
-## What happened before this update — read this first
+## Bottom line
 
-The booking backend (Cloudflare Worker + D1 + Stripe Checkout) was built
-and merged into `claude/magical-franklin-58SKM`, but that branch was
-**never actually what GitHub Pages serves**. The live site
-(nikolaifissenko.github.io/rasna) deploys from `main`, which had
-diverged independently with a full site redesign (images, about page,
-itinerary calendar, etc.) and never received the booking work. So every
-previous "verified" test only exercised the Worker API directly or a
-branch no visitor could reach — nothing was actually live.
+**Live payments are wired up and working.** A customer booking the
+November departure on the real site today gets a real Stripe Checkout
+page; a real card payment actually charges them and the money lands in
+Nikolai's Stripe balance. This was the whole point of the last two
+sessions and it's done.
 
-This update reconciles that: the working backend is now wired into
-`main`'s real booking form (the "Book the November 9 to 15 departure"
-form under the Italian Autumn Experience tab), without touching any of
-the design/content work that only existed on `main`.
+What's *not* independently confirmed end-to-end is the webhook side
+(booking flipping to `status: paid` in our own database) — see
+"Not yet done" below. That only affects bookkeeping/`/admin`, not
+whether Nikolai actually gets paid (Stripe charges/holds the money
+regardless of our webhook).
 
 ## What's live
 
 - **Site**: nikolaifissenko.github.io/rasna (GitHub Pages, deploys from
-  `main` — confirmed by matching the live HTML). The festival-week
-  booking form now calls the real backend and pays in full via Stripe
-  Checkout, instead of the old Formspree + static `buy.stripe.com`
-  deposit link.
-- **Backend**: `worker/` — Cloudflare Worker + D1 database, deployed at
-  `https://rasna-booking-api.nikolai-fissenko1.workers.dev`. Free tier,
-  no credit card, auto-deploys on push to `claude/magical-franklin-58SKM`
-  (root directory `worker`, project name `rasna-booking-api` in
-  Cloudflare). **Note**: the Worker's Cloudflare deploy trigger still
-  watches `claude/magical-franklin-58SKM`, not `main` — that branch
-  should keep being used for any future `worker/` changes, or the
-  Cloudflare Pages/Workers project's connected branch should be
-  repointed at `main` to match where the site code now lives.
-- **Database**: D1 `rasna-bookings` (id `9b39d9d8-6732-4b3f-8024-1667d171e49f`),
-  `bookings` table created.
-- **Secrets set in Cloudflare** (Worker → Settings → Variables and
-  Secrets): `STRIPE_SECRET_KEY` (sandbox/test key), `STRIPE_WEBHOOK_SECRET`
-  (sandbox), `ADMIN_PASSWORD` (real, chosen by Nikolai).
-- **Stripe**: Sandbox/test mode only so far. Webhook destination created
-  pointing at `.../webhook/stripe` for `checkout.session.completed` and
-  `checkout.session.expired`.
+  `main`). The "Book the November 9 to 15 departure" form (Italian
+  Autumn Experience tab) calls the real backend and pays in full via
+  Stripe Checkout.
+- **Backend**: `worker/` — Cloudflare Worker + D1, deployed at
+  `https://rasna-booking-api.nikolai-fissenko1.workers.dev`.
+- **Stripe: LIVE MODE**, as of 2026-07-19.
+  - `STRIPE_SECRET_KEY` = real `sk_live_...` key, set in Cloudflare.
+  - `STRIPE_WEBHOOK_SECRET` = real `whsec_...` from a live-mode webhook
+    destination ("Rasna booking webhook") pointed at
+    `.../webhook/stripe`, events `checkout.session.completed` +
+    `checkout.session.expired`. Created via Stripe's newer Workbench UI
+    (Account Resources → Your account scope).
+  - Verified live key is actually in effect: a diagnostic booking via
+    `POST /api/bookings/custom` returned a `cs_live_...` Checkout
+    session (not `cs_test_...`).
+  - Getting Stripe's business activation to actually clear took most of
+    this session — it turned out Nikolai was filling out the **Sandbox**
+    account this whole time (a separate auto-created test environment,
+    distinct from the real/live account), which is why nothing would
+    ever go live no matter what was filled in or how many times the
+    site was updated. A Stripe support specialist confirmed this and
+    got him into the real live account. Site-content fixes made along
+    the way (see below) were real improvements regardless, but weren't
+    the actual root cause of the stuck activation.
+- **Site content added this session** (also useful regardless of the
+  sandbox issue): a "Customer Support & Policies" section (contact info,
+  cancellation tiers, refund timing, dispute-first-contact) and
+  Nikolai's legal name ("Operated by: Nikolai Fissenko, Blera (VT),
+  Italia") in the footer/policies section — Stripe's site review checks
+  for exactly this.
+- **Cloudflare auth for this session**: done via a Cloudflare **API
+  Token** (not interactive `wrangler login`, which doesn't work in a
+  remote/headless session — the OAuth callback goes to `localhost` on
+  whichever machine's browser completes it, not this container). If a
+  future session needs to set Cloudflare secrets again, ask Nikolai for
+  a fresh API token (dash.cloudflare.com → profile → API Tokens →
+  Create Token → "Edit Cloudflare Workers" template, Account Resources
+  scoped to his account) rather than attempting `wrangler login`.
+- **Database**: D1 `rasna-bookings` (id
+  `9b39d9d8-6732-4b3f-8024-1667d171e49f`).
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
-  (`worker/src/departures.js`).
-- **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
-  (Basic Auth: `admin` / the password set in Cloudflare). CSV export at
-  `/admin/bookings.csv`.
-- **The "Build Your Own Trip" tab is unchanged** — it's still a plain
-  Formspree inquiry form (no payment), by design. Only the fixed
-  November departure takes real payment.
-
-## Verified so far
-
-- API endpoints work against the real deployed Worker + D1 (confirmed
-  via curl): `/api/departures`, booking creation, Stripe session
-  creation with the real sandbox key.
-- Capacity math and atomic-insert race protection verified locally
-  (wrangler dev + local D1): 5 concurrent requests at 1 remaining spot
-  → exactly 1 succeeded.
-- `/admin` correctly requires auth (401 without credentials).
-- **Real end-to-end test through the live site, browser-driven**
-  (headless Chromium, not curl): nikolaifissenko.github.io/rasna →
-  filled the "Book the November 9 to 15 departure" form → real Stripe
-  Checkout session opened → paid with test card `4242 4242 4242 4242`
-  → redirected to `success.html?session_id=cs_test_...` with the
-  "Grazie! Your payment went through" message. `/api/departures`
-  `remaining` dropped from 8 to 3 during testing (one genuine paid
-  booking + three abandoned test attempts that briefly hold a spot
-  each — those auto-release themselves ~30 min after creation per
-  `PENDING_HOLD_MINUTES` in `worker/src/db.js`, no cleanup needed).
-  Have not independently confirmed via `/admin` that the paid booking
-  shows `status: paid` (don't have the admin password in this
-  session) — the webhook-driven status flip is inferred from reaching
-  `success.html` with a real session id, not directly observed in the
-  database.
+  (`worker/src/departures.js`). Capacity was down to 3/8 remaining as of
+  this session from earlier test bookings (self-expire, see
+  `worker/src/db.js` `PENDING_HOLD_MINUTES`) — worth checking
+  `/api/departures` shows 8 again before telling real customers about
+  availability.
+- **Admin**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
+  (Basic Auth `admin` / Cloudflare-set password — still don't have this
+  in-session, never got it from Nikolai).
+- **"Build Your Own Trip" tab** is still a plain Formspree inquiry form,
+  no payment — unchanged, by design.
 
 ## Not yet done — pick up here next
 
-1. Optional: confirm via `/admin` (Basic Auth: `admin` / the Cloudflare
-   password) that the test booking from 2026-07-18 shows `status: paid`
-   with a `stripe_session_id`, for full end-to-end confidence beyond
-   what the automated browser test could see.
-2. **Switch Stripe to Live mode**: get the live secret key and create a
-   second (live-mode) webhook destination at the same URL/events, then
-   update `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` in Cloudflare
-   with the live values.
-3. Decide what to do with `claude/magical-franklin-58SKM` now that its
-   work has been folded into `main` — either repoint the Cloudflare
-   Worker's auto-deploy at `main` and retire that branch, or keep using
-   it just for `worker/` changes. Also safe to delete the unused
-   `cloudflare/workers-autoconfig` branch (harmless leftover from the
-   first, misconfigured Worker deploy attempt).
+1. **rasna.com custom domain** — this is the explicit goal for next
+   session ("a domani: rasna.com"). Need to: check if Nikolai owns/can
+   buy `rasna.com`, point DNS at GitHub Pages (A/AAAA records or CNAME
+   per GitHub's custom-domain docs), add a `CNAME` file to the repo
+   root, update `SITE_URL`/`CORS_ORIGIN` in `worker/wrangler.toml` to
+   the new domain (currently hardcoded to
+   `nikolaifissenko.github.io/rasna`), redeploy the Worker, and update
+   `window.RASNA_API_BASE` / any hardcoded URLs in `index.html` if
+   needed. Also update CORS on the Worker or Stripe redirect URLs will
+   break silently for the new domain.
+2. **Verify the webhook actually fires on a real live payment** — never
+   confirmed end-to-end with real money (intentionally didn't trigger a
+   real charge without Nikolai's explicit go-ahead). Options discussed:
+   a cheap real test (temporarily drop the price to ~€1, book, confirm
+   in `/admin`, revert price), or use Stripe's "Send test event" on the
+   webhook destination page for a free signature/delivery check only
+   (doesn't touch the Checkout side).
+3. **Check Stripe payout schedule** (Settings → Payouts) — Nikolai
+   wants booking money available in time to pay November vendors
+   (Tuscia Terme, Il Cavone, Trattoria La Torretta, etc., see
+   `ITINERARY_NOV2026.md`) and for it to be his profit margin on top of
+   that. New Stripe accounts sometimes have a delayed first payout
+   (7-14 days) before settling into a faster rolling schedule — given
+   the departure is Nov 9-15 and today is July 19, there's runway, but
+   worth confirming the actual schedule rather than assuming.
+4. Get the Cloudflare Worker `ADMIN_PASSWORD` from Nikolai at some point
+   so a future session can actually check `/admin` directly instead of
+   inferring booking status from capacity math.
+5. Decide what to do with `claude/magical-franklin-58SKM` now that its
+   work is folded into `main` (retire it, or keep using it for
+   `worker/` changes — the Cloudflare Worker's git auto-deploy still
+   watches that branch, not `main`). Also safe to delete
+   `cloudflare/workers-autoconfig` (unused leftover branch).
 
 ## Reference
 
-- Full step-by-step is in `worker/README.md`.
+- Full step-by-step for the Worker/Stripe setup: `worker/README.md`.
 - Repo default/live branch: `main`.

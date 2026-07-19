@@ -60,7 +60,7 @@ Known dead ends: Facebook and Instagram photo links reliably fail to resolve (au
 The page now has two tabs, toggled by `showTab('build'|'trips', scrollToId)` in the `<script>` block, via a switcher (`.tab-switcher`) placed right under the hero:
 
 - **Build Your Own** (`#panel-build`) — the original activity-picker flow: How It Works, Photo Break, Catalog + `#experience-form`, Included, Moments, Trips Gallery, Philosophy, Pricing, Contact. Default-visible tab.
-- **Planned Events** (`#panel-trips`, `display:none` by default) — pre-built fixed-departure itineraries. Currently one: **Italian Autumn Experience** (subtitle "Cantine Festival Week"), Nov 9–15 2026, `#festival-week`. Has its own day-by-day `.itinerary-grid` of `.day-card`s and a **standalone** booking form (`#festival-form`, separate Formspree submit handler) — deliberately not wired to the activity-catalog selection state, since it's a fixed package, not a build-your-own quote.
+- **Planned Events** (`#panel-trips`, `display:none` by default) — pre-built fixed-departure itineraries. Currently one: **Italian Autumn Experience** (subtitle "Cantine Festival Week"), Nov 9–15 2026, `#festival-week`. Has its own day-by-day `.itinerary-grid` of `.day-card`s and a **standalone** booking form (`#festival-form`) — deliberately not wired to the activity-catalog selection state, since it's a fixed package, not a build-your-own quote. As of 2026-07-19 this form no longer uses Formspree/a static Stripe payment link — it calls a real Cloudflare Worker + D1 + Stripe Checkout backend (`worker/`) and takes full payment (€1,450/person) in **live mode**. See `BOOKING_STATUS.md` for current status/secrets/what's-left before touching this flow.
 
 Nav links and the hero's secondary CTA call `showTab(...)` instead of plain anchor `href` jumps, since anchor-scrolling into a `display:none` panel doesn't work — always route through `showTab` when linking to anything inside either panel.
 
@@ -81,6 +81,8 @@ Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Term
   Cross-check the `last-modified` response header against the latest commit time — don't trust a single fetch.
 - `mcp__github__actions_list` (method `list_workflow_runs`) is the reliable way to check Pages build status — raw `curl` to `api.github.com` is **not** authenticated in this sandbox and will just 401.
 - This repo has many other stale `claude/*` branches from unrelated past sessions — ignore them unless asked.
+- **Booking backend** (`worker/`, Cloudflare Worker + D1 + Stripe) is a separate system from the static site — see `BOOKING_STATUS.md` for live/current status before assuming anything about it, and `worker/README.md` for setup steps. As of 2026-07-19 it's in **Stripe live mode**, real payments work.
+- **Next session's explicit goal: point a `rasna.com` custom domain at this GitHub Pages site.** Will need a `CNAME` file at repo root, DNS records, and updates to `SITE_URL`/`CORS_ORIGIN` in `worker/wrangler.toml` plus any hardcoded `nikolaifissenko.github.io` URLs in `index.html` — see `BOOKING_STATUS.md` "Not yet done" for the fuller checklist.
 
 ---
 
