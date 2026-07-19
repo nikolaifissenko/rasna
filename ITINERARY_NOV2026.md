@@ -12,14 +12,14 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 - Town scavenger hunt / tomb raider experience
 - Lunch
 - Tarquinia day trip — **Etruscan Necropolis/tombs entry confirmed: €13/person, ~€104 for 8 guests**
-- Dinner
+- Dinner in Tarquinia
 
 ## Wednesday, November 11
 - Italian farmer's breakfast
 - Olive harvest with `TODO: confirm name` (likely Nicolò Lenarda — has the olive oil operation, per `CONTATTI_LOCALI.md`)
 - A farmer's lunch: fresh focaccia panini with local cold cuts, cheeses and sauces
 - **Afternoon: Tuscia Terme (confirmed)** — thermal baths, ~€14/person entry, ~€112 for 8 guests, to relax after the harvest
-- Dinner by residence chef `TODO: confirm — "Nico"?`
+- Home-cooked local dinner
 
 ## Thursday, November 12
 - Breakfast at the bar
@@ -30,13 +30,13 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ## Friday, November 13
 - Breakfast
 - Hike: San Giovenale
-- **Panonto BBQ lunch with Nicolò** — panonto (bread toasted over embers, drizzled with new-pressed olive oil) plus a BBQ: sausages, ventresca, cheap-cut beef steak, pork steak, bread; see cost estimate below
+- **Panonto BBQ lunch with Nicolò** — panonto, a typical Bleran BBQ (bread roasted over embers, drizzled with new-pressed olive oil) plus a BBQ: sausages, ventresca, cheap-cut beef steak, pork steak, bread; see cost estimate below
 - Dinner: **Il Cavone (confirmed, cantina)** — quoted ~€25/person, ~€200 for 8 guests
 
 ## Saturday, November 14
 - Breakfast, plus hangover cure
 - Free day / Cantine Festival
-- Goodbye dinner: **Trattoria La Torretta (confirmed)** — quoted ~€35/person, ~€280 for 8 guests
+- Goodbye dinner: at another local cantina `TODO: confirm which one — was Trattoria La Torretta, ~€35/person, ~€280 for 8 guests; switching venues so this needs a new quote`
 
 ## Sunday, November 15
 - Last breakfast
@@ -46,11 +46,10 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 
 ### Open items to resolve before this is guest-ready
 - Confirm who's running the olive harvest on Wednesday (name placeholder above)
-- Confirm the residence chef for Wednesday dinner ("Nico"?)
 - ~~Confirm which cantina hosts Friday's festival dinner~~ — **confirmed: Il Cavone, ~€25/person**
-- ~~Confirm Saturday's goodbye dinner venue~~ — **confirmed: Trattoria La Torretta, ~€35/person**
+- Confirm Saturday's goodbye dinner venue — switched away from Trattoria La Torretta to another local cantina, needs a name and a new quote
 - ~~Confirm Tarquinia tombs entry cost~~ — **confirmed: €13/person**
-- Confirm lunch spot/logistics for Tuesday (before and after Tarquinia) and dinner venue
+- Confirm lunch spot/logistics for Tuesday (before and after Tarquinia)
 - ~~Confirm thermal baths venue and booking for Thursday~~ — **confirmed: Tuscia Terme, ~€14/person entry**
 
 ### Friday panonto BBQ with Nicolò — cost estimate (max 8 guests)
@@ -83,7 +82,7 @@ Assumptions to sanity-check against Il Cavone/Nicolò directly:
 | Thu Nov 12 | Tuscia Terme (thermal baths entry) | €112 (quoted €14/pp) | €14 |
 | Fri Nov 13 (lunch) | Panonto BBQ with Nicolò | ~€196–220 (mid ~€205) | ~€25–27 |
 | Fri Nov 13 (dinner) | Il Cavone (cantina) | €200 (quoted €25/pp) | €25 |
-| Sat Nov 14 | Trattoria La Torretta (goodbye dinner) | €280 (quoted €35/pp) | €35 |
-| **Running total** | | **~€892–916** | **~€112–114** |
+| Sat Nov 14 | Goodbye dinner (venue TBD, another local cantina) | TBD | TBD |
+| **Running total (excl. Sat goodbye dinner)** | | **~€612–636** | **~€77–79** |
 
 Still unpriced: Mon trattoria, Tue lunch/dinner, Wed farmer's lunch + residence-chef dinner, Thu spa lunch, pasta-making class. Once those come in, compare the full-week total against the €220/guest meals-and-hosting-fees line and the €90/guest activity-fees line in `FINANCIAL_PLAN.md` — these five items alone already use ~36% of the combined €310/guest budget.
