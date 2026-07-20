@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>window.RASNA_API_BASE = 'https://rasna-booking-api.nikolai-fissenko1.workers.dev';</script>
   <style>
     :root { --gold:#C4A265; --deep:#160F09; --tufo:#E5D8C2; }
     * { margin:0; padding:0; box-sizing:border-box; }
@@ -17,15 +18,45 @@
       color: var(--tufo);
       min-height: 100vh;
       display: flex; align-items: center; justify-content: center;
-      padding: 2rem; text-align: center;
+      padding: 2rem 1.25rem; text-align: center;
     }
-    .card { max-width: 520px; }
+    .card { max-width: 560px; width: 100%; }
     h1 { font-family:'Cormorant Garamond', serif; font-size: clamp(2.2rem, 6vw, 3rem); color: var(--gold); font-weight: 600; margin-bottom: 1rem; }
+    h2 { font-family:'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--gold); font-weight: 600; margin: 0 0 0.75rem; }
     p { font-size: 1rem; font-weight: 300; line-height: 1.75; opacity: 0.8; margin-bottom: 0.9rem; }
-    .ref { font-size: 0.8rem; opacity: 0.5; margin-top: 1.5rem; word-break: break-all; }
     a { color: var(--gold); }
     .home-link { display:inline-block; margin-top: 2rem; padding: 0.9rem 2rem; border: 1.5px solid var(--gold); color: var(--gold); text-decoration:none; font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; }
     .home-link:hover { background: var(--gold); color: var(--deep); }
+
+    .flight-section {
+      margin-top: 2.5rem;
+      padding: 1.75rem 1.5rem;
+      border: 1px solid rgba(196, 162, 101, 0.35);
+      border-radius: 8px;
+      text-align: left;
+      background: rgba(255,255,255,0.02);
+    }
+    .flight-section p { font-size: 0.9rem; }
+    label { display:block; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.7; margin: 1rem 0 0.4rem; }
+    input, select, textarea {
+      width: 100%; padding: 0.7rem 0.8rem; font-family: 'Inter', sans-serif; font-size: 0.95rem;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(196,162,101,0.4); border-radius: 4px;
+      color: var(--tufo);
+    }
+    textarea { resize: vertical; min-height: 4.5rem; }
+    input::placeholder, textarea::placeholder { color: rgba(229,216,194,0.4); }
+    .submit-btn {
+      margin-top: 1.5rem; width: 100%; padding: 0.9rem; border: none; border-radius: 4px;
+      background: var(--gold); color: var(--deep); font-size: 0.85rem; letter-spacing: 0.08em;
+      text-transform: uppercase; font-weight: 600; cursor: pointer;
+    }
+    .submit-btn:hover { opacity: 0.9; }
+    .submit-btn:disabled { opacity: 0.5; cursor: default; }
+    .status-msg { font-size: 0.85rem; margin-top: 1rem; min-height: 1.2rem; }
+    .status-msg.ok { color: #8fbf8f; }
+    .status-msg.err { color: #d98a7a; }
+    .bookmark-note { font-size: 0.78rem; opacity: 0.55; margin-top: 1.25rem; }
+    .flight-section.hidden, .flight-loading.hidden { display: none; }
   </style>
 </head>
 <body>
@@ -33,7 +64,101 @@
     <h1>Grazie!</h1>
     <p>Your payment went through and your spot is booked. A confirmation has been sent to your email, and we'll be in touch shortly with the full itinerary and next steps.</p>
     <p>Questions in the meantime? Email us at <a href="mailto:nikolai.fissenko1@gmail.com">nikolai.fissenko1@gmail.com</a>.</p>
+
+    <div id="flight-loading" class="flight-loading"></div>
+
+    <div id="flight-section" class="flight-section hidden">
+      <h2>Getting you from the airport</h2>
+      <p>Pickup from Rome Fiumicino (FCO) is included on arrival day. Most transatlantic flights land in the morning, so we run a group pickup then — landing well outside that window just means we plan your transfer separately, so let us know your flight whenever it's booked.</p>
+      <p>You don't need this today — flights are often booked later. Bookmark this page (or reuse the confirmation link from your email) to come back and fill this in, or update it, any time before the trip.</p>
+
+      <label for="airport">Arrival airport</label>
+      <select id="airport">
+        <option value="">Select…</option>
+        <option value="FCO">Rome Fiumicino (FCO)</option>
+        <option value="VIT">Viterbo (VIT)</option>
+        <option value="other">Other / not sure yet</option>
+      </select>
+
+      <label for="flight-number">Flight number</label>
+      <input type="text" id="flight-number" placeholder="e.g. AZ608">
+
+      <label for="arrival-time">Arrival date &amp; time (local)</label>
+      <input type="datetime-local" id="arrival-time">
+
+      <label for="transfer-notes">Anything else about your arrival?</label>
+      <textarea id="transfer-notes" placeholder="e.g. arriving the night before, traveling with a connecting flight, need a later pickup, etc."></textarea>
+
+      <button class="submit-btn" id="submit-btn">Save flight details</button>
+      <p class="status-msg" id="status-msg"></p>
+    </div>
+
     <a class="home-link" href="./">Back to Rasna</a>
   </div>
+
+  <script>
+    (function () {
+      const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
+      const params = new URLSearchParams(window.location.search);
+      const sessionId = params.get('session_id');
+      const section = document.getElementById('flight-section');
+      if (!sessionId) return; // no session id in the URL — nothing to show/save
+
+      const airportEl = document.getElementById('airport');
+      const flightNumberEl = document.getElementById('flight-number');
+      const arrivalTimeEl = document.getElementById('arrival-time');
+      const notesEl = document.getElementById('transfer-notes');
+      const statusEl = document.getElementById('status-msg');
+      const submitBtn = document.getElementById('submit-btn');
+
+      function loadBooking(attemptsLeft) {
+        fetch(API_BASE + '/api/bookings/by-session/' + encodeURIComponent(sessionId))
+          .then((r) => (r.ok ? r.json() : null))
+          .then((booking) => {
+            if (!booking) {
+              // The webhook that marks a booking "paid" can lag slightly
+              // behind the redirect here — retry briefly before giving up.
+              if (attemptsLeft > 0) setTimeout(() => loadBooking(attemptsLeft - 1), 2000);
+              return;
+            }
+            section.classList.remove('hidden');
+            if (booking.arrival_airport) airportEl.value = booking.arrival_airport;
+            if (booking.arrival_flight_number) flightNumberEl.value = booking.arrival_flight_number;
+            if (booking.arrival_datetime) arrivalTimeEl.value = booking.arrival_datetime;
+            if (booking.transfer_notes) notesEl.value = booking.transfer_notes;
+          })
+          .catch(() => {});
+      }
+      loadBooking(3);
+
+      submitBtn.addEventListener('click', () => {
+        submitBtn.disabled = true;
+        statusEl.textContent = '';
+        statusEl.className = 'status-msg';
+        fetch(API_BASE + '/api/bookings/by-session/' + encodeURIComponent(sessionId) + '/flight-details', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            arrival_airport: airportEl.value,
+            arrival_flight_number: flightNumberEl.value,
+            arrival_datetime: arrivalTimeEl.value,
+            transfer_notes: notesEl.value,
+          }),
+        })
+          .then((r) => {
+            if (!r.ok) throw new Error();
+            statusEl.textContent = 'Saved — thank you.';
+            statusEl.className = 'status-msg ok';
+          })
+          .catch(() => {
+            statusEl.textContent = 'Something went wrong saving that. Please try again or email us.';
+            statusEl.className = 'status-msg err';
+          })
+          .finally(() => {
+            submitBtn.disabled = false;
+          });
+      });
+    })();
+  </script>
 </body>
 </html>

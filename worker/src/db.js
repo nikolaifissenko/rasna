@@ -94,6 +94,23 @@ export async function getBookingBySessionId(db, sessionId) {
   return db.prepare(`SELECT * FROM bookings WHERE stripe_session_id = ?1`).bind(sessionId).first();
 }
 
+export async function updateFlightDetails(db, sessionId, fields) {
+  const row = await db
+    .prepare(
+      `UPDATE bookings SET
+         arrival_airport = ?1,
+         arrival_flight_number = ?2,
+         arrival_datetime = ?3,
+         transfer_notes = ?4,
+         updated_at = datetime('now')
+       WHERE stripe_session_id = ?5 AND status = 'paid'
+       RETURNING id`
+    )
+    .bind(fields.arrival_airport, fields.arrival_flight_number, fields.arrival_datetime, fields.transfer_notes, sessionId)
+    .first();
+  return row ? row.id : null;
+}
+
 export async function markPaid(db, bookingId, paymentIntentId) {
   await db
     .prepare(
