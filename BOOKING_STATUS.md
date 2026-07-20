@@ -4,18 +4,19 @@ _Last updated: 2026-07-20_
 
 ## Bottom line
 
-**Live payments, custom domain, and the full booking flow are all
-working right now.** `rasnaexperience.com` is live with valid HTTPS,
-Stripe is in live mode with a real `sk_live_...` key, and a real
-`cs_live_...` Checkout session was confirmed via a diagnostic API call
-(no real charge run). One known cosmetic bug (see below) is fixed in
-the code but stuck behind a GitHub-side build issue — not customer
-blocking, but worth finishing.
+**Everything is live and fully up to date — no known open bugs.**
+`rasnaexperience.com` is live with valid HTTPS, Stripe is in live mode
+with a real `sk_live_...` key, and a real `cs_live_...` Checkout
+session was confirmed via a diagnostic API call (no real charge run).
+The GitHub Pages build that was stuck for a while (see old item 1
+below) resolved on its own — confirmed live as of 2026-07-20 03:05
+UTC, "Back to Rasna" links and SEO metadata are correct on the live
+site now.
 
-**Note: this status file is duplicated on `main`, which is the actual
-live/deployed branch — treat `main`'s copy as authoritative if the two
-ever diverge.** This branch (`claude/work-in-progress-l73jpc`) is
-behind `main` in site content.
+**Note: this file is duplicated on `main`, the actual live/deployed
+branch — treat `main`'s copy as authoritative if the two ever
+diverge.** This branch (`claude/work-in-progress-l73jpc`) is behind
+`main` in site content.
 
 ## What's live
 
@@ -25,10 +26,10 @@ behind `main` in site content.
 - **Backend**: `worker/` — Cloudflare Worker + D1, deployed at
   `https://rasna-booking-api.nikolai-fissenko1.workers.dev`.
 - **Stripe: LIVE MODE.**
-  - `STRIPE_SECRET_KEY` — rotated today (`sk_live_...81aV`), the
-    previous live key was unrecoverable (Stripe only shows secret keys
-    once, and the original had already been overwritten in Cloudflare
-    during sandbox testing).
+  - `STRIPE_SECRET_KEY` — rotated today (`sk_live_...51ThkF5...81aV`,
+    ends `...81aV`), the previous live key was unrecoverable (Stripe
+    only shows secret keys once, and the original had already been
+    overwritten in Cloudflare during sandbox testing).
   - `STRIPE_WEBHOOK_SECRET` — live-mode signing secret, re-revealed
     from the existing live webhook endpoint pointed at
     `.../webhook/stripe` (`checkout.session.completed` +
@@ -40,10 +41,10 @@ behind `main` in site content.
   - DNS: all 4 required GitHub Pages A records present and correct.
   - HTTPS: confirmed serving (verified via 6 consecutive successful
     checks). `CNAME` file committed to `main`.
-  - `worker/wrangler.toml` on `main`: `SITE_URL =
-    "https://rasnaexperience.com"`, `CORS_ORIGIN` includes
-    `rasnaexperience.com`, `www.rasnaexperience.com`, and
-    `nikolaifissenko.github.io` (kept as fallback).
+  - `worker/wrangler.toml`: `SITE_URL = "https://rasnaexperience.com"`,
+    `CORS_ORIGIN` includes `rasnaexperience.com`,
+    `www.rasnaexperience.com`, and `nikolaifissenko.github.io` (kept as
+    fallback).
 - **Database**: D1 `rasna-bookings`
   (id `9b39d9d8-6732-4b3f-8024-1667d171e49f`). Cleaned of all test
   bookings as of this session — `/api/departures` correctly shows
@@ -57,50 +58,64 @@ behind `main` in site content.
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /
   `wrangler secret put` / `wrangler d1 execute`, bypassing Cloudflare's
-  git-based auto-deploy entirely — see "Known issues" for why.
-  **If a future session needs Cloudflare access again, ask Nikolai for
-  a fresh scoped token** (dash.cloudflare.com → profile → API Tokens →
-  Create Token → Custom token → Workers Scripts:Edit + D1:Edit, scoped
-  to his account, with a short TTL).
+  git-based auto-deploy entirely. This was necessary because — see
+  "Known issues" below — Cloudflare's git integration was pointed at
+  the wrong branch and/or unreliable. **If a future session needs
+  Cloudflare access again, ask Nikolai for a fresh scoped token**
+  (dash.cloudflare.com → profile → API Tokens → Create Token → Custom
+  token → Workers Scripts:Edit + D1:Edit, scoped to his account, with a
+  short TTL). The token used today should be revoked once no longer
+  needed.
 
 ## Known issues — pick up here next
 
-1. **GitHub Pages build queue is stuck.** Every Pages build for `main`
-   since the `CNAME` commit has either been cancelled or stuck
-   indefinitely in `queued` (confirmed via the `pages-build-deployment`
-   workflow run history). The live site is currently serving a build
-   from **2026-07-19 03:55 UTC**, missing the "Back to Rasna" 404 fix
-   (already committed to `main`) and updated SEO metadata. Re-saving
-   the branch in Settings → Pages and pushing fresh commits both queued
-   new attempts that are *also* stuck — looks like a GitHub-side
-   infrastructure issue. **Next step: check the Actions tab directly in
-   the browser; may need a GitHub support ticket.** Not
-   customer-blocking — booking and payment work regardless.
+_(Item 1, "GitHub Pages build queue stuck," resolved on its own later
+in this session — the build completed and the live site now correctly
+serves the "Back to Rasna" fix and updated SEO metadata. No action
+needed. Numbering below kept as-is from when it was written.)_
 
-2. **Two Claude sessions worked on this repo in parallel and collided
-   twice** on `worker/wrangler.toml` and domain config. Assign clear
-   ownership if running multiple sessions again.
+2. **Two Claude sessions worked on this repo in parallel today and
+   collided twice** — once on `worker/wrangler.toml` (one session
+   switched `SITE_URL`/`CORS_ORIGIN` fully to the new domain before it
+   was actually serving, breaking live bookings on the still-active
+   `github.io` site for a stretch), and generally around who "owns"
+   which branch. **If running multiple sessions on this repo again,
+   explicitly assign which session touches `worker/`, domain config,
+   and deploys** — everything else is lower risk.
 
 3. **Cloudflare Worker's git auto-deploy watches
-   `claude/magical-franklin-58SKM`, not `main`** (the actual GitHub
-   Pages source) — confirmed via Cloudflare's Version History. This
-   mismatch is why manual `wrangler deploy` was used today. Worth
-   fixing properly (repoint the git integration, or just keep deploying
-   manually after `worker/` changes).
+   `claude/magical-franklin-58SKM`, not `main`** (confirmed via the
+   Cloudflare dashboard's Version History showing deploys triggered
+   from that branch). `main` is the actual GitHub Pages source. This
+   mismatch is exactly why manual `wrangler deploy` was used today
+   instead of relying on git auto-deploy. **Worth fixing properly**:
+   either repoint Cloudflare's git integration at `main`/`worker`, or
+   just keep doing manual `wrangler deploy` after any `worker/` change
+   going forward (simpler, already proven reliable today).
 
-4. **Verify the webhook fires on a real live payment** — still only
-   confirmed that a live Checkout session gets created correctly, not
-   the full payment→webhook→paid round trip. Cheapest real check: your
-   next real booking, then confirm `/admin` shows `paid`.
+4. **Verify the webhook fires on a real live payment.** Still never
+   confirmed end-to-end with actual money — only verified that a live
+   Checkout session gets created correctly. The cheapest real
+   confirmation is your next real customer booking: check `/admin`
+   afterward to make sure it shows `paid`, not stuck `pending`.
 
-5. **Get the Cloudflare Worker `ADMIN_PASSWORD` from Nikolai.**
+5. **Get the Cloudflare Worker `ADMIN_PASSWORD` from Nikolai** so a
+   future session can check `/admin` directly instead of inferring
+   booking status from capacity math or direct D1 queries.
 
-6. **Check Stripe payout schedule** (Settings → Payouts) against the
-   Nov 9–15 departure date and vendor payment needs.
+6. **Check Stripe payout schedule** (Settings → Payouts) — booking
+   money needs to be available in time to pay November vendors (Tuscia
+   Terme, Il Cavone, Trattoria La Torretta, etc.). New Stripe accounts
+   sometimes have a delayed first payout (7–14 days). Given departure
+   is Nov 9–15 and today is Jul 20, there's runway, but worth
+   confirming rather than assuming.
 
-7. Decide what to do with `claude/magical-franklin-58SKM` and this
-   branch now that `main` is confirmed live — both are stale for site
-   content. Also safe to delete `cloudflare/workers-autoconfig`.
+7. Decide what to do with `claude/magical-franklin-58SKM` and
+   `claude/work-in-progress-l73jpc` now that `main` is confirmed as the
+   actual live branch — both are now stale/redundant for site content,
+   though `magical-franklin-58SKM` still matters until item 3 above is
+   resolved. Also safe to delete `cloudflare/workers-autoconfig`
+   (unused leftover branch, never merged).
 
 ## Reference
 
