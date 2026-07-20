@@ -1,13 +1,23 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-18_
+_Last updated: 2026-07-19_
 
 ## What's live
 
 - **Site**: nikolaifissenko.github.io/rasna (GitHub Pages, deploys from
   `claude/magical-franklin-58SKM`) — has the two-tab booking UI
   (fixed November departure + choose-your-own-dates), both paying in
-  full via Stripe Checkout.
+  full via Stripe Checkout. Custom domain **rasnaexperience.com** is
+  purchased and DNS is pointed at GitHub Pages (confirmed resolving),
+  but GitHub hasn't finished issuing the HTTPS certificate /
+  activating the domain yet — still 404s as of this update. Until it's
+  confirmed serving, `SITE_URL` in the Worker deliberately still points
+  at the github.io URL (with the new domain also allowed in
+  `CORS_ORIGIN`) so live bookings don't break mid-transition — see
+  `worker/wrangler.toml`. **Once rasnaexperience.com is confirmed live,
+  flip `SITE_URL` to it and update the canonical/OG tags, `robots.txt`,
+  `sitemap.xml` if not already pointed there (they were pre-emptively
+  updated to the new domain already).**
 - **Backend**: `worker/` — Cloudflare Worker + D1 database, deployed at
   `https://rasna-booking-api.nikolai-fissenko1.workers.dev`. Free tier,
   no credit card, auto-deploys on push to `claude/magical-franklin-58SKM`
@@ -52,13 +62,66 @@ _Last updated: 2026-07-18_
    **Payment Link** URL was pasted instead of going through the site's
    own booking form; that's a different, unrelated Stripe feature and
    wasn't a real test of this flow.)
-2. **Switch Stripe to Live mode** once step 1 passes: get the live
-   secret key and create a second (live-mode) webhook destination at
-   the same URL/events, then update `STRIPE_SECRET_KEY` and
-   `STRIPE_WEBHOOK_SECRET` in Cloudflare with the live values.
-3. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
+2. **Switch Stripe to Live mode** once step 1 passes AND once
+   rasnaexperience.com is confirmed fully live (see domain note
+   above) — flipping live before the domain is ready risks a real
+   paying guest landing on a broken confirmation page right after
+   paying. Get the live secret key and create a second (live-mode)
+   webhook destination at the same URL/events, then update
+   `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` in Cloudflare with
+   the live values.
+3. Once rasnaexperience.com is confirmed serving with a valid cert:
+   flip `SITE_URL` in `worker/wrangler.toml` from the github.io
+   fallback to `https://rasnaexperience.com`, and drop the github.io
+   entry from `CORS_ORIGIN`.
+4. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything).
+
+## SEO
+
+- Title/meta description/OG tags and hero copy now name **Tuscia**
+  and **Etruscan** explicitly instead of leaning on generic "Italy" —
+  the realistic ranking target is long-tail geo searches ("Blera
+  tours," "Etruscan small-group Italy"), not head terms like "Italy
+  experiences," which are owned by TripAdvisor/Viator/GetYourGuide
+  and out of reach for a brand-new site regardless of domain name.
+- Added `TouristTrip` JSON-LD structured data, a canonical tag,
+  `robots.txt`, and `sitemap.xml` (transactional `success.html` /
+  `cancel.html` excluded from both via `noindex` / disallow).
+- Domain **rasnaexperience.com** was chosen specifically to reinforce
+  this: "experience" matches real travel-search intent, unlike the
+  brand-only alternative considered (`rasnalife.com`).
+
+## Marketing — filling the November departure (8 spots, €1,450/pp)
+
+SEO/Instagram are background, months-long channels — not realistic
+to count on for filling *this* first departure by Nov 9, 2026 (no
+track record, no photos/testimonials yet since no trip has run). What
+was recommended, in priority order:
+
+1. **Warm outreach first**: message the 10–15 people most likely to
+   say yes directly (past travel contacts, friends), framed as a
+   founding-guest offer (small perk in exchange for honest feedback +
+   photos/testimonials afterward) — this trip effectively *is* the
+   pilot referenced in `BUSINESS_PLAN.md` Phase 2.
+2. **The American friends' houseguests in Blera** — a stronger
+   channel than cold outreach, since their guests are already
+   self-selected travelers and a personal introduction from the host
+   carries real trust. Better as a personal mention/forward from the
+   friends than a cold link.
+3. **Niche channels** (r/ItalyTravel, r/solotravel, small-group/slow-
+   travel newsletters) over broad ones — much less competition than
+   generic Instagram posting with no existing following.
+4. **Instagram**: treat as a trust/credibility layer (a real-looking
+   profile so warm leads don't hesitate before paying), not a
+   discovery engine on this timeline. If used as an actual acquisition
+   channel, small **paid** Meta ads (interest-targeted, capped spend)
+   are more realistic than organic growth within a ~16-week window.
+
+**Not yet done**: no outreach copy has actually been drafted yet
+(DM/email template, forum post, Instagram bio/captions) — next
+concrete step whenever marketing work resumes.
 
 ## Reference
 
@@ -66,4 +129,5 @@ _Last updated: 2026-07-18_
 - Repo default/live branch: `claude/magical-franklin-58SKM` (no
   `main`/`master` exists).
 - This work was developed on `claude/booking-payment-setup-e8e3jr` and
-  merged in via PRs #8, #9, #10, #12.
+  `claude/week-booking-stripe-payments-1lt3f1`, merged in via PRs #8,
+  #9, #10, #12 and direct merges to the live branch.
