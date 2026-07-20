@@ -1,6 +1,6 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-19_
+_Last updated: 2026-07-20_
 
 ## What's live
 
@@ -36,6 +36,24 @@ _Last updated: 2026-07-19_
 - **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
   (Basic Auth: `admin` / the password set in Cloudflare). CSV export at
   `/admin/bookings.csv`.
+- **Post-payment flight-details collection** (for planning airport
+  pickups — guests often land at different times, esp. FCO): after
+  paying, `success.html` shows an arrival-airport/flight-number/
+  arrival-time form. It's optional and re-visitable (the page is
+  bookmarkable — the Stripe `session_id` in its URL doubles as the
+  guest's access token, no login system). New endpoints:
+  `GET /api/bookings/by-session/:sessionId` and
+  `PATCH /api/bookings/by-session/:sessionId/flight-details`. Fields
+  surfaced in `/admin` and the CSV export so pickup runs (e.g. one
+  morning FCO group van + a backup solo run) can be planned from real
+  data. Code (`worker/src/index.js`, `worker/src/db.js`,
+  `success.html`, migration `worker/migrations/0002_flight_details.sql`)
+  is pushed and live-deployed on `claude/magical-franklin-58SKM`, but
+  **the D1 schema migration has NOT been applied to the remote/production
+  database yet** — see blocker below. Until it is, the form appears
+  and looks like it works, but saving silently fails (shows a friendly
+  "something went wrong" to the guest); it does not affect the core
+  booking/payment flow, which doesn't touch these columns.
 
 ## Verified so far
 
@@ -53,6 +71,20 @@ _Last updated: 2026-07-19_
 
 ## Not yet done — pick up here next
 
+0. **BLOCKER — apply the pending D1 migration to production.**
+   `worker/migrations/0002_flight_details.sql` (adds 4 nullable columns
+   to `bookings`: `arrival_airport`, `arrival_flight_number`,
+   `arrival_datetime`, `transfer_notes`) is written and applied locally,
+   but not yet run against the remote database. Needs
+   `wrangler d1 migrations apply rasna-bookings --remote` from `worker/`,
+   which needs `CLOUDFLARE_API_TOKEN` (D1 Edit permission) **and**
+   `CLOUDFLARE_ACCOUNT_ID` set in the environment — a narrowly-scoped
+   D1-only token can't auto-resolve the account via the Cloudflare API,
+   so the account ID has to be supplied explicitly. Per `CLAUDE.md`:
+   don't ask Nikolai to run this himself — ask for the token + account
+   ID (find the latter in the Cloudflare dashboard → Workers & Pages →
+   right sidebar) and run it directly. Never write the token itself
+   into this repo.
 1. **Run one real end-to-end test through the actual site** (not the
    API directly): nikolaifissenko.github.io/rasna → Book Now →
    November tab → fill form → pay with Stripe test card
