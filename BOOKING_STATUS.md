@@ -45,7 +45,11 @@ site and API.
 - **Database**: D1 `rasna-bookings`
   (id `9b39d9d8-6732-4b3f-8024-1667d171e49f`). Cleaned of all test
   bookings as of this session — `/api/departures` correctly shows
-  `8/8 remaining`.
+  `8/8 remaining`. (Re-confirmed 2026-07-20 ~03:54 UTC after Nikolai's
+  own live-site test booking — a `pending`, unpaid `cs_live_...` hold,
+  `id 21`, no `stripe_payment_intent_id` set — was deleted directly
+  from D1; it would also have auto-expired within 40 minutes on its
+  own via the existing pending-hold logic. No charge was made.)
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
   (`worker/src/departures.js`).
 - **Admin**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
