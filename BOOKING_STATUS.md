@@ -11,7 +11,9 @@ session was confirmed via a diagnostic API call (no real charge run).
 The GitHub Pages build that was stuck for a while (see old item 1
 below) resolved on its own — confirmed live as of 2026-07-20 03:05
 UTC, "Back to Rasna" links and SEO metadata are correct on the live
-site now.
+site now. As of 2026-07-20 ~03:47 UTC, post-payment flight-details
+collection (see below) is also confirmed live end-to-end on the real
+site and API.
 
 ## What's live
 
@@ -64,7 +66,10 @@ site now.
   `CLOUDFLARE_ACCOUNT_ID` (D1 Edit permission; a D1-only token can't
   auto-resolve the account, the account ID has to be supplied
   explicitly), and verified end-to-end against the live Worker (schema
-  query + a real GET/PATCH round trip).
+  query + a real GET/PATCH round trip). The token used for this
+  migration was narrowly scoped to D1:Edit only (separate from the
+  broader Workers Scripts+D1 token mentioned below) — should also be
+  revoked once no longer needed, same as that one.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /
