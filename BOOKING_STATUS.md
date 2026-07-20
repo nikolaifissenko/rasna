@@ -49,6 +49,22 @@ site now.
 - **Admin**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
   (Basic Auth `admin` / Cloudflare-set password — still not obtained by
   any session; see open items).
+- **Post-payment flight-details collection** (for planning airport
+  pickups — guests land at staggered times, mostly via FCO): after
+  paying, `success.html` shows a bookmarkable form for arrival airport,
+  flight number, and arrival time — the Stripe `session_id` in the URL
+  doubles as the guest's access token, no login system needed. New
+  endpoints `GET`/`PATCH /api/bookings/by-session/:sessionId(/flight-details)`,
+  surfaced in `/admin` and the CSV export. Code lives in
+  `worker/src/index.js`, `worker/src/db.js`, `success.html`, migration
+  `worker/migrations/0002_flight_details.sql`. **Confirmed fully live
+  2026-07-20**: pushed to `main` (site) and `claude/magical-franklin-58SKM`
+  (Worker, per the branch split in item 3 below), migration applied to
+  the remote D1 database with a scoped `CLOUDFLARE_API_TOKEN` +
+  `CLOUDFLARE_ACCOUNT_ID` (D1 Edit permission; a D1-only token can't
+  auto-resolve the account, the account ID has to be supplied
+  explicitly), and verified end-to-end against the live Worker (schema
+  query + a real GET/PATCH round trip).
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

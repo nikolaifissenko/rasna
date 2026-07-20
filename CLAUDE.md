@@ -92,6 +92,57 @@ Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Term
 
 ---
 
+## Deploy topology gotcha (found 2026-07-20)
+
+The static site (GitHub Pages) and the Worker (Cloudflare) deploy from
+**different branches**, confirmed by checking `pages build and
+deployment` runs via `mcp__github__actions_list` (`head_branch` was
+always `main`) and by pushing a Worker-only change to
+`claude/magical-franklin-58SKM` and observing it go live at
+`rasna-booking-api...workers.dev` without touching `main`:
+
+- **GitHub Pages** (the whole site, `index.html`/`success.html`/etc.):
+  deploys from `main`. This is the one described everywhere else in
+  this file.
+- **Cloudflare Worker** (`worker/`): deploys from
+  `claude/magical-franklin-58SKM`, a separate, older branch that
+  diverged from `main` a while ago on everything *except* `worker/`
+  (no independent changes to `worker/src` were found there — same
+  code, just behind on the parts of the repo main went on to change:
+  `index.html`, `images/`, `style.css`, `about.html` don't exist on
+  that branch at all). Safe to keep pushing `worker/`-only commits
+  there since the two branches' `worker/` trees haven't diverged, but
+  **don't push a `main`-based commit to that branch wholesale** — it
+  would blow away that branch's stale-but-separate frontend state
+  (harmless, since Pages doesn't read from it, but confusing/wasteful).
+  If a `worker/` change needs to go live, push it to
+  `claude/magical-franklin-58SKM` specifically; if a static-site change
+  needs to go live, push to `main`.
+- **D1 migrations are never auto-applied** by either deploy — always a
+  separate manual `wrangler d1 migrations apply rasna-bookings --remote`
+  from `worker/`, needs `CLOUDFLARE_API_TOKEN` (D1 Edit) *and*
+  `CLOUDFLARE_ACCOUNT_ID` (narrowly-scoped tokens can't auto-resolve
+  the account) set in the environment running the command.
+- Worth fixing properly at some point: point the Worker's Cloudflare
+  git integration at `main` too, so there's one deploy branch instead
+  of two silently-different ones — flagging it here rather than doing
+  it unprompted, since it touches Cloudflare project settings, not
+  just this repo.
+
+## Working style
+
+Nikolai isn't technical and doesn't want to run CLI commands, create
+scoped API tokens, or otherwise operate deployment tooling himself.
+Default to doing infra/deployment work directly rather than handing
+him a list of commands. When something needs a credential you don't
+have, ask him for the minimum needed piece (a scoped token, an account
+ID) and take it from there yourself — don't just report "you need to
+run X." Never write a live token/secret into a file in this repo, even
+temporarily; use it directly from the shell for the one command that
+needs it.
+
+---
+
 ## History note
 
 On 2026-07-09, this session replaced a *different* previously-live design (terra/sienna/gold palette, decorative SVG-only, no photography — built by an earlier/separate session directly on `main`) with the photo-rich version described above, per explicit user confirmation after flagging the conflict. If you're picking up fresh context and something looks unfamiliar, check git log on `main` before assuming — don't just trust this file blindly if the live site doesn't match what's described here.
