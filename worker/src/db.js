@@ -5,21 +5,22 @@
 // the check and the insert as a single atomic SQL statement: the INSERT
 // only executes if the capacity subquery's WHERE clause passes, and
 // SQLite/D1 evaluates + commits that as one indivisible operation.
-
-const PENDING_HOLD_MINUTES = 40; // mirrors the Stripe Checkout Session expiry
+//
+// Only `status = 'paid'` counts toward capacity — an unconfirmed
+// checkout-in-progress ("pending") never moves the remaining-spots
+// number. Trade-off: two people checking out for the literal last spot
+// at the same instant could both complete payment (no temporary hold
+// during checkout). Accepted deliberately given the small (8-guest)
+// capacity and low concurrent traffic.
 
 export async function spotsUsed(db, departureId) {
   const row = await db
     .prepare(
       `SELECT COALESCE(SUM(num_guests), 0) AS used
        FROM bookings
-       WHERE departure_id = ?1
-         AND (
-           status = 'paid'
-           OR (status = 'pending' AND datetime(created_at) > datetime('now', ?2))
-         )`
+       WHERE departure_id = ?1 AND status = 'paid'`
     )
-    .bind(departureId, `-${PENDING_HOLD_MINUTES} minutes`)
+    .bind(departureId)
     .first();
   return row.used;
 }
@@ -37,12 +38,8 @@ export async function createFixedBooking(db, departure, fields) {
        SELECT 'fixed', ?1, ?2, ?3, ?4, ?5, NULL, ?6, ?7, ?8, 'pending'
        WHERE (
          SELECT COALESCE(SUM(num_guests), 0) FROM bookings
-         WHERE departure_id = ?1
-           AND (
-             status = 'paid'
-             OR (status = 'pending' AND datetime(created_at) > datetime('now', ?9))
-           )
-       ) + ?4 <= ?10
+         WHERE departure_id = ?1 AND status = 'paid'
+       ) + ?4 <= ?9
        RETURNING id`
     )
     .bind(
@@ -54,7 +51,6 @@ export async function createFixedBooking(db, departure, fields) {
       fields.notes,
       fields.amount_total_cents,
       fields.currency,
-      `-${PENDING_HOLD_MINUTES} minutes`,
       departure.capacity
     )
     .first();
