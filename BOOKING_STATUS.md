@@ -4,13 +4,14 @@ _Last updated: 2026-07-20_
 
 ## Bottom line
 
-**Live payments, custom domain, and the full booking flow are all
-working right now.** `rasnaexperience.com` is live with valid HTTPS,
-Stripe is in live mode with a real `sk_live_...` key, and a real
-`cs_live_...` Checkout session was confirmed via a diagnostic API call
-(no real charge run). One known cosmetic bug (see below) is fixed in
-the code but stuck behind a GitHub-side build issue — not customer
-blocking, but worth finishing.
+**Everything is live and fully up to date — no known open bugs.**
+`rasnaexperience.com` is live with valid HTTPS, Stripe is in live mode
+with a real `sk_live_...` key, and a real `cs_live_...` Checkout
+session was confirmed via a diagnostic API call (no real charge run).
+The GitHub Pages build that was stuck for a while (see old item 1
+below) resolved on its own — confirmed live as of 2026-07-20 03:05
+UTC, "Back to Rasna" links and SEO metadata are correct on the live
+site now.
 
 ## What's live
 
@@ -63,28 +64,10 @@ blocking, but worth finishing.
 
 ## Known issues — pick up here next
 
-1. **GitHub Pages build queue is stuck.** As of this session, every
-   Pages build for `main` since the `CNAME` commit (`d854b89`) has
-   either been cancelled or stuck indefinitely in `queued` — confirmed
-   via the `pages-build-deployment` workflow run history (workflow id
-   `296110939`). The live site is currently serving a build from
-   **2026-07-19 03:55 UTC** (`last-modified` header), missing:
-   - The fix for the "Back to Rasna" 404 (`success.html`/`cancel.html`
-     used an absolute `href="/"`, which 404s under a project path —
-     already fixed in the code on `main`, commit `d7a05d2`, just not
-     built/served yet).
-   - Updated canonical/OG/sitemap URLs pointing at the new domain.
-   - Tried: re-saving the branch in Settings → Pages, and pushing a
-     fresh empty commit (`b15c04c`) — both queued new build attempts
-     that are *also* stuck as of this writing. This looks like a
-     GitHub-side infrastructure issue, not something fixable by
-     pushing more commits. **Next step: check
-     github.com/nikolaifissenko/rasna/actions (workflow "pages build
-     and deployment") directly in the browser — if still stuck, this
-     may need a GitHub support ticket, or simply more time.**
-   - Not customer-blocking: the site loads and books/pays correctly
-     either way, this only affects the post-payment "Back to Rasna"
-     link and some SEO metadata.
+_(Item 1, "GitHub Pages build queue stuck," resolved on its own later
+in this session — the build completed and the live site now correctly
+serves the "Back to Rasna" fix and updated SEO metadata. No action
+needed. Numbering below kept as-is from when it was written.)_
 
 2. **Two Claude sessions worked on this repo in parallel today and
    collided twice** — once on `worker/wrangler.toml` (one session
