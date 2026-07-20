@@ -9,6 +9,7 @@ import {
   createCustomBooking,
   attachStripeSession,
   getBookingBySessionId,
+  updateFlightDetails,
   markPaid,
   markExpired,
   deleteBooking,
@@ -212,6 +213,41 @@ app.post('/webhook/stripe', async (c) => {
   return c.json({ received: true });
 });
 
+// --- Guest self-service: view/submit arrival (flight) details ---
+// The Stripe Checkout session_id doubles as an unguessable access token —
+// it's already the only thing we hand back to the guest (in the
+// success.html redirect URL), so no separate account/auth system is needed.
+app.get('/api/bookings/by-session/:sessionId', async (c) => {
+  const booking = await getBookingBySessionId(c.env.DB, c.req.param('sessionId'));
+  if (!booking || booking.status !== 'paid') return c.json({ error: 'Booking not found' }, 404);
+
+  const departure = booking.departure_id ? getDeparture(booking.departure_id) : null;
+  return c.json({
+    name: booking.name,
+    num_guests: booking.num_guests,
+    type: booking.type,
+    departure_label: departure ? departure.label : null,
+    departure_start_date: departure ? departure.start_date : null,
+    arrival_airport: booking.arrival_airport,
+    arrival_flight_number: booking.arrival_flight_number,
+    arrival_datetime: booking.arrival_datetime,
+    transfer_notes: booking.transfer_notes,
+  });
+});
+
+app.patch('/api/bookings/by-session/:sessionId/flight-details', async (c) => {
+  const body = await c.req.json().catch(() => ({}));
+  const fields = {
+    arrival_airport: typeof body.arrival_airport === 'string' ? body.arrival_airport.trim().slice(0, 100) || null : null,
+    arrival_flight_number: typeof body.arrival_flight_number === 'string' ? body.arrival_flight_number.trim().slice(0, 20) || null : null,
+    arrival_datetime: typeof body.arrival_datetime === 'string' ? body.arrival_datetime.trim().slice(0, 40) || null : null,
+    transfer_notes: typeof body.transfer_notes === 'string' ? body.transfer_notes.trim().slice(0, 500) || null : null,
+  };
+  const bookingId = await updateFlightDetails(c.env.DB, c.req.param('sessionId'), fields);
+  if (bookingId === null) return c.json({ error: 'Booking not found' }, 404);
+  return c.json({ ok: true });
+});
+
 // --- Admin: the booking record ---
 function escapeHtml(str) {
   return String(str).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
@@ -255,6 +291,10 @@ app.get('/admin', requireAdminAuth, async (c) => {
         <td>${escapeHtml(b.email)}</td>
         <td>${b.num_guests}</td>
         <td>${(b.amount_total_cents / 100).toFixed(2)} ${b.currency.toUpperCase()}</td>
+        <td>${escapeHtml(b.arrival_airport || '')}</td>
+        <td>${escapeHtml(b.arrival_flight_number || '')}</td>
+        <td>${escapeHtml(b.arrival_datetime || '')}</td>
+        <td>${escapeHtml(b.transfer_notes || '')}</td>
         <td>${escapeHtml(b.created_at)}</td>
       </tr>`
     )
@@ -274,7 +314,7 @@ app.get('/admin', requireAdminAuth, async (c) => {
     <h2>Departure capacity</h2>
     <table><tr><th>Departure</th><th>Used</th><th>Remaining</th></tr>${depRows || '<tr><td colspan="3">No departures configured</td></tr>'}</table>
     <h2>All bookings</h2>
-    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Amount</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="9">No bookings yet</td></tr>'}</table>
+    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Amount</th><th>Arrival Airport</th><th>Flight #</th><th>Arrival Time</th><th>Transfer Notes</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="13">No bookings yet</td></tr>'}</table>
   </body></html>`);
 });
 
@@ -282,7 +322,8 @@ app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
   const bookings = await listBookings(c.env.DB);
   const header = [
     'id', 'status', 'type', 'departure_id', 'name', 'email', 'num_guests',
-    'amount_total', 'currency', 'preferred_dates', 'activities', 'notes', 'created_at',
+    'amount_total', 'currency', 'preferred_dates', 'activities', 'notes',
+    'arrival_airport', 'arrival_flight_number', 'arrival_datetime', 'transfer_notes', 'created_at',
   ];
   const csvEscape = (v) => `"${String(v ?? '').replace(/"/g, '""')}"`;
   const lines = [header.join(',')];
@@ -290,7 +331,8 @@ app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
     lines.push(
       [
         b.id, b.status, b.type, b.departure_id, b.name, b.email, b.num_guests,
-        (b.amount_total_cents / 100).toFixed(2), b.currency, b.preferred_dates, b.activities, b.notes, b.created_at,
+        (b.amount_total_cents / 100).toFixed(2), b.currency, b.preferred_dates, b.activities, b.notes,
+        b.arrival_airport, b.arrival_flight_number, b.arrival_datetime, b.transfer_notes, b.created_at,
       ]
         .map(csvEscape)
         .join(',')
