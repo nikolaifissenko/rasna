@@ -48,8 +48,23 @@ site and API.
   `8/8 remaining`. (Re-confirmed 2026-07-20 ~03:54 UTC after Nikolai's
   own live-site test booking — a `pending`, unpaid `cs_live_...` hold,
   `id 21`, no `stripe_payment_intent_id` set — was deleted directly
-  from D1; it would also have auto-expired within 40 minutes on its
-  own via the existing pending-hold logic. No charge was made.)
+  from D1. No charge was made.)
+- **Capacity math changed 2026-07-20**: `remaining` on
+  `/api/departures` now only counts `status = 'paid'` bookings
+  (`worker/src/db.js`, `spotsUsed` + `createFixedBooking`). Previously
+  a `pending` booking also counted for ~40 minutes (a hold meant to
+  stop two concurrent checkouts from both landing on the last spot) —
+  removed at Nikolai's explicit request, since an abandoned/incomplete
+  checkout was making the site show fewer spots than were actually
+  taken. **Trade-off, accepted deliberately**: two people completing
+  checkout for the literal last spot at the same instant could both
+  succeed (no more temporary hold). Low risk given the small (8-guest)
+  capacity and low concurrent traffic. Verified live against production
+  (inserted then removed test `pending` rows, confirmed `remaining`
+  doesn't move; confirmed a `paid` row still decrements it). Deployed
+  by cherry-picking the single-file `worker/src/db.js` commit onto
+  `claude/magical-franklin-58SKM` (per the branch split above) rather
+  than pushing all of `main` there.
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
   (`worker/src/departures.js`).
 - **Admin**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
