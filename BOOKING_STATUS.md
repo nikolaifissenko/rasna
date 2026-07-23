@@ -1,6 +1,6 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-20_
+_Last updated: 2026-07-23_
 
 ## What's live
 
@@ -124,6 +124,15 @@ _Last updated: 2026-07-20_
 - Domain **rasnaexperience.com** was chosen specifically to reinforce
   this: "experience" matches real travel-search intent, unlike the
   brand-only alternative considered (`rasnalife.com`).
+
+## ⚠️ Lodging risk for the Nov 9–15, 2026 departure
+
+Antonella's B&B — the lead lodging option for this departure — is
+**unavailable that week**. No accommodation is confirmed for a departure
+that's already open to real (sandbox-mode) Stripe bookings, capacity 8. See
+`BUSINESS_PLAN.md` RISCHIO CALENDARIO and `CONTATTI_LOCALI.md` (Antonella
+entry) for alternatives being evaluated (Beccone Albergo, Poggio al Sasso).
+Should be resolved before switching Stripe to Live mode (see step 2 below).
 
 ## Marketing — filling the November departure (8 spots, €1,450/pp)
 
