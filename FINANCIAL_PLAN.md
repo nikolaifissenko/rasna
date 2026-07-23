@@ -50,7 +50,7 @@ are now confirmed as **per room/night**, with the per-person equivalent worked o
 |---|---|---|
 | Da Beccone standard | €37.50 | €65 |
 | Da Beccone premium | €47.50 | €80 |
-| B&B La Rima (doppia only, no singola/premium rate collected yet) | €37.50 | — |
+| B&B La Ripa (doppia only, no singola/premium rate collected yet) | €37.50 | — |
 
 For the **3-night package this section assumes**, that puts real lodging cost at
 **€112.50–€142.50/guest in a double, €195–€240/guest in a single** — i.e. the €170
@@ -64,7 +64,7 @@ own for a 3-night stay.
 3.** `BOOKING_STATUS.md` / `worker/src/departures.js` confirm the fixed departure guests are
 actually booking and paying for right now is **Nov 9–15, 2026 (6 nights)** at **€1,450/guest**
 — not the 3-night/€1,400 package this financial plan is modeled on. Doubling the lodging
-nights roughly doubles that cost line. **B&B La Rima is unavailable that exact week, so Da
+nights roughly doubles that cost line. **B&B La Ripa is unavailable that exact week, so Da
 Beccone is currently the only usable rate for this calculation:**
 
 | Room type, 6 nights (Da Beccone) | €/guest | New total cost/guest | Margin at €1,450 |
@@ -78,7 +78,7 @@ So the actual November departure's margin is likely **somewhere between ~29% and
 not the ~49% this document states — and could be meaningfully worse than assumed if several
 guests end up in single rooms. **Room mix (doubles vs. singles, standard vs. premium) for
 this specific group of 8 is the one remaining unknown** — worth locking down with Da Beccone
-before the departure. Once La Rima's other-week availability and room count are confirmed
+before the departure. Once La Ripa's other-week availability and room count are confirmed
 (see `CONTATTI_LOCALI.md`), it becomes a second option at the same doppia rate (€37.50/guest/
 night) for non-November departures — useful for diversifying lodging capacity beyond a single
 partner.
