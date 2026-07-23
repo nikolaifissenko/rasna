@@ -1,6 +1,6 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-20_
+_Last updated: 2026-07-23_
 
 ## Bottom line
 
@@ -13,7 +13,14 @@ below) resolved on its own — confirmed live as of 2026-07-20 03:05
 UTC, "Back to Rasna" links and SEO metadata are correct on the live
 site now. As of 2026-07-20 ~03:47 UTC, post-payment flight-details
 collection (see below) is also confirmed live end-to-end on the real
-site and API.
+site and API. Re-verified live-mode Checkout independently on
+2026-07-23 (another `cs_live_...` session via a diagnostic API call,
+throwaway pending row left to auto-expire); Nikolai has separately
+confirmed the live-mode webhook fires correctly on real payments,
+closing out old item 4 below. **New open item**: lodging for the Nov
+9–15, 2026 departure needs the room mix locked down with Da Beccone —
+see "Lodging" below and `BUSINESS_PLAN.md` RISCHIO CALENDARIO, more
+urgent now that Stripe is confirmed live.
 
 ## What's live
 
@@ -89,6 +96,17 @@ site and API.
   migration was narrowly scoped to D1:Edit only (separate from the
   broader Workers Scripts+D1 token mentioned below) — should also be
   revoked once no longer needed, same as that one.
+- **Lodging (added 2026-07-23)**: the B&B originally slated for the
+  Nov 9–15, 2026 departure (Antonella, B&B La Ripa) is **unavailable
+  that week**. **Da Beccone is confirmed as the alternative** (rates
+  collected — see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1
+  for the margin recalculation against real rates). What's still open:
+  the **room mix** (doubles vs. singles) for this specific group of 8
+  — needs to be locked down with Da Beccone before Nov 9, since
+  single-occupancy guests meaningfully change the per-guest margin
+  (see `BUSINESS_PLAN.md` RISCHIO CALENDARIO for the full picture).
+  This is more urgent than it sounds given Stripe is already live: a
+  real guest could book and pay before lodging is settled.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /
@@ -128,11 +146,9 @@ needed. Numbering below kept as-is from when it was written.)_
    just keep doing manual `wrangler deploy` after any `worker/` change
    going forward (simpler, already proven reliable today).
 
-4. **Verify the webhook fires on a real live payment.** Still never
-   confirmed end-to-end with actual money — only verified that a live
-   Checkout session gets created correctly. The cheapest real
-   confirmation is your next real customer booking: check `/admin`
-   afterward to make sure it shows `paid`, not stuck `pending`.
+4. ~~Verify the webhook fires on a real live payment.~~ **Resolved
+   2026-07-23** — Nikolai confirmed the live-mode webhook works
+   correctly on real payments.
 
 5. **Get the Cloudflare Worker `ADMIN_PASSWORD` from Nikolai** so a
    future session can check `/admin` directly instead of inferring
@@ -151,6 +167,23 @@ needed. Numbering below kept as-is from when it was written.)_
    though `magical-franklin-58SKM` still matters until item 3 above is
    resolved. Also safe to delete `cloudflare/workers-autoconfig`
    (unused leftover branch, never merged).
+8. **A separate session on 2026-07-23 worked on `claude/session-context-k9kxoq`
+   (based on the stale `claude/magical-franklin-58SKM` lineage) without
+   realizing `main` was the real live/default branch** — it independently
+   redid work already done here (Stripe live-mode confirmation, domain
+   cutover, capacity-counting fix) and separately did real, non-duplicate
+   work on lodging (`CONTATTI_LOCALI.md`/`FINANCIAL_PLAN.md`/`BUSINESS_PLAN.md`
+   Da Beccone/La Ripa updates) that had no equivalent on `main`. That
+   lodging work has been manually ported onto `main` in this update. It
+   also correctly fixed `claude/magical-franklin-58SKM`'s `worker/wrangler.toml`
+   `SITE_URL`/`CORS_ORIGIN` (which had drifted stale relative to `main`'s
+   copy — the one actually driving the deployed Worker, see item 3), though
+   it dropped the `nikolaifissenko.github.io` CORS fallback that `main`
+   deliberately keeps — restored to match. `claude/session-context-k9kxoq`
+   itself is now safe to ignore/delete; its useful content is here. If
+   spinning up parallel sessions on this repo again, point them at `main`
+   explicitly, not a `claude/*` branch name that might be stale — see item
+   2's original collision for why this matters.
 
 ## Reference
 

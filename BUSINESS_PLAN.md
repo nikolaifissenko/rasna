@@ -157,10 +157,30 @@ These aren't separate attractions to manage — they're moments the town already
 - Oil tasting as standalone — folded into olive harvest experience
 - Nicolò's name — removed from client-facing (still partner/board)
 
+## ⚠️ RISCHIO CALENDARIO — alloggio per la partenza del 9–15 novembre 2026
+
+**Antonella (B&B La Ripa) NON è disponibile per la settimana 9–15 novembre 2026**
+— che è l'unica data attualmente aperta a prenotazioni reali sul sito (partenza
+fissa, capienza 8, €1.450/persona, pagamenti Stripe **in modalità live** — vedi
+`BOOKING_STATUS.md` e `worker/src/departures.js`).
+
+**Da Beccone è confermato come alloggio alternativo** per questa partenza
+(tariffe raccolte, vedi `CONTATTI_LOCALI.md` §8 e `FINANCIAL_PLAN.md` §1 per la
+verifica di margine con queste tariffe reali). L'unico punto ancora aperto è
+il **mix di camere** (doppie/singole, standard/premium) per il gruppo specifico
+di 8 persone di questa partenza — da chiudere con Da Beccone prima del 9
+novembre 2026, perché il margine varia a seconda di quante persone finiscono
+in singola. **Urgente**: Stripe è già in modalità live, quindi un ospite reale
+potrebbe prenotare e pagare prima che la logistica dell'alloggio sia chiusa.
+
 ## 7. Immediate next actions
 
 1. Monitor Formspree inbox for first client inquiries.
 2. Pick the pilot experience (recommend tomato sauce for August, or olive harvest for Oct–Dec).
-3. Finalize lodging partners (Beccone, Antonella, others from CONTATTI_LOCALI.md).
+3. **Lock down room mix with Da Beccone for the Nov 9–15, 2026 departure.**
+   Lodging is confirmed (Da Beccone, rates collected — see RISCHIO
+   CALENDARIO above); what's left is confirming how many doubles vs.
+   singles for this specific group of 8, since single-occupancy guests
+   change the per-guest margin.
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
