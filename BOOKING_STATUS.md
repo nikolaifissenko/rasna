@@ -190,3 +190,9 @@ needed. Numbering below kept as-is from when it was written.)_
 - Full step-by-step for the Worker/Stripe setup: `worker/README.md`.
 - Repo default/live branch: `main`.
 - Custom domain: `rasnaexperience.com`.
+- Site content changes (the 2026-07-23 About page rewrite, the "Italian
+  Autumn Experience" → "Italian Olive Experience" rename, the Planned
+  Events nav-jump fix, new SEO infrastructure, and the pending Google
+  Search Console verification for next session) are tracked in
+  `CLAUDE.md`, not here — this file stays scoped to booking/payment
+  backend status.
