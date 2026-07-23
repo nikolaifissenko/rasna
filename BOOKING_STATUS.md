@@ -4,20 +4,15 @@ _Last updated: 2026-07-23_
 
 ## What's live
 
-- **Site**: nikolaifissenko.github.io/rasna (GitHub Pages, deploys from
-  `claude/magical-franklin-58SKM`) — has the two-tab booking UI
-  (fixed November departure + choose-your-own-dates), both paying in
-  full via Stripe Checkout. Custom domain **rasnaexperience.com** is
-  purchased and DNS is pointed at GitHub Pages (confirmed resolving),
-  but GitHub hasn't finished issuing the HTTPS certificate /
-  activating the domain yet — still 404s as of this update. Until it's
-  confirmed serving, `SITE_URL` in the Worker deliberately still points
-  at the github.io URL (with the new domain also allowed in
-  `CORS_ORIGIN`) so live bookings don't break mid-transition — see
-  `worker/wrangler.toml`. **Once rasnaexperience.com is confirmed live,
-  flip `SITE_URL` to it and update the canonical/OG tags, `robots.txt`,
-  `sitemap.xml` if not already pointed there (they were pre-emptively
-  updated to the new domain already).**
+- **Site**: **rasnaexperience.com is live** (confirmed 2026-07-23 — HTTPS
+  serving with a valid cert, HTTP 200, correct page). Has the two-tab
+  booking UI (fixed November departure + choose-your-own-dates), both
+  paying in full via Stripe Checkout. `github.io/rasna` still exists as
+  the underlying GitHub Pages host but is no longer the canonical URL.
+  `SITE_URL` in the Worker has been flipped to `https://rasnaexperience.com`
+  and the github.io fallback dropped from `CORS_ORIGIN` — see
+  `worker/wrangler.toml`. Canonical/OG tags, `robots.txt`, `sitemap.xml`
+  already pointed at the custom domain.
 - **Backend**: `worker/` — Cloudflare Worker + D1 database, deployed at
   `https://rasna-booking-api.nikolai-fissenko1.workers.dev`. Free tier,
   no credit card, auto-deploys on push to `claude/magical-franklin-58SKM`
@@ -26,11 +21,24 @@ _Last updated: 2026-07-23_
 - **Database**: D1 `rasna-bookings` (id `9b39d9d8-6732-4b3f-8024-1667d171e49f`),
   `bookings` table created.
 - **Secrets set in Cloudflare** (Worker → Settings → Variables and
-  Secrets): `STRIPE_SECRET_KEY` (sandbox/test key), `STRIPE_WEBHOOK_SECRET`
-  (sandbox), `ADMIN_PASSWORD` (real, chosen by Nikolai).
-- **Stripe**: Sandbox/test mode only so far. Webhook destination created
-  pointing at `.../webhook/stripe` for `checkout.session.completed` and
-  `checkout.session.expired`.
+  Secrets): `STRIPE_SECRET_KEY` (now the **live** key, confirmed below),
+  `STRIPE_WEBHOOK_SECRET` (mode unverified, see below), `ADMIN_PASSWORD`
+  (real, chosen by Nikolai).
+- **Stripe**: **LIVE mode** — confirmed 2026-07-23 by hitting the real
+  `/api/bookings/fixed` endpoint, which returned a `cs_live_...` Checkout
+  session (not `cs_test_...`), so `STRIPE_SECRET_KEY` in Cloudflare is the
+  live secret key. This means **real bookings on the site now attempt real
+  charges** — treat the site as fully live, not a sandbox. **Unverified:**
+  whether `STRIPE_WEBHOOK_SECRET` in Cloudflare was updated to a live-mode
+  webhook secret to match. If it's still the old sandbox-mode secret,
+  webhook signature verification (`stripe.webhooks.constructEventAsync` in
+  `worker/src/index.js`) will fail on real events — guests would pay
+  successfully in Stripe but their booking would stay stuck `pending`
+  forever instead of flipping to `paid`. Needs a live-mode webhook
+  destination in the Stripe dashboard pointing at `.../webhook/stripe` for
+  `checkout.session.completed` / `checkout.session.expired`, with its
+  signing secret in `STRIPE_WEBHOOK_SECRET`. **Verify this before trusting
+  that any real booking will show as paid.**
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
   (`worker/src/departures.js`).
 - **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
@@ -58,20 +66,38 @@ _Last updated: 2026-07-23_
 ## Verified so far
 
 - API endpoints work against the real deployed Worker + D1 (confirmed
-  via curl): `/api/departures`, booking creation, Stripe session
-  creation with the real sandbox key (got back a real
-  `checkout.stripe.com/c/pay/cs_test_...` URL).
+  via curl): `/api/departures` (returns the Nov 9–15 departure, 8/8
+  remaining, correct CORS header for `https://rasnaexperience.com`),
+  booking creation, Stripe session creation — **now against the live
+  key**, confirmed by a `cs_live_...` Checkout URL in the response
+  (previously this returned `cs_test_...`).
 - Capacity math and atomic-insert race protection verified locally
   (wrangler dev + local D1): 5 concurrent requests at 1 remaining spot
   → exactly 1 succeeded.
 - `/admin` correctly requires auth (401 without credentials).
-- One leftover throwaway test booking exists in the live D1 from a
-  direct API curl test — status `pending`, auto-expires on its own
-  (Stripe session expiry ~30 min), no cleanup needed.
+- Full browser-driven checkout (actually paying with a card) was
+  **not** completed — see blocker 0 below, this is now a live charge,
+  not a test one, so it needs a deliberate real card, not automation.
+- Two leftover throwaway pending bookings exist in the live D1 from
+  direct API curl tests (one sandbox-era, one from the 2026-07-23
+  live-mode check) — both `pending`, both auto-expire on their own
+  (Stripe session expiry ~30 min), no cleanup needed; pending bookings
+  don't count against capacity.
 
 ## Not yet done — pick up here next
 
-0. **BLOCKER — apply the pending D1 migration to production.**
+0. **URGENT — verify the live-mode Stripe webhook is wired up.**
+   `STRIPE_SECRET_KEY` in Cloudflare is now a **live** key (confirmed
+   2026-07-23), meaning the site is taking real payments right now. It's
+   unverified whether `STRIPE_WEBHOOK_SECRET` was updated to match a
+   **live-mode** webhook destination in the Stripe dashboard. If it's
+   still the old sandbox-mode secret, a real guest could pay successfully
+   in Stripe while their booking stays stuck at `pending` in D1 forever
+   (webhook signature check fails silently, booking never flips to
+   `paid`, capacity never decrements). Need to either confirm a live-mode
+   webhook destination already exists pointing at `.../webhook/stripe`
+   with its secret in Cloudflare, or create one and update the secret.
+1. **BLOCKER — apply the pending D1 migration to production.**
    `worker/migrations/0002_flight_details.sql` (adds 4 nullable columns
    to `bookings`: `arrival_airport`, `arrival_flight_number`,
    `arrival_datetime`, `transfer_notes`) is written and applied locally,
@@ -85,27 +111,19 @@ _Last updated: 2026-07-23_
    ID (find the latter in the Cloudflare dashboard → Workers & Pages →
    right sidebar) and run it directly. Never write the token itself
    into this repo.
-1. **Run one real end-to-end test through the actual site** (not the
-   API directly): nikolaifissenko.github.io/rasna → Book Now →
-   November tab → fill form → pay with Stripe test card
-   `4242 4242 4242 4242` → confirm it lands on `success.html` → check
-   `/admin` shows the booking as `paid` and `/api/departures` shows
-   `remaining` decremented. (Last attempt got sidetracked — a Stripe
-   **Payment Link** URL was pasted instead of going through the site's
-   own booking form; that's a different, unrelated Stripe feature and
-   wasn't a real test of this flow.)
-2. **Switch Stripe to Live mode** once step 1 passes AND once
-   rasnaexperience.com is confirmed fully live (see domain note
-   above) — flipping live before the domain is ready risks a real
-   paying guest landing on a broken confirmation page right after
-   paying. Get the live secret key and create a second (live-mode)
-   webhook destination at the same URL/events, then update
-   `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET` in Cloudflare with
-   the live values.
-3. Once rasnaexperience.com is confirmed serving with a valid cert:
-   flip `SITE_URL` in `worker/wrangler.toml` from the github.io
-   fallback to `https://rasnaexperience.com`, and drop the github.io
-   entry from `CORS_ORIGIN`.
+2. **Lock down room mix with Da Beccone** for the Nov 9–15, 2026
+   departure (doubles vs. singles for this group of 8) — see lodging
+   risk section below. More urgent now that Stripe is live: a real
+   guest could book and pay before lodging logistics are settled.
+3. **Run one real end-to-end test through the actual site**, now that
+   it's live-mode: rasnaexperience.com → Book Now → November tab → fill
+   form → pay with a **real card** (this is real money now, not a test
+   card) → confirm it lands on `success.html` → check `/admin` shows the
+   booking as `paid` and `/api/departures` shows `remaining` decremented.
+   Automated browser testing of this was attempted but is blocked by
+   this environment's outbound proxy resetting Chromium's TLS handshake
+   (a proxy/Chromium ML-KEM ClientHello incompatibility, unrelated to
+   the site) — this needs a manual run or a different environment.
 4. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything).
