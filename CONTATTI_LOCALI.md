@@ -20,7 +20,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
-| Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
+| Antonella | Possibile partner — B&B | ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi voce dedicata sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
@@ -109,3 +109,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
+
+### ANTONELLA (B&B)
+- **Ruolo:** Possibile partner — alloggio
+- **Stato:** ⚠️ NON DISPONIBILE — settimana 9–15 novembre 2026
+- **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.450/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Serve alloggio alternativo per 8 persone entro il 9 novembre 2026 — vedi RISCHIO CALENDARIO in `BUSINESS_PLAN.md`.

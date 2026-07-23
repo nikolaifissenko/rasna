@@ -157,10 +157,34 @@ These aren't separate attractions to manage — they're moments the town already
 - Oil tasting as standalone — folded into olive harvest experience
 - Nicolò's name — removed from client-facing (still partner/board)
 
+## ⚠️ RISCHIO CALENDARIO — alloggio per la partenza del 9–15 novembre 2026
+
+**Antonella (B&B) NON è disponibile per la settimana 9–15 novembre 2026** — che è
+l'unica data attualmente aperta a prenotazioni reali sul sito (partenza fissa,
+capienza 8, €1.450/persona — vedi `BOOKING_STATUS.md` e
+`worker/src/departures.js`). Antonella era il lead principale per l'alloggio di
+questa partenza (mai formalmente confermata, era ancora "da contattare" — vedi
+azione 3 sotto), quindi **al momento non esiste alcun alloggio confermato per
+un dipartimento che sta già raccogliendo pagamenti**.
+
+Alternative da valutare in `CONTATTI_LOCALI.md`, verificando capienza per 8
+persone (il numero reale della partenza) entro il 9 novembre 2026:
+- **Beccone Albergo** — possibile partner, mai ancora contattato/confermato.
+- **Poggio al Sasso (agriturismo)** — segnalato come probabilmente chiuso; da
+  verificare prima di fare affidamento su questa opzione.
+
+**Finché non si conferma un alloggio alternativo, questo è il rischio più
+urgente del business**, più urgente della migrazione D1 o del passaggio a
+Stripe live: c'è già una partenza aperta a pagamento senza un posto dove
+dormire gli ospiti.
+
 ## 7. Immediate next actions
 
 1. Monitor Formspree inbox for first client inquiries.
 2. Pick the pilot experience (recommend tomato sauce for August, or olive harvest for Oct–Dec).
-3. Finalize lodging partners (Beccone, Antonella, others from CONTATTI_LOCALI.md).
+3. **URGENT — Finalize lodging for the Nov 9–15, 2026 departure.** Antonella
+   is unavailable for that week (see RISCHIO CALENDARIO above); contact
+   Beccone Albergo and verify Poggio al Sasso's status, confirming capacity
+   for 8 guests.
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
