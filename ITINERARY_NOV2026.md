@@ -24,7 +24,7 @@ Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Fes
 ## Thursday, November 12
 - Breakfast at the bar
 - Morning at the frantoio (olive mill) to collect the oil pressed from Wednesday's harvest
-- Lunch
+- Lunch at Terrarte, in the olive grove among the sculptures (Sandro Scarmiglia's outdoor sculpture park, see `CONTATTI_LOCALI.md`)
 - Afternoon: pasta making
 
 ## Friday, November 13
