@@ -44,6 +44,16 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
+**Reference costs — breakfast & aperitivo (per person, from Bar Paradiso quote):**
+
+Bar Paradiso quoted two breakfast menus:
+| Menu | Includes | Quoted price |
+|---|---|---|
+| Colazione salata | Coffee/cappuccino/americano/hot chocolate + prosciutto cotto & cheese toast w/ salad + juice + scrambled eggs + toast | €8.50 |
+| Colazione dolce | Coffee/cappuccino/americano/hot chocolate + brioche or slice of cake of the day + yogurt + juice | €6.50 |
+
+For planning/budgeting purposes, round these up to **€10/person for breakfast** and **€15/person for aperitivo**, to leave margin over the quoted rates. Use these figures when itemizing meal costs for a specific itinerary (e.g., a 3-night package with 3 breakfasts + 1 aperitivo ≈ 3×€10 + €15 = €45/guest), and roll the result into the "Meals & local hosting fees" line above once the full meal plan for the pilot itinerary is finalized.
+
 **A nice exception worth flagging — Renzo's leather/bag-making session:** this one could realistically run at **little or no hosting cost to us**, since guests are likely to purchase his goods after seeing how they're made — meaning he benefits directly from hosting, without needing a separate fee. This is the kind of win-win arrangement worth replicating wherever possible (it's also a good model to discuss with other artisans/producers — e.g. whether a tasting that leads to a sale could substitute for, or reduce, a hosting fee).
 
 ## 2. Group economics

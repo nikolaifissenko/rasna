@@ -109,3 +109,10 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
+
+### BAR PARADISO
+- **Ruolo:** Possibile partner — colazioni e aperitivi
+- **Stato:** Preventivo ricevuto — DA VALIDARE
+- **Menu colazione salata (€8,50/persona):** caffè/cappuccino/americano/cioccolato + toast prosciutto cotto, formaggio e insalata + succo + uova strapazzate + pane tostato
+- **Menu colazione dolce (€6,50/persona):** caffè/cappuccino/americano/cioccolato + brioche a scelta o fetta di torta del giorno + yogurt + succo
+- **Nota costi:** per la pianificazione, arrotondare a **€10/persona colazione** e **€15/persona aperitivo** (vedi `FINANCIAL_PLAN.md`, sezione 1)
