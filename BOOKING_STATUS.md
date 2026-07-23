@@ -21,24 +21,17 @@ _Last updated: 2026-07-23_
 - **Database**: D1 `rasna-bookings` (id `9b39d9d8-6732-4b3f-8024-1667d171e49f`),
   `bookings` table created.
 - **Secrets set in Cloudflare** (Worker → Settings → Variables and
-  Secrets): `STRIPE_SECRET_KEY` (now the **live** key, confirmed below),
-  `STRIPE_WEBHOOK_SECRET` (mode unverified, see below), `ADMIN_PASSWORD`
-  (real, chosen by Nikolai).
+  Secrets): `STRIPE_SECRET_KEY` (**live** key, confirmed below),
+  `STRIPE_WEBHOOK_SECRET` (live-mode, confirmed working by Nikolai),
+  `ADMIN_PASSWORD` (real, chosen by Nikolai).
 - **Stripe**: **LIVE mode** — confirmed 2026-07-23 by hitting the real
   `/api/bookings/fixed` endpoint, which returned a `cs_live_...` Checkout
   session (not `cs_test_...`), so `STRIPE_SECRET_KEY` in Cloudflare is the
-  live secret key. This means **real bookings on the site now attempt real
-  charges** — treat the site as fully live, not a sandbox. **Unverified:**
-  whether `STRIPE_WEBHOOK_SECRET` in Cloudflare was updated to a live-mode
-  webhook secret to match. If it's still the old sandbox-mode secret,
-  webhook signature verification (`stripe.webhooks.constructEventAsync` in
-  `worker/src/index.js`) will fail on real events — guests would pay
-  successfully in Stripe but their booking would stay stuck `pending`
-  forever instead of flipping to `paid`. Needs a live-mode webhook
-  destination in the Stripe dashboard pointing at `.../webhook/stripe` for
-  `checkout.session.completed` / `checkout.session.expired`, with its
-  signing secret in `STRIPE_WEBHOOK_SECRET`. **Verify this before trusting
-  that any real booking will show as paid.**
+  live secret key. This means **real bookings on the site attempt real
+  charges** — treat the site as fully live, not a sandbox. The live-mode
+  webhook (signature verification in `worker/src/index.js` via
+  `stripe.webhooks.constructEventAsync`) is confirmed working end-to-end,
+  so paid bookings do flip from `pending` to `paid`.
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
   (`worker/src/departures.js`).
 - **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
@@ -86,18 +79,7 @@ _Last updated: 2026-07-23_
 
 ## Not yet done — pick up here next
 
-0. **URGENT — verify the live-mode Stripe webhook is wired up.**
-   `STRIPE_SECRET_KEY` in Cloudflare is now a **live** key (confirmed
-   2026-07-23), meaning the site is taking real payments right now. It's
-   unverified whether `STRIPE_WEBHOOK_SECRET` was updated to match a
-   **live-mode** webhook destination in the Stripe dashboard. If it's
-   still the old sandbox-mode secret, a real guest could pay successfully
-   in Stripe while their booking stays stuck at `pending` in D1 forever
-   (webhook signature check fails silently, booking never flips to
-   `paid`, capacity never decrements). Need to either confirm a live-mode
-   webhook destination already exists pointing at `.../webhook/stripe`
-   with its secret in Cloudflare, or create one and update the secret.
-1. **BLOCKER — apply the pending D1 migration to production.**
+0. **BLOCKER — apply the pending D1 migration to production.**
    `worker/migrations/0002_flight_details.sql` (adds 4 nullable columns
    to `bookings`: `arrival_airport`, `arrival_flight_number`,
    `arrival_datetime`, `transfer_notes`) is written and applied locally,
@@ -111,11 +93,11 @@ _Last updated: 2026-07-23_
    ID (find the latter in the Cloudflare dashboard → Workers & Pages →
    right sidebar) and run it directly. Never write the token itself
    into this repo.
-2. **Lock down room mix with Da Beccone** for the Nov 9–15, 2026
+1. **Lock down room mix with Da Beccone** for the Nov 9–15, 2026
    departure (doubles vs. singles for this group of 8) — see lodging
    risk section below. More urgent now that Stripe is live: a real
    guest could book and pay before lodging logistics are settled.
-3. **Run one real end-to-end test through the actual site**, now that
+2. **Run one real end-to-end test through the actual site**, now that
    it's live-mode: rasnaexperience.com → Book Now → November tab → fill
    form → pay with a **real card** (this is real money now, not a test
    card) → confirm it lands on `success.html` → check `/admin` shows the
@@ -124,7 +106,7 @@ _Last updated: 2026-07-23_
    this environment's outbound proxy resetting Chromium's TLS handshake
    (a proxy/Chromium ML-KEM ClientHello incompatibility, unrelated to
    the site) — this needs a manual run or a different environment.
-4. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
+3. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything).
 
@@ -151,8 +133,10 @@ the alternative** (rates collected, margin checked against real numbers —
 see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1). What's still open:
 the **room mix** (doubles vs. singles) for this specific group of 8 —
 needs to be locked down with Da Beccone before Nov 9, 2026, since
-single-occupancy guests change the per-guest margin. Should be resolved
-before switching Stripe to Live mode (see step 2 below).
+single-occupancy guests change the per-guest margin. **Now more urgent**:
+Stripe is already live (see "What's live" above), so a real guest could
+book and pay for this departure before lodging logistics are settled —
+see item 1 in "Not yet done" above.
 
 ## Marketing — filling the November departure (8 spots, €1,450/pp)
 
