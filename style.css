@@ -136,7 +136,7 @@
     @media (max-width: 820px) { .site-nav .nav-links { display: none; } }
     @media (max-width: 480px) { .site-nav .nav-count { display: none; } }
 
-    section[id], .category[id] { scroll-margin-top: 78px; }
+    section[id], .category[id], #festival-calendar { scroll-margin-top: 78px; }
 
     /* ── Tab switcher ── */
     .tab-switcher-wrap {
