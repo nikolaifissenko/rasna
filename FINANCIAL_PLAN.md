@@ -42,16 +42,15 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 
 **Gross margin per guest: ~€680 (≈49%)**
 
-**Lodging cost check against Da Beccone's confirmed rates (`CONTATTI_LOCALI.md`):**
-Confirmed rates are €75 (doppia standard) / €65 (singola standard) / €95 (doppia premium) /
-€80 (singola premium), **per room/night — not yet confirmed whether this is per room or per
-person**, so the per-guest cost depends heavily on room mix (couples/friends sharing a
-double vs. solo travelers in a single):
+**Lodging cost check against confirmed rates (`CONTATTI_LOCALI.md`):** both partners' rates
+are now confirmed as **per room/night**, with the per-person equivalent worked out
+(double = room rate ÷ 2, single = room rate as-is, since it's one person per room):
 
 | Room type | €/guest/night (double occupancy) | €/guest/night (single) |
 |---|---|---|
-| Standard | €37.50 | €65 |
-| Premium | €47.50 | €80 |
+| Da Beccone standard | €37.50 | €65 |
+| Da Beccone premium | €47.50 | €80 |
+| B&B La Rima (doppia only, no singola/premium rate collected yet) | €37.50 | — |
 
 For the **3-night package this section assumes**, that puts real lodging cost at
 **€112.50–€142.50/guest in a double, €195–€240/guest in a single** — i.e. the €170
@@ -65,9 +64,10 @@ own for a 3-night stay.
 3.** `BOOKING_STATUS.md` / `worker/src/departures.js` confirm the fixed departure guests are
 actually booking and paying for right now is **Nov 9–15, 2026 (6 nights)** at **€1,450/guest**
 — not the 3-night/€1,400 package this financial plan is modeled on. Doubling the lodging
-nights roughly doubles that cost line:
+nights roughly doubles that cost line. **B&B La Rima is unavailable that exact week, so Da
+Beccone is currently the only usable rate for this calculation:**
 
-| Room type, 6 nights | €/guest | New total cost/guest | Margin at €1,450 |
+| Room type, 6 nights (Da Beccone) | €/guest | New total cost/guest | Margin at €1,450 |
 |---|---|---|---|
 | Standard double | €225 | €775 | €675 (≈47%) |
 | Premium double | €285 | €835 | €615 (≈42%) |
@@ -76,11 +76,12 @@ nights roughly doubles that cost line:
 
 So the actual November departure's margin is likely **somewhere between ~29% and ~47%**,
 not the ~49% this document states — and could be meaningfully worse than assumed if several
-guests end up in single rooms. **This needs two clarifications before the Nov 9–15 numbers
-can be trusted: (1) are Da Beccone's rates per room or per person, and (2) what's the actual
-room mix (doubles vs. singles, standard vs. premium) for this group?** Until then, treat the
-~49% margin figure as validated only for the generic 3-night package template, not for the
-live 6-night November booking.
+guests end up in single rooms. **Room mix (doubles vs. singles, standard vs. premium) for
+this specific group of 8 is the one remaining unknown** — worth locking down with Da Beccone
+before the departure. Once La Rima's other-week availability and room count are confirmed
+(see `CONTATTI_LOCALI.md`), it becomes a second option at the same doppia rate (€37.50/guest/
+night) for non-November departures — useful for diversifying lodging capacity beyond a single
+partner.
 
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
