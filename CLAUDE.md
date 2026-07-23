@@ -21,6 +21,12 @@ an API token or find an account ID) — but even then, be specific about
 exactly what scope/permission you need so it's a single copy-paste for
 him, not a debugging back-and-forth.
 
+## Pull requests
+
+Always open a pull request after pushing a branch with finished work —
+don't wait to be asked each time. Push the branch, then create the PR
+against `claude/magical-franklin-58SKM` (the deploy branch).
+
 ## Deployment topology
 
 - **Static site** (`index.html`, `success.html`, `cancel.html`, etc. at
