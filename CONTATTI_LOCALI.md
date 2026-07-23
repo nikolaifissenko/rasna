@@ -19,6 +19,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
+| **Bar Paradiso** | Partner — colazioni e aperitivi (locale di Maria Grazia) | ✅ CONFERMATO — preventivo ricevuto (vedi sezione 7) |
 | Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
@@ -111,8 +112,8 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
 
 ### BAR PARADISO
-- **Ruolo:** Possibile partner — colazioni e aperitivi
-- **Stato:** Preventivo ricevuto — DA VALIDARE
+- **Ruolo:** Partner — colazioni e aperitivi. **Locale di Maria Grazia** (non terzo esterno da contattare — già dentro il progetto)
+- **Stato:** Preventivo ricevuto — CONFERMATO
 - **Menu colazione salata (€8,50/persona):** caffè/cappuccino/americano/cioccolato + toast prosciutto cotto, formaggio e insalata + succo + uova strapazzate + pane tostato
 - **Menu colazione dolce (€6,50/persona):** caffè/cappuccino/americano/cioccolato + brioche a scelta o fetta di torta del giorno + yogurt + succo
 - **Nota costi:** per la pianificazione, arrotondare a **€10/persona colazione** e **€15/persona aperitivo** (vedi `FINANCIAL_PLAN.md`, sezione 1)
