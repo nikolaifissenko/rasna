@@ -19,7 +19,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
-| Beccone Albergo | Possibile partner — alloggio | da contattare per lo scouting B&B/lodging |
+| Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
 | Antonella | Possibile partner — B&B | da contattare per lo scouting B&B/lodging |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
@@ -109,3 +109,19 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ### MIRIAM (madre di Emiliano — affettati)
 - **Stato:** ✅ CONFERMATO — Emiliano disponibile per degustazioni dei suoi salumi artigianali con i visitatori
+
+## 8. Alloggio
+
+### DA BECCONE
+- **Ruolo:** Alloggio partner
+- **Stato:** ✅ CONFERMATO
+- **Tariffe** (a camera/notte — **DA VERIFICARE se il totale è a camera o a persona**):
+
+| Tipo camera | Tariffa/notte |
+|---|---|
+| Doppia standard | €75 |
+| Singola standard | €65 |
+| Doppia premium | €95 |
+| Singola premium | €80 |
+
+- **Nota:** vedi `FINANCIAL_PLAN.md` §1 per il ricalcolo del costo alloggio per ospite basato su queste tariffe reali, e per la verifica di coerenza con il margine stimato del ~49%.

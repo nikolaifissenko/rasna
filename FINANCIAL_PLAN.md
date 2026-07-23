@@ -32,7 +32,7 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 ### Per-guest cost breakdown (estimate)
 | Item | Cost |
 |---|---|
-| Lodging (3 nights, partner BnB rate) | €170 |
+| Lodging (3 nights, partner BnB rate) | €170 — **see verified-rate check below, real cost depends on room mix** |
 | Meals & local hosting fees (traditional-style cooking, panonto, etc. — fair pay for real hosts' time) | €220 |
 | Local guiding/transport (incl. day trips to Lago di Vico, Villa Lante, Tarquinia, etc.) | €140 |
 | Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
@@ -41,6 +41,46 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 | **Total cost per guest** | **~€720** |
 
 **Gross margin per guest: ~€680 (≈49%)**
+
+**Lodging cost check against Da Beccone's confirmed rates (`CONTATTI_LOCALI.md`):**
+Confirmed rates are €75 (doppia standard) / €65 (singola standard) / €95 (doppia premium) /
+€80 (singola premium), **per room/night — not yet confirmed whether this is per room or per
+person**, so the per-guest cost depends heavily on room mix (couples/friends sharing a
+double vs. solo travelers in a single):
+
+| Room type | €/guest/night (double occupancy) | €/guest/night (single) |
+|---|---|---|
+| Standard | €37.50 | €65 |
+| Premium | €47.50 | €80 |
+
+For the **3-night package this section assumes**, that puts real lodging cost at
+**€112.50–€142.50/guest in a double, €195–€240/guest in a single** — i.e. the €170
+estimate above is roughly right for a standard double, slightly low for a premium double,
+and too low for any single-occupancy guest. **Net effect on the ~49% margin: modest** as
+long as most guests double up (margin moves to ~50–53% for doubles, drops to ~44–47% for
+singles) — worth re-running with the actual room mix once known, but not a red flag on its
+own for a 3-night stay.
+
+**⚠️ Bigger issue found while checking this: the live November departure is 6 nights, not
+3.** `BOOKING_STATUS.md` / `worker/src/departures.js` confirm the fixed departure guests are
+actually booking and paying for right now is **Nov 9–15, 2026 (6 nights)** at **€1,450/guest**
+— not the 3-night/€1,400 package this financial plan is modeled on. Doubling the lodging
+nights roughly doubles that cost line:
+
+| Room type, 6 nights | €/guest | New total cost/guest | Margin at €1,450 |
+|---|---|---|---|
+| Standard double | €225 | €775 | €675 (≈47%) |
+| Premium double | €285 | €835 | €615 (≈42%) |
+| Standard single | €390 | €940 | €510 (≈35%) |
+| Premium single | €480 | €1,030 | €420 (≈29%) |
+
+So the actual November departure's margin is likely **somewhere between ~29% and ~47%**,
+not the ~49% this document states — and could be meaningfully worse than assumed if several
+guests end up in single rooms. **This needs two clarifications before the Nov 9–15 numbers
+can be trusted: (1) are Da Beccone's rates per room or per person, and (2) what's the actual
+room mix (doubles vs. singles, standard vs. premium) for this group?** Until then, treat the
+~49% margin figure as validated only for the generic 3-night package template, not for the
+live 6-night November booking.
 
 **Note on hosting fees and insurance:** these two lines reflect direct feedback from Maria Grazia — anyone hosting an activity will reasonably expect fair payment (this isn't a favor economy), and guest insurance for hands-on/manual activities is a real, non-negotiable cost (injury risk in harvesting, butchering, leatherwork, etc.). Both are now built into the cost model rather than treated as afterthoughts — get concrete quotes for both during the pilot to replace these estimates with real numbers.
 
