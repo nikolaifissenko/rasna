@@ -125,14 +125,16 @@ _Last updated: 2026-07-23_
   this: "experience" matches real travel-search intent, unlike the
   brand-only alternative considered (`rasnalife.com`).
 
-## ⚠️ Lodging risk for the Nov 9–15, 2026 departure
+## ⚠️ Lodging risk for the Nov 9–15, 2026 departure (partially resolved)
 
-Antonella's B&B — the lead lodging option for this departure — is
-**unavailable that week**. No accommodation is confirmed for a departure
-that's already open to real (sandbox-mode) Stripe bookings, capacity 8. See
-`BUSINESS_PLAN.md` RISCHIO CALENDARIO and `CONTATTI_LOCALI.md` (Antonella
-entry) for alternatives being evaluated (Beccone Albergo, Poggio al Sasso).
-Should be resolved before switching Stripe to Live mode (see step 2 below).
+Antonella's B&B (La Ripa) — the original lead lodging option for this
+departure — is **unavailable that week**. **Da Beccone is now confirmed as
+the alternative** (rates collected, margin checked against real numbers —
+see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1). What's still open:
+the **room mix** (doubles vs. singles) for this specific group of 8 —
+needs to be locked down with Da Beccone before Nov 9, 2026, since
+single-occupancy guests change the per-guest margin. Should be resolved
+before switching Stripe to Live mode (see step 2 below).
 
 ## Marketing — filling the November departure (8 spots, €1,450/pp)
 
