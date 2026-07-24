@@ -110,6 +110,42 @@ priority / optional:
 - Domain **rasnaexperience.com** was chosen specifically to reinforce
   this: "experience" matches real travel-search intent, unlike the
   brand-only alternative considered (`rasnalife.com`).
+- **2026-07-24 — targeted the literal "Italy experience(s)" phrase.**
+  Nikolai asked to rank when people search "italy experiences" — worth
+  being honest about here: that exact broad head term is realistically
+  out of reach for a brand-new, zero-authority domain (TripAdvisor/
+  Viator/GetYourGuide own it, backed by years of domain authority no
+  on-page fix changes). What *is* winnable is the long-tail phrase
+  variants — "authentic Italy experience," "small-group Italy travel
+  experience" — which have far less competition and match this site's
+  actual buyer intent better than the generic term anyway. Changes:
+  - Title/meta description/OG tags now literally contain "Italy
+    Experiences" / "authentic Italy travel experience" (previously
+    leaned on Tuscia/Etruscan only, missing the phrase entirely).
+  - New visible **About** section (`#about`) — a real ~150-word content
+    block using the phrase naturally, addressing "how is this different
+    from a normal Italy tour" directly. Previously the page was mostly
+    short activity-card blurbs with very little actual body text for
+    Google to index.
+  - New visible **FAQ** section (`#faq`) with 6 Q&As covering the
+    questions someone searching "authentic Italy experience" /
+    "small-group Italy tour" would actually ask, mirrored in a
+    `FAQPage` JSON-LD block (both validated, second `<script
+    type="application/ld+json">` in `index.html`) — a shot at FAQ rich
+    snippets and long-tail voice/AI-search matches.
+  - Nav updated with `#about` / `#faq` links; both sections screenshot-
+    verified rendering correctly (Playwright + local Chromium) before
+    shipping.
+  - Merged straight into `claude/magical-franklin-58SKM` so it's live
+    (GitHub Pages auto-deploys from that branch) — no separate deploy
+    step needed for static-site changes.
+  - **Real next levers, need Nikolai** (none of this is code-fixable):
+    a Google Search Console property (I can drop the verification meta
+    tag into `index.html` myself once he creates the property and
+    pastes the one line it gives him) and a Google Business Profile —
+    plus actual backlinks/citations (the niche-forum and warm-outreach
+    posts in `OUTREACH_DRAFTS.md` double as this), which matter far
+    more for ranking than any further on-page tweaking at this point.
 
 ## ⚠️ Lodging risk for the Nov 9–15, 2026 departure (resolved)
 
