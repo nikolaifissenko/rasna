@@ -1,6 +1,6 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-23_
+_Last updated: 2026-07-24_
 
 ## What's live
 
@@ -108,7 +108,10 @@ _Last updated: 2026-07-23_
    the site) — this needs a manual run or a different environment.
 3. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
-   deploy attempt — never merged, not connected to anything).
+   deploy attempt — never merged, not connected to anything). Attempted
+   2026-07-24 — blocked by a 403 from this session's git remote
+   permissions (repo scope here doesn't allow branch deletion); low
+   priority, revisit if it becomes annoying.
 
 ## SEO
 
@@ -164,9 +167,12 @@ was recommended, in priority order:
    channel, small **paid** Meta ads (interest-targeted, capped spend)
    are more realistic than organic growth within a ~16-week window.
 
-**Not yet done**: no outreach copy has actually been drafted yet
-(DM/email template, forum post, Instagram bio/captions) — next
-concrete step whenever marketing work resumes.
+**Done (2026-07-24)**: outreach copy is drafted and ready to send —
+warm-outreach DM/email template, forum post draft, Instagram bio +
+starter captions, and a room-mix message for Da Beccone (item 1 above) —
+see `OUTREACH_DRAFTS.md`. Nikolai still needs to actually send these
+(no email/phone/social tool access here); once sent, report back what
+gets responses so the copy can be tightened.
 
 ## Reference
 

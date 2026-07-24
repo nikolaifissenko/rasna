@@ -189,6 +189,6 @@ mix di camere con Da Beccone prima di passare Stripe a live mode (vedi
    Lodging is confirmed (Da Beccone, rates collected — see RISCHIO CALENDARIO
    above); what's left is confirming how many doubles vs. singles for this
    specific group of 8, since single-occupancy guests change the per-guest
-   margin.
+   margin. **Ready-to-send message drafted** — see `OUTREACH_DRAFTS.md` §1.
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
