@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rasna: Italian Olive Experience & Custom Expeditions in Blera, Italy</title>
-  <meta name="description" content="Join the Italian Olive Experience, a fixed-departure autumn week of olive harvesting, wine, and Etruscan Blera, Italy, or build your own custom small-group expedition.">
+  <title>Rasna: Italian Olive Experience &amp; Authentic Italy Experiences in Blera</title>
+  <meta name="description" content="Join the Italian Olive Experience, a fixed-departure autumn week of olive harvesting, wine, and Etruscan Blera, Italy, or build your own custom small-group Italy experience. All-inclusive, capped at 8 guests.">
   <link rel="canonical" href="https://rasnaexperience.com/">
-  <meta property="og:title" content="Rasna: Italian Olive Experience in Blera, Italy">
-  <meta property="og:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride horses through ruins, explore rock-cut tombs. We handle the rest.">
+  <meta property="og:title" content="Rasna: Italian Olive Experience — Authentic Italy Experiences in Blera">
+  <meta property="og:description" content="Live like a local in ancient Etruscan country on an authentic small-group Italy experience. Harvest olives, ride horses through ruins, explore rock-cut tombs. We handle the rest.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rasnaexperience.com/">
   <meta property="og:image" content="https://rasnaexperience.com/images/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rasna: Italian Olive Experience in Blera, Italy">
-  <meta name="twitter:description" content="Live like a local in ancient Etruscan country. Harvest olives, ride horses through ruins, explore rock-cut tombs. We handle the rest.">
+  <meta name="twitter:title" content="Rasna: Italian Olive Experience — Authentic Italy Experiences in Blera">
+  <meta name="twitter:description" content="Live like a local in ancient Etruscan country on an authentic small-group Italy experience. Harvest olives, ride horses through ruins, explore rock-cut tombs. We handle the rest.">
   <meta name="twitter:image" content="https://rasnaexperience.com/images/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,6 +47,62 @@
       "availability": "https://schema.org/LimitedAvailability",
       "url": "https://rasnaexperience.com/#festival-calendar"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the Italian Olive Experience?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It's Rasna's fixed-departure week (November 9-15, 2026) in Blera, an ancient Etruscan hill town in Italy's Tuscia region. Guests harvest olives, explore rock-cut Etruscan tombs, visit thermal baths, and join the town's Festa delle Cantine wine festival, all as a small group capped at 8 guests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from a normal Italy tour?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most Italy tours move large groups through sights by bus. Rasna caps every trip at 8 guests and builds it around real local life: you work alongside the people who actually farm the land, cure the meat, and cook the meals, rather than watching a staged demonstration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in the price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Italian Olive Experience is €1,450 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a discount for booking early?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The first 2 paid guest spots on the November 9-15, 2026 departure get a Founding Guest discount of 15% off (€1,230 instead of €1,450 per person) as a thank-you for booking before the trip has a track record."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I also build my own custom trip instead?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Alongside the fixed Italian Olive Experience departure, Rasna offers fully custom small-group Italy experiences: pick your own activities and dates and Rasna arranges everything around you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Blera?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blera is in Tuscia, the historic Etruscan region of northern Lazio, about 90 minutes from Rome, far enough to avoid the Tuscany and Amalfi Coast tourist crowds, close enough for an easy transfer."
+        }
+      }
+    ]
   }
   </script>
 </head>
@@ -106,6 +162,7 @@
       <a href="#pricing" onclick="showTab('build','pricing'); return false;">Pricing</a>
       <a href="#contact" onclick="showTab('build','contact'); return false;">Contact</a>
       <a href="#festival-calendar" onclick="showTab('trips','festival-calendar'); return false;">Planned Events</a>
+      <a href="#faq" onclick="showTab('trips','faq'); return false;">FAQ</a>
     </div>
     <div class="nav-cta">
       <span class="nav-count" id="nav-count">0 selected</span>
@@ -824,6 +881,7 @@
       </div>
 
       <div class="festival-book fade-in" id="festival-book">
+        <div class="founding-badge" id="founding-badge" style="display:none">Founding Guest discount</div>
         <div class="section-label">Reserve your spot</div>
         <h3 id="festival-book-heading">Book the November 9 to 15 departure</h3>
         <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure &middot; &euro;1,450 per person, all-inclusive. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
@@ -868,6 +926,41 @@
         <div class="festival-success" id="festival-success">
           <h3>Grazie!</h3>
           <p>Taking you to secure checkout now&hellip;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
+
+  <section class="faq-section" id="faq">
+    <div class="section-inner">
+      <div class="section-label fade-in">Questions</div>
+      <h2 class="fade-in">Before you book.</h2>
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <h3>What is the Italian Olive Experience?</h3>
+          <p>It's Rasna's fixed-departure week (November 9&ndash;15, 2026) in Blera, an ancient Etruscan hill town in Italy's Tuscia region. Guests harvest olives, explore rock-cut Etruscan tombs, visit thermal baths, and join the town's Festa delle Cantine wine festival, all as a small group capped at 8 guests.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is this different from a normal Italy tour?</h3>
+          <p>Most Italy tours move large groups through sights by bus. Rasna caps every trip at 8 guests and builds it around real local life: you work alongside the people who actually farm the land, cure the meat, and cook the meals, rather than watching a staged demonstration.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What's included in the price?</h3>
+          <p>The Italian Olive Experience is &euro;1,450 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there a discount for booking early?</h3>
+          <p>Yes &mdash; the first 2 paid guest spots on the November 9&ndash;15, 2026 departure get a Founding Guest discount of 15% off (&euro;1,230 instead of &euro;1,450 per person), as a thank-you for booking before the trip has a track record.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I also build my own custom trip instead?</h3>
+          <p>Yes. Alongside the fixed Italian Olive Experience departure, Rasna offers fully custom small-group Italy experiences &mdash; pick your own activities and dates and Rasna arranges everything around you.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Where is Blera?</h3>
+          <p>Blera is in Tuscia, the historic Etruscan region of northern Lazio, about 90 minutes from Rome &mdash; far enough to avoid the Tuscany and Amalfi Coast tourist crowds, close enough for an easy transfer.</p>
         </div>
       </div>
     </div>
@@ -983,6 +1076,19 @@
           document.getElementById('festival-book-heading').textContent = 'This departure is fully booked';
           document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for November 9–15, 2026 are taken. Get in touch if you’d like to be notified about future departures.';
           document.getElementById('festival-form').style.display = 'none';
+          return;
+        }
+        const hasDiscount = departure.founding_discount_price && departure.founding_discount_remaining > 0;
+        if (hasDiscount) {
+          const badge = document.getElementById('founding-badge');
+          badge.style.display = 'inline-block';
+          badge.textContent = 'Founding Guest discount — first ' + departure.founding_discount_remaining + ' spot' + (departure.founding_discount_remaining === 1 ? '' : 's') + ' only';
+          document.getElementById('festival-book-subtitle').innerHTML =
+            'Only <span id="festival-remaining">' + departure.remaining + '</span> spots left for this departure &middot; ' +
+            '<span class="festival-book-was">€' + departure.price_per_person + '</span>' +
+            '€' + departure.founding_discount_price + ' per person for the first ' + departure.founding_discount_remaining +
+            ' guest' + (departure.founding_discount_remaining === 1 ? '' : 's') + ', then €' + departure.price_per_person +
+            '. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.';
         }
       })
       .catch(function() { /* leave defaults if the API is unreachable */ });

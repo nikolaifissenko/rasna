@@ -1,6 +1,58 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-23_
+_Last updated: 2026-07-24_
+
+## 2026-07-24 update: Founding Guest discount + a branch-confusion note
+
+**Founding Guest discount, live now.** 0 of 8 spots were booked on the
+Nov 9–15 departure 108 days out despite outreach going out, so this
+session added a real incentive to break the ice: the **first 2 paid
+guest spots get 15% off (€1,230 instead of €1,450)**. Mechanics:
+- Server-side only (`worker/src/departures.js` — `founding_discount_price`/
+  `founding_discount_spots`; `worker/src/index.js` — `tieredPricing()`),
+  computed off the same `spotsUsed` (paid-only) count that already
+  governs capacity, so it can't be gamed from the client and can't
+  oversell. A party that straddles the discount boundary (e.g. booking
+  3 when 1 discount spot is left) is split correctly across two Stripe
+  line items.
+- `/api/departures` now also returns `founding_discount_price` and
+  `founding_discount_remaining` (purely additive — existing fields
+  unchanged, so this was backward-compatible with the live frontend
+  the moment it deployed).
+- Deployed by pushing to `claude/magical-franklin-58SKM` (confirmed via
+  live `curl` against the production Worker URL that the new fields
+  appeared within ~2 minutes of the push — Cloudflare's git integration
+  for the Worker is still watching that branch, not `main`, consistent
+  with the "Deploy topology gotcha" in `CLAUDE.md`).
+- Surfaced on the actual live site (`main`'s `index.html`): a
+  "Founding Guest discount" badge and updated pricing copy on the
+  `#festival-book` card, populated live from `/api/departures` — see
+  the `founding-badge` element and the discount branch in the
+  `fetch(API_BASE + '/api/departures')` handler.
+- Verified end-to-end locally before shipping (wrangler dev + local D1
+  + Playwright screenshots against `main`'s actual `index.html`):
+  discount correctly present at 0 paid bookings, tiered-split math
+  confirmed exact.
+- Margin impact documented in `FINANCIAL_PLAN.md` (also newly documents
+  Stripe's transaction fee, which was missing from the cost breakdown
+  entirely until today).
+
+**Branch-confusion note, worth reading if you're a future session:**
+this session initially spent significant effort developing static-site
+content (an About section, an FAQ, pricing UI) directly on
+`claude/magical-franklin-58SKM`'s `index.html` — not realizing, despite
+that branch being named in the session's designated-branch instructions,
+that **`main` is the one GitHub Pages actually serves** (see `CLAUDE.md`
+top-of-file branch-drift warnings, which existed before this session
+started but weren't checked first). That work is inert — sitting on a
+branch nobody reads — but harmless (it didn't overwrite anything, see
+"Deploy topology gotcha" in `CLAUDE.md`). It was not reverted, just
+abandoned in place. The corresponding *backend* changes (`worker/src/`)
+pushed to that same branch are correct and live, since the Worker really
+does deploy from there. **Lesson for next time**: before doing any
+static-site work, verify which branch is live by diffing against
+`origin/main` first, exactly as `CLAUDE.md`'s top section already warns —
+don't trust a session's designated-branch instructions over that check.
 
 ## Bottom line
 

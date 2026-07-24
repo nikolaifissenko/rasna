@@ -5,7 +5,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
 **Files:** `index.html` (main landing page) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
-**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it.
+**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off.
 
 ---
 
@@ -90,6 +90,22 @@ Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Term
 - Canonical tags, `og:url`, `og:image`, Twitter card tags on `index.html` and `about.html`
 - JSON-LD: `TravelAgency` + `Offer` (the Italian Olive Experience departure, price/dates) on `index.html`; `AboutPage`/`Person` on `about.html`
 - Title/meta description on both pages lead with "Italian Olive Experience" for search discoverability
+
+**SEO update (2026-07-24)**: Nikolai specifically asked to also be
+findable for the literal phrase "italy experiences" (in addition to the
+existing "Italian Olive Experience" targeting above, which stays as the
+primary head term — this is additive, not a replacement). Added:
+- Title/meta description/OG/Twitter tags now also contain "Authentic
+  Italy Experiences" / "custom small-group Italy experience" alongside
+  the existing "Italian Olive Experience" phrasing.
+- A new `FAQPage` JSON-LD block (6 Q&As) plus a matching **visible**
+  FAQ section (`#faq`, inside `#panel-trips` so it's part of the
+  default-visible tab, not hidden behind a tab click) — covers what the
+  Italian Olive Experience is, how it differs from a normal tour,
+  what's included, the Founding Guest discount, the custom-trip option,
+  and where Blera is. Nav has a new "FAQ" link (`showTab('trips','faq')`).
+- See `BOOKING_STATUS.md`'s 2026-07-24 entry for the Founding Guest
+  discount badge/copy added to `#festival-book` in the same session.
 
 **Next session's explicit goal: verify the site in Google Search Console.** Nikolai offered his Google account credentials directly — declined, both because credentials shouldn't be pasted into chat and because this sandbox's outbound proxy can't drive a real browser to a login flow anyway (confirmed: it resets Chromium's TLS handshake on sites like Stripe Checkout and presumably Google too — a proxy/Chromium post-quantum ClientHello incompatibility, not a site bug). Plan instead: Nikolai adds `https://rasnaexperience.com/` as a property at search.google.com/search-console himself, picks HTML-tag verification, and pastes the `<meta name="google-site-verification" ...>` line here — add it to `index.html`'s `<head>` and deploy, then he clicks Verify and submits the sitemap URL himself (both need his logged-in session). Google's old sitemap ping endpoint (`google.com/ping?sitemap=...`) is confirmed dead (410/deprecated since 2023), not a fallback.
 
