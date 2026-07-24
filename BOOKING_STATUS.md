@@ -68,9 +68,11 @@ _Last updated: 2026-07-24_
   (wrangler dev + local D1): 5 concurrent requests at 1 remaining spot
   → exactly 1 succeeded.
 - `/admin` correctly requires auth (401 without credentials).
-- Full browser-driven checkout (actually paying with a card) was
-  **not** completed — see blocker 0 below, this is now a live charge,
-  not a test one, so it needs a deliberate real card, not automation.
+- **Full end-to-end paid checkout on the live site — DONE (confirmed by
+  Nikolai, 2026-07-24).** rasnaexperience.com → Book Now → November tab
+  → real card → success — went well. This was the last real-money
+  verification step; the core booking/payment flow is now confirmed
+  working in production, not just via curl.
 - Two leftover throwaway pending bookings exist in the live D1 from
   direct API curl tests (one sandbox-era, one from the 2026-07-23
   live-mode check) — both `pending`, both auto-expire on their own
@@ -93,20 +95,7 @@ _Last updated: 2026-07-24_
    ID (find the latter in the Cloudflare dashboard → Workers & Pages →
    right sidebar) and run it directly. Never write the token itself
    into this repo.
-1. **Lock down room mix with Da Beccone** for the Nov 9–15, 2026
-   departure (doubles vs. singles for this group of 8) — see lodging
-   risk section below. More urgent now that Stripe is live: a real
-   guest could book and pay before lodging logistics are settled.
-2. **Run one real end-to-end test through the actual site**, now that
-   it's live-mode: rasnaexperience.com → Book Now → November tab → fill
-   form → pay with a **real card** (this is real money now, not a test
-   card) → confirm it lands on `success.html` → check `/admin` shows the
-   booking as `paid` and `/api/departures` shows `remaining` decremented.
-   Automated browser testing of this was attempted but is blocked by
-   this environment's outbound proxy resetting Chromium's TLS handshake
-   (a proxy/Chromium ML-KEM ClientHello incompatibility, unrelated to
-   the site) — this needs a manual run or a different environment.
-3. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
+1. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything). Attempted
    2026-07-24 — blocked by a 403 from this session's git remote
@@ -128,18 +117,18 @@ _Last updated: 2026-07-24_
   this: "experience" matches real travel-search intent, unlike the
   brand-only alternative considered (`rasnalife.com`).
 
-## ⚠️ Lodging risk for the Nov 9–15, 2026 departure (partially resolved)
+## ⚠️ Lodging risk for the Nov 9–15, 2026 departure (resolved)
 
 Antonella's B&B (La Ripa) — the original lead lodging option for this
-departure — is **unavailable that week**. **Da Beccone is now confirmed as
+departure — is **unavailable that week**. **Da Beccone is confirmed as
 the alternative** (rates collected, margin checked against real numbers —
-see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1). What's still open:
-the **room mix** (doubles vs. singles) for this specific group of 8 —
-needs to be locked down with Da Beccone before Nov 9, 2026, since
-single-occupancy guests change the per-guest margin. **Now more urgent**:
-Stripe is already live (see "What's live" above), so a real guest could
-book and pay for this departure before lodging logistics are settled —
-see item 1 in "Not yet done" above.
+see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1). **Update
+2026-07-24**: Nikolai called Da Beccone directly re-confirmed pricing —
+room availability for the group of 8 "shouldn't be a problem." Exact
+doubles/singles breakdown wasn't nailed down to specific numbers on the
+call, but availability is no longer a live-booking risk. Worth a final
+written confirmation (exact room count/type) closer to the date, but
+this no longer blocks anything.
 
 ## Marketing — filling the November departure (8 spots, €1,450/pp)
 
@@ -167,12 +156,11 @@ was recommended, in priority order:
    channel, small **paid** Meta ads (interest-targeted, capped spend)
    are more realistic than organic growth within a ~16-week window.
 
-**Done (2026-07-24)**: outreach copy is drafted and ready to send —
-warm-outreach DM/email template, forum post draft, Instagram bio +
-starter captions, and a room-mix message for Da Beccone (item 1 above) —
-see `OUTREACH_DRAFTS.md`. Nikolai still needs to actually send these
-(no email/phone/social tool access here); once sent, report back what
-gets responses so the copy can be tightened.
+**Done (2026-07-24)**: outreach copy is drafted (see `OUTREACH_DRAFTS.md`)
+and the Da Beccone room-mix call has been made — see lodging risk
+section above. Warm-outreach DM/email, forum post, and Instagram copy
+are still unsent; report back what gets responses so the copy can be
+tightened.
 
 ## Reference
 
