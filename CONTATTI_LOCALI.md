@@ -22,6 +22,7 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
 | B&B La Ripa (Antonella) | Alloggio partner | ✅ CONFERMATO tariffa — ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi sezione Alloggio sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
+| Casamatta | Possibile alloggio — 3 appartamenti | layout raccolti, preventivo ancora da avere per l'appartamento civico 40 — vedi sezione Alloggio sotto |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -139,3 +140,18 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 - **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.450/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Dato che Da Beccone è ora confermato (vedi sopra), è la scelta più immediata come alloggio alternativo per la partenza del 9–15 novembre — verificare capienza per 8 persone.
 - **Da verificare con Antonella:** se altre settimane sono libere (per usarla su future partenze non-novembre), e quante camere ha disponibili in totale — serve capienza per gruppi di 6-10 persone.
+
+### CASAMATTA
+- **Ruolo:** Possibile alloggio partner — 3 appartamenti indipendenti
+- **Stato:** DA VALIDARE — layout raccolti, preventivo mancante per l'appartamento civico 40
+- **Layout:**
+
+| Appartamento | Livelli | Letti | Capienza indicativa | Cucina/bagno |
+|---|---|---|---|---|
+| Piccolo | 2 (sotto/sopra) | Sotto: divano letto matrimoniale. Sopra: 2 singoli unibili a matrimoniale | ~4 persone | Cucina al pianterreno; bagno sotto |
+| Grande | 3 | 1°: divano letto matrimoniale. 2°: 2 singoli unibili. 3°: 2 singoli unibili | ~6 persone | Cucina + bagno al 3° livello |
+| Civico 40 | 2 stanze + soppalco | Stanza 1: 2 singoli unibili. Stanza 2: divano letto alla francese + bagnetto. Soppalco: 2 singoli unibili | ~6 persone | Bagno e cucina presenti (posizione non specificata) |
+
+- **Capienza totale stimata (tutti e 3 gli appartamenti):** ~16 persone
+- **Nota:** l'appartamento civico 40 è indicato come il preferito — prezzo vantaggioso offerto, ma preventivo formale non ancora ricevuto.
+- **Da verificare:** preventivo/tariffa per tutti e 3 gli appartamenti (solo civico 40 ha un'indicazione di prezzo vantaggioso, non ancora formalizzata), posizione esatta di bagno/cucina in Civico 40, e se gli appartamenti sono affittabili singolarmente o solo in blocco.
