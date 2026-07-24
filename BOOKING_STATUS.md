@@ -49,12 +49,11 @@ _Last updated: 2026-07-24_
   morning FCO group van + a backup solo run) can be planned from real
   data. Code (`worker/src/index.js`, `worker/src/db.js`,
   `success.html`, migration `worker/migrations/0002_flight_details.sql`)
-  is pushed and live-deployed on `claude/magical-franklin-58SKM`, but
-  **the D1 schema migration has NOT been applied to the remote/production
-  database yet** — see blocker below. Until it is, the form appears
-  and looks like it works, but saving silently fails (shows a friendly
-  "something went wrong" to the guest); it does not affect the core
-  booking/payment flow, which doesn't touch these columns.
+  is pushed and live-deployed on `claude/magical-franklin-58SKM`.
+  **The D1 schema migration has been applied to production
+  (confirmed 2026-07-24)** — verified via `PRAGMA table_info(bookings)`
+  against the remote DB, all 4 columns present. The flight-details form
+  should now save correctly instead of silently failing.
 
 ## Verified so far
 
@@ -81,21 +80,16 @@ _Last updated: 2026-07-24_
 
 ## Not yet done — pick up here next
 
-0. **BLOCKER — apply the pending D1 migration to production.**
-   `worker/migrations/0002_flight_details.sql` (adds 4 nullable columns
-   to `bookings`: `arrival_airport`, `arrival_flight_number`,
-   `arrival_datetime`, `transfer_notes`) is written and applied locally,
-   but not yet run against the remote database. Needs
-   `wrangler d1 migrations apply rasna-bookings --remote` from `worker/`,
-   which needs `CLOUDFLARE_API_TOKEN` (D1 Edit permission) **and**
-   `CLOUDFLARE_ACCOUNT_ID` set in the environment — a narrowly-scoped
-   D1-only token can't auto-resolve the account via the Cloudflare API,
-   so the account ID has to be supplied explicitly. Per `CLAUDE.md`:
-   don't ask Nikolai to run this himself — ask for the token + account
-   ID (find the latter in the Cloudflare dashboard → Workers & Pages →
-   right sidebar) and run it directly. Never write the token itself
-   into this repo.
-1. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
+All previous blockers are cleared: D1 migration applied to production
+(2026-07-24, token/account ID provided by Nikolai and used directly,
+not persisted anywhere in the repo), lodging risk resolved (Da Beccone
+confirmed room availability for the group of 8), and a real end-to-end
+paid checkout on the live site succeeded. Remaining items are lower
+priority / optional:
+
+1. Send the drafted outreach copy (`OUTREACH_DRAFTS.md`) — warm DM/email,
+   forum post, Instagram bio/captions — still unsent as of last update.
+2. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything). Attempted
    2026-07-24 — blocked by a 403 from this session's git remote
