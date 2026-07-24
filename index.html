@@ -407,7 +407,12 @@
     .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
     .pricing .section-label { color: var(--gold); opacity: 0.5; }
     .pricing h2 { color: var(--tufo); }
-    .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
+    .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); position: relative; }
+    .founding-badge {
+      display: inline-block; margin-bottom: 1.2rem;
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--deep); background: var(--gold); padding: 0.4rem 0.9rem; border-radius: 999px;
+    }
     .pricing-amount { font-size: 3.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.2rem; }
     .pricing-amount span { font-size: 1.2rem; opacity: 0.5; }
     .pricing-per { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.4; margin-bottom: 1.6rem; }
@@ -416,6 +421,7 @@
     .pricing-includes li:last-child { border-bottom: none; }
     .pricing-includes li::before { content: ''; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; background: var(--terracotta); border-radius: 50%; transform: translateY(-50%); }
     .pricing-note { margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.3; font-style: italic; }
+    .pricing-was { font-size: 1.3rem; opacity: 0.4; text-decoration: line-through; margin-right: 0.6rem; }
 
     /* ── Philosophy ── */
     .philosophy { background: var(--cream); }
@@ -898,8 +904,9 @@
       <div class="section-label fade-in">Investment</div>
       <h2 class="fade-in">One price. Everything in.</h2>
       <div class="pricing-card fade-in">
-        <div class="pricing-amount"><span>&euro;</span>1,450</div>
-        <div class="pricing-per">per person &middot; starting at 4 days, all-inclusive</div>
+        <div class="founding-badge" id="founding-badge" style="display:none"></div>
+        <div class="pricing-amount" id="pricing-amount"><span>&euro;</span>1,450</div>
+        <div class="pricing-per" id="pricing-per">per person &middot; starting at 4 days, all-inclusive</div>
         <ul class="pricing-includes">
           <li>Accommodation for your full stay</li>
           <li>All meals (breakfast, lunch, dinner)</li>
@@ -1127,10 +1134,31 @@
       const badgeClass = soldOut ? 'soldout' : (d.remaining <= 2 ? 'low' : 'available');
       const badgeText = soldOut ? 'Fully booked' : (d.remaining + ' spot' + (d.remaining === 1 ? '' : 's') + ' left of ' + d.capacity);
 
+      const hasDiscount = d.founding_discount_price && d.founding_discount_remaining > 0;
+      const priceMeta = hasDiscount
+        ? '<span class="pricing-was" style="font-size:inherit;margin-right:0.4em">&euro;' + d.price_per_person + '</span>&euro;' + d.founding_discount_price + ' for the first ' + d.founding_discount_remaining + ' guest' + (d.founding_discount_remaining === 1 ? '' : 's') + ' &middot; then &euro;' + d.price_per_person
+        : '&euro;' + d.price_per_person + ' per person';
+
       card.innerHTML =
         '<div class="departure-title">' + d.label + '</div>' +
-        '<div class="departure-meta">&euro;' + d.price_per_person + ' per person &middot; full amount due at booking</div>' +
-        '<span class="spots-badge ' + badgeClass + '">' + badgeText + '</span>';
+        '<div class="departure-meta">' + priceMeta + ' &middot; full amount due at booking</div>' +
+        '<span class="spots-badge ' + badgeClass + '">' + badgeText + '</span>' +
+        (hasDiscount ? '<div style="margin-top:0.7rem"><span class="spots-badge available">Founding Guest Discount</span></div>' : '');
+
+      // Pricing card + FAQ/hero price references
+      const badge = document.getElementById('founding-badge');
+      const amountEl = document.getElementById('pricing-amount');
+      const perEl = document.getElementById('pricing-per');
+      if (hasDiscount) {
+        badge.style.display = 'inline-block';
+        badge.textContent = 'Founding Guest — first ' + d.founding_discount_remaining + ' spot' + (d.founding_discount_remaining === 1 ? '' : 's') + ' only';
+        amountEl.innerHTML = '<span class="pricing-was">&euro;' + d.price_per_person + '</span><span>&euro;</span>' + d.founding_discount_price;
+        perEl.textContent = 'per person for the first ' + d.founding_discount_remaining + ' guest' + (d.founding_discount_remaining === 1 ? '' : 's') + ' — then €' + d.price_per_person;
+      } else {
+        badge.style.display = 'none';
+        amountEl.innerHTML = '<span>&euro;</span>' + d.price_per_person;
+        perEl.textContent = 'per person · starting at 4 days, all-inclusive';
+      }
 
       guestSelect.innerHTML = '<option value="">Select...</option>';
       const max = Math.min(d.remaining, 8);
@@ -1162,7 +1190,29 @@
       el.innerHTML = n + ' guest' + (n > 1 ? 's' : '') + ' &times; &euro;' + PRICE_PER_PERSON + ' = <strong>&euro;' + (n * PRICE_PER_PERSON).toLocaleString() + '</strong>';
     }
 
-    document.getElementById('fixed-guests').addEventListener('change', (e) => updatePricePreview('fixed-price-preview', e.target.value));
+    // Mirrors the backend's tiered founding-guest pricing (worker/src/index.js
+    // tieredPricing) so the preview matches what checkout will actually charge.
+    function updateFixedPricePreview(guests) {
+      const el = document.getElementById('fixed-price-preview');
+      const n = Number(guests);
+      if (!n || !currentDeparture) { el.textContent = ''; return; }
+      const d = currentDeparture;
+      const discountRemaining = d.founding_discount_price ? (d.founding_discount_remaining || 0) : 0;
+      const discountedCount = Math.min(n, discountRemaining);
+      const fullCount = n - discountedCount;
+      const total = discountedCount * d.founding_discount_price + fullCount * d.price_per_person;
+      let breakdown = '';
+      if (discountedCount > 0 && fullCount > 0) {
+        breakdown = discountedCount + ' &times; &euro;' + d.founding_discount_price + ' + ' + fullCount + ' &times; &euro;' + d.price_per_person;
+      } else if (discountedCount > 0) {
+        breakdown = discountedCount + ' guest' + (discountedCount > 1 ? 's' : '') + ' &times; &euro;' + d.founding_discount_price + ' (Founding Guest)';
+      } else {
+        breakdown = fullCount + ' guest' + (fullCount > 1 ? 's' : '') + ' &times; &euro;' + d.price_per_person;
+      }
+      el.innerHTML = breakdown + ' = <strong>&euro;' + total.toLocaleString() + '</strong>';
+    }
+
+    document.getElementById('fixed-guests').addEventListener('change', (e) => updateFixedPricePreview(e.target.value));
     document.getElementById('custom-guests').addEventListener('change', (e) => updatePricePreview('custom-price-preview', e.target.value));
 
     function showError(elId, message) {

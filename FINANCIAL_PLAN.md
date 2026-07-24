@@ -38,9 +38,32 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 | Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
 | **Guest activity insurance** (hands-on/manual activities — confirmed as a real, necessary cost per Maria Grazia's feedback) | €40 |
 | Marketing & booking overhead (allocated) | €60 |
-| **Total cost per guest** | **~€720** |
+| **Total cost per guest (before payment processing)** | **~€720** |
 
-**Gross margin per guest: ~€680 (≈49%)**
+**Gross margin per guest: ~€680 (≈49%)** — note this figure does **not**
+net out Stripe's transaction fee (see below); the effective margin after
+that is closer to 44%, still healthy.
+
+**Stripe fee — not previously in this breakdown, added 2026-07-24.**
+Stripe's fee depends on where the card was issued relative to the
+merchant account (Italy/EU): EU cards run ~1.5% + €0.25, UK ~2.5% + €0.25,
+and non-European cards ~3.25% + €0.25 — and since the target guest base
+is US/UK/Australia/Canada (`BUSINESS_PLAN.md` §3), most bookings will
+land at or near that higher international rate. At full price (€1,450):
+**≈€47/guest** (3.25% + €0.25). At the Founding Guest discount price
+(€1,230, see below): **≈€40/guest**. Net profit after this fee: **~€633/
+guest at full price (≈44% margin), ~€470/guest at the discount price
+(≈38% margin)** — both still comfortably profitable, but the fee is real
+money that should be in any margin conversation, not an oversight to
+carry forward silently.
+
+**Founding Guest discount (added 2026-07-24):** the first 2 paid guest
+spots on the Nov 9–15, 2026 departure are priced at €1,230 (15% off)
+instead of €1,450, to unstick a departure that had 0 of 8 spots booked
+108 days out despite outreach going out — see `BOOKING_STATUS.md` for
+the mechanics. Margin impact at that price is above (~38% vs ~44%
+after Stripe fees) — a deliberate trade of some margin on the first 2
+guests for the momentum of breaking zero.
 
 **Lodging cost check against confirmed rates (`CONTATTI_LOCALI.md`):** both partners' rates
 are now confirmed as **per room/night**, with the per-person equivalent worked out

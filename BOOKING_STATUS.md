@@ -34,6 +34,25 @@ _Last updated: 2026-07-24_
   so paid bookings do flip from `pending` to `paid`.
 - **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
   (`worker/src/departures.js`).
+- **Founding Guest discount (added 2026-07-24)**: since 0 of 8 spots were
+  booked at 108 days out despite outreach going out, the first 2 paid
+  guest spots on this departure get €1,230/person (15% off) instead of
+  €1,450 — priced to break the "nobody's booked yet" freeze and give
+  Nikolai's outreach a concrete, real incentive to point people at. Price
+  transitions automatically and atomically per-guest as spots fill (e.g.
+  a party of 3 booking when 1 discount spot is left gets 1 guest at
+  €1,230 and 2 at €1,450 — see `tieredPricing()` in `worker/src/index.js`),
+  computed server-side off the same `spotsUsed` (paid-only) count that
+  already governs capacity, so it can't be gamed from the client and
+  can't oversell. Shown live on-site: the pricing card, the departure
+  card, and the fixed-booking price preview all pull current discount
+  status from `/api/departures` (`founding_discount_price`,
+  `founding_discount_remaining`). Verified locally end-to-end (wrangler
+  dev + local D1 + Playwright screenshots) before shipping — discount
+  correctly present at 0 paid bookings, correctly drops to 0 once 2
+  guests are marked paid, tiered split-pricing math confirmed exact
+  (2×€1,230 + 1×€1,450 = €3,910 for a party of 3 with 1 discount spot
+  left).
 - **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
   (Basic Auth: `admin` / the password set in Cloudflare). CSV export at
   `/admin/bookings.csv`.

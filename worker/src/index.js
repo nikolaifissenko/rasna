@@ -38,6 +38,7 @@ app.get('/api/departures', async (c) => {
   const departures = await Promise.all(
     listDepartures().map(async (d) => {
       const used = await spotsUsed(c.env.DB, d.id);
+      const discountSpots = d.founding_discount_spots || 0;
       return {
         id: d.id,
         label: d.label,
@@ -47,11 +48,30 @@ app.get('/api/departures', async (c) => {
         remaining: Math.max(0, d.capacity - used),
         price_per_person: d.price_per_person,
         currency: d.currency || 'eur',
+        founding_discount_price: d.founding_discount_price || null,
+        founding_discount_remaining: Math.max(0, discountSpots - used),
       };
     })
   );
   return c.json({ departures });
 });
+
+// Splits `numGuests` new spots, starting right after `alreadyUsed` paid
+// spots, into (possibly) some at the founding-guest discount price and
+// the rest at full price — e.g. if 1 discount spot is left and someone
+// books 3 guests, 1 gets the discount and 2 pay full.
+function tieredPricing(departure, alreadyUsed, numGuests) {
+  const discountSpots = departure.founding_discount_spots || 0;
+  const discountPrice = departure.founding_discount_price || departure.price_per_person;
+  const discountedCount = Math.max(0, Math.min(numGuests, discountSpots - alreadyUsed));
+  const fullCount = numGuests - discountedCount;
+  return {
+    discountedCount,
+    fullCount,
+    amountTotalCents:
+      Math.round(discountPrice * 100) * discountedCount + Math.round(departure.price_per_person * 100) * fullCount,
+  };
+}
 
 function isValidEmail(email) {
   return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -68,23 +88,21 @@ function validateCommon(body) {
   return { errors, numGuests };
 }
 
-async function createCheckoutSession(env, { label, numGuests, pricePerPerson, currency, email, bookingId }) {
+async function createCheckoutSession(env, { label, currency, email, bookingId, lineItems }) {
   const stripe = stripeClient(env);
   const siteUrl = env.SITE_URL.replace(/\/$/, '');
   return stripe.checkout.sessions.create({
     mode: 'payment',
     payment_method_types: ['card'],
     customer_email: email,
-    line_items: [
-      {
-        price_data: {
-          currency,
-          unit_amount: Math.round(pricePerPerson * 100),
-          product_data: { name: `Rasna — ${label} (${numGuests} guest${numGuests > 1 ? 's' : ''})` },
-        },
-        quantity: numGuests,
+    line_items: lineItems.map((li) => ({
+      price_data: {
+        currency,
+        unit_amount: li.unitAmountCents,
+        product_data: { name: `Rasna — ${label}${li.suffix ? ` (${li.suffix})` : ''}` },
       },
-    ],
+      quantity: li.quantity,
+    })),
     expires_at: Math.floor(Date.now() / 1000) + CHECKOUT_EXPIRY_MINUTES * 60,
     success_url: `${siteUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/cancel.html`,
@@ -102,7 +120,15 @@ app.post('/api/bookings/fixed', async (c) => {
   const departure = getDeparture(body.departure_id);
   if (!departure) return c.json({ error: 'Unknown departure_id' }, 404);
 
-  const amountTotalCents = Math.round(departure.price_per_person * 100) * numGuests;
+  // Pricing is derived from spots already *paid* — same source of truth
+  // capacity uses — right before the atomic insert below. In the rare
+  // case of a concurrent booking landing in between, the insert's own
+  // capacity check still protects against overselling; at worst here a
+  // guest could win or miss the founding-guest discount by one spot,
+  // which isn't a correctness issue, just a small promo-pricing race.
+  const usedBeforeInsert = await spotsUsed(c.env.DB, departure.id);
+  const { discountedCount, fullCount, amountTotalCents } = tieredPricing(departure, usedBeforeInsert, numGuests);
+
   const bookingId = await createFixedBooking(c.env.DB, departure, {
     name: body.name.trim(),
     email: body.email.trim(),
@@ -125,14 +151,29 @@ app.post('/api/bookings/fixed', async (c) => {
     );
   }
 
+  const lineItems = [];
+  if (discountedCount > 0) {
+    lineItems.push({
+      unitAmountCents: Math.round(departure.founding_discount_price * 100),
+      quantity: discountedCount,
+      suffix: `Founding Guest, ${discountedCount} guest${discountedCount > 1 ? 's' : ''}`,
+    });
+  }
+  if (fullCount > 0) {
+    lineItems.push({
+      unitAmountCents: Math.round(departure.price_per_person * 100),
+      quantity: fullCount,
+      suffix: `${fullCount} guest${fullCount > 1 ? 's' : ''}`,
+    });
+  }
+
   try {
     const session = await createCheckoutSession(c.env, {
       label: departure.label,
-      numGuests,
-      pricePerPerson: departure.price_per_person,
       currency: departure.currency || 'eur',
       email: body.email.trim(),
       bookingId,
+      lineItems,
     });
     await attachStripeSession(c.env.DB, bookingId, session.id);
     return c.json({ url: session.url });
@@ -165,11 +206,16 @@ app.post('/api/bookings/custom', async (c) => {
   try {
     const session = await createCheckoutSession(c.env, {
       label: 'Custom Expedition',
-      numGuests,
-      pricePerPerson,
       currency: 'eur',
       email: body.email.trim(),
       bookingId,
+      lineItems: [
+        {
+          unitAmountCents: Math.round(pricePerPerson * 100),
+          quantity: numGuests,
+          suffix: `${numGuests} guest${numGuests > 1 ? 's' : ''}`,
+        },
+      ],
     });
     await attachStripeSession(c.env.DB, bookingId, session.id);
     return c.json({ url: session.url });
