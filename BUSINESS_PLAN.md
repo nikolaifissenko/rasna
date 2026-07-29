@@ -192,3 +192,37 @@ mix di camere con Da Beccone prima di passare Stripe a live mode (vedi
    margin. **Ready-to-send message drafted** — see `OUTREACH_DRAFTS.md` §1.
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
+
+## 8. Marketing philosophy: lead with Why
+
+People don't buy *what* you do, they buy *why* you do it. This is
+Simon Sinek's Golden Circle — the framework behind how Apple markets:
+they don't open with "we make great computers" (the *what*). They
+open with the belief — "we believe in challenging the status quo, in
+thinking differently" (the *why*) — then the method — "we make our
+products beautifully designed and easy to use" (the *how*) — and only
+then land on the product: "we just happen to make great computers."
+All marketing copy for Rasna — the site, outreach emails, the pitch
+deck, social — should follow that order: why, then how, then what.
+Never lead with the itinerary.
+
+**Rasna's Why:** We believe travel has become a performance —
+sightseeing at a distance, watching a version of local life staged
+for tourists. We believe people are hungry for the opposite: to
+actually belong somewhere for a few days, doing the same work the
+town is already doing, with the people who still do it.
+
+**Rasna's How:** By keeping every group small (6–10 guests) and
+building the trip around real relationships with real people — Maria
+Grazia, Davide, Emiliano, Renzo — not actors or staged
+demonstrations. Guests harvest, cook, and cure alongside the people
+whose actual work this is, on the same seasonal calendar the town
+already lives by.
+
+**Rasna's What:** We just happen to run small-group, all-inclusive
+trips in Blera and the Tuscia — olive harvest, sauce day,
+cheesemaking, Etruscan tombs, and meals with local families.
+
+When writing any new marketing material, check it against this order.
+If a headline or opening line describes an activity before it
+establishes the belief behind it, rewrite it.
