@@ -109,6 +109,28 @@ primary head term — this is additive, not a replacement). Added:
 
 **Next session's explicit goal: verify the site in Google Search Console.** Nikolai offered his Google account credentials directly — declined, both because credentials shouldn't be pasted into chat and because this sandbox's outbound proxy can't drive a real browser to a login flow anyway (confirmed: it resets Chromium's TLS handshake on sites like Stripe Checkout and presumably Google too — a proxy/Chromium post-quantum ClientHello incompatibility, not a site bug). Plan instead: Nikolai adds `https://rasnaexperience.com/` as a property at search.google.com/search-console himself, picks HTML-tag verification, and pastes the `<meta name="google-site-verification" ...>` line here — add it to `index.html`'s `<head>` and deploy, then he clicks Verify and submits the sitemap URL himself (both need his logged-in session). Google's old sitemap ping endpoint (`google.com/ping?sitemap=...`) is confirmed dead (410/deprecated since 2023), not a fallback.
 
+**SEO/marketing session, 2026-08-03 (second session that day).** The
+branch-drift trap this file has warned about since 2026-07-20 happened
+*again*: this session's designated branch was `claude/magical-franklin-58SKM`
+(dead for frontend purposes, per the "Deploy topology gotcha" below), and
+real work (og:image, LocalBusiness schema, three content pages) got built
+and pushed there first, live-checked via `curl`, and found not to be live.
+Caught it by running `git log main` and diffing — exactly the check this
+file already told every session to do first. Rebuilt everything against
+`main` with correct current facts (8-guest cap, not the dead branch's
+stale 6–10 figure) and pushed there; confirmed live via the actual GitHub
+Pages Actions run, not just a curl guess. See `SEO_BRIEF.md` for the full
+current SEO state — it's kept current, check it before redoing SEO work.
+Shipped this session: `tuscia-travel-guide.html`, `etruscan-tombs-guide.html`,
+`small-group-italy-tours.html` (real photos, cross-linked, in `sitemap.xml`),
+`GeoCoordinates` added to the `TravelAgency` schema, `GOOGLE_BUSINESS_PROFILE.md`
+and `INSTAGRAM_STRATEGY.md` added as ready-to-use marketing guides. Nikolai's
+Google Business Profile submission was accepted the same session (confirmed
+by him directly, not independently verified) — photos were sent to him in
+chat for potential use there, with the licensing caveat repeated. He said
+he'd open an Instagram Business account "tomorrow" — check next session
+whether that happened before assuming the Instagram plan is still just a doc.
+
 ---
 
 ## Git / deploy
