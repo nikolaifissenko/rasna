@@ -1,6 +1,37 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-08-03_
+
+## 2026-08-03 update: warm-outreach drafts + SEO handoff
+
+Still 0/8 paid on the Nov 9–15 departure as of the last check. This
+session's work was outreach-side, not code:
+
+- **American-friends-in-Blera channel**: Nikolai confirmed he's already
+  personally talked to them about the project — that channel (see the
+  Marketing section below) can be considered contacted, not just planned.
+- **3 named warm-outreach messages drafted** (casual/personal tone, framed
+  as "sharing something I'm building, curious what you think," explicitly
+  not a hard sell, per Nikolai's direction) — **drafted only, not yet
+  confirmed sent**:
+  - A returning tour client who texted to book another golf-cart tour in
+    Sept for a friend — reply handles the Sept booking and adds the Rasna
+    link/pitch.
+  - Samantha + her husband (past golf-cart tour clients).
+  - Rachel, a fellow guide Nikolai's worked with — pitched as wanting her
+    professional opinion specifically, not just a personal share.
+  - None of these are logged as "sent" — confirm with Nikolai before
+    treating them as done in future updates.
+- **`SEO_BRIEF.md` added to `main`** — audit of current SEO state (what's
+  done: real photography, OG/Twitter tags, JSON-LD, robots.txt/sitemap)
+  and what's still open (Google Search Console verification blocked on
+  Nikolai, an unresolved image-licensing question, a PageSpeed check) for
+  whichever session picks up SEO work next. Note: an earlier version of
+  this same file was mistakenly written against and pushed to the stale
+  `claude/magical-franklin-58SKM` branch before catching the branch-drift
+  mistake (see this file's 2026-07-24 entry below for the same trap
+  happening previously) — that copy has been removed; `main`'s version
+  is the correct one.
 
 ## 2026-07-24 update: Founding Guest discount + a branch-confusion note
 
