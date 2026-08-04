@@ -4,7 +4,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
-**Files:** `index.html` (main landing page) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
+**Files:** `index.html` (main landing page) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-04, `italian-olive-experience-itinerary.html` (the full Nov 9–15 day-by-day, split out of `index.html` — see "Planned Events tab" below). `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
 **Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off.
 
 ---
@@ -55,6 +55,8 @@ On 2026-07-12, `moment-2.jpg`, `moment-3.jpg`, and the new `card-etruscantombs.j
 
 Known dead ends: Facebook and Instagram photo links reliably fail to resolve (auth-walled) — don't spend time retrying those, ask for a different source.
 
+**Image weight cut ~40% (2026-08-04):** several photos were saved as PNG instead of JPEG for no reason (`moment-11.png` alone was 1.7MB) and several JPGs were oversized for their actual display dimensions (`card-foraging.jpg` was 551KB at 768×432). Converted the PNGs to quality-82 JPEG and re-encoded the worst offenders (same filenames, same content, just smaller), bringing `images/` from 16.1MB to 9.7MB total, verified visually side-by-side before shipping (no quality regression). Also added `loading="lazy"` to the itinerary day-photo `<img>` tags. If adding new photos, save as JPEG (not PNG) unless real transparency is needed, and don't upload originals straight out of a phone/camera without checking file size first.
+
 ---
 
 ## Planned Events tab (added 2026-07-15)
@@ -67,7 +69,9 @@ The page now has two tabs, toggled by `showTab('build'|'trips', scrollToId)` in 
 
 **Nov 9–15 itinerary text (as of 2026-07-19):** Tue evening dinner moved to Tarquinia (was "back in Blera"); Wed evening is "Home-cooked local dinner" (was "residence chef"); Sat goodbye dinner venue changed from Trattoria La Torretta to an unnamed "local cantina" — **still needs a real venue name and quote**, flagged as TODO in `ITINERARY_NOV2026.md`. Panonto is described everywhere on the site (card copy + itinerary) as "a typical Bleran BBQ: bread roasted over embers" — keep that phrasing if editing panonto copy elsewhere. The Tomb Raiding scavenger hunt (both the activity card and Tue's itinerary text) now specifies it starts in the medieval village and leads down into the tombs, host-guided. Thu Nov 12 afternoon slot (both desktop grid and mobile list) now specifies lunch at **Terrarte** (Sandro Scarmiglia's outdoor sculpture park, olive grove) before the pasta-making class — added 2026-07-23, also reflected in `ITINERARY_NOV2026.md`.
 
-**Nov 9–15 page photos (added 2026-07-19, all reused from existing site images, no new licensing exposure):** a full-bleed hero band at the top of `#festival-week` (`.featured-trip-hero`, `chapter-break.jpg`); every day in the mobile itinerary list (`.cm-day-photo`) has a photo now — Mon `hero.jpg`, Tue `card-tombaroli.jpg`, Wed `moment-9.jpg`, Thu `card-pasta.jpg`, Fri `card-sangiovenale.jpg`, Sat `card-cantinefestival.jpg`, Sun `moment-1.jpg`; the desktop calendar-grid view intentionally has no photos (too dense/compact). Below the itinerary and above the booking form sits `.festival-gallery`, an 8-photo strip (2 rows × 4 on desktop, 4 × 2 on mobile) of week-specific highlights: necropolis path, olive grove harvest, Tarquinia fresco, Cantine Festival interior, olive-oil pressing, Blera's piazza church, Tuscia Terme, and hand-made pasta dough.
+**Nov 9–15 page photos (added 2026-07-19, all reused from existing site images, no new licensing exposure):** a full-bleed hero band at the top of `#festival-week` (`.featured-trip-hero`, `chapter-break.jpg`); every day in the mobile itinerary list (`.cm-day-photo`) has a photo now — Mon `hero.jpg`, Tue `card-tombaroli.jpg`, Wed `moment-9.jpg`, Thu `card-pasta.jpg`, Fri `card-sangiovenale.jpg`, Sat `card-cantinefestival.jpg`, Sun `moment-1.jpg`; the desktop calendar-grid view intentionally has no photos (too dense/compact).
+
+**Itinerary split onto its own page (2026-08-04):** feedback from a travel-guide friend of Nikolai's was that the landing page's `#festival-week` section was too dense — the full Mon–Sun `.calendar-grid`/`.calendar-mobile-list` plus the 8-photo `.festival-gallery` all sat on the main page before the booking form. Moved all of that to a new page, `italian-olive-experience-itinerary.html` (own `Article`+`BreadcrumbList` JSON-LD, in `sitemap.xml`, cross-linked from the three guide pages' "Read next" blocks). `index.html`'s `#festival-week` now keeps just the badge/title/subtitle/description, a 4-photo `.festival-gallery` highlight strip (necropolis path, harvest, Cantine Festival, Tuscia Terme), a "See the full day-by-day itinerary →" link to the new page, and then straight into `#festival-book`. The calendar-grid/mobile-list CSS classes (`.cg-*`, `.cm-*`) are global in `style.css`, not scoped to `#festival-week`, so they worked on the new page without any CSS changes — if adding a second planned event later, keep that in mind when deciding whether it needs its own itinerary page too.
 
 Nav links and the hero's secondary CTA call `showTab(...)` instead of plain anchor `href` jumps, since anchor-scrolling into a `display:none` panel doesn't work — always route through `showTab` when linking to anything inside either panel.
 
@@ -80,6 +84,10 @@ Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Term
 ## About page / founder bio (rewritten 2026-07-23)
 
 `about.html` has a long, deeply personal, third-person founder bio under `.about-text`, broken into `<h3>` subheads (styled via `.about-text h3` in `style.css` — small-caps terracotta labels, not full section headers; the page has no `<h2>` headline anymore, just a `.section-label` reading "Founder Bio"). It covers real family history at the user's explicit direction: his parents' origin stories (father Vladimir Fissenko's escape from the USSR in 1986, the Tierra del Fuego–to–Alaska horse ride, mother Sophie), his father's alcoholism and the 2023 death from cirrhosis, two half-siblings (Alionka, Luciana) he learned about at different points including after his father's death, his uncle Victor's 2016 death, and how Rasna itself started (a 2026 weekend with his sister Alina + a conversation with Maria Grazia). **This is sensitive, factual content about real people — don't rewrite, trim, or "clean up" any of it without asking first**, even if it reads unusually candid for a business site; that candor was deliberate and explicitly requested. Style notes if editing: no em dashes anywhere on this page (removed at the user's request 2026-07-23), third-person voice throughout, new facts get woven into the existing narrative rather than appended as disconnected sentences.
+
+**Founder note on the landing page (added 2026-08-04):** a friend of Nikolai's who guides professionally (Rachel) reviewed the site and suggested leading more with the founder before the activity picker, rather than leaving that entirely to `about.html`. Added a short first-person `.founder-note` section (`#founder-note` in `index.html`, right after the hero, before the tab switcher) — section label "Why book with me", `about-nikolai-portrait.jpg` alongside 3 short paragraphs. Went through two rounds of correction from Nikolai, both now reflected in the live copy:
+1. First draft mentioned Maria Grazia/Davide/Emiliano by name as "the people you'll spend the week with" — **wrong framing**, removed. Guests spend the week with Nikolai himself, not a roster of named locals (those names stay fine elsewhere, e.g. the activity cards).
+2. Corrected framing is: he guides full-time in Rome (a real, separate credential, stated up front) and Blera is different because he grew up there, literally in the ruins/tombs, in the village/community that raised him ("it takes a village"). Landing-page copy stays deliberately more restrained than `about.html`: no mention of the harder family material (father's death, alcoholism, half-siblings) belongs here, only the grounded, positive facts already public on the about page (family house restored by his father, tombs as childhood playground, lives in Rome now). Don't add heavier personal content to this block without asking — same boundary as `about.html` itself, just a shorter/lighter cut of it. `.founder-note`/`.founder-note-inner`/`.founder-note-photo`/`.founder-note-text`/`.founder-note-link` CSS lives right above the tab-switcher rules in `style.css`.
 
 ---
 
@@ -130,6 +138,30 @@ by him directly, not independently verified) — photos were sent to him in
 chat for potential use there, with the licensing caveat repeated. He said
 he'd open an Instagram Business account "tomorrow" — check next session
 whether that happened before assuming the Instagram plan is still just a doc.
+
+**Session, 2026-08-04.** Picked up on the same branch-drift trap again —
+this session's designated branch (`claude/rasna-tasks-286mcp`, off the
+dead `claude/magical-franklin-58SKM` lineage) had stale `CLAUDE.md`/
+`BOOKING_STATUS.md` claiming `main` didn't exist; caught it the same way
+this file recommends (diffed against `origin/main`) and worked against
+`main` for every actual site change. Confirmed this session, from Nikolai
+directly: **Google Search Console verification is done** (no verification
+meta tag was added by this session — he must have used a non-HTML-tag
+method, e.g. an existing Google service; nothing in `index.html`'s
+`<head>` changed for this). Google Business Profile photos: **uploaded**.
+Instagram Business account: **"on the way"**, not confirmed live yet —
+check again next session rather than assuming either way. Also shipped:
+the image-weight cut and itinerary-page split described above, the new
+founder note, internal cross-links to the new itinerary page, and a
+first-post recommendation for Instagram (a 3-photo carousel of the owned
+necropolis photos — `card-etruscantombs.jpg`, `moment-3.jpg`,
+`moment-2.jpg` — with a drafted caption, given in chat, not saved to a
+file) for whenever the account exists to post it. **PageSpeed Insights
+could not be run** — the sandbox's shared proxy quota for
+`pagespeedonline.googleapis.com` was exhausted both times this session
+tried it (`429`, "Queries per day" quota); did a manual image-weight
+audit instead (see "Photos" section). Worth a real PageSpeed run next
+session in case the quota has reset.
 
 ---
 
