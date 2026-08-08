@@ -25,68 +25,69 @@ a photographer — it's Nikolai's phone, in Blera, pointed at real things.
 
 ## 1. Profile picture — decided
 
-Generated via Canva to match the site's existing Etruscan/terracotta
-identity (same palette as `og-image.png`). Final pick and one backup are in
-`assets/instagram/`:
+Built to match the site's **exact** brand system, not an approximation of
+it: same CSS custom properties as `index.html` (`--deep: #160F09`,
+`--gold: #C4A265`, the radial hero gradient), same Google Fonts (Cormorant
+Garamond / Inter), and the actual palmette (anthemion) motif copied
+directly from the site's inline SVG `<defs>` — the same ornament used above
+the hero subtitle and on the pricing card. This isn't a new mark invented
+for Instagram; it's the site's own ornament, promoted to an icon.
 
-- **`profile-picture-amphora.png`** (primary) — a gold Etruscan amphora
-  inside a weathered Greek-key ring on dark terracotta. Reads clearly at
-  Instagram's tiny avatar size because the amphora is a solid filled shape,
-  not thin linework.
-- **`profile-picture-bold-backup.png`** — a flatter, higher-contrast
-  version of the same mark, if the textured one looks muddy once
-  compressed by Instagram.
-
-**Why an emblem, not a photo or the wordmark:** no founder headshot or
-usable photo exists yet to make a personal profile picture credible, and
-the full "RASNA" wordmark (as used in `og-image.png`) turns into an
-unreadable smear at 32–110px — text-heavy marks never survive Instagram's
-avatar crop. A simple, recognizable icon does. Revisit this once there's a
-strong candidate photo (e.g., a hero shot from the pilot) — but the amphora
-mark is a fine long-term choice too; plenty of travel/hospitality brands
-keep an emblem permanently rather than switching to a face.
+- **`assets/instagram/profile-picture.png`** — the palmette in a double
+  gold ring on the hero's dark radial-gradient background. The linework is
+  thickened relative to how it appears on the website (hairline strokes
+  that read fine at hero-image size on a 1920px screen disappear entirely
+  at a 32–110px Instagram avatar), everything else — color, gradient,
+  proportions — is pixel-exact to the site.
 
 **To set it:** open the Instagram app → Edit Profile → Change Profile
-Photo → upload `profile-picture-amphora.png` from your phone (AirDrop/email
-it to yourself, or I can hand it to you directly — see attached). Should
-take under a minute; this isn't something I can push remotely since it's an
-in-app action tied to your login.
+Photo → upload `profile-picture.png`. This is a 60-second in-app action
+tied to your login, not something I can push remotely.
 
 ## 2. Launch graphic posts — ready to post now
 
-Since there's no photography yet, I built 3 branded statement cards in the
-same visual system as `og-image.png` (dark terracotta, gold Etruscan
-meander border, serif type) — legitimate content for the first week, not a
-placeholder. All in `assets/instagram/`, 1080×1350 (optimal IG portrait
+Since there's no photography yet, I built 4 branded cards using the same
+exact system — not Canva's interpretation of the brand, but the literal
+CSS variables, fonts, and SVG ornaments (meander border, corner spirals,
+palmette) pulled straight from `index.html` and rendered at native
+resolution. All in `assets/instagram/`, 1080×1350 (optimal IG portrait
 ratio):
 
-1. **`launch-post-2-welcome-intro.png`** — the account's first-ever post.
-   Introduces the name and one-line positioning.
+1. **`launch-post-1-welcome.png`** — the account's first-ever post,
+   essentially `og-image.png` rebuilt at Instagram's aspect ratio with the
+   full corner-ornament + meander-border treatment from the site's hero.
    > Caption: "Rasna means 'the Etruscans,' in their own language. This is
    > what we're building: small-group trips into Blera and the Tuscia — a
    > place most travelers to Italy never see — built around real work with
    > real local families, not a bus tour. Following along as we build it in
    > public. 🏺"
 
-2. **`launch-post-1-quote-oliveoil.png`** — the "Why" statement, Rasna's
+2. **`launch-post-2-quote-oliveoil.png`** — the "Why" statement, Rasna's
    sharpest single line (pulled straight from `BUSINESS_PLAN.md` §8).
    > Caption: see the "olive harvest post" template already in
    > `INSTAGRAM_STRATEGY.md` — pairs directly with this card.
 
-3. **`launch-post-3-faq-carousel-cover-template.png`** — cover slide for an
-   FAQ carousel ("Authentic Travel / Experience Italy Uniquely / Swipe for
-   more"). **Needs one edit before posting**: the AI-generated text is
-   generic placeholder copy, not the real FAQ question. Open it in Canva
-   (link below) and swap the headline for the actual objection-handling
-   copy already drafted in `INSTAGRAM_STRATEGY.md` ("How is this different
-   from a normal Italy tour?") — that's a 30-second text edit in Canva's
-   editor, not a design change: `https://www.canva.com/d/bBcAqc6cc2NP5oA`
-   Then build slides 2–4 with the FAQ answer + pricing, same visual system.
+3. **`launch-post-3-faq-cover.png`** — FAQ carousel cover, real headline
+   this time ("How is this different from a normal Italy tour?") with the
+   actual objection-handling copy from `INSTAGRAM_STRATEGY.md`.
 
-Use these to open the account (post 2 → post 1 → carousel) over the first
-week while real photo/video content is being captured (§3–4 below). Don't
-lean on this format past week 2 — per the algorithm notes, graphic-only
-accounts plateau fast; these exist to bridge the gap, not to be the account.
+4. **`launch-post-4-faq-included.png`** — slide 2 of that carousel: what's
+   included, and the price. Post 3 and 4 back-to-back as a 2-slide
+   carousel (or add more slides using the same template — see below).
+
+**Reusable template:** `assets/instagram/graphic-template.html` — the
+source file all four were rendered from (headless Chromium screenshot at
+native resolution, 2x pixel density). It's just the site's real
+`:root` variables and SVG `<defs>` reused directly, so any future graphic
+built from it is automatically on-brand rather than re-approximated by an
+AI image generator each time. Ask me to make more (new FAQ slides,
+seasonal announcements, a Cantine Festival post) and I'll extend this
+template rather than starting over.
+
+Use these to open the account over the first week while real photo/video
+content is being captured (§3–4 below). Don't lean on this format past
+week 2 — per the algorithm notes, graphic-only accounts plateau fast;
+these exist to bridge the gap, not to be the account.
 
 ## 3. Shot list — what to actually go capture
 
@@ -272,8 +273,6 @@ on a real, capacity-limited offer is honest urgency here, not manufactured).
 
 I didn't create the Instagram account itself or change the profile picture
 in-app — that needs your login, and it's a 60-second action once you have
-the files. I also didn't hand-edit the FAQ carousel's placeholder text in
-Canva (§2, item 3) — that's a one-line copy swap you can do directly in the
-Canva editor faster than describing it further here. Everything else —
-strategy, shot list, scripts, calendar, launch graphics, profile picture —
-is done and in `assets/instagram/`.
+the files. Everything else — strategy, shot list, scripts, calendar,
+launch graphics (built pixel-exact to the site's real brand system), and
+profile picture — is done and in `assets/instagram/`.
