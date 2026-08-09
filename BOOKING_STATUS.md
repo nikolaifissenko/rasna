@@ -155,9 +155,14 @@ priority / optional:
   - Nav updated with `#about` / `#faq` links; both sections screenshot-
     verified rendering correctly (Playwright + local Chromium) before
     shipping.
-  - Merged straight into `claude/magical-franklin-58SKM` so it's live
-    (GitHub Pages auto-deploys from that branch) — no separate deploy
-    step needed for static-site changes.
+  - Merged straight into `claude/magical-franklin-58SKM` at the time —
+    **correction, 2026-08-08: this was wrong.** GitHub Pages actually
+    auto-deploys the static site from `main`, verified byte-for-byte
+    against a live `curl` of rasnaexperience.com (see `CLAUDE.md`'s
+    branch warning). Whether the FAQ/schema work described above ever
+    actually went live depends on whether it was separately merged into
+    `main` — not confirmed here, check `main`'s `index.html` directly
+    before assuming this shipped.
   - **Real next levers, need Nikolai** (none of this is code-fixable):
     a Google Search Console property (I can drop the verification meta
     tag into `index.html` myself once he creates the property and
@@ -214,8 +219,16 @@ tightened.
 ## Reference
 
 - Full step-by-step is in `worker/README.md`.
-- Repo default/live branch: `claude/magical-franklin-58SKM` (no
-  `main`/`master` exists).
-- This work was developed on `claude/booking-payment-setup-e8e3jr` and
+- **Correction, 2026-08-08:** the line below was wrong as of this
+  writing — `main` exists and is the actual GitHub Pages deploy branch
+  for the static site (verified byte-for-byte against the live site; see
+  `CLAUDE.md`'s branch warning). `claude/magical-franklin-58SKM` is
+  real and still matters, but only for the Cloudflare Worker backend
+  (`worker/`), a separate deploy system — not for `index.html` or any
+  other static-site file.
+- ~~Repo default/live branch: `claude/magical-franklin-58SKM` (no
+  `main`/`master` exists).~~
+- This work (the Worker/booking backend specifically) was developed on
+  `claude/booking-payment-setup-e8e3jr` and
   `claude/week-booking-stripe-payments-1lt3f1`, merged in via PRs #8,
   #9, #10, #12 and direct merges to the live branch.

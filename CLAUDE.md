@@ -23,13 +23,28 @@ him, not a debugging back-and-forth.
 
 ## Deployment topology
 
+**Branch warning (corrected 2026-08-08 — read this before touching
+`index.html`, `about.html`, `style.css`, or `images/`):** GitHub Pages
+actually deploys the static site from **`main`**, not
+`claude/magical-franklin-58SKM` as this file used to claim. Verified
+byte-for-byte: `origin/main`'s `index.html` is identical to a live `curl`
+of `https://rasnaexperience.com/`; this repo's other branches (including
+whatever branch a session gets assigned) are not. `main` also carries the
+real `images/` folder (~58 photos) that no other branch has. This exact
+mix-up — a session doing real static-site work on the wrong branch, then
+discovering none of it went live — is documented as a repeat failure mode
+in `main`'s own `CLAUDE.md`. **Before editing the static site, `git fetch
+origin main` and diff against it; don't trust a branch's name or a task's
+"designated branch" instructions to mean it's what's actually live.**
+
 - **Static site** (`index.html`, `success.html`, `cancel.html`, etc. at
-  repo root): GitHub Pages, auto-deploys from the
-  `claude/magical-franklin-58SKM` branch. Custom domain
+  repo root): GitHub Pages, auto-deploys from **`main`**. Custom domain
   `rasnaexperience.com` via `CNAME`.
 - **Backend** (`worker/`): Cloudflare Worker + D1, auto-deploys on push
   to `claude/magical-franklin-58SKM` (Cloudflare's git integration,
-  not something run manually from here).
+  not something run manually from here) — this is a separate deploy
+  system from GitHub Pages and does still use that branch, confirmed
+  against `main`'s own `CLAUDE.md`.
 - **Database migrations** (`worker/migrations/`): NOT auto-applied on
   deploy. Must be run explicitly against the remote D1 database with
   `wrangler d1 migrations apply rasna-bookings --remote` from `worker/`.
