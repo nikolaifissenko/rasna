@@ -23,7 +23,7 @@
     }
 
     h1, h2, h3, h4 {
-      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-family: 'Bodoni Moda', 'Georgia', serif;
     }
 
     /* ── Hero ── */
@@ -116,7 +116,7 @@
       border-bottom: 1px solid rgba(196,162,101,0.15);
     }
     .site-nav .nav-logo {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.1em;
+      font-family: 'Bodoni Moda', serif; font-size: 1.3rem; letter-spacing: 0.1em;
       color: var(--gold); text-decoration: none; text-transform: uppercase; font-weight: 600;
     }
     .site-nav .nav-links { display: flex; align-items: center; gap: 1.6rem; }
@@ -195,7 +195,7 @@
     .featured-trip-header { max-width: 700px; }
     .featured-trip-header p { margin-top: 1rem; }
     .featured-trip-subtitle {
-      font-family: 'Cormorant Garamond', serif; font-style: italic;
+      font-family: 'Bodoni Moda', serif; font-style: italic;
       font-size: 1.15rem; color: var(--terracotta); opacity: 0.85; margin-top: -0.3rem;
     }
 
@@ -226,7 +226,7 @@
     }
     .cg-head-date { display: flex; align-items: baseline; gap: 0.3rem; }
     .cg-dow { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); }
-    .cg-date { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 600; color: var(--tufo); }
+    .cg-date { font-family: 'Bodoni Moda', serif; font-size: 1.05rem; font-weight: 600; color: var(--tufo); }
     .cg-head .icon-badge {
       width: 18px; height: 18px; border-radius: 50%; background: rgba(196,162,101,0.15);
       display: flex; align-items: center; justify-content: center; color: var(--gold); flex-shrink: 0;
@@ -413,7 +413,7 @@
     .about-text h3:first-of-type { margin-top: 0.8rem; }
     .about-text p { font-size: 1.02rem; line-height: 1.85; font-weight: 300; opacity: 0.78; margin-bottom: 1.15rem; }
     .about-text blockquote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Bodoni Moda', serif;
       font-size: clamp(1.15rem, 2vw, 1.4rem);
       font-weight: 500; font-style: italic; line-height: 1.5;
       color: var(--terracotta); border-left: 3px solid var(--olive);
@@ -444,7 +444,7 @@
       text-align: center; width: 100%;
     }
     .photo-break-caption p {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Bodoni Moda', serif;
       font-style: italic;
       font-size: clamp(1.15rem, 2.2vw, 1.55rem);
       color: var(--tufo);
@@ -744,7 +744,7 @@
       background: var(--olive); color: var(--cream);
     }
     .price-card-private .price-card-icon { background: var(--terracotta); }
-    .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--earth); }
+    .price-card h3 { font-family: 'Bodoni Moda', serif; font-size: 1.5rem; font-weight: 600; color: var(--earth); }
     .price-card-sub { font-size: 0.78rem; opacity: 0.55; margin: 0.2rem 0 1.5rem; }
     .price-card-tiers { display: flex; flex-direction: column; gap: 0.6rem; }
     .price-card-tiers li {
@@ -762,7 +762,7 @@
     .price-card-tiers li.price-chart-current .pct-name { color: var(--cream); }
     .pct-name em { display: block; font-style: normal; font-size: 0.68rem; font-weight: 400; opacity: 0.55; margin-top: 0.1rem; }
     .price-card-tiers li.price-chart-current .pct-name em { opacity: 0.85; }
-    .pct-price { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
+    .pct-price { font-family: 'Bodoni Moda', serif; font-size: 1.25rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
     .price-card-private .pct-price { color: var(--olive); }
     .price-card-tiers li.price-chart-current .pct-price { color: var(--cream); }
     @media (max-width: 560px) {
@@ -777,7 +777,7 @@
     .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
     .pricing .section-label { color: var(--gold); opacity: 0.5; }
     .pricing h2 { color: var(--tufo); }
-    .pricing-range { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 500; color: var(--gold); margin: 1.1rem 0 0.4rem; }
+    .pricing-range { font-family: 'Bodoni Moda', serif; font-size: 2.8rem; font-weight: 500; color: var(--gold); margin: 1.1rem 0 0.4rem; }
     .pricing-range-note { display: block; font-family: 'Inter', sans-serif; font-size: 0.75rem; font-weight: 300; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.5; margin-top: 0.4rem; }
     .pricing-intro { max-width: 480px; margin: 0 auto; opacity: 0.65; font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
     .pricing-card { max-width: 440px; margin: 2rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); }
@@ -822,7 +822,7 @@
     .philosophy .section-label { color: var(--gold); opacity: 0.65; }
     .philosophy h2 { color: var(--tufo); }
     .philosophy blockquote {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Bodoni Moda', serif;
       font-size: clamp(1.4rem, 2.8vw, 2.1rem);
       font-weight: 500; font-style: italic; line-height: 1.5;
       color: var(--gold); border-left: 3px solid var(--gold);
