@@ -103,6 +103,22 @@
           "@type": "Answer",
           "text": "Blera is in Tuscia, the historic Etruscan region of northern Lazio, about 90 minutes from Rome — far enough to avoid the Tuscany and Amalfi Coast tourist crowds, close enough for an easy pickup from Rome or Viterbo."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Who will I actually meet on the trip?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The people who host each activity: Maria Grazia, Rasna's local partner in Blera; Davide, who raises and cures the cheese and meat guests taste in Civitella Cesi; Emiliano, whose family has cured salumi in Blera for generations; and Renzo, who teaches guests to work leather by hand."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I bring?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Comfortable clothes you don't mind getting dirty, sturdy shoes, and a layer for cool mornings and evenings. Tools, aprons, and ingredients for every activity are provided."
+        }
       }
     ]
   }
@@ -443,8 +459,27 @@
     .pricing-includes li { padding: 0.5rem 0; border-bottom: 1px solid rgba(196,162,101,0.08); padding-left: 1.2rem; position: relative; }
     .pricing-includes li:last-child { border-bottom: none; }
     .pricing-includes li::before { content: ''; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; background: var(--terracotta); border-radius: 50%; transform: translateY(-50%); }
-    .pricing-note { margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.3; font-style: italic; }
     .pricing-was { font-size: 1.3rem; opacity: 0.4; text-decoration: line-through; margin-right: 0.6rem; }
+    .pricing-not-included { margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid rgba(196,162,101,0.12); text-align: left; }
+    .pricing-not-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); opacity: 0.5; font-weight: 600; margin-bottom: 0.6rem; }
+    .pricing-not-included ul { list-style: none; font-size: 0.8rem; font-weight: 300; opacity: 0.45; }
+    .pricing-not-included li { padding: 0.3rem 0; }
+
+    /* ── People ── */
+    .people { background: var(--tufo); }
+    .founder-note { max-width: 640px; margin: 0 auto 2.6rem; border-left: 3px solid var(--terracotta); padding-left: 1.5rem; }
+    .founder-note p { font-size: 1.02rem; line-height: 1.85; font-weight: 300; opacity: 0.8; }
+    .founder-sign { margin-top: 0.8rem; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.05rem; opacity: 0.65 !important; }
+    .people-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
+    .person-card { padding: 1.6rem; background: rgba(245,240,232,0.6); border-left: 3px solid var(--olive); }
+    .person-card .icon-badge {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(92,107,60,0.14); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 0.9rem; color: var(--olive);
+    }
+    .person-card h3 { font-size: 1.2rem; font-weight: 600; color: var(--earth); margin-bottom: 0.2rem; }
+    .person-role { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--stone); font-weight: 600; margin-bottom: 0.6rem; }
+    .person-card p { font-size: 0.86rem; line-height: 1.65; opacity: 0.65; font-weight: 300; }
 
     /* ── Philosophy ── */
     .philosophy { background: var(--cream); }
@@ -584,6 +619,7 @@
       .activity-grid { grid-template-columns: 1fr; }
       .trip-stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
       .included-grid { grid-template-columns: 1fr; }
+      .people-grid { grid-template-columns: 1fr; }
       .contact-form .form-row { grid-template-columns: 1fr; }
       .category-header h3 { font-size: 1.3rem; }
     }
@@ -645,6 +681,7 @@
       <a href="#about">About</a>
       <a href="#catalog">Experiences</a>
       <a href="#included">Included</a>
+      <a href="#people">People</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -920,6 +957,44 @@
     </div>
   </section>
 
+  <!-- Meet the people -->
+  <section class="people" id="people">
+    <div class="section-inner">
+      <div class="section-label fade-in">Who you'll meet</div>
+      <h2 class="fade-in">This is not staged.</h2>
+      <div class="founder-note fade-in">
+        <p>I started Rasna because I got tired of watching travel turn into a performance &mdash; a bus idling outside someone's "traditional" kitchen while tourists watch from behind a rope. Blera is where I actually go to work: pick olives with Maria Grazia, taste salumi with Emiliano, learn a stitch from Renzo. I wanted a handful of guests each season to do the same thing I do &mdash; show up, get your hands dirty, and sit at the table because you helped put something on it.</p>
+        <p class="founder-sign">&mdash; Nikolai, Rasna founder</p>
+      </div>
+      <div class="people-grid fade-in">
+        <div class="person-card">
+          <div class="icon-badge"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
+          <h3>Maria Grazia</h3>
+          <div class="person-role">Co-founder &middot; Blera</div>
+          <p>Every host in Rasna &mdash; Davide, Emiliano, Renzo &mdash; knew Maria Grazia before Rasna existed. She grew up here, and every relationship behind this trip runs through her.</p>
+        </div>
+        <div class="person-card">
+          <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
+          <h3>Davide Paolocci</h3>
+          <div class="person-role">Cheese &amp; meat &middot; Civitella Cesi</div>
+          <p>Davide raises, cures, and ages what he serves. Spend a morning with him and you'll leave having made your own cheese, not just tasted someone else's.</p>
+        </div>
+        <div class="person-card">
+          <div class="icon-badge"><svg width="20" height="20"><use href="#icon-flask"/></svg></div>
+          <h3>Emiliano</h3>
+          <div class="person-role">Charcuterie &middot; Blera</div>
+          <p>Emiliano cures salumi the way his family always has, and opens his kitchen for a tasting most visitors never get invited to.</p>
+        </div>
+        <div class="person-card">
+          <div class="icon-badge"><svg width="20" height="20"><use href="#icon-hammer"/></svg></div>
+          <h3>Renzo</h3>
+          <div class="person-role">Leatherwork &middot; Blera</div>
+          <p>Renzo hand-tools bags and belts the old way. Watch him work, then take home the one you helped make.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
 
   <!-- Pricing -->
@@ -940,7 +1015,14 @@
           <li>All local transfers</li>
           <li>English-speaking host throughout</li>
         </ul>
-        <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
+        <div class="pricing-not-included">
+          <div class="pricing-not-label">Not included</div>
+          <ul>
+            <li>Flights to and from Italy</li>
+            <li>Travel insurance</li>
+            <li>Personal purchases &amp; extras outside the program</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -974,6 +1056,14 @@
         <div class="faq-item">
           <h3>Where is Blera / Tuscia?</h3>
           <p>Blera is in Tuscia, the historic Etruscan region of northern Lazio, about 90 minutes from Rome — far enough to avoid the Tuscany and Amalfi Coast tourist crowds, close enough for an easy pickup from Rome or Viterbo.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Who will I actually meet on the trip?</h3>
+          <p>The people who host each activity — Maria Grazia, our local partner in Blera; Davide, who raises and cures the cheese and meat you'll taste in Civitella Cesi; Emiliano, whose family has cured salumi in Blera for generations; and Renzo, who'll teach you to work leather by hand. See <a href="#people" style="color:var(--terracotta)">who you'll meet</a> for more on each of them.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What should I bring?</h3>
+          <p>Comfortable clothes you don't mind getting dirty — you'll be in a grove or a kitchen, not a museum. Sturdy shoes, a layer for cool mornings and evenings, and an appetite. Tools, aprons, and ingredients for every activity are provided.</p>
         </div>
       </div>
     </div>
