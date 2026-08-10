@@ -47,7 +47,7 @@
       "@type": "Offer",
       "name": "Italian Olive Experience",
       "description": "A fixed-departure autumn week (Nov 9–15, 2026) of olive harvesting, Etruscan tombs, thermal baths, wine, and hands-on cooking with local families in Blera, Italy. Capped at 8 guests.",
-      "price": "1450",
+      "price": "1800",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/LimitedAvailability",
       "url": "https://rasnaexperience.com/#festival-calendar"
@@ -80,7 +80,7 @@
         "name": "What's included in the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Italian Olive Experience is €1,450 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
+          "text": "The Italian Olive Experience is €1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
         }
       },
       {
@@ -88,7 +88,7 @@
         "name": "Is there a discount for booking early?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The first 2 paid guest spots on the November 9-15, 2026 departure get a Founding Guest discount of 15% off (€1,230 instead of €1,450 per person) as a thank-you for booking before the trip has a track record."
+          "text": "Yes. The first 2 paid guest spots on the November 9-15, 2026 departure get a Founding Guest discount of 22% off (€1,400 instead of €1,800 per person) as a thank-you for booking before the trip has a track record."
         }
       },
       {
@@ -761,7 +761,7 @@
         <div class="founding-badge" id="founding-badge" style="display:none">Founding Guest discount</div>
         <div class="section-label">Reserve your spot</div>
         <h3 id="festival-book-heading">Book the November 9 to 15 departure</h3>
-        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure &middot; &euro;1,450 per person, all-inclusive. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
+        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure &middot; &euro;1,800 per person, all-inclusive. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
 
         <form id="festival-form" class="festival-form">
           <div class="form-row">
@@ -825,11 +825,11 @@
         </div>
         <div class="faq-item">
           <h3>What's included in the price?</h3>
-          <p>The Italian Olive Experience is &euro;1,450 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending.</p>
+          <p>The Italian Olive Experience is &euro;1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending.</p>
         </div>
         <div class="faq-item">
           <h3>Is there a discount for booking early?</h3>
-          <p>Yes &mdash; the first 2 paid guest spots on the November 9&ndash;15, 2026 departure get a Founding Guest discount of 15% off (&euro;1,230 instead of &euro;1,450 per person), as a thank-you for booking before the trip has a track record.</p>
+          <p>Yes &mdash; the first 2 paid guest spots on the November 9&ndash;15, 2026 departure get a Founding Guest discount of 22% off (&euro;1,400 instead of &euro;1,800 per person), as a thank-you for booking before the trip has a track record.</p>
         </div>
         <div class="faq-item">
           <h3>Can I also build my own custom trip instead?</h3>
@@ -852,6 +852,8 @@
     <p><strong>Operated by:</strong> Nikolai Fissenko, Blera (VT), Italia</p>
     <p><strong>Contact:</strong> <a href="mailto:nikolai.fissenko1@gmail.com">nikolai.fissenko1@gmail.com</a> &middot; +39 349 101 6416</p>
     <p><strong>Cancellation policy:</strong> Cancel 30+ days before your departure date for a full refund. Cancellations 15&ndash;29 days before departure receive a 50% refund. Cancellations within 14 days of departure are non-refundable, as accommodation, transport, and local partners (farms, artisans, guides) are booked and paid on your behalf in advance.</p>
+    <p><strong>Unavoidable and extraordinary circumstances:</strong> If events beyond our control at or near Blera &mdash; natural disasters, war, government travel restrictions, or similar &mdash; make the trip impossible or unsafe, you're entitled to a full refund regardless of the timing above.</p>
+    <p><strong>If we cancel:</strong> If Rasna cancels your trip for any reason within our control, you'll receive a full refund within 14 days, or the option to rebook a future departure.</p>
     <p><strong>Refunds:</strong> Approved refunds are issued to your original payment method within 5&ndash;10 business days.</p>
     <p><strong>Disputes:</strong> If something's wrong with your booking or payment, email us first at the address above &mdash; we respond within 48 hours and will make it right directly, before you need to contact your bank.</p>
   </section>
@@ -878,6 +880,18 @@
         if (target) target.scrollIntoView({ behavior: 'smooth' });
       });
     }
+
+    // Deep links from other pages (e.g. italian-olive-experience-itinerary.html#pricing)
+    // land here with panel-trips showing by default — if the hash target lives inside
+    // panel-build, switch tabs first so the link actually scrolls somewhere visible.
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      if (!hash) return;
+      const target = document.getElementById(hash);
+      if (target && target.closest('#panel-build')) {
+        showTab('build', hash);
+      }
+    })();
 
     const selectedActivities = new Set();
 
