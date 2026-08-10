@@ -8,15 +8,24 @@ export const DEPARTURES = [
     start_date: '2026-11-09',
     end_date: '2026-11-15',
     capacity: 8,
-    price_per_person: 1800,
-    // Founding-guest discount: the first N *paid guest spots* on this
-    // departure (not bookings — a couple booking together fills 2 spots)
-    // get a lower price, to break the zero-bookings ice on a brand-new
-    // departure. Priced at ~22% off, €1,400/€1,800 ≈ 22.2%.
-    founding_discount_price: 1400,
-    founding_discount_spots: 2,
     currency: 'eur',
     active: true,
+    // Two-axis pricing, replacing the old flat price_per_person +
+    // founding-guest-discount model (2026-08-10): room type (private vs.
+    // sharing a double) x booking window (earlier books cost less).
+    // `room_type` on a booking is per-booking, not per-guest — a group
+    // books entirely as "private" (each guest gets/pays for their own
+    // room) or entirely as "shared" (guests pair up into doubles).
+    pricing: {
+      shared: { early_bird: 1400, regular: 1600, final: 1800 },
+      private: { early_bird: 1700, regular: 1900, final: 2100 },
+    },
+    // Inclusive cutoffs: a booking made on early_bird_until's date still
+    // gets the early_bird price; the day after rolls into "regular".
+    pricing_windows: {
+      early_bird_until: '2026-09-15',
+      regular_until: '2026-10-25',
+    },
   },
 ];
 
@@ -26,4 +35,19 @@ export function listDepartures() {
 
 export function getDeparture(id) {
   return listDepartures().find((d) => d.id === id) || null;
+}
+
+// Which pricing tier applies right now (or at an arbitrary `now`, for
+// tests) — 'early_bird' | 'regular' | 'final'.
+export function currentPriceTier(departure, now = new Date()) {
+  const today = now.toISOString().slice(0, 10); // YYYY-MM-DD, UTC
+  const { early_bird_until, regular_until } = departure.pricing_windows;
+  if (today <= early_bird_until) return 'early_bird';
+  if (today <= regular_until) return 'regular';
+  return 'final';
+}
+
+export function priceForRoomType(departure, roomType, now = new Date()) {
+  const tier = currentPriceTier(departure, now);
+  return departure.pricing[roomType][tier];
 }

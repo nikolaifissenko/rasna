@@ -34,12 +34,12 @@ export async function createFixedBooking(db, departure, fields) {
   const row = await db
     .prepare(
       `INSERT INTO bookings
-         (type, departure_id, name, email, num_guests, activities, preferred_dates, notes, amount_total_cents, currency, status)
-       SELECT 'fixed', ?1, ?2, ?3, ?4, ?5, NULL, ?6, ?7, ?8, 'pending'
+         (type, departure_id, name, email, num_guests, room_type, activities, preferred_dates, notes, amount_total_cents, currency, status)
+       SELECT 'fixed', ?1, ?2, ?3, ?4, ?5, ?6, NULL, ?7, ?8, ?9, 'pending'
        WHERE (
          SELECT COALESCE(SUM(num_guests), 0) FROM bookings
          WHERE departure_id = ?1 AND status = 'paid'
-       ) + ?4 <= ?9
+       ) + ?4 <= ?10
        RETURNING id`
     )
     .bind(
@@ -47,6 +47,7 @@ export async function createFixedBooking(db, departure, fields) {
       fields.name,
       fields.email,
       fields.num_guests,
+      fields.room_type,
       fields.activities,
       fields.notes,
       fields.amount_total_cents,

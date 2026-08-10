@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import Stripe from 'stripe';
 
-import { listDepartures, getDeparture } from './departures.js';
+import { listDepartures, getDeparture, currentPriceTier, priceForRoomType } from './departures.js';
 import {
   spotsUsed,
   createFixedBooking,
@@ -38,7 +38,7 @@ app.get('/api/departures', async (c) => {
   const departures = await Promise.all(
     listDepartures().map(async (d) => {
       const used = await spotsUsed(c.env.DB, d.id);
-      const discountSpots = d.founding_discount_spots || 0;
+      const tier = currentPriceTier(d);
       return {
         id: d.id,
         label: d.label,
@@ -46,31 +46,20 @@ app.get('/api/departures', async (c) => {
         end_date: d.end_date,
         capacity: d.capacity,
         remaining: Math.max(0, d.capacity - used),
-        price_per_person: d.price_per_person,
         currency: d.currency || 'eur',
-        founding_discount_price: d.founding_discount_price || null,
-        founding_discount_remaining: Math.max(0, discountSpots - used),
+        pricing: d.pricing,
+        pricing_windows: d.pricing_windows,
+        current_tier: tier,
+        price_shared: d.pricing.shared[tier],
+        price_private: d.pricing.private[tier],
       };
     })
   );
   return c.json({ departures });
 });
 
-// Splits `numGuests` new spots, starting right after `alreadyUsed` paid
-// spots, into (possibly) some at the founding-guest discount price and
-// the rest at full price — e.g. if 1 discount spot is left and someone
-// books 3 guests, 1 gets the discount and 2 pay full.
-function tieredPricing(departure, alreadyUsed, numGuests) {
-  const discountSpots = departure.founding_discount_spots || 0;
-  const discountPrice = departure.founding_discount_price || departure.price_per_person;
-  const discountedCount = Math.max(0, Math.min(numGuests, discountSpots - alreadyUsed));
-  const fullCount = numGuests - discountedCount;
-  return {
-    discountedCount,
-    fullCount,
-    amountTotalCents:
-      Math.round(discountPrice * 100) * discountedCount + Math.round(departure.price_per_person * 100) * fullCount,
-  };
+function isValidRoomType(roomType) {
+  return roomType === 'shared' || roomType === 'private';
 }
 
 function isValidEmail(email) {
@@ -115,24 +104,24 @@ app.post('/api/bookings/fixed', async (c) => {
   const body = await c.req.json().catch(() => ({}));
   const { errors, numGuests } = validateCommon(body);
   if (!body.departure_id) errors.push('departure_id is required');
+  const roomType = body.room_type;
+  if (!isValidRoomType(roomType)) errors.push("room_type must be 'shared' or 'private'");
   if (errors.length) return c.json({ error: errors.join(', ') }, 400);
 
   const departure = getDeparture(body.departure_id);
   if (!departure) return c.json({ error: 'Unknown departure_id' }, 404);
 
-  // Pricing is derived from spots already *paid* — same source of truth
-  // capacity uses — right before the atomic insert below. In the rare
-  // case of a concurrent booking landing in between, the insert's own
-  // capacity check still protects against overselling; at worst here a
-  // guest could win or miss the founding-guest discount by one spot,
-  // which isn't a correctness issue, just a small promo-pricing race.
-  const usedBeforeInsert = await spotsUsed(c.env.DB, departure.id);
-  const { discountedCount, fullCount, amountTotalCents } = tieredPricing(departure, usedBeforeInsert, numGuests);
+  // Price is locked in at the tier active right now (server clock, not
+  // client-supplied) — a booking started right at a tier boundary always
+  // gets a consistent, non-gameable price.
+  const unitPrice = priceForRoomType(departure, roomType);
+  const amountTotalCents = Math.round(unitPrice * 100) * numGuests;
 
   const bookingId = await createFixedBooking(c.env.DB, departure, {
     name: body.name.trim(),
     email: body.email.trim(),
     num_guests: numGuests,
+    room_type: roomType,
     activities: JSON.stringify(body.activities || []),
     notes: body.notes || null,
     amount_total_cents: amountTotalCents,
@@ -151,21 +140,13 @@ app.post('/api/bookings/fixed', async (c) => {
     );
   }
 
-  const lineItems = [];
-  if (discountedCount > 0) {
-    lineItems.push({
-      unitAmountCents: Math.round(departure.founding_discount_price * 100),
-      quantity: discountedCount,
-      suffix: `Founding Guest, ${discountedCount} guest${discountedCount > 1 ? 's' : ''}`,
-    });
-  }
-  if (fullCount > 0) {
-    lineItems.push({
-      unitAmountCents: Math.round(departure.price_per_person * 100),
-      quantity: fullCount,
-      suffix: `${fullCount} guest${fullCount > 1 ? 's' : ''}`,
-    });
-  }
+  const lineItems = [
+    {
+      unitAmountCents: Math.round(unitPrice * 100),
+      quantity: numGuests,
+      suffix: `${roomType === 'private' ? 'Private room' : 'Shared room'}, ${numGuests} guest${numGuests > 1 ? 's' : ''}`,
+    },
+  ];
 
   try {
     const session = await createCheckoutSession(c.env, {
@@ -336,6 +317,7 @@ app.get('/admin', requireAdminAuth, async (c) => {
         <td>${escapeHtml(b.name)}</td>
         <td>${escapeHtml(b.email)}</td>
         <td>${b.num_guests}</td>
+        <td>${escapeHtml(b.room_type || '')}</td>
         <td>${(b.amount_total_cents / 100).toFixed(2)} ${b.currency.toUpperCase()}</td>
         <td>${escapeHtml(b.arrival_airport || '')}</td>
         <td>${escapeHtml(b.arrival_flight_number || '')}</td>
@@ -360,14 +342,14 @@ app.get('/admin', requireAdminAuth, async (c) => {
     <h2>Departure capacity</h2>
     <table><tr><th>Departure</th><th>Used</th><th>Remaining</th></tr>${depRows || '<tr><td colspan="3">No departures configured</td></tr>'}</table>
     <h2>All bookings</h2>
-    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Amount</th><th>Arrival Airport</th><th>Flight #</th><th>Arrival Time</th><th>Transfer Notes</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="13">No bookings yet</td></tr>'}</table>
+    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Room</th><th>Amount</th><th>Arrival Airport</th><th>Flight #</th><th>Arrival Time</th><th>Transfer Notes</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="14">No bookings yet</td></tr>'}</table>
   </body></html>`);
 });
 
 app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
   const bookings = await listBookings(c.env.DB);
   const header = [
-    'id', 'status', 'type', 'departure_id', 'name', 'email', 'num_guests',
+    'id', 'status', 'type', 'departure_id', 'name', 'email', 'num_guests', 'room_type',
     'amount_total', 'currency', 'preferred_dates', 'activities', 'notes',
     'arrival_airport', 'arrival_flight_number', 'arrival_datetime', 'transfer_notes', 'created_at',
   ];
@@ -376,7 +358,7 @@ app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
   for (const b of bookings) {
     lines.push(
       [
-        b.id, b.status, b.type, b.departure_id, b.name, b.email, b.num_guests,
+        b.id, b.status, b.type, b.departure_id, b.name, b.email, b.num_guests, b.room_type,
         (b.amount_total_cents / 100).toFixed(2), b.currency, b.preferred_dates, b.activities, b.notes,
         b.arrival_airport, b.arrival_flight_number, b.arrival_datetime, b.transfer_notes, b.created_at,
       ]
