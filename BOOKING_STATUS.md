@@ -1,6 +1,39 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-03_
+_Last updated: 2026-08-10_
+
+## 2026-08-10 update: price raised to €1,800 / €1,400 Founding Guest
+
+Still 0/8 paid on the Nov 9–15 departure. Per Nikolai's direction
+("whatever you think is commercially viable"), raised the real Stripe
+price: `worker/src/departures.js` on `claude/magical-franklin-58SKM`
+now has `price_per_person: 1800` (was 1450) and
+`founding_discount_price: 1400` (was 1230, still first 2 spots, now
+~22% off instead of ~15%). Pushed as a single-file commit on top of that
+branch's existing tip — did not touch anything else on the branch (see
+`CLAUDE.md`'s "Deploy topology gotcha" for why that matters here).
+
+All `main` copy that quoted the old price was updated in the same
+session: `index.html`'s `Offer` JSON-LD, both FAQ answers, and
+`#festival-book-subtitle`'s static fallback text. Nothing dynamic needed
+touching — `#festival-book`'s founding-badge/price display and the new
+`italian-olive-experience-itinerary.html` pricing block both read
+`price_per_person`/`founding_discount_price` live from `/api/departures`,
+so they picked up the new numbers automatically once the Worker
+redeployed (Cloudflare's git integration watches
+`claude/magical-franklin-58SKM`, confirmed ~2 min turnaround in the
+2026-07-24 entry below).
+
+**This session also hit the branch-drift trap again** (third time, see
+`CLAUDE.md`'s 2026-08-10 entry for the full account) — real effort was
+spent building a "meet the people" section, a standalone
+cancellation-policy.html, and pricing UI against the dead
+`claude/magical-franklin-58SKM`-lineage designated branch before
+catching it. That work is inert, not reverted, same as prior incidents.
+The cancellation-policy work was redone correctly: `main`'s existing
+inline policy (`index.html#policies`) already covered the refund tiers,
+so no new page was needed — it was just missing the unavoidable-
+circumstances and Rasna-cancels carve-outs, now added.
 
 ## 2026-08-03 update: warm-outreach drafts + SEO handoff
 

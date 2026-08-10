@@ -64,7 +64,7 @@ Known dead ends: Facebook and Instagram photo links reliably fail to resolve (au
 The page now has two tabs, toggled by `showTab('build'|'trips', scrollToId)` in the `<script>` block, via a switcher (`.tab-switcher`) placed right under the hero:
 
 - **Build Your Own** (`#panel-build`) — the original activity-picker flow: How It Works, Photo Break, Catalog + `#experience-form`, Included, Moments, Trips Gallery, Philosophy, Pricing, Contact. Default-visible tab.
-- **Planned Events** (`#panel-trips`, `display:none` by default) — pre-built fixed-departure itineraries. Currently one: **Italian Olive Experience** (renamed from "Italian Autumn Experience" 2026-07-23 for search-discoverability — people search "italian olive experience"; subtitle now "Autumn in Italy: Olives and Wine", was "Cantine Festival Week"), Nov 9–15 2026, `#festival-week`. Has its own day-by-day `.itinerary-grid` of `.day-card`s and a **standalone** booking form (`#festival-form`) — deliberately not wired to the activity-catalog selection state, since it's a fixed package, not a build-your-own quote. As of 2026-07-19 this form no longer uses Formspree/a static Stripe payment link — it calls a real Cloudflare Worker + D1 + Stripe Checkout backend (`worker/`) and takes full payment (€1,450/person) in **live mode**. See `BOOKING_STATUS.md` for current status/secrets/what's-left before touching this flow. The renamed title appears in 4 places in `index.html` (hero CTA, tab button, `<h2>`, `<title>`/meta tags) — keep them in sync if renaming again. `worker/src/departures.js`'s `label` field ("November 9–15, 2026") is independent of this display name, no worker change needed for a rename.
+- **Planned Events** (`#panel-trips`, `display:none` by default) — pre-built fixed-departure itineraries. Currently one: **Italian Olive Experience** (renamed from "Italian Autumn Experience" 2026-07-23 for search-discoverability — people search "italian olive experience"; subtitle now "Autumn in Italy: Olives and Wine", was "Cantine Festival Week"), Nov 9–15 2026, `#festival-week`. Has its own day-by-day `.itinerary-grid` of `.day-card`s and a **standalone** booking form (`#festival-form`) — deliberately not wired to the activity-catalog selection state, since it's a fixed package, not a build-your-own quote. As of 2026-07-19 this form no longer uses Formspree/a static Stripe payment link — it calls a real Cloudflare Worker + D1 + Stripe Checkout backend (`worker/`) and takes full payment (€1,800/person as of 2026-08-10, was €1,450) in **live mode**. See `BOOKING_STATUS.md` for current status/secrets/what's-left before touching this flow. The renamed title appears in 4 places in `index.html` (hero CTA, tab button, `<h2>`, `<title>`/meta tags) — keep them in sync if renaming again. `worker/src/departures.js`'s `label` field ("November 9–15, 2026") is independent of this display name, no worker change needed for a rename.
 - **Nav "Planned Events" link** points at `#festival-calendar`, not `#festival-week`, via `showTab('trips','festival-calendar')` — landing on the section's own top ID scrolls to the `.featured-trip-hero` photo band (found confusing 2026-07-23) or, worse, to a bare anchor with no `scroll-margin-top`, which lands the sticky nav bar overlapping the content. `#festival-calendar` is on the `.featured-trip-header` div itself (title + description), included in the site's `scroll-margin-top: 78px` rule (`section[id], .category[id], #festival-calendar` in `style.css`) so the sticky nav doesn't cover it. If adding more nav-jump targets, give them the same treatment.
 
 **Nov 9–15 itinerary text (as of 2026-07-19):** Tue evening dinner moved to Tarquinia (was "back in Blera"); Wed evening is "Home-cooked local dinner" (was "residence chef"); Sat goodbye dinner venue changed from Trattoria La Torretta to an unnamed "local cantina" — **still needs a real venue name and quote**, flagged as TODO in `ITINERARY_NOV2026.md`. Panonto is described everywhere on the site (card copy + itinerary) as "a typical Bleran BBQ: bread roasted over embers" — keep that phrasing if editing panonto copy elsewhere. The Tomb Raiding scavenger hunt (both the activity card and Tue's itinerary text) now specifies it starts in the medieval village and leads down into the tombs, host-guided. Thu Nov 12 afternoon slot (both desktop grid and mobile list) now specifies lunch at **Terrarte** (Sandro Scarmiglia's outdoor sculpture park, olive grove) before the pasta-making class — added 2026-07-23, also reflected in `ITINERARY_NOV2026.md`.
@@ -84,6 +84,8 @@ Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Term
 ## About page / founder bio (rewritten 2026-07-23)
 
 `about.html` has a long, deeply personal, third-person founder bio under `.about-text`, broken into `<h3>` subheads (styled via `.about-text h3` in `style.css` — small-caps terracotta labels, not full section headers; the page has no `<h2>` headline anymore, just a `.section-label` reading "Founder Bio"). It covers real family history at the user's explicit direction: his parents' origin stories (father Vladimir Fissenko's escape from the USSR in 1986, the Tierra del Fuego–to–Alaska horse ride, mother Sophie), his father's alcoholism and the 2023 death from cirrhosis, two half-siblings (Alionka, Luciana) he learned about at different points including after his father's death, his uncle Victor's 2016 death, and how Rasna itself started (a 2026 weekend with his sister Alina + a conversation with Maria Grazia). **This is sensitive, factual content about real people — don't rewrite, trim, or "clean up" any of it without asking first**, even if it reads unusually candid for a business site; that candor was deliberate and explicitly requested. Style notes if editing: no em dashes anywhere on this page (removed at the user's request 2026-07-23), third-person voice throughout, new facts get woven into the existing narrative rather than appended as disconnected sentences.
+
+**Second founder blockquote added (2026-08-10):** at Nikolai's explicit direction, a second `<blockquote>` was added to `.about-text` right before the existing "I'm not showing people a culture..." one: *"I don't do this for the money. I do it because this place raised me, and I want to share it with you the way it's been shared with me my whole life."* This replaced an earlier, awkwardly-phrased third-person line in the same paragraph ("He doesn't do this for the money; he charges enough to live free of financial worry, no more.") that Nikolai asked removed — don't reintroduce that phrasing.
 
 **Founder note on the landing page (added 2026-08-04):** a friend of Nikolai's who guides professionally (Rachel) reviewed the site and suggested leading more with the founder before the activity picker, rather than leaving that entirely to `about.html`. Added a short first-person `.founder-note` section (`#founder-note` in `index.html`, right after the hero, before the tab switcher) — section label "Why book with me", `about-nikolai-portrait.jpg` alongside 3 short paragraphs. Went through two rounds of correction from Nikolai, both now reflected in the live copy:
 1. First draft mentioned Maria Grazia/Davide/Emiliano by name as "the people you'll spend the week with" — **wrong framing**, removed. Guests spend the week with Nikolai himself, not a roster of named locals (those names stay fine elsewhere, e.g. the activity cards).
@@ -162,6 +164,70 @@ could not be run** — the sandbox's shared proxy quota for
 tried it (`429`, "Queries per day" quota); did a manual image-weight
 audit instead (see "Photos" section). Worth a real PageSpeed run next
 session in case the quota has reset.
+
+**Session, 2026-08-10.** Fell into the exact branch-drift trap this file
+has warned about since 2026-07-20 — a *third* time, and the worst one
+yet: significant work (a "meet the people" section, a standalone
+cancellation-policy.html, pricing UI) was built against the session's
+designated branch (a `claude/new-session-kw1unf` off the dead
+`claude/magical-franklin-58SKM` lineage) using *that branch's own*
+bundled `CLAUDE.md`/`BOOKING_STATUS.md`, which don't carry this file's
+branch-drift warnings at all — so there was nothing to catch the mistake
+on until a live-site check (`curl`/WebFetch against rasnaexperience.com)
+showed content that matched neither branch. Caught it by diffing
+`origin/main` against the designated branch directly. That work is
+inert, sitting on `claude/magical-franklin-58SKM`, not reverted (same
+established precedent as the 2026-07-24 and 2026-08-03 incidents above).
+**If you are a fresh session and your bundled `CLAUDE.md` doesn't mention
+`main` as the live branch at all, that alone is a signal you're on a
+stale branch — check `git log origin/main` before writing a single line
+of site content.**
+
+Real changes shipped this session, redone correctly against `main`:
+- Removed the "not for the money" line from the founder bio and added
+  Nikolai's own replacement wording as a blockquote (see the About page
+  section above).
+- Tightened the live cancellation policy (`index.html#policies`) with
+  the two carve-outs it was missing: full refund for unavoidable/
+  extraordinary circumstances at the destination, and full refund within
+  14 days if Rasna cancels. The three refund tiers (30+/15–29/<14 days)
+  were left unchanged.
+- **Raised the Italian Olive Experience (Nov 9–15 fixed departure) price
+  from €1,450 to €1,800, and the Founding Guest discount from €1,230
+  (15% off) to €1,400 (22% off)** — real change to
+  `worker/src/departures.js` on `claude/magical-franklin-58SKM` (the
+  branch that actually deploys the Worker, see "Deploy topology gotcha"
+  below), not just copy. All `index.html` references (JSON-LD `Offer`
+  price, both FAQ answers, `#festival-book-subtitle`) updated to match,
+  so nothing on `main` still says €1,450. Decision made per Nikolai's
+  explicit "whatever you think is commercially viable" — reasoning: the
+  fixed, fully-curated departure was pricing *below* the top of the
+  already-published €1,400–1,800 Make Your Own range, which read
+  backwards (the more all-inclusive product should anchor at the top of
+  the range, not undercut a flexible custom quote). If this reasoning
+  turns out wrong, it's a one-line revert in `departures.js` plus the
+  same five `index.html` spots.
+- `italian-olive-experience-itinerary.html` was itinerary-only (day-by-
+  day + photo gallery, see the 2026-08-04 "Itinerary split" note above)
+  and had no pricing, inclusions, or FAQ info of its own — guests had to
+  click through to `index.html#festival-book` to learn any of that.
+  Added a `#included` section (What's Included, reusing the
+  `.included-grid`/`.included-item` classes from `style.css`), a
+  `#pricing` section that fetches `/api/departures` live (same pattern
+  as `index.html`'s `#festival-book`, so this page's displayed price
+  can never drift from the real Stripe charge), and an `#faq` section
+  (Founding Guest discount, cancellation policy, link to Make Your Own).
+- **Fixed a real, pre-existing bug while wiring the itinerary page's new
+  links back to `index.html`:** `index.html#pricing` (and any other
+  anchor inside `#panel-build`) didn't work as a deep link from another
+  page, because `#panel-build` is `display:none` by default and nothing
+  re-routed based on `location.hash` on load — only same-page nav clicks
+  (which call `showTab(...)` via `onclick`) worked. Added a small
+  IIFE right after the `showTab` function definition that checks
+  `location.hash` on load and calls `showTab('build', hash)` if the
+  target element lives inside `#panel-build`. This fixes deep links from
+  anywhere, not just the itinerary page — worth knowing if adding more
+  cross-page links into `#panel-build` later.
 
 ---
 
