@@ -709,6 +709,27 @@
 
     .transformation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; max-width: 1080px; margin-left: auto; margin-right: auto; }
 
+    /* ── Price chart ── */
+    .price-chart-wrap { max-width: 780px; margin: 2.4rem auto 0; overflow-x: auto; }
+    .price-chart-table { width: 100%; border-collapse: collapse; background: rgba(245,240,232,0.6); }
+    .price-chart-table th, .price-chart-table td {
+      padding: 0.9rem 1rem; text-align: center; border: 1px solid rgba(140,123,102,0.25); font-size: 0.92rem;
+    }
+    .price-chart-table th {
+      background: var(--earth); color: var(--tufo); font-weight: 600;
+      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .price-chart-table td:first-child, .price-chart-table th:first-child {
+      text-align: left; font-weight: 600; color: var(--earth); background: rgba(196,162,101,0.06);
+    }
+    .price-chart-table td.price-chart-current { background: rgba(184,89,62,0.14); font-weight: 700; }
+    .price-chart-table th.price-chart-current { background: var(--terracotta); }
+    .price-chart-window {
+      display: block; font-size: 0.68rem; opacity: 0.55; font-weight: 400;
+      text-transform: none; letter-spacing: 0; margin-top: 0.25rem;
+    }
+    .price-chart-table td:first-child .price-chart-window { opacity: 0.5; }
+
     /* ── Trip stats item ── */
     .detail-item .detail-value { font-size: 1.7rem; font-weight: 500; color: var(--terracotta); margin-bottom: 0.2rem; }
     .detail-item .detail-label { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); font-weight: 600; }

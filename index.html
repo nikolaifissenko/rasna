@@ -47,7 +47,7 @@
       "@type": "Offer",
       "name": "Italian Olive Experience",
       "description": "A fixed-departure autumn week (Nov 9–15, 2026) of olive harvesting, Etruscan tombs, thermal baths, wine, and hands-on cooking with local families in Blera, Italy. Capped at 8 guests.",
-      "price": "1800",
+      "price": "1400",
       "priceCurrency": "EUR",
       "availability": "https://schema.org/LimitedAvailability",
       "url": "https://rasnaexperience.com/#festival-calendar"
@@ -80,7 +80,7 @@
         "name": "What's included in the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The Italian Olive Experience is €1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
+          "text": "Price depends on room type and how early you book, from €1,400 to €2,100 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
         }
       },
       {
@@ -88,7 +88,7 @@
         "name": "Is there a discount for booking early?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The first 2 paid guest spots on the November 9-15, 2026 departure get a Founding Guest discount of 22% off (€1,400 instead of €1,800 per person) as a thank-you for booking before the trip has a track record."
+          "text": "Yes. Pricing is tiered by booking date: Early Bird pricing runs through September 15, 2026, Regular pricing through October 25, and Final pricing after that, up until departure. Sharing a room is cheaper than a private room at every tier."
         }
       },
       {
@@ -960,11 +960,43 @@
         </ul>
       </div>
 
+      <div class="section-inner fade-in" id="price-chart" style="margin-top:4rem; text-align:center; scroll-margin-top:78px;">
+        <div class="section-label">Investment</div>
+        <h2>Choose your room, book early, save.</h2>
+        <p style="max-width:560px; margin:0 auto; opacity:0.7; font-size:0.95rem;">Price depends on two things: whether you share a room or have your own, and how early you book. Every tier is fully all-inclusive.</p>
+      </div>
+      <div class="price-chart-wrap fade-in">
+        <table class="price-chart-table" id="price-chart-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th data-tier="early_bird">Early Bird<span class="price-chart-window">Through Sep 15</span></th>
+              <th data-tier="regular">Regular<span class="price-chart-window">Sep 16&ndash;Oct 25</span></th>
+              <th data-tier="final">Final<span class="price-chart-window">After Oct 25</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Shared room<span class="price-chart-window">per person, sharing a double</span></td>
+              <td data-tier="early_bird" data-room="shared">&euro;1,400</td>
+              <td data-tier="regular" data-room="shared">&euro;1,600</td>
+              <td data-tier="final" data-room="shared">&euro;1,800</td>
+            </tr>
+            <tr>
+              <td>Private room<span class="price-chart-window">per person, your own room</span></td>
+              <td data-tier="early_bird" data-room="private">&euro;1,700</td>
+              <td data-tier="regular" data-room="private">&euro;1,900</td>
+              <td data-tier="final" data-room="private">&euro;2,100</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="price-chart-note" class="fade-in" style="text-align:center; margin-top:1rem; font-size:0.85rem; opacity:0.65;"></p>
+      </div>
+
       <div class="festival-book fade-in" id="festival-book">
-        <div class="founding-badge" id="founding-badge" style="display:none">Founding Guest discount</div>
         <div class="section-label">Reserve your spot</div>
         <h3 id="festival-book-heading">Book the November 9 to 15 departure</h3>
-        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure &middot; &euro;1,800 per person, all-inclusive. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
+        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
 
         <form id="festival-form" class="festival-form">
           <div class="form-row">
@@ -978,19 +1010,29 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="fw-guests">Number of guests</label>
-            <select id="fw-guests" name="guests" required>
-              <option value="">Select...</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-            </select>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fw-guests">Number of guests</label>
+              <select id="fw-guests" name="guests" required>
+                <option value="">Select...</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="fw-room-type">Room type</label>
+              <select id="fw-room-type" name="room_type" required>
+                <option value="">Select...</option>
+                <option value="shared">Shared room (sharing a double)</option>
+                <option value="private">Private room (your own room)</option>
+              </select>
+            </div>
           </div>
 
           <div class="form-group">
@@ -1028,11 +1070,11 @@
         </div>
         <div class="faq-item">
           <h3>What's included in the price?</h3>
-          <p>The Italian Olive Experience is &euro;1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending.</p>
+          <p>Price depends on room type and how early you book, from &euro;1,400 to &euro;2,100 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending. See the pricing chart above for the full breakdown.</p>
         </div>
         <div class="faq-item">
           <h3>Is there a discount for booking early?</h3>
-          <p>Yes &mdash; the first 2 paid guest spots on the November 9&ndash;15, 2026 departure get a Founding Guest discount of 22% off (&euro;1,400 instead of &euro;1,800 per person), as a thank-you for booking before the trip has a track record.</p>
+          <p>Yes &mdash; pricing is tiered by booking date: Early Bird pricing runs through September 15, 2026, Regular pricing through October 25, and Final pricing after that, up until departure. Sharing a room is cheaper than a private room at every tier &mdash; see the pricing chart above.</p>
         </div>
         <div class="faq-item">
           <h3>Can I also build my own custom trip instead?</h3>
@@ -1165,29 +1207,44 @@
     const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
     const DEPARTURE_ID = '2026-11-09';
 
+    const TIER_LABELS = { early_bird: 'Early Bird', regular: 'Regular', final: 'Final' };
+
     fetch(API_BASE + '/api/departures')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         const departure = (data.departures || []).find(function(d) { return d.id === DEPARTURE_ID; });
         if (!departure) return;
         document.getElementById('festival-remaining').textContent = departure.remaining;
+
+        // Fill the price chart from live data, so it can never drift from
+        // what Stripe actually charges, and highlight the active tier.
+        if (departure.pricing) {
+          ['shared', 'private'].forEach(function(room) {
+            ['early_bird', 'regular', 'final'].forEach(function(tier) {
+              const cell = document.querySelector('#price-chart-table td[data-room="' + room + '"][data-tier="' + tier + '"]');
+              if (cell) cell.textContent = '€' + departure.pricing[room][tier];
+            });
+          });
+        }
+        if (departure.current_tier) {
+          document.querySelectorAll('#price-chart-table [data-tier]').forEach(function(el) {
+            el.classList.toggle('price-chart-current', el.dataset.tier === departure.current_tier);
+          });
+          document.getElementById('price-chart-note').textContent =
+            'You\'re currently in the ' + TIER_LABELS[departure.current_tier] + ' window — these are the prices you\'ll pay if you book now.';
+        }
+
         if (departure.remaining <= 0) {
           document.getElementById('festival-book-heading').textContent = 'This departure is fully booked';
           document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for November 9–15, 2026 are taken. Get in touch if you’d like to be notified about future departures.';
           document.getElementById('festival-form').style.display = 'none';
           return;
         }
-        const hasDiscount = departure.founding_discount_price && departure.founding_discount_remaining > 0;
-        if (hasDiscount) {
-          const badge = document.getElementById('founding-badge');
-          badge.style.display = 'inline-block';
-          badge.textContent = 'Founding Guest discount — first ' + departure.founding_discount_remaining + ' spot' + (departure.founding_discount_remaining === 1 ? '' : 's') + ' only';
+        if (departure.price_shared && departure.price_private) {
           document.getElementById('festival-book-subtitle').innerHTML =
             'Only <span id="festival-remaining">' + departure.remaining + '</span> spots left for this departure &middot; ' +
-            '<span class="festival-book-was">€' + departure.price_per_person + '</span>' +
-            '€' + departure.founding_discount_price + ' per person for the first ' + departure.founding_discount_remaining +
-            ' guest' + (departure.founding_discount_remaining === 1 ? '' : 's') + ', then €' + departure.price_per_person +
-            '. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.';
+            'currently €' + departure.price_shared + ' per person sharing a room, €' + departure.price_private + ' for a private room (' +
+            TIER_LABELS[departure.current_tier] + ' pricing). Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.';
         }
       })
       .catch(function() { /* leave defaults if the API is unreachable */ });
@@ -1211,6 +1268,7 @@
           name: data.get('name'),
           email: data.get('email'),
           num_guests: Number(data.get('guests')),
+          room_type: data.get('room_type'),
           notes: data.get('notes') || ''
         })
       })

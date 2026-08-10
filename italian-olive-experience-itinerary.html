@@ -296,10 +296,8 @@
   <section id="pricing" style="background:var(--deep); color:var(--tufo); text-align:center; padding:5.5rem 2rem;">
     <div class="section-inner">
       <div class="section-label fade-in" style="color:var(--gold); opacity:0.5;">Investment</div>
-      <h2 class="fade-in" style="color:var(--tufo);">One set price. Everything in.</h2>
-      <div class="founding-badge" id="founding-badge" style="display:none"></div>
-      <div class="pricing-amount fade-in" id="pricing-amount" style="font-family:'Cormorant Garamond', serif; font-size:3rem; font-weight:500; color:var(--gold); margin:1rem 0 0.3rem;">&euro;1,800</div>
-      <div class="pricing-per fade-in" id="pricing-per" style="font-size:0.74rem; letter-spacing:0.16em; text-transform:uppercase; opacity:0.4; margin-bottom:1.6rem;">per person &middot; Nov 9&ndash;15, 2026, all-inclusive</div>
+      <h2 class="fade-in" style="color:var(--tufo);">Choose your room, book early, save.</h2>
+      <div class="pricing-per fade-in" id="pricing-per" style="font-size:0.9rem; opacity:0.7; margin:1rem 0 1.6rem; max-width:480px; margin-left:auto; margin-right:auto;">Currently <span id="pricing-shared">&euro;1,400</span> per person sharing a room, <span id="pricing-private">&euro;1,700</span> for a private room (<span id="pricing-tier-name">Early Bird</span> pricing) &middot; Nov 9&ndash;15, 2026, all-inclusive</div>
       <div class="pricing-card fade-in">
         <ul class="pricing-includes">
           <li>Six nights' accommodation</li>
@@ -310,7 +308,7 @@
         </ul>
         <p class="pricing-note">Not included: flights, travel insurance, personal purchases</p>
       </div>
-      <p class="fade-in" style="margin-top:1.8rem; font-size:0.85rem;"><a href="index.html#policies" style="color:var(--gold);">Cancellation policy</a></p>
+      <p class="fade-in" style="margin-top:1.8rem; font-size:0.85rem;"><a href="index.html#price-chart" style="color:var(--gold);">See the full pricing chart</a> &middot; <a href="index.html#policies" style="color:var(--gold);">Cancellation policy</a></p>
       <p class="fade-in" style="margin-top:1.6rem;"><a href="index.html#festival-book" class="cta-button">Reserve your spot &rarr;</a></p>
     </div>
   </section>
@@ -323,7 +321,7 @@
       <div class="faq-list fade-in">
         <div class="faq-item">
           <h3>Is there a discount for booking early?</h3>
-          <p id="faq-discount-text">Yes &mdash; the first 2 paid guest spots get a Founding Guest discount of 22% off (&euro;1,400 instead of &euro;1,800 per person), as a thank-you for booking before the trip has a track record.</p>
+          <p>Yes &mdash; pricing is tiered by booking date: Early Bird pricing runs through September 15, 2026, Regular pricing through October 25, and Final pricing after that, up until departure. Sharing a room is cheaper than a private room at every tier &mdash; see the <a href="index.html#price-chart" style="color:var(--terracotta);">full pricing chart</a>.</p>
         </div>
         <div class="faq-item">
           <h3>What's the cancellation policy?</h3>
@@ -368,29 +366,16 @@
     const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
     const DEPARTURE_ID = '2026-11-09';
 
+    const TIER_LABELS = { early_bird: 'Early Bird', regular: 'Regular', final: 'Final' };
+
     fetch(API_BASE + '/api/departures')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         const departure = (data.departures || []).find(function(d) { return d.id === DEPARTURE_ID; });
-        if (!departure) return;
-        const hasDiscount = departure.founding_discount_price && departure.founding_discount_remaining > 0;
-        if (hasDiscount) {
-          const badge = document.getElementById('founding-badge');
-          badge.style.display = 'inline-block';
-          badge.textContent = 'Founding Guest discount — first ' + departure.founding_discount_remaining + ' spot' + (departure.founding_discount_remaining === 1 ? '' : 's') + ' only';
-          document.getElementById('pricing-amount').innerHTML =
-            '<span class="festival-book-was">€' + departure.price_per_person + '</span>€' + departure.founding_discount_price;
-          document.getElementById('pricing-per').textContent =
-            'per person for the first ' + departure.founding_discount_remaining + ' guest' + (departure.founding_discount_remaining === 1 ? '' : 's') +
-            ' — then €' + departure.price_per_person + ' · Nov 9–15, 2026, all-inclusive';
-          const pct = Math.round((1 - departure.founding_discount_price / departure.price_per_person) * 100);
-          document.getElementById('faq-discount-text').textContent =
-            'Yes — the first 2 paid guest spots get a Founding Guest discount of ' + pct + '% off (€' + departure.founding_discount_price +
-            ' instead of €' + departure.price_per_person + ' per person), as a thank-you for booking before the trip has a track record.';
-        } else {
-          document.getElementById('pricing-amount').textContent = '€' + departure.price_per_person;
-          document.getElementById('pricing-per').textContent = 'per person · Nov 9–15, 2026, all-inclusive';
-        }
+        if (!departure || !departure.price_shared) return;
+        document.getElementById('pricing-shared').textContent = '€' + departure.price_shared;
+        document.getElementById('pricing-private').textContent = '€' + departure.price_private;
+        document.getElementById('pricing-tier-name').textContent = TIER_LABELS[departure.current_tier] || '';
       })
       .catch(function() { /* leave the static defaults above if the API is unreachable */ });
   </script>
