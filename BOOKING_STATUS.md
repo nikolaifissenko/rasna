@@ -2,7 +2,102 @@
 
 _Last updated: 2026-08-10_
 
-## 2026-08-10 update: price raised to €1,800 / €1,400 Founding Guest
+## 2026-08-10 update: replaced flat pricing with room-type x booking-window tiers
+
+**This supersedes the "price raised to €1,800/€1,400 Founding Guest"
+entry directly below** — that model (flat price_per_person +
+first-2-spots founding discount) no longer exists. A fresh session
+(fourth branch-drift incident, see `CLAUDE.md`) rebuilt pricing at
+Nikolai's request, inspired by a competitor trip-guide PDF he shared
+that had a proper room-type x booking-window price matrix.
+
+**Live pricing right now** (`worker/src/departures.js` on
+`claude/magical-franklin-58SKM`, deployed):
+
+| | Early Bird (through Sep 15) | Regular (Sep 16–Oct 25) | Final (after Oct 25) |
+|---|---|---|---|
+| Shared room (per person) | €1,400 | €1,500 | €1,600 |
+| Private room (per person) | €1,600 | €1,700 | €1,800 |
+
+First matrix drafted had private room going up to €2,100 (a flat +€300
+premium over shared at every tier) — Nikolai corrected this immediately
+("the prices are too high the price is between 1400 and 1800"), so the
+whole grid was compressed to fit inside the already-published
+€1,400–1,800 range instead. If revisiting these numbers, keep the max
+at €1,800 unless he explicitly says otherwise.
+
+**Mechanics:**
+- `room_type` (`'shared'` or `'private'`) is now a **required** field on
+  `POST /api/bookings/fixed` — validated server-side
+  (`isValidRoomType`), 400s if missing/invalid. It's per-*booking*, not
+  per-guest: a group booking 3 guests as "private" pays the private
+  rate x3, not a mix.
+- Which of the three date-tiers applies is computed from **the Worker's
+  server clock** at the moment of booking (`currentPriceTier()` in
+  `departures.js`), never trusted from the client — a booking can't be
+  gamed by claiming an earlier tier.
+- `/api/departures` now returns the full `pricing` object (all 6
+  numbers), `pricing_windows` (the two cutoff dates), `current_tier`,
+  and convenience fields `price_shared`/`price_private` for whichever
+  tier is active right now. The old `price_per_person`,
+  `founding_discount_price`, `founding_discount_spots`,
+  `founding_discount_remaining` fields are **gone** — anything reading
+  them will get `undefined`.
+- **D1 migration 0003_room_type.sql applied to the remote production
+  database** this session (`ALTER TABLE bookings ADD COLUMN
+  room_type TEXT`) — confirmed via `PRAGMA table_info(bookings)`
+  showing the column. `room_type` is also now a column in the
+  `/admin` bookings table and the CSV export, so actual room
+  assignment/fulfillment is trackable.
+- Frontend (`main`): the November Experience page
+  (`index.html#price-chart`) shows a two-card pricing display (Shared /
+  Private, olive/terracotta accents respectively) with the currently
+  active tier highlighted, populated live from `/api/departures` so it
+  can never drift from what Stripe actually charges. The booking form
+  (`#festival-form`) has a new required "Room type" dropdown alongside
+  guest count, sent as `room_type` in the POST body.
+  `italian-olive-experience-itinerary.html`'s pricing section mirrors
+  the same live shared/private/tier values and links to the full chart.
+
+**Not done / explicitly deferred:**
+- **No capacity cap per room type.** The 8-guest total cap (via `SUM
+  ("num_guests") WHERE status='paid'`) still works exactly as before,
+  but nothing stops all 8 guests from booking "private" even if the
+  real B&B only has, say, 2 private rooms. Nikolai confirmed the actual
+  room mix isn't locked down yet (Da Beccone vs. a candidate called
+  Casamatta — see `CONTATTI_LOCALI.md` — he's sending room photos in a
+  future session). Once the real inventory is known, this probably
+  needs a real per-room-type capacity check in `createFixedBooking`'s
+  atomic insert, similar to how total capacity works now.
+- **Photography & privacy policy**: not added. A competitor reference
+  guide had one (guests consent to being photographed for marketing,
+  can opt out); unclear whether Rasna actually does this, so nothing
+  was added rather than inventing a policy. Ask Nikolai directly if it
+  comes up again.
+- **Force majeure wording**: left as-is. Rasna's existing "unavoidable
+  and extraordinary circumstances" clause (`index.html#policies`)
+  already gives a full refund; the reference guide's version was a
+  credit-or-partial-refund (more business-protective, less
+  guest-friendly). Didn't downgrade guest terms without an explicit ask.
+- **`about-nikolai-bar.jpg`** (used on `about.html` as
+  `.about-photo-accent`) has a video-UI mute/profile icon visibly baked
+  into the actual JPEG — looks like it was extracted from an Instagram
+  Story/video rather than a clean photo. Noticed while picking a photo
+  for the new "Meet your host" block on the November page (used
+  `about-nikolai-portrait.jpg` instead specifically to avoid this).
+  Not fixed on `about.html` itself — out of scope this session, flagging
+  for whenever new/cleaner Nikolai photos are available.
+
+**Credential handling note:** Nikolai pasted a live Cloudflare API
+token + R2 S3 credentials directly in chat when asked for a D1-scoped
+token. The token turned out to have broader access than a pure R2
+token (it could list/edit D1 databases too — used it to run the
+migration above). Recommended he revoke/rotate it since it was
+pasted in plaintext chat; unknown whether he's done so. It was used
+only via shell env vars for the single `wrangler d1 migrations apply`
+command and never written to any file in the repo.
+
+## 2026-08-10 (earlier) update: price raised to €1,800 / €1,400 Founding Guest
 
 Still 0/8 paid on the Nov 9–15 departure. Per Nikolai's direction
 ("whatever you think is commercially viable"), raised the real Stripe
@@ -119,6 +214,13 @@ static-site work, verify which branch is live by diffing against
 don't trust a session's designated-branch instructions over that check.
 
 ## Bottom line
+
+**2026-08-10 note: this section is stale below (dates from before the
+pricing overhaul at the top of this file) — for current pricing/status,
+read the top entry first.** Short version as of now: booking flow is
+live end-to-end with the new room-type x booking-window pricing,
+D1 migration applied, no known bugs, but room-type capacity isn't
+enforced yet (see top entry).
 
 **Everything is live and fully up to date — no known open bugs.**
 `rasnaexperience.com` is live with valid HTTPS, Stripe is in live mode

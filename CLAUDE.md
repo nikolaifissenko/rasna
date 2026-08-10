@@ -5,7 +5,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
 **Files:** `index.html` (main landing page) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-04, `italian-olive-experience-itinerary.html` (the full Nov 9–15 day-by-day, split out of `index.html` — see "Planned Events tab" below). `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
-**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off.
+**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off. **It happened a fifth time on 2026-08-10**: a session's designated branch (`claude/website-fixes-0zr2pl`) was, again, descended from the dead `magical-franklin-58SKM` lineage with a bundled `CLAUDE.md` that didn't mention `main` existing at all — caught immediately this time (before writing any content) by diffing the live site against `origin/main` in the first few minutes, so no wasted work. That session went on to do the itinerary restore, the pamphlet-style restructure, and the full pricing-tier rebuild described further down this file and in `BOOKING_STATUS.md`, all correctly against `main` (+ `claude/magical-franklin-58SKM` for the `worker/`-only pricing commit). **The pattern is now five-for-five** — assume any session-assigned branch is stale until proven otherwise by diffing against `origin/main`, don't wait for something to "feel off."
 
 ---
 
@@ -78,6 +78,69 @@ Nav links and the hero's secondary CTA call `showTab(...)` instead of plain anch
 To add a second planned event: duplicate the `.featured-trip` section structure inside `#panel-trips` (or turn the single trip into a card that expands, if there end up being several) — nothing today assumes there's only one.
 
 Cost tracking for the Nov 9–15 departure (confirmed vendor quotes: Tuscia Terme, Il Cavone, Trattoria La Torretta, Tarquinia tombs entry, the Nicolò-hosted panonto BBQ) lives in `ITINERARY_NOV2026.md`, checked against the €310/guest meals+activities budget in `FINANCIAL_PLAN.md`. That doc is operational/internal — none of its cost figures are shown on the live site.
+
+**2026-08-10 (later session): `#festival-week` substantially reworked
+again, superseding several claims in the block above.** Nikolai shared
+screenshots of a competitor's (unrelated business, a yoga retreat)
+trip-guide PDF and asked for "this type of info" plus a pamphlet-style
+structure, then separately said the site needs to open directly on the
+Experience content. Changes, in the order guests now see them within
+`#festival-week`:
+
+1. Header/intro + 4-photo gallery (unchanged from the 2026-08-04 split
+   above).
+2. **"Meet your host"** — moved up here (was much further down) — a
+   compact `.about-content` block (round 200px headshot,
+   `about-nikolai-portrait.jpg`) reusing `about.html`'s existing
+   `.about-photo-main`/`.about-text` classes with an inline size
+   override. Deliberately **just Nikolai**, not a multi-host "meet the
+   team" section — confirmed with him first given the standing
+   correction on that exact framing (see the 2026-08-04 founder-note
+   entry below).
+3. **"What you'll leave with"** — new `.transformation-grid` (3 cards,
+   new CSS class, not `.included-grid`), each now with a colored icon
+   badge + accent border (terracotta/olive/gold) added in the same
+   session after Nikolai said the page looked flat.
+4. A pull-quote (reuses the existing founder line).
+5. **The full day-by-day itinerary is back inline here** (the
+   `.calendar-grid`/`.calendar-mobile-list` markup from
+   `italian-olive-experience-itinerary.html`, copied in, not moved —
+   the standalone page still exists and is still linked, relabeled
+   "View this itinerary as its own page"). Nikolai reported "the
+   itinerary isn't there anymore," which traced back to the 2026-08-04
+   split above leaving only a click-through link.
+6. **"The Place"** (Blera writeup, adapted from already-verified copy
+   in `tuscia-travel-guide.html` — deliberately didn't invent Da
+   Beccone/Casamatta room details that aren't documented anywhere) and
+   **Food** (reuses real itinerary meal details) and **Languages**
+   (Nikolai speaks English/Italian/French/Spanish/Russian, per
+   `about.html`) and **What to pack** — all new, all grounded in facts
+   already established elsewhere in the repo, none invented.
+7. **The pricing cards, then the booking form.** See `BOOKING_STATUS.md`
+   for the full pricing-model rewrite (room type x booking window,
+   replacing the flat price + founding-guest discount entirely) — the
+   visual redesign (two colored cards instead of a plain table) is
+   `.price-cards`/`.price-card` in `style.css`.
+
+**The site-wide `founder-note` section (previously sitting between the
+hero and the tab-switcher, shown regardless of which tab) was deleted
+entirely** — it duplicated the new in-tab "Meet your host" block and
+was adding scroll distance before guests reached any Experience
+content, which Nikolai flagged directly ("when i open the link i have
+to land on the november experience"). The Experience tab was *already*
+the default (`#panel-build` has `display:none` inline, `#panel-trips`
+doesn't), so no tab-switching logic changed — only the redundant
+section above it is gone. If `founder-note`'s CSS classes
+(`.founder-note`, `.founder-note-inner`, etc.) still exist in
+`style.css` unused, that's expected — not worth a cleanup pass on its
+own.
+
+Also fixed: `about-nikolai-bar.jpg` (used on `about.html` as
+`.about-photo-accent`) turned out to have a video-UI mute/profile icon
+visibly baked into the JPEG itself — noticed while picking a photo for
+the new host block, worked around by using `about-nikolai-portrait.jpg`
+there instead. `about.html` itself still has the flawed photo — not
+fixed, out of scope this session.
 
 ---
 
