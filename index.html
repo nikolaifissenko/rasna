@@ -80,7 +80,7 @@
         "name": "What's included in the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Price depends on room type and how early you book, from €1,400 to €2,100 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
+          "text": "Price depends on room type and how early you book, from €1,400 to €1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending."
         }
       },
       {
@@ -149,6 +149,8 @@
       <symbol id="icon-tombpath" viewBox="0 0 24 24"><path d="M3 20 C7 16 9 16 12 12 C15 8 17 8 21 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="3" cy="20" r="1.6" fill="currentColor"/><circle cx="21" cy="4" r="1.6" fill="currentColor"/></symbol>
       <symbol id="icon-wave-sea" viewBox="0 0 24 24"><path d="M2 16 C5 14 7 18 10 16 C13 14 15 18 18 16 C20 15 21 16 22 17 M2 20 C5 18 7 22 10 20 C13 18 15 22 18 20 C20 19 21 20 22 21" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
       <symbol id="icon-pin" viewBox="0 0 24 24"><path d="M12 22 C12 22 19 14.5 19 9 C19 5.1 15.9 2 12 2 C8.1 2 5 5.1 5 9 C5 14.5 12 22 12 22 Z" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+      <symbol id="icon-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+      <symbol id="icon-users" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="9" r="2.8" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 21c0-3.8 3-6 6.5-6s6.5 2.2 6.5 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M15 15.3c2.9.3 5 2.2 5 5.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
       <symbol id="icon-mushroom" viewBox="0 0 24 24"><path d="M4 11 C4 6 8 3 12 3 C16 3 20 6 20 11 C20 12.1 19.1 12 18 12 H6 C4.9 12 4 12.1 4 11 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12 V18 C9 19.7 10.3 21 12 21 C13.7 21 15 19.7 15 18 V12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
       <symbol id="icon-spa" viewBox="0 0 24 24"><path d="M9 10 C9 8 11 8 10 6 C9 4 11 3 11 3 M14 10 C14 8 16 8 15 6 C14 4 16 3 16 3 M3 18 C6 16 8 20 12 18 C16 16 18 20 21 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
       <symbol id="icon-wine" viewBox="0 0 24 24"><path d="M7 3 H17 C17 8 15 11 12 11 C9 11 7 8 7 3 Z M12 11 V19 M8 21 H16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -755,15 +757,18 @@
         <h2>More than a week away.</h2>
       </div>
       <div class="transformation-grid fade-in">
-        <div class="included-item">
+        <div class="included-item included-item-terracotta">
+          <div class="included-item-icon"><svg width="20" height="20"><use href="#icon-pin"/></svg></div>
           <h3>A place in the village, not a seat on a bus</h3>
           <p>Six days as a guest in a real community &mdash; harvesting olives in someone's actual grove, eating dinner cooked in someone's actual home, not watching Blera go by through a window.</p>
         </div>
-        <div class="included-item">
+        <div class="included-item included-item-olive">
+          <div class="included-item-icon"><svg width="20" height="20"><use href="#icon-leaf"/></svg></div>
           <h3>Skills, not just sights</h3>
           <p>Hand-pick olives and taste the oil pressed from your own harvest, make pasta from scratch with the nonne, learn to read 2,800 years of Etruscan history in the tombs it left behind.</p>
         </div>
-        <div class="included-item">
+        <div class="included-item included-item-gold">
+          <div class="included-item-icon"><svg width="20" height="20"><use href="#icon-users"/></svg></div>
           <h3>One set week, one small group</h3>
           <p>Capped at 8 guests, one fixed departure a year, built around the people in it &mdash; not a rotating tour you could join any week of the season.</p>
         </div>
@@ -965,33 +970,47 @@
         <h2>Choose your room, book early, save.</h2>
         <p style="max-width:560px; margin:0 auto; opacity:0.7; font-size:0.95rem;">Price depends on two things: whether you share a room or have your own, and how early you book. Every tier is fully all-inclusive.</p>
       </div>
-      <div class="price-chart-wrap fade-in">
-        <table class="price-chart-table" id="price-chart-table">
-          <thead>
-            <tr>
-              <th></th>
-              <th data-tier="early_bird">Early Bird<span class="price-chart-window">Through Sep 15</span></th>
-              <th data-tier="regular">Regular<span class="price-chart-window">Sep 16&ndash;Oct 25</span></th>
-              <th data-tier="final">Final<span class="price-chart-window">After Oct 25</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Shared room<span class="price-chart-window">per person, sharing a double</span></td>
-              <td data-tier="early_bird" data-room="shared">&euro;1,400</td>
-              <td data-tier="regular" data-room="shared">&euro;1,600</td>
-              <td data-tier="final" data-room="shared">&euro;1,800</td>
-            </tr>
-            <tr>
-              <td>Private room<span class="price-chart-window">per person, your own room</span></td>
-              <td data-tier="early_bird" data-room="private">&euro;1,700</td>
-              <td data-tier="regular" data-room="private">&euro;1,900</td>
-              <td data-tier="final" data-room="private">&euro;2,100</td>
-            </tr>
-          </tbody>
-        </table>
-        <p id="price-chart-note" class="fade-in" style="text-align:center; margin-top:1rem; font-size:0.85rem; opacity:0.65;"></p>
+      <div class="price-cards fade-in" id="price-chart-table">
+        <div class="price-card price-card-shared">
+          <div class="price-card-icon"><svg width="26" height="26"><use href="#icon-users"/></svg></div>
+          <h3>Shared Room</h3>
+          <p class="price-card-sub">Per person, sharing a double</p>
+          <ul class="price-card-tiers">
+            <li data-tier="early_bird" data-room="shared">
+              <span class="pct-name">Early Bird<em>Through Sep 15</em></span>
+              <span class="pct-price">&euro;1,400</span>
+            </li>
+            <li data-tier="regular" data-room="shared">
+              <span class="pct-name">Regular<em>Sep 16&ndash;Oct 25</em></span>
+              <span class="pct-price">&euro;1,500</span>
+            </li>
+            <li data-tier="final" data-room="shared">
+              <span class="pct-name">Final<em>After Oct 25</em></span>
+              <span class="pct-price">&euro;1,600</span>
+            </li>
+          </ul>
+        </div>
+        <div class="price-card price-card-private">
+          <div class="price-card-icon"><svg width="26" height="26"><use href="#icon-user"/></svg></div>
+          <h3>Private Room</h3>
+          <p class="price-card-sub">Per person, your own room</p>
+          <ul class="price-card-tiers">
+            <li data-tier="early_bird" data-room="private">
+              <span class="pct-name">Early Bird<em>Through Sep 15</em></span>
+              <span class="pct-price">&euro;1,600</span>
+            </li>
+            <li data-tier="regular" data-room="private">
+              <span class="pct-name">Regular<em>Sep 16&ndash;Oct 25</em></span>
+              <span class="pct-price">&euro;1,700</span>
+            </li>
+            <li data-tier="final" data-room="private">
+              <span class="pct-name">Final<em>After Oct 25</em></span>
+              <span class="pct-price">&euro;1,800</span>
+            </li>
+          </ul>
+        </div>
       </div>
+      <p id="price-chart-note" class="fade-in" style="text-align:center; margin-top:1.6rem; font-size:0.85rem; opacity:0.65;"></p>
 
       <div class="festival-book fade-in" id="festival-book">
         <div class="section-label">Reserve your spot</div>
@@ -1070,7 +1089,7 @@
         </div>
         <div class="faq-item">
           <h3>What's included in the price?</h3>
-          <p>Price depends on room type and how early you book, from &euro;1,400 to &euro;2,100 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending. See the pricing chart above for the full breakdown.</p>
+          <p>Price depends on room type and how early you book, from &euro;1,400 to &euro;1,800 per person, all-inclusive: accommodation, all meals, guided Etruscan site visits, the olive harvest and Cantine Festival, and local transport. The only extra costs are flights, travel insurance, and personal spending. See the pricing chart above for the full breakdown.</p>
         </div>
         <div class="faq-item">
           <h3>Is there a discount for booking early?</h3>
@@ -1221,8 +1240,8 @@
         if (departure.pricing) {
           ['shared', 'private'].forEach(function(room) {
             ['early_bird', 'regular', 'final'].forEach(function(tier) {
-              const cell = document.querySelector('#price-chart-table td[data-room="' + room + '"][data-tier="' + tier + '"]');
-              if (cell) cell.textContent = '€' + departure.pricing[room][tier];
+              const row = document.querySelector('#price-chart-table li[data-room="' + room + '"][data-tier="' + tier + '"]');
+              if (row) row.querySelector('.pct-price').textContent = '€' + departure.pricing[room][tier];
             });
           });
         }

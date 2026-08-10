@@ -708,27 +708,66 @@
     .included-item p { font-size: 0.83rem; line-height: 1.6; opacity: 0.62; }
 
     .transformation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; max-width: 1080px; margin-left: auto; margin-right: auto; }
+    .transformation-grid .included-item {
+      border-left: none; border-radius: 10px; box-shadow: 0 10px 26px rgba(44,30,18,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .transformation-grid .included-item:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(44,30,18,0.14); }
+    .included-item-icon {
+      width: 42px; height: 42px; border-radius: 50%; margin-bottom: 0.9rem;
+      display: flex; align-items: center; justify-content: center; color: var(--cream);
+    }
+    .included-item-terracotta .included-item-icon { background: var(--terracotta); }
+    .included-item-olive .included-item-icon { background: var(--olive); }
+    .included-item-gold .included-item-icon { background: var(--gold); }
+    .included-item-terracotta { border-top: 3px solid var(--terracotta); }
+    .included-item-olive { border-top: 3px solid var(--olive); }
+    .included-item-gold { border-top: 3px solid var(--gold); }
 
-    /* ── Price chart ── */
-    .price-chart-wrap { max-width: 780px; margin: 2.4rem auto 0; overflow-x: auto; }
-    .price-chart-table { width: 100%; border-collapse: collapse; background: rgba(245,240,232,0.6); }
-    .price-chart-table th, .price-chart-table td {
-      padding: 0.9rem 1rem; text-align: center; border: 1px solid rgba(140,123,102,0.25); font-size: 0.92rem;
+    /* ── Price cards ── */
+    .price-cards {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem;
+      max-width: 760px; margin: 2.6rem auto 0;
     }
-    .price-chart-table th {
-      background: var(--earth); color: var(--tufo); font-weight: 600;
-      font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
+    .price-card {
+      position: relative; background: var(--cream); border-radius: 14px;
+      padding: 2.2rem 1.8rem 1.8rem; text-align: center;
+      box-shadow: 0 14px 34px rgba(44,30,18,0.1);
+      border-top: 5px solid var(--olive);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .price-chart-table td:first-child, .price-chart-table th:first-child {
-      text-align: left; font-weight: 600; color: var(--earth); background: rgba(196,162,101,0.06);
+    .price-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(44,30,18,0.16); }
+    .price-card-private { border-top-color: var(--terracotta); }
+    .price-card-icon {
+      width: 56px; height: 56px; margin: 0 auto 1rem; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--olive); color: var(--cream);
     }
-    .price-chart-table td.price-chart-current { background: rgba(184,89,62,0.14); font-weight: 700; }
-    .price-chart-table th.price-chart-current { background: var(--terracotta); }
-    .price-chart-window {
-      display: block; font-size: 0.68rem; opacity: 0.55; font-weight: 400;
-      text-transform: none; letter-spacing: 0; margin-top: 0.25rem;
+    .price-card-private .price-card-icon { background: var(--terracotta); }
+    .price-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--earth); }
+    .price-card-sub { font-size: 0.78rem; opacity: 0.55; margin: 0.2rem 0 1.5rem; }
+    .price-card-tiers { display: flex; flex-direction: column; gap: 0.6rem; }
+    .price-card-tiers li {
+      display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;
+      padding: 0.65rem 0.9rem; border-radius: 8px; background: rgba(140,123,102,0.08);
+      transition: background 0.2s ease;
     }
-    .price-chart-table td:first-child .price-chart-window { opacity: 0.5; }
+    .price-card-tiers li.price-chart-current {
+      background: var(--olive); color: var(--cream); box-shadow: 0 6px 16px rgba(92,107,60,0.35);
+    }
+    .price-card-private .price-card-tiers li.price-chart-current {
+      background: var(--terracotta); box-shadow: 0 6px 16px rgba(184,89,62,0.35);
+    }
+    .pct-name { text-align: left; font-size: 0.85rem; font-weight: 600; color: var(--earth); }
+    .price-card-tiers li.price-chart-current .pct-name { color: var(--cream); }
+    .pct-name em { display: block; font-style: normal; font-size: 0.68rem; font-weight: 400; opacity: 0.55; margin-top: 0.1rem; }
+    .price-card-tiers li.price-chart-current .pct-name em { opacity: 0.85; }
+    .pct-price { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
+    .price-card-private .pct-price { color: var(--olive); }
+    .price-card-tiers li.price-chart-current .pct-price { color: var(--cream); }
+    @media (max-width: 560px) {
+      .price-cards { grid-template-columns: 1fr; }
+    }
 
     /* ── Trip stats item ── */
     .detail-item .detail-value { font-size: 1.7rem; font-weight: 500; color: var(--terracotta); margin-bottom: 0.2rem; }
