@@ -229,6 +229,31 @@ Real changes shipped this session, redone correctly against `main`:
   anywhere, not just the itinerary page — worth knowing if adding more
   cross-page links into `#panel-build` later.
 
+**Two "the mods aren't live" reports from Nikolai in this same session,
+neither reproduced.** After every push, verified via the GitHub Actions
+`pages build and deployment` run (matched `head_sha`, waited for
+`status: completed` / `conclusion: success`) and then re-fetched the
+live URLs directly with `curl` — every change above was confirmed
+present in the actual served HTML/CSS/JS, with fresh `last-modified`
+timestamps. For the second report ("the itinerary is missing"): diffed
+`curl`'d live `italian-olive-experience-itinerary.html` and `style.css`
+against the local working copy (byte-identical), then rendered the local
+copy in Playwright at both desktop (1000px, `.calendar-grid`) and mobile
+(390px, `.calendar-mobile-list`) widths — full 7-day itinerary present
+and correctly displayed both times, no console/page errors from the
+page's own code. (Playwright can't hit `rasnaexperience.com` directly in
+this sandbox — the proxy resets Chromium's TLS handshake on external
+HTTPS, same issue already noted for Stripe/Google elsewhere in this
+file — hence testing the byte-identical local copy instead.) Also
+confirmed the homepage's "See the full day-by-day itinerary →" link
+(`index.html` line ~757) is present and points to the right file.
+**Conclusion: no defect found in the code or the deployed site.** Most
+likely explanation is a browser/client-side cache on Nikolai's end,
+consistent with the first report. Unresolved: never got a screenshot or
+specific URL from Nikolai showing what he was actually seeing — if this
+comes up again next session, ask for that first before re-doing the
+same verification.
+
 ---
 
 ## Git / deploy
