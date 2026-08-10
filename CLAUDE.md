@@ -254,6 +254,50 @@ specific URL from Nikolai showing what he was actually seeing — if this
 comes up again next session, ask for that first before re-doing the
 same verification.
 
+**Session, 2026-08-10 (later same day, fresh session hit the branch-drift
+trap a fourth time — see top of file).** This session's own bundled
+`CLAUDE.md`/`BOOKING_STATUS.md` (checked into a dead `claude/*` branch)
+still claimed no `main` branch existed at all. Caught it the same way as
+prior incidents: diffed the live site against `origin/main` directly
+before writing anything. Real changes shipped, against `main`:
+- Removed the sentence "I don't do this for the money." from both
+  `index.html`'s founder-note and `about.html`'s blockquote, per
+  Nikolai's explicit instruction to eliminate that exact sentence from
+  all bios. Left the rest of each line intact ("I do it because this
+  place raised me...").
+- **Restored the day-by-day itinerary inline on the November Experience
+  page** (`index.html#festival-week`) — Nikolai reported "the itinerary
+  isn't there anymore," which traces back to the 2026-08-04 split that
+  moved it to its own page (`italian-olive-experience-itinerary.html`)
+  and left only a click-through link. Re-added the full
+  `.calendar-grid`/`.calendar-mobile-list` markup (copied from the
+  standalone page, same icon symbols already defined in `index.html`'s
+  SVG defs) directly into `#festival-week`, kept the standalone page
+  and its link too (relabeled "View this itinerary as its own page" —
+  useful for direct/social sharing, no longer the only place to see it).
+- **Added three new content blocks to `#festival-week`**, after the
+  itinerary: a `.transformation-grid` "What you'll leave with" 3-card
+  benefits section (new CSS class, mirrors `.included-grid`'s pattern
+  but 3 columns, added to the `max-width:600px` mobile breakpoint too),
+  a pull-quote reusing the existing founder line, a "The Place" writeup
+  about Blera (adapted from already-verified copy in
+  `tuscia-travel-guide.html`, not fabricated — deliberately didn't
+  invent specific Da Beccone amenity details that aren't documented
+  anywhere in the repo), and a condensed "Meet your host" block (styled
+  via the existing `.about-content`/`.about-photo-main`/`.about-text`
+  classes from `about.html`, using `about-nikolai-portrait.jpg` — the
+  other Nikolai photo, `about-nikolai-bar.jpg`, has a video-UI mute/
+  profile icon baked into the actual JPEG from wherever it was
+  originally sourced, visible on close inspection; worth swapping out
+  on `about.html` too at some point, not fixed this session since it's
+  out of scope). Prompted by Nikolai sharing screenshots of a
+  competitor's (unrelated business) trip-guide PDF and asking for
+  "this type of info" on the November page. Deliberately **did not**
+  build a multi-host "meet the team" grid featuring local partners
+  (Maria Grazia, Davide, Emiliano) — confirmed with Nikolai first given
+  the standing correction on that exact framing (see the 2026-08-04
+  founder-note entry above); he chose "just you, reframed."
+
 ---
 
 ## Git / deploy
