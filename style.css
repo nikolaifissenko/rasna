@@ -707,6 +707,8 @@
     .included-item h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--earth); }
     .included-item p { font-size: 0.83rem; line-height: 1.6; opacity: 0.62; }
 
+    .transformation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; margin-top: 2rem; max-width: 1080px; margin-left: auto; margin-right: auto; }
+
     /* ── Trip stats item ── */
     .detail-item .detail-value { font-size: 1.7rem; font-weight: 500; color: var(--terracotta); margin-bottom: 0.2rem; }
     .detail-item .detail-label { font-size: 0.64rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--stone); font-weight: 600; }
@@ -859,6 +861,7 @@
       .itinerary-grid { grid-template-columns: 1fr; }
       .trip-stats { grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
       .included-grid { grid-template-columns: 1fr; }
+      .transformation-grid { grid-template-columns: 1fr; }
       .contact-form .form-row { grid-template-columns: 1fr; }
       .category-header h3 { font-size: 1.3rem; }
     }
