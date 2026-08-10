@@ -16,9 +16,12 @@ export const DEPARTURES = [
     // `room_type` on a booking is per-booking, not per-guest — a group
     // books entirely as "private" (each guest gets/pays for their own
     // room) or entirely as "shared" (guests pair up into doubles).
+    // Kept the whole matrix inside the already-published €1,400–1,800
+    // range (2026-08-10, per Nikolai) rather than the private room
+    // pushing above it.
     pricing: {
-      shared: { early_bird: 1400, regular: 1600, final: 1800 },
-      private: { early_bird: 1700, regular: 1900, final: 2100 },
+      shared: { early_bird: 1400, regular: 1500, final: 1600 },
+      private: { early_bird: 1600, regular: 1700, final: 1800 },
     },
     // Inclusive cutoffs: a booking made on early_bird_until's date still
     // gets the early_bird price; the day after rolls into "regular".
