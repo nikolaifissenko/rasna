@@ -730,6 +730,27 @@
     .included-item-olive { border-top: 3px solid var(--olive); }
     .included-item-gold { border-top: 3px solid var(--gold); }
 
+    /* ── Itinerary at-a-glance + collapsible full grid ── */
+    .itinerary-glance {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 0.9rem;
+      max-width: 900px; margin: 3rem auto 0; padding: 0 1rem;
+    }
+    .itinerary-glance-item {
+      font-size: 0.82rem; padding: 0.5rem 0.9rem; background: rgba(196,162,101,0.1);
+      border-radius: 20px; white-space: nowrap;
+    }
+    .itinerary-glance-item strong { color: var(--terracotta); margin-right: 0.35rem; }
+    .itinerary-details { max-width: 1080px; margin: 1.8rem auto 0; text-align: center; }
+    .itinerary-details summary {
+      cursor: pointer; list-style: none; display: inline-block;
+      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--terracotta);
+      border-bottom: 1px solid currentColor; padding-bottom: 2px; user-select: none;
+    }
+    .itinerary-details summary::-webkit-details-marker { display: none; }
+    .itinerary-details[open] summary { margin-bottom: 2rem; }
+    .itinerary-details .calendar-grid-wrap,
+    .itinerary-details .calendar-mobile-list { text-align: left; }
+
     /* ── Quote band (full-bleed color break) ── */
     .quote-band {
       width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
