@@ -8,6 +8,7 @@
       --deep:       #160F09;
       --olive:      #5C6B3C;
       --rust:       #9B3D2B;
+      --wine:       #6B1F2A;
       --card-bg:    #FBF7EF;
     }
 
@@ -204,6 +205,10 @@
       font-family: 'Bodoni Moda', serif; font-style: italic;
       font-size: 1.15rem; color: var(--terracotta); opacity: 0.85; margin-top: -0.3rem;
     }
+    .drop-cap::first-letter {
+      font-family: 'Bodoni Moda', serif; font-weight: 700; font-size: 3.4rem;
+      float: left; line-height: 0.8; padding: 0.1rem 0.5rem 0 0; color: var(--wine);
+    }
 
     /* ── Itinerary calendar grid (days across the top, time-of-day rows down) ── */
     #festival-week .section-wide { max-width: 1300px; }
@@ -287,8 +292,12 @@
 
     /* ── Festival week booking form (light theme, standalone) ── */
     .festival-book {
-      max-width: 560px; margin: 3.5rem auto 0; text-align: left;
-      background: var(--card-bg); border: 1.5px solid var(--tufo); padding: 2.6rem 2.2rem;
+      max-width: 560px; margin: 3.5rem auto 0; text-align: left; position: relative;
+      background: var(--card-bg); border: 1px solid var(--gold); padding: 2.6rem 2.2rem;
+    }
+    .festival-book::before {
+      content: ''; position: absolute; inset: 7px;
+      border: 1px solid var(--terracotta); opacity: 0.3; pointer-events: none;
     }
     .festival-book h3 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.6rem; color: var(--earth); }
     .festival-book > p { font-size: 0.88rem; opacity: 0.68; font-weight: 300; line-height: 1.6; margin-bottom: 1.8rem; }
@@ -338,7 +347,7 @@
 
     /* ── Etruscan borders ── */
     .etruscan-border, .etruscan-border-dark {
-      height: 26px;
+      height: 34px;
       display: flex; justify-content: center; align-items: center; overflow: hidden;
     }
     .etruscan-border { background: var(--cream); }
@@ -725,31 +734,10 @@
     }
     .included-item-terracotta .included-item-icon { background: var(--terracotta); }
     .included-item-olive .included-item-icon { background: var(--olive); }
-    .included-item-gold .included-item-icon { background: var(--gold); }
+    .included-item-wine .included-item-icon { background: var(--wine); }
     .included-item-terracotta { border-top: 3px solid var(--terracotta); }
     .included-item-olive { border-top: 3px solid var(--olive); }
-    .included-item-gold { border-top: 3px solid var(--gold); }
-
-    /* ── Itinerary at-a-glance + collapsible full grid ── */
-    .itinerary-glance {
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 0.9rem;
-      max-width: 900px; margin: 3rem auto 0; padding: 0 1rem;
-    }
-    .itinerary-glance-item {
-      font-size: 0.82rem; padding: 0.5rem 0.9rem; background: rgba(196,162,101,0.1);
-      border-radius: 20px; white-space: nowrap;
-    }
-    .itinerary-glance-item strong { color: var(--terracotta); margin-right: 0.35rem; }
-    .itinerary-details { max-width: 1080px; margin: 1.8rem auto 0; text-align: center; }
-    .itinerary-details summary {
-      cursor: pointer; list-style: none; display: inline-block;
-      font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; color: var(--terracotta);
-      border-bottom: 1px solid currentColor; padding-bottom: 2px; user-select: none;
-    }
-    .itinerary-details summary::-webkit-details-marker { display: none; }
-    .itinerary-details[open] summary { margin-bottom: 2rem; }
-    .itinerary-details .calendar-grid-wrap,
-    .itinerary-details .calendar-mobile-list { text-align: left; }
+    .included-item-wine { border-top: 3px solid var(--wine); }
 
     /* ── Quote band (full-bleed color break) ── */
     .quote-band {
