@@ -724,6 +724,18 @@
     .included-item-olive { border-top: 3px solid var(--olive); }
     .included-item-gold { border-top: 3px solid var(--gold); }
 
+    /* ── Quote band (full-bleed color break) ── */
+    .quote-band {
+      width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+      background: var(--rust); color: var(--cream); text-align: center;
+      padding: 3.6rem 2rem; margin-top: 4rem;
+    }
+    .quote-band blockquote {
+      font-family: 'Bodoni Moda', serif; font-style: italic; font-weight: 500;
+      font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.55;
+      max-width: 720px; margin: 0 auto; color: var(--cream);
+    }
+
     /* ── Price cards ── */
     .price-cards {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.8rem;
