@@ -4,7 +4,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
-**Files:** `index.html` (main landing page) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-04, `italian-olive-experience-itinerary.html` (the full Nov 9–15 day-by-day, split out of `index.html` — see "Planned Events tab" below). `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
+**Files:** `index.html` (main landing page, incl. the November Experience *hub*) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-11, a full **family of five dedicated November Experience pages** — `italian-olive-experience-itinerary.html` (since 2026-08-04), `italian-olive-experience-host.html`, `italian-olive-experience-highlights.html`, `italian-olive-experience-pricing.html`, `italian-olive-experience-faq.html` (all four new 2026-08-11) — see "**Current architecture of the November Experience pages**" below, read that before touching any of them, most of the older "Planned Events tab" section further down is superseded by it. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
 **Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off. **It happened a fifth time on 2026-08-10**: a session's designated branch (`claude/website-fixes-0zr2pl`) was, again, descended from the dead `magical-franklin-58SKM` lineage with a bundled `CLAUDE.md` that didn't mention `main` existing at all — caught immediately this time (before writing any content) by diffing the live site against `origin/main` in the first few minutes, so no wasted work. That session went on to do the itinerary restore, the pamphlet-style restructure, and the full pricing-tier rebuild described further down this file and in `BOOKING_STATUS.md`, all correctly against `main` (+ `claude/magical-franklin-58SKM` for the `worker/`-only pricing commit). **The pattern is now five-for-five** — assume any session-assigned branch is stale until proven otherwise by diffing against `origin/main`, don't wait for something to "feel off."
 
 ---
@@ -15,7 +15,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 - Group size: **8 people max**
 - Formspree endpoint: `https://formspree.io/f/xlgynpjo`
 - Contact email: `nikolai.fissenko1@gmail.com`
-- Design language: warm editorial (cream/tufo/terracotta/gold on dark earth-tone sections), Cormorant Garamond + Inter, Etruscan meander/palmette SVG ornaments — **not** the old terra/sienna/lozenge-grid design (that version was replaced this session, see below)
+- Design language (as of 2026-08-11, superseding older entries below): **Bodoni Moda** (display/headers, swapped in from Cormorant Garamond) + Inter (body), warm Italian earth-tone palette (`--tufo`/`--terracotta`/`--earth`/`--gold`/`--stone`/`--cream`/`--deep`/`--olive`/`--rust`/`--wine`), Etruscan meander pattern **plus** a new olive-branch SVG pattern, drop caps, document-style double-border frames on price cards, a rotated dashed "passport stamp" badge (`.featured-trip-badge`), fully pill-shaped buttons (`border-radius:999px` on `.cta-button`/`.cta-button-solid`/`.nav-btn`) for a more playful feel per Nikolai's "needs to be more fun" note. **No em dashes anywhere on the live site** — removed sitewide 2026-08-11 per explicit instruction ("remove all — it makes it look like ai"), rewritten grammatically, legitimate en-dash numeric ranges (e.g. "9–15") were left alone. **Known Chromium rendering gotcha**: hiding the shared `<svg><defs>` block (meander/palmette/olive-branch patterns) with `style="display:none"` silently breaks every `<pattern>` fill that references it in this sandbox's Chromium build — use `width="0" height="0" style="position:absolute"` instead, confirmed via pixel-sampled screenshots. All 6+ pages use the fixed technique; if adding a new page by copying an old one, copy the SVG-defs block from a page already on `main`, not from memory.
 
 ---
 
@@ -56,6 +56,100 @@ On 2026-07-12, `moment-2.jpg`, `moment-3.jpg`, and the new `card-etruscantombs.j
 Known dead ends: Facebook and Instagram photo links reliably fail to resolve (auth-walled) — don't spend time retrying those, ask for a different source.
 
 **Image weight cut ~40% (2026-08-04):** several photos were saved as PNG instead of JPEG for no reason (`moment-11.png` alone was 1.7MB) and several JPGs were oversized for their actual display dimensions (`card-foraging.jpg` was 551KB at 768×432). Converted the PNGs to quality-82 JPEG and re-encoded the worst offenders (same filenames, same content, just smaller), bringing `images/` from 16.1MB to 9.7MB total, verified visually side-by-side before shipping (no quality regression). Also added `loading="lazy"` to the itinerary day-photo `<img>` tags. If adding new photos, save as JPEG (not PNG) unless real transparency is needed, and don't upload originals straight out of a phone/camera without checking file size first.
+
+---
+
+## Current architecture of the November Experience pages (as of 2026-08-11)
+
+**Read this section first for anything touching the November 9–15
+departure's site content.** The "Planned Events tab" section right below
+this one describes the *history* of how this content moved around
+(single page → single page with everything inline → split into a
+family of pages) and is kept for context, but large parts of it
+describe an intermediate state that no longer exists. This section is
+the definitive current picture.
+
+**Site-wide hero, not per-page:** the hook line **"No more TikTok
+itineraries."** (`.hero-hook`) lives on the main site hero (`index.html
+#top`, shown regardless of tab), not on the November-specific content —
+moved there 2026-08-10 after Nikolai clarified "not the november tour."
+The hero's primary CTA (`Book the Nov 9 to 15 Italian Olive Experience`)
+is a **direct link** to `italian-olive-experience-pricing.html#festival-book`
+— per "when you open the page it needs to go straight to the booking of
+november," it no longer routes through `showTab()`/an in-page anchor.
+
+**`index.html`'s `#festival-week` is now a hub, not the full content.**
+It contains, in order: the badge/label/`<h2>`/subtitle/drop-cap intro
+(`#festival-calendar`), the 4-photo `.festival-gallery`, a shared
+sub-nav bar, and a 5-card `.hub-links-grid` (`.hub-link-card`) linking
+out to each dedicated page below. **Everything else that used to live
+inline here — the host bio, the "what you'll leave with" transformation
+grid, the full day-by-day itinerary, the price cards, and the booking
+form — has been moved to its own page.** The live pricing-fetch script
+and the `festival-form` submit handler were removed from `index.html`
+entirely (dead code once the form moved) — don't re-add them there,
+they now live on `italian-olive-experience-pricing.html`.
+
+**The five dedicated pages**, each following the same template pattern
+(head meta/OG/Twitter/`BreadcrumbList` JSON-LD, shared SVG defs, sticky
+`.site-nav`, then a sub-nav bar, then page content, then footer + the
+fade-in `IntersectionObserver` script):
+- `italian-olive-experience-host.html` — Nikolai's bio, reusing
+  `about.html`'s photo/text classes, links out to `about.html` for the
+  full story and to `-highlights.html` as a closing CTA.
+- `italian-olive-experience-highlights.html` — the "You'll leave with
+  more than a vacation." 3-card `.transformation-grid` (terracotta/
+  olive/wine accents), links out to `-itinerary.html`.
+- `italian-olive-experience-itinerary.html` — unchanged content (full
+  day-by-day, since 2026-08-04), now also carries the sub-nav and its
+  internal pricing/booking links point at `-pricing.html` instead of
+  `index.html#price-chart`/`#festival-book` (those anchors no longer
+  exist on `index.html`).
+- `italian-olive-experience-pricing.html` — the `.price-frame`/
+  `.price-cards` two-axis pricing display **and** the real `#festival-form`
+  booking form + its Stripe-checkout JS (ported verbatim from the old
+  `index.html#festival-book`, same `API_BASE`/`DEPARTURE_ID` pattern).
+  **The founder pull-quote (`.quote-band`) lives here too, right after
+  the booking form** — per Nikolai's explicit placement request from
+  earlier in the multi-page work ("this quote after the booking"),
+  carried forward into the new architecture rather than left behind on
+  the hub page.
+- `italian-olive-experience-faq.html` — the FAQ list + the site's only
+  `FAQPage` JSON-LD block now (removed from `index.html`'s `<head>`
+  since the hub no longer has matching visible FAQ content — mismatched
+  structured data is bad practice, don't re-add it there without also
+  re-adding the visible FAQ text).
+
+**Shared sub-nav component** (`.exp-subnav-wrap`/`.exp-subnav` in
+`style.css`, right before the `/* Tab switcher */` block): a pill-link
+row — Overview / Your Host / Highlights / Itinerary / Pricing & Booking
+/ FAQ — with the current page marked `.active`. Present on all 6 pages
+(the `index.html` hub's "Overview" link is the only one that stays
+in-page, calling `showTab('trips','festival-week')` since it's inside
+the tab-switcher panel; the other 5 are plain `<a href>` between
+standalone files). If adding a 7th page to this family, add it to the
+nav on **all six** existing pages, not just the new one.
+
+**Nav-link housekeeping done alongside the split:** the main `.site-nav`
+"FAQ" link now points straight at `italian-olive-experience-faq.html`
+instead of `showTab('trips','faq')` (that anchor's gone from
+`index.html`). Every other page on the site that linked to a now-moved
+`index.html` anchor (`#festival-book`, `#price-chart`, `#faq`) was
+found via grep and repointed at the new dedicated page —
+`etruscan-tombs-guide.html`'s "Read next" FAQ link was the one
+straggler found and fixed. `sitemap.xml` has all 4 new URLs. If you add
+a new cross-link to the November content anywhere on the site, link to
+the specific dedicated page, not `index.html#some-anchor` — most of
+those anchors don't exist anymore.
+
+**Verification method used for this split** (worth reusing for future
+multi-page work): a Python tag-balance check (`<div>`/`<section>`/
+`<nav>`/`<form>`/`<footer>` open vs. close counts) across all 6 files,
+then Playwright screenshots of each page at both its top and its
+mid-page content (subnav, hub cards, price cards, booking form) via
+local `file://` URLs — the sandbox's proxy can't reach the live domain
+or Google Fonts, so `net::ERR_CONNECTION_RESET` on the fonts request in
+the console is expected/harmless, but a real `pageerror` is not.
 
 ---
 
@@ -360,6 +454,77 @@ before writing anything. Real changes shipped, against `main`:
   (Maria Grazia, Davide, Emiliano) — confirmed with Nikolai first given
   the standing correction on that exact framing (see the 2026-08-04
   founder-note entry above); he chose "just you, reframed."
+
+**Session, 2026-08-11.** No branch-drift this time — session's
+designated branch (`claude/website-fixes-0zr2pl`) was checked against
+`origin/main` immediately per the standing instruction above, and all
+real work was done in fresh clones of `main` (frontend) as usual.
+Picked up mid-session from a prior context window's work (the pricing
+overhaul, aesthetic rounds, and hero-hook placement documented in the
+2026-08-10 entries above and the Standing rules were already live).
+This session's own changes, roughly in the order they happened:
+- **Aesthetic**: multiple rounds of "make it more Italian" feedback
+  landed as the font swap to Bodoni Moda, the wine/rust color
+  additions, drop caps, the document-frame price-card border, and
+  finally an olive-branch SVG motif (after a red-and-white-stripe
+  treatment was explicitly rejected as too on-the-nose). Then "the site
+  needs to be more fun" landed as pill-shaped buttons and the rotated
+  passport-stamp departure badge.
+- **Discovered and fixed a real Chromium/sandbox rendering bug**: the
+  technique used to hide the shared SVG `<defs>` block
+  (`style="display:none"`) silently breaks every `<pattern>` fill that
+  references it — meaning the meander divider pattern had never
+  actually rendered on any page, all session, despite earlier commit
+  messages claiming it worked. Root-caused with isolated test files,
+  fixed by switching to `width="0" height="0" style="position:absolute"`
+  on all affected pages — see the Design language entry above.
+- **Em dashes removed sitewide** ("remove all — it makes it look like
+  ai") — rewritten grammatically page by page, legitimate en-dash
+  ranges (date spans, price ranges) left alone.
+- Reverted an itinerary-collapse UX experiment (`<details>`/"at a
+  glance" pills) built in response to a length complaint — Nikolai
+  preferred the itinerary fully visible, no toggle; reverted cleanly,
+  unused CSS removed.
+- Moved the founder pull-quote to sit after the booking form rather
+  than before the itinerary, per explicit request.
+- Hero copy iteration with a designer-friend's relayed feedback (page
+  too long, lead with the USP, more emotion) landed as the "No more
+  TikTok itineraries." hook — first tried on the November section,
+  corrected to belong on the **site-wide** hero instead ("not the
+  november tour").
+- "You'll leave with more than a vacation." became the transformation
+  section's headline, per direct instruction.
+- Hero CTA changed to jump straight to booking on page load, per "when
+  you open the page it needs to go straight to the booking of
+  november."
+- **The big one: split the November Experience content into its own
+  family of pages** ("all the sections i want them to be different
+  pages," confirmed scope = everything including pricing/booking, nav
+  style = a top sub-nav linking each page). Built
+  `italian-olive-experience-{host,highlights,pricing,faq}.html`,
+  rebuilt `index.html#festival-week` into a hub with link-out cards,
+  added the sub-nav to all 6 pages in the family, fixed every
+  cross-link site-wide that pointed at a now-moved `index.html` anchor,
+  updated `sitemap.xml`. Full detail in the new "Current architecture
+  of the November Experience pages" section above — read that, not
+  this bullet list, before editing any of these pages.
+- Verified all 6 pages (tag-balance check + Playwright screenshots,
+  method described in the architecture section above) before
+  committing. One commit, pushed directly to `main`, per the standing
+  "push and go live immediately" instruction.
+
+**Nothing outstanding from this session specifically** — the split is
+complete and live. Open items carried forward unchanged (see
+`BOOKING_STATUS.md` for the booking/pricing ones): room-type capacity
+still not enforced, room photos for Da Beccone/Casamatta still
+pending from Nikolai, `about-nikolai-bar.jpg`'s baked-in video-UI
+artifact still not fixed (note: it's now also used as the hero
+background on `italian-olive-experience-host.html` — cropped/darkened
+enough there that the artifact isn't visible, but worth swapping for a
+clean photo whenever one's available), Google Search Console/PageSpeed
+follow-ups from the 2026-08-03/2026-08-04 entries were never
+re-confirmed one way or the other — ask Nikolai directly rather than
+assuming either way if it comes up.
 
 ---
 

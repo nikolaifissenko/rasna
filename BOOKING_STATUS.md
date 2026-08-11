@@ -1,6 +1,31 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-10_
+_Last updated: 2026-08-11_
+
+## 2026-08-11 update: booking form moved off index.html onto its own page
+
+**No backend/pricing changes this update** — this is a frontend
+location change only, flagged here because it affects where the
+booking flow actually lives. `index.html` was split into a family of
+dedicated November Experience pages (see `CLAUDE.md`'s "Current
+architecture of the November Experience pages" for the full picture).
+As part of that:
+- The live `#festival-form` booking form and the `.price-cards`
+  pricing display — previously inline on `index.html` at
+  `#festival-book`/`#price-chart` — now live on
+  **`italian-olive-experience-pricing.html`**, same element IDs
+  (`#festival-book`, `#price-chart-table`, etc.), same
+  `fetch('/api/departures')` + `POST /api/bookings/fixed` JS, ported
+  verbatim. **No API/Worker changes** — this page hits the exact same
+  endpoints the old inline form did.
+- `index.html` no longer has a booking form or price chart at all — it
+  links out to the new page instead. If debugging "the booking form
+  isn't showing on the homepage," that's expected now, not a bug.
+- The founder pull-quote (`.quote-band`) also moved, to right after the
+  booking form on the new pricing page.
+- `italian-olive-experience-itinerary.html`'s own mini pricing section
+  (added 2026-08-10) now links to `italian-olive-experience-pricing.html`
+  instead of `index.html#price-chart`/`#festival-book`.
 
 ## 2026-08-10 update: replaced flat pricing with room-type x booking-window tiers
 
