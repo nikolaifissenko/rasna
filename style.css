@@ -170,6 +170,24 @@
     }
     .olive-band svg { height: 30px; width: 100%; }
 
+    /* ── Experience sub-nav (cross-links between the November Experience pages) ── */
+    .exp-subnav-wrap {
+      background: var(--cream); border-bottom: 1px solid rgba(140,123,102,0.2);
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+    }
+    .exp-subnav {
+      display: flex; justify-content: center; gap: 0.4rem;
+      max-width: 1080px; margin: 0 auto; padding: 0.9rem 1.5rem;
+      white-space: nowrap;
+    }
+    .exp-subnav a {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--stone); text-decoration: none; padding: 0.5rem 0.9rem; border-radius: 999px;
+      transition: all 0.2s;
+    }
+    .exp-subnav a:hover { color: var(--terracotta); background: rgba(184,89,62,0.08); }
+    .exp-subnav a.active { color: #fff; background: var(--terracotta); }
+
     /* ── Tab switcher ── */
     .tab-switcher-wrap {
       background: var(--deep); display: flex; justify-content: center;
@@ -747,6 +765,42 @@
     .included-item-terracotta { border-top: 3px solid var(--terracotta); }
     .included-item-olive { border-top: 3px solid var(--olive); }
     .included-item-wine { border-top: 3px solid var(--wine); }
+
+    /* ── Experience hub link-out cards ── */
+    .hub-links-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem;
+      margin-top: 3.5rem; max-width: 1080px; margin-left: auto; margin-right: auto;
+    }
+    .hub-link-card {
+      display: block; text-decoration: none; padding: 2rem 1.6rem;
+      background: rgba(245,240,232,0.6); border-top: 3px solid var(--terracotta);
+      border-radius: 10px; box-shadow: 0 10px 26px rgba(44,30,18,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .hub-link-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(44,30,18,0.14); }
+    .hub-link-card:nth-child(2) { border-top-color: var(--olive); }
+    .hub-link-card:nth-child(3) { border-top-color: var(--wine); }
+    .hub-link-card:nth-child(4) { border-top-color: var(--gold); }
+    .hub-link-card:nth-child(5) { border-top-color: var(--rust); }
+    .hub-link-card-icon {
+      width: 42px; height: 42px; border-radius: 50%; margin-bottom: 0.9rem; background: var(--terracotta);
+      display: flex; align-items: center; justify-content: center; color: var(--cream);
+    }
+    .hub-link-card-icon-text { font-family: 'Bodoni Moda', serif; font-size: 1.3rem; font-weight: 700; }
+    .hub-link-card:nth-child(2) .hub-link-card-icon { background: var(--olive); }
+    .hub-link-card:nth-child(3) .hub-link-card-icon { background: var(--wine); }
+    .hub-link-card:nth-child(4) .hub-link-card-icon { background: var(--gold); }
+    .hub-link-card:nth-child(5) .hub-link-card-icon { background: var(--rust); }
+    .hub-link-card h3 { font-family: 'Bodoni Moda', serif; font-size: 1.25rem; font-weight: 600; color: var(--earth); margin-bottom: 0.5rem; }
+    .hub-link-card p { font-size: 0.83rem; line-height: 1.6; opacity: 0.65; color: var(--earth); margin-bottom: 1rem; }
+    .hub-link-card-arrow { display: block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--terracotta); }
+
+    @media (max-width: 860px) {
+      .hub-links-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px) {
+      .hub-links-grid { grid-template-columns: 1fr; }
+    }
 
     /* ── Quote band (full-bleed color break) ── */
     .quote-band {
