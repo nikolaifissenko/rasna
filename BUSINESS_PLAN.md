@@ -124,7 +124,7 @@ These aren't separate attractions to manage — they're moments the town already
 - Deployed via GitHub Pages (branch-based deploy from `main`)
 - Form submissions via Formspree (https://formspree.io/f/xlgynpjo)
 - Auto-translates to visitor's browser language (EN, IT, DE, FR, ES, NL)
-- Etruscan-inspired brand identity (terracotta, earth tones, Cormorant Garamond)
+- Etruscan-inspired brand identity (olive green, bordeaux, earth tones, Cormorant Garamond)
 
 **Activities on the landing page (client-facing, finalized):**
 
