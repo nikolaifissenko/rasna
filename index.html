@@ -231,6 +231,33 @@
     }
     .cta-button:hover { background: var(--gold); color: var(--deep); }
 
+    .hero-departure {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 1.6rem 0 0;
+      padding: 0.5rem 1.1rem;
+      border: 1px solid rgba(168,173,110,0.4);
+      border-radius: 999px;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      color: var(--tufo);
+      opacity: 0.92;
+    }
+    .hero-departure-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .hero-departure strong { color: var(--gold); font-weight: 600; }
+
+    .hero-ctas { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; }
+    .cta-secondary {
+      color: var(--tufo);
+      opacity: 0.6;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-size: 0.82rem;
+      font-weight: 300;
+    }
+    .cta-secondary:hover { opacity: 0.9; }
+
     /* ── Sticky nav ── */
     .site-nav {
       position: sticky; top: 0; z-index: 50;
@@ -704,8 +731,15 @@
       <div class="divider"></div>
       <svg class="etruscan-ornament" width="50" height="38" style="color:var(--gold); margin-bottom:0.8rem"><use href="#palmette"/></svg>
       <h1>Rasna</h1>
+      <div class="hero-departure" id="hero-departure">
+        <span class="hero-departure-dot"></span>
+        <span>Next departure: <strong>November 9&ndash;15, 2026</strong></span>
+      </div>
       <p class="tagline">We believe travel can change you, and that only happens when you stop watching from a distance and start belonging, even for a week. We just happen to do this in Blera, a 2,800-year-old Etruscan hill town in Italy's Tuscia: olive harvests, ancient tombs, horseback rides through ruins.</p>
-      <a href="#catalog" class="cta-button">Build your expedition</a>
+      <div class="hero-ctas">
+        <a href="#contact" class="cta-button" onclick="switchTab('fixed')">Reserve your spot &mdash; Nov 9&ndash;15</a>
+        <a href="#catalog" class="cta-secondary">or build your own itinerary</a>
+      </div>
     </div>
   </section>
 
@@ -1242,10 +1276,13 @@
       const guestSelect = document.getElementById('fixed-guests');
       const submitBtn = document.getElementById('fixed-submit-btn');
 
+      const heroDeparture = document.getElementById('hero-departure');
+
       if (!currentDeparture) {
         card.innerHTML = '<div class="departure-title">No fixed departure is currently open for booking.</div><p style="opacity:0.6;font-size:0.85rem;margin-top:0.5rem">Try the "Choose Your Own Dates" tab instead.</p>';
         guestSelect.innerHTML = '';
         submitBtn.disabled = true;
+        if (heroDeparture) heroDeparture.style.display = 'none';
         return;
       }
 
@@ -1253,6 +1290,10 @@
       const soldOut = d.remaining <= 0;
       const badgeClass = soldOut ? 'soldout' : (d.remaining <= 2 ? 'low' : 'available');
       const badgeText = soldOut ? 'Fully booked' : (d.remaining + ' spot' + (d.remaining === 1 ? '' : 's') + ' left of ' + d.capacity);
+
+      if (heroDeparture) {
+        heroDeparture.innerHTML = '<span class="hero-departure-dot"></span><span>Next departure: <strong>' + d.label + '</strong> &middot; ' + (soldOut ? 'fully booked' : d.remaining + ' spot' + (d.remaining === 1 ? '' : 's') + ' left') + '</span>';
+      }
 
       const hasDiscount = d.founding_discount_price && d.founding_discount_remaining > 0;
       const priceMeta = hasDiscount
