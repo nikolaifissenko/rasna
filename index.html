@@ -129,14 +129,14 @@
   <style>
     :root {
       --tufo:       #E5D8C2;
-      --terracotta: #B8593E;
-      --earth:      #2C1E12;
-      --gold:       #C4A265;
-      --stone:      #8C7B66;
+      --terracotta: #6B2436;
+      --earth:      #211E15;
+      --gold:       #A8AD6E;
+      --stone:      #7C7A5C;
       --cream:      #F2EBDD;
-      --deep:       #160F09;
+      --deep:       #170B0D;
       --olive:      #5C6B3C;
-      --rust:       #9B3D2B;
+      --rust:       #4E1A26;
       --card-bg:    #FBF7EF;
     }
 
@@ -164,7 +164,7 @@
       align-items: center;
       text-align: center;
       padding: 4rem 2rem;
-      background: radial-gradient(ellipse at 50% 0%, #2a1c10 0%, var(--deep) 60%);
+      background: radial-gradient(ellipse at 50% 0%, #2a1015 0%, var(--deep) 60%);
       color: var(--tufo);
       position: relative;
       overflow: hidden;
@@ -176,7 +176,7 @@
       inset: 0;
       background:
         radial-gradient(ellipse at 15% 85%, rgba(92,107,60,0.18) 0%, transparent 50%),
-        radial-gradient(ellipse at 85% 15%, rgba(184,89,62,0.15) 0%, transparent 50%);
+        radial-gradient(ellipse at 85% 15%, rgba(107,36,54,0.15) 0%, transparent 50%);
       pointer-events: none;
     }
 
@@ -200,7 +200,7 @@
       text-transform: uppercase;
       margin-bottom: 0.4em;
       color: var(--gold);
-      text-shadow: 0 2px 24px rgba(196,162,101,0.25);
+      text-shadow: 0 2px 24px rgba(168,173,110,0.25);
     }
 
     .hero .tagline {
@@ -236,9 +236,9 @@
       position: sticky; top: 0; z-index: 50;
       display: flex; align-items: center; justify-content: space-between;
       padding: 0.9rem 1.6rem;
-      background: rgba(22,15,9,0.94);
+      background: rgba(23,11,13,0.94);
       backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(196,162,101,0.15);
+      border-bottom: 1px solid rgba(168,173,110,0.15);
     }
     .site-nav .nav-logo {
       font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; letter-spacing: 0.1em;
@@ -266,7 +266,7 @@
     /* ── Catalog quick nav ── */
     .catalog-quicknav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-bottom: 3rem; }
     .catalog-quicknav a {
-      padding: 0.5rem 1.1rem; border: 1px solid rgba(140,123,102,0.3); border-radius: 999px;
+      padding: 0.5rem 1.1rem; border: 1px solid rgba(124,122,92,0.3); border-radius: 999px;
       color: var(--earth); text-decoration: none; font-size: 0.78rem; opacity: 0.75; transition: all 0.2s;
     }
     .catalog-quicknav a:hover { border-color: var(--terracotta); color: var(--terracotta); opacity: 1; }
@@ -274,7 +274,7 @@
     /* ── Trip stats (merged into What's Included) ── */
     .trip-stats {
       display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; text-align: center;
-      margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid rgba(140,123,102,0.25);
+      margin-top: 2.6rem; padding-top: 2.2rem; border-top: 1px solid rgba(124,122,92,0.25);
     }
 
     /* ── Etruscan borders ── */
@@ -323,13 +323,13 @@
     .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 2.8rem; }
 
     .way-card {
-      border: 1px solid rgba(196,162,101,0.18);
+      border: 1px solid rgba(168,173,110,0.18);
       padding: 2.2rem 1.6rem;
       text-align: center;
-      background: rgba(196,162,101,0.03);
+      background: rgba(168,173,110,0.03);
       transition: border-color 0.3s, background 0.3s;
     }
-    .way-card:hover { border-color: rgba(196,162,101,0.4); background: rgba(196,162,101,0.06); }
+    .way-card:hover { border-color: rgba(168,173,110,0.4); background: rgba(168,173,110,0.06); }
 
     .way-icon { width: 44px; height: 44px; margin: 0 auto 1rem; color: var(--gold); opacity: 0.85; }
     .way-title { font-size: 1.4rem; font-weight: 500; color: var(--gold); margin-bottom: 0.6rem; }
@@ -382,14 +382,14 @@
 
     .activity-card:hover {
       border-color: var(--gold);
-      box-shadow: 0 8px 28px rgba(44,30,18,0.1);
+      box-shadow: 0 8px 28px rgba(33,30,21,0.1);
       transform: translateY(-2px);
     }
 
     .activity-card.selected {
       border-color: var(--terracotta);
-      background: #FBEFE6;
-      box-shadow: 0 8px 28px rgba(184,89,62,0.16);
+      background: #F3E3E6;
+      box-shadow: 0 8px 28px rgba(107,36,54,0.16);
     }
 
     .activity-card.selected::after {
@@ -404,7 +404,7 @@
     .activity-card .icon-badge {
       width: 38px; height: 38px;
       border-radius: 50%;
-      background: rgba(184,89,62,0.1);
+      background: rgba(107,36,54,0.1);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 0.9rem;
       color: var(--terracotta);
@@ -446,7 +446,7 @@
     .pricing { background: var(--deep); color: var(--tufo); text-align: center; }
     .pricing .section-label { color: var(--gold); opacity: 0.5; }
     .pricing h2 { color: var(--tufo); }
-    .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(196,162,101,0.2); padding: 2.6rem 2.2rem; background: rgba(196,162,101,0.02); position: relative; }
+    .pricing-card { max-width: 440px; margin: 2.5rem auto 0; border: 1px solid rgba(168,173,110,0.2); padding: 2.6rem 2.2rem; background: rgba(168,173,110,0.02); position: relative; }
     .founding-badge {
       display: inline-block; margin-bottom: 1.2rem;
       font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
@@ -456,11 +456,11 @@
     .pricing-amount span { font-size: 1.2rem; opacity: 0.5; }
     .pricing-per { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.4; margin-bottom: 1.6rem; }
     .pricing-includes { list-style: none; text-align: left; font-size: 0.85rem; font-weight: 300; opacity: 0.62; }
-    .pricing-includes li { padding: 0.5rem 0; border-bottom: 1px solid rgba(196,162,101,0.08); padding-left: 1.2rem; position: relative; }
+    .pricing-includes li { padding: 0.5rem 0; border-bottom: 1px solid rgba(168,173,110,0.08); padding-left: 1.2rem; position: relative; }
     .pricing-includes li:last-child { border-bottom: none; }
     .pricing-includes li::before { content: ''; position: absolute; left: 0; top: 50%; width: 5px; height: 5px; background: var(--terracotta); border-radius: 50%; transform: translateY(-50%); }
     .pricing-was { font-size: 1.3rem; opacity: 0.4; text-decoration: line-through; margin-right: 0.6rem; }
-    .pricing-not-included { margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid rgba(196,162,101,0.12); text-align: left; }
+    .pricing-not-included { margin-top: 1.6rem; padding-top: 1.3rem; border-top: 1px solid rgba(168,173,110,0.12); text-align: left; }
     .pricing-not-label { font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); opacity: 0.5; font-weight: 600; margin-bottom: 0.6rem; }
     .pricing-not-included ul { list-style: none; font-size: 0.8rem; font-weight: 300; opacity: 0.45; }
     .pricing-not-included li { padding: 0.3rem 0; }
@@ -494,8 +494,8 @@
     /* ── FAQ ── */
     .faq { background: var(--tufo); }
     .faq-list { margin-top: 2rem; }
-    .faq-item { padding: 1.4rem 0; border-bottom: 1px solid rgba(140,123,102,0.25); }
-    .faq-item:first-child { border-top: 1px solid rgba(140,123,102,0.25); }
+    .faq-item { padding: 1.4rem 0; border-bottom: 1px solid rgba(124,122,92,0.25); }
+    .faq-item:first-child { border-top: 1px solid rgba(124,122,92,0.25); }
     .faq-item h3 { font-size: 1.05rem; font-weight: 600; color: var(--earth); margin-bottom: 0.5rem; font-family: 'Inter', sans-serif; }
     .faq-item p { font-size: 0.9rem; line-height: 1.7; opacity: 0.68; font-weight: 300; }
 
@@ -510,8 +510,8 @@
     .contact-form { max-width: 560px; margin: 2.5rem auto 0; text-align: left; }
 
     .selected-activities-summary {
-      background: rgba(184,89,62,0.1);
-      border: 1px solid rgba(184,89,62,0.25);
+      background: rgba(107,36,54,0.1);
+      border: 1px solid rgba(107,36,54,0.25);
       padding: 1.1rem 1.2rem;
       margin-bottom: 1.4rem;
       font-size: 0.88rem; font-weight: 300; color: var(--tufo); opacity: 0.9;
@@ -534,7 +534,7 @@
     .contact-form input, .contact-form textarea, .contact-form select {
       width: 100%; padding: 0.85rem 1rem;
       background: rgba(232,220,200,0.06);
-      border: 1px solid rgba(196,162,101,0.25);
+      border: 1px solid rgba(168,173,110,0.25);
       color: var(--tufo);
       font-family: 'Inter', sans-serif; font-size: 0.92rem; font-weight: 300;
       outline: none; transition: border-color 0.3s;
@@ -563,7 +563,7 @@
     .booking-tabs { display: flex; gap: 0.8rem; max-width: 560px; margin: 0 auto 2rem; }
     .booking-tab {
       flex: 1; padding: 0.95rem 1rem;
-      background: transparent; border: 1px solid rgba(196,162,101,0.3);
+      background: transparent; border: 1px solid rgba(168,173,110,0.3);
       color: var(--tufo); font-family: 'Inter', sans-serif;
       font-size: 0.76rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
       cursor: pointer; transition: all 0.25s; opacity: 0.6;
@@ -575,7 +575,7 @@
     .booking-panel.active { display: block; }
 
     .departure-card {
-      border: 1px solid rgba(196,162,101,0.25); background: rgba(196,162,101,0.04);
+      border: 1px solid rgba(168,173,110,0.25); background: rgba(168,173,110,0.04);
       padding: 1.5rem 1.6rem; margin-bottom: 1.6rem;
     }
     .departure-card .departure-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--gold); margin-bottom: 0.3rem; }
@@ -586,15 +586,15 @@
       padding: 0.32rem 0.75rem; border-radius: 999px;
     }
     .spots-badge.available { background: rgba(92,107,60,0.22); color: #a9d489; }
-    .spots-badge.low { background: rgba(184,89,62,0.22); color: #eda180; }
-    .spots-badge.soldout { background: rgba(184,89,62,0.35); color: #f5b39a; }
+    .spots-badge.low { background: rgba(107,36,54,0.22); color: #E8A0AC; }
+    .spots-badge.soldout { background: rgba(107,36,54,0.35); color: #EFB0B9; }
 
     .booking-note { font-size: 0.8rem; opacity: 0.45; font-weight: 300; margin-top: 1rem; text-align: center; }
 
     .booking-error {
       display: none; margin-top: 1.2rem; padding: 0.9rem 1.1rem;
-      border: 1px solid rgba(184,89,62,0.45); background: rgba(184,89,62,0.12);
-      color: #f5b39a; font-size: 0.85rem; font-weight: 300;
+      border: 1px solid rgba(107,36,54,0.45); background: rgba(107,36,54,0.12);
+      color: #EFB0B9; font-size: 0.85rem; font-weight: 300;
     }
     .booking-error.visible { display: block; }
 
@@ -604,7 +604,7 @@
     /* ── Footer ── */
     footer {
       background: var(--deep);
-      border-top: 1px solid rgba(196,162,101,0.06);
+      border-top: 1px solid rgba(168,173,110,0.06);
       text-align: center; padding: 1.6rem;
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: var(--stone); opacity: 0.4;
@@ -639,12 +639,12 @@
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
     <defs>
       <pattern id="meander" x="0" y="0" width="40" height="26" patternUnits="userSpaceOnUse">
-        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#C4A265" stroke-width="1.3"/>
-        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
+        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#A8AD6E" stroke-width="1.3"/>
+        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#6B2436" stroke-width="0.6" opacity="0.4"/>
       </pattern>
       <pattern id="meander-light" x="0" y="0" width="40" height="26" patternUnits="userSpaceOnUse">
-        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#2C1E12" stroke-width="1.3"/>
-        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#B8593E" stroke-width="0.6" opacity="0.4"/>
+        <path d="M0,13 h7 v-7 h7 v14 h7 v-14 h7 v7 h7" fill="none" stroke="#211E15" stroke-width="1.3"/>
+        <path d="M0,19 h3.5 v-12 h7 v12 h7 v-12 h7 v12 h3.5" fill="none" stroke="#6B2436" stroke-width="0.6" opacity="0.4"/>
       </pattern>
       <symbol id="palmette" viewBox="0 0 80 60">
         <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z" fill="none" stroke="currentColor" stroke-width="1"/>
