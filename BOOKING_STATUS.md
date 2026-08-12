@@ -1,6 +1,22 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-11_
+_Last updated: 2026-08-12_
+
+## 2026-08-12 update: hero no longer links straight to the booking form
+
+**No backend/pricing/payment changes** — a frontend link-target change
+only, noted here because it changes where the booking funnel starts.
+The homepage hero's primary button briefly pointed straight at
+`italian-olive-experience-pricing.html#festival-book` (and there was a
+brief `location.replace()` experiment that redirected any bare
+homepage visit straight to that same booking page). Both reverted per
+explicit feedback ("it needs to take you to the experience page not
+the booking page") — the hero CTA now scrolls to `index.html#festival-week`
+(the hub, which as of this same session also has the full itinerary
+embedded in it — see `CLAUDE.md`). Guests now reach the booking form
+by clicking through from the hub's "Pricing & Booking" card or the
+sub-nav, not directly from the hero. The form itself, its Worker/D1/Stripe
+wiring, and current pricing are all unchanged — see the entries below.
 
 ## 2026-08-11 update: booking form moved off index.html onto its own page
 
