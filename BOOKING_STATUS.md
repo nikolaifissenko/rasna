@@ -100,16 +100,17 @@ at €1,800 unless he explicitly says otherwise.
   `italian-olive-experience-itinerary.html`'s pricing section mirrors
   the same live shared/private/tier values and links to the full chart.
 
-**Not done / explicitly deferred:**
-- **No capacity cap per room type.** The 8-guest total cap (via `SUM
-  ("num_guests") WHERE status='paid'`) still works exactly as before,
-  but nothing stops all 8 guests from booking "private" even if the
-  real B&B only has, say, 2 private rooms. Nikolai confirmed the actual
-  room mix isn't locked down yet (Da Beccone vs. a candidate called
-  Casamatta — see `CONTATTI_LOCALI.md` — he's sending room photos in a
-  future session). Once the real inventory is known, this probably
-  needs a real per-room-type capacity check in `createFixedBooking`'s
-  atomic insert, similar to how total capacity works now.
+**Resolved 2026-08-13 — no per-room-type capacity cap needed:**
+Nikolai confirmed Casamatta's real room layout (see `CONTATTI_LOCALI.md`
+§8): 3 apartments (Piccolo, Grande, Civico 40), **8 separate rooms/units
+totaling 16 beds**. For a fixed group of exactly 8 guests, every possible
+mix of shared/private bookings fits inside 8 rooms — including the worst
+case of all 8 guests choosing "Private Room" (8 people → 8 rooms, exact
+fit). So the 8-guest total cap already enforced via `SUM("num_guests")
+WHERE status='paid'` is sufficient on its own; no additional per-room-type
+capacity check is needed in `createFixedBooking`. (This reasoning is
+specific to an 8-guest group against 8 available rooms — would need
+revisiting if the group cap or the room inventory ever changes.)
 - **Photography & privacy policy**: not added. A competitor reference
   guide had one (guests consent to being photographed for marketing,
   can opt out); unclear whether Rasna actually does this, so nothing

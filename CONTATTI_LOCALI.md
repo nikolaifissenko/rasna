@@ -132,16 +132,24 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - **Ruolo:** Alloggio ufficiale
 - **Stato:** ✅ CONFERMATO come alloggio per gli ospiti (2026-08-13) — **sostituisce Da Beccone**
 - **Indirizzo:** Vicolo di Civitella 22/26, Blera — pieno centro storico. Adatto per vacanza in coppia, famiglia o gruppi.
-- **Appartamenti** (dati reali dall'annuncio ufficiale, 2026-08-13 — sostituiscono la stima a 3 appartamenti raccolta il 2026-07-24, vedi nota sotto):
+- **Appartamenti — layout confermato da Nikolai il 2026-08-13** (stesso layout già raccolto informalmente il 2026-07-24, ora riconfermato direttamente — vedi nota sulla discrepanza sotto):
 
-| Appartamento | Posti letto | Bagni | Cucina | Altro |
-|---|---|---|---|---|
-| Grande | 6 | 2 | Sì | Ingresso indipendente, WiFi, ricovero bici |
-| Piccolo | 3 | 1 | Sì, con tinello e forno a legna | Ingresso indipendente, WiFi, ricovero bici |
+| Appartamento | Livello | Letti | Bagno |
+|---|---|---|---|
+| Piccolo | Sotto | Divano letto matrimoniale | Bagno (sotto) |
+| Piccolo | Sopra | 2 singoli unibili a matrimoniale | — |
+| Grande | 1° | Divano letto matrimoniale | — |
+| Grande | 2° | 2 singoli unibili | — |
+| Grande | 3° | 2 singoli unibili | Bagno (+ cucina) |
+| Civico 40 | Stanza 1 | 2 singoli unibili | — |
+| Civico 40 | Stanza 2 | Divano letto alla francese | Bagnetto (ensuite) |
+| Civico 40 | Soppalco | 2 singoli unibili | — |
 
-- In entrambi gli appartamenti sono a disposizione degli ospiti: asciugamani, lenzuola, saponi e detersivi ecologici.
-- **Capienza totale confermata:** 6 + 3 = **9 posti letto** tra i due appartamenti — sufficiente per il gruppo di 8 di novembre (con margine per eventuale staff/host).
-- **Nota sulla discrepanza:** la ricognizione del 2026-07-24 aveva raccolto layout per 3 appartamenti (Piccolo/Grande/Civico 40, ~16 posti letto totali) da una fonte informale; l'annuncio ufficiale del 2026-08-13 descrive solo questi 2. Potrebbe trattarsi di un terzo appartamento non incluso nell'offerta attuale, o di un'informazione superata — non serve chiarire a meno che la capienza di 9 risulti insufficiente.
+(Cucina: Piccolo al pianterreno; Civico 40 ha bagno e cucina propri oltre al bagnetto della Stanza 2.)
+
+- **Capienza per appartamento:** Piccolo 4 (2 camere), Grande 6 (3 camere), Civico 40 6 (3 camere) — **16 posti letto totali, 8 camere/unità totali** tra i tre appartamenti.
+- **Rilevante per il tetto "Private Room" sul sito:** con 8 camere totali e un gruppo fisso di 8 ospiti, **qualunque combinazione di camere condivise/private per il gruppo rientra nella capienza reale**, incluso il caso limite in cui tutti e 8 richiedano una camera privata (8 persone → 8 camere, esatto). Non serve quindi un tetto artificiale sulle prenotazioni "Private Room" per un gruppo di questa taglia — il numero di camere già copre il caso peggiore.
+- **Nota sulla discrepanza (irrisolta):** un annuncio "ufficiale" condiviso in precedenza lo stesso giorno descriveva solo 2 appartamenti (6 posti letto/2 bagni; 3 posti letto/1 bagno/tinello con forno a legna, 9 posti letto totali) — non corrisponde esattamente a nessuno dei tre appartamenti sopra. Possibile che quell'annuncio descrivesse un sottoinsieme dell'offerta, o dati di un'altra fonte. Non serve chiarire finché la capienza di 16 (o anche solo di 9) resta ampiamente sufficiente per il gruppo di 8 — ma se in futuro serve sapere esattamente quali appartamenti sono disponibili per una data specifica, va verificato con Casamatta.
 - **Tariffa, corretta il 2026-08-13:** l'unico numero fermo da Casamatta è **€70/notte per una coppia** (2 persone) — cioè €35/persona/notte alla dimensione minima di prenotazione. Un valore precedente di €60/persona/notte registrato lo stesso giorno era una stima non verificata, non un numero reale — sostituito da questo. Secondo Nikolai **la tariffa diminuisce con più persone e più notti**, ma la tariffa scontata reale per 8 persone/6 notti non è stata ancora quotata. Per il soggiorno di 6 notti (9–15 novembre), usando €35/persona/notte senza sconto come tetto massimo prudente: **€210/persona** (il costo reale dovrebbe risultare inferiore). Vedi `FINANCIAL_PLAN.md` §1 per il ricalcolo del margine con questo tetto massimo. **Da verificare:** la tariffa scontata reale per il gruppo di 8 per 6 notti.
 
 ### DA BECCONE
