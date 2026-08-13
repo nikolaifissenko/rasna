@@ -19,7 +19,8 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
-| Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
+| **Casamatta** | Alloggio partner — 3 appartamenti indipendenti | ✅ CONFERMATO come alloggio ufficiale (2026-08-13) — sostituisce Da Beccone, vedi sezione Alloggio sotto |
+| Beccone Albergo | Alloggio — non più il piano | ⚠️ SOSTITUITO da Casamatta (2026-08-13) — tariffe restano documentate sotto per riferimento |
 | B&B La Ripa (Antonella) | Alloggio partner | ✅ CONFERMATO tariffa — ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi sezione Alloggio sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 | **Sandro Scarmiglia** | Terrarte — parco di sculture all'aria aperta | Offre pranzo nell'oliveto o aperitivo (€10/persona) — DA VALIDARE |
@@ -127,9 +128,23 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ## 8. Alloggio
 
+### CASAMATTA
+- **Ruolo:** Alloggio ufficiale — 3 appartamenti indipendenti
+- **Stato:** ✅ CONFERMATO come alloggio per gli ospiti (2026-08-13) — **sostituisce Da Beccone**
+- **Layout** (raccolto 2026-07-24, ancora da riconfermare ora che l'accordo è ufficiale):
+
+| Appartamento | Livelli | Letti | Capienza indicativa | Cucina/bagno |
+|---|---|---|---|---|
+| Piccolo | 2 (sotto/sopra) | Sotto: divano letto matrimoniale. Sopra: 2 singoli unibili a matrimoniale | ~4 persone | Cucina al pianterreno; bagno sotto |
+| Grande | 3 | 1°: divano letto matrimoniale. 2°: 2 singoli unibili. 3°: 2 singoli unibili | ~6 persone | Cucina + bagno al 3° livello |
+| Civico 40 | 2 stanze + soppalco | Stanza 1: 2 singoli unibili. Stanza 2: divano letto alla francese + bagnetto. Soppalco: 2 singoli unibili | ~6 persone | Bagno e cucina presenti (posizione non specificata) |
+
+- **Capienza totale stimata (tutti e 3 gli appartamenti):** ~16 persone — ampiamente sufficiente per il gruppo di 8 di novembre
+- **Da verificare ora che l'accordo è ufficiale:** tariffe formali per tutti e 3 gli appartamenti (solo civico 40 aveva un'indicazione di prezzo vantaggioso, mai formalizzata), quale/i appartamento/i verranno usati per il gruppo dell'8-15 novembre, posizione esatta di bagno/cucina in Civico 40. Finché le tariffe non sono confermate, `FINANCIAL_PLAN.md` continua a usare le tariffe Da Beccone come riferimento provvisorio per il margine — da aggiornare appena arrivano i numeri reali di Casamatta.
+
 ### DA BECCONE
-- **Ruolo:** Alloggio partner
-- **Stato:** ✅ CONFERMATO
+- **Ruolo:** Alloggio partner — non più il piano per la partenza di novembre
+- **Stato:** ⚠️ SOSTITUITO da Casamatta (2026-08-13) — tariffe lasciate qui sotto per riferimento, nel caso serva di nuovo come alternativa
 - **Tariffe** (a camera/notte, ora confermate anche a persona):
 
 | Tipo camera | Tariffa/camera/notte | €/persona/notte |

@@ -617,6 +617,56 @@ needs it.
 
 ---
 
+## Session, 2026-08-13
+
+Two unrelated changes, both against `main`.
+
+**About page portrait replaced.** Nikolai wanted the existing
+`images/about-nikolai-portrait.jpg` (a dark studio headshot used in
+`about.html`'s `.about-photo-main` slot) taken off the site, then
+replaced with a real photo of him on a rooftop in Blera (terracotta
+roofs, the bell tower, overcast sky). Important technical note for
+next time a photo goes in that slot: `.about-photo-main` is a fixed
+**4:5 box** with `background-size: cover; background-position: center`
+— a dumb center-crop, not face-aware. The rooftop photo is landscape
+with Nikolai standing in the right third of the frame, so a naive
+center-crop would have sliced him out of the picture almost entirely.
+Recomposed it server-side instead (Pillow): cropped a 4:5 slice anchored
+to the right edge of the source image so he's fully in frame with the
+bell tower/rooftops behind him, then resized to 1290×1613 and
+compressed to ~320KB. Any future photo for this specific slot needs the
+same manual recompose-before-upload treatment, not a straight upload.
+
+**Casamatta confirmed as lodging, replacing Da Beccone.** Nikolai said
+it's now official he's working with Casamatta (3 independent
+apartments in Blera — Piccolo, Grande, Civico 40) for guest lodging,
+replacing Da Beccone as the plan for the Nov 9–15 departure. Updated
+`CONTATTI_LOCALI.md` §0/§8 (Casamatta marked ✅ CONFERMATO, apartment
+layout table carried over from the abandoned 2026-07-24 branch work
+that never made it onto `main`; Da Beccone marked superseded but left
+documented for reference) and `BOOKING_STATUS.md`'s Lodging item.
+**Not resolved:** Casamatta's actual per-apartment rates were never
+formalized (only Civico 40 had an informal price signal), and which
+apartment(s) will house the group of 8 is still open — `FINANCIAL_PLAN.md`
+§1's margin math still runs on Da Beccone's old rates as a flagged
+provisional stand-in until real Casamatta numbers come in. Nothing
+guest-facing on the live site changed, since the site never named a
+specific lodging partner anywhere to begin with.
+
+**Branch-drift note:** this session's designated branch
+(`claude/replace-first-plane-picture-beasqh`) was based on the dead
+`claude/magical-franklin-58SKM` lineage, but — unlike prior
+incidents — its bundled `CLAUDE.md` was this same fully-current file
+(up through the 2026-08-12 entry above), which almost masked the drift:
+the doc looked current while `index.html`/`about.html`/`images/` were
+all months stale (no `about.html`, no `images/` directory at all).
+Caught only because the live site's actual served HTML (fetched via
+`curl`) didn't match what was in the local checkout. Branch was reset
+to `origin/main` before making any edits. Lesson for next time: a
+current-looking `CLAUDE.md` is not proof the branch's *site files* are
+current — check `git log` / diff the actual pages, not just this file's
+freshness.
+
 ## History note
 
 On 2026-07-09, this session replaced a *different* previously-live design (terra/sienna/gold palette, decorative SVG-only, no photography — built by an earlier/separate session directly on `main`) with the photo-rich version described above, per explicit user confirmation after flagging the conflict. If you're picking up fresh context and something looks unfamiliar, check git log on `main` before assuming — don't just trust this file blindly if the live site doesn't match what's described here.

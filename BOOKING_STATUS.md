@@ -355,17 +355,22 @@ urgent now that Stripe is confirmed live.
   migration was narrowly scoped to D1:Edit only (separate from the
   broader Workers Scripts+D1 token mentioned below) — should also be
   revoked once no longer needed, same as that one.
-- **Lodging (added 2026-07-23)**: the B&B originally slated for the
-  Nov 9–15, 2026 departure (Antonella, B&B La Ripa) is **unavailable
-  that week**. **Da Beccone is confirmed as the alternative** (rates
-  collected — see `CONTATTI_LOCALI.md` §8 and `FINANCIAL_PLAN.md` §1
-  for the margin recalculation against real rates). What's still open:
-  the **room mix** (doubles vs. singles) for this specific group of 8
-  — needs to be locked down with Da Beccone before Nov 9, since
-  single-occupancy guests meaningfully change the per-guest margin
-  (see `BUSINESS_PLAN.md` RISCHIO CALENDARIO for the full picture).
-  This is more urgent than it sounds given Stripe is already live: a
-  real guest could book and pay before lodging is settled.
+- **Lodging (updated 2026-08-13): Casamatta is now the confirmed
+  lodging partner, replacing Da Beccone.** The B&B originally slated
+  for the Nov 9–15, 2026 departure (Antonella, B&B La Ripa) was
+  unavailable that week; Da Beccone was then confirmed as the
+  alternative (rates collected 2026-07-23). Nikolai has now confirmed
+  he's officially working with **Casamatta** (3 independent apartments
+  in Blera — Piccolo, Grande, Civico 40) instead — see
+  `CONTATTI_LOCALI.md` §8 for the apartment layouts and capacities
+  collected so far. **What's still open:** formal per-apartment rates
+  from Casamatta (only Civico 40 had an informal price signal, never
+  finalized), which apartment(s) will actually house this group of 8,
+  and the resulting room mix for margin purposes — `FINANCIAL_PLAN.md`
+  §1 still reflects Da Beccone's rates as a provisional stand-in until
+  real Casamatta numbers come in. This is more urgent than it sounds
+  given Stripe is already live: a real guest could book and pay before
+  lodging/pricing is fully settled.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

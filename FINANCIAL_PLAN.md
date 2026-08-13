@@ -65,6 +65,12 @@ see `BOOKING_STATUS.md` for the mechanics. Margin impact at that price
 is above (~38% vs ~44% after Stripe fees) — a deliberate trade of some
 margin on the first 2 guests for the momentum of breaking zero.
 
+**⚠️ Lodging partner changed 2026-08-13: Casamatta is now the confirmed lodging for the
+November departure, replacing Da Beccone.** Casamatta's per-apartment rates aren't
+finalized yet (see `CONTATTI_LOCALI.md` §8), so every Da Beccone-based number below is now
+a **provisional stand-in**, not the real cost — re-run this whole section once Casamatta's
+rates and the actual room/apartment assignment for the group of 8 are known.
+
 **Lodging cost check against confirmed rates (`CONTATTI_LOCALI.md`):** both partners' rates
 are now confirmed as **per room/night**, with the per-person equivalent worked out
 (double = room rate ÷ 2, single = room rate as-is, since it's one person per room):
