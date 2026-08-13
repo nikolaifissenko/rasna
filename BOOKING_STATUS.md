@@ -368,13 +368,12 @@ urgent now that Stripe is confirmed live.
   8-guest cap.** See `CONTATTI_LOCALI.md` §8 for the full listing
   details (this supersedes an earlier, informally-collected 3-apartment
   estimate from 2026-07-24 — see that section for the discrepancy
-  note). **What's still open:** Casamatta hasn't provided rates yet —
-  the listing text shared so far has no pricing. `FINANCIAL_PLAN.md`
-  §1 still reflects Da Beccone's rates as a provisional stand-in until
-  real Casamatta numbers come in. This is more urgent than it sounds
-  given Stripe is already live: a real guest could book and pay before
-  pricing is fully settled (capacity is no longer the risk here, cost
-  is).
+  note). **Rate confirmed the same day: €60/guest/night, flat** (not
+  room-type-dependent) — `FINANCIAL_PLAN.md` §1 now runs the real
+  margin numbers against this rate for the 6-night Nov departure
+  (~32%–46% depending on tier/room, healthier than the old Da Beccone
+  worst case). **Nothing left open on lodging for this departure** —
+  partner, capacity, and rate are all confirmed.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

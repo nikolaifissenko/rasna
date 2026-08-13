@@ -142,7 +142,7 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 - In entrambi gli appartamenti sono a disposizione degli ospiti: asciugamani, lenzuola, saponi e detersivi ecologici.
 - **Capienza totale confermata:** 6 + 3 = **9 posti letto** tra i due appartamenti — sufficiente per il gruppo di 8 di novembre (con margine per eventuale staff/host).
 - **Nota sulla discrepanza:** la ricognizione del 2026-07-24 aveva raccolto layout per 3 appartamenti (Piccolo/Grande/Civico 40, ~16 posti letto totali) da una fonte informale; l'annuncio ufficiale del 2026-08-13 descrive solo questi 2. Potrebbe trattarsi di un terzo appartamento non incluso nell'offerta attuale, o di un'informazione superata — non serve chiarire a meno che la capienza di 9 risulti insufficiente.
-- **Da verificare:** tariffe (nessun prezzo indicato nell'annuncio condiviso finora). Finché le tariffe non sono confermate, `FINANCIAL_PLAN.md` continua a usare le tariffe Da Beccone come riferimento provvisorio per il margine — da aggiornare appena arrivano i numeri reali di Casamatta.
+- **Tariffa confermata (2026-08-13): €60/persona/notte, tariffa fissa** (non differenziata per appartamento/tipo camera). Per il soggiorno di 6 notti (9–15 novembre): **€360/persona**. Vedi `FINANCIAL_PLAN.md` §1 per il ricalcolo completo del margine con questa tariffa reale — non serve più usare le tariffe Da Beccone come riferimento provvisorio.
 
 ### DA BECCONE
 - **Ruolo:** Alloggio partner — non più il piano per la partenza di novembre

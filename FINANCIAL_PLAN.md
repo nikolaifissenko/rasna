@@ -65,11 +65,35 @@ see `BOOKING_STATUS.md` for the mechanics. Margin impact at that price
 is above (~38% vs ~44% after Stripe fees) — a deliberate trade of some
 margin on the first 2 guests for the momentum of breaking zero.
 
-**⚠️ Lodging partner changed 2026-08-13: Casamatta is now the confirmed lodging for the
-November departure, replacing Da Beccone.** Casamatta's per-apartment rates aren't
-finalized yet (see `CONTATTI_LOCALI.md` §8), so every Da Beccone-based number below is now
-a **provisional stand-in**, not the real cost — re-run this whole section once Casamatta's
-rates and the actual room/apartment assignment for the group of 8 are known.
+**✅ Lodging partner changed 2026-08-13: Casamatta is now the confirmed lodging for the
+November departure, replacing Da Beccone — and as of 2026-08-13 Nikolai has a real rate:
+€60/guest/night, flat (not room-type-dependent, unlike Da Beccone's per-room rates below —
+confirm with Casamatta if this ever turns out to vary by apartment).** Every Da Beccone-based
+number in the rest of this subsection is now superseded/historical — kept for reference only.
+Real numbers against the current live pricing (`italian-olive-experience-pricing.html`),
+for the actual 6-night Nov 9–15 departure:
+
+| Cost line | €/guest |
+|---|---|
+| Lodging (Casamatta, €60 × 6 nights) | €360 |
+| Meals & local hosting fees, guiding/transport, activity fees, insurance, marketing (unchanged from Section 1 above) | €550 |
+| **Total cost per guest (before Stripe fee)** | **€910** |
+
+| Tier | Room | Price | Stripe fee (intl. card, ~3.25%+€0.25) | Net profit/guest | Margin |
+|---|---|---|---|---|---|
+| Early Bird | Shared | €1,400 | €46 | €444 | ≈32% |
+| Early Bird | Private | €1,600 | €52 | €638 | ≈40% |
+| Regular | Shared | €1,500 | €49 | €541 | ≈36% |
+| Regular | Private | €1,700 | €56 | €735 | ≈43% |
+| Final | Shared | €1,600 | €52 | €638 | ≈40% |
+| Final | Private | €1,800 | €59 | €831 | ≈46% |
+
+Margins now run **~32%–46%** depending on tier/room, healthier across the board than the
+worst-case Da Beccone single-room scenario below (~29%). **Caveat:** the €550 non-lodging
+line was originally modeled for a shorter 3-night package (Section 1 above); it may
+undercount the real per-guest cost of the actual 6-night/7-day itinerary somewhat — worth a
+fuller recalibration once real per-guest food/activity costs from the pilot come in, per
+Section 7's open assumptions.
 
 **Lodging cost check against confirmed rates (`CONTATTI_LOCALI.md`):** both partners' rates
 are now confirmed as **per room/night**, with the per-person equivalent worked out
