@@ -368,12 +368,16 @@ urgent now that Stripe is confirmed live.
   8-guest cap.** See `CONTATTI_LOCALI.md` §8 for the full listing
   details (this supersedes an earlier, informally-collected 3-apartment
   estimate from 2026-07-24 — see that section for the discrepancy
-  note). **Rate confirmed the same day: €60/guest/night, flat** (not
-  room-type-dependent) — `FINANCIAL_PLAN.md` §1 now runs the real
-  margin numbers against this rate for the 6-night Nov departure
-  (~32%–46% depending on tier/room, healthier than the old Da Beccone
-  worst case). **Nothing left open on lodging for this departure** —
-  partner, capacity, and rate are all confirmed.
+  note). **Indicative rate the same day: €60/guest/night** (not
+  room-type-dependent) — `FINANCIAL_PLAN.md` §1 runs the margin numbers
+  against this rate for the 6-night Nov departure (~32%–46% depending
+  on tier/room, healthier than the old Da Beccone worst case). **Not a
+  locked-in rate**: Nikolai describes the owner as flexible/easygoing,
+  so €60 is being treated as a conservative ceiling — the real
+  negotiated rate could come in lower, which would only improve these
+  margins. Worth nailing down a firm number before the departure, but
+  not a blocker in the meantime since €60 is already the pessimistic
+  case.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

@@ -66,12 +66,15 @@ is above (~38% vs ~44% after Stripe fees) — a deliberate trade of some
 margin on the first 2 guests for the momentum of breaking zero.
 
 **✅ Lodging partner changed 2026-08-13: Casamatta is now the confirmed lodging for the
-November departure, replacing Da Beccone — and as of 2026-08-13 Nikolai has a real rate:
-€60/guest/night, flat (not room-type-dependent, unlike Da Beccone's per-room rates below —
-confirm with Casamatta if this ever turns out to vary by apartment).** Every Da Beccone-based
-number in the rest of this subsection is now superseded/historical — kept for reference only.
-Real numbers against the current live pricing (`italian-olive-experience-pricing.html`),
-for the actual 6-night Nov 9–15 departure:
+November departure, replacing Da Beccone — and as of 2026-08-13 Nikolai has an indicative
+rate: €60/guest/night, flat (not room-type-dependent, unlike Da Beccone's per-room rates
+below — confirm with Casamatta if this ever turns out to vary by apartment).** Every Da
+Beccone-based number in the rest of this subsection is now superseded/historical — kept for
+reference only. **€60 is not a locked-in/negotiated rate** — Nikolai describes the owner as
+flexible/easygoing, so this is being treated as a conservative ceiling; the real number could
+land lower, which would only improve the margins below. Worth getting a firm quote before the
+departure. Numbers against the current live pricing (`italian-olive-experience-pricing.html`),
+for the actual 6-night Nov 9–15 departure, using €60 as the pessimistic case:
 
 | Cost line | €/guest |
 |---|---|
