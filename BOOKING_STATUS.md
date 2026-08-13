@@ -356,21 +356,25 @@ urgent now that Stripe is confirmed live.
   broader Workers Scripts+D1 token mentioned below) — should also be
   revoked once no longer needed, same as that one.
 - **Lodging (updated 2026-08-13): Casamatta is now the confirmed
-  lodging partner, replacing Da Beccone.** The B&B originally slated
-  for the Nov 9–15, 2026 departure (Antonella, B&B La Ripa) was
-  unavailable that week; Da Beccone was then confirmed as the
-  alternative (rates collected 2026-07-23). Nikolai has now confirmed
-  he's officially working with **Casamatta** (3 independent apartments
-  in Blera — Piccolo, Grande, Civico 40) instead — see
-  `CONTATTI_LOCALI.md` §8 for the apartment layouts and capacities
-  collected so far. **What's still open:** formal per-apartment rates
-  from Casamatta (only Civico 40 had an informal price signal, never
-  finalized), which apartment(s) will actually house this group of 8,
-  and the resulting room mix for margin purposes — `FINANCIAL_PLAN.md`
+  lodging partner, replacing Da Beccone, and capacity is confirmed
+  sufficient.** The B&B originally slated for the Nov 9–15, 2026
+  departure (Antonella, B&B La Ripa) was unavailable that week; Da
+  Beccone was then confirmed as the alternative (rates collected
+  2026-07-23). Nikolai has now confirmed he's officially working with
+  **Casamatta** instead — two independent apartments at Vicolo di
+  Civitella 22/26, Blera (pieno centro storico): one sleeping 6 with 2
+  bathrooms, one sleeping 3 with 1 bathroom, both with their own
+  kitchen, WiFi, and independent entrance. **9 beds total covers the
+  8-guest cap.** See `CONTATTI_LOCALI.md` §8 for the full listing
+  details (this supersedes an earlier, informally-collected 3-apartment
+  estimate from 2026-07-24 — see that section for the discrepancy
+  note). **What's still open:** Casamatta hasn't provided rates yet —
+  the listing text shared so far has no pricing. `FINANCIAL_PLAN.md`
   §1 still reflects Da Beccone's rates as a provisional stand-in until
   real Casamatta numbers come in. This is more urgent than it sounds
   given Stripe is already live: a real guest could book and pay before
-  lodging/pricing is fully settled.
+  pricing is fully settled (capacity is no longer the risk here, cost
+  is).
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

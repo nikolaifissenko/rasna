@@ -129,18 +129,20 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 ## 8. Alloggio
 
 ### CASAMATTA
-- **Ruolo:** Alloggio ufficiale — 3 appartamenti indipendenti
+- **Ruolo:** Alloggio ufficiale
 - **Stato:** ✅ CONFERMATO come alloggio per gli ospiti (2026-08-13) — **sostituisce Da Beccone**
-- **Layout** (raccolto 2026-07-24, ancora da riconfermare ora che l'accordo è ufficiale):
+- **Indirizzo:** Vicolo di Civitella 22/26, Blera — pieno centro storico. Adatto per vacanza in coppia, famiglia o gruppi.
+- **Appartamenti** (dati reali dall'annuncio ufficiale, 2026-08-13 — sostituiscono la stima a 3 appartamenti raccolta il 2026-07-24, vedi nota sotto):
 
-| Appartamento | Livelli | Letti | Capienza indicativa | Cucina/bagno |
+| Appartamento | Posti letto | Bagni | Cucina | Altro |
 |---|---|---|---|---|
-| Piccolo | 2 (sotto/sopra) | Sotto: divano letto matrimoniale. Sopra: 2 singoli unibili a matrimoniale | ~4 persone | Cucina al pianterreno; bagno sotto |
-| Grande | 3 | 1°: divano letto matrimoniale. 2°: 2 singoli unibili. 3°: 2 singoli unibili | ~6 persone | Cucina + bagno al 3° livello |
-| Civico 40 | 2 stanze + soppalco | Stanza 1: 2 singoli unibili. Stanza 2: divano letto alla francese + bagnetto. Soppalco: 2 singoli unibili | ~6 persone | Bagno e cucina presenti (posizione non specificata) |
+| Grande | 6 | 2 | Sì | Ingresso indipendente, WiFi, ricovero bici |
+| Piccolo | 3 | 1 | Sì, con tinello e forno a legna | Ingresso indipendente, WiFi, ricovero bici |
 
-- **Capienza totale stimata (tutti e 3 gli appartamenti):** ~16 persone — ampiamente sufficiente per il gruppo di 8 di novembre
-- **Da verificare ora che l'accordo è ufficiale:** tariffe formali per tutti e 3 gli appartamenti (solo civico 40 aveva un'indicazione di prezzo vantaggioso, mai formalizzata), quale/i appartamento/i verranno usati per il gruppo dell'8-15 novembre, posizione esatta di bagno/cucina in Civico 40. Finché le tariffe non sono confermate, `FINANCIAL_PLAN.md` continua a usare le tariffe Da Beccone come riferimento provvisorio per il margine — da aggiornare appena arrivano i numeri reali di Casamatta.
+- In entrambi gli appartamenti sono a disposizione degli ospiti: asciugamani, lenzuola, saponi e detersivi ecologici.
+- **Capienza totale confermata:** 6 + 3 = **9 posti letto** tra i due appartamenti — sufficiente per il gruppo di 8 di novembre (con margine per eventuale staff/host).
+- **Nota sulla discrepanza:** la ricognizione del 2026-07-24 aveva raccolto layout per 3 appartamenti (Piccolo/Grande/Civico 40, ~16 posti letto totali) da una fonte informale; l'annuncio ufficiale del 2026-08-13 descrive solo questi 2. Potrebbe trattarsi di un terzo appartamento non incluso nell'offerta attuale, o di un'informazione superata — non serve chiarire a meno che la capienza di 9 risulti insufficiente.
+- **Da verificare:** tariffe (nessun prezzo indicato nell'annuncio condiviso finora). Finché le tariffe non sono confermate, `FINANCIAL_PLAN.md` continua a usare le tariffe Da Beccone come riferimento provvisorio per il margine — da aggiornare appena arrivano i numeri reali di Casamatta.
 
 ### DA BECCONE
 - **Ruolo:** Alloggio partner — non più il piano per la partenza di novembre
