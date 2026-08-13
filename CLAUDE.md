@@ -637,21 +637,72 @@ bell tower/rooftops behind him, then resized to 1290×1613 and
 compressed to ~320KB. Any future photo for this specific slot needs the
 same manual recompose-before-upload treatment, not a straight upload.
 
-**Casamatta confirmed as lodging, replacing Da Beccone.** Nikolai said
-it's now official he's working with Casamatta (3 independent
-apartments in Blera — Piccolo, Grande, Civico 40) for guest lodging,
-replacing Da Beccone as the plan for the Nov 9–15 departure. Updated
-`CONTATTI_LOCALI.md` §0/§8 (Casamatta marked ✅ CONFERMATO, apartment
-layout table carried over from the abandoned 2026-07-24 branch work
-that never made it onto `main`; Da Beccone marked superseded but left
-documented for reference) and `BOOKING_STATUS.md`'s Lodging item.
-**Not resolved:** Casamatta's actual per-apartment rates were never
-formalized (only Civico 40 had an informal price signal), and which
-apartment(s) will house the group of 8 is still open — `FINANCIAL_PLAN.md`
-§1's margin math still runs on Da Beccone's old rates as a flagged
-provisional stand-in until real Casamatta numbers come in. Nothing
-guest-facing on the live site changed, since the site never named a
-specific lodging partner anywhere to begin with.
+**Casamatta confirmed as lodging, replacing Da Beccone — fully resolved
+by end of session.** Nikolai said it's official he's working with
+Casamatta for guest lodging on the Nov 9–15 departure. This took
+several rounds to nail down correctly, worth knowing the sequence if
+similar info arrives piecemeal again:
+1. First heard as "3 independent apartments" (Piccolo/Grande/Civico
+   40) — the same layout an abandoned 2026-07-24 branch had informally
+   collected, never ported to `main` until now.
+2. Nikolai then pasted an "official listing" text describing only
+   **2** apartments (6 beds/2 baths; 3 beds/1 bath + wood-fired kitchen
+   oven, 9 beds total) at **Vicolo di Civitella 22/26, Blera**. This
+   still doesn't cleanly reconcile with the 3-apartment layout — both
+   are documented in `CONTATTI_LOCALI.md` §8 with the discrepancy
+   flagged, but it's not worth chasing further since either number
+   comfortably covers the 8-guest group.
+3. Rate: an early **€60/guest/night** logged as "indicative" turned
+   out to be an unsourced guess. The real firm number Nikolai has is
+   **€70/night for a couple** (€35/guest/night at minimum booking
+   size), which he says decreases with more guests/nights, though the
+   actual discounted rate for 8 guests/6 nights was never quoted.
+   `FINANCIAL_PLAN.md` §1 now runs the real margin math using
+   €35/guest/night **undiscounted** as a conservative ceiling: **6
+   nights × €35 = €210/guest** lodging cost, landing tier margins at
+   **~42%–55%** (real margins should be better once an actual group
+   quote comes in) — this replaces the old Da Beccone-based numbers
+   entirely, which are now historical/superseded in that file.
+4. Room-by-room layout (the 3-apartment version) also resolved a
+   real booking-system question: **8 total rooms/units** across the
+   three apartments means every possible shared/private split for a
+   fixed 8-guest group fits without exceeding capacity — including the
+   worst case of all 8 going private. So the "no per-room-type
+   capacity cap" risk flagged in `BOOKING_STATUS.md` since the Stripe
+   integration was built is now closed: the existing 8-guest total cap
+   is sufficient, no code change needed in `createFixedBooking`.
+
+**"Where You'll Stay" now live on the site, not just internal docs.**
+Nikolai sent 10 real photos of the Casamatta apartments (bedrooms,
+kitchens, bathroom, sitting room, entrance, the property sign). First
+added as a gallery + apartment-facts section on
+`italian-olive-experience-pricing.html` (reusing the existing
+`.festival-gallery`/`.fg-photo` and `.included-grid`/`.included-item`
+CSS, no new classes needed), then — per "I want there to be a 'where
+you'll be staying' page" — **split out into its own page**,
+`italian-olive-experience-lodging.html`, following the established
+family-of-pages template (copied `italian-olive-experience-host.html`
+as the base). Added to the shared sub-nav on **all 7** pages now
+(Overview / Your Host / Highlights / Itinerary / **Where You'll
+Stay** / Pricing & Booking / FAQ — if an 8th page is ever added, update
+the nav on all 7 existing pages, not just the new one), added to
+`sitemap.xml`, and left a "See where you'll stay →" link on the
+pricing page pointing to it. Images saved as `images/casamatta-*.jpg`
+(9 interior/exterior shots + the sign photo, resized to ~1400px long
+edge, quality ~78).
+
+**"Rasna's first pilot expedition" label removed from the hub.**
+Nikolai asked to take out the section-label above "Italian Olive
+Experience" on `index.html#festival-week` that read "Rasna's first
+pilot expedition" — calling a paying guest's departure a "pilot" reads
+as untested/experimental rather than a fully real product, undesirable
+positioning for guests who are about to pay €1,400+. Removed the label
+entirely (not replaced with different text) — the
+`.featured-trip-badge` ("Fixed Departure · Nov 9 to 15, 2026") directly
+above still carries the necessary dating context. If "pilot" framing
+is wanted again for internal/investor-facing docs, it's still all over
+`BUSINESS_PLAN.md`/`FINANCIAL_PLAN.md` — this was a guest-facing-copy-only
+change.
 
 **Branch-drift note:** this session's designated branch
 (`claude/replace-first-plane-picture-beasqh`) was based on the dead
