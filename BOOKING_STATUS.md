@@ -368,16 +368,18 @@ urgent now that Stripe is confirmed live.
   8-guest cap.** See `CONTATTI_LOCALI.md` §8 for the full listing
   details (this supersedes an earlier, informally-collected 3-apartment
   estimate from 2026-07-24 — see that section for the discrepancy
-  note). **Indicative rate the same day: €60/guest/night** (not
-  room-type-dependent) — `FINANCIAL_PLAN.md` §1 runs the margin numbers
-  against this rate for the 6-night Nov departure (~32%–46% depending
-  on tier/room, healthier than the old Da Beccone worst case). **Not a
-  locked-in rate**: Nikolai describes the owner as flexible/easygoing,
-  so €60 is being treated as a conservative ceiling — the real
-  negotiated rate could come in lower, which would only improve these
-  margins. Worth nailing down a firm number before the departure, but
-  not a blocker in the meantime since €60 is already the pessimistic
-  case.
+  note). **Rate, corrected 2026-08-13:** the only firm number from
+  Casamatta is **€70/night for a couple** (€35/guest/night at the
+  smallest booking size) — an earlier €60/guest/night figure logged
+  the same day turned out to be an unsourced guess, not real. Nikolai's
+  understanding is the rate **decreases with more guests and more
+  nights**, but the actual discounted rate for 8 guests/6 nights isn't
+  quoted yet. `FINANCIAL_PLAN.md` §1 uses the undiscounted €35/guest/
+  night couple rate as a conservative ceiling for the 6-night Nov
+  departure (~42%–55% margin depending on tier/room — real margins
+  should be even better once the group/length discount is quoted).
+  **Still open:** the actual discounted rate for this specific booking.
+  Not a blocker in the meantime since the ceiling is already healthy.
 - **Cloudflare deploy method**: a scoped API token (Workers Scripts:
   Edit + D1: Edit, account-scoped, with an expiration) was used this
   session to deploy the Worker directly via `wrangler deploy` /

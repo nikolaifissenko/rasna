@@ -66,30 +66,36 @@ is above (~38% vs ~44% after Stripe fees) — a deliberate trade of some
 margin on the first 2 guests for the momentum of breaking zero.
 
 **✅ Lodging partner changed 2026-08-13: Casamatta is now the confirmed lodging for the
-November departure, replacing Da Beccone — and as of 2026-08-13 Nikolai has an indicative
-rate: €60/guest/night, flat (not room-type-dependent, unlike Da Beccone's per-room rates
-below — confirm with Casamatta if this ever turns out to vary by apartment).** Every Da
-Beccone-based number in the rest of this subsection is now superseded/historical — kept for
-reference only. **€60 is not a locked-in/negotiated rate** — Nikolai describes the owner as
-flexible/easygoing, so this is being treated as a conservative ceiling; the real number could
-land lower, which would only improve the margins below. Worth getting a firm quote before the
-departure. Numbers against the current live pricing (`italian-olive-experience-pricing.html`),
-for the actual 6-night Nov 9–15 departure, using €60 as the pessimistic case:
+November departure, replacing Da Beccone.** Every Da Beccone-based number in the rest of
+this subsection is now superseded/historical — kept for reference only.
+
+**Rate, corrected 2026-08-13 (superseding an earlier €60/guest/night placeholder that turned
+out to be an unsourced guess, not a real number):** the only firm figure Nikolai has from
+Casamatta is **€70/night for a couple (2 guests)** — i.e. €35/guest/night at the smallest
+possible booking (1 night, 2 people). Nikolai's understanding is that **the rate decreases
+with more guests and more nights** (typical of short-term apartment rentals), but the actual
+discounted rate for 8 guests/6 nights hasn't been quoted yet. Using the €35/guest/night
+couple rate **with no volume/length discount applied is therefore a conservative ceiling** —
+real cost should come in lower once negotiated for the full group and full stay:
 
 | Cost line | €/guest |
 |---|---|
-| Lodging (Casamatta, €60 × 6 nights) | €360 |
+| Lodging ceiling (Casamatta, €35/night undiscounted × 6 nights — real rate likely lower) | €210 |
 | Meals & local hosting fees, guiding/transport, activity fees, insurance, marketing (unchanged from Section 1 above) | €550 |
-| **Total cost per guest (before Stripe fee)** | **€910** |
+| **Total cost per guest ceiling (before Stripe fee)** | **€760** |
 
 | Tier | Room | Price | Stripe fee (intl. card, ~3.25%+€0.25) | Net profit/guest | Margin |
 |---|---|---|---|---|---|
-| Early Bird | Shared | €1,400 | €46 | €444 | ≈32% |
-| Early Bird | Private | €1,600 | €52 | €638 | ≈40% |
-| Regular | Shared | €1,500 | €49 | €541 | ≈36% |
-| Regular | Private | €1,700 | €56 | €735 | ≈43% |
-| Final | Shared | €1,600 | €52 | €638 | ≈40% |
-| Final | Private | €1,800 | €59 | €831 | ≈46% |
+| Early Bird | Shared | €1,400 | €46 | €594 | ≈42% |
+| Early Bird | Private | €1,600 | €52 | €788 | ≈49% |
+| Regular | Shared | €1,500 | €49 | €691 | ≈46% |
+| Regular | Private | €1,700 | €56 | €885 | ≈52% |
+| Final | Shared | €1,600 | €52 | €788 | ≈49% |
+| Final | Private | €1,800 | €59 | €981 | ≈55% |
+
+These are **worst-case margins** (~42%–55%) since they assume zero volume/length discount on
+lodging despite Nikolai's understanding that one applies — get the actual 8-guest/6-night
+quote from Casamatta to replace this ceiling with the real number.
 
 Margins now run **~32%–46%** depending on tier/room, healthier across the board than the
 worst-case Da Beccone single-room scenario below (~29%). **Caveat:** the €550 non-lodging
