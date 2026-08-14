@@ -10,24 +10,17 @@ export const DEPARTURES = [
     capacity: 8,
     currency: 'eur',
     active: true,
-    // Two-axis pricing, replacing the old flat price_per_person +
-    // founding-guest-discount model (2026-08-10): room type (private vs.
-    // sharing a double) x booking window (earlier books cost less).
-    // `room_type` on a booking is per-booking, not per-guest — a group
-    // books entirely as "private" (each guest gets/pays for their own
-    // room) or entirely as "shared" (guests pair up into doubles).
-    // Kept the whole matrix inside the already-published €1,400–1,800
-    // range (2026-08-10, per Nikolai) rather than the private room
-    // pushing above it.
+    // Flat per-person pricing, same for every guest — one early-bird
+    // price up to a cutoff date, then one full price after (2026-08-14,
+    // per Nikolai). No room-type split.
     pricing: {
-      shared: { early_bird: 1400, regular: 1500, final: 1600 },
-      private: { early_bird: 1600, regular: 1700, final: 1800 },
+      early_bird: 1400,
+      full: 1800,
     },
-    // Inclusive cutoffs: a booking made on early_bird_until's date still
-    // gets the early_bird price; the day after rolls into "regular".
+    // Inclusive cutoff: a booking made on early_bird_until's date still
+    // gets the early-bird price; the day after rolls into "full".
     pricing_windows: {
       early_bird_until: '2026-09-15',
-      regular_until: '2026-10-25',
     },
   },
 ];
@@ -41,16 +34,14 @@ export function getDeparture(id) {
 }
 
 // Which pricing tier applies right now (or at an arbitrary `now`, for
-// tests) — 'early_bird' | 'regular' | 'final'.
+// tests) — 'early_bird' | 'full'.
 export function currentPriceTier(departure, now = new Date()) {
   const today = now.toISOString().slice(0, 10); // YYYY-MM-DD, UTC
-  const { early_bird_until, regular_until } = departure.pricing_windows;
-  if (today <= early_bird_until) return 'early_bird';
-  if (today <= regular_until) return 'regular';
-  return 'final';
+  const { early_bird_until } = departure.pricing_windows;
+  return today <= early_bird_until ? 'early_bird' : 'full';
 }
 
-export function priceForRoomType(departure, roomType, now = new Date()) {
+export function priceForDeparture(departure, now = new Date()) {
   const tier = currentPriceTier(departure, now);
-  return departure.pricing[roomType][tier];
+  return departure.pricing[tier];
 }

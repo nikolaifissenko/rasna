@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import Stripe from 'stripe';
 
-import { listDepartures, getDeparture, currentPriceTier, priceForRoomType } from './departures.js';
+import { listDepartures, getDeparture, currentPriceTier, priceForDeparture } from './departures.js';
 import {
   spotsUsed,
   createFixedBooking,
@@ -50,17 +50,12 @@ app.get('/api/departures', async (c) => {
         pricing: d.pricing,
         pricing_windows: d.pricing_windows,
         current_tier: tier,
-        price_shared: d.pricing.shared[tier],
-        price_private: d.pricing.private[tier],
+        price_per_person: d.pricing[tier],
       };
     })
   );
   return c.json({ departures });
 });
-
-function isValidRoomType(roomType) {
-  return roomType === 'shared' || roomType === 'private';
-}
 
 function isValidEmail(email) {
   return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -104,8 +99,6 @@ app.post('/api/bookings/fixed', async (c) => {
   const body = await c.req.json().catch(() => ({}));
   const { errors, numGuests } = validateCommon(body);
   if (!body.departure_id) errors.push('departure_id is required');
-  const roomType = body.room_type;
-  if (!isValidRoomType(roomType)) errors.push("room_type must be 'shared' or 'private'");
   if (errors.length) return c.json({ error: errors.join(', ') }, 400);
 
   const departure = getDeparture(body.departure_id);
@@ -114,14 +107,13 @@ app.post('/api/bookings/fixed', async (c) => {
   // Price is locked in at the tier active right now (server clock, not
   // client-supplied) — a booking started right at a tier boundary always
   // gets a consistent, non-gameable price.
-  const unitPrice = priceForRoomType(departure, roomType);
+  const unitPrice = priceForDeparture(departure);
   const amountTotalCents = Math.round(unitPrice * 100) * numGuests;
 
   const bookingId = await createFixedBooking(c.env.DB, departure, {
     name: body.name.trim(),
     email: body.email.trim(),
     num_guests: numGuests,
-    room_type: roomType,
     activities: JSON.stringify(body.activities || []),
     notes: body.notes || null,
     amount_total_cents: amountTotalCents,
@@ -144,7 +136,7 @@ app.post('/api/bookings/fixed', async (c) => {
     {
       unitAmountCents: Math.round(unitPrice * 100),
       quantity: numGuests,
-      suffix: `${roomType === 'private' ? 'Private room' : 'Shared room'}, ${numGuests} guest${numGuests > 1 ? 's' : ''}`,
+      suffix: `${numGuests} guest${numGuests > 1 ? 's' : ''}`,
     },
   ];
 
@@ -171,7 +163,7 @@ app.post('/api/bookings/custom', async (c) => {
   const { errors, numGuests } = validateCommon(body);
   if (errors.length) return c.json({ error: errors.join(', ') }, 400);
 
-  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 1450);
+  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 1800);
   const amountTotalCents = Math.round(pricePerPerson * 100) * numGuests;
   const bookingId = await createCustomBooking(c.env.DB, {
     name: body.name.trim(),
@@ -317,7 +309,6 @@ app.get('/admin', requireAdminAuth, async (c) => {
         <td>${escapeHtml(b.name)}</td>
         <td>${escapeHtml(b.email)}</td>
         <td>${b.num_guests}</td>
-        <td>${escapeHtml(b.room_type || '')}</td>
         <td>${(b.amount_total_cents / 100).toFixed(2)} ${b.currency.toUpperCase()}</td>
         <td>${escapeHtml(b.arrival_airport || '')}</td>
         <td>${escapeHtml(b.arrival_flight_number || '')}</td>
@@ -342,14 +333,14 @@ app.get('/admin', requireAdminAuth, async (c) => {
     <h2>Departure capacity</h2>
     <table><tr><th>Departure</th><th>Used</th><th>Remaining</th></tr>${depRows || '<tr><td colspan="3">No departures configured</td></tr>'}</table>
     <h2>All bookings</h2>
-    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Room</th><th>Amount</th><th>Arrival Airport</th><th>Flight #</th><th>Arrival Time</th><th>Transfer Notes</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="14">No bookings yet</td></tr>'}</table>
+    <table><tr><th>ID</th><th>Status</th><th>Type</th><th>Departure / Dates</th><th>Name</th><th>Email</th><th>Guests</th><th>Amount</th><th>Arrival Airport</th><th>Flight #</th><th>Arrival Time</th><th>Transfer Notes</th><th>Created</th></tr>${bookingRows || '<tr><td colspan="13">No bookings yet</td></tr>'}</table>
   </body></html>`);
 });
 
 app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
   const bookings = await listBookings(c.env.DB);
   const header = [
-    'id', 'status', 'type', 'departure_id', 'name', 'email', 'num_guests', 'room_type',
+    'id', 'status', 'type', 'departure_id', 'name', 'email', 'num_guests',
     'amount_total', 'currency', 'preferred_dates', 'activities', 'notes',
     'arrival_airport', 'arrival_flight_number', 'arrival_datetime', 'transfer_notes', 'created_at',
   ];
@@ -358,7 +349,7 @@ app.get('/admin/bookings.csv', requireAdminAuth, async (c) => {
   for (const b of bookings) {
     lines.push(
       [
-        b.id, b.status, b.type, b.departure_id, b.name, b.email, b.num_guests, b.room_type,
+        b.id, b.status, b.type, b.departure_id, b.name, b.email, b.num_guests,
         (b.amount_total_cents / 100).toFixed(2), b.currency, b.preferred_dates, b.activities, b.notes,
         b.arrival_airport, b.arrival_flight_number, b.arrival_datetime, b.transfer_notes, b.created_at,
       ]
