@@ -655,6 +655,20 @@
     .fade-in { opacity: 0; transform: translateY(16px); animation: fadeInFallback 0.01s 1s forwards; transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); animation: none; }
     @keyframes fadeInFallback { to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Google auto-translate ── */
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+    #google_translate_element .goog-te-gadget { font-size: 0; }
+    #google_translate_element .goog-te-gadget-simple {
+      background: transparent; border: 1px solid rgba(168,173,110,0.4); border-radius: 999px;
+      padding: 0.4rem 0.8rem; display: inline-flex; align-items: center; cursor: pointer;
+    }
+    #google_translate_element .goog-te-gadget-simple .goog-te-menu-value {
+      color: var(--tufo); font-size: 0.72rem; letter-spacing: 0.04em; font-family: 'Inter', sans-serif;
+    }
+    #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span:first-child { color: var(--tufo) !important; }
+    #google_translate_element .goog-te-gadget-icon { display: none !important; }
   </style>
 </head>
 <body>
@@ -703,7 +717,7 @@
 
   <!-- Sticky nav -->
   <nav class="site-nav">
-    <a href="#top" class="nav-logo">Rasna</a>
+    <a href="#top" class="nav-logo notranslate">Rasna</a>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#catalog">Experiences</a>
@@ -714,6 +728,7 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
+      <div id="google_translate_element" class="notranslate"></div>
       <span class="nav-count" id="nav-count">0 selected</span>
       <a href="#contact" class="nav-btn">Book Now</a>
     </div>
@@ -1446,6 +1461,18 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
   </script>
+
+  <!-- Auto-translate: detects the visitor's browser/device language and offers translation -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: true,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

@@ -100,13 +100,30 @@
     footer { background: var(--deep); border-top: 1px solid rgba(168,173,110,0.06); text-align: center; padding: 1.6rem; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--stone); opacity: 0.4; }
 
     @media (max-width: 600px) { article, .page-header, .related { padding-left: 1.4rem; padding-right: 1.4rem; } }
+
+    /* ── Google auto-translate ── */
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+    #google_translate_element .goog-te-gadget { font-size: 0; }
+    #google_translate_element .goog-te-gadget-simple {
+      background: transparent; border: 1px solid rgba(168,173,110,0.4); border-radius: 999px;
+      padding: 0.4rem 0.8rem; display: inline-flex; align-items: center; cursor: pointer;
+    }
+    #google_translate_element .goog-te-gadget-simple .goog-te-menu-value {
+      color: var(--tufo); font-size: 0.72rem; letter-spacing: 0.04em; font-family: 'Inter', sans-serif;
+    }
+    #google_translate_element .goog-te-gadget-simple .goog-te-menu-value span:first-child { color: var(--tufo) !important; }
+    #google_translate_element .goog-te-gadget-icon { display: none !important; }
   </style>
 </head>
 <body>
 
   <nav class="site-nav">
-    <a href="/" class="nav-logo">Rasna</a>
-    <a href="/#contact" class="nav-btn">Book Now</a>
+    <a href="/" class="nav-logo notranslate">Rasna</a>
+    <div style="display:flex;align-items:center;gap:0.9rem">
+      <div id="google_translate_element" class="notranslate"></div>
+      <a href="/#contact" class="nav-btn">Book Now</a>
+    </div>
   </nav>
 
   <header class="page-header">
@@ -171,6 +188,18 @@
   <footer>
     <span>Rasna &mdash; Blera, Italia</span>
   </footer>
+
+  <!-- Auto-translate: detects the visitor's browser/device language and offers translation -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: true,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

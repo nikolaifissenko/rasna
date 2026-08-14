@@ -57,6 +57,8 @@
     .status-msg.err { color: #d98a7a; }
     .bookmark-note { font-size: 0.78rem; opacity: 0.55; margin-top: 1.25rem; }
     .flight-section.hidden, .flight-loading.hidden { display: none; }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0 !important; }
   </style>
 </head>
 <body>
@@ -160,5 +162,18 @@
       });
     })();
   </script>
+
+  <!-- Auto-translate: detects the visitor's browser/device language and offers translation -->
+  <div id="google_translate_element" class="notranslate" style="display:none"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: true,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

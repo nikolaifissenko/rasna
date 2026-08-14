@@ -25,6 +25,8 @@
     a { color: var(--gold); }
     .home-link { display:inline-block; margin-top: 2rem; padding: 0.9rem 2rem; border: 1.5px solid var(--gold); color: var(--gold); text-decoration:none; font-size:0.78rem; letter-spacing:0.15em; text-transform:uppercase; }
     .home-link:hover { background: var(--gold); color: var(--deep); }
+    .goog-te-banner-frame.skiptranslate { display: none !important; }
+    body { top: 0 !important; }
   </style>
 </head>
 <body>
@@ -34,5 +36,18 @@
     <p>Changed your mind or hit a snag? Email <a href="mailto:nikolai.fissenko1@gmail.com">nikolai.fissenko1@gmail.com</a> and we'll sort it out, or head back and try again.</p>
     <a class="home-link" href="./#book">Back to Rasna</a>
   </div>
+
+  <!-- Auto-translate: detects the visitor's browser/device language and offers translation -->
+  <div id="google_translate_element" class="notranslate" style="display:none"></div>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: true,
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
