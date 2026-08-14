@@ -1,6 +1,6 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-08-14_
 
 ## What's live
 
@@ -73,6 +73,38 @@ _Last updated: 2026-07-24_
   (confirmed 2026-07-24)** — verified via `PRAGMA table_info(bookings)`
   against the remote DB, all 4 columns present. The flight-details form
   should now save correctly instead of silently failing.
+- **Auto language detection/translation (added 2026-08-14)**: all 7
+  static pages (`index.html`, the three content guides, `cancellation-
+  policy.html`, `success.html`, `cancel.html`) now embed Google's
+  Website Translator widget. It auto-translates page content into a
+  visitor's browser/device language and falls back silently to English
+  for anyone browsing in English or a language Google can't detect —
+  no manual toggle needed. Implementation notes:
+  - Google's default blue toolbar/banner is suppressed via CSS
+    (`.goog-te-banner-frame` hidden, `body { top: 0 }` reset); a small
+    dropdown language switcher is placed in the site nav instead,
+    styled to match the dark/gold palette, for visitors who want to
+    override the auto-detected language.
+  - `success.html` and `cancel.html` have no nav bar, so they get the
+    auto-detect behavior only (hidden mount point, no visible
+    switcher).
+  - The `Rasna` brand wordmark is marked `notranslate` everywhere so it
+    never gets machine-translated.
+  - No backend/D1 changes — this is static-site-only, pure client-side
+    JS loaded from `translate.google.com`. No migration, no Worker
+    redeploy needed.
+  - Pushed straight to `claude/magical-franklin-58SKM` (fast-forward
+    merge from `claude/rasna-auto-language-detection-3z49ob`), so it's
+    live via the normal GitHub Pages auto-deploy — no separate deploy
+    step.
+  - Tradeoff, chosen deliberately over hand-written translations:
+    near-universal language coverage (~100 languages) at machine-
+    translation quality, versus polished but limited-language hand
+    translations. Revisit if guest feedback says the machine
+    translation reads poorly for a language that matters (e.g. if a
+    lot of bookings start coming from one non-English-speaking
+    country, a hand-translated version of that language could be
+    worth the one-time cost).
 
 ## Verified so far
 
