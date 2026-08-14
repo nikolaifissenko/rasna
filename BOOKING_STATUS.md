@@ -2,6 +2,32 @@
 
 _Last updated: 2026-08-14_
 
+## Deploy-branch drift (found & fixed 2026-08-14)
+
+Several prior sessions' work — the November-departure hero, palette
+recolor, room-type pricing experiment, auto-translate — had only ever
+been committed to work branches and **never merged into
+`claude/magical-franklin-58SKM`**, the only branch GitHub Pages and the
+Cloudflare Worker actually auto-deploy from. The live site was running
+code from late July while the repo's default branch view showed much
+newer work. Fast-forward-merged everything into
+`claude/magical-franklin-58SKM` and pushed — the live site and Worker
+should now match this file's history. If a future request says "I've
+already asked for this and it's still not showing up," check this
+first: `git log origin/claude/magical-franklin-58SKM` vs. whatever
+branch the work actually landed on.
+
+## Pricing (simplified 2026-08-14)
+
+Replaced the room-type (shared/private) x 3-tier pricing matrix with a
+flat two-tier price, per Nikolai: **€1,400 early bird** (book by
+2026-09-15) → **€1,800 full price** after. No room-type selection
+anywhere in the flow. `worker/migrations/0003_room_type.sql` (which
+added the now-unused `room_type` column) was deleted — it had never
+been applied to the remote D1 database, so no migration/rollback was
+needed. Custom "choose your own dates" bookings default to the same
+€1,800 (`CUSTOM_PRICE_PER_PERSON` in `worker/wrangler.toml`).
+
 ## What's live
 
 - **Site**: **rasnaexperience.com is live** (confirmed 2026-07-23 — HTTPS
