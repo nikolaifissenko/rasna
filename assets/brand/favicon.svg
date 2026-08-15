@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Rasna favicon</title>
+  <circle cx="100" cy="100" r="100" fill="#5E1F30"/>
+  <circle cx="100" cy="100" r="88" fill="#E8D8B0"/>
+
+  <!-- simplified handles: solid nubs, legible at 16px -->
+  <ellipse cx="128" cy="76" rx="12" ry="16" fill="#B1552A" transform="rotate(20 128 76)"/>
+  <ellipse cx="72" cy="76" rx="12" ry="16" fill="#B1552A" transform="rotate(-20 72 76)"/>
+
+  <!-- amphora body, bolder / fewer nodes -->
+  <path d="M100,38
+           C86,38 82,46 88,58
+           C68,64 58,80 58,102
+           C58,128 76,146 94,152
+           L94,160
+           C94,164 98,166 100,166
+           C102,166 106,164 106,160
+           L106,152
+           C124,146 142,128 142,102
+           C142,80 132,64 112,58
+           C118,46 114,38 100,38
+           Z"
+        fill="#B1552A"/>
+</svg>

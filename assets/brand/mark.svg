@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <title>Rasna mark</title>
+  <circle cx="100" cy="100" r="98" fill="#5E1F30"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#A8894A" stroke-width="1.5"/>
+  <circle cx="100" cy="100" r="84" fill="#E8D8B0"/>
+
+  <!-- handles (behind body, thin open loops) -->
+  <path d="M114,64 C130,62 136,74 130,84 C127,89 122,88 118,82"
+        fill="none" stroke="#B1552A" stroke-width="7" stroke-linecap="round"/>
+  <path d="M86,64 C70,62 64,74 70,84 C73,89 78,88 82,82"
+        fill="none" stroke="#B1552A" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- amphora body -->
+  <path d="M100,40
+           C88,40 84,44 84,50
+           C84,56 88,60 90,64
+           C74,68 62,82 62,100
+           C62,124 78,142 92,150
+           L92,158
+           C92,162 96,164 100,164
+           C104,164 108,162 108,158
+           L108,150
+           C122,142 138,124 138,100
+           C138,82 126,68 110,64
+           C112,60 116,56 116,50
+           C116,44 112,40 100,40
+           Z"
+        fill="#B1552A" stroke="#1C140E" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- rim + foot accent lines, evoking painted vase bands -->
+  <rect x="86" y="46" width="28" height="3" fill="#1C140E" opacity="0.55"/>
+  <rect x="90" y="156" width="20" height="3" fill="#1C140E" opacity="0.55"/>
+</svg>
