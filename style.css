@@ -313,9 +313,12 @@
     /* ── Hub host block (About Nikolai, inlined on #festival-week) ── */
     .hub-host { max-width: 640px; margin: 4rem auto 0; text-align: center; }
     .hub-host-photo {
-      width: 128px; height: 128px; border-radius: 50%; margin: 0 auto 1.4rem;
+      width: 240px; height: 240px; border-radius: 50%; margin: 0 auto 1.6rem;
       background-size: cover; background-position: center top;
-      border: 3px solid var(--gold);
+      border: 4px solid var(--gold);
+    }
+    @media (max-width: 480px) {
+      .hub-host-photo { width: 180px; height: 180px; }
     }
     .hub-host p { font-size: 0.98rem; line-height: 1.8; font-weight: 300; opacity: 0.8; margin-bottom: 1.1rem; }
     .hub-host-link { font-size: 0.85rem; color: var(--terracotta); }
