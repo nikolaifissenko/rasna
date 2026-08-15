@@ -995,17 +995,18 @@
       });
     }
 
-    // Deep links from other pages (e.g. italian-olive-experience-itinerary.html#pricing)
-    // land here with panel-trips showing by default — if the hash target lives inside
-    // panel-build, switch tabs first so the link actually scrolls somewhere visible.
-    (function() {
-      const hash = window.location.hash.replace('#', '');
-      if (!hash) return;
-      const target = document.getElementById(hash);
-      if (target && target.closest('#panel-build')) {
-        showTab('build', hash);
-      }
-    })();
+    // The November hub (panel-trips) is always what a plain load/refresh of
+    // this page shows — no exceptions. There used to be a hash-based
+    // auto-switch here for deep links from other pages into panel-build
+    // (e.g. a #catalog/#pricing link), but any visitor whose address bar
+    // still had one of those hashes (from a nav click, a bookmark, a stale
+    // tab) got permanently stuck reopening Build Your Own on every refresh,
+    // since a refresh reloads the exact same URL and re-triggers it. If the
+    // URL loads with a hash, just drop it silently so a refresh never
+    // depends on it — never auto-switch tabs on load.
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
 
     const selectedActivities = new Set();
 
