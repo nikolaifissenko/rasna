@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <title>Rasna favicon</title>
-  <circle cx="100" cy="100" r="100" fill="#4E1A26"/>
-  <circle cx="100" cy="100" r="80" fill="#E5D8C2"/>
-  <text x="100" y="132" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="92" fill="#6B2436">R</text>
+  <title>Rasna favicon — filled silhouette of the site's palmette, simplified for small sizes</title>
+  <circle cx="100" cy="100" r="100" fill="#6B2436"/>
+  <g transform="translate(40,44) scale(1.5)" fill="#E5D8C2">
+    <path d="M40,55 C40,35 20,30 15,10 C18,25 30,30 40,5 C50,30 62,25 65,10 C60,30 40,35 40,55Z"/>
+    <ellipse cx="40" cy="56" rx="6" ry="2"/>
+  </g>
 </svg>
