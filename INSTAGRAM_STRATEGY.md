@@ -7,6 +7,36 @@ actually spend their discovery time (over generic travel blogs or ads).
 This doc is a content system you can run without a huge time budget: what
 to post, how often, and in what voice.
 
+## Current status (Aug 2026)
+
+Account: **@Rasna.experience** — claimed, zero posts yet.
+
+**Done, ready to use** (files in `assets/instagram/`):
+- `profile-picture.png` — set as the account's profile picture. Gold
+  Etruscan palmette emblem on deep bordeaux, matches the site.
+- Bio (116 chars, room left for a founder `@handle` line once decided):
+  ```
+  Travel isn't a performance.
+  Small groups (6–10), actually living in Blera. Not just passing through.
+  📍 Blera, Tuscia
+  ```
+- **Post 1 (Reel, pin it):** the existing intro/concept clip. Caption is
+  in the sample captions below (first one, olive-harvest-style opener
+  adapted for a general intro).
+- **Post 2 (Carousel), 4 of 8 slides done** — `post2-slide1-cover.png`,
+  `post2-slide3-how.png`, `post2-slide5-difference.png`,
+  `post2-slide7-included.png`. These are the text/bordeaux slides
+  (odd-numbered), styled to match the site exactly.
+
+**Still needed — the actual blocker:** slides 2, 4, 6, 8 need real
+photos (Blera viewpoint, a second Blera shot, the tombs, the olive
+harvest). Tried generating a photo+text-overlay alternative via Gemini
+instead of waiting on real photos — didn't produce usable output.
+**Decision: don't try AI-generated "photos of Blera" again** — the
+whole brand promise is "this is real, not staged," so a fake photo of
+the actual place undercuts the pitch. Wait for real photos, or shoot
+them next time in Blera (see shot list below).
+
 ## Before anything else: the Why-How-What order
 
 Per `BUSINESS_PLAN.md` §8 — every caption should lead with the belief, not
@@ -112,6 +142,19 @@ Keep it tight (8–15 tags, not 30) and mix specificity:
 > same slow pace the town lives by. €1,450/person, all-inclusive:
 > lodging, all meals, every activity, transport from Rome or Viterbo.
 > No hidden extras. Link in bio for the next departure.
+
+## Minimum shot list for the next Blera visit
+
+This unblocks post 2 and feeds the calendar for weeks after. About
+20 minutes of deliberate phone footage:
+- 15–30 sec of hands actually doing something (olive picking, cheese
+  curing, pasta rolling) — unpolished is the brand, doesn't need to be posed
+- A wide viewpoint shot of Blera itself, ideally golden hour
+- A second Blera shot at a different time of day/angle than the first
+- The rock-cut tombs
+- A meal table shot, food mid-serve
+- 3–4 candid clips of daily life in town (market, piazza, doorsteps) —
+  no posed portraits, per the no-named-hosts direction in `BUSINESS_PLAN.md` §8
 
 ## What ties back to the website
 
