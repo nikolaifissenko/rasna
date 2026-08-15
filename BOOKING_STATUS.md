@@ -32,10 +32,35 @@ dead `claude/magical-franklin-58SKM` lineage for the static site.
 
 **Not a pricing/payment change, but same session:** `index.html`'s
 `#festival-week` hub gained an inline "About Nikolai" bio, a 6-photo
-activities showcase, and a flat-price summary + booking CTA, all
-between the existing inline itinerary and the `hub-links-grid`. Booking
-form/Stripe flow itself is unchanged and still lives only on
-`italian-olive-experience-pricing.html`.
+activities showcase, a "Where You'll Stay" section (6 real Casamatta
+photos + the two-apartment breakdown, reused from
+`italian-olive-experience-lodging.html`), and a flat-price summary +
+booking CTA, all between the existing inline itinerary and the
+`hub-links-grid`, in that order. Booking form/Stripe flow itself is
+unchanged and still lives only on `italian-olive-experience-pricing.html`.
+
+**Two real navigation bugs found and fixed the same session** (not
+pricing/payment, but both made the site look broken to Nikolai
+immediately after the above shipped, so logging here too):
+1. Every subpage's sticky-nav "Rasna" logo linked to
+   `index.html#catalog` (`#catalog` lives inside `#panel-build`, the
+   Build Your Own tab), and `index.html` had an on-load script that
+   auto-switched to whichever tab a loaded hash pointed into. So
+   clicking the logo from anywhere else on the site — About, FAQ,
+   Pricing, any guide page — landed on the activity picker instead of
+   the November hub. Fixed by repointing every subpage logo at plain
+   `index.html`, and `index.html`'s own logo at `#top` instead of
+   `#catalog`.
+2. Even after fix #1, a visitor whose address bar already had one of
+   those hashes (from before the fix, or a bookmark) stayed stuck,
+   because a refresh reloads the exact same URL and re-triggers the
+   same on-load auto-switch. Fixed by removing the auto-switch
+   entirely — `index.html` now always shows the November hub on a
+   plain load or refresh, full stop, and silently strips any hash from
+   the URL via `history.replaceState` so it can't cause this again.
+   Verified with Playwright against the actual deployed code: loading
+   `index.html#catalog` then hitting reload twice, panel-build stayed
+   `display:none` throughout.
 
 ## 2026-08-12 update: hero no longer links straight to the booking form
 

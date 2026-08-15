@@ -235,6 +235,48 @@ split. Changes:
   Pricing & Booking/FAQ cards kept, since each still adds something the
   inline content doesn't (full desktop itinerary grid, the actual
   working booking form, etc).
+- **Where You'll Stay, inlined too** (added later same day, on request):
+  a second `.hub-activities-grid` reusing the same `.ha-card` component
+  — 6 real Casamatta photos (sign, sitting room, wood-fired kitchen, a
+  bedroom, the entrance, the bathroom — content pulled verbatim from
+  `italian-olive-experience-lodging.html`, not new copy) plus the
+  `.included-grid` two-apartment breakdown (Larger/Smaller apartment),
+  placed between the activities showcase and `.hub-cost`. A "See all
+  the photos & full details →" link covers the other 4 photos, which
+  stay only on the dedicated lodging page.
+- **Two real nav bugs found right after shipping the above, both
+  fixed same day:**
+  1. Every subpage's sticky-nav logo linked to `index.html#catalog`
+     (inside `#panel-build`), and `index.html` had an on-load script
+     that switched tabs based on whatever the loaded hash pointed
+     into. Clicking "Rasna" from *any other page on the site* — About,
+     FAQ, Pricing, any guide page — landed on the Build Your Own
+     catalog instead of the November hub. Every subpage logo now
+     points at plain `index.html`; `index.html`'s own logo points at
+     `#top` instead of `#catalog`.
+  2. That fix alone wasn't enough: a visitor whose address bar already
+     held one of those hashes (from before the fix, or a bookmark)
+     stayed stuck on Build Your Own on every refresh, since reloading
+     resends the same URL and re-triggers the same on-load switch.
+     Removed the on-load auto-switch entirely — a plain load or
+     refresh of `index.html` now *always* shows the November hub, no
+     exceptions, and any hash present gets silently stripped from the
+     URL via `history.replaceState` so it can never cause this again.
+     Confirmed against the actual deployed bundle with Playwright:
+     loading `index.html#catalog` then reloading twice, `#panel-build`
+     stayed `display:none` the whole time. Trade-off accepted: a
+     handful of other pages' "Experiences"/"Included"/"Pricing"/
+     "Contact" nav links still point into `#panel-build` sections and
+     will now just land on the November hub instead of deep-linking in
+     — judged fine since the November departure is the flagship
+     product now, not worth re-litigating for a secondary utility nav
+     link.
+  Both bugs are the kind of thing that's invisible from a bare
+  `curl`/raw-HTML check (the server-rendered HTML was always correct;
+  only post-load JS behavior was broken) — if "the site looks fine but
+  Nikolai says it's broken" comes up again, actually simulate the
+  click/refresh path in a real browser (Playwright, computed styles,
+  not just grep on fetched HTML) before concluding it's just his cache.
 
 ---
 
