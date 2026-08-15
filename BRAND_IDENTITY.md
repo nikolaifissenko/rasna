@@ -7,36 +7,37 @@ assets later.
 
 ## Where the palette comes from
 
-Blera's rock-cut Etruscan tombs — the ones every Rasna departure
-actually visits — turned up black-figure and bucchero pottery: matte
-black, fired clay red-orange, a pale reserved ground. That's the base
-of this system. Bordeaux comes from the wine poured at the table with
-local families; military green from the olive groves in October —
-deliberately not the lavender/pastel-lemon palette most "authentic
-Tuscany" accounts already use. The site's existing Etruscan color
-scheme (olive/bordeaux/earth, Cormorant Garamond) already had these
-bones — this system sharpens and documents it, it doesn't replace it.
+This is **not a new palette** — every value below is copied verbatim
+from `index.html`'s own `:root`. The site already had a wine-bordeaux,
+a deeper rust, an olive military green, a warm buff, and a sage-gold
+that the hero and nav already lean on. This doc just names each
+color's job and builds the new amphora logo out of the same ten
+variables, so social content and the site read as one system instead
+of the palette living only in scattered CSS.
 
 ## Colors
 
-| Role | Name | Hex |
-|---|---|---|
-| Primary | Bordeaux | `#5E1F30` |
-| Primary | Military Green | `#4B5632` |
-| Accent (vase) | Fired Clay / Terracotta | `#B1552A` |
-| Accent (vase) | Buff Slip | `#E8D8B0` |
-| Accent (vase) | Vase Black (ink) | `#1C140E` |
-| Accent (vase) | Antique Gold (hairlines only) | `#A8894A` |
-| Neutral | Parchment (ground) | `#F2EBDD` |
-| Neutral | Stone (captions) | `#7C7A5C` |
+All ten are the exact `index.html` variables — same names, same hex.
+
+| Role | Name | Variable | Hex |
+|---|---|---|---|
+| Primary | Bordeaux | `--terracotta` | `#6B2436` |
+| Primary | Military Green | `--olive` | `#5C6B3C` |
+| Vase tone | Rust (mark's outer ring) | `--rust` | `#4E1A26` |
+| Vase tone | Tufo (mark's ground / panels) | `--tufo` | `#E5D8C2` |
+| Vase tone | Earth (ink / mark outline) | `--earth` | `#211E15` |
+| Vase tone | Gold (dark-background accent) | `--gold` | `#A8AD6E` |
+| Neutral | Cream (page background) | `--cream` | `#F2EBDD` |
+| Neutral | Deep (hero/nav background) | `--deep` | `#170B0D` |
+| Neutral | Stone (captions) | `--stone` | `#7C7A5C` |
+| Neutral | Card | `--card-bg` | `#FBF7EF` |
 
 Two primaries (bordeaux + military green) should dominate every post or
-page. The vase tones are accents — terracotta and gold especially
-should never fill a large background, only icons, dividers, and small
-details. This maps closely onto the CSS variables already in
-`index.html` (`--terracotta`, `--olive`, `--gold`, `--tufo`, `--cream`,
-`--deep`) — no site rebuild needed, just tighter usage discipline going
-forward.
+page — exactly how the live site already uses `--terracotta` for CTA
+buttons/badges and `--olive` for the hero's ambient glow. Gold stays a
+dark-background accent (nav logo, hero headline — its existing job);
+don't introduce it as a light-background color. No new hex values,
+just tighter, named usage.
 
 ## Typography
 
