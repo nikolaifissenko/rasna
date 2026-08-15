@@ -10,29 +10,30 @@ to post, how often, and in what voice.
 ## Before anything else: the Why-How-What order
 
 Per `BUSINESS_PLAN.md` §8 — every caption should lead with the belief, not
-the itinerary:
+the itinerary. Public-facing copy does not name specific hosts, and leads
+with *living in* Blera rather than *working* alongside hosts:
 
 1. **Why:** Travel has become a performance — watching a version of local
    life staged for tourists. People are hungry for the opposite: to
-   actually belong somewhere for a few days.
-2. **How:** Small groups (6–10), real relationships with real people —
-   Maria Grazia, Davide, Emiliano — not actors or staged demonstrations.
+   actually live somewhere for a few days, not just pass through it.
+2. **How:** Small groups (6–10), actually staying in Blera — the same
+   streets, the same rhythm, the same slow pace the town already lives by.
 3. **What:** Small-group trips in Blera — olive harvest, sauce day,
    cheesemaking, Etruscan tombs, meals with local families.
 
 If a caption opens with "Join us for an olive harvest!" before it
 establishes why that matters, rewrite it. Lead with belief, land on
-activity.
+activity. Don't name specific hosts in public copy (see note below).
 
 ## Content pillars (rotate through these, don't post the same type twice in a row)
 
 1. **Process, not posed** — hands actually harvesting, actually curing
    meat, actually working the press. Unpolished beats staged here; the
    whole brand promise is "not a performance."
-2. **The people** — Maria Grazia, Davide, Emiliano, Nicolò — short
-   profiles, their story, why they still do this work. This is content
-   competitors literally cannot copy, because it depends on relationships
-   Rasna actually has.
+2. **Daily life in Blera** — the town's actual rhythm: market mornings,
+   the piazza, neighbors on doorsteps, the pace of a place that isn't
+   performing for anyone. No named profiles — the point is the town
+   itself, not individual hosts.
 3. **The place** — Blera's rock-cut tombs, the Via Clodia, the hill town
    itself, golden-hour shots of the countryside. Establishes "this is a
    real, ancient place," not a generic countryside backdrop.
@@ -86,30 +87,29 @@ Keep it tight (8–15 tags, not 30) and mix specificity:
 > you're the one up the ladder.
 >
 > We built Rasna around one idea: travel only changes you when you stop
-> being a spectator. So every group is capped at 6–10 people, working
-> alongside the families who actually farm this land — not a staged
-> demo timed for a tour bus.
+> being a spectator and actually live somewhere for a few days, instead
+> of passing through it. Every group is capped at 6–10 people.
 >
 > This is olive harvest week in Blera, Tuscia — 90 minutes from Rome,
 > 2,800 years of history, zero tour buses. Link in bio to join a
 > departure or build your own dates.
 
-**People/Maria Grazia post:**
-> Maria Grazia has lived in Blera her whole life. When we started Rasna,
-> she made one thing clear: this isn't a performance for tourists — if
-> you're going to be at her table, you're doing the work first.
+**Daily life in Blera post:**
+> Blera doesn't perform for tourists. It just keeps living the way it
+> already does — and for a few days, that's what Rasna guests are part
+> of, not watching from the outside.
 >
-> That's the whole model. Real hosts, real work, real meals — not
-> actors, not a script. Comment "BLERA" and we'll send you the full
-> guide to what a trip here actually looks like.
+> That's the whole model. You stay in the town, not near it. Comment
+> "BLERA" and we'll send you the full guide to what a trip here
+> actually looks like.
 
 **FAQ/objection post (carousel):**
 > "How is this different from a normal Italy tour?"
 >
 > Most tours move 20–40 people through sights by bus, on a fixed script.
-> Rasna caps every group at 6–10 people and builds the trip around real
-> local life — you work alongside the people who actually farm the land,
-> cure the meat, and cook the meals. €1,450/person, all-inclusive:
+> Rasna caps every group at 6–10 people and builds the trip around
+> actually living in Blera — the same streets, the same rhythm, the
+> same slow pace the town lives by. €1,450/person, all-inclusive:
 > lodging, all meals, every activity, transport from Rome or Viterbo.
 > No hidden extras. Link in bio for the next departure.
 

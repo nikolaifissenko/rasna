@@ -209,15 +209,12 @@ Never lead with the itinerary.
 **Rasna's Why:** We believe travel has become a performance —
 sightseeing at a distance, watching a version of local life staged
 for tourists. We believe people are hungry for the opposite: to
-actually belong somewhere for a few days, doing the same work the
-town is already doing, with the people who still do it.
+actually live somewhere for a few days, not just pass through it.
 
 **Rasna's How:** By keeping every group small (6–10 guests) and
-building the trip around real relationships with real people — Maria
-Grazia, Davide, Emiliano, Renzo — not actors or staged
-demonstrations. Guests harvest, cook, and cure alongside the people
-whose actual work this is, on the same seasonal calendar the town
-already lives by.
+building the trip around actually staying in Blera — the same
+streets, the same rhythm, the same slow pace the town already lives
+by, not a hotel near the sights on a bus schedule.
 
 **Rasna's What:** We just happen to run small-group, all-inclusive
 trips in Blera and the Tuscia — olive harvest, sauce day,
@@ -226,3 +223,10 @@ cheesemaking, Etruscan tombs, and meals with local families.
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it
 establishes the belief behind it, rewrite it.
+
+**Note on public-facing copy (Aug 2026):** external/marketing copy
+(site, social, outreach) should not name specific hosts (Maria Grazia,
+Davide, Emiliano, Renzo, etc.) and should lead with *living in* Blera
+rather than *working* alongside hosts. The hands-on activities still
+exist as part of the actual itinerary (see §1/§6) — this changes which
+angle public marketing leads with, not the offer itself.
