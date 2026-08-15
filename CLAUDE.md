@@ -5,13 +5,13 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
 **Files:** `index.html` (main landing page, incl. the November Experience *hub*) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-11, a full **family of five dedicated November Experience pages** — `italian-olive-experience-itinerary.html` (since 2026-08-04), `italian-olive-experience-host.html`, `italian-olive-experience-highlights.html`, `italian-olive-experience-pricing.html`, `italian-olive-experience-faq.html` (all four new 2026-08-11) — see "**Current architecture of the November Experience pages**" below, read that before touching any of them, most of the older "Planned Events tab" section further down is superseded by it. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
-**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off. **It happened a fifth time on 2026-08-10**: a session's designated branch (`claude/website-fixes-0zr2pl`) was, again, descended from the dead `magical-franklin-58SKM` lineage with a bundled `CLAUDE.md` that didn't mention `main` existing at all — caught immediately this time (before writing any content) by diffing the live site against `origin/main` in the first few minutes, so no wasted work. That session went on to do the itinerary restore, the pamphlet-style restructure, and the full pricing-tier rebuild described further down this file and in `BOOKING_STATUS.md`, all correctly against `main` (+ `claude/magical-franklin-58SKM` for the `worker/`-only pricing commit). **It happened a sixth time on 2026-08-12**: a session's designated branch (`claude/itinerary-site-redesign-4anqr0`, itself descended from `magical-franklin-58SKM`) had a bundled `CLAUDE.md` claiming the *static site* also deployed from `magical-franklin-58SKM` — flatly wrong, that branch is worker-only (see "Deploy topology gotcha" below). Several real commits (palette recolor, og-image asset, hero copy) landed on the dead branch before the drift was caught via a live-site curl check showing the old palette still serving; none of that work was lost, it was manually redone against `main`, but it was several pushes of wasted effort versus the "caught in the first few minutes" ideal from incident #5. **The pattern is now six-for-six.** If you're a fresh session and your bundled `CLAUDE.md` doesn't mention this exact file's contents, or gives a different deploy branch for the static site than `main`, that's your signal to stop and diff — don't trust a bundled `CLAUDE.md`'s deploy-topology claims over `origin/main`'s.
+**Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off. **It happened a fifth time on 2026-08-10**: a session's designated branch (`claude/website-fixes-0zr2pl`) was, again, descended from the dead `magical-franklin-58SKM` lineage with a bundled `CLAUDE.md` that didn't mention `main` existing at all — caught immediately this time (before writing any content) by diffing the live site against `origin/main` in the first few minutes, so no wasted work. That session went on to do the itinerary restore, the pamphlet-style restructure, and the full pricing-tier rebuild described further down this file and in `BOOKING_STATUS.md`, all correctly against `main` (+ `claude/magical-franklin-58SKM` for the `worker/`-only pricing commit). **It happened a sixth time on 2026-08-12**: a session's designated branch (`claude/itinerary-site-redesign-4anqr0`, itself descended from `magical-franklin-58SKM`) had a bundled `CLAUDE.md` claiming the *static site* also deployed from `magical-franklin-58SKM` — flatly wrong, that branch is worker-only (see "Deploy topology gotcha" below). Several real commits (palette recolor, og-image asset, hero copy) landed on the dead branch before the drift was caught via a live-site curl check showing the old palette still serving; none of that work was lost, it was manually redone against `main`, but it was several pushes of wasted effort versus the "caught in the first few minutes" ideal from incident #5. **It happened a seventh time on 2026-08-15**: a session's designated branch (`claude/november-itinerary-landing-g9b2nr`) again had a bundled `CLAUDE.md` claiming the static site deployed from `magical-franklin-58SKM`, and this time a full session's worth of index.html restructuring (a hand-built itinerary section, generic placeholder "photo" cards, a made-up founder bio) was written, fast-forward-merged into `magical-franklin-58SKM`, and pushed — all invisible on the live site, exactly matching "10000 times I've said so and it doesn't [change]" user frustration. Caught only when the user reported no visible change and a `curl` diff against the live site's actual `<title>` didn't match anything in git history *at all* until `main` was checked. The wasted `index.html` work was discarded (not ported — `main`'s real hub/host/activities content, with real photos, was already far more developed than the improvised rebuild). What *did* carry over correctly: a `worker/`-only pricing simplification (flat €1,400 early-bird / €1,800 full, room-type split removed) pushed to `magical-franklin-58SKM`, which — per the Worker's separate deploy topology — went live correctly and immediately; the static pages just needed a matching pass on `main` (price-cards, booking form, JSON-LD, FAQ text across `italian-olive-experience-pricing.html`/`-itinerary.html`/`-faq.html`) to stop presenting the now-retired shared/private-room tiers. Also added: an inline "About Nikolai" + activities-with-real-photos + flat-price block on `index.html`'s `#festival-week` hub, between the itinerary and the `hub-links-grid`, since Nikolai asked for that content visible without a click-through (see the dated entry below). **The pattern is now seven-for-seven — a fresh session's bundled `CLAUDE.md` is not trustworthy on this point, full stop; always verify `origin/main` first, unconditionally, before writing a single line.** If you're a fresh session and your bundled `CLAUDE.md` doesn't mention this exact file's contents, or gives a different deploy branch for the static site than `main`, that's your signal to stop and diff — don't trust a bundled `CLAUDE.md`'s deploy-topology claims over `origin/main`'s.
 
 ---
 
 ## Standing rules (never re-ask)
 
-- Pricing: **no fixed price**. Flow is select activities → contact form → custom quote based on days + activities chosen. As of 2026-07-19 the Pricing section also shows a ballpark **€1,400–1,800 per person** range (`.pricing-range`) above the existing "no flat rate" copy — purely informational, doesn't change the custom-quote flow.
+- Pricing, **Build Your Own** tab only: **no fixed price**. Flow is select activities → contact form → custom quote based on days + activities chosen. As of 2026-07-19 the Pricing section also shows a ballpark **€1,400–1,800 per person** range (`.pricing-range`) above the existing "no flat rate" copy — purely informational, doesn't change the custom-quote flow. **This does not apply to the fixed November departure** — see "Current architecture of the November Experience pages" below and the 2026-08-15 entry further down: that flow has a real flat price (€1,400 early bird / €1,800 full) charged live via Stripe, no quote step.
 - Group size: **8 people max**
 - Formspree endpoint: `https://formspree.io/f/xlgynpjo`
 - Contact email: `nikolai.fissenko1@gmail.com`
@@ -177,6 +177,64 @@ mid-page content (subnav, hub cards, price cards, booking form) via
 local `file://` URLs — the sandbox's proxy can't reach the live domain
 or Google Fonts, so `net::ERR_CONNECTION_RESET` on the fonts request in
 the console is expected/harmless, but a real `pageerror` is not.
+
+**2026-08-15: flat two-tier pricing (room-type split retired) + hub
+content moved inline.** Nikolai: "forget the room thing," wants a
+single flat price — confirmed explicitly as **€1,400 early bird
+(through Sep 15, 2026), €1,800 full price after**, no shared/private
+split. Changes:
+- `worker/` (deployed from `claude/magical-franklin-58SKM`, see "Deploy
+  topology gotcha"): `departures.js` now has flat `pricing: {early_bird,
+  full}` + a single `early_bird_until` cutoff, replacing the old
+  `{shared,private} × {early_bird,regular,final}` matrix and its
+  `room_type` column/validation in `index.js`/`db.js`. `GET
+  /api/departures` now returns `pricing.early_bird`/`pricing.full` and
+  a flat `price_per_person` instead of `price_shared`/`price_private`.
+  `CUSTOM_PRICE_PER_PERSON` (the separate Build-Your-Own custom-quote
+  default) raised from 1450 to 1800 to match. This was pushed and is
+  **confirmed live** (`curl .../api/departures` verified). `main`'s own
+  `worker/` mirror was synced to match (it's not what's deployed, see
+  below, but was badly stale — still worth keeping honest).
+- Static pages on `main` had to be updated separately to match the new
+  API shape, since they were left pointing at the retired
+  `pricing.shared`/`.private` fields (the pricing page's fetch was
+  throwing and silently falling back to stale hardcoded numbers —
+  caught and fixed same session, see the incident note above):
+  `italian-olive-experience-pricing.html` (price-cards now a single
+  flat card, `room_type` `<select>` removed from `#festival-form`, JS
+  payload no longer sends it — the Worker never used it server-side
+  anyway, so no historical bookings/charges were wrong, only the
+  display), `italian-olive-experience-itinerary.html` (pricing teaser +
+  FAQ echo), `italian-olive-experience-faq.html` (JSON-LD +
+  visible answer), and `index.html`'s hub-links-grid pricing-card
+  blurb.
+- **Hub content inlined** (`index.html` `#festival-week`, between the
+  existing inline itinerary/gallery and the `hub-links-grid`): per "the
+  site needs to open on the november itinerary" (already true — the
+  `trips` tab is default-visible, `panel-build` has inline
+  `display:none` — verified via raw HTML/CSS fetch since this sandbox's
+  Playwright can't reach the live domain) plus "after the itinerary
+  there needs to be more info first on me in general... activities
+  explained with photos... then at the end the cost," added: a `.hub-host`
+  block (real photo + the same 3-paragraph bio already on
+  `italian-olive-experience-host.html`, not new copy), a
+  `.hub-activities-grid` of 6 always-visible photo cards (`.ha-card` —
+  a new component, deliberately *not* reusing `.activity-card.has-photo`
+  or `.fg-photo`/`.fg-caption`, both of which hide their caption until
+  hover; the ask was for activities to read as explained, not
+  discovered) covering the trip's named activities with real existing
+  images (`card-tombaroli.jpg`, `moment-9.jpg`, `card-termedellatuscia.jpg`,
+  `card-pasta.jpg`, `card-sangiovenale.jpg`, `card-cantinefestival.jpg`),
+  and a `.hub-cost` flat-price summary + CTA linking to
+  `italian-olive-experience-pricing.html#festival-book` (no inline
+  booking form — the real form/Stripe flow stays on its own page only,
+  per the standing "kept in sync by hand" pain point noted above; a
+  second live copy of the form was judged not worth the maintenance
+  burden). The now-redundant "Your Host" `hub-link-card` was removed
+  from `hub-links-grid` (bio is inline now); Highlights/Itinerary/
+  Pricing & Booking/FAQ cards kept, since each still adds something the
+  inline content doesn't (full desktop itinerary grid, the actual
+  working booking form, etc).
 
 ---
 

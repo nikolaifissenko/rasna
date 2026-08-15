@@ -1,6 +1,41 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-12_
+_Last updated: 2026-08-15_
+
+## 2026-08-15 update: flat pricing (room-type split retired), hub content inlined
+
+**Pricing change, live and confirmed:** the November 9–15 departure
+dropped its shared/private-room × 3-tier pricing matrix for a single
+flat price — **€1,400/person early bird (book by Sep 15, 2026), €1,800/
+person full price after**. `worker/` (deployed from
+`claude/magical-franklin-58SKM`, per the Deploy topology gotcha in
+`CLAUDE.md`) was updated and pushed; `curl
+https://rasna-booking-api.nikolai-fissenko1.workers.dev/api/departures`
+confirms it's live with the new `pricing.early_bird`/`pricing.full`
+shape. `CUSTOM_PRICE_PER_PERSON` (Build Your Own custom-quote default)
+raised 1450 → 1800 to match.
+
+**Frontend catch-up (same session):** the Worker's API shape changed
+before the static pages did, so `italian-olive-experience-pricing.html`'s
+price-fetch briefly threw against the old `pricing.shared`/`.private`
+lookup and silently fell back to stale hardcoded numbers (the `catch()`
+swallowed it — no visible JS error, just wrong-looking prices; the
+`room_type` field the booking form sent was already being ignored
+server-side, so no booking was ever charged incorrectly, only
+displayed with a stale/confusing room-choice UI). Fixed same session:
+price-cards, the booking form (room-type `<select>` removed), and the
+live-pricing JS on `-pricing.html`/`-itinerary.html`, plus JSON-LD/copy
+on `-faq.html` and `index.html`'s hub-links-grid. See `CLAUDE.md`'s
+2026-08-15 dated entry for the full account, including the 7th
+recurrence of a bundled `CLAUDE.md` pointing a fresh session at the
+dead `claude/magical-franklin-58SKM` lineage for the static site.
+
+**Not a pricing/payment change, but same session:** `index.html`'s
+`#festival-week` hub gained an inline "About Nikolai" bio, a 6-photo
+activities showcase, and a flat-price summary + booking CTA, all
+between the existing inline itinerary and the `hub-links-grid`. Booking
+form/Stripe flow itself is unchanged and still lives only on
+`italian-olive-experience-pricing.html`.
 
 ## 2026-08-12 update: hero no longer links straight to the booking form
 

@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing &amp; Booking | Italian Olive Experience | Rasna</title>
-  <meta name="description" content="Book the Italian Olive Experience, Nov 9-15, 2026 in Blera, Italy. From €1,400 per person, all-inclusive. Choose shared or private room, book early to save. Capped at 8 guests.">
+  <meta name="description" content="Book the Italian Olive Experience, Nov 9-15, 2026 in Blera, Italy. €1,400 per person early bird, €1,800 full price, all-inclusive. Capped at 8 guests.">
   <link rel="canonical" href="https://rasnaexperience.com/italian-olive-experience-pricing.html">
   <meta property="og:title" content="Pricing &amp; Booking | Italian Olive Experience">
-  <meta property="og:description" content="From €1,400 per person, all-inclusive. Choose shared or private room, book early to save. Capped at 8 guests.">
+  <meta property="og:description" content="€1,400 per person early bird, €1,800 full price, all-inclusive. Capped at 8 guests.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://rasnaexperience.com/italian-olive-experience-pricing.html">
   <meta property="og:image" content="https://rasnaexperience.com/images/card-cantinefestival.jpg">
@@ -89,7 +89,7 @@
       <div class="divider"></div>
       <svg class="etruscan-ornament" width="42" height="32" style="color:var(--gold); margin-bottom:0.6rem"><use href="#palmette"/></svg>
       <h1 style="font-size:clamp(2rem, 5vw, 3.4rem); letter-spacing:0.03em; text-transform:none;">Pricing &amp; Booking</h1>
-      <p class="tagline" style="margin-top:1rem;">Choose your room, book early, save. Capped at 8 guests, one departure a year.</p>
+      <p class="tagline" style="margin-top:1rem;">One flat price, all-inclusive. Book early, save. Capped at 8 guests, one departure a year.</p>
     </div>
   </section>
 
@@ -100,45 +100,22 @@
 
       <div class="section-inner fade-in" id="price-chart" style="text-align:center; scroll-margin-top:78px;">
         <div class="section-label">Investment</div>
-        <p style="max-width:560px; margin:0 auto; opacity:0.7; font-size:0.95rem;">Price depends on two things: whether you share a room or have your own, and how early you book. Every tier is fully all-inclusive.</p>
+        <p style="max-width:560px; margin:0 auto; opacity:0.7; font-size:0.95rem;">One flat price per person, fully all-inclusive. The only thing that changes it is how early you book.</p>
         <p style="margin-top:0.8rem; font-size:0.85rem;"><a href="italian-olive-experience-lodging.html" style="color:var(--terracotta);">See where you'll stay &rarr;</a></p>
       </div>
       <div class="price-frame fade-in">
-      <div class="price-cards" id="price-chart-table">
-        <div class="price-card price-card-shared">
+      <div class="price-cards" id="price-chart-table" style="grid-template-columns:1fr; max-width:420px;">
+        <div class="price-card">
           <div class="price-card-icon"><svg width="26" height="26"><use href="#icon-users"/></svg></div>
-          <h3>Shared Room</h3>
-          <p class="price-card-sub">Per person, sharing a double</p>
+          <h3>Nov 9&ndash;15, 2026</h3>
+          <p class="price-card-sub">Per person, all-inclusive</p>
           <ul class="price-card-tiers">
-            <li data-tier="early_bird" data-room="shared">
-              <span class="pct-name">Early Bird<em>Through Sep 15</em></span>
+            <li data-tier="early_bird">
+              <span class="pct-name">Early Bird<em>Book by Sep 15</em></span>
               <span class="pct-price">&euro;1,400</span>
             </li>
-            <li data-tier="regular" data-room="shared">
-              <span class="pct-name">Regular<em>Sep 16&ndash;Oct 25</em></span>
-              <span class="pct-price">&euro;1,500</span>
-            </li>
-            <li data-tier="final" data-room="shared">
-              <span class="pct-name">Final<em>After Oct 25</em></span>
-              <span class="pct-price">&euro;1,600</span>
-            </li>
-          </ul>
-        </div>
-        <div class="price-card price-card-private">
-          <div class="price-card-icon"><svg width="26" height="26"><use href="#icon-user"/></svg></div>
-          <h3>Private Room</h3>
-          <p class="price-card-sub">Per person, your own room</p>
-          <ul class="price-card-tiers">
-            <li data-tier="early_bird" data-room="private">
-              <span class="pct-name">Early Bird<em>Through Sep 15</em></span>
-              <span class="pct-price">&euro;1,600</span>
-            </li>
-            <li data-tier="regular" data-room="private">
-              <span class="pct-name">Regular<em>Sep 16&ndash;Oct 25</em></span>
-              <span class="pct-price">&euro;1,700</span>
-            </li>
-            <li data-tier="final" data-room="private">
-              <span class="pct-name">Final<em>After Oct 25</em></span>
+            <li data-tier="full">
+              <span class="pct-name">Full Price<em>After Sep 15</em></span>
               <span class="pct-price">&euro;1,800</span>
             </li>
           </ul>
@@ -178,14 +155,6 @@
                 <option value="6">6</option>
                 <option value="7">7</option>
                 <option value="8">8</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="fw-room-type">Room type</label>
-              <select id="fw-room-type" name="room_type" required>
-                <option value="">Select...</option>
-                <option value="shared">Shared room (sharing a double)</option>
-                <option value="private">Private room (your own room)</option>
               </select>
             </div>
           </div>
@@ -232,7 +201,7 @@
     const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
     const DEPARTURE_ID = '2026-11-09';
 
-    const TIER_LABELS = { early_bird: 'Early Bird', regular: 'Regular', final: 'Final' };
+    const TIER_LABELS = { early_bird: 'Early Bird', full: 'Full Price' };
 
     fetch(API_BASE + '/api/departures')
       .then(function(r) { return r.json(); })
@@ -242,11 +211,9 @@
         document.getElementById('festival-remaining').textContent = departure.remaining;
 
         if (departure.pricing) {
-          ['shared', 'private'].forEach(function(room) {
-            ['early_bird', 'regular', 'final'].forEach(function(tier) {
-              const row = document.querySelector('#price-chart-table li[data-room="' + room + '"][data-tier="' + tier + '"]');
-              if (row) row.querySelector('.pct-price').textContent = '€' + departure.pricing[room][tier];
-            });
+          ['early_bird', 'full'].forEach(function(tier) {
+            const row = document.querySelector('#price-chart-table li[data-tier="' + tier + '"]');
+            if (row) row.querySelector('.pct-price').textContent = '€' + departure.pricing[tier];
           });
         }
         if (departure.current_tier) {
@@ -254,7 +221,7 @@
             el.classList.toggle('price-chart-current', el.dataset.tier === departure.current_tier);
           });
           document.getElementById('price-chart-note').textContent =
-            'You\'re currently in the ' + TIER_LABELS[departure.current_tier] + ' window. These are the prices you\'ll pay if you book now.';
+            'You\'re currently in the ' + TIER_LABELS[departure.current_tier] + ' window. This is the price you\'ll pay if you book now.';
         }
 
         if (departure.remaining <= 0) {
@@ -263,10 +230,10 @@
           document.getElementById('festival-form').style.display = 'none';
           return;
         }
-        if (departure.price_shared && departure.price_private) {
+        if (departure.price_per_person) {
           document.getElementById('festival-book-subtitle').innerHTML =
             'Only <span id="festival-remaining">' + departure.remaining + '</span> spots left for this departure &middot; ' +
-            'currently €' + departure.price_shared + ' per person sharing a room, €' + departure.price_private + ' for a private room (' +
+            'currently €' + departure.price_per_person + ' per person (' +
             TIER_LABELS[departure.current_tier] + ' pricing). Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.';
         }
       })
@@ -291,7 +258,6 @@
           name: data.get('name'),
           email: data.get('email'),
           num_guests: Number(data.get('guests')),
-          room_type: data.get('room_type'),
           notes: data.get('notes') || ''
         })
       })

@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import Stripe from 'stripe';
 
-import { listDepartures, getDeparture } from './departures.js';
+import { listDepartures, getDeparture, currentPriceTier, priceForDeparture } from './departures.js';
 import {
   spotsUsed,
   createFixedBooking,
@@ -38,6 +38,7 @@ app.get('/api/departures', async (c) => {
   const departures = await Promise.all(
     listDepartures().map(async (d) => {
       const used = await spotsUsed(c.env.DB, d.id);
+      const tier = currentPriceTier(d);
       return {
         id: d.id,
         label: d.label,
@@ -45,8 +46,11 @@ app.get('/api/departures', async (c) => {
         end_date: d.end_date,
         capacity: d.capacity,
         remaining: Math.max(0, d.capacity - used),
-        price_per_person: d.price_per_person,
         currency: d.currency || 'eur',
+        pricing: d.pricing,
+        pricing_windows: d.pricing_windows,
+        current_tier: tier,
+        price_per_person: d.pricing[tier],
       };
     })
   );
@@ -68,23 +72,21 @@ function validateCommon(body) {
   return { errors, numGuests };
 }
 
-async function createCheckoutSession(env, { label, numGuests, pricePerPerson, currency, email, bookingId }) {
+async function createCheckoutSession(env, { label, currency, email, bookingId, lineItems }) {
   const stripe = stripeClient(env);
   const siteUrl = env.SITE_URL.replace(/\/$/, '');
   return stripe.checkout.sessions.create({
     mode: 'payment',
     payment_method_types: ['card'],
     customer_email: email,
-    line_items: [
-      {
-        price_data: {
-          currency,
-          unit_amount: Math.round(pricePerPerson * 100),
-          product_data: { name: `Rasna — ${label} (${numGuests} guest${numGuests > 1 ? 's' : ''})` },
-        },
-        quantity: numGuests,
+    line_items: lineItems.map((li) => ({
+      price_data: {
+        currency,
+        unit_amount: li.unitAmountCents,
+        product_data: { name: `Rasna — ${label}${li.suffix ? ` (${li.suffix})` : ''}` },
       },
-    ],
+      quantity: li.quantity,
+    })),
     expires_at: Math.floor(Date.now() / 1000) + CHECKOUT_EXPIRY_MINUTES * 60,
     success_url: `${siteUrl}/success.html?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${siteUrl}/cancel.html`,
@@ -102,7 +104,12 @@ app.post('/api/bookings/fixed', async (c) => {
   const departure = getDeparture(body.departure_id);
   if (!departure) return c.json({ error: 'Unknown departure_id' }, 404);
 
-  const amountTotalCents = Math.round(departure.price_per_person * 100) * numGuests;
+  // Price is locked in at the tier active right now (server clock, not
+  // client-supplied) — a booking started right at a tier boundary always
+  // gets a consistent, non-gameable price.
+  const unitPrice = priceForDeparture(departure);
+  const amountTotalCents = Math.round(unitPrice * 100) * numGuests;
+
   const bookingId = await createFixedBooking(c.env.DB, departure, {
     name: body.name.trim(),
     email: body.email.trim(),
@@ -125,14 +132,21 @@ app.post('/api/bookings/fixed', async (c) => {
     );
   }
 
+  const lineItems = [
+    {
+      unitAmountCents: Math.round(unitPrice * 100),
+      quantity: numGuests,
+      suffix: `${numGuests} guest${numGuests > 1 ? 's' : ''}`,
+    },
+  ];
+
   try {
     const session = await createCheckoutSession(c.env, {
       label: departure.label,
-      numGuests,
-      pricePerPerson: departure.price_per_person,
       currency: departure.currency || 'eur',
       email: body.email.trim(),
       bookingId,
+      lineItems,
     });
     await attachStripeSession(c.env.DB, bookingId, session.id);
     return c.json({ url: session.url });
@@ -149,7 +163,7 @@ app.post('/api/bookings/custom', async (c) => {
   const { errors, numGuests } = validateCommon(body);
   if (errors.length) return c.json({ error: errors.join(', ') }, 400);
 
-  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 1450);
+  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 1800);
   const amountTotalCents = Math.round(pricePerPerson * 100) * numGuests;
   const bookingId = await createCustomBooking(c.env.DB, {
     name: body.name.trim(),
@@ -165,11 +179,16 @@ app.post('/api/bookings/custom', async (c) => {
   try {
     const session = await createCheckoutSession(c.env, {
       label: 'Custom Expedition',
-      numGuests,
-      pricePerPerson,
       currency: 'eur',
       email: body.email.trim(),
       bookingId,
+      lineItems: [
+        {
+          unitAmountCents: Math.round(pricePerPerson * 100),
+          quantity: numGuests,
+          suffix: `${numGuests} guest${numGuests > 1 ? 's' : ''}`,
+        },
+      ],
     });
     await attachStripeSession(c.env.DB, bookingId, session.id);
     return c.json({ url: session.url });
