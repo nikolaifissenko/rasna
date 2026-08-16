@@ -16,22 +16,30 @@ Maria Grazia/Davide/Emiliano/Renzo exist) — pure Why→How→What→Where,
 straight from `BUSINESS_PLAN.md` §8. Images already built:
 `assets/social/carousel-intro/slide-1.png` … `slide-8.png`.
 
-1. Cover — "No more TikTok itineraries."
-2. Why — "Travel has become a performance."
-3. Why — "We think you're hungry for the opposite."
+The thesis running through this carousel: the point isn't "authentic"
+or "off the beaten path" — it's that people have a basic need to
+*belong* to something, not just watch it, and Rasna satisfies that by
+making guests temporary members of Blera's community for a week
+instead of spectators of it.
+
+1. Cover — "Don't just visit. Belong."
+2. Why — "It's human nature to want to belong to something."
+3. Why — "So instead of showing you Blera, we fold you into it."
 4. How — "So we keep every group small. 6–10 guests. Never more."
-5. How — "Built around the town's real, seasonal work."
+5. How — "Built around the work the town is already doing."
 6. Where — "Blera. Tuscia, Italy."
-7. What — "6 days, all-inclusive."
+7. What — "Six days as a local — not six days of sightseeing."
 8. CTA — "First departure: Nov 9–15, 2026."
 
 **Caption:**
 ```
-No more TikTok itineraries.
+Don't just visit. Belong.
 
-We built Rasna because travel had turned into a performance — sightseeing at a distance, watching a version of local life staged for tourists. We think you're hungry for the opposite: to actually belong somewhere for a few days, doing the same work the town is already doing.
+It's human nature to want to belong to something — not just to see a place, but to actually become part of it, even for a few days. That need doesn't go away when you travel. Most trips just ignore it.
 
-So we keep every group small (6–10 guests), and build every day around Blera's real, seasonal work — not a demonstration staged for a bus tour.
+So instead of showing you Blera, we fold you into it. You don't watch the olive harvest — you're in it. You don't photograph the table — you're sitting at it. For one week, you're not a visitor. You're part of the town.
+
+That's why every group stays small (6–10 guests) and every day is built around the real, seasonal work Blera is already doing — you're simply there for it, alongside the people whose town this is.
 
 Blera is a 2,800-year-old Etruscan hill town 90 minutes from Rome, carved into volcanic rock. Almost nobody visits.
 
