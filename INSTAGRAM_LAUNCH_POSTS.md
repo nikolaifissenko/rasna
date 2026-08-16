@@ -47,8 +47,17 @@ First departure: November 9–15, 2026.
 
 Link in bio.
 
-#Tuscia #Blera #EtruscanItaly #SmallGroupTravel #SlowTravel #AuthenticItaly #ItalyOffTheBeatenPath #ItalyTravel #VisitItaly
+#ItalyTravel #SlowTravel #SmallGroupTravel #ItalyOffTheBeatenPath #Tuscia
 ```
+
+Hashtag picks, ordered broad → niche per the 3-tier rule in `INSTAGRAM_STRATEGY.md`:
+- **#ItalyTravel** — broad, highest search volume, the discovery net
+- **#SlowTravel** — medium, an engaged community already primed for exactly this pitch
+- **#SmallGroupTravel** — medium, matches purchase intent almost exactly
+- **#ItalyOffTheBeatenPath** — medium-niche, near-exact match for what someone types looking for this specific kind of trip
+- **#Tuscia** — niche/regional, low competition, worth it for anyone already searching this specific region
+
+Cut from the original 9: #Blera (volume's too close to zero to aid discovery, better as a location tag than a hashtag), #EtruscanItaly and #AuthenticItaly (overlap #ItalyOffTheBeatenPath without adding reach), #VisitItaly (redundant with #ItalyTravel, usually lower engagement).
 
 ---
 
