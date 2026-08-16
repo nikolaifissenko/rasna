@@ -11,9 +11,9 @@ This is **not a new palette** — every value below is copied verbatim
 from `index.html`'s own `:root`. The site already had a wine-bordeaux,
 a deeper rust, an olive military green, a warm buff, and a sage-gold
 that the hero and nav already lean on. This doc just names each
-color's job and builds the new amphora logo out of the same ten
-variables, so social content and the site read as one system instead
-of the palette living only in scattered CSS.
+color's job and builds the logo mark out of the same ten variables,
+so social content and the site read as one system instead of the
+palette living only in scattered CSS.
 
 ## Colors
 

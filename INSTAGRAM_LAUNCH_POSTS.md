@@ -59,6 +59,8 @@ Hashtag picks, ordered broad → niche per the 3-tier rule in `INSTAGRAM_STRATEG
 
 Cut from the original 9: #Blera (volume's too close to zero to aid discovery, better as a location tag than a hashtag), #EtruscanItaly and #AuthenticItaly (overlap #ItalyOffTheBeatenPath without adding reach), #VisitItaly (redundant with #ItalyTravel, usually lower engagement).
 
+**Audio:** Instrumental only, no lyrics, since people are reading the slides and vocals compete for attention. Warm/cinematic, not trending pop or EDM — the brand is unshowy, and a viral sound would clash on arrival even if it helps reach this week. Best fit: Ludovico Einaudi ("Nuvole Bianche" or "Experience") — instantly reads as "real Italy," though it's common enough on travel content that other accounts may use it too. Alternative: search Instagram's audio picker for "Italian guitar" or "Tuscany acoustic" for something on-mood but less recognizable. Avoid anything with percussion or a driving beat — nothing here should feel like a trailer.
+
 ---
 
 ## Before you post: profile setup
@@ -112,7 +114,7 @@ On-screen text: "Blera, Tuscia — 90 min from Rome"
 ```
 Every "hidden gem" tour I've taken was staged for tourists. So I built the one I actually wanted to go on. 🫒
 
-Small groups, real work, a 2,800-year-old Etruscan town 90 minutes from Rome that almost nobody visits. First departure: November 9–15.
+Small groups, real culture, a 2,800-year-old Etruscan town 90 minutes from Rome that almost nobody visits. First departure: November 9–15.
 
 Link in bio.
 
@@ -130,11 +132,11 @@ Every "hidden gem" tour I've ever taken was staged for tourists. So I built the 
 
 I'm Nikolai — and Rasna started with a belief, not a business plan: that travel has turned into a performance. You watch a version of local life staged for tourists, then go home with photos of a place you never actually touched.
 
-We think people are hungry for the opposite — to actually belong somewhere for a few days, doing the same work the town is already doing, with the people who still do it.
+We think people are hungry for the opposite — to actually belong somewhere for a few days, taking part in the same culture and traditions the town already lives by, with the people who still keep them alive.
 
 That's Rasna: small groups of 6–10, in Blera — a 2,800-year-old Etruscan hill town 90 minutes from Rome that most tourists never hear of. You'll harvest olives, climb down into rock-cut tombs older than the Colosseum, and eat at a table with the people who actually farm this land.
 
-Our first group leaves November 9–15. I'll be sharing the real people, the real place, and the real work behind it here — starting now.
+Our first group leaves November 9–15. I'll be sharing the real people, the real place, and the real culture behind it here — starting now.
 
 Welcome to Rasna. 🫒
 
@@ -204,7 +206,7 @@ Here's exactly what 6 days in Blera looks like — save this.
 ✅ Eat every meal with local families — not a restaurant tasting menu
 ✅ Move through Blera in a group of 6–10, never a crowd
 
-No itinerary padding. No "free time to explore" filler. Every day is built around real, hands-on work in a town that's still doing it.
+No itinerary padding. No "free time to explore" filler. Every day is built around real, hands-on culture in a town that's still living it.
 
 Save this for later, or grab one of the 8 spots on our November 9–15 departure — link in bio.
 
