@@ -1,6 +1,22 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-15_
+_Last updated: 2026-08-16_
+
+## 2026-08-16 update: liability waiver added (site-content, not booking-infra)
+
+Not a booking/payment change, but noted here since it sits right next to
+the real Stripe form: `liability-waiver.html` (full legal page) and a
+printable/signable `guest-waiver-form.html` + `guest-waiver-form.pdf`
+were added and linked from `italian-olive-experience-pricing.html`
+(next to the existing cancellation-policy link, directly above the
+booking form), `index.html#policies`, and the FAQ page. Full detail,
+including the branch-drift incident that happened while building it, is
+in `CLAUDE.md`'s "Session, 2026-08-16" entry — read that before touching
+`liability-waiver.html` or the guest form. **Not code-fixable, needs
+Nikolai:** whether Rasna needs professional liability insurance (RC
+organizzatore di viaggi) and/or tour-operator registration under Lazio
+regional law — the waiver protects evidentially, it doesn't substitute
+for either.
 
 ## 2026-08-15 update: flat pricing (room-type split retired), hub content inlined
 
