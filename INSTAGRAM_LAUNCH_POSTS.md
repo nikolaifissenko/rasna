@@ -28,18 +28,18 @@ instead of spectators of it.
 4. How — "So we keep every group small. 6–10 guests. Never more."
 5. How — "Built around the work the town is already doing."
 6. Where — "Blera. Tuscia, Italy."
-7. What — "Six days as a local — not six days of sightseeing."
+7. What — "Six days as a local, not six days of sightseeing."
 8. CTA — "First departure: Nov 9–15, 2026."
 
 **Caption:**
 ```
 Don't just visit. Belong.
 
-It's human nature to want to belong to something — not just to see a place, but to actually become part of it, even for a few days. That need doesn't go away when you travel. Most trips just ignore it.
+It's human nature to want to belong to something. Not just to see a place, but to actually become part of it, even for a few days. That need doesn't go away when you travel. Most trips just ignore it.
 
-So instead of showing you Blera, we fold you into it. You don't watch the olive harvest — you're in it. You don't photograph the table — you're sitting at it. For one week, you're not a visitor. You're part of the town.
+So instead of showing you Blera, we fold you into it. You don't watch the olive harvest. You're in it. You don't photograph the table. You're sitting at it. For one week, you're not a visitor. You're part of the town.
 
-That's why every group stays small (6–10 guests) and every day is built around the real, seasonal work Blera is already doing — you're simply there for it, alongside the people whose town this is.
+That's why every group stays small (6–10 guests) and every day is built around the real, seasonal work Blera is already doing. You're simply there for it, alongside the people whose town this is.
 
 Blera is a 2,800-year-old Etruscan hill town 90 minutes from Rome, carved into volcanic rock. Almost nobody visits.
 
