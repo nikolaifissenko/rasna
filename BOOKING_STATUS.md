@@ -1,6 +1,42 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-14_
+_Last updated: 2026-08-16_
+
+## Liability waiver & guest signature form (added 2026-08-16)
+
+Two-layer legal setup, developed on `claude/website-liability-section-pwh5gu`
+(not yet merged into the live branch — see note below):
+
+- **`liability-waiver.html`** — public page linked from the footer and both
+  booking-form notes (fixed + custom panels), alongside the existing
+  cancellation policy link. This is the informational disclosure guests
+  implicitly accept when they book online. Grounded in real Italian/EU law,
+  not boilerplate: Civil Code Art. 1229 (can't exclude liability for gross
+  negligence/wilful misconduct), Art. 1227 (contributory fault if a guest
+  ignores safety instructions), and the EU Package Travel Directive
+  2015/2302 / Codice del Turismo (since Rasna sells accommodation + meals +
+  activities as one package, liability for death/personal injury caused by
+  Rasna's or a local host's fault can't be capped or excluded — but ordinary
+  inherent risk, absent fault, isn't Rasna's liability).
+- **`guest-waiver-form.html`** (+ rendered PDF at
+  **`assets/guest-waiver-form.pdf`**) — a separate, printable/signable form
+  each guest fills out and signs before the trip starts. Same legal grounding
+  as the webpage, but adds what the website can't capture: emergency contact,
+  travel-insurance details, medical disclosure, a per-activity checklist, an
+  emergency-medical-treatment authorization (lets Rasna/local hosts act if a
+  guest can't communicate), and an optional photo-release checkbox. Has a
+  Print/Save-as-PDF button; the PDF in `assets/` was rendered headlessly
+  (Chromium `--print-to-pdf`) for convenience — regenerate it if the HTML
+  changes.
+- **Not yet wired into the booking flow** — no auto-email of the PDF after
+  payment (the way flight details are collected on `success.html`). Currently
+  print-and-sign-on-arrival, or manually emailed. Revisit if that gap becomes
+  friction.
+- **Compliance items flagged but not resolved** (need Nikolai's input, not
+  code-fixable): whether Rasna needs professional liability insurance (RC
+  organizzatore di viaggi) and/or registration as a licensed tour operator
+  under Lazio regional law, given it's legally a package-travel organizer.
+  A webpage/form protects evidentially; it doesn't substitute for either.
 
 ## Deploy-branch drift (found & fixed 2026-08-14)
 
