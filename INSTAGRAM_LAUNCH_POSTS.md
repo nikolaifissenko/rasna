@@ -9,6 +9,41 @@ itinerary. Pricing/dates below are current as of 2026-08-16
 these two numbers on the live site before publishing — they're the
 only things in this doc that can go stale.
 
+## Post 0 — Concept carousel (people-free, use this first)
+
+8 slides, no named people (holding those for once real photos of
+Maria Grazia/Davide/Emiliano/Renzo exist) — pure Why→How→What→Where,
+straight from `BUSINESS_PLAN.md` §8. Images already built:
+`assets/social/carousel-intro/slide-1.png` … `slide-8.png`.
+
+1. Cover — "No more TikTok itineraries."
+2. Why — "Travel has become a performance."
+3. Why — "We think you're hungry for the opposite."
+4. How — "So we keep every group small. 6–10 guests. Never more."
+5. How — "Built around the town's real, seasonal work."
+6. Where — "Blera. Tuscia, Italy."
+7. What — "6 days, all-inclusive."
+8. CTA — "First departure: Nov 9–15, 2026."
+
+**Caption:**
+```
+No more TikTok itineraries.
+
+We built Rasna because travel had turned into a performance — sightseeing at a distance, watching a version of local life staged for tourists. We think you're hungry for the opposite: to actually belong somewhere for a few days, doing the same work the town is already doing.
+
+So we keep every group small (6–10 guests), and build every day around Blera's real, seasonal work — not a demonstration staged for a bus tour.
+
+Blera is a 2,800-year-old Etruscan hill town 90 minutes from Rome, carved into volcanic rock. Almost nobody visits.
+
+First departure: November 9–15, 2026. €1,400/person early bird before September 15.
+
+Link in bio.
+
+#Tuscia #Blera #EtruscanItaly #SmallGroupTravel #SlowTravel #AuthenticItaly #ItalyOffTheBeatenPath #ItalyTravel #VisitItaly
+```
+
+---
+
 ## Before you post: profile setup
 
 **Name:** Rasna — Blera, Italy
