@@ -38,6 +38,83 @@ Two-layer legal setup, developed on `claude/website-liability-section-pwh5gu`
   under Lazio regional law, given it's legally a package-travel organizer.
   A webpage/form protects evidentially; it doesn't substitute for either.
 
+## Legal/tax status — decision reached (2026-08-16)
+
+Confirmed with Nikolai: legally, Rasna is a **package-travel organizer /
+tour operator** under the Codice del Turismo + EU Package Travel Directive
+2015/2302 (it sells lodging + meals + activities as one price) — not a
+"host turistico" (that category is for short-term room/apartment rental,
+CIN-based, unrelated). This status attaches to *what's sold* (a package),
+not to legal form or self-chosen label — a sole proprietorship selling
+packages has the same obligations as a company would.
+
+Full obligations once operating for real: SCIA as travel
+agency/tour operator (Regione Lazio, L.R. 6/2007 — check direttore
+tecnico requirement), mandatory insolvency guarantee (fideiussione/fondo
+di garanzia, art. 50 Codice del Turismo), RC professionale organizzatore
+(covers guest injuries **including those caused by third-party local
+hosts** — Rasna is liable to the guest first, then can seek recourse from
+the host), standard EU pre-contractual disclosure, and enhanced
+traveler withdrawal rights. As a ditta individuale (no company shield),
+Nikolai is personally liable with all personal assets, not just business
+assets — makes the RC coverage more load-bearing than it would be under
+an SRL.
+
+**Current real status (2026-08-16): zero registration, zero real
+bookings, zero budget.** Live-mode Stripe means the site *can* take a
+real payment, but none has landed yet — so there is no active legal
+exposure right now, and no urgency to register anything today.
+
+**Decision: don't open anything until a real paying client shows up.**
+Reasoning: opening the partita IVA itself is free (self-filed via
+Agenzia delle Entrate, no commercialista fee required), but it triggers
+INPS Gestione Commercianti's fixed minimum annual contribution
+(indicatively ~€4,000/year, to verify) **owed regardless of revenue** —
+opening it now, with zero income, would just create a recurring debt
+with nothing to cover it. This fixed cost isn't currently reflected
+anywhere in `FINANCIAL_PLAN.md`'s cost tables (worth adding once a real
+quote exists).
+
+**Plan for when a real booking appears:**
+1. Open the partita IVA immediately (ditta individuale, regime
+   forfettario, ATECO tour operator + a secondary code for golf cart
+   tours if/when that's added to the same partita IVA).
+2. Fund RC professionale + guest activity-injury insurance from that
+   first payment, before any guest does a hands-on activity.
+3. Kick off SCIA + garanzia fideiussoria in parallel — these take
+   longer (direttore tecnico requirement to check) and don't
+   necessarily have to be done before the very first small departure,
+   but shouldn't be forgotten as volume grows.
+4. Two ready-to-send emails exist (drafted in chat, not saved to a
+   file) for a commercialista (partita IVA + SCIA questions) and an
+   insurance broker (RC + garanzia quotes) — send both the moment a
+   client is about to pay.
+
+**Golf cart tours (Rome) — separate note:** staying in an
+"accompagnatore"/logistics role (general commentary, driving, logistics)
+avoids needing the licensed guida turistica abilitata (regional exam),
+which is legally required only for detailed illustrazione of protected
+historical/artistic heritage. Would share the same partita IVA as Rasna
+once opened, under a separate ATECO code.
+
+**Rental-car insurance note (unrelated to the above, came up in the same
+conversation):** card-based rental CDW/"casco" (Amex or otherwise) never
+covers passenger injury — that's always a separate RC auto layer,
+already included in any EU rental regardless of casco. Not a gap for
+private use with friends. Would need separate verification with the
+rental company if a rented vehicle is ever used to transport **paying**
+Rasna guests (e.g. airport transfers) — commercial use is typically
+excluded from card-based rental coverage.
+
+**Pricing:** raising prices to cover the fixed compliance costs above
+makes sense in principle but shouldn't be loaded onto the small pilot
+group — the per-guest impact of fixed costs drops sharply with volume
+(~€150-250/guest at ~32 guests/year pilot-stage vs. ~€40-60/guest at the
+128 guests/year steady-state target in `FINANCIAL_PLAN.md`). Get real
+insurance/garanzia quotes first, then revisit pricing — treat as a
+gradual increase over time (consistent with the scarcity-pricing
+strategy already in `FINANCIAL_PLAN.md` §6), not an immediate jump.
+
 ## Deploy-branch drift (found & fixed 2026-08-14)
 
 Several prior sessions' work — the November-departure hero, palette
