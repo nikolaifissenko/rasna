@@ -2,7 +2,11 @@
 
 Rasna is Nikolai's small-group travel-experience business (Blera/Tuscia,
 Italy). See `BUSINESS_PLAN.md` for the business, `BOOKING_STATUS.md` for
-the current state of the booking/payment infrastructure.
+the current state of the booking/payment infrastructure, and
+`INSTAGRAM_STRATEGY.md` for the content system (caption voice/structure,
+hashtag rules, the "No Tourists Italy" reel series, and the reusable
+cover-image aesthetic/prompt template) — check it before drafting any
+caption or cover from scratch.
 
 ## Operating principle: handle infra yourself
 
