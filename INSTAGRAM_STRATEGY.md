@@ -32,7 +32,10 @@ activity.
 2. **The people** — Maria Grazia, Davide, Emiliano, Nicolò — short
    profiles, their story, why they still do this work. This is content
    competitors literally cannot copy, because it depends on relationships
-   Rasna actually has.
+   Rasna actually has. **Includes founder/origin content** (Nikolai's own
+   history in Blera) — same logic, even harder to copy: it's not just
+   that Rasna has real local relationships, it's that the founder grew up
+   inside them.
 3. **The place** — Blera's rock-cut tombs, the Via Clodia, the hill town
    itself, golden-hour shots of the countryside. Establishes "this is a
    real, ancient place," not a generic countryside backdrop.
@@ -314,7 +317,44 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
-### 2026-08-19 — Next post: Sauce Day (tomato passata)
+### 2026-08-19 — Next post: Founder/origin story (childhood in Blera)
+
+Goes out **before** the sauce-day post — moved ahead in the queue.
+
+- **Pillar:** People (pillar 2), founder/origin sub-type — see pillar 2
+  above. Not the "No Tourists Italy" series (standalone caption, no fixed
+  opener).
+- **Why this order:** it's the "why trust me" post — establishes Nikolai's
+  real personal history in Blera before asking people to book, which is a
+  stronger lead-in than jumping straight to process content.
+- **Photos:** real childhood photos, sourced from his mom (asked
+  2026-08-19). Waiting on delivery — do not use AI-generated stand-ins for
+  this one, the whole point is that it's real.
+- **Format note:** old photos won't match the warm-golden-hour grade the
+  rest of the grid uses — that's expected, don't color-correct them to
+  match. A "then and now" carousel (old photo next to a current shot of
+  the same spot, if findable) would be stronger than childhood photos
+  alone.
+- **Caption (draft — has placeholders, needs Nikolai's real specifics
+  once photos are in hand):**
+  > I didn't build Rasna because I researched "authentic Italy" — I built
+  > it because I spent [summers/holidays as a kid] in Blera, at [my
+  > grandmother's / family's] house, doing exactly what I want our guests
+  > to do now: no itinerary, no reservations, just being here.
+  >
+  > [one real, specific memory — a place, a person, a smell, something
+  > small and true, not generic]
+  >
+  > This is the same Blera, Tuscia — 90 minutes from Rome, 2,800 years of
+  > history — I'm asking you to trust me with for a few days. Link in
+  > bio if you want to see it the way I got to, growing up.
+  >
+  > #Blera #Tuscia #EtruscanItaly #AuthenticItaly #ItalyTravel
+- **Status:** blocked on photos + real memory detail from Nikolai. Once
+  he has both, fill in the brackets and lock the caption — don't invent
+  specifics.
+
+### 2026-08-19 — Then: Sauce Day (tomato passata)
 
 - **Pillar:** Process (pillar 1) — last post was the streets Reel
   (pillar 3, place), so don't repeat.
