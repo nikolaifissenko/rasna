@@ -68,6 +68,16 @@ Rotate the *why* across pillars so the series doesn't repeat itself:
 - Davide/cheesemaking → "no demo timed for a tour bus"
 - Tombs/Via Clodia → "2,800 years old and nobody roped it off for you"
 
+**Not every post is a "No Tourists Italy" post** (clarified 2026-08-19,
+Nikolai's call). Reserve the fixed "Welcome to No Tourists Italy" opener
+for the recurring Reel format it's actually tied to — don't force it onto
+every caption by default. Plenty of posts (the sauce-day post, most
+carousels) work better as a standalone caption in the same Why→How→What
+voice without the series hook. Use judgment: if it's part of the
+recognizable Reel style, use the opener; if it's a one-off caption for a
+different kind of post, write it standalone like the sauce-day example in
+the content queue below.
+
 ## Visual identity / cover system
 
 The grid needs a consistent look, not just a consistent philosophy. Rule:
@@ -315,18 +325,25 @@ next post is picked.
   boiling → smashing → bottling → finished bottles) with the closing
   branded slide (see above) — pull whichever departure is currently open
   from `BOOKING_STATUS.md` into the CTA text.
-- **Caption (ready, "No Tourists Italy" format):**
-  > Welcome to No Tourists Italy.
+- **Caption (final — standalone, not the "No Tourists Italy" series
+  opener):**
+  > Most sauce comes from a jar. This one came from a crate of tomatoes
+  > picked that morning, a wood fire, and a local host telling us exactly
+  > how much salt is "enough" — no measuring cup involved.
   >
-  > No demo timed for a tour bus — this is just what August looks like in
-  > Blera. Tomatoes, a wood fire, and a pot that's been in the family
-  > longer than the recipe's been written down.
+  > This is sauce day in Blera — the kind of thing that happens in family
+  > kitchens across Tuscia every August, not for an audience, just
+  > because it's August and the tomatoes are ready. We show up, work
+  > alongside her, and leave with jars of it.
   >
-  > This is sauce day in Blera, Tuscia — 90 minutes from Rome, 2,800
-  > years of history, zero tour buses. Link in bio if you want to be the
-  > one stirring it, not watching it.
+  > Blera, Tuscia — 90 minutes from Rome, zero tour buses. Link in bio if
+  > you want to be the one stirring the pot on your next trip to Italy.
   >
-  > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+  > #Passata #TomatoSauce #SlowFood #ItalianCooking #FarmToTable
+  >
+  > (No names used in the caption — kept generic per Nikolai's call.
+  > "Her" refers to the host; swap to "them"/"the family" if a fully
+  > gender-neutral version is wanted later.)
 - **Status:** no real footage yet — placeholder AI images discussed
   (phone-candid, no-faces variant above) as a stand-in until an actual
   sauce day is shot. Prioritize shooting real footage this week while
