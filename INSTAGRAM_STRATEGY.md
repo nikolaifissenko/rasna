@@ -111,6 +111,64 @@ narrow Etruscan rock-cut tomb entrance carved into tufo rock · an empty
 stone street at golden hour · a weathered hand slicing homemade
 charcuterie.
 
+### Phone-candid variant (no faces, group visible)
+
+For process shots that need to look like they were actually taken on-site
+with a phone (not a staged AI render), and where several people are
+working at once: use the same color-grade/no-signage/no-logo rules above,
+but swap the "cinematic photograph" framing for this:
+
+> A candid photo that looks like it was taken on an iPhone, not a
+> professional camera — slightly imperfect framing, natural handheld
+> angle, realistic phone-camera dynamic range. [SCENE]. Two or three
+> people [doing ACTIVITY], shown only from the shoulders down or from
+> behind — no faces visible anywhere in frame. Color grade: warm,
+> slightly desaturated golden tones — muted sandy cream, olive green,
+> terracotta, deep bordeaux. No modern signage, no logos, no posed
+> smiling. Vertical 9:16, natural phone-photo grain, not overly sharp.
+
+Used for the sauce-day sequence (crates → boiling → smashing → bottling →
+finished bottles) — reuse this pattern for any future multi-person process
+shoot (olive press, cheesemaking) where a phone-shot, editorial-not-staged
+look matters more than a single cinematic hero frame.
+
+### Image sourcing — check before using any photo
+
+Two things to verify before a photo goes anywhere near a branded post,
+learned the hard way scouting cover images:
+
+1. **Ownership.** Don't use a photo pulled from a search/blog/tour-site
+   result, even if it's the perfect shot — check for a watermark and
+   assume no license unless you shot it yourself or have explicit
+   permission. A watermarked or scraped photo under a paid booking CTA is
+   a real infringement risk, not just a look problem.
+2. **Color grade.** Confirm it matches the warm golden-hour grade above
+   before posting — a cool blue-sky/HDR shot (common in generic
+   "Tuscany hilltown" stock/tourist photos) reads as exactly the generic
+   competitor look this account is trying to avoid. If a real photo you
+   want to use is graded wrong, warm it up first:
+   > Adjust the color grading of this photo to a warm, slightly
+   > desaturated golden-hour look — pull blue sky toward warm cream/gold
+   > tones, mute greens toward olive, reduce overall saturation and
+   > contrast slightly for a documentary, filmic feel. Do not change the
+   > composition, content, or add/remove anything — grading only, same
+   > photo.
+
+### Gemini quality-enhance prompt (for real phone photos)
+
+For actual footage/photos shot on-site that just need cleaning up — no
+retouching, no content changes, just definition:
+
+> Enhance the technical quality of this photo without altering its
+> content in any way. Increase sharpness and fine detail, improve
+> resolution/upscale it, reduce noise and compression artifacts, and
+> correct slight exposure/white balance issues if needed. Do not retouch,
+> edit, remove, add, or move any object, person, or element. Do not
+> change the composition, cropping, colors/color grade, lighting mood, or
+> style. The result should look like the exact same photo, just clearer
+> and higher-definition — as if it were shot on better camera hardware,
+> not stylized or filtered.
+
 ## Format guidance
 
 - **Reels > static posts** for reach — Instagram's algorithm still
@@ -122,6 +180,31 @@ charcuterie.
 - **Stories** for real-time behind-the-scenes during an actual trip or
   pilot — lower production bar, higher intimacy, and a good place to
   push the "link in bio" to book.
+
+### Closing branded slide — carousels only, not Reels
+
+**Reels:** no end card. Reels are judged on completion rate; a static CTA
+slide at the end just gives people a reason to swipe/scroll away before
+it loops. The CTA lives in the caption ("link in bio").
+
+**Carousels:** a closing branded slide is worth adding — it's where
+someone who's read the whole post decides to act. Keep it in the same
+restrained visual language as everything else (no bold sans headline, no
+colored box/bar, no logo lockup — that's the generic travel-agency look
+this account is built to avoid):
+
+- Background: a real Blera/Tuscia place shot (tomb, street, landscape) in
+  the standard warm golden-hour grade — not a separate "graphic"
+  background. Must pass the sourcing check above (yours or licensed).
+- Text: small serif (Cormorant Garamond), cream/gold, sitting directly on
+  the photo, positioned in the calmest area of the frame (sky, plain
+  wall) — no box, no bar. Same treatment as the "Welcome to No Tourists
+  Italy" line.
+- Content, minimal, kept current with whatever departure is actually
+  open:
+  > RASNA
+  > Blera, Tuscia — 90 min from Rome
+  > Next departure: [dates] · Link in bio
 
 ## Posting cadence (realistic for a solo operator)
 
@@ -214,3 +297,40 @@ for relevant content:
 This is a small flywheel: Instagram content drives traffic to the guide
 pages, the guide pages are built to rank in search independently, and both
 funnel back to the booking section.
+
+## Content queue / session log
+
+Track what's decided-but-not-yet-shot here so planning survives between
+sessions. Update the top entry when a post ships; add a new one when the
+next post is picked.
+
+### 2026-08-19 — Next post: Sauce Day (tomato passata)
+
+- **Pillar:** Process (pillar 1) — last post was the streets Reel
+  (pillar 3, place), so don't repeat.
+- **Why now:** confirmed reliable August activity per `BUSINESS_PLAN.md`
+  (Maria Grazia, tomato/sauce day) — it's actually happening this month.
+- **Format:** Reel primary (crushing/stirring/jarring, 10–20 sec, no
+  overlay CTA). Optional carousel version of the same sequence (crates →
+  boiling → smashing → bottling → finished bottles) with the closing
+  branded slide (see above) — pull whichever departure is currently open
+  from `BOOKING_STATUS.md` into the CTA text.
+- **Caption (ready, "No Tourists Italy" format):**
+  > Welcome to No Tourists Italy.
+  >
+  > No demo timed for a tour bus — this is just what August looks like in
+  > Blera. Tomatoes, a wood fire, and a pot that's been in the family
+  > longer than the recipe's been written down.
+  >
+  > This is sauce day in Blera, Tuscia — 90 minutes from Rome, 2,800
+  > years of history, zero tour buses. Link in bio if you want to be the
+  > one stirring it, not watching it.
+  >
+  > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+- **Status:** no real footage yet — placeholder AI images discussed
+  (phone-candid, no-faces variant above) as a stand-in until an actual
+  sauce day is shot. Prioritize shooting real footage this week while
+  it's still in season; swap in the moment it exists.
+- **Ties to:** filling the Nov 9–15, 2026 departure (0/8 booked as of
+  last check in `BOOKING_STATUS.md`) — the sauce-day post is meant to
+  make "what a Rasna day looks like" concrete for that push.
