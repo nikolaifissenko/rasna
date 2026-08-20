@@ -77,7 +77,7 @@
         "name": "What's included in the price?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "€1,400 per person if you book early, €1,800 per person at full price, all-inclusive: accommodation, all meals, every activity you select, guided Etruscan site visits, and local transport from Rome or Viterbo. The only extra costs are flights, travel insurance, and personal spending."
+          "text": "€1,825 per person if you book early, €2,125 per person at full price, all-inclusive: accommodation, all meals, every activity you select, guided Etruscan site visits, and local transport from Rome or Viterbo. The only extra costs are flights, travel insurance, and personal spending."
         }
       },
       {
@@ -1166,7 +1166,7 @@
       <h2 class="fade-in">Everything in, one flat price.</h2>
       <div class="pricing-card fade-in">
         <div class="founding-badge" id="founding-badge" style="display:none"></div>
-        <div class="pricing-amount" id="pricing-amount"><span>&euro;</span>1,400</div>
+        <div class="pricing-amount" id="pricing-amount"><span>&euro;</span>1,825</div>
         <div class="pricing-per" id="pricing-per">per person &middot; 7 days, 6 nights, all-inclusive</div>
         <ul class="pricing-includes">
           <li>Accommodation for your full stay</li>
@@ -1205,7 +1205,7 @@
         </div>
         <div class="faq-item">
           <h3>What's included in the price?</h3>
-          <p>&euro;1,400 per person if you book by the early-bird cutoff, &euro;1,800 per person at full price, all-inclusive: accommodation, all meals, every activity you select, guided Etruscan site visits, and local transport from Rome or Viterbo. The only extra costs are flights, travel insurance, and personal spending.</p>
+          <p>&euro;1,825 per person if you book by the early-bird cutoff, &euro;2,125 per person at full price, all-inclusive: accommodation, all meals, every activity you select, guided Etruscan site visits, and local transport from Rome or Viterbo. The only extra costs are flights, travel insurance, and personal spending.</p>
         </div>
         <div class="faq-item">
           <h3>Is this trip good for solo travelers?</h3>
@@ -1336,7 +1336,7 @@
         <div class="form-submit">
           <button type="button" class="submit-btn" id="custom-submit-btn" onclick="submitBooking('custom')">Pay &amp; Book Now →</button>
         </div>
-        <p class="booking-note">Full payment (&euro;1,800 per person) is collected securely via Stripe at booking. We'll confirm exact activity availability for your chosen dates right after. See our <a href="/cancellation-policy.html" style="color:inherit">cancellation policy</a> and <a href="/liability-waiver.html" style="color:inherit">liability waiver</a>.</p>
+        <p class="booking-note">Full payment (&euro;2,125 per person) is collected securely via Stripe at booking. We'll confirm exact activity availability for your chosen dates right after. See our <a href="/cancellation-policy.html" style="color:inherit">cancellation policy</a> and <a href="/liability-waiver.html" style="color:inherit">liability waiver</a>.</p>
       </div>
     </div>
 
@@ -1359,7 +1359,7 @@
     // Update this to your deployed API's URL — see server/README.md.
     const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
 
-    const PRICE_PER_PERSON = 1800; // keep in sync with worker/wrangler.toml CUSTOM_PRICE_PER_PERSON
+    const PRICE_PER_PERSON = 2125; // keep in sync with worker/wrangler.toml CUSTOM_PRICE_PER_PERSON
 
     const selectedActivities = new Set();
     let currentDeparture = null; // populated from /api/departures

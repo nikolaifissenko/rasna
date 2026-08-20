@@ -163,7 +163,7 @@ app.post('/api/bookings/custom', async (c) => {
   const { errors, numGuests } = validateCommon(body);
   if (errors.length) return c.json({ error: errors.join(', ') }, 400);
 
-  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 1800);
+  const pricePerPerson = Number(c.env.CUSTOM_PRICE_PER_PERSON || 2125);
   const amountTotalCents = Math.round(pricePerPerson * 100) * numGuests;
   const bookingId = await createCustomBooking(c.env.DB, {
     name: body.name.trim(),
