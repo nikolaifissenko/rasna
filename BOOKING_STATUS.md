@@ -1,6 +1,46 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-16_
+_Last updated: 2026-08-20_
+
+## 2026-08-20 update: price raised to €1,825/€2,125; contingency plan added; ninth branch-drift incident
+
+**Pricing change, live and confirmed on both sides:** the November
+9–15 departure is now **€1,825/person early bird (book by Sep 15,
+2026), €2,125/person full price after** — was €1,400/€1,800 (see the
+2026-08-15 entry below). `worker/src/departures.js` and
+`CUSTOM_PRICE_PER_PERSON` in `worker/wrangler.toml`
+(`claude/magical-franklin-58SKM`) were updated and confirmed live via
+`curl https://rasna-booking-api.nikolai-fissenko1.workers.dev/api/departures`
+(`price_per_person: 1825`, `current_tier: early_bird`). The static
+site's price mentions — `index.html`'s pricing hub,
+`italian-olive-experience-pricing.html` (meta tags + `.pct-price`
+fallback text), `-itinerary.html`, and `-faq.html` (JSON-LD +
+visible FAQ answers, none of which pull from the live API) — were
+updated on `main` and confirmed live via `curl` against
+rasnaexperience.com. Both sides checked to match, since a guest
+seeing one price and being charged another is the failure mode that
+matters here.
+
+**New: `CONTINGENCY_PLAN.md`** — per-day weather/host-unavailability
+backup plan for the pilot departure's activities, keyed to
+`ITINERARY_NOV2026.md`. Lodging backup is **Da Beccone** if Casamatta
+falls through (already priced in `CONTATTI_LOCALI.md`, confirmed by
+Nikolai). A few items in it need his input still (who backs up the
+Tuesday tomb-hunt guide, whether Nicolò has a covered option for the
+Friday panonto BBQ, the still-unconfirmed Monday/Saturday dinner
+venues) — see that file's "Open items" section.
+
+**Branch drift, a ninth time:** the price change was first done against
+`claude/magical-franklin-58SKM`'s copy of the static pages (that
+branch's own bundled `CLAUDE.md` claimed, wrongly, that GitHub Pages
+deploys the static site from it) before being caught and correctly
+redone against `main`. Confirmed via `git ls-remote --symref origin
+HEAD`: **the GitHub repo's default branch is itself misconfigured to
+`claude/magical-franklin-58SKM` instead of `main`**, which is the root
+cause of every fresh session inheriting the wrong file first. That
+branch's `CLAUDE.md` has been corrected in place (2026-08-20) to say so
+loudly, but the real fix is a one-click default-branch change in GitHub
+repo settings — still not done as of this entry, ask Nikolai.
 
 ## 2026-08-16 update: liability waiver added (site-content, not booking-infra)
 

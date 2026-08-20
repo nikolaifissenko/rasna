@@ -14,8 +14,8 @@ export const DEPARTURES = [
     // price up to a cutoff date, then one full price after (2026-08-14,
     // per Nikolai). No room-type split.
     pricing: {
-      early_bird: 1400,
-      full: 1800,
+      early_bird: 1825,
+      full: 2125,
     },
     // Inclusive cutoff: a booking made on early_bird_until's date still
     // gets the early-bird price; the day after rolls into "full".
