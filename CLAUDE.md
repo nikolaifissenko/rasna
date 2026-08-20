@@ -25,15 +25,39 @@ an API token or find an account ID) — but even then, be specific about
 exactly what scope/permission you need so it's a single copy-paste for
 him, not a debugging back-and-forth.
 
-## Deployment topology
+## ⚠️ Deployment topology — this file's old claim below was WRONG, corrected 2026-08-20
 
-- **Static site** (`index.html`, `success.html`, `cancel.html`, etc. at
-  repo root): GitHub Pages, auto-deploys from the
-  `claude/magical-franklin-58SKM` branch. Custom domain
-  `rasnaexperience.com` via `CNAME`.
+**If you're a fresh session reading this because it's this repo's
+(misconfigured) default branch: the static site does NOT deploy from
+`claude/magical-franklin-58SKM`.** It deploys from **`main`** — a
+completely separate commit history, with its own `CLAUDE.md`,
+`index.html`, `about.html`, `style.css`, `images/`, and a family of
+`italian-olive-experience-*.html` pages. `main`'s own `CLAUDE.md`
+documents this exact mistake happening **eight times before** this one.
+A 2026-08-20 session repeated it a ninth time (see `main`'s `CLAUDE.md`
+for the dated incident log) — wasted a full dash-removal pass and part
+of a price-change pass on this dead branch before catching it via a
+`curl` diff against the live site. **Before touching any static-site
+file (`index.html`, guide pages, `success.html`, etc.), check out
+`origin/main` and work there instead — don't trust this file's claims
+about the static site.**
+
+The repo's **GitHub default branch is itself misconfigured** to this
+branch instead of `main` — that's the root cause of every fresh
+session inheriting this wrong file. Nikolai can fix it in one click:
+repo Settings → Branches → change default branch to `main`. Ask him
+about this if it still hasn't been fixed.
+
+What's actually still true below: this branch (`claude/magical-franklin-58SKM`)
+**is** the correct deploy source for the Cloudflare Worker in `worker/`.
+Only the static-site claim was wrong.
+
+- **Static site** (`index.html`, `success.html`, `cancel.html`, etc.):
+  GitHub Pages, auto-deploys from **`main`**, NOT this branch. Custom
+  domain `rasnaexperience.com` via `CNAME`.
 - **Backend** (`worker/`): Cloudflare Worker + D1, auto-deploys on push
-  to `claude/magical-franklin-58SKM` (Cloudflare's git integration,
-  not something run manually from here).
+  to `claude/magical-franklin-58SKM` (this branch — correct, Cloudflare's
+  git integration, not something run manually from here).
 - **Database migrations** (`worker/migrations/`): NOT auto-applied on
   deploy. Must be run explicitly against the remote D1 database with
   `wrangler d1 migrations apply rasna-bookings --remote` from `worker/`.
