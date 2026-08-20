@@ -137,7 +137,7 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
   (solo la doppia è confermata finora — nessuna tariffa singola/premium raccolta per La Ripa)
 
-- **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.450/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Dato che Da Beccone è ora confermato (vedi sopra), è la scelta più immediata come alloggio alternativo per la partenza del 9–15 novembre — verificare capienza per 8 persone.
+- **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.825/persona early bird fino al 15/09/2026, poi €2.125/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Dato che Da Beccone è ora confermato (vedi sopra), è la scelta più immediata come alloggio alternativo per la partenza del 9–15 novembre — verificare capienza per 8 persone.
 - **Da verificare con Antonella:** se altre settimane sono libere (per usarla su future partenze non-novembre), e quante camere ha disponibili in totale — serve capienza per gruppi di 6-10 persone.
 
 ## 9. Trasporto — furgone 9 posti (partenza 9–15 novembre 2026)

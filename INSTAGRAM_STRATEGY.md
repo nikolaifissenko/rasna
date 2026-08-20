@@ -294,9 +294,10 @@ Chao audio):**
 > Most tours move 20–40 people through sights by bus, on a fixed script.
 > Rasna caps every group at 6–10 people and builds the trip around real
 > local life — you work alongside the people who actually farm the land,
-> cure the meat, and cook the meals. €1,450/person, all-inclusive:
-> lodging, all meals, every activity, transport from Rome or Viterbo.
-> No hidden extras. Link in bio for the next departure.
+> cure the meat, and cook the meals. €1,825/person if you book early,
+> €2,125/person at full price, all-inclusive: lodging, all meals, every
+> activity, transport from Rome or Viterbo. No hidden extras. Link in
+> bio for the next departure.
 
 ## What ties back to the website
 
