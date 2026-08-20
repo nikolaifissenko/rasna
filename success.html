@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Confirmed — Rasna</title>
+  <title>Booking Confirmed | Rasna</title>
   <meta name="robots" content="noindex">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,8 +71,8 @@
 
     <div id="flight-section" class="flight-section hidden">
       <h2>Getting you from the airport</h2>
-      <p>Pickup from Rome Fiumicino (FCO) is included on arrival day. Most transatlantic flights land in the morning, so we run a group pickup then — landing well outside that window just means we plan your transfer separately, so let us know your flight whenever it's booked.</p>
-      <p>You don't need this today — flights are often booked later. Bookmark this page (or reuse the confirmation link from your email) to come back and fill this in, or update it, any time before the trip.</p>
+      <p>Pickup from Rome Fiumicino (FCO) is included on arrival day. Most transatlantic flights land in the morning, so we run a group pickup then. If you're landing well outside that window, we'll just plan your transfer separately, so let us know your flight whenever it's booked.</p>
+      <p>You don't need this today, since flights are often booked later. Bookmark this page (or reuse the confirmation link from your email) to come back and fill this in, or update it, any time before the trip.</p>
 
       <label for="airport">Arrival airport</label>
       <select id="airport">
@@ -149,7 +149,7 @@
         })
           .then((r) => {
             if (!r.ok) throw new Error();
-            statusEl.textContent = 'Saved — thank you.';
+            statusEl.textContent = 'Saved, thank you.';
             statusEl.className = 'status-msg ok';
           })
           .catch(() => {
