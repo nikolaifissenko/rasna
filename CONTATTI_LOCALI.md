@@ -139,3 +139,13 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 - **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.450/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Dato che Da Beccone è ora confermato (vedi sopra), è la scelta più immediata come alloggio alternativo per la partenza del 9–15 novembre — verificare capienza per 8 persone.
 - **Da verificare con Antonella:** se altre settimane sono libere (per usarla su future partenze non-novembre), e quante camere ha disponibili in totale — serve capienza per gruppi di 6-10 persone.
+
+## 9. Trasporto — furgone 9 posti (partenza 9–15 novembre 2026)
+
+- **Stato:** DA PRENOTARE — nessun fornitore ancora contattato/confermato.
+- **Ricerca prezzi, 20 agosto 2026** (rental24.co.uk, romeairportfco.com, discovercars.com, KAYAK — prezzi indicativi da ricerca odierna, non un preventivo bloccato per le date reali del 9–15 novembre 2026, troppo lontane per essere prenotabili sulla maggior parte dei motori di ricerca):
+  - Modelli economici (Renault Trafic, Opel Vivaro, Fiat Talento, VW Transporter — Europcar/Sixt/Keddy): **€50–75/giorno**
+  - Modelli intermedi, più adatti a un gruppo di ospiti (Ford Tourneo Custom, Hyundai Staria, VW Caravelle): **€93–115/giorno**
+  - **Stima totale per la settimana (6 giorni, ritiro a Fiumicino/FCO): ~€400–700** per un furgone adeguato — ampiamente coperto dal budget di €140/ospite × 8 ospiti = €1.120 già previsto per "local guiding/transport" in `FINANCIAL_PLAN.md` §1.
+- **Alternativa da valutare con Maria Grazia:** un autista locale con veicolo proprio, invece del noleggio — vedi nota in `FINANCIAL_PLAN.md` §4.
+- **Da fare prima della partenza:** confermare un preventivo reale non appena la finestra di prenotazione lo permette (di solito ~11-12 mesi prima della data), e verificare se la patente B di Nikolai copre la guida di un furgone 9 posti in Italia (di norma sì, sotto le 3.500 kg — da confermare con il commercialista/noleggiatore).

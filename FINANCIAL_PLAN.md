@@ -148,11 +148,13 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 | Licensing/insurance (tourism, food handling) | €500–€1,500 |
 | Website & branding | €500–€2,000 (or DIY for less) |
 | Pilot trip costs (discounted/break-even run) | €1,000–€2,000 |
-| Group transport (van purchase/lease, or via Maria Grazia's local contacts) | €0–€15,000 (see note below) |
+| Group transport (rent a 9-seat van per trip, or via Maria Grazia's local contacts — see note below) | €0 (not a startup cost — folded into the per-trip "local guiding/transport" line in §1) |
 | Marketing launch (photos, video, ads) | €1,000–€3,000 |
 | **Total estimated startup investment** | **~€4,500–€11,500** |
 
 **Note on the van/transport:** before committing capital to buying a van, it's worth testing whether Maria Grazia's local logistics contacts can cover this — e.g., a local driver with their own vehicle hired per group, or a rental arrangement for departure weeks only. That keeps transport as a per-group variable cost (already included in the "local guiding/transport" line in Section 1) rather than a fixed asset you have to maintain, insure, and park year-round for a business that intentionally only runs ~15-20 trips a year. Buying a van only starts to make sense once you're running frequently enough that ownership is cheaper than hiring — worth revisiting in Year 2-3 once real per-group transport costs are known. If you do buy, factor in insurance, maintenance, and Italian commercial-vehicle/driver licensing requirements (to confirm with your commercialista).
+
+**Rental research, checked 2026-08-20 (rental24.co.uk, romeairportfco.com, discovercars.com, KAYAK — same-day listing prices, not a locked quote for the actual Nov 9–15, 2026 dates, which are too far out for most booking engines to quote yet):** a 9-seat van picked up at Fiumicino (FCO) runs roughly **€50–75/day for budget models** (Renault Trafic, Opel Vivaro, Fiat Talento, VW Transporter via Europcar/Sixt/Keddy) up to **€93–115/day for a more guest-appropriate mid-tier vehicle** (Ford Tourneo Custom, Hyundai Staria, VW Caravelle). For the 6-day Nov 9–15 window that's **~€400–700 total for a suitable van** — well inside the €140/guest × 8 guests = €1,120 already budgeted for "local guiding/transport" in §1. Confirms renting per-trip is comfortably affordable without touching the startup budget; re-check actual quotes closer to the date once the booking window opens (typically ~11-12 months out).
 
 This is a relatively low-capital business to start — the main investment is time, relationship-building, and a modest marketing budget, not large fixed assets.
 
