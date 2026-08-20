@@ -13,8 +13,9 @@ but no more staring at a blank page first.
 ## 1. Da Beccone — lock down room mix (Nov 9–15, 2026)
 
 **Why now:** this is the site's only live, bookable departure (8 spots,
-€1,450/pp), Stripe is in live mode, and a real guest could pay before the
-room mix is settled. This is the single most time-sensitive item left.
+€1,825/pp early bird through 2026-09-15, then €2,125/pp), Stripe is in
+live mode, and a real guest could pay before the room mix is settled.
+This is the single most time-sensitive item left.
 
 **Channel:** phone/WhatsApp (no email on file — see `CONTATTI_LOCALI.md`
 §8). Script below works for either.
@@ -64,8 +65,9 @@ founding-guest offer, not a hard sell.
 > 10 people, ever.
 >
 > The first departure is **November 9–15, 2026**, all-inclusive
-> (lodging, food, guiding, activities) for €1,450. I'm only opening this
-> first trip to people I actually know before it goes wider, partly
+> (lodging, food, guiding, activities) for €1,825 if you book by
+> September 15 (€2,125 after). I'm only opening this first trip to
+> people I actually know before it goes wider, partly
 > because I'd love to have you there, and partly because it's the pilot —
 > honest feedback (and photos, if you're up for it) is worth more to me
 > than the ticket price.
@@ -81,9 +83,10 @@ founding-guest offer, not a hard sell.
 > Hey [Name] — random but wanted you to hear this from me first. I built
 > a small-group trip to an ancient Etruscan town in Italy (olive
 > harvest, rock-cut tombs, horseback riding, real home-cooked meals, 6-10
-> people max) — first departure is Nov 9-15, €1,450 all-in. Opening it to
-> people I know before anyone else. rasnaexperience.com if you want to
-> look — no pressure, just thought of you.
+> people max) — first departure is Nov 9-15, €1,825 all-in if you book by
+> Sept 15 (€2,125 after). Opening it to people I know before anyone else.
+> rasnaexperience.com if you want to look — no pressure, just thought of
+> you.
 
 ---
 

@@ -94,27 +94,23 @@ needed. Custom "choose your own dates" bookings default to the same
   webhook (signature verification in `worker/src/index.js` via
   `stripe.webhooks.constructEventAsync`) is confirmed working end-to-end,
   so paid bookings do flip from `pending` to `paid`.
-- **Departure config**: November 9–15, 2026, capacity 8, €1,450/person
+- **Departure config**: November 9–15, 2026, capacity 8
   (`worker/src/departures.js`).
-- **Founding Guest discount (added 2026-07-24)**: since 0 of 8 spots were
-  booked at 108 days out despite outreach going out, the first 2 paid
-  guest spots on this departure get €1,230/person (15% off) instead of
-  €1,450 — priced to break the "nobody's booked yet" freeze and give
-  Nikolai's outreach a concrete, real incentive to point people at. Price
-  transitions automatically and atomically per-guest as spots fill (e.g.
-  a party of 3 booking when 1 discount spot is left gets 1 guest at
-  €1,230 and 2 at €1,450 — see `tieredPricing()` in `worker/src/index.js`),
-  computed server-side off the same `spotsUsed` (paid-only) count that
-  already governs capacity, so it can't be gamed from the client and
-  can't oversell. Shown live on-site: the pricing card, the departure
-  card, and the fixed-booking price preview all pull current discount
-  status from `/api/departures` (`founding_discount_price`,
-  `founding_discount_remaining`). Verified locally end-to-end (wrangler
-  dev + local D1 + Playwright screenshots) before shipping — discount
-  correctly present at 0 paid bookings, correctly drops to 0 once 2
-  guests are marked paid, tiered split-pricing math confirmed exact
-  (2×€1,230 + 1×€1,450 = €3,910 for a party of 3 with 1 discount spot
-  left).
+- **Pricing (updated 2026-08-20): early-bird / full, date-based —
+  supersedes the old spot-based Founding Guest discount described in
+  earlier versions of this doc.** €1,825/person for bookings made on or
+  before **2026-09-15**, €2,125/person after. The tier is resolved
+  server-side from the current date (`currentPriceTier()` /
+  `priceForDeparture()` in `worker/src/departures.js`), not something a
+  guest or the client can influence — same non-gameable principle as the
+  old mechanism, just keyed off a date cutoff instead of a paid-spot
+  count. The old `tieredPricing()` function and the "first 2 spots at
+  €1,230/€1,450" split-pricing logic it drove are no longer in
+  `worker/src/index.js` — replaced by this simpler date-based model.
+  Shown live on-site: the pricing card, the departure card, and the
+  booking price preview all pull the current tier from `/api/departures`
+  (`current_tier`, `pricing.early_bird`, `pricing.full`,
+  `pricing_windows.early_bird_until`).
 - **Admin record**: `https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin`
   (Basic Auth: `admin` / the password set in Cloudflare). CSV export at
   `/admin/bookings.csv`.
@@ -273,7 +269,7 @@ call, but availability is no longer a live-booking risk. Worth a final
 written confirmation (exact room count/type) closer to the date, but
 this no longer blocks anything.
 
-## Marketing — filling the November departure (8 spots, €1,450/pp)
+## Marketing — filling the November departure (8 spots, €1,825/pp early bird through 2026-09-15, then €2,125/pp)
 
 SEO/Instagram are background, months-long channels — not realistic
 to count on for filling *this* first departure by Nov 9, 2026 (no

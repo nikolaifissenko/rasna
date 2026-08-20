@@ -161,8 +161,8 @@ These aren't separate attractions to manage — they're moments the town already
 
 **Antonella (B&B La Ripa) NON è disponibile per la settimana 9–15 novembre 2026**
 — che è l'unica data attualmente aperta a prenotazioni reali sul sito (partenza
-fissa, capienza 8, €1.450/persona — vedi `BOOKING_STATUS.md` e
-`worker/src/departures.js`).
+fissa, capienza 8, €1.825/persona early bird fino al 15/09/2026, poi
+€2.125/persona — vedi `BOOKING_STATUS.md` e `worker/src/departures.js`).
 
 **Da Beccone è ora confermato come alloggio alternativo** per questa partenza
 (tariffe raccolte, vedi `CONTATTI_LOCALI.md` §8 e `FINANCIAL_PLAN.md` §1 per la

@@ -44,26 +44,33 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 net out Stripe's transaction fee (see below); the effective margin after
 that is closer to 44%, still healthy.
 
-**Stripe fee — not previously in this breakdown, added 2026-07-24.**
+**Stripe fee — not previously in this breakdown, added 2026-07-24;
+prices updated 2026-08-20 for the early-bird/full switch (see below).**
 Stripe's fee depends on where the card was issued relative to the
 merchant account (Italy/EU): EU cards run ~1.5% + €0.25, UK ~2.5% + €0.25,
 and non-European cards ~3.25% + €0.25 — and since the target guest base
 is US/UK/Australia/Canada (`BUSINESS_PLAN.md` §3), most bookings will
-land at or near that higher international rate. At full price (€1,450):
-**≈€47/guest** (3.25% + €0.25). At the Founding Guest discount price
-(€1,230, see below): **≈€40/guest**. Net profit after this fee: **~€633/
-guest at full price (≈44% margin), ~€470/guest at the discount price
-(≈38% margin)** — both still comfortably profitable, but the fee is real
-money that should be in any margin conversation, not an oversight to
-carry forward silently.
+land at or near that higher international rate. At full price (€2,125):
+**≈€69/guest** (3.25% + €0.25). At the early-bird price (€1,825, see
+below): **≈€60/guest**. Net profit after this fee, on the simplified
+3-night/€720-cost model above: **~€1,336/guest at full price (≈63%
+margin), ~€1,045/guest at early-bird (≈57% margin)** — both still
+comfortably profitable, but see the 6-night/real-cost table below for
+the accurate figure against the actual November departure, and note the
+fee itself is real money that should be in any margin conversation.
 
-**Founding Guest discount (added 2026-07-24):** the first 2 paid guest
-spots on the Nov 9–15, 2026 departure are priced at €1,230 (15% off)
-instead of €1,450, to unstick a departure that had 0 of 8 spots booked
-108 days out despite outreach going out — see `BOOKING_STATUS.md` for
-the mechanics. Margin impact at that price is above (~38% vs ~44%
-after Stripe fees) — a deliberate trade of some margin on the first 2
-guests for the momentum of breaking zero.
+**Early-bird / full pricing (replaces the old spot-based Founding Guest
+discount — updated 2026-08-20):** the Nov 9–15, 2026 departure now prices
+off a date cutoff instead of a discount on the first N spots (see
+`worker/src/departures.js`). Bookings made on or before **2026-09-15**
+lock in **€1,825/guest** (early bird); bookings made after that date pay
+**€2,125/guest** (full price). The tier is decided server-side from the
+booking's timestamp (`currentPriceTier()` / `priceForDeparture()` in
+`worker/src/departures.js`), not something a guest or the client can
+influence. This replaces the earlier "first 2 spots at €1,230" mechanism
+that used to be described here and in `BOOKING_STATUS.md` — that
+spot-based discount (`tieredPricing()`) is no longer in the code; the
+live worker now calls `priceForDeparture()`/`currentPriceTier()` instead.
 
 **Lodging cost check against confirmed rates (`CONTATTI_LOCALI.md`):** both partners' rates
 are now confirmed as **per room/night**, with the per-person equivalent worked out
@@ -85,21 +92,24 @@ own for a 3-night stay.
 
 **⚠️ Bigger issue found while checking this: the live November departure is 6 nights, not
 3.** `BOOKING_STATUS.md` / `worker/src/departures.js` confirm the fixed departure guests are
-actually booking and paying for right now is **Nov 9–15, 2026 (6 nights)** at **€1,450/guest**
-— not the 3-night/€1,400 package this financial plan is modeled on. Doubling the lodging
-nights roughly doubles that cost line. **B&B La Ripa is unavailable that exact week, so Da
-Beccone is currently the only usable rate for this calculation:**
+actually booking and paying for right now is **Nov 9–15, 2026 (6 nights)** at
+**€1,825/guest (early bird, through 2026-09-15) rising to €2,125/guest (full price)
+afterward** — not the 3-night/€1,400 package this financial plan is modeled on. Doubling the
+lodging nights roughly doubles that cost line. **B&B La Ripa is unavailable that exact week,
+so Da Beccone is currently the only usable rate for this calculation:**
 
-| Room type, 6 nights (Da Beccone) | €/guest | New total cost/guest | Margin at €1,450 |
-|---|---|---|---|
-| Standard double | €225 | €775 | €675 (≈47%) |
-| Premium double | €285 | €835 | €615 (≈42%) |
-| Standard single | €390 | €940 | €510 (≈35%) |
-| Premium single | €480 | €1,030 | €420 (≈29%) |
+| Room type, 6 nights (Da Beccone) | €/guest | New total cost/guest | Margin at €1,825 (early bird) | Margin at €2,125 (full) |
+|---|---|---|---|---|
+| Standard double | €225 | €775 | €1,050 (≈57.5%) | €1,350 (≈63.5%) |
+| Premium double | €285 | €835 | €990 (≈54.2%) | €1,290 (≈60.7%) |
+| Standard single | €390 | €940 | €885 (≈48.5%) | €1,185 (≈55.8%) |
+| Premium single | €480 | €1,030 | €795 (≈43.6%) | €1,095 (≈51.5%) |
 
-So the actual November departure's margin is likely **somewhere between ~29% and ~47%**,
-not the ~49% this document states — and could be meaningfully worse than assumed if several
-guests end up in single rooms. **Room mix (doubles vs. singles, standard vs. premium) for
+(Figures above are before Stripe's fee — subtract roughly the ~€60–69/guest estimated above
+for the more precise net.) So with the price now at €1,825–€2,125 instead of the old €1,450,
+the actual November departure's margin is likely **somewhere between ~44% and ~63.5%**
+before Stripe fees — comfortably above the ~49% this document's 3-night model assumes, even
+in the worst room-mix case. **Room mix (doubles vs. singles, standard vs. premium) for
 this specific group of 8 is the one remaining unknown** — worth locking down with Da Beccone
 before the departure. Once La Ripa's other-week availability and room count are confirmed
 (see `CONTATTI_LOCALI.md`), it becomes a second option at the same doppia rate (€37.50/guest/
@@ -148,11 +158,13 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 | Licensing/insurance (tourism, food handling) | €500–€1,500 |
 | Website & branding | €500–€2,000 (or DIY for less) |
 | Pilot trip costs (discounted/break-even run) | €1,000–€2,000 |
-| Group transport (van purchase/lease, or via Maria Grazia's local contacts) | €0–€15,000 (see note below) |
+| Group transport (rent a 9-seat van per trip, or via Maria Grazia's local contacts — see note below) | €0 (not a startup cost — folded into the per-trip "local guiding/transport" line in §1) |
 | Marketing launch (photos, video, ads) | €1,000–€3,000 |
 | **Total estimated startup investment** | **~€4,500–€11,500** |
 
 **Note on the van/transport:** before committing capital to buying a van, it's worth testing whether Maria Grazia's local logistics contacts can cover this — e.g., a local driver with their own vehicle hired per group, or a rental arrangement for departure weeks only. That keeps transport as a per-group variable cost (already included in the "local guiding/transport" line in Section 1) rather than a fixed asset you have to maintain, insure, and park year-round for a business that intentionally only runs ~15-20 trips a year. Buying a van only starts to make sense once you're running frequently enough that ownership is cheaper than hiring — worth revisiting in Year 2-3 once real per-group transport costs are known. If you do buy, factor in insurance, maintenance, and Italian commercial-vehicle/driver licensing requirements (to confirm with your commercialista).
+
+**Rental research, checked 2026-08-20 (rental24.co.uk, romeairportfco.com, discovercars.com, KAYAK — same-day listing prices, not a locked quote for the actual Nov 9–15, 2026 dates, which are too far out for most booking engines to quote yet):** a 9-seat van picked up at Fiumicino (FCO) runs roughly **€50–75/day for budget models** (Renault Trafic, Opel Vivaro, Fiat Talento, VW Transporter via Europcar/Sixt/Keddy) up to **€93–115/day for a more guest-appropriate mid-tier vehicle** (Ford Tourneo Custom, Hyundai Staria, VW Caravelle). For the 6-day Nov 9–15 window that's **~€400–700 total for a suitable van** — well inside the €140/guest × 8 guests = €1,120 already budgeted for "local guiding/transport" in §1. Confirms renting per-trip is comfortably affordable without touching the startup budget; re-check actual quotes closer to the date once the booking window opens (typically ~11-12 months out).
 
 This is a relatively low-capital business to start — the main investment is time, relationship-building, and a modest marketing budget, not large fixed assets.
 
