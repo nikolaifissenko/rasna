@@ -229,6 +229,16 @@ this account is built to avoid):
   Grazia or during an activity can produce a week or two of posts if you
   shoot more than you think you need.
 
+## Caption style rules (Nikolai's calls, apply to all future captions)
+
+- **No em-dashes.** Rewrite with commas, periods, or a colon instead
+  (set 2026-08-24). Check any caption drafted before this date and
+  update it if it's about to be posted.
+- **5 hashtags max, every format** — not just Reels (set 2026-08-24, cap
+  broadened beyond the "For Reels specifically, trim to 5" rule below).
+  Use the niche/category/broad mix logic from the hashtag section, just
+  pick 5 total instead of 8–15 for carousels/static posts too.
+
 ## Hashtag strategy
 
 Keep it tight (8–15 tags, not 30) and mix specificity:
@@ -318,42 +328,100 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
-### 2026-08-19 — Next post: Founder/origin story (childhood in Blera)
+### 2026-08-24 — Founder/origin story ("about me" carousel) — CAPTION LOCKED
 
 Goes out **before** the sauce-day post — moved ahead in the queue.
+Supersedes the 2026-08-19 placeholder version below it in history (that
+one was childhood-only with bracketed placeholders; this one expanded
+into the full life-story arc per Nikolai's 2026-08-24 request and is the
+final version to shoot from).
 
-- **Pillar:** People (pillar 2), founder/origin sub-type — see pillar 2
-  above. Not the "No Tourists Italy" series (standalone caption, no fixed
-  opener).
-- **Why this order:** it's the "why trust me" post — establishes Nikolai's
-  real personal history in Blera before asking people to book, which is a
-  stronger lead-in than jumping straight to process content.
-- **Photos:** real childhood photos, sourced from his mom (asked
-  2026-08-19). Waiting on delivery — do not use AI-generated stand-ins for
-  this one, the whole point is that it's real.
-- **Format note:** old photos won't match the warm-golden-hour grade the
-  rest of the grid uses — that's expected, don't color-correct them to
-  match. A "then and now" carousel (old photo next to a current shot of
-  the same spot, if findable) would be stronger than childhood photos
-  alone.
-- **Caption (draft — has placeholders, needs Nikolai's real specifics
-  once photos are in hand):**
-  > I didn't build Rasna because I researched "authentic Italy" — I built
-  > it because I spent [summers/holidays as a kid] in Blera, at [my
-  > grandmother's / family's] house, doing exactly what I want our guests
-  > to do now: no itinerary, no reservations, just being here.
+- **Pillar:** People (pillar 2), founder/origin sub-type. Not the "No
+  Tourists Italy" series (standalone caption, no fixed opener).
+- **Why this order:** it's the "why trust me" post — establishes
+  Nikolai's real personal history before asking people to book.
+- **Photos — real childhood photos are in hand, saved to
+  `instagram-drafts/about-me/` on this branch** (physical prints
+  photographed on phone, sourced from his mom; do not color-correct to
+  match the site's golden-hour grade — that's expected and fine for this
+  post specifically):
+  - `childhood-01-olive-tree.jpg` — group of boys climbing an olive
+    tree, low angle, a building visible through branches
+  - `childhood-02-blera-street.jpg` — group shot on a Blera street,
+    Nikolai in a Zorro Carnevale costume he kept wearing for weeks after
+  - `childhood-03-tombs-with-relative.jpg` — Nikolai (Zorro costume) and
+    another boy at the Etruscan rock-cut tombs, with a relative/family
+    friend seated in frame
+  - `childhood-04-bike-zorro-dirt-road.jpg` — Nikolai alone, still in
+    the Zorro costume, on a bike on a dirt road lined with trees
+  - `childhood-06-tomb-ledge.jpg` — closer shot of Nikolai on the tomb
+    ledge holding sticks/reeds
+  - `childhood-05-indoor-drawing-EXCLUDED.jpg` — kept for reference only,
+    **not used**: no Blera place cues (could be any room), breaks the
+    "every cover is one activity/place" rule
+  - **Adult opening photo:** reuse `images/about-nikolai-portrait.jpg`
+    from `main` (Blera rooftops + bell tower behind him) — already live
+    as the site's about-page photo, bridges straight into the childhood
+    photos below. The `about-nikolai-bar.jpg` accent photo was
+    considered and rejected for this carousel (no Blera visual cues).
+- **Slide order (7 slides + closing = 8):** adult portrait → olive tree
+  → Blera street → tomb ledge close-up → tombs with relative → dirt
+  road/bike → branded closing slide.
+- **Caption (final, locked):**
+  > The short version of how I ended up doing this.
   >
-  > [one real, specific memory — a place, a person, a smell, something
-  > small and true, not generic]
+  > Blera raised me. My dad rebuilt our house here stone by stone, and I
+  > grew up on the building site, running through Etruscan tombs that
+  > were 2,800 years old and just my playground. Relatives came
+  > constantly, from Paris, from Saint Petersburg, and by nine years old
+  > I was already leading them through it, a guide before I knew the
+  > word for it.
   >
-  > This is the same Blera, Tuscia — 90 minutes from Rome, 2,800 years of
-  > history — I'm asking you to trust me with for a few days. Link in
-  > bio if you want to see it the way I got to, growing up.
+  > My parents split when I was nine, and I ended up in Atlanta for six
+  > years. A hard transition, and I loved it anyway. Drumming, every
+  > sport I could play, a different kind of childhood. At sixteen I sat
+  > an entrance exam for a school in Viterbo and moved back in with my
+  > dad in Blera, a decision most of my family thought was crazy. I
+  > never really left again.
   >
-  > #Blera #Tuscia #EtruscanItaly #AuthenticItaly #ItalyTravel
-- **Status:** blocked on photos + real memory detail from Nikolai. Once
-  he has both, fill in the brackets and lock the caption — don't invent
-  specifics.
+  > University in Rome, five languages, a thesis on jazz diplomacy, and
+  > a band called Noble Sin. But the real reason I stayed is Giulia, my
+  > girlfriend, who I met here and never wanted to leave. I started
+  > guiding tours in the city almost by accident, and it clicked
+  > immediately: I wasn't learning to be a guide, I'd been one since I
+  > was nine.
+  >
+  > My dad died in 2023. Going back to Blera got harder for a while.
+  > Then in 2026, on a weekend there with my sister, Maria Grazia
+  > reminded me what I'd nearly forgotten: how my sister Alionka had
+  > loved picking olives, how my stepbrother David had loved learning to
+  > make gnocchi from scratch, things I'd grown up doing without
+  > thinking twice about. That conversation is where Rasna came from.
+  >
+  > I'm not showing people a culture. I'm doing what I've done since I
+  > was nine: bringing people I care about into the community that
+  > raised me.
+  >
+  > Blera, Tuscia, 90 minutes from Rome, 2,800 years of Etruscan
+  > history, about 3,000 people, zero tour buses. Link in bio if you
+  > want to be part of it.
+  >
+  > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+- **Closing slide:** RASNA / Blera, Tuscia — 90 min from Rome / Next
+  departure: Nov 9–15, 2026 · Link in bio (pull current departure from
+  `BOOKING_STATUS.md` if this ships after that date changes).
+- **Facts sourced from `main`'s `about.html` founder bio** (already live
+  and public, so safe to reuse): father Vladimir rebuilt the Blera house
+  himself; parents divorced when Nikolai was 9; 6 years in Atlanta then
+  San Francisco; moved back to Blera at 16 for a Viterbo school; Rome
+  university + Noble Sin + girlfriend Giulia; father died 2023;
+  2026 Bar Paradiso conversation with Maria Grazia (sister Alionka loved
+  olive picking, stepbrother David loved making gnocchi) is the real
+  origin of Rasna. Cross-check `about.html` before reusing further —
+  it's the single source of truth for these biographical details.
+- **Status:** caption and photos locked and ready. Not yet posted —
+  needs the actual Instagram upload (manual step, Nikolai's Instagram
+  login isn't something Claude has).
 
 ### 2026-08-19 — Then: Sauce Day (tomato passata)
 
@@ -367,17 +435,18 @@ Goes out **before** the sauce-day post — moved ahead in the queue.
   branded slide (see above) — pull whichever departure is currently open
   from `BOOKING_STATUS.md` into the CTA text.
 - **Caption (final — standalone, not the "No Tourists Italy" series
-  opener):**
+  opener; updated 2026-08-24 to drop em-dashes per current style rule
+  below):**
   > Most sauce comes from a jar. This one came from a crate of tomatoes
   > picked that morning, a wood fire, and a local host telling us exactly
-  > how much salt is "enough" — no measuring cup involved.
+  > how much salt is "enough," no measuring cup involved.
   >
-  > This is sauce day in Blera — the kind of thing that happens in family
+  > This is sauce day in Blera, the kind of thing that happens in family
   > kitchens across Tuscia every August, not for an audience, just
   > because it's August and the tomatoes are ready. We show up, work
   > alongside her, and leave with jars of it.
   >
-  > Blera, Tuscia — 90 minutes from Rome, zero tour buses. Link in bio if
+  > Blera, Tuscia, 90 minutes from Rome, zero tour buses. Link in bio if
   > you want to be the one stirring the pot on your next trip to Italy.
   >
   > #Passata #TomatoSauce #SlowFood #ItalianCooking #FarmToTable
