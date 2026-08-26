@@ -182,6 +182,32 @@ retouching, no content changes, just definition:
 > and higher-definition — as if it were shot on better camera hardware,
 > not stylized or filtered.
 
+### Full grade + focus prompt (for real photos going on as a Reel cover)
+
+For a real on-site photo that needs the standard warm grade applied plus a
+subject-focus pass (sharpen the actual subject — animals, hands, a
+tool — soften the background) — used for the Grotta Porcina donkey-walk
+cover, reusable for any future real-photo cover:
+
+> Perform post-production/color-grading on this photo only. Do not
+> change, add, remove, retouch, or move anything — not the people, the
+> [subject], the path, the trees, or the composition. No text.
+>
+> Grading: make the light noticeably warmer — push the color temperature
+> toward golden/amber, as if shot deeper into golden hour. Warm up the
+> highlights and shadows toward sandy cream, gold, and soft terracotta,
+> pull the greens toward a muted olive tone, and reduce overall
+> saturation and contrast slightly for a documentary, filmic feel. Avoid
+> a cool or oversaturated "travel blog" look.
+>
+> Focus: sharpen and increase fine detail specifically on [subject] so it
+> reads as the crispest part of the image; allow the surrounding
+> foliage/background to fall slightly softer for natural depth of field.
+>
+> Technical cleanup only: reduce noise, correct exposure/white balance,
+> upscale resolution slightly. No retouching of any person or object, no
+> reframing, no cropping.
+
 ## Format guidance
 
 - **Reels > static posts** for reach — Instagram's algorithm still
@@ -263,6 +289,23 @@ Chao audio):**
 > This is Blera, Tuscia — 90 minutes from Rome, 2,800 years of Etruscan
 > history, about 3,000 people, zero tour buses. Link in bio if you want to
 > walk it too.
+>
+> #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+
+**Donkey walk to Grotta Porcina necropolis (one-off humor variant,
+Nikolai's call 2026-08-26 — breaks from the standard "Welcome to No
+Tourists Italy" opener on purpose, meme hook instead):**
+> Ever wonder what it would be like to go on an adventure with donkeys
+> and Shrek? This is about as close as it gets.
+>
+> No tour bus, no script — just a dirt trail through the woods, two
+> guides, and a couple of donkeys who know the way better than any
+> guidebook. This is how you actually reach an Etruscan necropolis: on
+> foot, at donkey pace, the way people here have walked it for centuries.
+>
+> This is the Grotta Porcina necropolis, Blera, Tuscia — 90 minutes from
+> Rome, 2,800 years of Etruscan history, and nobody roped any of it off
+> for you. Link in bio if you want to walk it too.
 >
 > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
 
