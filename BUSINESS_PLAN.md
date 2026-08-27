@@ -20,7 +20,8 @@ Small-group immersive travel experiences in and around Blera (northern Lazio, It
 4. **Emiliano (Miriam's son) — cured meats/affettati** — ✅ CONFIRMED: available for degustations of his homemade charcuterie products with visitors.
 5. **Renzo — leatherwork / bag-making** — high availability, and a great economic model: **his demonstration could be offered for free**, since guests would likely buy his goods afterward — a win-win that needs no negotiation over a hosting fee. Reframed specifically around bag-making based on a direct market signal: when running tours in Rome, American guests consistently ask for an authentic Italian leather bag — a hands-on session making their own turns this into one of the most marketable single activities in the whole offer.
 6. **Horseback riding — Maneggio di Civitella Cesi** — a new candidate complementary activity/excursion (not town-based, but nearby); to contact and assess fit, availability, and how they'd handle small international groups.
-7. **Nicolò Lenarda — partner/board member** — asset multipli: degustazione olio ✅, azienda olearia (raccolta olive, DA VALIDARE stagionalità), 2 cavalli (DA VALIDARE logistica gruppi), compagna + asini per trekking (DA VALIDARE disponibilità), panonto a San Giovenale (DA VALIDARE formato + data).
+7. **Nicolò Lenarda — partner/board member** — asset multipli: degustazione olio ✅, azienda olearia (raccolta olive, DA VALIDARE stagionalità), 2 cavalli (DA VALIDARE logistica gruppi), panonto a San Giovenale (DA VALIDARE formato + data).
+8. **Trekking con gli asini — ✅ CONFERMATO (2026-08-27)**: Lavinia (compagna di Niccolò) con i suoi due asini, Andromeda e Catullo. Giornata di scouting reale fatta a **Grotta Porcina** (necropoli etrusca) — foto/contenuto già girato e pubblicato su Instagram (vedi `INSTAGRAM_STRATEGY.md`, sessione 2026-08-27). Non più DA VALIDARE.
 
 **New candidate itinerary — "Giornata Civitella Cesi":** cavalli (Centro Ippico San Giovenale o Nicolò) + lavorazione/degustazione formaggio e carne con Davide Paolocci + visita sito etrusco. A strong full-day package combining outdoor activity, artisan food, and archaeology — all within the Civitella Cesi area.
 
@@ -222,6 +223,45 @@ already lives by.
 **Rasna's What:** We just happen to run small-group, all-inclusive
 trips in Blera and the Tuscia — olive harvest, sauce day,
 cheesemaking, Etruscan tombs, and meals with local families.
+
+## 9. Distribution channels — third-party marketplaces (2026-08-27)
+
+**Decision: Nikolai wants to list the full Rasna trip (not just a single
+day activity) on Airbnb Experiences.** GetYourGuide was considered first
+and set aside — GYG is built around single-day/few-hour activities in a
+price-comparison marketplace, a worse fit for a €1,825–2,125/person,
+6-night package than Airbnb Experiences, which explicitly supports
+multi-day/overnight experiences (confirmed via their own help docs).
+
+**Blocker — must be resolved before listing, in this order:**
+
+1. **Partita IVA.** Not optional, regardless of what either platform's
+   signup form does or doesn't require at listing time — running Rasna
+   is a genuine recurring commercial activity, and DAC7 means Airbnb
+   reports host payout income to the Agenzia delle Entrate annually
+   either way. Regime forfettario is the right fit at Rasna's expected
+   volume (well under the €85k/year threshold). Needs a commercialista
+   to confirm the ATECO code (likely 79.90.20 or 79.90.19) and which
+   INPS regime applies (Gestione Separata vs. Commercianti) — this
+   determines real cost, don't guess it.
+2. **Pacchetto turistico compliance.** The full multi-day trip (lodging +
+   meals + activities + transport, one price) meets the legal definition
+   of a "pacchetto turistico" under the EU Package Travel Directive
+   (2015/2302) as transposed in Italy's Codice del Turismo (D.Lgs.
+   79/2011). This likely requires **insolvency protection** (a guarantee
+   fund or insurance covering client payments) and **civil liability
+   insurance**, independent of and in addition to whatever Airbnb asks
+   for at onboarding. Needs a commercialista/lawyer specializing in
+   turismo to confirm before any listing goes live — this is the real
+   blocker, not the P.IVA paperwork itself.
+3. Only after 1–2 are resolved: create the Airbnb Experiences listing
+   (expertise-vetting is not a concern — Nikolai's childhood in Blera
+   satisfies their "multi-generational/family heritage" bar easily).
+
+**Not yet started as of 2026-08-27**: no commercialista appointment
+booked yet. Listing copy/photos can be prepared in parallel (the
+donkey-trek carousel content already shot is reusable), but the listing
+itself should not go live before 1–2 above are confirmed.
 
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it

@@ -361,6 +361,38 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
+### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
+
+Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
+(the founder/origin-story post below is still next, unaffected).
+
+- **Pillar:** Place (pillar 3) crossed with Process (pillar 1) — standalone
+  caption, not the "No Tourists Italy" series.
+- **Activity:** donkey trekking with Lavinia (Niccolò's partner) and her
+  two donkeys, Andromeda and Catullo, shot on-site at Grotta Porcina
+  (Etruscan necropolis). This activity was "DA VALIDARE" in
+  `BUSINESS_PLAN.md` §1.7 — now confirmed, see `BUSINESS_PLAN.md` §1.8.
+- **Format:** 10-slide carousel — cover (donkey close-up) → group/host
+  intro → arrival at the tomb → trekking sequence → branded closing slide
+  (Nov 9–15, 2026 departure CTA). Real phone photos, run through the
+  post-production pipeline above (Gemini clean-up on 3 of the 10 slides
+  for exposure/sharpness, standard color grade).
+- **Caption (final, as posted — 5 hashtags per updated policy):**
+  > Most people see a donkey trek as a photo op — fifteen minutes on a
+  > lead rope, timed for the tour bus. Here, it's how you actually get to
+  > a 2,800-year-old Etruscan tomb that no road reaches.
+  >
+  > We spent the day at Grotta Porcina with Niccolò and Lavinia, and her
+  > two donkeys, Andromeda and Catullo — walking the same tufo paths the
+  > Etruscans cut into this hillside centuries ago, no script, no crowd,
+  > just the trail and whoever's willing to hold the rope.
+  >
+  > This is Blera, Tuscia — 90 minutes from Rome, zero tour buses. Link in
+  > bio if you want to be the one leading Andromeda or Catullo next time.
+  >
+  > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+- **Status:** shipped.
+
 ### 2026-08-19 — Next post: Founder/origin story (childhood in Blera)
 
 Goes out **before** the sauce-day post — moved ahead in the queue.
