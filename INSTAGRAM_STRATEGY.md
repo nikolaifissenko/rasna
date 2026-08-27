@@ -89,7 +89,34 @@ alternate "the place" (streets, tombs, landscape) with "the
 people/process" (hands working, a host's face) so the grid doesn't read as
 all-scenery or all-food.
 
-**Color grade** (apply to every cover/thumbnail): warm, slightly
+### Post-production pipeline — every photo, before it's posted
+
+**Added 2026-08-27, Nikolai's call.** This applies to every real photo
+that goes into a post — feed, carousel slide, or Reel frame, not just
+cover images — in this fixed order. Skipping a step for a "quick post"
+is how the grid drifts away from looking like one brand:
+
+1. **Source check first.** Yours or explicitly licensed, no watermark —
+   see "Image sourcing" below. A scraped/stock photo doesn't proceed past
+   this step regardless of how well it fits everything else.
+2. **Technical clean-up, only if the shot needs it.** Soft, noisy, or
+   under/overexposed real footage goes through the Gemini quality-enhance
+   prompt below before grading. Skip this step for anything already sharp
+   and well-exposed — it's a repair pass, not a default one.
+3. **Color grade, always.** Every photo — not just covers/thumbnails —
+   gets the warm golden-hour grade described next. If a real photo is
+   cool/blue/HDR, run it through the grading-only prompt under "Image
+   sourcing" before it goes anywhere near a post.
+4. **Crop to platform ratio.** 4:5 (1080×1350) for feed posts and
+   carousel slides, 9:16 for Reels/Stories/cover art. Mixed aspect ratios
+   inside one carousel is the fastest way to make a post read as
+   unplanned — don't post uncropped originals side by side.
+5. **Text overlay — cover and closing slides only,** never a mid-carousel
+   content photo. Small serif, cream/gold, sitting directly on the photo,
+   no box/bar — see "Cover text treatment" and "Closing branded slide"
+   below for the exact copy/position rules.
+
+**Color grade** (every photo, per step 3 above): warm, slightly
 desaturated golden-hour grade pulling toward the site's palette —
 `#A8AD6E` (olive), `#E5D8C2` (tufo stone), `#4E1A26`/`#6B2436` (bordeaux).
 Avoid cool blue-sky, oversaturated "travel blog" HDR — that's the generic
