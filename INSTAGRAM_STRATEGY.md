@@ -96,6 +96,19 @@ that goes into a post — feed, carousel slide, or Reel frame, not just
 cover images — in this fixed order. Skipping a step for a "quick post"
 is how the grid drifts away from looking like one brand:
 
+**The line every step has to hold: professional quality, but still
+looks natural.** These pull against each other, and it's easy to
+over-correct toward one at the cost of the other — the fix is to raise
+technical quality (sharpness, exposure, resolution, color consistency)
+without ever making the photo look retouched, staged, or filtered. No
+skin-smoothing, no beauty-filter look, no oversaturated "travel ad" HDR,
+no removing/adding anything in frame. Keep the handheld imperfection,
+the real grain, the slightly-off framing — that's what makes it read as
+lived rather than produced, and it's the same "not a performance"
+principle the whole brand is built on (see Why-How-What above). If a
+step's result looks like a stock photo or an ad, it's failed even if
+it's technically sharper.
+
 1. **Source check first.** Yours or explicitly licensed, no watermark —
    see "Image sourcing" below. A scraped/stock photo doesn't proceed past
    this step regardless of how well it fits everything else.
