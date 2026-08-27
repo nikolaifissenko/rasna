@@ -231,7 +231,13 @@ this account is built to avoid):
 
 ## Hashtag strategy
 
-Keep it tight (8–15 tags, not 30) and mix specificity:
+**Updated 2026-08-27, Nikolai's call: 5 hashtags on every post, not just
+Reels.** Pick one or two per tier below rather than stacking all three —
+a shorter, tighter set reads less spammy under the caption regardless of
+format. (The 8–15 range below is now superseded; kept only so the tier
+logic — niche/category/broad — still makes sense.)
+
+Mix specificity:
 
 **Niche/specific** (low competition, high intent):
 `#Tuscia` `#Blera` `#EtruscanItaly` `#TusciaItalia` `#ViaClodia`
@@ -240,13 +246,10 @@ Keep it tight (8–15 tags, not 30) and mix specificity:
 `#SmallGroupTravel` `#SlowTravel` `#AuthenticItaly` `#ItalyOffTheBeatenPath`
 `#AgriturismoItaly`
 
-**Broad reach** (high competition, use 2–3 max):
+**Broad reach** (high competition, use 1 max at 5 tags total):
 `#ItalyTravel` `#VisitItaly` `#ItalyTrip`
 
-**For Reels specifically, trim to 5** — pick one or two from each tier
-above rather than stacking all three. Reels get judged on completion rate
-more than hashtag reach, and a shorter, tighter set reads less spammy under
-the caption. Default 5 for the "No Tourists Italy" series:
+Default 5 for the "No Tourists Italy" series:
 `#Tuscia` `#Blera` `#EtruscanItaly` `#SlowTravel` `#ItalyTravel`
 
 ## Sample captions (Why → How → What order)
