@@ -361,6 +361,47 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
+### 2026-08-31 — Marketing-push session: outreach contacts, Reddit plan, article takeaways
+
+No shipped content this session — a planning/strategy check-in, logged so
+the next session doesn't re-derive it.
+
+- **Live booking check:** `curl` against the real Worker
+  (`/api/departures`) confirmed **0/8 booked** on the Nov 9–15 departure,
+  still in `early_bird` tier (€1,825, cutoff **2026-09-15** — 15 days out
+  from this session's date). Fully built product (lodging, itinerary,
+  contingency plan all done per `BOOKING_STATUS.md`/`ITINERARY_NOV2026.md`
+  on `main`), zero marketing execution yet — that's the actual bottleneck,
+  not more planning.
+- **Warm-outreach contact list does not exist in Gmail.** Searched for
+  the named leads in `BOOKING_STATUS.md` (past golf-cart tour clients,
+  "Samantha," "Rachel," the returning client) — no matching threads.
+  Nikolai's actual client contacts live in WhatsApp/phone/IG DMs, not
+  email. **Don't re-search Gmail for these next time** — ask him to pull
+  names from his phone instead, then draft/send from there.
+- **Instagram is live and active**: Nikolai confirmed he's already
+  posting to `@rasna.experience` (couldn't verify content directly —
+  Instagram blocks unauthenticated `WebFetch` with a 429).
+- **Reddit/forum posting discussed as the top zero-contact-list channel**
+  — r/ItalyTravel copy (from `BOOKING_STATUS.md`'s outreach section) was
+  handed over ready to paste; flagged that a brand-new Reddit account
+  posting a link reads as spam, so use an account with some history, and
+  check the sub's self-promo rule before posting.
+- **Two articles Nikolai shared, and what to draw from them:**
+  - NYT "Passata Day" (2023) — validates the **Sauce Day post already
+    queued below** (blocked since 2026-08-19 on real footage). The
+    article's pull (family ritual, one loud day, jars at the end) is
+    exactly the emotional register that post is going for. Action: get
+    real sauce-day footage shot this week if any tomato/passata activity
+    is still realistically doable this season — this is probably the
+    single highest-potential post in the queue, not just another content
+    idea.
+  - WSJ "The Rise of the Unstoppable American Tourist" — supports not
+    discounting (Americans are currently the highest-spending travel
+    nationality) and keeps the case for skewing outreach/subreddit choice
+    US-heavy, consistent with the existing target-customer assumption in
+    `BUSINESS_PLAN.md` §3.
+
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 
 Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
