@@ -361,6 +361,36 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
+### 2026-09-01 — Next post: Where you'll be staying (Da Beccone)
+
+Nikolai's call — picked live in chat, not from the prior queue order below
+(the founder/origin-story post is still blocked on photos + memory, see its
+entry further down; this one jumps ahead of it since it's ready to shoot
+now).
+
+- **Pillar:** Place (pillar 3) crossed with Practical/FAQ (pillar 5) —
+  "where you'll actually sleep" answers a real pre-booking question, not
+  generic scenery. Standalone caption, not the "No Tourists Italy" series.
+- **Confirmed lodging:** Da Beccone (Beccone Albergo) — confirmed alternate
+  accommodation for the Nov 9–15, 2026 departure after B&B La Ripa fell
+  through (see `BUSINESS_PLAN.md` "RISCHIO CALENDARIO" and
+  `CONTATTI_LOCALI.md` §8). Room mix (doubles/singles, standard/premium)
+  for this group of 8 is still being finalized with Da Beccone.
+- **Status:** blocked on real photos + a real detail. `CONTATTI_LOCALI.md`
+  only has rates, no description of the rooms/building/view — need actual
+  photos (exterior, a room, a common area/breakfast spot) and one concrete,
+  specific thing about staying there (the view, the walk into town, the
+  host, breakfast) to write the caption from real detail instead of
+  generic "cozy rooms" language. Don't use AI-generated stand-ins for this
+  one — same logic as the founder post: a lodging post lives or dies on
+  looking like the real place a guest will actually wake up in.
+- **Caption direction (Why→How→What, no placeholders filled yet):** Why —
+  most trip photos show the activities and skip the part where you
+  actually live for a week; How — small-group trips still need a real bed,
+  and Rasna picked a real local alberghetto over a generic hotel for the
+  same reason it picked real hosts over staged demos; What — Da Beccone,
+  tie to the open Nov 9–15 departure and link in bio.
+
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 
 Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
@@ -460,10 +490,9 @@ Goes out **before** the sauce-day post — moved ahead in the queue.
   > (No names used in the caption — kept generic per Nikolai's call.
   > "Her" refers to the host; swap to "them"/"the family" if a fully
   > gender-neutral version is wanted later.)
-- **Status:** no real footage yet — placeholder AI images discussed
-  (phone-candid, no-faces variant above) as a stand-in until an actual
-  sauce day is shot. Prioritize shooting real footage this week while
-  it's still in season; swap in the moment it exists.
+- **Status:** SHIPPED (confirmed by Nikolai 2026-09-01, exact post date not
+  logged). Posted after the donkey-trek carousel despite the order this
+  queue had them in.
 - **Ties to:** filling the Nov 9–15, 2026 departure (0/8 booked as of
   last check in `BOOKING_STATUS.md`) — the sauce-day post is meant to
   make "what a Rasna day looks like" concrete for that push.
