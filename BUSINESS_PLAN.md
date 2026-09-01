@@ -165,21 +165,26 @@ These aren't separate attractions to manage — they're moments the town already
 fissa, capienza 8, €1.825/persona early bird fino al 15/09/2026, poi
 €2.125/persona — vedi `BOOKING_STATUS.md` e `worker/src/departures.js`).
 
-**Da Beccone è ora confermato come alloggio alternativo** per questa partenza
-(tariffe raccolte, vedi `CONTATTI_LOCALI.md` §8 e `FINANCIAL_PLAN.md` §1 per la
-verifica di margine con queste tariffe reali). L'unico punto ancora aperto è
-il **mix di camere** (doppie/singole, standard/premium) per il gruppo specifico
-di 8 persone di questa partenza — da chiudere con Da Beccone prima del 9
-novembre 2026, perché il margine varia a seconda di quante persone finiscono
-in singola.
+**Correzione 2026-09-01 (Nikolai):** l'alloggio principale confermato per
+questa partenza è **Casa Matta**, non Da Beccone — Da Beccone resta
+confermato ma solo come **piano B**. Le righe sotto (tariffe, margine)
+descrivevano ancora Da Beccone come principale; restano valide come dati
+sul piano B, ma **il mix di camere e il margine vanno ricalcolati su Casa
+Matta** una volta raccolte le sue tariffe (non ancora presenti in
+`CONTATTI_LOCALI.md` §8) — non assumere che le tariffe di Da Beccone
+si applichino a Casa Matta.
 
-- **Beccone Albergo** — ✅ confermato, tariffe raccolte.
-- **Poggio al Sasso (agriturismo)** — segnalato come probabilmente chiuso; non
-  più necessario da verificare ora che Da Beccone è confermato, ma resta
-  un'opzione di backup non esplorata.
+- **Casa Matta** — ✅ confermato come alloggio principale; tariffe/mix
+  camere ancora da raccogliere.
+- **Beccone Albergo** — ✅ confermato come piano B, tariffe raccolte (vedi
+  `CONTATTI_LOCALI.md` §8).
+- **Poggio al Sasso (agriturismo)** — segnalato come probabilmente chiuso;
+  resta un'opzione di backup non esplorata, ora terziaria dietro Casa
+  Matta e Da Beccone.
 
-Questo rischio non è più "nessun alloggio", ma resta da chiudere: bloccare il
-mix di camere con Da Beccone prima di passare Stripe a live mode (vedi
+Questo rischio non è più "nessun alloggio", ma resta da chiudere: raccogliere
+le tariffe/mix camere di Casa Matta e ricalcolare il margine (vedi
+`FINANCIAL_PLAN.md` §1) prima di passare Stripe a live mode (vedi
 `BOOKING_STATUS.md`).
 
 ## 7. Immediate next actions

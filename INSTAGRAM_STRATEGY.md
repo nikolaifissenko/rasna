@@ -361,7 +361,7 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
-### 2026-09-01 — Next post: Where you'll be staying (Da Beccone)
+### 2026-09-01 — Next post: Where you'll be staying (Casa Matta)
 
 Nikolai's call — picked live in chat, not from the prior queue order below
 (the founder/origin-story post is still blocked on photos + memory, see its
@@ -371,13 +371,14 @@ now).
 - **Pillar:** Place (pillar 3) crossed with Practical/FAQ (pillar 5) —
   "where you'll actually sleep" answers a real pre-booking question, not
   generic scenery. Standalone caption, not the "No Tourists Italy" series.
-- **Confirmed lodging:** Da Beccone (Beccone Albergo) — confirmed alternate
-  accommodation for the Nov 9–15, 2026 departure after B&B La Ripa fell
-  through (see `BUSINESS_PLAN.md` "RISCHIO CALENDARIO" and
-  `CONTATTI_LOCALI.md` §8). Room mix (doubles/singles, standard/premium)
-  for this group of 8 is still being finalized with Da Beccone.
-- **Status:** blocked on real photos + a real detail. `CONTATTI_LOCALI.md`
-  only has rates, no description of the rooms/building/view — need actual
+- **Confirmed lodging:** Casa Matta — confirmed primary accommodation for
+  the Nov 9–15, 2026 departure after B&B La Ripa fell through. **Correction
+  2026-09-01:** Da Beccone (Beccone Albergo) is the plan B, not the primary
+  — an earlier session logged this backwards in `BUSINESS_PLAN.md` and
+  `CONTATTI_LOCALI.md` §8; both now fixed. Casa Matta's rates/room mix
+  aren't recorded anywhere in the repo yet.
+- **Status:** blocked on real photos + a real detail. No description of
+  Casa Matta's rooms/building/view exists in the repo yet — need actual
   photos (exterior, a room, a common area/breakfast spot) and one concrete,
   specific thing about staying there (the view, the walk into town, the
   host, breakfast) to write the caption from real detail instead of
@@ -387,9 +388,9 @@ now).
 - **Caption direction (Why→How→What, no placeholders filled yet):** Why —
   most trip photos show the activities and skip the part where you
   actually live for a week; How — small-group trips still need a real bed,
-  and Rasna picked a real local alberghetto over a generic hotel for the
-  same reason it picked real hosts over staged demos; What — Da Beccone,
-  tie to the open Nov 9–15 departure and link in bio.
+  and Rasna picked a real local place over a generic hotel for the same
+  reason it picked real hosts over staged demos; What — Casa Matta, tie to
+  the open Nov 9–15 departure and link in bio.
 
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 

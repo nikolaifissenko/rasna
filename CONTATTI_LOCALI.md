@@ -19,7 +19,8 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Francesco Lierati | Da definire | da contattare |
 | La Torretta | Possibile partner (ristorazione/locale) | da contattare |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
-| Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
+| Casa Matta | Alloggio partner — PRINCIPALE | ✅ CONFERMATO come alloggio principale (corretto da Nikolai, 2026-09-01) — tariffe/dettagli ancora da raccogliere, vedi sezione Alloggio sotto |
+| Beccone Albergo | Alloggio partner — PIANO B | ✅ CONFERMATO come backup (non più principale, vedi correzione 2026-09-01) — tariffe confermate, vedi sezione Alloggio sotto |
 | B&B La Ripa (Antonella) | Alloggio partner | ✅ CONFERMATO tariffa — ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi sezione Alloggio sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 
@@ -112,8 +113,18 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 ## 8. Alloggio
 
-### DA BECCONE
-- **Ruolo:** Alloggio partner
+### CASA MATTA — ALLOGGIO PRINCIPALE
+- **Ruolo:** Alloggio partner — principale (corretto da Nikolai, 2026-09-01;
+  questo file e `BUSINESS_PLAN.md` avevano precedentemente Da Beccone come
+  alloggio confermato per la partenza del 9–15 novembre 2026 — quello era
+  sbagliato, Da Beccone è il piano B).
+- **Stato:** ✅ CONFERMATO come alloggio principale
+- **Tariffe/dettagli:** non ancora raccolti in questo file — da aggiungere
+  (camere, tariffe/notte, capienza per il gruppo di 8 della partenza
+  9–15 novembre 2026).
+
+### DA BECCONE — PIANO B
+- **Ruolo:** Alloggio partner — backup, non più principale
 - **Stato:** ✅ CONFERMATO
 - **Tariffe** (a camera/notte, ora confermate anche a persona):
 
