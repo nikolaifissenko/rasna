@@ -8,7 +8,7 @@ The single biggest risk to this business isn't lack of demand — it's success t
 
 - **Cap capacity on purpose.** Even at full maturity, this plan targets ~15–20 groups/year — not 30+. That's a ceiling you choose to protect, not a limit you're stuck at.
 - **Price for scarcity.** Because you're not chasing volume, you can (and should) price toward the top of the range (€1,300–€1,800+) — guests are paying for "one of very few groups admitted this year," which is a stronger story than "cheap and available."
-- **Keep activities embedded in real local life**, not staged for tourists — olive picking with the people who actually pick olives, lunch cooked by Nonna in the field as she'd actually cook it, hikes to the Etruscan tombs/Lago di Vico/Villa Lante/Tarquinia/Viterbo as a local would show a friend around, not as a bus tour. The moment activities start being performed *for* tourists rather than *with* locals, the magic — and the differentiation — erodes.
+- **Keep activities embedded in real local life**, not staged for tourists — olive picking with the people who actually pick olives, lunch cooked by Nonna in the field as she'd actually cook it, hikes to the Etruscan tombs/Lago di Vico/Villa Lante/Tarquinia/Bomarzo/Viterbo as a local would show a friend around, not as a bus tour. The moment activities start being performed *for* tourists rather than *with* locals, the magic — and the differentiation — erodes.
 - **Let scarcity and story carry the margin**, not headcount. A model that depends on "more groups, more often" inevitably pressures you to compromise on authenticity to meet demand. A model where the cap is fixed and the price is premium lets you protect Blera *and* make excellent money — this is effectively a luxury-niche business, not a mass-tourism one.
 
 This principle should guide every other number in this document: the projections below intentionally plateau rather than grow indefinitely.
@@ -17,7 +17,7 @@ This principle should guide every other number in this document: the projections
 
 Assume a 4-day / 3-night small-group package: seasonal activity (e.g., tomato sauce day, olive harvest), guided cultural/nature excursions, meals with local families, and lodging via partner BnBs.
 
-**Per-guest price: €1,300–€1,800** (deliberately positioned at the top of the niche-immersion range, not as a budget or mid-market tour — this is a "we only host a handful of groups a year" product, and the price should say so. Comparable ultra-niche culinary/cultural immersion trips in Italy run €1,000–€2,500+ per person; given the breadth of this region — Etruscan sites, Lago di Vico, Villa Lante, Palazzo Farnese, Viterbo, Tarquinia, the coast — there's room to anchor at the higher end without overpromising.)
+**Per-guest price: €1,300–€1,800** (deliberately positioned at the top of the niche-immersion range, not as a budget or mid-market tour — this is a "we only host a handful of groups a year" product, and the price should say so. Comparable ultra-niche culinary/cultural immersion trips in Italy run €1,000–€2,500+ per person; given the breadth of this region — Etruscan sites, Lago di Vico, Villa Lante, Palazzo Farnese, Viterbo, Tarquinia, Bomarzo's Sacro Bosco, the coast — there's room to anchor at the higher end without overpromising.)
 
 Recommended starting price: **€1,400/guest, all-inclusive** — covers lodging, all meals (whether at partner restaurants or with local families), guiding/transport during the trip, and all activity/artisan fees. The guest's only extra cost is getting to/from Blera and personal spending (souvenirs, drinks beyond what's included, etc.). All-inclusive pricing is also a strong selling point for this type of niche travel — guests don't want to do logistics, they want to show up and be taken care of.
 
@@ -35,7 +35,7 @@ Either way, this is a compliance risk worth resolving *before* scaling — not s
 | Lodging (3 nights, partner BnB rate) | €170 — **see verified-rate check below, real cost depends on room mix** |
 | Meals & local hosting fees (traditional-style cooking, panonto, etc. — fair pay for real hosts' time) | €220 |
 | Local guiding/transport (incl. day trips to Lago di Vico, Villa Lante, Tarquinia, etc.) | €140 |
-| Activity fees (olive picking, artisan sessions, equipment, etc.) | €90 |
+| Activity fees (olive picking, artisan sessions, equipment, entrance tickets, etc. — e.g. Bomarzo's Sacro Bosco is €13/adult, €8 reduced (4–13), free under 4, per sacrobosco.eu) | €90 |
 | **Guest activity insurance** (hands-on/manual activities — confirmed as a real, necessary cost per Maria Grazia's feedback) | €40 |
 | Marketing & booking overhead (allocated) | €60 |
 | **Total cost per guest (before payment processing)** | **~€720** |

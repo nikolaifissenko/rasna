@@ -145,7 +145,7 @@ These aren't separate attractions to manage — they're moments the town already
 - Horseback Riding (Civitella Cesi)
 
 *Day Trips:*
-- Lago di Vico, Viterbo, Tarquinia, Villa Lante & Palazzo Farnese, Tyrrhenian Coast, + client's own choice
+- Lago di Vico, Viterbo, Tarquinia, Villa Lante & Palazzo Farnese, Bomarzo (Sacro Bosco / Parco dei Mostri), Tyrrhenian Coast, + client's own choice
 
 **What's NOT on the landing page (included by default):**
 - Every meal is traditional home-cooked with local/seasonal ingredients (stated in intro, not an option to select)
