@@ -1,6 +1,78 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-16_
+_Last updated: 2026-09-05_
+
+## Legal structuring — resolved, entity question closed (2026-09-05)
+
+Explored and rejected: routing Rasna through a US LLC and/or a French VAT
+registration to sell to American customers "from the US." Doesn't work:
+
+- Nikolai actually lives in Italy most of the year → Italian tax
+  resident under art. 2 TUIR (day-count / center-of-vital-interests),
+  regardless of any US address or entity. A US LLC he personally manages
+  from Italy risks being treated as **Italian-resident itself**
+  (art. 73 comma 5-bis TUIR, esterovestizione) on top of a US-Italy
+  treaty permanent-establishment problem (art. 5/7).
+- EU travel-package VAT (**TOMS, art. 74-ter DPR 633/1972**) taxes where
+  the tour operator's fixed establishment actually is, not where the
+  entity is incorporated or where customers live. Rasna is organized and
+  delivered from Italy → Italy is the correct VAT jurisdiction, full stop.
+- Dual US + French (EU) citizenship means there's no work-permit issue
+  running this from Italy — that citizenship question was a red herring,
+  never the actual blocker.
+
+**Conclusion: Rasna stays Italian.** Partita IVA (regime forfettario
+likely fit at this volume) is the structure — same direction
+`BUSINESS_PLAN.md` §9 already pointed to, just now confirmed as the
+only real option rather than one of several.
+
+## Agenzia di viaggio license — still open, real blocker (2026-09-05)
+
+Rasna sells an all-inclusive package (lodging + meals + activities +
+transport, one price) → meets the legal "pacchetto turistico"
+definition (EU Package Travel Directive 2015/2302 / Codice del
+Turismo) → requires the regional agenzia di viaggio authorization,
+a direttore tecnico holding the qualification, RC professionale, and a
+financial guarantee (fideiussione).
+
+- Unbundling (selling the standalone activity, guests book their own
+  lodging separately) would avoid the license entirely — rejected by
+  Nikolai because the all-inclusive package is what makes it sellable.
+- Nikolai doing the direttore tecnico exam/qualification himself: ruled
+  out, no time or money for it.
+- Partnering with an already-licensed agenzia di viaggio as technical
+  operator: ruled out, none exist in the Blera/Viterbo region, only in
+  Rome (too far to be practical as the technical operator behind a
+  Blera-based trip).
+- **Remaining real option**: pay someone already in Rasna's local
+  network to become direttore tecnico, as a **paid commercial
+  engagement** — framed that way specifically because (see below)
+  Maria Grazia is not a co-founder with a natural stake in getting
+  licensed. Needs commercialista input first on actual requirements
+  (exam vs. experience-based qualification under Lazio regional law)
+  and realistic cost before approaching anyone.
+- Fallback financing idea (Nikolai's): run the already-live November
+  departure first, use that revenue to fund the direttore tecnico
+  route afterward. Fine as a way to *pay* for it — does **not** resolve
+  the license gap for the November departure itself, which is already
+  taking real bookings now (see "What's live" below). Two things don't
+  wait for the license: get the liability insurance in place, and get
+  the commercialista's read on actual exposure for running before
+  licensed. Both listed under "Not yet done" below.
+
+## Maria Grazia — status correction (2026-09-05)
+
+**Maria Grazia has no partner/co-founder status — Nikolai pays her for
+services.** This contradicts `BUSINESS_PLAN.md`'s "Two-founder fit"
+framing and Phase 0 ("align on roles, profit split" with her) — those
+sections are now out of date and should be corrected, not just noted
+here. Flagged risk: if her own understanding of the relationship
+(built across months of planning that assumed a founder role) doesn't
+match "paid contractor," that gap is worth resolving directly and in
+writing with her — the same kind of undocumented-relationship risk
+Urbis's own legal file (`accordo-soci-e-rischi.md`) already warns about
+for a different pairing. Check `FINANCIAL_PLAN.md`'s margin math
+reflects her as a fixed cost line, not a revenue split.
 
 ## Liability waiver & guest signature form (added 2026-08-16)
 

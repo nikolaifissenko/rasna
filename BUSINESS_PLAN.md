@@ -60,9 +60,20 @@ These aren't separate attractions to manage — they're moments the town already
 
 ## 2. Why this works
 
+⚠️ **Correction (2026-09-05): Maria Grazia is not a co-founder or
+partner — she is paid for services.** The "two-founder fit" framing
+below, and Phase 0's "align on roles/profit split with Maria Grazia,"
+reflect an earlier assumption that's no longer accurate. Her actual
+contribution (local relationships, arranging hosts, credibility with
+the community) is still real and still central to the business — she's
+just compensated as a fixed cost, not an equity/profit-split partner.
+Worth an explicit, written conversation with her confirming this, since
+these docs previously implied more and her own understanding may not
+match. See `BOOKING_STATUS.md`'s 2026-09-05 entry for the full context.
+
 - **Differentiation:** most tour operators sell sights; you sell belonging and participation. Hard to replicate without genuine local ties.
-- **Two-founder fit:**
-  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community
+- **What makes this work:**
+  - Maria Grazia (paid) — local relationships, access to families/farms/traditions, credibility with the community
   - You — international audience know-how, marketing, logistics, English-speaking guest experience
 - **Asset-light start:** no need to own property; partner with existing BnBs/hotels for lodging, and local families/artisans for the experiences themselves.
 
