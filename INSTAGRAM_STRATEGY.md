@@ -393,13 +393,12 @@ Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
   > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
 - **Status:** shipped.
 
-### 2026-09-05 — Next post: Catullo's dirt bath (Reel)
+### 2026-09-05 — SHIPPED: Catullo's dirt bath (Reel)
 
-Jumps ahead of the early-bird pricing post below (that one is now
-second, still ready to ship right after this) because real footage
-already exists and Reels are the priority format for reach. Nikolai has
-a clip of Catullo (same donkey introduced by name in the shipped
-2026-08-27 carousel) rolling in dirt as flea/bug prevention.
+Posted by Nikolai to Instagram 2026-09-05. Real footage already existed
+(Catullo, same donkey introduced by name in the shipped 2026-08-27
+carousel, rolling in dirt as flea/bug prevention), so it jumped ahead of
+the early-bird pricing post below, which is next up.
 
 - **Pillar:** Process, not posed (pillar 1) — standalone caption, not
   the "No Tourists Italy" opener (same call as the donkey-trek carousel:
@@ -423,8 +422,7 @@ a clip of Catullo (same donkey introduced by name in the shipped
   > Catullo and Andromeda yourself.
   >
   > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
-- **Status:** ready to ship, run the clip through the post-production
-  pipeline above (color grade at minimum) first.
+- **Status:** shipped.
 
 ### 2026-09-05 — Then: Early-bird pricing deadline (practical/FAQ)
 
