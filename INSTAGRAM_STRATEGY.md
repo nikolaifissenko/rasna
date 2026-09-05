@@ -393,9 +393,43 @@ Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
   > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
 - **Status:** shipped.
 
-### 2026-09-05 — Next post: Early-bird pricing deadline (practical/FAQ)
+### 2026-09-05 — Next post: Catullo's dirt bath (Reel)
 
-Jumps ahead of the founder-story post below — that one has been blocked
+Jumps ahead of the early-bird pricing post below (that one is now
+second, still ready to ship right after this) because real footage
+already exists and Reels are the priority format for reach. Nikolai has
+a clip of Catullo (same donkey introduced by name in the shipped
+2026-08-27 carousel) rolling in dirt as flea/bug prevention.
+
+- **Pillar:** Process, not posed (pillar 1) — standalone caption, not
+  the "No Tourists Italy" opener (same call as the donkey-trek carousel:
+  a charming character moment, not the moody silent-walk format that
+  opener is tied to).
+- **Format:** Reel, no end card (CTA stays in the caption per the Reels
+  format rule above).
+- **Caption (ready to post, confirm the donkey's name against the
+  footage before posting):**
+  > This is Catullo giving himself a dirt bath.
+  >
+  > Not a trick, not for the camera. It's how a donkey keeps flies and
+  > bugs off in the Tuscia heat: no vet, no spray, just rolling in the
+  > dust until it works.
+  >
+  > Caught this between treks near Grotta Porcina, same donkey from the
+  > necropolis walk. This is what a real day with him actually looks
+  > like.
+  >
+  > Blera, Tuscia. 90 minutes from Rome. Link in bio if you want to meet
+  > Catullo and Andromeda yourself.
+  >
+  > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+- **Status:** ready to ship, run the clip through the post-production
+  pipeline above (color grade at minimum) first.
+
+### 2026-09-05 — Then: Early-bird pricing deadline (practical/FAQ)
+
+Now second in the queue, right after the dirt-bath Reel above. Jumps
+ahead of the founder-story post below — that one has been blocked
 on photos/memory from Nikolai's mom since 2026-08-19 with no update since,
 and the account shouldn't sit idle waiting on it while a real, dated lever
 is sitting unused: the €1,825 → €2,125 early-bird cutoff for the Nov 9–15
