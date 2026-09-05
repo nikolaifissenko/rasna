@@ -414,10 +414,10 @@ to post now, not a manufactured urgency angle.
 - **Caption (ready to post):**
   > Most travel prices go up because of demand curves. Ours goes up
   > because we can only run this trip once, for eight people, in one
-  > week — and every euro covers something real: Maria Grazia's table,
+  > week, and every euro covers something real: Maria Grazia's table,
   > Da Beccone's rooms, the donkeys, the olive press, transport from Rome.
   >
-  > €1,825/person through September 15. After that it's €2,125 — same
+  > €1,825/person through September 15. After that it's €2,125: same
   > trip, same everything, just later.
   >
   > November 9–15, Blera, Tuscia. 90 minutes from Rome, zero tour buses,
