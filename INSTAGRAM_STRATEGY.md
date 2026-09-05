@@ -393,9 +393,44 @@ Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
   > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
 - **Status:** shipped.
 
-### 2026-08-19 — Next post: Founder/origin story (childhood in Blera)
+### 2026-09-05 — Next post: Early-bird pricing deadline (practical/FAQ)
 
-Goes out **before** the sauce-day post — moved ahead in the queue.
+Jumps ahead of the founder-story post below — that one has been blocked
+on photos/memory from Nikolai's mom since 2026-08-19 with no update since,
+and the account shouldn't sit idle waiting on it while a real, dated lever
+is sitting unused: the €1,825 → €2,125 early-bird cutoff for the Nov 9–15
+departure is **2026-09-15**, 10 days out as of this entry
+(`BOOKING_STATUS.md`). Nothing in the current content queue or
+`OUTREACH_DRAFTS.md` uses this deadline — it's a real, non-generic reason
+to post now, not a manufactured urgency angle.
+
+- **Pillar:** Practical/FAQ (pillar 5) — standalone caption, not the
+  "No Tourists Italy" series.
+- **Photo:** no new shoot needed — reuse an already-graded, unused real
+  photo from the donkey-trek shoot or the Blera streets Reel (one
+  activity/place, not generic scenery, per the cover rules above). No
+  text overlay — this is a single feed post, not a carousel cover/closing
+  slide.
+- **Caption (ready to post):**
+  > Most travel prices go up because of demand curves. Ours goes up
+  > because we can only run this trip once, for eight people, in one
+  > week — and every euro covers something real: Maria Grazia's table,
+  > Da Beccone's rooms, the donkeys, the olive press, transport from Rome.
+  >
+  > €1,825/person through September 15. After that it's €2,125 — same
+  > trip, same everything, just later.
+  >
+  > November 9–15, Blera, Tuscia. 90 minutes from Rome, zero tour buses,
+  > eight spots total. Link in bio if you're one of them.
+  >
+  > #Tuscia #Blera #SmallGroupTravel #SlowTravel #ItalyTravel
+- **Status:** ready to ship as soon as a photo is picked — this is
+  copy-only, no blockers. Post it now; the deadline loses its point if it
+  ships closer to the 15th than to now.
+
+### 2026-08-19 — Next-next: Founder/origin story (childhood in Blera)
+
+Was next in the queue, now second — see above.
 
 - **Pillar:** People (pillar 2), founder/origin sub-type — see pillar 2
   above. Not the "No Tourists Italy" series (standalone caption, no fixed
