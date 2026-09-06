@@ -926,3 +926,70 @@ Full detail logged in `BOOKING_STATUS.md`'s matching 2026-09-06 entry.
 **Not resolved, still needs Nikolai**: professional liability insurance
 and/or Lazio tour-operator registration — checkboxes are an evidentiary
 record of consent, not a substitute for either.
+
+**Same-session catch: shipped a real layout bug, found it by actually
+screenshotting the live page, not by re-reading the diff.** The new
+checkboxes matched `.festival-form input { width: 100%; ... }` (the
+form's blanket input styling), which stretched each checkbox and
+squeezed its consent text into a narrow unreadable column — invisible
+from source, only visible rendered. Fixed with inline overrides
+(`width:auto; flex:0 0 auto` on the checkbox, `flex:1` on the label
+text) and re-verified live post-deploy. **Add this to the standing
+"verify the render, not just the source" lesson from the 2026-08-12
+`.site-nav` incident above** — CSS specificity/cascade bugs on a page
+with a lot of existing global form styling are exactly the class of
+bug a diff review won't catch.
+
+**Sandbox gotcha worth keeping for next time a session needs to
+screenshot this live site**: Playwright/Chromium in this sandbox
+cannot reach `rasnaexperience.com` (or most external hosts) directly
+through the environment's HTTPS proxy — every navigation attempt fails
+with `net::ERR_CONNECTION_RESET` / `ws_closed_mid_exchange` in the
+proxy's own failure log, even though plain `curl` to the exact same URL
+works fine every time. Root cause not fully diagnosed (didn't matter
+once the workaround was found) — smells like the proxy's tunnel
+handling not tolerating however Chromium's network stack behaves
+differently from curl, not a TLS/cert trust issue (the standard CA-bundle
+fixes in `/root/.ccr/README.md` didn't apply here, this isn't a
+cert-verify failure). **Workaround that worked**: don't point Chromium
+at the live URL at all — `curl` the deployed HTML + `style.css` (+ any
+other page needed) into a scratch dir, serve that dir with `python3 -m
+http.server` on localhost, and point Playwright at `localhost:<port>`
+instead. Also needed `--disable-gpu` in the launch args — without it,
+`element.screenshot()`/`page.screenshot()` silently produced a blank/
+near-background-color image with all real content colors missing, even
+though `getComputedStyle()` in the page reported the correct values (a
+paint/compositing issue under software rendering, not a CSS problem) —
+checking a screenshot's actual pixel colors (e.g. via Pillow's
+`getcolors()`) is a fast way to tell a genuinely blank capture from a
+correctly-rendered one displayed oddly.
+
+---
+
+## Open TODO from user feedback, 2026-09-06 (not yet actioned)
+
+A friend of Nikolai's (forwarded message, mixed Italian/Russian, ended
+in "RASNA e VAZHNA") read the live site after seeing it via a mutual
+contact and gave positive, specific feedback: **the site never leads
+with how close Blera is to Rome**, and it should — "questa sconosciuta
+Blera... è accanto a Roma, la Capitale Mundi" (this unknown Blera is
+right next to Rome, the capital of the world). Concretely:
+- Blera is ~60km / about an hour from Rome — this isn't stated
+  prominently anywhere near the top of the site (the "Transport &
+  arrival" line in `index.html#policies` mentions Fiumicino (FCO) pickup,
+  but it's deep in the policies section, not hero-level).
+- Suggestion: work "60km from Rome" (or similar — "an hour from the
+  Colosseum," etc.) into the hero/subtitle copy on `index.html` and/or
+  `italian-olive-experience-pricing.html`, and make the Fiumicino
+  airport pickup mention more prominent/early, not just buried in
+  policies. The idea being: guests need to immediately grasp that this
+  unfamiliar Etruscan village is a short, easy trip from a city
+  (Rome) they already know and can easily fly into.
+
+**Not done this session** — flagged but not implemented, since it
+needs a proper copy/placement pass (matching `INSTAGRAM_STRATEGY.md`'s
+why→how→what voice, not just an inserted sentence) rather than a rushed
+edit. If Nikolai confirms he wants this, do it on `main` per the usual
+topology, verify the actual render (not just the diff — see the lesson
+two sections up), and log it here and in `BOOKING_STATUS.md` or
+`INSTAGRAM_STRATEGY.md` as appropriate once shipped.

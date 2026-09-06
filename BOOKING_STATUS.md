@@ -64,6 +64,26 @@ professional liability insurance or tour-operator registration under
 Lazio regional law. Checkboxes create an evidentiary record of consent;
 they don't substitute for insurance or licensing.
 
+**Same-session follow-up: a real layout bug shipped in the first push,
+caught by actually screenshotting the live page instead of trusting the
+diff.** The two new checkboxes matched the existing `.festival-form
+input` selector, which sets `width: 100%` for every input/select/
+textarea on this form — that stretched each checkbox to fill the row
+and squeezed its consent sentence into an unreadably narrow wrapped
+column on the right. Not visible from source alone; only found by
+mirroring the live page locally (`curl` the deployed HTML/CSS to a
+scratch dir, serve with `python3 -m http.server`, screenshot with
+Playwright/Chromium — see the CLAUDE.md entry below for why *local*
+mirroring was necessary) and actually looking at the render. Fixed by
+overriding `width`/`padding`/`border`/`background` inline on the two
+checkbox inputs and giving their label `<span>` `flex:1`. Re-verified
+against the live page after the fix deployed — screenshot confirmed
+normal, readable layout. **Lesson: for any change to a form/CSS-heavy
+page, a source diff is not verification — render the actual page
+before calling it done**, this same class of "correct-looking code,
+wrong rendered result" is exactly what bit prior sessions on the
+`.site-nav` background color (see `CLAUDE.md`'s 2026-08-12 entry).
+
 ## 2026-08-20 update: price raised to €1,825/€2,125; contingency plan added; ninth branch-drift incident
 
 **Pricing change, live and confirmed on both sides:** the November
