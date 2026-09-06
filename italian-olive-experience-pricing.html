@@ -123,7 +123,7 @@
       </div>
       </div>
       <p id="price-chart-note" class="fade-in" style="text-align:center; margin-top:1.6rem; font-size:0.85rem; opacity:0.65;"></p>
-      <p class="fade-in" style="text-align:center; margin-top:0.8rem; font-size:0.85rem;"><a href="index.html#policies" style="color:var(--terracotta);">Cancellation policy</a> &middot; <a href="liability-waiver.html" style="color:var(--terracotta);">Liability waiver</a></p>
+      <p class="fade-in" style="text-align:center; margin-top:0.8rem; font-size:0.85rem;"><a href="index.html#policies" style="color:var(--terracotta);">Cancellation policy</a> &middot; <a href="liability-waiver.html" style="color:var(--terracotta);">Liability waiver</a> &middot; <a href="privacy-policy.html" style="color:var(--terracotta);">Privacy policy</a></p>
 
       <div class="festival-book fade-in" id="festival-book" style="scroll-margin-top:78px;">
         <div class="section-label">Reserve your spot</div>
@@ -162,6 +162,17 @@
           <div class="form-group">
             <label for="fw-notes">Anything else we should know?</label>
             <textarea id="fw-notes" name="notes" placeholder="Dietary needs, questions about the trip..."></textarea>
+          </div>
+
+          <div class="form-consent" style="margin:1.4rem 0; font-size:0.85rem; line-height:1.5;">
+            <label style="display:flex; align-items:flex-start; gap:0.6rem; margin-bottom:0.7rem; cursor:pointer;">
+              <input type="checkbox" id="fw-accept-waiver" name="accepted_waiver" required style="margin-top:0.2rem; flex-shrink:0;">
+              <span>I've read and accept the <a href="liability-waiver.html" target="_blank" rel="noopener" style="color:var(--terracotta);">Liability Waiver &amp; Assumption of Risk</a>. I understand this trip includes physical activities that carry inherent risk, and that Rasna isn't liable for injury from the ordinary risk of an activity, only for injury caused by its own fault.</span>
+            </label>
+            <label style="display:flex; align-items:flex-start; gap:0.6rem; cursor:pointer;">
+              <input type="checkbox" id="fw-accept-privacy" name="accepted_privacy" required style="margin-top:0.2rem; flex-shrink:0;">
+              <span>I've read and accept the <a href="privacy-policy.html" target="_blank" rel="noopener" style="color:var(--terracotta);">Privacy Policy</a>, including how my name, email, and payment details are used to process this booking.</span>
+            </label>
           </div>
 
           <div class="booking-error" id="festival-error" style="display:none; color:#c0392b; margin-bottom:1rem;"></div>
@@ -243,9 +254,15 @@
       e.preventDefault();
 
       const form = this;
+      const errorBox = document.getElementById('festival-error');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
       const data = new FormData(form);
       const btn = document.getElementById('festival-submit-btn');
-      const errorBox = document.getElementById('festival-error');
       errorBox.style.display = 'none';
       btn.disabled = true;
       btn.textContent = 'Processing...';
@@ -258,7 +275,9 @@
           name: data.get('name'),
           email: data.get('email'),
           num_guests: Number(data.get('guests')),
-          notes: data.get('notes') || ''
+          notes: data.get('notes') || '',
+          accepted_waiver: document.getElementById('fw-accept-waiver').checked,
+          accepted_privacy: document.getElementById('fw-accept-privacy').checked
         })
       })
         .then(function(response) {

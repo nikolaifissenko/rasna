@@ -867,3 +867,62 @@ If you're a fresh session and this section doesn't match what you were told abou
    **Real image-sourcing catch worth remembering**: Nikolai initially pasted a photo of the Orcus-mouth sculpture for this card, but it read as a very commonly-reused professional/stock composition rather than a phone snapshot (unlike his EtrusComics photos, which were obviously his own) — reverse-searched it and found the exact framing sold on Alamy under multiple listings. Flagged this to him directly per `INSTAGRAM_STRATEGY.md`'s own "Image sourcing" rule (don't publish a scraped/stock photo on a commercial page without a license) rather than just publishing it, and he agreed to swap it for something properly licensed ("licenza libera vai"). Found a **CC0/public-domain** replacement on Wikimedia Commons (`File:Orcus_mouth_-_Parco_dei_Mostri_-_Bomarzo,_Italy_-_DSC02678.jpg`, photographer Daderot) via the Commons category tree (`Category:Orcus_mouth_(Bomarzo)`), verified the license on the file's own page before downloading, and used that instead — graded/cropped the same way as every other card photo. **Lesson for next time a user pastes an obviously professional/polished photo (versus a handheld phone shot) for a branded page**: don't assume it's theirs just because they sent it — the same sourcing check `INSTAGRAM_STRATEGY.md` already mandates for Instagram content applies at least as much to the live commercial website, arguably more since it's a permanent asset, not a transient post. Wikimedia Commons category pages are a fast, reliable fallback for CC0/CC-BY historic-site photos when this happens — check the individual file's own page for the actual license before using anything, categories can mix licenses.
 
 **Note on Wikimedia API access from this sandbox**: the `commons.wikimedia.org/w/api.php` JSON API returned `429 Too Many Requests` through this sandbox's shared proxy even with a proper `User-Agent` header (likely the proxy's shared egress IP hitting Wikimedia's rate limit across unrelated sessions, not this session specifically) — worked around by using `WebFetch` on the human-readable category/file pages instead, which worked fine. If the API 429s again next time, don't burn retries on it, go straight to `WebFetch` on the wiki pages.
+
+---
+
+## Session, 2026-09-06 — branch-drift incident #10 (site side, no work lost); mandatory waiver + privacy checkboxes on booking
+
+**Branch-drift incident #10.** This session's designated branch
+(`claude/website-booking-disclaimers-be9sa4`) was, once again, a fresh
+copy of the dead `claude/magical-franklin-58SKM` lineage (`git
+rev-list HEAD..origin/claude/magical-franklin-58SKM` and the reverse
+both returned 0 — identical content, new name). `git ls-remote --symref
+origin HEAD` still returns `claude/magical-franklin-58SKM`, not
+`main` — the repo's default branch is **still** misconfigured, now
+confirmed a fifth time across sessions; still needs Nikolai or another
+repo admin to fix it in Settings → Branches, one click. Caught before
+any static-file edits: diffed the assigned branch's file list against
+`origin/main` and found it missing the entire
+`italian-olive-experience-*.html` family, the usual tell. Flagged the
+topology mismatch to Nikolai directly, got explicit confirmation, then
+pushed straight to `main` (site) and `claude/magical-franklin-58SKM`
+(Worker) instead of the dead assigned branch.
+
+**What shipped:** Nikolai asked for booking-time disclaimers — guests
+must check boxes acknowledging the injury/liability waiver and a
+privacy policy before paying, not just see policy links sitting next
+to the form.
+
+- Two required checkboxes added to the real Stripe booking form on
+  `italian-olive-experience-pricing.html`, directly above the submit
+  button: accept `liability-waiver.html`, accept the new
+  `privacy-policy.html`. The submit handler already calls
+  `e.preventDefault()` for its AJAX flow, so plain HTML `required`
+  wouldn't have blocked anything — added an explicit
+  `form.checkValidity()` / `reportValidity()` guard before the fetch
+  call.
+- **New `privacy-policy.html`** (GDPR-facing: what's collected, why,
+  who it's shared with — Stripe for payment, Formspree for the contact
+  form, local hosts for trip-relevant notes only — retention, and how
+  to complain to the Garante). Confirmed the site has no
+  analytics/tracking scripts to disclose (grepped `index.html` for
+  `gtag`/`analytics`/pixel — none). `noindex`, not in `sitemap.xml`,
+  same precedent as `liability-waiver.html`. Linked from the pricing
+  page, `index.html#policies`, and cross-linked from
+  `liability-waiver.html`.
+- **Worker-side enforcement** (`claude/magical-franklin-58SKM`,
+  `worker/src/index.js`): `validateCommon()` now 400s any
+  `/api/bookings/fixed` or `/api/bookings/custom` call missing
+  `accepted_waiver: true` / `accepted_privacy: true`, so a direct API
+  call can't skip the checkboxes. No schema migration — no dedicated
+  consent columns exist, so a timestamped acceptance stamp is prepended
+  to the existing free-text `notes` field per booking instead, as the
+  evidentiary trail. A real `accepted_*_at` column pair would need
+  `worker/migrations/` + a manual `wrangler d1 migrations apply
+  --remote` (needs `CLOUDFLARE_API_TOKEN`) — skipped for now since it
+  wasn't required for the checkboxes to actually gate booking.
+
+Full detail logged in `BOOKING_STATUS.md`'s matching 2026-09-06 entry.
+**Not resolved, still needs Nikolai**: professional liability insurance
+and/or Lazio tour-operator registration — checkboxes are an evidentiary
+record of consent, not a substitute for either.

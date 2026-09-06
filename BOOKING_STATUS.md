@@ -1,6 +1,68 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-20_
+_Last updated: 2026-09-06_
+
+## 2026-09-06 update: mandatory waiver + privacy-policy checkboxes added to booking; tenth branch-drift incident
+
+**Branch-drift incident #10 for the static site, but no work lost.**
+This session's designated branch (`claude/website-booking-disclaimers-be9sa4`)
+was, once again, a fresh copy of the dead `claude/magical-franklin-58SKM`
+lineage (confirmed via `git rev-list`: zero commits different either
+way). `git ls-remote --symref origin HEAD` confirms the root cause is still
+unfixed: it returns `claude/magical-franklin-58SKM`, not `main`. This
+is now the fifth session in a row to confirm that — **still needs
+Nikolai or another repo admin to go to Settings → Branches and change
+the default branch to `main`**, a one-click fix nobody's made yet.
+Caught before any static-file edits were made:
+the assigned branch's copy of `index.html`/`worker/` was diffed
+against `origin/main` first and found to lack the whole
+`italian-olive-experience-*.html` family, the usual tell. Flagged to
+Nikolai directly and got explicit confirmation before pushing straight
+to `main` (site) and `claude/magical-franklin-58SKM` (Worker) instead
+of the assigned branch, matching the precedent set by every prior
+session that hit this.
+
+**What shipped:** guests must now affirmatively check two boxes before
+paying, not just see policy links next to the form.
+
+- `italian-olive-experience-pricing.html` — the real Stripe booking
+  form now has two required checkboxes directly above the submit
+  button: accept the `liability-waiver.html` (injury/inherent-risk) and
+  accept the new `privacy-policy.html`. Native `required` + a
+  `checkValidity()`/`reportValidity()` guard in the submit handler (the
+  handler already calls `preventDefault()` for the AJAX flow, so plain
+  `required` alone wouldn't have blocked it). Both boxes' checked state
+  is sent to the Worker as `accepted_waiver`/`accepted_privacy`.
+- **New file `privacy-policy.html`** (main branch, `noindex`, not added
+  to `sitemap.xml` — same precedent as `liability-waiver.html`): covers
+  what's collected (name/email/booking notes; payment handled entirely
+  by Stripe, never stored by us), why, who it's shared with (Stripe,
+  Formspree for the contact form, local hosts for trip-relevant notes
+  only), retention, and GDPR rights including how to complain to the
+  Garante. No cookies/analytics on the site to disclose, confirmed by
+  grepping `index.html` for `gtag`/gtm/pixel scripts — none found.
+  Linked from `italian-olive-experience-pricing.html` (next to the
+  existing cancellation/liability links), `index.html#policies`, and
+  cross-linked from `liability-waiver.html`.
+- **Worker (`claude/magical-franklin-58SKM`, `worker/src/index.js`)** —
+  `validateCommon()` now rejects (`400`) any `/api/bookings/fixed` or
+  `/api/bookings/custom` request missing `accepted_waiver: true` /
+  `accepted_privacy: true`, so the checkboxes are enforced server-side
+  too, not just as a UI nicety a direct API call could skip. No D1
+  schema migration: there's no dedicated consent column, so a
+  timestamped `[Accepted Liability Waiver & Privacy Policy at
+  <ISO time>]` stamp is prepended to the existing free-text `notes`
+  field on every booking as the evidentiary record of consent. If a
+  proper `accepted_waiver_at`/`accepted_privacy_at` column pair is
+  wanted later, that needs a real migration (`worker/migrations/`,
+  applied with `wrangler d1 migrations apply rasna-bookings --remote`,
+  needs `CLOUDFLARE_API_TOKEN`) — not done here to avoid a pending-migration
+  window on a change that didn't strictly need it.
+
+**Not resolved, same as the 2026-08-16 entry:** whether Rasna needs
+professional liability insurance or tour-operator registration under
+Lazio regional law. Checkboxes create an evidentiary record of consent;
+they don't substitute for insurance or licensing.
 
 ## 2026-08-20 update: price raised to €1,825/€2,125; contingency plan added; ninth branch-drift incident
 
