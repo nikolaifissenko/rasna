@@ -157,7 +157,7 @@ Assume groups of **8 guests** average (range 6–10 — small enough to stay int
 - Cost per group: 8 × €720 = **€5,760**
 - **Gross profit per group: ~€5,440**
 
-This profit is split between you and Maria Grazia per your partnership agreement (e.g., 50/50, or weighted by role/investment — to be defined in Phase 0).
+Rasna is a sole proprietorship; this gross profit is Nikolai's. Maria Grazia is a paid local collaborator, compensated for her coordination/hosting role the same way the other local hosts above are paid, not a profit-sharing partner. Her specific rate isn't yet its own line item in the cost breakdown above and should be added once agreed (Phase 0 in `BUSINESS_PLAN.md`).
 
 ## 3. Revenue projections by year (deliberately capped growth)
 
@@ -177,7 +177,7 @@ These projections intentionally **plateau** rather than grow indefinitely — th
 - Estimate: **16 groups × €11,200 = ~€179,200 revenue**, **~€87,000 gross profit**
 - From here, growth in *income* should come from the levers in Section 6 (premium pricing, add-ons, off-season products) — not from running more groups through the town
 
-*(These are directional planning estimates, not guarantees — actual results depend on demand, operational capacity, and — importantly — on which candidate activities survive the validation process described in `BUSINESS_PLAN.md` Phase 1. The "12-month calendar" is a menu of possibilities, not a confirmed program; some activities (vendemmia, pig butchering, wheat harvest, "Nonna") may need to be dropped or reframed once we know what's realistically available, which could mean fewer but more concentrated departure windows than assumed here. The artisan experiences (cheese, affettati, leather) are the most reliably available building blocks and the safest to plan around early. Note that ~€87,000/year in gross profit at a deliberately capped scale is still a strong outcome for a two-person partnership — even if the calendar ends up more concentrated than the ideal 12-month spread.)*
+*(These are directional planning estimates, not guarantees — actual results depend on demand, operational capacity, and — importantly — on which candidate activities survive the validation process described in `BUSINESS_PLAN.md` Phase 1. The "12-month calendar" is a menu of possibilities, not a confirmed program; some activities (vendemmia, pig butchering, wheat harvest, "Nonna") may need to be dropped or reframed once we know what's realistically available, which could mean fewer but more concentrated departure windows than assumed here. The artisan experiences (cheese, affettati, leather) are the most reliably available building blocks and the safest to plan around early. Note that ~€87,000/year in gross profit at a deliberately capped scale is still a strong outcome for a single-owner business, even if the calendar ends up more concentrated than the ideal 12-month spread.)*
 
 ## 4. Startup costs (one-time, Phase 0–2)
 

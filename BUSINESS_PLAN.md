@@ -1,5 +1,17 @@
 # Blera Authentic Experiences — Business Plan
 
+## ⚠️ Maria Grazia's role, corrected 2026-09-06, do not reintroduce the old framing
+
+Maria Grazia is not a co-founder, business partner, or equity holder in Rasna.
+She is a paid local collaborator: she knows the local hosts and activities,
+confirms availability, and is compensated for her time and connections, the
+same way Davide, Emiliano, and Renzo are paid for hosting. Nikolai is the sole
+owner and operator of Rasna and keeps all profit. This file previously
+described a "two-founder" structure with a 50/50-style profit split; that was
+wrong and has been corrected below. If an older cached copy of this file
+resurfaces in a future session, don't restore the founder/co-founder/profit-split
+language for her.
+
 ## 1. Concept
 
 Small-group immersive travel experiences in and around Blera (northern Lazio, Italy), giving international tourists genuine participation in local seasonal life — not a sightseeing tour, but a "live like a local for a few days" experience.
@@ -60,9 +72,9 @@ These aren't separate attractions to manage — they're moments the town already
 ## 2. Why this works
 
 - **Differentiation:** most tour operators sell sights; you sell belonging and participation. Hard to replicate without genuine local ties.
-- **Two-founder fit:**
-  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community
-  - You — international audience know-how, marketing, logistics, English-speaking guest experience
+- **Local execution fit:**
+  - Maria Grazia (paid local collaborator) brings local relationships, access to families/farms/traditions, and credibility with the community
+  - You bring international audience know-how, marketing, logistics, and English-speaking guest experience, and own the business
 - **Asset-light start:** no need to own property; partner with existing BnBs/hotels for lodging, and local families/artisans for the experiences themselves.
 
 ## 3. Target customers
@@ -79,10 +91,10 @@ These aren't separate attractions to manage — they're moments the town already
 
 ## 5. Step-by-step phases
 
-### Phase 0 — Align with Maria Grazia (now)
-1. Have an explicit conversation: roles, decision-making, and how profits/costs are split.
-2. Agree on a simple written partnership understanding (doesn't need to be a lawyer-drafted contract yet — just a shared doc both sign off on).
-3. Define who owns what: she owns local relationships/operations on the ground, you own marketing/sales/international guest relations.
+### Phase 0 — Agree terms with Maria Grazia (now)
+1. Have an explicit conversation: her role, how she's compensated for her time and local connections, and decision-making on the ground.
+2. Agree on a simple written understanding of her paid collaborator role (doesn't need to be a lawyer-drafted contract yet, just a shared doc both sign off on).
+3. Define who owns what: she helps coordinate local relationships and operations on the ground and is paid for that; you own the business, marketing/sales/international guest relations, and all profit.
 
 ### Phase 1 — Validate and design the offer (1–2 months)
 1. **Validate activities one by one before designing around them** — go through the candidate calendar above and confirm, for each: is there a real person willing to host it, what would they expect to be paid, and how often could they realistically do it? Drop or reframe anything that doesn't check out (this is where Maria Grazia's local knowledge is essential — she already flagged several to look at carefully: vendemmia, pig butchering, wheat harvest, "Nonna").
@@ -106,7 +118,7 @@ These aren't separate attractions to manage — they're moments the town already
 ### Phase 4 — Formalize the business (once you have real bookings)
 1. Choose a legal structure in Italy (and your home country if relevant) — likely a small Italian business entity (e.g., SRL or similar) with help from a local commercialista (accountant) who knows tourism.
 2. Sort out licensing/insurance for hosting tourists and food-related activities (Italy has specific rules for agriturismo / food handling / guiding — a local consultant will save you huge time here).
-3. Formalize partnership terms with Maria Grazia, BnBs, and local families/artisans (written agreements, even simple ones).
+3. Formalize a paid-collaborator agreement with Maria Grazia, plus written agreements with BnBs and local families/artisans (even simple ones).
 
 ### Phase 5 — Build out the seasonal calendar (6–12 months)
 1. Add a second and third seasonal experience (e.g., olive harvest, then Christmas) using the same playbook from the pilot.

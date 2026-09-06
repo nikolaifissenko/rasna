@@ -1,6 +1,18 @@
 # RASNA — Esperienze Autentiche a Blera
 ## Pitch di Business
 
+## ⚠️ Da rivedere, 2026-09-06: questo documento presenta Maria Grazia come co-fondatrice alla pari
+
+Maria Grazia non è socia/co-fondatrice di Rasna: è una collaboratrice locale
+pagata (vedi la correzione in `BUSINESS_PLAN.md`). Questo intero documento è
+però scritto come un pitch per convincerla a entrare come partner alla pari
+("insieme, è un progetto completo", profitti "da suddividere secondo
+l'accordo di partnership"), quindi non basta correggere qualche riga: la
+struttura stessa del discorso presume una partnership 50/50. Nikolai deve
+decidere se questo documento va riscritto come un'offerta di collaborazione
+pagata, oppure ritirato. Le righe sul profitto condiviso sono state segnate
+sotto, ma il tono generale resta da rifare.
+
 *"Rasna" era il nome con cui gli Etruschi chiamavano se stessi — il popolo che per primo scavò questa terra nel tufo, quasi 2.800 anni fa. Blera porta ancora la loro impronta: le tombe, la Via Clodia, le rupi. Questo progetto ne porta avanti il nome.*
 
 ---
@@ -90,19 +102,19 @@ In altre parole: questo approccio rende Blera *più* preziosa, senza renderla *p
 
 **Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti, assicurazione)
 **Costo per ospite:** ~€720 (include compensi equi a chi ospita le attività e assicurazione per le attività manuali) → **~€680 di profitto per ospite**
-**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto**, da suddividere secondo l'accordo di partnership
+**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto** [⚠️ vedi nota in cima al file: questo profitto non va condiviso come partnership, va corretto secondo l'accordo di collaborazione pagata]
 
 **Percorso realistico:**
 - **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€22.000 di profitto
 - **Anno 2:** 8 gruppi all'anno → ~€43.500 di profitto
-- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto**, da condividere
+- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto** [⚠️ vedi nota in cima al file]
 
 Un risultato davvero solido per un progetto gestito in poche settimane mirate di accoglienza a stagione — non un lavoro a tempo pieno tutto l'anno.
 
 ## 6. Cosa serve per iniziare
 
 - **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, B&B partner e contatti per la logistica e i trasporti — partendo da chi è già stato individuato (es. Emiliano, Renzo, e gli alloggi già mappati)
-- **Un accordo semplice e chiaro tra i partner** — su come dividere ruoli, decisioni e profitti (questo è il primo passo, prima di qualunque altra cosa)
+- **Un accordo semplice e chiaro sul suo compenso come collaboratrice** — su ruolo, decisioni sul campo e compenso (questo è il primo passo, prima di qualunque altra cosa) [⚠️ vedi nota in cima al file]
 - **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la nostra storia e i materiali di presentazione
 - **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendoci d'accordo con le persone e le attività del territorio, non investendo capitale
 

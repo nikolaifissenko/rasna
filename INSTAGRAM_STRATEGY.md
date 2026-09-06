@@ -98,7 +98,7 @@ Keep it tight (8–15 tags, not 30) and mix specificity:
 > November Italian Olive Experience, or to build your own trip.
 
 **People/Maria Grazia post:**
-> Maria Grazia has lived in Blera her whole life. When we started Rasna,
+> Maria Grazia has lived in Blera her whole life. When I started Rasna,
 > she made one thing clear: this isn't a performance for tourists — if
 > you're going to be at her table, you're doing the work first.
 >
