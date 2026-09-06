@@ -1,17 +1,11 @@
 # RASNA — Esperienze Autentiche a Blera
 ## Pitch di Business
 
-## ⚠️ Da rivedere, 2026-09-06: questo documento presenta Maria Grazia come co-fondatrice alla pari
-
-Maria Grazia non è socia/co-fondatrice di Rasna: è una collaboratrice locale
-pagata (vedi la correzione in `BUSINESS_PLAN.md`). Questo intero documento è
-però scritto come un pitch per convincerla a entrare come partner alla pari
-("insieme, è un progetto completo", profitti "da suddividere secondo
-l'accordo di partnership"), quindi non basta correggere qualche riga: la
-struttura stessa del discorso presume una partnership 50/50. Nikolai deve
-decidere se questo documento va riscritto come un'offerta di collaborazione
-pagata, oppure ritirato. Le righe sul profitto condiviso sono state segnate
-sotto, ma il tono generale resta da rifare.
+**Nota, 2026-09-06: Nikolai gestisce Rasna in autonomia (business indipendente,
+nessun socio/co-fondatore).** Questo documento è il discorso da usare per
+presentare il progetto a chi potrebbe collaborare sul territorio, a partire
+da Maria Grazia, come collaboratrice locale pagata, non come partner alla
+pari. Rivisto per riflettere questo.
 
 *"Rasna" era il nome con cui gli Etruschi chiamavano se stessi — il popolo che per primo scavò questa terra nel tufo, quasi 2.800 anni fa. Blera porta ancora la loro impronta: le tombe, la Via Clodia, le rupi. Questo progetto ne porta avanti il nome.*
 
@@ -23,18 +17,11 @@ Portiamo piccoli gruppi di viaggiatori internazionali a Blera per **vivere — n
 
 Non un tour in pullman. Non una lista di cose da vedere. Pochi giorni indimenticabili, da ospiti nella vita vera di qualcuno.
 
-## 2. Perché ora, perché noi
+## 2. Perché ora, perché io
 
 I viaggiatori internazionali sono stanchi di esperienze "autentiche" affollate e costruite a tavolino (Toscana, Cinque Terre, Costiera Amalfitana). Cercano davvero il vero: piccoli paesi, famiglie vere, tradizioni vere — e sono disposti a pagare bene, *se* qualcuno di fidato può aprire loro quella porta.
 
-**Questo è esattamente ciò che possiamo fare insieme, e che quasi nessun altro può fare:**
-
-| | Cosa porta chi conosce il territorio | Cosa porta chi ha l'esperienza internazionale |
-|---|---|---|
-| **Conoscenza locale** | Relazioni profonde — famiglie, aziende agricole, B&B, artigiani (casaro, affettati, cuoio), autisti, tutte le persone che rendono vera l'esperienza | Vive il ritmo quotidiano di Blera; sa distinguere ciò che è davvero autentico da ciò che è costruito |
-| **Visione internazionale** | Capacità di raggiungere un pubblico internazionale, marketing, comunicazione con gli ospiti, struttura del business e logistica | Sa come raccontare e presentare questa storia perché chi viene da fuori ne capisca il valore e sia disposto a pagarlo |
-
-Da soli, nessuno dei due potrebbe farlo. Insieme, è un progetto completo.
+Gestisco Rasna da solo, ma non potrei farlo senza le persone che conoscono davvero questo territorio: famiglie, aziende agricole, B&B, artigiani (casaro, affettati, cuoio), autisti. Sono cresciuto a Blera e vivo il suo ritmo quotidiano, quindi so distinguere ciò che è davvero autentico da ciò che è costruito, e so come raccontare questa storia a un pubblico internazionale perché ne capisca il valore. Ma senza chi il territorio lo conosce e lo vive ogni giorno, a partire da Maria Grazia, non ci sarebbe niente da raccontare.
 
 ## 3. Come si presenta l'esperienza
 
@@ -102,19 +89,19 @@ In altre parole: questo approccio rende Blera *più* preziosa, senza renderla *p
 
 **Per ospite:** ~€1.400 tutto incluso (alloggio, cibo, guida, attività, trasporti, assicurazione)
 **Costo per ospite:** ~€720 (include compensi equi a chi ospita le attività e assicurazione per le attività manuali) → **~€680 di profitto per ospite**
-**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto** [⚠️ vedi nota in cima al file: questo profitto non va condiviso come partnership, va corretto secondo l'accordo di collaborazione pagata]
+**Per gruppo di 8 persone:** ~€11.200 di ricavi → **~€5.440 di profitto**
 
 **Percorso realistico:**
 - **Anno 1:** Un viaggio pilota + 3–4 gruppi paganti → ~€22.000 di profitto
 - **Anno 2:** 8 gruppi all'anno → ~€43.500 di profitto
-- **Anno 3 e a regime:** ~16 gruppi/anno (il nostro tetto scelto di proposito) → **~€87.000/anno di profitto** [⚠️ vedi nota in cima al file]
+- **Anno 3 e a regime:** ~16 gruppi/anno (il tetto scelto di proposito) → **~€87.000/anno di profitto**
 
 Un risultato davvero solido per un progetto gestito in poche settimane mirate di accoglienza a stagione — non un lavoro a tempo pieno tutto l'anno.
 
 ## 6. Cosa serve per iniziare
 
-- **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, B&B partner e contatti per la logistica e i trasporti — partendo da chi è già stato individuato (es. Emiliano, Renzo, e gli alloggi già mappati)
-- **Un accordo semplice e chiaro sul suo compenso come collaboratrice** — su ruolo, decisioni sul campo e compenso (questo è il primo passo, prima di qualunque altra cosa) [⚠️ vedi nota in cima al file]
-- **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la nostra storia e i materiali di presentazione
-- **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendoci d'accordo con le persone e le attività del territorio, non investendo capitale
+- **Una rete di contatti locali:** alcune famiglie/ospitanti disponibili, B&B collaboratori e contatti per la logistica e i trasporti — partendo da chi è già stato individuato (es. Emiliano, Renzo, e gli alloggi già mappati)
+- **Un accordo semplice e chiaro sul compenso di ciascun collaboratore** — ruolo, decisioni sul campo e compenso, definiti da me con ciascuno (questo è il primo passo, prima di qualunque altra cosa)
+- **Un piccolo viaggio pilota** — da realizzare con un gruppo ristretto e amichevole, per imparare cosa funziona e costruire la storia e i materiali di presentazione del progetto
+- **L'unico vero costo iniziale è il commercialista** — il resto si costruisce mettendomi d'accordo con le persone e le attività del territorio, non investendo capitale
 
