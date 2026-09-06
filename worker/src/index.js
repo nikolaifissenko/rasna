@@ -69,7 +69,17 @@ function validateCommon(body) {
   if (!Number.isInteger(numGuests) || numGuests < 1 || numGuests > 8) {
     errors.push('num_guests must be an integer between 1 and 8');
   }
+  if (body.accepted_waiver !== true) errors.push('you must accept the Liability Waiver & Assumption of Risk');
+  if (body.accepted_privacy !== true) errors.push('you must accept the Privacy Policy');
   return { errors, numGuests };
+}
+
+// Bookings don't have dedicated consent columns (would need a D1 migration),
+// so the accepted timestamp rides along in the free-text notes field as a
+// paper trail for what the guest agreed to at checkout.
+function withConsentNote(notes) {
+  const stamp = `[Accepted Liability Waiver & Privacy Policy at ${new Date().toISOString()}]`;
+  return notes ? `${stamp} ${notes}` : stamp;
 }
 
 async function createCheckoutSession(env, { label, currency, email, bookingId, lineItems }) {
@@ -115,7 +125,7 @@ app.post('/api/bookings/fixed', async (c) => {
     email: body.email.trim(),
     num_guests: numGuests,
     activities: JSON.stringify(body.activities || []),
-    notes: body.notes || null,
+    notes: withConsentNote(body.notes || null),
     amount_total_cents: amountTotalCents,
     currency: departure.currency || 'eur',
   });
@@ -171,7 +181,7 @@ app.post('/api/bookings/custom', async (c) => {
     num_guests: numGuests,
     activities: JSON.stringify(body.activities || []),
     preferred_dates: body.preferred_dates || null,
-    notes: body.notes || null,
+    notes: withConsentNote(body.notes || null),
     amount_total_cents: amountTotalCents,
     currency: 'eur',
   });
