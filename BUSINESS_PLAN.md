@@ -258,10 +258,15 @@ multi-day/overnight experiences (confirmed via their own help docs).
    (expertise-vetting is not a concern — Nikolai's childhood in Blera
    satisfies their "multi-generational/family heritage" bar easily).
 
-**Not yet started as of 2026-08-27**: no commercialista appointment
-booked yet. Listing copy/photos can be prepared in parallel (the
-donkey-trek carousel content already shot is reusable), but the listing
-itself should not go live before 1–2 above are confirmed.
+**Update 2026-09-07**: Airbnb Experience application submitted (full
+6-night trip, category Cibo e bevande, host qualification framed around
+10 years living in Blera as a kid, price €2,115/guest, private-group
+floor €6,300). Airbnb's own vetting will now check licenses/insurance
+given the app disclosed passenger transport + food + alcohol service —
+this doesn't replace 1–2 below, it just means Airbnb may ask about them
+directly. **No commercialista appointment booked yet as of this update**
+— that's still the real blocker before this listing can legally go live
+and accept bookings, regardless of what Airbnb approves on their end.
 
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it
