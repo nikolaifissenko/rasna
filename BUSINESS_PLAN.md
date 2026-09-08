@@ -277,9 +277,9 @@ nothing to book except the generic custom-dates flow. August is the
 fastest second season to stand up: the tomato/sauce-day anchor is
 already confirmed reliable per §1 (Maria Grazia: "even if she has to
 plant the tomatoes herself"), and every other day reuses artisans
-already validated and year-round (Davide, Emiliano, Renzo, Lavinia's
-donkey trek). **Nothing new needs validating with Maria Grazia for
-this draft** — unlike the spring/asparagus idea, which does.
+already validated and year-round (Davide, Emiliano, Lavinia's donkey
+trek). **Nothing new needs validating with Maria Grazia for this
+draft** — unlike the spring/asparagus idea, which does.
 
 **This is a mock itinerary, not a live listing.** Two things gate
 turning it into an actual bookable departure (adding it to
@@ -336,17 +336,14 @@ without a named venue below should be read as terrace dinners.
   Sant'Agostino, dinner at the seafood restaurant there Nikolai says is
   genuinely excellent — **name still needed, not yet in
   `CONTATTI_LOCALI.md`.**
-- **Day 6 · Sat Aug 7 — [open — "something else," per Nikolai].**
-  **Proposal:** Emiliano's charcuterie as an aperitivo moving into
-  dinner on the terrace — closing-night beat, uses the terrace default,
-  distinct in tone from every hands-on day earlier in the week.
-  **Flagging before locking this in:** filling Sat this way drops the
-  Grotta Porcina donkey trek (Lavinia's already-shot IG content, see
-  §1) and Davide's Civitella Cesi cheese/meat entirely out of this
-  6-content-day week — both were confirmed, year-round anchors the
-  November itinerary leans on. Worth an explicit call: keep Sat as the
-  terrace/Emiliano close, swap it for donkeys + Davide instead, or
-  extend to an 8-day week to fit both.
+- **Day 6 · Sat Aug 7 — Civitella Cesi & the Terrace Close.**
+  Early-morning donkey trek with Lavinia and her two donkeys, Andromeda
+  and Catullo, out to Grotta Porcina — before the heat. Midday, Davide
+  Paolocci's hands-on cheese and meat at Civitella Cesi, indoors for
+  the hottest hours. Evening: Emiliano's charcuterie as an aperitivo,
+  dinner on Nikolai's own terrace to close the week — the heaviest
+  activity day paired with the softest landing, rather than losing
+  donkeys/Davide or stretching to an 8-day week.
 - **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
   to Rome or Viterbo.
 
