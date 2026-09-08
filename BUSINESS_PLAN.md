@@ -316,36 +316,37 @@ terrace** unless a day calls for a specific place (Il Cavone, La
 Sirenetta, the Sant'Agostino seafood restaurant below) — most evenings
 without a named venue below should be read as terrace dinners.
 
-- **Day 1 · Mon Aug 2 — Arrival & Tomb Raider Scavenger Hunt.**
-  Pickup, settle in, then straight into a scavenger-hunt-style walk
-  through Blera's own rock-cut Etruscan necropolis and the Via Clodia —
-  right at the edge of town, no travel needed, a playful, adventurous
-  first activity rather than the slower "walking day" framing the
-  November itinerary uses for the same tombs. Terrace dinner.
-- **Day 2 · Tue Aug 3 — Sauce Day.** No field work — straight to
-  making passata the traditional way alongside Maria Grazia, a full
-  day at the stove and the table. Everyone leaves with their own jars.
-- **Day 3 · Wed Aug 4 — Lago di Vico & Palazzo Farnese.** A cooler day
-  out: the lake, lunch at **La Sirenetta** (on Lago di Vico, not the
-  coast — corrected from the previous draft), then Caprarola's
-  Renaissance palace in the afternoon. Evening: dinner at **Il
-  Cavone**, one of Blera's wine cellars — a fixed, every-departure
-  element per Nikolai, not August-specific.
-- **Day 4 · Thu Aug 5 — Civitella Cesi & Grotta Porcina.**
-  Early-morning donkey trek with Lavinia and her two donkeys,
-  Andromeda and Catullo, out to the Grotta Porcina necropolis — done
-  before the heat — then Davide Paolocci's hands-on cheese and meat in
-  the early afternoon, indoors, the hottest part of the day. Same
-  pairing logic as November's Day 4, just built around donkeys instead
-  of horses. Terrace dinner.
-- **Day 5 · Fri Aug 6 — Charcuterie Aperitivo.** Emiliano's
-  charcuterie as an aperitivo on the terrace, moving straight into
-  dinner there — per Nikolai, this one's fixed for Friday.
-- **Day 6 · Sat Aug 7 — Sant'Agostino Beach & Farewell Dinner.** Beach
-  day at Sant'Agostino, dinner at the seafood restaurant there Nikolai
-  says is genuinely excellent — **name still needed, not yet in
-  `CONTATTI_LOCALI.md`.** Closes the week on the sea, a deliberate
-  bookend to Day 1's tombs.
+- **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup, settle in, walk the
+  old town at golden hour. Terrace dinner.
+- **Day 2 · Tue Aug 3 — Tomb Raider Scavenger Hunt.** A
+  scavenger-hunt-style walk through Blera's own rock-cut Etruscan
+  necropolis and the Via Clodia — right at the edge of town, no travel
+  needed, a playful, adventurous framing rather than the slower
+  "walking day" the November itinerary uses for the same tombs.
+- **Day 3 · Wed Aug 4 — Sauce Day.** No field work — straight to making
+  passata the traditional way alongside Maria Grazia, a full day at
+  the stove and the table. Everyone leaves with their own jars.
+- **Day 4 · Thu Aug 5 — Lago di Vico & Palazzo Farnese.** The lake,
+  lunch at **La Sirenetta** (on Lago di Vico, not the coast —
+  corrected from the previous draft), then Caprarola's Renaissance
+  palace in the afternoon. Evening: dinner at **Il Cavone**, one of
+  Blera's wine cellars — a fixed, every-departure element per Nikolai,
+  not August-specific.
+- **Day 5 · Fri Aug 6 — Sant'Agostino Beach.** Beach day at
+  Sant'Agostino, dinner at the seafood restaurant there Nikolai says is
+  genuinely excellent — **name still needed, not yet in
+  `CONTATTI_LOCALI.md`.**
+- **Day 6 · Sat Aug 7 — [open — "something else," per Nikolai].**
+  **Proposal:** Emiliano's charcuterie as an aperitivo moving into
+  dinner on the terrace — closing-night beat, uses the terrace default,
+  distinct in tone from every hands-on day earlier in the week.
+  **Flagging before locking this in:** filling Sat this way drops the
+  Grotta Porcina donkey trek (Lavinia's already-shot IG content, see
+  §1) and Davide's Civitella Cesi cheese/meat entirely out of this
+  6-content-day week — both were confirmed, year-round anchors the
+  November itinerary leans on. Worth an explicit call: keep Sat as the
+  terrace/Emiliano close, swap it for donkeys + Davide instead, or
+  extend to an 8-day week to fit both.
 - **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
   to Rome or Viterbo.
 
