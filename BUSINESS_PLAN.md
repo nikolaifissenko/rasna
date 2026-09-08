@@ -290,38 +290,60 @@ Partita IVA / pacchetto turistico compliance blocker in §9, which gates
 selling *any* additional multi-day package, not just this one.
 
 **Draft dates: Monday, August 2 – Sunday, August 8, 2027.** Chosen
-deliberately before Ferragosto (Aug 15) — tomatoes are at peak harvest,
-but the week avoids the shutdown/crowding that hits the week of
-Ferragosto itself (many local businesses close, prices spike). Same
-7-day/6-night shape as the November week, mornings scheduled early to
-beat the August heat.
+deliberately before Ferragosto (Aug 15) — tomatoes are in season, and
+the week avoids the shutdown/crowding that hits the week of Ferragosto
+itself (many local businesses close, prices spike). Same 7-day/6-night
+shape as the November week, hands-on activities scheduled early to
+beat the August heat, indoor/water activities in the hottest part of
+the week.
+
+**Sagra check (2026-09-08):** no local festival confidently falls
+inside this window. Blera's own **Sagra delle Maccarone Biedane**
+(part of the town's Festa del Volontariato) ran Aug 1–3, 2025 (Fri–Sun)
+— looks tied to the first weekend of August rather than a fixed date,
+which in 2027 is **Sat Jul 31 – Sun Aug 1**, one day before this draft
+starts. Blera's **Sagra del Tartufo** runs end-of-month (Aug 28–31,
+2026 pattern), too late to matter here. Villa San Giovanni's Sagra
+della Pezzata (Aug 15–16) sits on Ferragosto weekend, already excluded
+on purpose. **If catching Blera's own sagra matters, shift the draft a
+few days earlier (e.g. Sat Jul 31 – Fri Aug 6)** — worth revisiting
+once 2027 dates are actually published. [Sagra delle Maccarone Biedane](https://www.eventidellatuscia.it/123-agosto-2025-blera-sagra-delle-maccarone-biedane/), [Sagra del Tartufo](https://www.eventidellatuscia.it/28293031-agosto-2026-blera-sagra-del-tartufo/), [Sagra della Pezzata](https://www.eventidellatuscia.it/1516-agosto-2026-villa-s-giovanni-in-tuscia-sagra-della-pezzata-2/)
 
 - **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup from Rome or
   Viterbo, settle in, walk the old town at golden hour, welcome dinner.
-- **Day 2 · Tue Aug 3 — Tomato Harvest & Sauce Day.** Into the fields
-  early, before the heat, to pick tomatoes. Then a full day making
-  passata the traditional way alongside Maria Grazia — everyone leaves
-  with their own jars.
-- **Day 3 · Wed Aug 4 — Grotta Porcina: Donkeys & Etruscan Tombs.**
+- **Day 2 · Tue Aug 3 — Sauce Day.** No field work — straight to
+  making passata the traditional way alongside Maria Grazia, a full
+  day at the stove and the table. Everyone leaves with their own jars.
+- **Day 3 · Wed Aug 4 — Lago di Vico, Palazzo Farnese & Cantina
+  Dinner.** A cooler day out: the lake, then Caprarola's Renaissance
+  palace — already an established day-trip option (§6), just given
+  its own day here instead of being one of several choices. Evening:
+  dinner at **Il Cavone**, one of Blera's wine cellars — a fixed,
+  every-departure element, not optional (same standing as the terrace
+  dinner on Day 6).
+- **Day 4 · Thu Aug 5 — Grotta Porcina: Donkeys & Etruscan Tombs.**
   Early-morning trek with Lavinia and her two donkeys, Andromeda and
   Catullo, out to the Grotta Porcina necropolis — rock-cut Etruscan
   tombs, on foot and by donkey, done before the midday heat.
-- **Day 4 · Thu Aug 5 — Civitella Cesi: Cheese & Leather.** Hands-on
+- **Day 5 · Fri Aug 6 — Civitella Cesi: Cheese & Leather.** Hands-on
   cheese and meat with Davide Paolocci in the morning (indoors, a good
   match for the hottest part of the day), then Renzo's leatherworking
   workshop in the afternoon — guests make and take home their own
   hand-worked bag or belt.
-- **Day 5 · Fri Aug 6 — Salumi & the Nonne's Kitchen.** Morning
-  charcuterie tasting with Emiliano. Afternoon in the kitchen making a
-  meal in the tradition of the nonne: handmade pasta, wood-fired
-  panonto.
-- **Day 6 · Sat Aug 7 — Tyrrhenian Coast & Farewell Dinner.** Beach
-  afternoon on the coast — a natural fit for August that November's
-  itinerary doesn't have — back to Blera for oil tasting with Nicolò
-  and a farewell dinner. If a local sagra is on that weekend (common in
-  August, per §1), the group goes.
+- **Day 6 · Sat Aug 7 — Sant'Agostino Beach & Terrace Farewell
+  Dinner.** Beach day at Sant'Agostino, lunch at **La Sirenetta** — a
+  restaurant that knows Nikolai personally, the kind of access no
+  other operator on this coast can offer a client. Back to Blera for
+  the evening: Emiliano's charcuterie as an aperitivo, dinner on
+  Nikolai's own terrace to close the week — not a generic "farewell
+  dinner," a specific, personal one.
 - **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
   to Rome or Viterbo.
+
+**New to log, not yet in `CONTATTI_LOCALI.md`:** La Sirenetta
+(Sant'Agostino) as a restaurant partner — same personal-relationship
+asset class as Renzo, worth a row in that file so it doesn't get lost.
+Added below.
 
 **Before this can go live, in order:**
 1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
