@@ -266,3 +266,68 @@ itself should not go live before 1–2 above are confirmed.
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it
 establishes the belief behind it, rewrite it.
+
+## 10. Second itinerary — August "Sauce Day" week (mock draft, 2026-09-08)
+
+**Why this one, and why now:** American guests plan multi-week Italy
+trips months ahead — the Nov 9–15, 2026 departure's early-bird window
+closes 2026-09-15, and right now it's the *only* curated week on the
+site. Anyone shopping today for a spring or summer 2027 trip has
+nothing to book except the generic custom-dates flow. August is the
+fastest second season to stand up: the tomato/sauce-day anchor is
+already confirmed reliable per §1 (Maria Grazia: "even if she has to
+plant the tomatoes herself"), and every other day reuses artisans
+already validated and year-round (Davide, Emiliano, Renzo, Lavinia's
+donkey trek). **Nothing new needs validating with Maria Grazia for
+this draft** — unlike the spring/asparagus idea, which does.
+
+**This is a mock itinerary, not a live listing.** Two things gate
+turning it into an actual bookable departure (adding it to
+`worker/src/departures.js` and the site): lodging availability for the
+specific August 2027 dates (Da Beccone / B&B La Ripa haven't been
+asked about summer yet — only the Nov week is confirmed), and the
+Partita IVA / pacchetto turistico compliance blocker in §9, which gates
+selling *any* additional multi-day package, not just this one.
+
+**Draft dates: Monday, August 2 – Sunday, August 8, 2027.** Chosen
+deliberately before Ferragosto (Aug 15) — tomatoes are at peak harvest,
+but the week avoids the shutdown/crowding that hits the week of
+Ferragosto itself (many local businesses close, prices spike). Same
+7-day/6-night shape as the November week, mornings scheduled early to
+beat the August heat.
+
+- **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup from Rome or
+  Viterbo, settle in, walk the old town at golden hour, welcome dinner.
+- **Day 2 · Tue Aug 3 — Tomato Harvest & Sauce Day.** Into the fields
+  early, before the heat, to pick tomatoes. Then a full day making
+  passata the traditional way alongside Maria Grazia — everyone leaves
+  with their own jars.
+- **Day 3 · Wed Aug 4 — Grotta Porcina: Donkeys & Etruscan Tombs.**
+  Early-morning trek with Lavinia and her two donkeys, Andromeda and
+  Catullo, out to the Grotta Porcina necropolis — rock-cut Etruscan
+  tombs, on foot and by donkey, done before the midday heat.
+- **Day 4 · Thu Aug 5 — Civitella Cesi: Cheese & Leather.** Hands-on
+  cheese and meat with Davide Paolocci in the morning (indoors, a good
+  match for the hottest part of the day), then Renzo's leatherworking
+  workshop in the afternoon — guests make and take home their own
+  hand-worked bag or belt.
+- **Day 5 · Fri Aug 6 — Salumi & the Nonne's Kitchen.** Morning
+  charcuterie tasting with Emiliano. Afternoon in the kitchen making a
+  meal in the tradition of the nonne: handmade pasta, wood-fired
+  panonto.
+- **Day 6 · Sat Aug 7 — Tyrrhenian Coast & Farewell Dinner.** Beach
+  afternoon on the coast — a natural fit for August that November's
+  itinerary doesn't have — back to Blera for oil tasting with Nicolò
+  and a farewell dinner. If a local sagra is on that weekend (common in
+  August, per §1), the group goes.
+- **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
+  to Rome or Viterbo.
+
+**Before this can go live, in order:**
+1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
+   and rates for early August 2027 — nothing's been asked about summer
+   dates yet, only the Nov week.
+2. Resolve the P.IVA / pacchetto turistico compliance blocker (§9) —
+   applies to this listing too, not just November's.
+3. Only then: add the departure to `worker/src/departures.js` and give
+   it its own hero section on the site, the way November has one.
