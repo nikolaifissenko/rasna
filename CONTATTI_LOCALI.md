@@ -22,9 +22,11 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
 | B&B La Ripa (Antonella) | Alloggio partner | ✅ CONFERMATO tariffa — ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi sezione Alloggio sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
-| La Sirenetta (Lago di Vico) | Ristorante — tappa pranzo giornata Lago di Vico/Palazzo Farnese | Nikolai conosce il proprietario da sempre — stesso tipo di asset relazionale (non più Renzo, escluso dagli itinerari); non ancora contattato formalmente per gruppi Rasna |
-| Ristorante di pesce, Sant'Agostino | Ristorante — cena giornata al mare | Nikolai lo conosce e lo consiglia — **nome ancora da confermare** prima di poterlo loggare come contatto vero |
+| La Sirenetta (Lago di Vico) | Ristorante — cena al tramonto, giornata Lago di Vico/Palazzo Farnese | Nikolai conosce il proprietario da sempre — stesso tipo di asset relazionale (non più Renzo, escluso dagli itinerari); non ancora contattato formalmente per gruppi Rasna |
+| Ristorante di pesce, Sant'Agostino | Ristorante — pranzo giornata al mare (spaghetti alle vongole ecc.) | Nikolai lo conosce e lo consiglia — **nome ancora da confermare** prima di poterlo loggare come contatto vero |
 | Il Cavone (cantina, Blera) | Cena in cantina — elemento fisso di ogni partenza, non opzionale | collegata al Cantine Festival (§1 `BUSINESS_PLAN.md`, secondo weekend di novembre); non ancora contattata formalmente per gruppi Rasna |
+| Bar Paradiso (Blera) | Colazione — tutte le mattine, ogni partenza | non ancora contattato formalmente per gruppi Rasna |
+| Trattoria, Blera | Cena del primo giorno (arrivo) | **nome ancora da confermare** |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 

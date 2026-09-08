@@ -317,7 +317,7 @@ Sirenetta, the Sant'Agostino seafood restaurant below) — most evenings
 without a named venue below should be read as terrace dinners.
 
 - **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup, settle in, walk the
-  old town at golden hour. Terrace dinner.
+  old town at golden hour.
 - **Day 2 · Tue Aug 3 — Tomb Raider Scavenger Hunt.** A
   scavenger-hunt-style walk through Blera's own rock-cut Etruscan
   necropolis and the Via Clodia — right at the edge of town, no travel
@@ -326,103 +326,56 @@ without a named venue below should be read as terrace dinners.
 - **Day 3 · Wed Aug 4 — Sauce Day.** No field work — straight to making
   passata the traditional way alongside Maria Grazia, a full day at
   the stove and the table. Everyone leaves with their own jars.
-- **Day 4 · Thu Aug 5 — Lago di Vico & Palazzo Farnese.** The lake,
-  lunch at **La Sirenetta** (on Lago di Vico, not the coast —
-  corrected from the previous draft), then Caprarola's Renaissance
-  palace in the afternoon. Evening: dinner at **Il Cavone**, one of
-  Blera's wine cellars — a fixed, every-departure element per Nikolai,
-  not August-specific.
+- **Day 4 · Thu Aug 5 — Lago di Vico & Palazzo Farnese.** Caprarola's
+  Renaissance palace, then the lake shore. Dinner at **La Sirenetta**,
+  sunset — moved from lunch to dinner per Nikolai.
 - **Day 5 · Fri Aug 6 — Sant'Agostino Beach.** Beach day at
-  Sant'Agostino, dinner at the seafood restaurant there Nikolai says is
-  genuinely excellent — **name still needed, not yet in
-  `CONTATTI_LOCALI.md`.**
-- **Day 6 · Sat Aug 7 — Civitella Cesi & the Terrace Close.**
-  Early-morning donkey trek with Lavinia and her two donkeys, Andromeda
-  and Catullo, out to Grotta Porcina — before the heat. Midday, Davide
-  Paolocci's hands-on cheese and meat at Civitella Cesi, indoors for
-  the hottest hours. Evening: Emiliano's charcuterie as an aperitivo,
-  dinner on Nikolai's own terrace to close the week — the heaviest
-  activity day paired with the softest landing, rather than losing
-  donkeys/Davide or stretching to an 8-day week.
+  Sant'Agostino.
+- **Day 6 · Sat Aug 7 — Civitella Cesi.** Early-morning donkey trek
+  with Lavinia and her two donkeys, Andromeda and Catullo, out to
+  Grotta Porcina — before the heat. Midday, Davide Paolocci's
+  hands-on cheese and meat at Civitella Cesi, indoors for the hottest
+  hours.
 - **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
   to Rome or Viterbo.
 
 **Logged in `CONTATTI_LOCALI.md`** (corrected/added below): La
-Sirenetta moved to Lago di Vico (not Sant'Agostino), Il Cavone as a
-fixed cantina-dinner venue. The Sant'Agostino seafood restaurant still
-needs a name from Nikolai before it can be logged the same way.
+Sirenetta moved to Lago di Vico (not Sant'Agostino), Il Cavone,
+Bar Paradiso. The Sant'Agostino seafood restaurant and Monday's
+trattoria still need names from Nikolai.
 
 ### Meals, day by day
 
-Breakfast is at the lodging every morning (Da Beccone/La Ripa,
-whichever ends up confirmed for August) — not itemized below.
+Built directly from Nikolai's day-by-day answers, 2026-09-08 — this
+replaces every earlier draft of the meal plan. **Breakfast every
+morning: Bar Paradiso.**
 
 | Day | Lunch | Dinner |
 |---|---|---|
-| Mon Aug 2 | Light arrival lunch/snack, timing depends on flights | **Welcome dinner, terrace** — cured meats, cheese, a simple pasta, wine; sets the tone, not the big meal of the week |
-| Tue Aug 3 | **Picnic among the tombs** — bread, local salumi and cheese, tomatoes, wine, eaten in the shade along the Via Clodia; keeps the adventurous framing going | Terrace, casual — the group's had a hot walking day, keep it light |
-| Wed Aug 4 | **The sauce itself** — pasta al pomodoro with the passata just made, at Maria Grazia's table; the day's activity *is* the meal | Light — bruschetta, cheese, fruit; a heavy lunch already happened |
-| Thu Aug 5 | **La Sirenetta**, Lago di Vico — lake fish (coregone), a Tuscia hazelnut dessert (the region's signature crop, per §1) | **Il Cavone** cantina — cured meats, local cheese, wine-forward, rustic sharing plates |
-| Fri Aug 6 | Casual, beachside — panini, something simple near Sant'Agostino, save the appetite | **The Sant'Agostino seafood restaurant** — the day's centerpiece meal, crudo/grilled catch, sunset |
-| Sat Aug 7 | **Davide's tasting doubles as lunch** — cheese, cured meats, bread, wine at Civitella Cesi, straight out of the morning's hands-on session | **Emiliano's charcuterie aperitivo → full dinner, terrace** — the week's grand finale: pasta, secondo, dessert, a digestivo to close |
+| Mon Aug 2 | On their own — arrival timing varies by flight, guests sort their own food | Trattoria in Blera — **name TBD** |
+| Tue Aug 3 | Picnic among the tombs | Terrace — **Nikolai's own tuna, zucchini & lemon pasta**, gelato |
+| Wed Aug 4 | Spaghetti with the fresh tomatoes left over from sauce-making | **Il Cavone** — moved here from Thursday |
+| Thu Aug 5 | Lakeside picnic at Lago di Vico, after Palazzo Farnese | **La Sirenetta**, sunset — moved here from lunch |
+| Fri Aug 6 | **Sant'Agostino** — spaghetti alle vongole and similar | **Emiliano's charcuterie aperitivo, terrace** — moved here from Saturday |
+| Sat Aug 7 | Open — not decided yet | **At the sagra** — see flag below, not confirmed there is one |
 | Sun Aug 8 | — (departure) | — |
 
+**⚠️ Saturday dinner depends on a sagra that isn't confirmed for that
+date.** Per the sagra check above, Blera's own festival tracks the
+first weekend of August, which in 2027 is **Jul 31–Aug 1** — one day
+*before* this draft week even starts, not Aug 7. Either a sagra is
+confirmed to actually be running Sat Aug 7, 2027 once real dates
+publish, or Saturday needs a fallback dinner plan (or the whole week
+shifts a few days earlier — already flagged as an option above).
+
 **Worth flagging on copy, not itinerary:** the live site's intro line
-says *"every meal is traditional home-cooked"* (§6) — this week leans
-on three real restaurant partners (La Sirenetta, Il Cavone, the
-Sant'Agostino seafood spot) for its best meals, which is a genuine
-strength (personal access, real places), but it's not literally
-"home-cooked" for those three. If this itinerary goes live as written,
-that intro line needs a small edit so it doesn't overpromise.
-
-### Sample menus
-
-Real Lazio/Tuscia dishes, in season for August — a draft to hand to
-Maria Grazia and the venues to confirm, not a locked kitchen order.
-
-**Mon — Welcome dinner, terrace**
-- Bruschetta al pomodoro; tagliere of Emiliano's salumi and Davide's
-  pecorino, olives in Nicolò's oil
-- Cacio e pepe or rigatoni alla gricia
-- Pesche al vino (peaches marinated in red wine) or crostata di visciole
-- Local white — a Tuscia IGT or Est! Est!! Est!!! di Montefiascone
-
-**Tue — Tomb-picnic lunch / light terrace dinner**
-- *Lunch:* pane casereccio, Emiliano's coppa/salame/guanciale, Davide's
-  caciotta, pomodori col basilico, sott'oli, watermelon, rosato
-- *Dinner:* panzanella or insalata caprese, verdure grigliate or a
-  frittata di zucchine, fresh fruit
-
-**Wed — Sauce day**
-- *Lunch:* the passata itself over spaghetti, fresh basil, Nicolò's
-  oil — bruschetta with the same sauce to start
-- *Dinner:* bruschetta, cheese board, melon with salumi, fruit
-
-**Thu — La Sirenetta (Lago di Vico) / Il Cavone**
-- *Lunch:* fritto di lago or coregone marinato; tonnarelli with lake
-  fish; coregone or persico alla griglia; torta di nocciole
-- *Dinner:* tagliere of salumi and cheese, bruschetta; grilled meats
-  (salsicce, arrosticini); wine tasting through the meal
-
-**Fri — Beach lunch / Sant'Agostino seafood dinner**
-- *Lunch:* panini (mortadella, caprese), cold pasta salad, fruit
-- *Dinner:* crudo or fritto misto; spaghetti alle vongole; pesce del
-  giorno alla griglia; lemon sorbet or tiramisù; a coastal Lazio white
-
-**Sat — Davide's tasting lunch / terrace finale dinner**
-- *Lunch:* Davide's cheese and cured-meat tasting, bread, honey; a
-  pasta with his guanciale (amatriciana) if there's appetite for it
-- *Dinner (finale):* Emiliano's charcuterie as aperitivo with
-  prosecco/spritz; tagliatelle al tartufo estivo (summer black
-  truffle is in season through August); porchetta di Viterbo with
-  roast potatoes and grilled vegetables; a festive dolce; grappa or
-  limoncello to close. Worth a better bottle than the rest of the
-  week — Cesanese del Piglio, Lazio's own DOCG red.
-
-**Sun — Departure:** breakfast only.
-
-**Breakfast, every morning:** cornetti, coffee, fresh fruit, yogurt,
-local honey — at the lodging, not itemized further here.
+says *"every meal is traditional home-cooked"* (§6) — this week now
+leans on real restaurant/bar partners for breakfast (Bar Paradiso),
+Wednesday and Thursday dinner (Il Cavone, La Sirenetta), Friday lunch
+(Sant'Agostino), and Monday dinner (a trattoria) — genuine strength
+(real, personal access), but not literally "home-cooked" for any of
+those. If this itinerary goes live as written, that intro line needs
+a small edit so it doesn't overpromise.
 
 **Before this can go live, in order:**
 1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
