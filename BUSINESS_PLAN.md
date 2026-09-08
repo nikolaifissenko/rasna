@@ -375,6 +375,55 @@ strength (personal access, real places), but it's not literally
 "home-cooked" for those three. If this itinerary goes live as written,
 that intro line needs a small edit so it doesn't overpromise.
 
+### Sample menus
+
+Real Lazio/Tuscia dishes, in season for August — a draft to hand to
+Maria Grazia and the venues to confirm, not a locked kitchen order.
+
+**Mon — Welcome dinner, terrace**
+- Bruschetta al pomodoro; tagliere of Emiliano's salumi and Davide's
+  pecorino, olives in Nicolò's oil
+- Cacio e pepe or rigatoni alla gricia
+- Pesche al vino (peaches marinated in red wine) or crostata di visciole
+- Local white — a Tuscia IGT or Est! Est!! Est!!! di Montefiascone
+
+**Tue — Tomb-picnic lunch / light terrace dinner**
+- *Lunch:* pane casereccio, Emiliano's coppa/salame/guanciale, Davide's
+  caciotta, pomodori col basilico, sott'oli, watermelon, rosato
+- *Dinner:* panzanella or insalata caprese, verdure grigliate or a
+  frittata di zucchine, fresh fruit
+
+**Wed — Sauce day**
+- *Lunch:* the passata itself over spaghetti, fresh basil, Nicolò's
+  oil — bruschetta with the same sauce to start
+- *Dinner:* bruschetta, cheese board, melon with salumi, fruit
+
+**Thu — La Sirenetta (Lago di Vico) / Il Cavone**
+- *Lunch:* fritto di lago or coregone marinato; tonnarelli with lake
+  fish; coregone or persico alla griglia; torta di nocciole
+- *Dinner:* tagliere of salumi and cheese, bruschetta; grilled meats
+  (salsicce, arrosticini); wine tasting through the meal
+
+**Fri — Beach lunch / Sant'Agostino seafood dinner**
+- *Lunch:* panini (mortadella, caprese), cold pasta salad, fruit
+- *Dinner:* crudo or fritto misto; spaghetti alle vongole; pesce del
+  giorno alla griglia; lemon sorbet or tiramisù; a coastal Lazio white
+
+**Sat — Davide's tasting lunch / terrace finale dinner**
+- *Lunch:* Davide's cheese and cured-meat tasting, bread, honey; a
+  pasta with his guanciale (amatriciana) if there's appetite for it
+- *Dinner (finale):* Emiliano's charcuterie as aperitivo with
+  prosecco/spritz; tagliatelle al tartufo estivo (summer black
+  truffle is in season through August); porchetta di Viterbo with
+  roast potatoes and grilled vegetables; a festive dolce; grappa or
+  limoncello to close. Worth a better bottle than the rest of the
+  week — Cesanese del Piglio, Lazio's own DOCG red.
+
+**Sun — Departure:** breakfast only.
+
+**Breakfast, every morning:** cornetti, coffee, fresh fruit, yogurt,
+local honey — at the lodging, not itemized further here.
+
 **Before this can go live, in order:**
 1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
    and rates for early August 2027 — nothing's been asked about summer
