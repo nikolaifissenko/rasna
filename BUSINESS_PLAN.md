@@ -352,6 +352,29 @@ Sirenetta moved to Lago di Vico (not Sant'Agostino), Il Cavone as a
 fixed cantina-dinner venue. The Sant'Agostino seafood restaurant still
 needs a name from Nikolai before it can be logged the same way.
 
+### Meals, day by day
+
+Breakfast is at the lodging every morning (Da Beccone/La Ripa,
+whichever ends up confirmed for August) — not itemized below.
+
+| Day | Lunch | Dinner |
+|---|---|---|
+| Mon Aug 2 | Light arrival lunch/snack, timing depends on flights | **Welcome dinner, terrace** — cured meats, cheese, a simple pasta, wine; sets the tone, not the big meal of the week |
+| Tue Aug 3 | **Picnic among the tombs** — bread, local salumi and cheese, tomatoes, wine, eaten in the shade along the Via Clodia; keeps the adventurous framing going | Terrace, casual — the group's had a hot walking day, keep it light |
+| Wed Aug 4 | **The sauce itself** — pasta al pomodoro with the passata just made, at Maria Grazia's table; the day's activity *is* the meal | Light — bruschetta, cheese, fruit; a heavy lunch already happened |
+| Thu Aug 5 | **La Sirenetta**, Lago di Vico — lake fish (coregone), a Tuscia hazelnut dessert (the region's signature crop, per §1) | **Il Cavone** cantina — cured meats, local cheese, wine-forward, rustic sharing plates |
+| Fri Aug 6 | Casual, beachside — panini, something simple near Sant'Agostino, save the appetite | **The Sant'Agostino seafood restaurant** — the day's centerpiece meal, crudo/grilled catch, sunset |
+| Sat Aug 7 | **Davide's tasting doubles as lunch** — cheese, cured meats, bread, wine at Civitella Cesi, straight out of the morning's hands-on session | **Emiliano's charcuterie aperitivo → full dinner, terrace** — the week's grand finale: pasta, secondo, dessert, a digestivo to close |
+| Sun Aug 8 | — (departure) | — |
+
+**Worth flagging on copy, not itinerary:** the live site's intro line
+says *"every meal is traditional home-cooked"* (§6) — this week leans
+on three real restaurant partners (La Sirenetta, Il Cavone, the
+Sant'Agostino seafood spot) for its best meals, which is a genuine
+strength (personal access, real places), but it's not literally
+"home-cooked" for those three. If this itinerary goes live as written,
+that intro line needs a small edit so it doesn't overpromise.
+
 **Before this can go live, in order:**
 1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
    and rates for early August 2027 — nothing's been asked about summer
