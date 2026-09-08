@@ -309,41 +309,50 @@ on purpose. **If catching Blera's own sagra matters, shift the draft a
 few days earlier (e.g. Sat Jul 31 – Fri Aug 6)** — worth revisiting
 once 2027 dates are actually published. [Sagra delle Maccarone Biedane](https://www.eventidellatuscia.it/123-agosto-2025-blera-sagra-delle-maccarone-biedane/), [Sagra del Tartufo](https://www.eventidellatuscia.it/28293031-agosto-2026-blera-sagra-del-tartufo/), [Sagra della Pezzata](https://www.eventidellatuscia.it/1516-agosto-2026-villa-s-giovanni-in-tuscia-sagra-della-pezzata-2/)
 
-- **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup from Rome or
-  Viterbo, settle in, walk the old town at golden hour, welcome dinner.
+**Renzo dropped from this itinerary** (leatherwork removed entirely,
+per Nikolai) — consistent with §6, where he was already cut from the
+client-facing landing page. **Default dinner venue is Nikolai's own
+terrace** unless a day calls for a specific place (Il Cavone, La
+Sirenetta, the Sant'Agostino seafood restaurant below) — most evenings
+without a named venue below should be read as terrace dinners.
+
+- **Day 1 · Mon Aug 2 — Arrival & Tomb Raider Scavenger Hunt.**
+  Pickup, settle in, then straight into a scavenger-hunt-style walk
+  through Blera's own rock-cut Etruscan necropolis and the Via Clodia —
+  right at the edge of town, no travel needed, a playful, adventurous
+  first activity rather than the slower "walking day" framing the
+  November itinerary uses for the same tombs. Terrace dinner.
 - **Day 2 · Tue Aug 3 — Sauce Day.** No field work — straight to
   making passata the traditional way alongside Maria Grazia, a full
   day at the stove and the table. Everyone leaves with their own jars.
-- **Day 3 · Wed Aug 4 — Lago di Vico, Palazzo Farnese & Cantina
-  Dinner.** A cooler day out: the lake, then Caprarola's Renaissance
-  palace — already an established day-trip option (§6), just given
-  its own day here instead of being one of several choices. Evening:
-  dinner at **Il Cavone**, one of Blera's wine cellars — a fixed,
-  every-departure element, not optional (same standing as the terrace
-  dinner on Day 6).
-- **Day 4 · Thu Aug 5 — Grotta Porcina: Donkeys & Etruscan Tombs.**
-  Early-morning trek with Lavinia and her two donkeys, Andromeda and
-  Catullo, out to the Grotta Porcina necropolis — rock-cut Etruscan
-  tombs, on foot and by donkey, done before the midday heat.
-- **Day 5 · Fri Aug 6 — Civitella Cesi: Cheese & Leather.** Hands-on
-  cheese and meat with Davide Paolocci in the morning (indoors, a good
-  match for the hottest part of the day), then Renzo's leatherworking
-  workshop in the afternoon — guests make and take home their own
-  hand-worked bag or belt.
-- **Day 6 · Sat Aug 7 — Sant'Agostino Beach & Terrace Farewell
-  Dinner.** Beach day at Sant'Agostino, lunch at **La Sirenetta** — a
-  restaurant that knows Nikolai personally, the kind of access no
-  other operator on this coast can offer a client. Back to Blera for
-  the evening: Emiliano's charcuterie as an aperitivo, dinner on
-  Nikolai's own terrace to close the week — not a generic "farewell
-  dinner," a specific, personal one.
+- **Day 3 · Wed Aug 4 — Lago di Vico & Palazzo Farnese.** A cooler day
+  out: the lake, lunch at **La Sirenetta** (on Lago di Vico, not the
+  coast — corrected from the previous draft), then Caprarola's
+  Renaissance palace in the afternoon. Evening: dinner at **Il
+  Cavone**, one of Blera's wine cellars — a fixed, every-departure
+  element per Nikolai, not August-specific.
+- **Day 4 · Thu Aug 5 — Civitella Cesi & Grotta Porcina.**
+  Early-morning donkey trek with Lavinia and her two donkeys,
+  Andromeda and Catullo, out to the Grotta Porcina necropolis — done
+  before the heat — then Davide Paolocci's hands-on cheese and meat in
+  the early afternoon, indoors, the hottest part of the day. Same
+  pairing logic as November's Day 4, just built around donkeys instead
+  of horses. Terrace dinner.
+- **Day 5 · Fri Aug 6 — Charcuterie Aperitivo.** Emiliano's
+  charcuterie as an aperitivo on the terrace, moving straight into
+  dinner there — per Nikolai, this one's fixed for Friday.
+- **Day 6 · Sat Aug 7 — Sant'Agostino Beach & Farewell Dinner.** Beach
+  day at Sant'Agostino, dinner at the seafood restaurant there Nikolai
+  says is genuinely excellent — **name still needed, not yet in
+  `CONTATTI_LOCALI.md`.** Closes the week on the sea, a deliberate
+  bookend to Day 1's tombs.
 - **Day 7 · Sun Aug 8 — Departure.** Breakfast, goodbyes, transfer back
   to Rome or Viterbo.
 
-**New to log, not yet in `CONTATTI_LOCALI.md`:** La Sirenetta
-(Sant'Agostino) as a restaurant partner — same personal-relationship
-asset class as Renzo, worth a row in that file so it doesn't get lost.
-Added below.
+**Logged in `CONTATTI_LOCALI.md`** (corrected/added below): La
+Sirenetta moved to Lago di Vico (not Sant'Agostino), Il Cavone as a
+fixed cantina-dinner venue. The Sant'Agostino seafood restaurant still
+needs a name from Nikolai before it can be logged the same way.
 
 **Before this can go live, in order:**
 1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
