@@ -1,6 +1,41 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-09-06_
+_Last updated: 2026-09-09_
+
+## 2026-09-09 update: second live departure added (Italian Summer Experience, Aug 9-15, 2027), flat €2,125 price
+
+A second fixed departure now has a real, live Stripe booking flow,
+identical mechanics to November's: `worker/src/departures.js` (deployed
+from `claude/magical-franklin-58SKM`) has a new `DEPARTURES` entry,
+`id: '2027-08-09'`, `label: 'August 9–15, 2027'`. No D1 migration was
+needed and no Stripe dashboard step either — checkout pricing is
+computed dynamically (`price_data`/`unit_amount` built from the
+departure's config in `worker/src/index.js`, not a pre-created Stripe
+Price object) and `bookings.departure_id` is a free-text D1 column
+with no CHECK constraint restricting it to November's ID. Confirmed
+live via `curl .../api/departures` after each push.
+
+**Pricing went through one correction this session.** First shipped as
+a placeholder two-tier price (€1,700 early bird / €1,950 full, cutoff
+Jun 15, 2027) mirroring November's early-bird/full shape, since nothing
+in the repo specified real numbers for a second departure. Nikolai then
+said "the price is 2125" — corrected to a **flat €2,125 per person, no
+early-bird discount** (same number as November's full price). Both
+`pricing.early_bird` and `pricing.full` in `departures.js` are now set
+to `2125` (kept the two-key shape since `currentPriceTier()`/
+`priceForDeparture()` assume it; with equal values there's effectively
+no tier, `current_tier` is just cosmetically whichever side of the
+inert cutoff date `now` falls on). The static site's pricing page,
+hub-cost card, and FAQ were all rewritten to drop the "book early,
+save" framing and show a single flat price instead — see `CLAUDE.md`'s
+2026-09-09 session entry for the full list of files touched.
+
+**Exact departure dates (Aug 9–15, 2027) are still a placeholder**,
+picked to mirror November's Mon–Sun 9th-to-15th shape — Nikolai
+confirmed the price this session but hasn't explicitly confirmed the
+dates. Flag this if it comes up again.
+
+---
 
 ## 2026-09-06 update: mandatory waiver + privacy-policy checkboxes added to booking; tenth branch-drift incident
 

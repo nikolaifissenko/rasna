@@ -4,7 +4,7 @@ Single-page static marketing/booking site for RASNA, small-group immersive exped
 
 **Live URL:** https://rasnaexperience.com/ (custom domain, confirmed live 2026-07-23; `nikolaifissenko.github.io/rasna` still resolves and still works, kept as a CORS/old-link fallback, but rasnaexperience.com is canonical everywhere: canonical tags, sitemap, robots.txt, worker `SITE_URL`)
 **Repo:** nikolaifissenko/rasna (GitHub Pages, deploy-from-branch, `main`, root)
-**Files:** `index.html` (main landing page, incl. the November Experience *hub*) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-11, a full **family of five dedicated November Experience pages** — `italian-olive-experience-itinerary.html` (since 2026-08-04), `italian-olive-experience-host.html`, `italian-olive-experience-highlights.html`, `italian-olive-experience-pricing.html`, `italian-olive-experience-faq.html` (all four new 2026-08-11) — see "**Current architecture of the November Experience pages**" below, read that before touching any of them, most of the older "Planned Events tab" section further down is superseded by it. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure.
+**Files:** `index.html` (main landing page, incl. the November Experience *hub* and, as of 2026-09-09, a second inline hub for the Summer Experience at `#summer-week`) + `about.html` (founder bio page) + `style.css` + `images/` — the pages that matter for the live site. Also live: three long-tail SEO guide pages (`tuscia-travel-guide.html`, `etruscan-tombs-guide.html`, `small-group-italy-tours.html`, added 2026-08-03) and, as of 2026-08-11, a full **family of six dedicated November Experience pages** — `italian-olive-experience-itinerary.html` (since 2026-08-04), `italian-olive-experience-host.html`, `italian-olive-experience-highlights.html`, `italian-olive-experience-lodging.html`, `italian-olive-experience-pricing.html`, `italian-olive-experience-faq.html` (all new 2026-08-11, `-lodging.html` added later) — see "**Current architecture of the November Experience pages**" below, read that before touching any of them, most of the older "Planned Events tab" section further down is superseded by it. `ITINERARY_NOV2026.md` is a planning/cost doc (not part of the live site) for the Nov pilot departure. **As of 2026-09-09, a second fixed departure — the Italian Summer Experience, Aug 9–15, 2027 — has its own parallel family of six pages** (`italian-summer-experience-itinerary.html`/`-host.html`/`-highlights.html`/`-lodging.html`/`-pricing.html`/`-faq.html`), same template pattern, own `.exp-subnav`, cross-linked from `index.html`'s `#summer-week` hub and a third `tab-switcher` button — see the dated session entry near the bottom of this file for the full architecture, don't assume everything said about "the November pages" below also covers these; `italian-summer-experience-lodging.html` duplicates (not shares) `italian-olive-experience-lodging.html`'s Casamatta photos, since both departures use the same house but each family keeps its own self-contained subnav.
 **Dev branch:** work directly against `main` — check out a short-lived local branch from `origin/main`, commit, push straight to `main` (no PR needed for routine edits). **Standing instruction: push and go live immediately without asking** — the user wants edits to go live automatically, not sit waiting for approval. `main` is the single source of truth for both the site content and this file; a different branch, `claude/magical-franklin-58SKM`, is where the Cloudflare Worker (`worker/`) deploys from — see "Deploy topology gotcha" below before touching anything in `worker/`. **A 2026-07-23 session found a stale `claude/session-context-k9kxoq` branch (descended from an old fork of `magical-franklin-58SKM`) that had drifted from `main` for weeks without anyone noticing** — it redid work already done on `main` and separately had real, non-duplicate lodging-planning content that had to be manually ported over. Before trusting any `claude/*` branch's state, diff it against `origin/main` first; don't assume a branch is current just because a session's designated-branch instructions point at it. **This happened again on 2026-07-24** — a session spent real effort on `claude/magical-franklin-58SKM`'s `index.html` (SEO copy, an About section, pricing UI) before catching that `main` is what's actually live; see `BOOKING_STATUS.md`'s 2026-07-24 entry for the full account. If you're a fresh session reading this: check `git log main` and compare against whatever branch you were told to use *before* touching `index.html`, `style.css`, or `about.html` — every single time, not just when something feels off. **It happened a fifth time on 2026-08-10**: a session's designated branch (`claude/website-fixes-0zr2pl`) was, again, descended from the dead `magical-franklin-58SKM` lineage with a bundled `CLAUDE.md` that didn't mention `main` existing at all — caught immediately this time (before writing any content) by diffing the live site against `origin/main` in the first few minutes, so no wasted work. That session went on to do the itinerary restore, the pamphlet-style restructure, and the full pricing-tier rebuild described further down this file and in `BOOKING_STATUS.md`, all correctly against `main` (+ `claude/magical-franklin-58SKM` for the `worker/`-only pricing commit). **It happened a sixth time on 2026-08-12**: a session's designated branch (`claude/itinerary-site-redesign-4anqr0`, itself descended from `magical-franklin-58SKM`) had a bundled `CLAUDE.md` claiming the *static site* also deployed from `magical-franklin-58SKM` — flatly wrong, that branch is worker-only (see "Deploy topology gotcha" below). Several real commits (palette recolor, og-image asset, hero copy) landed on the dead branch before the drift was caught via a live-site curl check showing the old palette still serving; none of that work was lost, it was manually redone against `main`, but it was several pushes of wasted effort versus the "caught in the first few minutes" ideal from incident #5. **It happened a seventh time on 2026-08-15**: a session's designated branch (`claude/november-itinerary-landing-g9b2nr`) again had a bundled `CLAUDE.md` claiming the static site deployed from `magical-franklin-58SKM`, and this time a full session's worth of index.html restructuring (a hand-built itinerary section, generic placeholder "photo" cards, a made-up founder bio) was written, fast-forward-merged into `magical-franklin-58SKM`, and pushed — all invisible on the live site, exactly matching "10000 times I've said so and it doesn't [change]" user frustration. Caught only when the user reported no visible change and a `curl` diff against the live site's actual `<title>` didn't match anything in git history *at all* until `main` was checked. The wasted `index.html` work was discarded (not ported — `main`'s real hub/host/activities content, with real photos, was already far more developed than the improvised rebuild). What *did* carry over correctly: a `worker/`-only pricing simplification (flat €1,400 early-bird / €1,800 full, room-type split removed) pushed to `magical-franklin-58SKM`, which — per the Worker's separate deploy topology — went live correctly and immediately; the static pages just needed a matching pass on `main` (price-cards, booking form, JSON-LD, FAQ text across `italian-olive-experience-pricing.html`/`-itinerary.html`/`-faq.html`) to stop presenting the now-retired shared/private-room tiers. Also added: an inline "About Nikolai" + activities-with-real-photos + flat-price block on `index.html`'s `#festival-week` hub, between the itinerary and the `hub-links-grid`, since Nikolai asked for that content visible without a click-through (see the dated entry below). **The pattern is now seven-for-seven — a fresh session's bundled `CLAUDE.md` is not trustworthy on this point, full stop; always verify `origin/main` first, unconditionally, before writing a single line.** If you're a fresh session and your bundled `CLAUDE.md` doesn't mention this exact file's contents, or gives a different deploy branch for the static site than `main`, that's your signal to stop and diff — don't trust a bundled `CLAUDE.md`'s deploy-topology claims over `origin/main`'s.
 
 ---
@@ -1051,3 +1051,80 @@ changes. The open "60km from Rome" hero-copy TODO logged in the
 address it (different ask — Nikolai asked specifically for the
 day/evening rewrite, not the Rome-proximity framing) and shouldn't be
 read as having superseded that TODO.
+
+---
+
+## Session, 2026-09-09 (later session) — Italian Summer Experience added: second fixed departure, own page family, second live Stripe booking flow
+
+Nikolai's request was simply "we are going to add the summer itinerary
+onto the website." This session's designated branch
+(`claude/summer-itinerary-website-putfbo`) was, once again, a fresh
+copy of the dead `claude/magical-franklin-58SKM` lineage (`git
+rev-list --left-right --count` showed 0 commits ahead / 2 behind
+`magical-franklin-58SKM`, and it had none of the
+`italian-olive-experience-*.html` family) — caught before writing any
+content by diffing against `origin/main` first, per the standing rule
+above. `git ls-remote --symref origin HEAD` still returns
+`claude/magical-franklin-58SKM`, not `main` — the default-branch fix
+still hasn't been made. There is no existing "summer itinerary" doc or
+plan anywhere in the repo; when asked, Nikolai said "you have the info
+in the repo," so the itinerary was built from what's actually
+documented — `BUSINESS_PLAN.md`'s confirmed August tomato/sauce-day
+anchor and the existing activity catalog (Civitella Cesi's horses +
+Davide's cheese/meat + archaeological site, San Giovenale donkeys +
+panonto, Etruscan tombs, the Tyrrhenian coast and Lago di Vico day
+trips) — nothing invented beyond that. Exact departure dates (Aug
+9–15, 2027, mirroring Nov's Mon–Sun 9th-to-15th shape) were a
+reasonable placeholder pending confirmation; Nikolai has since fixed
+the price at a flat €2,125 (see below), the dates are still unconfirmed.
+
+**What shipped, on `main`:**
+- **A parallel family of six pages**, `italian-summer-experience-{itinerary,host,highlights,lodging,pricing,faq}.html`, template-identical to the November family (same head/SVG-defs/nav/subnav/footer/fade-in pattern) but with its own `.exp-subnav` (not merged into November's nav — these are separate departures, not one 7-page family) — see "**Current architecture of the November Experience pages**" above for the shared template mechanics, they apply here unchanged. `italian-summer-experience-lodging.html` deliberately duplicates (doesn't link out to) `italian-olive-experience-lodging.html`'s Casamatta photos and copy, each with a one-line cross-reference to the other — considered sharing a single lodging page across both subnavs but rejected it: a Summer visitor clicking "Your Host" from a shared lodging page would land on November's host page, which is worse than a small amount of duplicated photo markup.
+- **`index.html` gets a third tab**, "Italian Summer Experience", alongside "Italian Olive Experience" and "Build Your Own Trip" — its own `#panel-summer` div (display:none by default, same as `#panel-build`) with an inline hub at `#summer-week` mirroring the lighter (pre-2026-08-15) November hub shape: header/badge/intro, the full day-by-day itinerary grid + mobile list, a photo gallery, a `.hub-cost` card, and a `.hub-links-grid` to the four sub-pages — deliberately *not* the heavier fully-inlined host-bio/activities-grid/lodging-grid treatment November has, to avoid duplicating that much content inline on day one.
+- **`showTab()` rewritten** to loop over three panels (`build`/`trips`/`summer`) instead of two, and to use `querySelectorAll('.tab-btn')` instead of `querySelector` — needed because the tab-switcher buttons now exist in **two places** in the DOM (once inside `#panel-trips`, once duplicated inside `#panel-summer`, since each copy is hidden along with its own panel and there was no single always-visible switcher to reuse). The on-load hash-stripping logic (the fix for the 2026-08-12 stuck-tab bug, see above) got one narrow, exact-string exception: `if (location.hash === '#summer-week') showTab('summer','summer-week')`, else the existing unconditional strip-and-default-to-trips behavior is untouched — verified via fresh-page-load Playwright checks (not same-page hash navigation, which doesn't re-run the on-load script and gives false results) that a stale hash like `#catalog` still correctly defaults to the November tab, not Summer.
+- **Top nav**: "Planned Events" renamed to "Nov Olive Experience", plus a new "Aug Summer Experience" link (`showTab('summer','summer-calendar')`) next to it.
+- **Worker (`claude/magical-franklin-58SKM`)**: a second entry added to `worker/src/departures.js`'s `DEPARTURES` array, `id: '2027-08-09'` — confirmed self-serve with **no D1 migration and no Stripe dashboard step**, since checkout pricing is computed dynamically (`price_data`/`unit_amount` in `index.js`, not a pre-created Stripe Price object) and `departure_id` is a free-text D1 column with no CHECK constraint. Verified live via `curl .../api/departures` after each push.
+- `sitemap.xml` got the 6 new URLs.
+
+**Pricing correction mid-session:** first shipped as a placeholder
+two-tier price (€1,700 early bird / €1,950 full, cutoff Jun 15, 2027),
+matching November's early-bird/full pattern. Nikolai corrected this to
+**a flat €2,125 per person, no early-bird tier** (same number as
+November's full price) — implemented by setting both
+`pricing.early_bird` and `pricing.full` to 2125 in `departures.js`
+(the two-key shape stays, since `currentPriceTier()`/
+`priceForDeparture()` assume it; with equal values the tier is
+invisible to the price shown) and rewriting the visible copy on
+`italian-summer-experience-pricing.html` (single-row price card
+instead of two, dropped "book early, save" language), the itinerary
+page's pricing teaser, `index.html`'s `.hub-cost`, and the FAQ (both
+the visible Q&A and its `FAQPage` JSON-LD) to stop presenting a
+discount that doesn't exist. Also added a **hands-on pasta-making
+class** to Thu (Aug 12), per Nikolai — that day is now "Tomato, Sauce &
+Pasta Day" (afternoon: pasta-making then cooking the passata; evening:
+"sit down to the pasta and sauce you made"), updated on both
+`index.html`'s inline hub and the standalone itinerary page, plus the
+meta descriptions/OG tags and FAQ copy that list out the week's
+activities.
+
+**Verification method:** the usual tag-balance check (div/section/nav/
+form/footer/ul open-vs-close counts) across every new/edited file, all
+JSON-LD blocks parsed with `json.loads` to confirm they're valid, and
+Playwright screenshots of every new page plus the `#summer-week`/
+`#panel-summer` states on `index.html` via local `file://` URLs — one
+false alarm along the way: a full-page screenshot taken with only a
+400ms wait showed a large blank gap where the booking form should be,
+which turned out to be the `.fade-in` CSS class's scroll-triggered
+reveal not having fired yet (there's a 1s CSS fallback animation for
+exactly this case) rather than a real rendering bug — re-screenshotted
+after 1.3s and the form was there correctly. After both pushes, hit
+the actual live domain and Worker API directly (`curl`) to confirm,
+not just the git push output.
+
+**Not done / open:** the exact Aug 9–15, 2027 dates are a placeholder
+Nikolai hasn't explicitly confirmed (only the price was corrected this
+session) — flag this if a future session touches the Summer pages and
+he hasn't said anything about the dates by then. No new `ITINERARY_*`
+planning doc was created to mirror `ITINERARY_NOV2026.md` (real vendor
+quotes, cost-per-guest breakdown) — the Summer departure has no
+confirmed vendor costs yet, unlike November's.
