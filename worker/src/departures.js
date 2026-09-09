@@ -23,6 +23,24 @@ export const DEPARTURES = [
       early_bird_until: '2026-09-15',
     },
   },
+  {
+    id: '2027-08-09',
+    label: 'August 9–15, 2027',
+    start_date: '2027-08-09',
+    end_date: '2027-08-15',
+    capacity: 8,
+    currency: 'eur',
+    active: true,
+    // Placeholder pricing pending Nikolai's confirmation — matches the
+    // Italian Summer Experience pages on the static site.
+    pricing: {
+      early_bird: 1700,
+      full: 1950,
+    },
+    pricing_windows: {
+      early_bird_until: '2027-06-15',
+    },
+  },
 ];
 
 export function listDepartures() {
