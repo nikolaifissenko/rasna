@@ -1,6 +1,49 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-08-16_
+_Last updated: 2026-09-09_
+
+## 2026-09-09 update: checked live bookings, ADMIN_PASSWORD now stored as a Claude Code environment variable — read this before repeating the credential dance
+
+**If you're a future session and Nikolai asks "are there any paid bookings" or
+similar: check for an `ADMIN_PASSWORD` environment variable first**
+(`env | grep ADMIN_PASSWORD`). If it's set, `curl -u admin:$ADMIN_PASSWORD
+https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin/bookings.csv`
+directly — no Cloudflare token needed, no dashboard steps, no asking
+Nikolai for anything. This should be a 30-second check, not a
+multi-message ordeal.
+
+**If the env var is missing or the password in it 401s:** the Cloudflare
+secret and the Claude Code environment variable can drift out of sync
+(one gets reset without the other being updated). Don't guess passwords
+or improvise Cloudflare API tokens through several rounds of trial and
+error — that's what happened this session and it took ~20 messages to
+recover. Instead, ask Nikolai directly to: (1) open Cloudflare dashboard
+→ Workers & Pages → **rasna-booking-api** → Settings → Variables and
+Secrets → set a new `ADMIN_PASSWORD`, and (2) add the same value as an
+environment variable named `ADMIN_PASSWORD` in Claude Code → Settings →
+Environments → **"Nikolai"** (`env_019S1ttrXdajYcAJqoTPL2no`) →
+Environment Variables. Both steps are dashboard clicks, no CLI needed on
+his end. Once he confirms, it'll be in `env` for this and all future
+sessions — **never write the password itself into any file in this
+repo**, that's an explicit standing rule (see Credentials section below)
+and doing it anyway wouldn't even solve the stated problem, since a
+value in git history isn't "sync'd" with Cloudflare if either side
+rotates.
+
+**Booking status as of 2026-09-09, ~17:55 UTC (checked via `/admin/bookings.csv`):**
+**Zero paid bookings.** All 16 rows in D1 are `pending` or `expired` —
+mostly automated test/diagnostic entries (`E2E Test Guest`, `Diagnostic
+Check 1-4`, `Claude E2E Test`) from the 2026-07-18 to 07-23 development/
+testing window, plus two rows under Nikolai's own name/email (ids 9, 13,
+also pending/expired, not real payments). Nothing dated after
+2026-07-23. No real customer has completed checkout for the Nov 9-15
+departure yet.
+
+**Also flagged to Nikolai:** several scoped Cloudflare API tokens were
+pasted into chat during this session's troubleshooting (to get
+`ADMIN_PASSWORD` working again after it had been deleted). They're
+short-lived/narrowly-scoped, but he should revoke the unused ones from
+dash.cloudflare.com → API Tokens once confirmed no longer needed.
 
 ## Liability waiver & guest signature form (added 2026-08-16)
 
