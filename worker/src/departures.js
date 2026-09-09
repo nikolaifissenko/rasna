@@ -31,11 +31,13 @@ export const DEPARTURES = [
     capacity: 8,
     currency: 'eur',
     active: true,
-    // Placeholder pricing pending Nikolai's confirmation — matches the
-    // Italian Summer Experience pages on the static site.
+    // Flat price per Nikolai (matches November's full price) — no
+    // early-bird tier for this departure. Both keys stay equal since
+    // currentPriceTier()/priceForDeparture() below assume the two-key
+    // shape; the pricing_windows date is inert with equal values.
     pricing: {
-      early_bird: 1700,
-      full: 1950,
+      early_bird: 2125,
+      full: 2125,
     },
     pricing_windows: {
       early_bird_until: '2027-06-15',
