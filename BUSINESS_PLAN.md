@@ -351,7 +351,7 @@ morning: Bar Paradiso.**
 | Wed Aug 4 | Spaghetti with the fresh tomatoes left over from sauce-making | **Il Cavone** |
 | Thu Aug 5 | Lakeside picnic at Lago di Vico, after Palazzo Farnese | **La Sirenetta**, sunset |
 | Fri Aug 6 | **Il Gabbiano**, Sant'Agostino — spaghetti alle vongole and similar | **Emiliano's charcuterie aperitivo, terrace** |
-| Sat Aug 7 | Open — not decided yet | **At the sagra** — Blera has one somewhere every August weekend per Nikolai; which one on Aug 7, 2027 still needs naming closer to the date |
+| Sat Aug 7 | Wherever's near Civitella Cesi — close to the donkeys/Davide, no name picked yet | **At the sagra** — Blera has one somewhere every August weekend per Nikolai; which one on Aug 7, 2027 still needs naming closer to the date |
 | Sun Aug 8 | — (departure) | — |
 
 **Worth flagging on copy, not itinerary:** the live site's intro line
