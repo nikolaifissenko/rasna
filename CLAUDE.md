@@ -993,3 +993,61 @@ edit. If Nikolai confirms he wants this, do it on `main` per the usual
 topology, verify the actual render (not just the diff — see the lesson
 two sections up), and log it here and in `BOOKING_STATUS.md` or
 `INSTAGRAM_STRATEGY.md` as appropriate once shipped.
+
+---
+
+## Session, 2026-09-09 — branch-drift again (caught immediately, no work lost); hero tagline rewrite
+
+**Branch drift, same shape as every prior incident.** This session's
+designated branch (`claude/rasna-writing-style-gteln9`) was, again, a
+descendant of the dead `claude/magical-franklin-58SKM` lineage (`git
+merge-base --is-ancestor origin/main HEAD` failed, 64 commits of
+worker-only history not shared with `main`). `git ls-remote --symref
+origin HEAD` still returns `claude/magical-franklin-58SKM`, not
+`main` — the repo's default branch is **still** misconfigured, this is
+now confirmed across many sessions since 2026-08-20; still needs
+Nikolai or another repo admin to fix it in Settings → Branches
+(default branch → `main`), one click, still not done. Caught before
+any content was written this time: `git checkout -B
+claude/rasna-writing-style-gteln9 origin/main` reset the branch to the
+real deploy source before touching `index.html`. No work was lost or
+redone.
+
+**What shipped, on `main`:**
+- Nikolai forwarded a friend's comment ("J") that a NYT travel piece
+  about Gleneagles (Scotland) read stylistically like Rasna's site,
+  with the excerpt pasted. Read as a request for market-research
+  commentary, not a code task at first — gave a direct assessment: the
+  surface similarity is real (evocative, sensory prose) but the
+  underlying positioning is opposite (Gleneagles sells staged luxury
+  hospitality; Rasna's whole brand, per `INSTAGRAM_STRATEGY.md`'s
+  Why-How-What doctrine, is built *against* exactly that "performance"
+  register). The one transferable technique: the article's day/evening
+  contrast sentence structure, which happens to map onto Rasna's real
+  offering (fieldwork by day, family meals by evening) but wasn't
+  being said anywhere in one line.
+- Nikolai confirmed he wanted this applied to the hero. Rewrote
+  `index.html`'s `.tagline` (site-wide hero, under the `.hero-hook`
+  "No more TikTok itineraries." line) from "Real Italy, off the
+  influencer trail..." to a version that opens on the day/evening
+  contrast: "Days spent up an olive ladder or riding through Etruscan
+  ruins. Evenings at a local family's table, eating what you helped
+  make. Small-group expeditions in Blera, a hill town most guests have
+  never heard of, led by someone who's called it home since he was
+  born." Pushed straight to `main`, verified live via a background poll
+  against the actual served HTML (not just the GitHub Actions run
+  status) before reporting it done.
+- Also found and removed 2 em dashes inside a `<script>` comment
+  (not visible copy) that the 2026-08-11 sitewide em-dash removal had
+  missed — Nikolai flagged "REMEMBER NO DASHES" emphatically enough
+  that it was worth cleaning up even though comments aren't
+  user-visible. Grepped the whole file for the em-dash character to
+  confirm zero remain anywhere in `index.html`, not just in the
+  touched line.
+
+**Nothing else changed this session** — no pricing, booking, or worker
+changes. The open "60km from Rome" hero-copy TODO logged in the
+2026-09-06 entry above is still open; this session's hero edit didn't
+address it (different ask — Nikolai asked specifically for the
+day/evening rewrite, not the Rome-proximity framing) and shouldn't be
+read as having superseded that TODO.
