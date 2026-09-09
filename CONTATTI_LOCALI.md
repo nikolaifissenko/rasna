@@ -17,16 +17,15 @@ Obiettivo di questa fase: trasformare la rete di conoscenze a Blera in un primo 
 | Renzo | Lavorazione del cuoio (borse/cinte) | disponibilità alta — la dimostrazione potrebbe essere **gratuita**, dato che gli ospiti probabilmente acquisterebbero la sua merce dopo aver visto come la fa (vantaggioso per entrambi) |
 | Maneggio Civitella Cesi | Passeggiate a cavallo | possibile attività complementare/escursione — da contattare per capire disponibilità e modalità con piccoli gruppi |
 | Francesco Lierati | Da definire | da contattare |
-| La Torretta | Possibile partner (ristorazione/locale) | da contattare |
+| La Torretta | Ristorante — cena del giorno di arrivo, itinerario di agosto | scelto da Nikolai (2026-09-09) come trattoria del Day 1; da contattare formalmente |
 | Bar Etruria | Possibile partner (locale/ritrovo) | da contattare |
 | Beccone Albergo | Possibile partner — alloggio | ✅ CONFERMATO — tariffe confermate, vedi sezione Alloggio sotto |
 | B&B La Ripa (Antonella) | Alloggio partner | ✅ CONFERMATO tariffa — ⚠️ NON DISPONIBILE per la settimana 9–15 novembre 2026 — vedi sezione Alloggio sotto |
 | Poggio al Sasso (agriturismo) | Possibile alloggio — DA VERIFICARE | segnalato come probabilmente chiuso, da confermare prima di considerarlo |
 | La Sirenetta (Lago di Vico) | Ristorante — cena al tramonto, giornata Lago di Vico/Palazzo Farnese | Nikolai conosce il proprietario da sempre — stesso tipo di asset relazionale (non più Renzo, escluso dagli itinerari); non ancora contattato formalmente per gruppi Rasna |
-| Ristorante di pesce, Sant'Agostino | Ristorante — pranzo giornata al mare (spaghetti alle vongole ecc.) | Nikolai lo conosce e lo consiglia — **nome ancora da confermare** prima di poterlo loggare come contatto vero |
+| Il Gabbiano (Sant'Agostino) | Ristorante — pranzo giornata al mare (spaghetti alle vongole ecc.) | Nikolai lo conosce e lo consiglia; non ancora contattato formalmente per gruppi Rasna |
 | Il Cavone (cantina, Blera) | Cena in cantina — elemento fisso di ogni partenza, non opzionale | collegata al Cantine Festival (§1 `BUSINESS_PLAN.md`, secondo weekend di novembre); non ancora contattata formalmente per gruppi Rasna |
 | Bar Paradiso (Blera) | Colazione — tutte le mattine, ogni partenza | non ancora contattato formalmente per gruppi Rasna |
-| Trattoria, Blera | Cena del primo giorno (arrivo) | **nome ancora da confermare** |
 
 *(Aggiorna questa tabella man mano che emergono altri nomi — diventa la base operativa di tutta la fase di contatto.)*
 
@@ -144,6 +143,17 @@ Alla fine di questo giro di conversazioni, dovresti avere:
 
 - **Nota:** questa è l'unica settimana di novembre attualmente rilevante per Rasna — coincide esattamente con la partenza fissa già aperta a prenotazioni sul sito (`worker/src/departures.js`, capienza 8, €1.825/persona early bird fino al 15/09/2026, poi €2.125/persona). Il B&B non era comunque ancora formalmente confermato come alloggio per quella partenza (era ancora "da contattare" — vedi `BUSINESS_PLAN.md` §7), ma era il lead principale. Dato che Da Beccone è ora confermato (vedi sopra), è la scelta più immediata come alloggio alternativo per la partenza del 9–15 novembre — verificare capienza per 8 persone.
 - **Da verificare con Antonella:** se altre settimane sono libere (per usarla su future partenze non-novembre), e quante camere ha disponibili in totale — serve capienza per gruppi di 6-10 persone.
+
+### CASAMATTA
+- **Ruolo:** Alloggio — scelta di Nikolai per la settimana di agosto
+  (`BUSINESS_PLAN.md` §10, partenza Sauce Day Aug 2–8, 2027)
+- **Stato:** indicato da Nikolai (2026-09-09) — **non ancora
+  contattato formalmente, nessuna tariffa raccolta**. Una sessione
+  precedente ha lavorato su layout appartamento per Casamatta (branch
+  `claude/casamatta-apartment-layouts-kavunf`, non mai fuso in questa
+  branch) — da recuperare se utile prima di contattarli.
+- **Da fare:** tariffe e disponibilità per le date reali di agosto
+  2027, capienza per il gruppo.
 
 ## 9. Trasporto — furgone 9 posti (partenza 9–15 novembre 2026)
 

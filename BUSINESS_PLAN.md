@@ -281,13 +281,12 @@ already validated and year-round (Davide, Emiliano, Lavinia's donkey
 trek). **Nothing new needs validating with Maria Grazia for this
 draft** — unlike the spring/asparagus idea, which does.
 
-**This is a mock itinerary, not a live listing.** Two things gate
-turning it into an actual bookable departure (adding it to
-`worker/src/departures.js` and the site): lodging availability for the
-specific August 2027 dates (Da Beccone / B&B La Ripa haven't been
-asked about summer yet — only the Nov week is confirmed), and the
-Partita IVA / pacchetto turistico compliance blocker in §9, which gates
-selling *any* additional multi-day package, not just this one.
+**This is a mock itinerary, not a live listing.** Lodging is decided —
+**Casamatta**, per Nikolai (2026-09-09) — but not yet contacted or
+priced (see `CONTATTI_LOCALI.md` §8). The remaining gate is the
+Partita IVA / pacchetto turistico compliance blocker in §9, which
+applies to selling *any* additional multi-day package, not just this
+one.
 
 **Draft dates: Monday, August 2 – Sunday, August 8, 2027.** Chosen
 deliberately before Ferragosto (Aug 15) — tomatoes are in season, and
@@ -297,24 +296,19 @@ shape as the November week, hands-on activities scheduled early to
 beat the August heat, indoor/water activities in the hottest part of
 the week.
 
-**Sagra check (2026-09-08):** no local festival confidently falls
-inside this window. Blera's own **Sagra delle Maccarone Biedane**
-(part of the town's Festa del Volontariato) ran Aug 1–3, 2025 (Fri–Sun)
-— looks tied to the first weekend of August rather than a fixed date,
-which in 2027 is **Sat Jul 31 – Sun Aug 1**, one day before this draft
-starts. Blera's **Sagra del Tartufo** runs end-of-month (Aug 28–31,
-2026 pattern), too late to matter here. Villa San Giovanni's Sagra
-della Pezzata (Aug 15–16) sits on Ferragosto weekend, already excluded
-on purpose. **If catching Blera's own sagra matters, shift the draft a
-few days earlier (e.g. Sat Jul 31 – Fri Aug 6)** — worth revisiting
-once 2027 dates are actually published. [Sagra delle Maccarone Biedane](https://www.eventidellatuscia.it/123-agosto-2025-blera-sagra-delle-maccarone-biedane/), [Sagra del Tartufo](https://www.eventidellatuscia.it/28293031-agosto-2026-blera-sagra-del-tartufo/), [Sagra della Pezzata](https://www.eventidellatuscia.it/1516-agosto-2026-villa-s-giovanni-in-tuscia-sagra-della-pezzata-2/)
+**Sagra check (2026-09-08, corrected 2026-09-09):** the web search
+above only turned up two named festivals (Sagra delle Maccarone
+Biedane, Sagra del Tartufo) and concluded neither confidently lands on
+Sat Aug 7, 2027. **Nikolai corrected this with local knowledge: there's
+a sagra somewhere in Blera every weekend in August**, which local event
+listings don't fully capture (small weekly/neighborhood ones don't all
+get individual web pages). So Saturday dinner at the sagra stands —
+just confirm which one closer to the date, since "every weekend" means
+the specific sagra on Aug 7, 2027 isn't named yet. [Sagra delle Maccarone Biedane](https://www.eventidellatuscia.it/123-agosto-2025-blera-sagra-delle-maccarone-biedane/), [Sagra del Tartufo](https://www.eventidellatuscia.it/28293031-agosto-2026-blera-sagra-del-tartufo/)
 
 **Renzo dropped from this itinerary** (leatherwork removed entirely,
 per Nikolai) — consistent with §6, where he was already cut from the
-client-facing landing page. **Default dinner venue is Nikolai's own
-terrace** unless a day calls for a specific place (Il Cavone, La
-Sirenetta, the Sant'Agostino seafood restaurant below) — most evenings
-without a named venue below should be read as terrace dinners.
+client-facing landing page.
 
 - **Day 1 · Mon Aug 2 — Arrival in Blera.** Pickup, settle in, walk the
   old town at golden hour.
@@ -327,8 +321,8 @@ without a named venue below should be read as terrace dinners.
   passata the traditional way alongside Maria Grazia, a full day at
   the stove and the table. Everyone leaves with their own jars.
 - **Day 4 · Thu Aug 5 — Lago di Vico & Palazzo Farnese.** Caprarola's
-  Renaissance palace, then the lake shore. Dinner at **La Sirenetta**,
-  sunset — moved from lunch to dinner per Nikolai.
+  Renaissance palace, then the lake shore, dinner at **La Sirenetta**
+  at sunset.
 - **Day 5 · Fri Aug 6 — Sant'Agostino Beach.** Beach day at
   Sant'Agostino.
 - **Day 6 · Sat Aug 7 — Civitella Cesi.** Early-morning donkey trek
@@ -340,47 +334,39 @@ without a named venue below should be read as terrace dinners.
   to Rome or Viterbo.
 
 **Logged in `CONTATTI_LOCALI.md`** (corrected/added below): La
-Sirenetta moved to Lago di Vico (not Sant'Agostino), Il Cavone,
-Bar Paradiso. The Sant'Agostino seafood restaurant and Monday's
-trattoria still need names from Nikolai.
+Sirenetta (Lago di Vico), Il Cavone, Bar Paradiso, La Torretta, Il
+Gabbiano (Sant'Agostino), and Casamatta as lodging — all per Nikolai,
+2026-09-09. None contacted formally yet.
 
 ### Meals, day by day
 
-Built directly from Nikolai's day-by-day answers, 2026-09-08 — this
+Built directly from Nikolai's day-by-day answers, 2026-09-08/09 — this
 replaces every earlier draft of the meal plan. **Breakfast every
 morning: Bar Paradiso.**
 
 | Day | Lunch | Dinner |
 |---|---|---|
-| Mon Aug 2 | On their own — arrival timing varies by flight, guests sort their own food | Trattoria in Blera — **name TBD** |
+| Mon Aug 2 | On their own — arrival timing varies by flight, guests sort their own food | **La Torretta** |
 | Tue Aug 3 | Picnic among the tombs | Terrace — **Nikolai's own tuna, zucchini & lemon pasta**, gelato |
-| Wed Aug 4 | Spaghetti with the fresh tomatoes left over from sauce-making | **Il Cavone** — moved here from Thursday |
-| Thu Aug 5 | Lakeside picnic at Lago di Vico, after Palazzo Farnese | **La Sirenetta**, sunset — moved here from lunch |
-| Fri Aug 6 | **Sant'Agostino** — spaghetti alle vongole and similar | **Emiliano's charcuterie aperitivo, terrace** — moved here from Saturday |
-| Sat Aug 7 | Open — not decided yet | **At the sagra** — see flag below, not confirmed there is one |
+| Wed Aug 4 | Spaghetti with the fresh tomatoes left over from sauce-making | **Il Cavone** |
+| Thu Aug 5 | Lakeside picnic at Lago di Vico, after Palazzo Farnese | **La Sirenetta**, sunset |
+| Fri Aug 6 | **Il Gabbiano**, Sant'Agostino — spaghetti alle vongole and similar | **Emiliano's charcuterie aperitivo, terrace** |
+| Sat Aug 7 | Open — not decided yet | **At the sagra** — Blera has one somewhere every August weekend per Nikolai; which one on Aug 7, 2027 still needs naming closer to the date |
 | Sun Aug 8 | — (departure) | — |
-
-**⚠️ Saturday dinner depends on a sagra that isn't confirmed for that
-date.** Per the sagra check above, Blera's own festival tracks the
-first weekend of August, which in 2027 is **Jul 31–Aug 1** — one day
-*before* this draft week even starts, not Aug 7. Either a sagra is
-confirmed to actually be running Sat Aug 7, 2027 once real dates
-publish, or Saturday needs a fallback dinner plan (or the whole week
-shifts a few days earlier — already flagged as an option above).
 
 **Worth flagging on copy, not itinerary:** the live site's intro line
 says *"every meal is traditional home-cooked"* (§6) — this week now
 leans on real restaurant/bar partners for breakfast (Bar Paradiso),
 Wednesday and Thursday dinner (Il Cavone, La Sirenetta), Friday lunch
-(Sant'Agostino), and Monday dinner (a trattoria) — genuine strength
+(Il Gabbiano), and Monday dinner (La Torretta) — genuine strength
 (real, personal access), but not literally "home-cooked" for any of
 those. If this itinerary goes live as written, that intro line needs
 a small edit so it doesn't overpromise.
 
 **Before this can go live, in order:**
-1. Ask Da Beccone / B&B La Ripa (or a third option) about availability
-   and rates for early August 2027 — nothing's been asked about summer
-   dates yet, only the Nov week.
+1. Contact Casamatta, La Torretta, Il Gabbiano, Il Cavone, La
+   Sirenetta, and Bar Paradiso to confirm availability/rates for early
+   August 2027 — none of them have been formally contacted yet.
 2. Resolve the P.IVA / pacchetto turistico compliance blocker (§9) —
    applies to this listing too, not just November's.
 3. Only then: add the departure to `worker/src/departures.js` and give
