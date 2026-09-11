@@ -2,7 +2,9 @@
 
 ## North Star
 
-Stated directly by Nikolai, 2026-09-11: retire at 45, reach a net worth of $50,000,000, be with Giulia, live in Blera, on a boat, or wherever life leads, freedom is the actual point. Be able to remodel Giulia's house if she wants it, and take care of her. He is committed to this, and every project, Rasna included, is meant to serve it. Full statement also carried in `nikolaifissenko/Nikolai-Life-`. Note the overlap: Blera/Tuscia is both where Rasna operates and one of the places named in this goal, not a coincidence to lose sight of when weighing this venture's priority.
+Stated directly by Nikolai, 2026-09-11: retire at 45, reach a net worth of $50,000,000, be with Giulia, live in Blera, on a boat, or wherever life leads, freedom is the actual point. Be able to remodel Giulia's house if she wants it, and take care of her. He is committed to this, and every project, Rasna included, is meant to serve it. Note the overlap: Blera/Tuscia is both where Rasna operates and one of the places named in this goal, not a coincidence to lose sight of when weighing this venture's priority.
+
+Refined the same day: two goals run concurrently, not sequentially, a liquid freedom number (roughly €1-1.5M) that actually buys the life with Giulia, and $50M on top of it through concentrated equity in one vehicle plus an eventual liquidity event, not through savings compounding. Rasna is currently weighed as optionality for the $50M vehicle question (behind StreetSmart on current evidence), not yet the chosen one. Full statement and reasoning in `nikolaifissenko/Nikolai-Life-`.
 
 Rasna is Nikolai's small-group travel-experience business (Blera/Tuscia,
 Italy). See `BUSINESS_PLAN.md` for the business, `BOOKING_STATUS.md` for
