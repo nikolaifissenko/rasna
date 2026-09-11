@@ -1,5 +1,9 @@
 # Working on this repo
 
+## North Star
+
+Stated directly by Nikolai, 2026-09-11: retire at 45, reach a net worth of $50,000,000, be with Giulia, live in Blera, on a boat, or wherever life leads, freedom is the actual point. Be able to remodel Giulia's house if she wants it, and take care of her. He is committed to this, and every project, Rasna included, is meant to serve it. Full statement also carried in `nikolaifissenko/Nikolai-Life-`. Note the overlap: Blera/Tuscia is both where Rasna operates and one of the places named in this goal, not a coincidence to lose sight of when weighing this venture's priority.
+
 Rasna is Nikolai's small-group travel-experience business (Blera/Tuscia,
 Italy). See `BUSINESS_PLAN.md` for the business, `BOOKING_STATUS.md` for
 the current state of the booking/payment infrastructure, and
