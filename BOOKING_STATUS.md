@@ -1,6 +1,29 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-09-09_
+_Last updated: 2026-09-12_
+
+## 2026-09-12 update: legal/licensing decisions — see `BUSINESS_PLAN.md` §10
+
+Full reasoning lives in `BUSINESS_PLAN.md` §10 (Legal & regulatory
+structure). Summary relevant to this file: **the site is already live in
+Stripe live mode, SEO-optimized, and marketed — the unlicensed-operation
+risk flagged below (2026-08-16) is not hypothetical, it's live for any
+booking that completes right now.** Decision made: keep operating without
+the tourism-operator certificate, fund it from the first paid booking's
+revenue, keep marketing footprint low (no paid ads) until then. Also:
+French/US alternative-entity registration was considered and ruled out —
+doesn't reduce the licensing or tax exposure, and a US LLC would be worse
+(CFC attribution, US Form 5472 filing duty). Open the partita IVA right
+before — not long before, not after — the first confirmed paid booking.
+
+One concrete action item from this: **check `liability-waiver.html` and
+`guest-waiver-form.html` are specific to each activity's actual risks**
+(uneven terrain, animals, tools, physical exertion), not generic "I waive
+all liability" language — under art. 33 Codice del Consumo, generic
+liability-exclusion language in a consumer contract is presumed unfair and
+strikeable by a judge, while risk-specific informed-acceptance language
+holds up better. Revisit the two files against this before the Nov 9–15
+departure.
 
 ## 2026-09-09 update: checked live bookings, ADMIN_PASSWORD now stored as a Claude Code environment variable — read this before repeating the credential dance
 

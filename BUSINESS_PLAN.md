@@ -61,9 +61,9 @@ These aren't separate attractions to manage — they're moments the town already
 ## 2. Why this works
 
 - **Differentiation:** most tour operators sell sights; you sell belonging and participation. Hard to replicate without genuine local ties.
-- **Two-founder fit:**
-  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community
-  - You — international audience know-how, marketing, logistics, English-speaking guest experience
+- **Solo operation, paid local collaborators:** Rasna is Nikolai's business — Maria Grazia (and Davide, Emiliano, Renzo, Nicolò) are paid local hosts/collaborators, not co-founders or equity partners.
+  - Maria Grazia — local relationships, access to families/farms/traditions, credibility with the community (compensated per trip, see Phase 0)
+  - Nikolai — owns the business: international audience know-how, marketing, logistics, English-speaking guest experience
 - **Asset-light start:** no need to own property; partner with existing BnBs/hotels for lodging, and local families/artisans for the experiences themselves.
 
 ## 3. Target customers
@@ -80,10 +80,10 @@ These aren't separate attractions to manage — they're moments the town already
 
 ## 5. Step-by-step phases
 
-### Phase 0 — Align with Maria Grazia (now)
-1. Have an explicit conversation: roles, decision-making, and how profits/costs are split.
-2. Agree on a simple written partnership understanding (doesn't need to be a lawyer-drafted contract yet — just a shared doc both sign off on).
-3. Define who owns what: she owns local relationships/operations on the ground, you own marketing/sales/international guest relations.
+### Phase 0 — Set compensation terms with Maria Grazia (now)
+1. Have an explicit conversation: her role as a paid local host/coordinator (not an equity partner) and how she's compensated per trip.
+2. Agree on a simple written collaboration/compensation understanding (doesn't need to be a lawyer-drafted contract yet — just a shared doc both sign off on).
+3. Define scope: she coordinates local relationships/hosting on the ground for a fee; Nikolai owns the business, marketing, sales, and international guest relations.
 
 ### Phase 1 — Validate and design the offer (1–2 months)
 1. **Validate activities one by one before designing around them** — go through the candidate calendar above and confirm, for each: is there a real person willing to host it, what would they expect to be paid, and how often could they realistically do it? Drop or reframe anything that doesn't check out (this is where Maria Grazia's local knowledge is essential — she already flagged several to look at carefully: vendemmia, pig butchering, wheat harvest, "Nonna").
@@ -107,7 +107,7 @@ These aren't separate attractions to manage — they're moments the town already
 ### Phase 4 — Formalize the business (once you have real bookings)
 1. Choose a legal structure in Italy (and your home country if relevant) — likely a small Italian business entity (e.g., SRL or similar) with help from a local commercialista (accountant) who knows tourism.
 2. Sort out licensing/insurance for hosting tourists and food-related activities (Italy has specific rules for agriturismo / food handling / guiding — a local consultant will save you huge time here).
-3. Formalize partnership terms with Maria Grazia, BnBs, and local families/artisans (written agreements, even simple ones).
+3. Formalize compensation/collaboration terms with Maria Grazia, BnBs, and local families/artisans (written agreements, even simple ones).
 
 ### Phase 5 — Build out the seasonal calendar (6–12 months)
 1. Add a second and third seasonal experience (e.g., olive harvest, then Christmas) using the same playbook from the pilot.
@@ -266,3 +266,81 @@ itself should not go live before 1–2 above are confirmed.
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it
 establishes the belief behind it, rewrite it.
+
+## 10. Legal & regulatory structure — decisions (2026-09-12)
+
+**Solo operation.** Rasna is Nikolai's business. Maria Grazia and the other
+local contacts (Davide, Emiliano, Renzo, Nicolò) are paid collaborators/
+hosts, not co-founders or equity partners — corrected throughout this doc
+(§2, Phase 0, Phase 4).
+
+**Ruled out: registering Rasna outside Italy to dodge Italian
+requirements.** Considered and rejected for both the tourism-operator
+certificate and tax:
+- **France** — EU mutual recognition of package-travel insolvency
+  protection (Directive 2015/2302 art. 18) is real, but only for a
+  *genuinely* established French operator: real infrastructure, an Atout
+  France IM number, French financial guarantee + RC pro insurance, and
+  3 years' documented experience or a qualifying diploma/exam. That
+  registration burden is comparable to the Italian one, not a shortcut —
+  and it doesn't move tax residence either (France applies the same
+  place-of-effective-management test Italy does).
+- **US LLC** — worse, not better. No EU mutual recognition for a non-EU
+  entity at all. Triggers Italy's CFC rules (art. 167 TUIR), attributing
+  the LLC's income straight back to Nikolai personally, plus quadro RW
+  foreign-asset-reporting exposure. A single-member LLC also creates a
+  US Form 5472 filing obligation ($25k/year penalty if missed) regardless
+  of any US income. This exact pattern (EU service, EU controller, non-EU
+  shell) is also a known red flag for payment-processor compliance checks
+  (Stripe).
+- Client nationality (mostly American) doesn't change any of this — the
+  license/tax question follows where the trader is established and where
+  the service is delivered, not the client's residence. Worth checking if
+  marketing ever targets specific US states: California's Seller of Travel
+  law (Cal. Bus. & Prof. Code §17550) requires its own registration for
+  any operator, foreign included, actively selling travel to CA residents.
+
+**Decision: operate without the tourism-operator certificate for now,
+fund it from first-tour revenue.** Accepted risk, eyes open:
+- The real exposure isn't a fine — liability insurance is very likely void
+  for an unlicensed activity, so a guest-injury claim would be
+  personal/uncapped. The waiver (`liability-waiver.html` /
+  `guest-waiver-form.html`, see `BOOKING_STATUS.md`) mitigates evidentially;
+  it doesn't substitute for that insurance.
+- ⚠️ **Not hypothetical** — the site is already live in Stripe **live
+  mode**, SEO-optimized, and actively marketed (see `BOOKING_STATUS.md`)
+  selling a real multi-day package (lodging + meals + activities =
+  "pacchetto turistico" under the Codice del Turismo). The unlicensed-
+  operation risk is live for any booking that completes today, not
+  something that starts once a pilot runs.
+- Keep footprint low until certified: no paid ads, no packaging beyond
+  what's already live, warm outreach/word-of-mouth preferred (consistent
+  with the Phase 3 plan already in place).
+
+**Partita IVA timing.** Open it right before the first confirmed paid
+booking — not a year ahead with no income (risks a fixed INPS Gestione
+Commercianti minimum contribution, roughly €2,800–3,000/year even at zero
+revenue, if that's the applicable gestione for ATECO 79.90.20/.19 —
+confirm which gestione applies with the commercialista at that point), and
+not after the payment lands either (DAC7 already reports Airbnb/Booking
+payouts to Agenzia delle Entrate regardless of P.IVA status, so
+undeclared income sitting there is an easy audit catch). Income tax itself
+under regime forfettario is genuinely zero with zero revenue (5% of actual
+revenue via the coefficiente di redditività) — it's the INPS side that can
+have a floor, not the tax.
+
+**Liability waiver — legal limits, not just "have them sign it."** Art.
+1229 c.c. voids any clause excluding liability for gross negligence/
+wilful misconduct, no signature overrides that; art. 33(2)(a) Codice del
+Consumo presumes a clause excluding liability for death/personal injury in
+a consumer contract to be *vessatoria* (unfair) and strikeable by a judge.
+What a waiver *can* do: document informed acceptance of an activity's
+ordinary/inherent risks (uneven terrain, animals, tools, physical
+exertion) — it does not protect against a claim that traces back to
+Nikolai's or a host's own negligence. Keep `liability-waiver.html` /
+`guest-waiver-form.html` specific to each activity's actual risks, not
+generic "I waive all liability" boilerplate — generic language is exactly
+what art. 33 targets and is more likely to be struck down entirely.
+
+⚖️ Informational only, not a substitute for the commercialista/turismo
+lawyer sign-off still pending per §9 above.
