@@ -13,7 +13,7 @@ but no more staring at a blank page first.
 ## 1. Da Beccone — lock down room mix (Nov 9–15, 2026)
 
 **Why now:** this is the site's only live, bookable departure (8 spots,
-€1,825/pp early bird through 2026-09-15, then €2,125/pp), Stripe is in
+€1,825/pp early bird through 2026-10-19, then €2,125/pp), Stripe is in
 live mode, and a real guest could pay before the room mix is settled.
 This is the single most time-sensitive item left.
 
@@ -66,7 +66,7 @@ founding-guest offer, not a hard sell.
 >
 > The first departure is **November 9–15, 2026**, all-inclusive
 > (lodging, food, guiding, activities) for €1,825 if you book by
-> September 15 (€2,125 after). I'm only opening this first trip to
+> October 19 (€2,125 after). I'm only opening this first trip to
 > people I actually know before it goes wider, partly
 > because I'd love to have you there, and partly because it's the pilot —
 > honest feedback (and photos, if you're up for it) is worth more to me
@@ -84,7 +84,7 @@ founding-guest offer, not a hard sell.
 > a small-group trip to an ancient Etruscan town in Italy (olive
 > harvest, rock-cut tombs, horseback riding, real home-cooked meals, 6-10
 > people max) — first departure is Nov 9-15, €1,825 all-in if you book by
-> Sept 15 (€2,125 after). Opening it to people I know before anyone else.
+> Oct 19 (€2,125 after). Opening it to people I know before anyone else.
 > rasnaexperience.com if you want to look — no pressure, just thought of
 > you.
 

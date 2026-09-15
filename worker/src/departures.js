@@ -19,8 +19,12 @@ export const DEPARTURES = [
     },
     // Inclusive cutoff: a booking made on early_bird_until's date still
     // gets the early-bird price; the day after rolls into "full".
+    // Extended 2026-09-15 from 2026-09-15 to 2026-10-19 (3 weeks before
+    // departure) — zero paid bookings as of the original cutoff, per
+    // Nikolai's call to keep the acquisition-outreach discount live
+    // longer instead of losing it the same day outreach starts.
     pricing_windows: {
-      early_bird_until: '2026-09-15',
+      early_bird_until: '2026-10-19',
     },
   },
   {

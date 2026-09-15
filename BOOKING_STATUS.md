@@ -142,7 +142,11 @@ needed. Custom "choose your own dates" bookings default to the same
 - **Pricing (updated 2026-08-20): early-bird / full, date-based —
   supersedes the old spot-based Founding Guest discount described in
   earlier versions of this doc.** €1,825/person for bookings made on or
-  before **2026-09-15**, €2,125/person after. The tier is resolved
+  before **2026-10-19** (extended 2026-09-15 from the original
+  2026-09-15 cutoff — zero paid bookings as of that date, so Nikolai
+  chose to keep the early-bird discount live through the outreach push
+  instead of losing it the same day outreach starts; see
+  `worker/src/departures.js`), €2,125/person after. The tier is resolved
   server-side from the current date (`currentPriceTier()` /
   `priceForDeparture()` in `worker/src/departures.js`), not something a
   guest or the client can influence — same non-gameable principle as the
@@ -312,7 +316,7 @@ call, but availability is no longer a live-booking risk. Worth a final
 written confirmation (exact room count/type) closer to the date, but
 this no longer blocks anything.
 
-## Marketing — filling the November departure (8 spots, €1,825/pp early bird through 2026-09-15, then €2,125/pp)
+## Marketing — filling the November departure (8 spots, €1,825/pp early bird through 2026-10-19, then €2,125/pp)
 
 SEO/Instagram are background, months-long channels — not realistic
 to count on for filling *this* first departure by Nov 9, 2026 (no
