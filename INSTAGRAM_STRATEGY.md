@@ -355,6 +355,46 @@ This is a small flywheel: Instagram content drives traffic to the guide
 pages, the guide pages are built to rank in search independently, and both
 funnel back to the booking section.
 
+## Piano 30 giorni — 15 settembre → 19 ottobre 2026
+
+_Aggiunto 2026-09-15, su richiesta di Nikolai (strategia di acquisizione
+per la partenza del 9–15 novembre). Il piano finisce apposta il 19
+ottobre: è il nuovo giorno di scadenza dell'early bird (esteso oggi da
+`STRATEGIA_ACQUISIZIONE.md` — vedi quel file §0), quindi questi 30 giorni
+di Instagram sono letteralmente la spinta finale prima che il prezzo salga
+da €1.825 a €2.125. Ogni CTA sotto deve riflettere questo, non una data
+generica._
+
+Cadenza: 2–3 post/Reel a settimana (vedi "Posting cadence" sopra) — 11
+uscite in ~4,5 settimane. Ruota i pillar come da regola, non ripete lo
+stesso tipo consecutivamente. Integra, non duplica, quanto già in coda
+sotto ("Content queue / session log") — il founder-story post e il
+sauce-day post restano gli stessi, solo riposizionati dentro il
+calendario.
+
+| # | Settimana | Pillar | Contenuto | Nota |
+|---|---|---|---|---|
+| 1 | 15–21/09 | People (founder) | Founder/origin story — vedi coda sotto, 2026-08-19 | Se le foto non sono ancora arrivate da mamma, non aspettare oltre: sostituire con #2 e recuperare questo appena pronto |
+| 2 | 15–21/09 | FAQ/pratico | Carousel prezzo/incluso — "€1.825 se prenoti entro il 19 ottobre, €2.125 dopo. Tutto incluso: alloggio, pasti, attività, trasporti." Prima menzione pubblica della nuova scadenza | Riusa la struttura del carousel FAQ già scritto sopra, aggiorna la data |
+| 3 | 15–21/09 | Place | "No Tourists Italy" Reel — tombe rupestri/Via Clodia | Usa l'opener fisso della serie |
+| 4 | 22–28/09 | Process | Sauce Day — vedi coda sotto, 2026-08-19 | Se ancora senza filmato reale, usa il placeholder phone-candid (no volti) descritto sopra, sostituire appena c'è girato vero |
+| 5 | 22–28/09 | People | Profilo Davide Paolocci — formaggio/carne, Civitella Cesi | Prima volta che compare come persona, non solo come attività nel sito |
+| 6 | 22–28/09 | Place | Blera golden hour, statico o breve Reel | Nessun CTA aggressivo — post "atmosfera" |
+| 7 | 29/09–05/10 | Pratico/urgenza | Countdown: "8 posti, partenza 9-15 novembre, raccolta olive inclusa" | Primo post esplicitamente orientato a vendere, non solo a costruire fiducia |
+| 8 | 29/09–05/10 | People | Profilo Emiliano — salumi artigianali | — |
+| 9 | 06–12/10 | Process ("No Tourists Italy") | Raccolta olive in anteprima — la partenza di novembre coincide con la stagione | Usa il prompt cover-image riutilizzabile se non c'è ancora girato reale, sostituire appena disponibile |
+| 10 | 06–12/10 | FAQ/pratico | Carousel #2 — "come si differenzia da un tour normale" (già scritto sopra) | — |
+| 11 | 13–19/10 | Pratico/urgenza | Ultimo richiamo: "l'early bird chiude il 19 ottobre" | Pubblicare entro il 17-18/10 per lasciare 1-2 giorni di margine, non il 19 stesso |
+
+**Stories nel frattempo:** senza cadenza fissa, ma se stai facendo
+sopralluoghi/shooting per uno dei post sopra, documenta il dietro le quinte
+— è il posto più naturale per spingere "link in bio" con meno attrito di
+un post fisso.
+
+**Se un post slitta:** l'ordine dei pillar conta più delle date esatte —
+meglio spostare un post di qualche giorno che pubblicare due post dello
+stesso pillar di fila solo per rispettare il calendario.
+
 ## Content queue / session log
 
 Track what's decided-but-not-yet-shot here so planning survives between
