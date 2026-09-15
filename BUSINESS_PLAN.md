@@ -184,13 +184,17 @@ mix di camere con Da Beccone prima di passare Stripe a live mode (vedi
 
 ## 7. Immediate next actions
 
-1. Monitor Formspree inbox for first client inquiries.
+**Superseded 2026-09-15** — items 1 and 3 below are stale (site takes
+real Stripe bookings now, not Formspree inquiries; room mix was
+provisionally resolved by Nikolai's direct call with Da Beccone, see
+`BOOKING_STATUS.md`). Current live priority list is tracked in
+`BOOKING_STATUS.md` ("Not yet done — pick up here next") and
+`STRATEGIA_ACQUISIZIONE.md` §1 — check those first, not this list.
+Kept here only as history:
+
+1. ~~Monitor Formspree inbox for first client inquiries.~~
 2. Pick the pilot experience (recommend tomato sauce for August, or olive harvest for Oct–Dec).
-3. **Lock down room mix with Da Beccone for the Nov 9–15, 2026 departure.**
-   Lodging is confirmed (Da Beccone, rates collected — see RISCHIO CALENDARIO
-   above); what's left is confirming how many doubles vs. singles for this
-   specific group of 8, since single-occupancy guests change the per-guest
-   margin. **Ready-to-send message drafted** — see `OUTREACH_DRAFTS.md` §1.
+3. ~~Lock down room mix with Da Beccone for the Nov 9–15, 2026 departure.~~
 4. Get insurance quote for guest participation in hands-on activities.
 5. Sketch the pilot itinerary hour-by-hour and rough-cost it.
 
@@ -262,6 +266,13 @@ multi-day/overnight experiences (confirmed via their own help docs).
 booked yet. Listing copy/photos can be prepared in parallel (the
 donkey-trek carousel content already shot is reusable), but the listing
 itself should not go live before 1–2 above are confirmed.
+
+**Listing copy is now drafted** (2026-09-15) — see `AIRBNB_EXPERIENCES_COPY.md`
+(title, description, step-by-step itinerary, what's included, host bio,
+pricing). It's written and ready to paste in; the blocker is still
+exactly what it was on 2026-08-27 — no commercialista appointment on the
+calendar yet for P.IVA/ATECO code and pacchetto-turistico compliance.
+Check that file's own warning banner before publishing anything.
 
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it

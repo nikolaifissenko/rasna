@@ -240,17 +240,48 @@ All previous blockers are cleared: D1 migration applied to production
 (2026-07-24, token/account ID provided by Nikolai and used directly,
 not persisted anywhere in the repo), lodging risk resolved (Da Beccone
 confirmed room availability for the group of 8), and a real end-to-end
-paid checkout on the live site succeeded. Remaining items are lower
-priority / optional:
+paid checkout on the live site succeeded. Remaining items, in priority
+order:
 
-1. Send the drafted outreach copy (`OUTREACH_DRAFTS.md`) — warm DM/email,
-   forum post, Instagram bio/captions — still unsent as of last update.
-2. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
+1. **Still the top item, unchanged across multiple sessions: send the
+   outreach.** Copy has existed since 2026-07-24 (`OUTREACH_DRAFTS.md`)
+   and got a full expansion 2026-09-15 (`STRATEGIA_ACQUISIZIONE.md` —
+   8-week acquisition plan, blogger/influencer target list, press
+   outreach template). **None of it has actually been sent to anyone
+   as of 2026-09-15.** Zero paid bookings (checked 2026-09-09, see
+   above) with the departure ~8 weeks out means this is no longer
+   "whenever" — if a fresh session finds this still unsent, that's the
+   first thing to flag to Nikolai, not more copy-writing.
+2. Airbnb Experiences listing copy is drafted (`AIRBNB_EXPERIENCES_COPY.md`,
+   2026-09-15) but **must not be published** — still blocked on P.IVA
+   and pacchetto-turistico compliance (`BUSINESS_PLAN.md` §9), and no
+   commercialista appointment was on the calendar as of the last check.
+   Ask Nikolai if that appointment has happened before touching this.
+3. Instagram 30-day posting plan exists (`INSTAGRAM_STRATEGY.md`,
+   "Piano 30 giorni" section, runs 2026-09-15 → 2026-10-19) — check
+   which numbered post it's currently up to and whether real footage
+   (sauce day, founder-story photos) has replaced the placeholders yet.
+4. Optional cleanup: delete the unused `cloudflare/workers-autoconfig`
    branch (harmless leftover from the first, misconfigured Worker
    deploy attempt — never merged, not connected to anything). Attempted
    2026-07-24 — blocked by a 403 from this session's git remote
    permissions (repo scope here doesn't allow branch deletion); low
    priority, revisit if it becomes annoying.
+
+## ⚠️ Early-bird pricing extended 2026-09-15 — was about to expire with 0 bookings
+
+The Nov 9–15, 2026 departure's early-bird cutoff was originally
+2026-09-15 (today, at the time of this edit) — with zero paid bookings
+and the departure ~8 weeks out, letting it lapse the same day the
+acquisition push (item 1 above) was being written would have removed
+the strongest urgency lever right when it's needed. **Extended to
+2026-10-19** (3 weeks before departure) in `worker/src/departures.js`,
+confirmed by Nikolai. This was pushed straight to
+`claude/magical-franklin-58SKM` (the Worker's actual auto-deploy branch,
+per this repo's `CLAUDE.md` deployment-topology note) so it's live, not
+just committed on a dev branch — verify with `curl
+https://rasna-booking-api.nikolai-fissenko1.workers.dev/api/departures`
+if a future session needs to confirm the current tier/price.
 
 ## SEO
 
@@ -344,9 +375,15 @@ was recommended, in priority order:
 
 **Done (2026-07-24)**: outreach copy is drafted (see `OUTREACH_DRAFTS.md`)
 and the Da Beccone room-mix call has been made — see lodging risk
-section above. Warm-outreach DM/email, forum post, and Instagram copy
-are still unsent; report back what gets responses so the copy can be
-tightened.
+section above. **Done (2026-09-15)**: expanded into a full 8-week
+acquisition plan with a sourced blogger/influencer list and a
+press-outreach template — see `STRATEGIA_ACQUISIZIONE.md` — plus a
+30-day Instagram posting calendar in `INSTAGRAM_STRATEGY.md` timed to
+end on the (now-extended) early-bird deadline. **Still true across every
+session so far: none of the warm-outreach DM/email, forum post, or
+Instagram copy has actually been sent.** Report back what gets
+responses once it is, so the copy can be tightened — but sending it
+is the blocker, not further drafting.
 
 ## Reference
 
