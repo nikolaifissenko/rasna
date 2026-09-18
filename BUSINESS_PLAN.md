@@ -263,6 +263,31 @@ booked yet. Listing copy/photos can be prepared in parallel (the
 donkey-trek carousel content already shot is reusable), but the listing
 itself should not go live before 1–2 above are confirmed.
 
+**UPDATE 2026-09-18 — listing was submitted anyway and REJECTED by Airbnb
+Experiences.** This is the exact outcome flagged above: blockers 1
+(Partita IVA) and 2 (pacchetto turistico compliance — insolvency
+protection + civil liability insurance) were not resolved before
+submission. Most likely rejection causes, per Airbnb's published
+Experience host standards:
+- Missing license/insurance appropriate to a multi-day package with
+  lodging+meals+transport bundled at one price (this is legally a
+  "pacchetto turistico" — Airbnb's own criteria require valid licenses
+  and insurance "a seconda dell'attività", separate from whatever
+  Airbnb itself asks at onboarding).
+- Possibly missing business registration/P.IVA if Airbnb flagged this
+  as a company-run experience.
+- Possible format mismatch: Airbnb Experiences is built around
+  single/few-hour activities, not a full vacation package with lodging
+  included in one price — may need to be restructured as a standalone
+  activity (e.g. just the olive harvest or cheese-making half-day)
+  rather than the whole 6-night trip, with lodging booked separately.
+
+**Next step: get the actual rejection reason from Airbnb's email/dashboard
+before doing anything else** — it will state which specific requirement
+failed rather than requiring guesswork. Do not resubmit until blockers 1–2
+are actually resolved with a commercialista/lawyer, not just patched
+around Airbnb's form.
+
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it
 establishes the belief behind it, rewrite it.
