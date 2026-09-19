@@ -282,11 +282,40 @@ Experience host standards:
   activity (e.g. just the olive harvest or cheese-making half-day)
   rather than the whole 6-night trip, with lodging booked separately.
 
-**Next step: get the actual rejection reason from Airbnb's email/dashboard
-before doing anything else** — it will state which specific requirement
-failed rather than requiring guesswork. Do not resubmit until blockers 1–2
-are actually resolved with a commercialista/lawyer, not just patched
-around Airbnb's form.
+**Follow-up 2026-09-19 — confirmed: Airbnb will never give a specific
+reason.** Escalated through their support chat (bot → human agent,
+"Francesca"). Final answer: Airbnb's Experiences/Services review team does
+not disclose which criterion failed, for approvals or rejections, ever —
+by policy, not a case-by-case refusal. They pointed only to their general
+evaluation factors (clarity/completeness of description, guest-perceived
+value, "adeguatezza della documentazione caricata... permessi, licenze,
+certificazioni", safety/reliability, market fit) and gave generic
+boilerplate advice (better cover photo, more detailed description,
+step-by-step activity sequence). **Do not treat that boilerplate as the
+actual fix** — it's a scripted reply, not specific to this listing.
+
+The real cause is almost certainly the one flagged above and never
+resolved before submitting: no P.IVA, no insolvency protection / RC
+organizzatore di viaggi for what is legally a "pacchetto turistico"
+(lodging + meals + activities + transport bundled at one price over 6
+days). This isn't Airbnb-specific — `BOOKING_STATUS.md`'s liability
+section flags the exact same unresolved licensing gap for the site's own
+direct-booking flow. Airbnb's "documentazione... permessi, licenze,
+certificazioni" evaluation factor is the likely match.
+
+**Decided next steps, run in parallel, not sequentially:**
+1. Book the commercialista/lawyer (turismo specialist) appointment — no
+   longer optional, needed regardless of Airbnb, since the direct-booking
+   site has the identical open compliance question. Resolves P.IVA +
+   RC organizzatore + insolvency protection for the full 6-day package.
+2. In parallel, prepare a **second, separate Airbnb Experience listing**
+   scoped to a single half-day activity with no lodging bundled (e.g.
+   olive harvest, or the Davide Paolocci cheese/meat tasting) — this
+   falls outside the legal definition of "pacchetto turistico", so it
+   doesn't need item 1's insurance to go live, and can start earning
+   reviews/visibility on Airbnb sooner while the full-package compliance
+   work proceeds. Resubmit the full 6-day "Vivi l'Autunno degli Italiani"
+   package only after step 1 is actually resolved, not before.
 
 When writing any new marketing material, check it against this order.
 If a headline or opening line describes an activity before it

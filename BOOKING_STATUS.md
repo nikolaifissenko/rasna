@@ -80,6 +80,14 @@ Two-layer legal setup, developed on `claude/website-liability-section-pwh5gu`
   organizzatore di viaggi) and/or registration as a licensed tour operator
   under Lazio regional law, given it's legally a package-travel organizer.
   A webpage/form protects evidentially; it doesn't substitute for either.
+  **Update 2026-09-19: this exact gap is the likely cause of Airbnb
+  rejecting the "Vivi l'Autunno degli Italiani" Experience listing** (see
+  `BUSINESS_PLAN.md` §9) — Airbnb won't confirm the specific reason, but
+  their listed evaluation factors include license/permit/certification
+  documentation, which lines up. This is no longer a someday item: it
+  blocks both the direct-booking site's own legal footing and any Airbnb
+  package-format listing. Book the commercialista/tourism-lawyer
+  appointment before doing anything else on this front.
 
 ## Deploy-branch drift (found & fixed 2026-08-14)
 
