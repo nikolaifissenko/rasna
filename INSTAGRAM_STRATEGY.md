@@ -361,17 +361,23 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
-### 2026-09-20 — Next post: Sauce Day (real footage confirmed in hand)
+### 2026-09-20 — Next post: Place (tombs/Via Clodia/streets) — no footage yet
 
-Decided: Nikolai confirmed he has the real sauce-day footage (no longer
-needs the placeholder AI phone-candid images discussed earlier). Ready to
-post as-is — caption is the final one already drafted below under
-"Then: Sauce Day." Run all real frames through the post-production
-pipeline (color grade minimum) before posting.
+Sequence so far this cycle: founder story (People) → itinerary/activities
+photos (Practical) → sauce day (Process, **shipped**, using the real
+footage — see "Then: Sauce Day" caption below, now posted). Place is the
+one pillar not touched in this run.
 
-**No tombs/Place footage exists yet** — that's the gap for the post
-after this one. Shoot it (Via Clodia, Grotta Porcina, or a streets clip)
-before defaulting back to Practical/People content again.
+**Blocker: no tombs/Place footage exists yet.** Needs an actual shoot
+(Via Clodia, Grotta Porcina, or a streets walk) before this can post —
+don't default back to another Practical/People post just because it's
+easier; Place hasn't rotated through in a while and the grid needs it.
+
+### 2026-09-20 — SHIPPED: Sauce Day
+
+Posted by Nikolai using real footage (placeholder AI images from the
+original queue entry below were not needed). Caption used: see "Then:
+Sauce Day" entry further down this log for the final text.
 
 ### 2026-09-20 — PARKED: Vendemmia / Cantine Festival
 
