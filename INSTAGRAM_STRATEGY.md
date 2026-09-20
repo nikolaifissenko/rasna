@@ -379,21 +379,42 @@ Posted by Nikolai using real footage (placeholder AI images from the
 original queue entry below were not needed). Caption used: see "Then:
 Sauce Day" entry further down this log for the final text.
 
-### 2026-09-20 — PARKED: Vendemmia / Cantine Festival
+### 2026-09-20 — September post: Vendemmia (one-off framing only)
 
-Nikolai asked about a grape-harvest ("it's wine season") post. **Don't
-post vendemmia as a confirmed Rasna activity** — per `BUSINESS_PLAN.md`
-§"Reality check," it's flagged by Maria Grazia as not validated (no
-confirmed host, no insurance/payment lined up, often done in a single day
-by whoever still does it). Only shoot/post it if a real host is actually
-confirmed hosting it this year.
+Nikolai can get real vendemmia shots this year. Unparked, but with the
+guardrail from `BUSINESS_PLAN.md` §"Reality check" still in force: post
+it as **a day Rasna got to join this year**, not as a standing/repeatable
+Rasna activity — no confirmed host or insurance is lined up for
+vendemmia as a guest activity, so the caption must not imply it's on
+every itinerary. Caption drafted (see below), framed as "this year,"
+"when the call came" — deliberately one-off language, not "join us for
+the grape harvest."
 
-Better, already-validated angle for the same seasonal moment: the
-**Cantine Festival** (second weekend of November, `BUSINESS_PLAN.md`
-§"local moments") — wine cellars open to the public, lands right around
-the **Nov 9–15 departure**, so it doubles as urgency/booking content for
-that exact trip. Parked for now, closer to November — pick this back up
-as a Place/Process post tied to the departure CTA when it's time.
+**Cantine Festival still parked for November** (second weekend, ties to
+the Nov 9–15 departure — see `BUSINESS_PLAN.md` §"local moments") —
+separate from this one-off vendemmia shoot, pick it back up closer to
+the date.
+
+**Caption (final):**
+> Most people think of wine season as something you watch from a tasting
+> room. This year, we picked instead.
+>
+> A local grower let us spend a morning in the vines for this year's
+> vendemmia — harvest here is often done in a single day now, so when the
+> call came that it was happening, we dropped everything and went. No
+> sorting line, no schedule, just hands, crates, and purple-stained
+> fingers.
+>
+> This is Blera, Tuscia — 90 minutes from Rome, zero tour buses. Link in
+> bio if a day like this is what you're actually looking for from Italy.
+>
+> #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
+
+**Format:** Reel or short carousel (vines → picking → crates → hands),
+standard color grade. No closing branded slide if it ships as a Reel.
+
+**Still open after this:** Place/tombs post — no unused Grotta Porcina
+footage confirmed and no new shoot done yet.
 
 ### 2026-09-20 — SHIPPED: Itinerary post (activity photos)
 
