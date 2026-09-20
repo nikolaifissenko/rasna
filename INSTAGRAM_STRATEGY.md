@@ -361,6 +361,49 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
+### 2026-09-20 — Next post: not yet decided — pick Process or Place
+
+Last two posts (founder story, then itinerary/activities photos) were
+People then Practical — don't post a third info-style post in a row.
+Rotate to **Process** (sauce day, if real footage now exists — check
+before defaulting to the placeholder AI phone-candid images) or **Place**
+(a second "No Tourists Italy" streets/tombs Reel). Decide based on
+whichever has actual shootable material in hand; update this entry once
+picked.
+
+### 2026-09-20 — PARKED: Vendemmia / Cantine Festival
+
+Nikolai asked about a grape-harvest ("it's wine season") post. **Don't
+post vendemmia as a confirmed Rasna activity** — per `BUSINESS_PLAN.md`
+§"Reality check," it's flagged by Maria Grazia as not validated (no
+confirmed host, no insurance/payment lined up, often done in a single day
+by whoever still does it). Only shoot/post it if a real host is actually
+confirmed hosting it this year.
+
+Better, already-validated angle for the same seasonal moment: the
+**Cantine Festival** (second weekend of November, `BUSINESS_PLAN.md`
+§"local moments") — wine cellars open to the public, lands right around
+the **Nov 9–15 departure**, so it doubles as urgency/booking content for
+that exact trip. Parked for now, closer to November — pick this back up
+as a Place/Process post tied to the departure CTA when it's time.
+
+### 2026-09-20 — SHIPPED: Itinerary post (activity photos)
+
+Posted by Nikolai — plain photos of the planned activities, not the
+stylized/graphic schedule treatment. **Don't repeat this as a stylized
+itinerary post next** (would be the same Practical-pillar subject twice
+in a row). Fold the stylized "schedule like the website" treatment into
+the **closing branded slide** of the next carousel instead (see "Closing
+branded slide" above) rather than spending a full post on it again.
+
+### 2026-09-20 — SHIPPED: Founder/origin story (childhood in Blera)
+
+Confirmed shipped by Nikolai. Exact final caption/photo pairing wasn't
+captured in this session (he'd mentioned waiting on childhood photos from
+his mom and a real specific memory as of 2026-08-19) — if a future
+session needs the final version for reference/repurposing (e.g. Stories
+highlight), ask Nikolai or check the live profile directly.
+
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 
 Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
@@ -393,7 +436,7 @@ Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
   > #Tuscia #Blera #EtruscanItaly #SlowTravel #ItalyTravel
 - **Status:** shipped.
 
-### 2026-08-19 — Next post: Founder/origin story (childhood in Blera)
+### 2026-08-19 — Founder/origin story (childhood in Blera) — SHIPPED, see 2026-09-20 entry above
 
 Goes out **before** the sauce-day post — moved ahead in the queue.
 
