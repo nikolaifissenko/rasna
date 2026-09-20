@@ -361,15 +361,17 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
-### 2026-09-20 — Next post: not yet decided — pick Process or Place
+### 2026-09-20 — Next post: Sauce Day (real footage confirmed in hand)
 
-Last two posts (founder story, then itinerary/activities photos) were
-People then Practical — don't post a third info-style post in a row.
-Rotate to **Process** (sauce day, if real footage now exists — check
-before defaulting to the placeholder AI phone-candid images) or **Place**
-(a second "No Tourists Italy" streets/tombs Reel). Decide based on
-whichever has actual shootable material in hand; update this entry once
-picked.
+Decided: Nikolai confirmed he has the real sauce-day footage (no longer
+needs the placeholder AI phone-candid images discussed earlier). Ready to
+post as-is — caption is the final one already drafted below under
+"Then: Sauce Day." Run all real frames through the post-production
+pipeline (color grade minimum) before posting.
+
+**No tombs/Place footage exists yet** — that's the gap for the post
+after this one. Shoot it (Via Clodia, Grotta Porcina, or a streets clip)
+before defaulting back to Practical/People content again.
 
 ### 2026-09-20 — PARKED: Vendemmia / Cantine Festival
 
