@@ -25,3 +25,11 @@ See `INSTAGRAM_STRATEGY.md` for caption voice/structure before using any of thes
 
 - `childhood-snowsuit.jpg` — old photo of Nikolai as a young child in a blue
   snowsuit, sitting on a dirt embankment. Personal archive only, not for posts.
+
+## Post ideas backlog (not drafted yet)
+
+- Donkey trek through the Etruscan rock-cut tombs (`donkey-trek-etruscan-tomb-1/2.jpg`)
+  is the strongest unused angle — no existing post or site copy covers a donkey
+  experience inside the tombs specifically. When picked up, draft the caption
+  using `INSTAGRAM_STRATEGY.md`'s voice/structure and the "No Tourists Italy"
+  reel format if it fits.
