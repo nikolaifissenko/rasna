@@ -70,7 +70,14 @@ activity.
 
 ## Hashtag strategy
 
-Keep it tight (8–15 tags, not 30) and mix specificity:
+**Rule (Nikolai, 2026-10-04): exactly 5 hashtags per post, always: the
+top 5 for that post, never more.** Pick them from the pools below: 2 niche,
+2 category, 1 broad. Default set for Blera/olive content:
+`#Tuscia` `#Blera` `#ItalianOliveHarvest` `#SlowTravel` `#ItalyTravel`.
+Swap the category tag to match the post's subject (e.g. `#EtruscanItaly`
+for a tombs post).
+
+Pools to choose from:
 
 **Niche/specific** (low competition, high intent):
 `#Tuscia` `#Blera` `#EtruscanItaly` `#TusciaItalia` `#ViaClodia`
@@ -79,7 +86,7 @@ Keep it tight (8–15 tags, not 30) and mix specificity:
 `#SmallGroupTravel` `#SlowTravel` `#AuthenticItaly` `#ItalyOffTheBeatenPath`
 `#ItalianOliveHarvest`
 
-**Broad reach** (high competition, use 2–3 max):
+**Broad reach** (high competition, use 1):
 `#ItalyTravel` `#VisitItaly` `#ItalyTrip`
 
 ## Sample captions (Why → How → What order)

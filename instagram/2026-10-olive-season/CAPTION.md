@@ -41,6 +41,4 @@ heat) and TusciaTimes (Frantoio Paolocci, Vetralla, pressing since
 > The Italian Olive Experience, 9–15 November, Blera. Early-bird price
 > €1,825 until 19 October. Link in bio.
 >
-> #Tuscia #Blera #TusciaItalia #EtruscanItaly #ItalianOliveHarvest
-> #OliveOil #OlioNuovo #SlowTravel #SmallGroupTravel #AuthenticItaly
-> #ItalyOffTheBeatenPath #ItalyTravel
+> #Tuscia #Blera #ItalianOliveHarvest #SlowTravel #ItalyTravel
