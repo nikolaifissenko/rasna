@@ -1128,3 +1128,35 @@ he hasn't said anything about the dates by then. No new `ITINERARY_*`
 planning doc was created to mirror `ITINERARY_NOV2026.md` (real vendor
 quotes, cost-per-guest breakdown) — the Summer departure has no
 confirmed vendor costs yet, unlike November's.
+
+## 2026-10-04 session: olive-season Instagram carousel, 5-hashtag rule
+
+**Olive season status (as of 2026-10-04):** the 2026/27 harvest is already
+underway across the province of Viterbo, earlier than usual. The crop is
+heavy and clean (the hot summer kept the olive fly down), and Frantoio
+Paolocci in Vetralla has been pressing since 21 Sept. **Risk for the
+Nov 9–15 departure:** with an early, abundant season, small growers around
+Blera may finish picking before Nov 9. Flagged to Nikolai: confirm in
+writing, during October, a grove left unpicked for the group (Day 1) and a
+frantoio still pressing that week (Day 2). The olive-farm seasonality line
+in `BUSINESS_PLAN.md` is still "DA VALIDARE".
+
+**Shipped:** `images/frantoio-unfiltered-oil.jpg` (Nikolai's own mill
+photo; his "Senza filtri." story text was removed by cloning drum texture
+from just below it) and a six-slide 4:5 carousel plus caption in
+`instagram/2026-10-olive-season/` (see its `CAPTION.md`). The slides use the
+site's fonts (Bodoni Moda + Inter) and colours, and contain no em dashes.
+Only Nikolai's own photo is used, none of the scraped site photos, because
+Instagram is more exposed than the site to the licensing risk. **Slide 6
+and the caption show the €1,825 early-bird price, which expires on
+19 Oct 2026.** After that date, re-render slide 6 at €2,125 before reusing
+it.
+
+**Standing rule from Nikolai: exactly 5 hashtags per Instagram post, the top
+5 for that post.** Written into `INSTAGRAM_STRATEGY.md`'s Hashtag strategy
+section, which replaces the old "8–15 tags" guidance.
+
+**Still open:** whether the Instagram Business account is live is
+unconfirmed. GitHub's default branch should be `main` (it is still set to
+`claude/magical-franklin-58SKM`), which is the root cause of the
+branch-drift incidents. Remind Nikolai if it hasn't been changed.
