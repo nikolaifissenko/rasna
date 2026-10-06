@@ -70,6 +70,12 @@ separate manual step from the code push** — don't consider the feature
 "live" until both have happened. Check `BOOKING_STATUS.md` for whether
 a migration is currently pending.
 
+## Checking bookings (added 2026-10-06)
+
+"Do I have bookings?" → `curl -s https://rasna-booking-api.nikolai-fissenko1.workers.dev/status.json`
+(public, counts only, no password). Each paid booking is also forwarded to
+Formspree (`xlgynpjo`) so Nikolai gets an email. Details in `BOOKING_STATUS.md`.
+
 ## Credentials
 
 Never write a live API token, secret key, or password into a file in
