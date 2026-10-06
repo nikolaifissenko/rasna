@@ -1,6 +1,18 @@
 # Booking & Payment Infrastructure — Status
 
-_Last updated: 2026-09-09_
+_Last updated: 2026-10-06_
+
+## 2026-10-06: paid bookings now also go to Formspree
+
+On `checkout.session.completed` the worker now POSTs the booking (name,
+email, guests, trip, amount, booking id) to the Formspree form
+`xlgynpjo` (`notifyFormspree` in `worker/src/index.js`, via `waitUntil`
+so it can't fail Stripe's webhook). Nikolai gets a "NEW PAID BOOKING"
+email for each one. Override with a `FORMSPREE_URL` var if needed.
+
+Quick no-password booking check: `GET /api/departures` → `remaining`
+counts only `paid` rows. 2026-10-06: 8/8 remaining on both departures =
+zero paid bookings.
 
 ## 2026-09-09 update: checked live bookings, ADMIN_PASSWORD now stored as a Claude Code environment variable — read this before repeating the credential dance
 

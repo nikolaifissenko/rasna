@@ -18,6 +18,11 @@ import {
 
 const CHECKOUT_EXPIRY_MINUTES = 30; // Stripe's minimum
 
+// Paid bookings are also forwarded to the same Formspree form the
+// "Build Your Own Trip" enquiries use, so Nikolai gets an email for each
+// one. Override with a FORMSPREE_URL var if the form ever changes.
+const DEFAULT_FORMSPREE_URL = 'https://formspree.io/f/xlgynpjo';
+
 const app = new Hono();
 
 app.use('*', async (c, next) => {
@@ -26,6 +31,28 @@ app.use('*', async (c, next) => {
     origin: allowed.includes('*') ? '*' : allowed,
   })(c, next);
 });
+
+async function notifyFormspree(env, booking, session) {
+  const departure = booking.departure_id ? getDeparture(booking.departure_id) : null;
+  const amount = (session.amount_total ?? booking.amount_total_cents ?? 0) / 100;
+  const res = await fetch(env.FORMSPREE_URL || DEFAULT_FORMSPREE_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+    body: JSON.stringify({
+      _subject: `NEW PAID BOOKING — ${booking.name} x${booking.num_guests}`,
+      source: 'Paid booking (Stripe)',
+      booking_id: booking.id,
+      name: booking.name,
+      email: booking.email,
+      guests: booking.num_guests,
+      trip: departure ? departure.label : booking.preferred_dates || booking.type,
+      amount_paid: `${amount.toFixed(2)} ${(session.currency || booking.currency || 'eur').toUpperCase()}`,
+      notes: booking.notes || '',
+      admin_page: 'https://rasna-booking-api.nikolai-fissenko1.workers.dev/admin',
+    }),
+  });
+  if (!res.ok) console.error(`[booking ${booking.id}] Formspree notify failed: ${res.status} ${await res.text()}`);
+}
 
 function stripeClient(env) {
   return new Stripe(env.STRIPE_SECRET_KEY, { httpClient: Stripe.createFetchHttpClient() });
@@ -229,6 +256,12 @@ app.post('/webhook/stripe', async (c) => {
     if (booking && booking.status === 'pending') {
       await markPaid(c.env.DB, booking.id, session.payment_intent);
       console.log(`[booking ${booking.id}] paid — ${booking.name} <${booking.email}> x${booking.num_guests}`);
+      // Don't hold up Stripe's webhook (or fail it) on the notification.
+      c.executionCtx.waitUntil(
+        notifyFormspree(c.env, booking, session).catch((err) =>
+          console.error(`[booking ${booking.id}] Formspree notify error:`, err.message)
+        )
+      );
     }
   } else if (event.type === 'checkout.session.expired') {
     const session = event.data.object;
