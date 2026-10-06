@@ -14,6 +14,7 @@ import {
   markExpired,
   deleteBooking,
   listBookings,
+  bookingStatusSummary,
 } from './db.js';
 
 const CHECKOUT_EXPIRY_MINUTES = 30; // Stripe's minimum
@@ -59,6 +60,46 @@ function stripeClient(env) {
 }
 
 app.get('/health', (c) => c.json({ ok: true }));
+
+// --- Public, password-free booking status (counts only, no guest data) ---
+async function buildStatus(env) {
+  const rows = await bookingStatusSummary(env.DB);
+  const trips = listDepartures().map((d) => {
+    const r = rows.find((x) => x.type === 'fixed' && x.departure_id === d.id);
+    return {
+      trip: d.label,
+      paid_bookings: r ? r.bookings : 0,
+      guests: r ? r.guests : 0,
+      spots_left: Math.max(0, d.capacity - (r ? r.guests : 0)),
+      capacity: d.capacity,
+      last_paid_at: r ? r.last_paid_at : null,
+    };
+  });
+  const custom = rows.find((x) => x.type === 'custom');
+  return {
+    checked_at: new Date().toISOString(),
+    total_paid_bookings: rows.reduce((n, r) => n + r.bookings, 0),
+    trips,
+    custom_trips_paid: custom ? custom.bookings : 0,
+  };
+}
+
+app.get('/status.json', async (c) => c.json(await buildStatus(c.env)));
+
+app.get('/status', async (c) => {
+  const s = await buildStatus(c.env);
+  const rows = s.trips
+    .map(
+      (t) =>
+        `<tr><td>${escapeHtml(t.trip)}</td><td>${t.paid_bookings}</td><td>${t.guests}</td><td>${t.spots_left} / ${t.capacity}</td><td>${t.last_paid_at ? escapeHtml(t.last_paid_at) + ' UTC' : '—'}</td></tr>`
+    )
+    .join('');
+  return c.html(`<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rasna booking status</title>
+<style>body{font-family:system-ui,sans-serif;margin:1.5rem;color:#222}h1{font-size:1.3rem}.big{font-size:2.2rem;font-weight:700}table{border-collapse:collapse;margin-top:1rem;width:100%;max-width:720px}td,th{border-bottom:1px solid #ddd;padding:.5rem;text-align:left}small{color:#777}</style></head>
+<body><h1>Rasna, paid bookings</h1><div class="big">${s.total_paid_bookings}</div>
+<table><tr><th>Trip</th><th>Paid bookings</th><th>Guests</th><th>Spots left</th><th>Last payment</th></tr>${rows}</table>
+<p>Custom trips paid: ${s.custom_trips_paid}</p><small>Checked ${escapeHtml(s.checked_at)}. Guest details: /admin (password).</small></body></html>`);
+});
 
 // --- Departures + live availability ---
 app.get('/api/departures', async (c) => {

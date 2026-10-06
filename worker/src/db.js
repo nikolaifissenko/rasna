@@ -131,3 +131,19 @@ export async function listBookings(db) {
   const result = await db.prepare(`SELECT * FROM bookings ORDER BY created_at DESC`).all();
   return result.results;
 }
+
+/**
+ * Counts-only summary for the public /status page — no names, emails or
+ * amounts, so it's safe without a password.
+ */
+export async function bookingStatusSummary(db) {
+  const { results } = await db
+    .prepare(
+      `SELECT type, departure_id, COUNT(*) AS bookings, COALESCE(SUM(num_guests), 0) AS guests,
+              MAX(updated_at) AS last_paid_at
+       FROM bookings WHERE status = 'paid'
+       GROUP BY type, departure_id`
+    )
+    .all();
+  return results;
+}

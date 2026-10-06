@@ -10,8 +10,11 @@ email, guests, trip, amount, booking id) to the Formspree form
 so it can't fail Stripe's webhook). Nikolai gets a "NEW PAID BOOKING"
 email for each one. Override with a `FORMSPREE_URL` var if needed.
 
-Quick no-password booking check: `GET /api/departures` → `remaining`
-counts only `paid` rows. 2026-10-06: 8/8 remaining on both departures =
+**No-password booking check:** open
+https://rasna-booking-api.nikolai-fissenko1.workers.dev/status (or
+`/status.json` for curl). Counts only (paid bookings, guests, spots left,
+last payment time per trip). No names, emails or amounts, deliberately,
+since it's public. Guest details still need `/admin` + `ADMIN_PASSWORD`. 2026-10-06: 8/8 remaining on both departures =
 zero paid bookings.
 
 ## 2026-09-09 update: checked live bookings, ADMIN_PASSWORD now stored as a Claude Code environment variable — read this before repeating the credential dance
