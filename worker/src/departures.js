@@ -9,7 +9,9 @@ export const DEPARTURES = [
     end_date: '2026-11-15',
     capacity: 8,
     currency: 'eur',
-    active: true,
+    // Retired 2026-10-10 (0 paid bookings): the olive departure moved to
+    // Nov 8–14, 2027 below, aligned with the Cantine Festival weekend.
+    active: false,
     // Flat per-person pricing, same for every guest — one early-bird
     // price up to a cutoff date, then one full price after (2026-08-14,
     // per Nikolai). No room-type split.
@@ -41,6 +43,24 @@ export const DEPARTURES = [
     // shape; the pricing_windows date is inert with equal values.
     pricing: {
       early_bird: 2125,
+      full: 2125,
+    },
+    pricing_windows: {
+      early_bird_until: '2027-06-15',
+    },
+  },
+  {
+    // Italian Olive Experience 2027: Mon–Sun ending on the Cantine
+    // Festival weekend (Fri Nov 12 – Sun Nov 14, 2027).
+    id: '2027-11-08',
+    label: 'November 8–14, 2027',
+    start_date: '2027-11-08',
+    end_date: '2027-11-14',
+    capacity: 8,
+    currency: 'eur',
+    active: true,
+    pricing: {
+      early_bird: 1825,
       full: 2125,
     },
     pricing_windows: {
