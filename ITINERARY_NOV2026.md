@@ -2,6 +2,8 @@
 
 Concrete day-by-day plan for the pilot group, timed to land on the **Cantine Festival** weekend (second weekend of November — see `BUSINESS_PLAN.md`). Open items are flagged with `TODO`.
 
+> **⚠️ 2026-10-10: festival date unconfirmed.** The festival runs the weekend ending on the second Sunday of November (see `ITINERARY_NOV2027.md`). Nov 1 2026 is a Sunday, the same calendar as 2015, when it ran Nov 6–8. If 2026 follows suit, the festival is the weekend *before* this departure. Confirm with the Pro Loco (prolocodiblera@gmail.com).
+
 ## Monday, November 9
 - Airport pick up and transfer to Blera
 - Welcome aperitivo in the piazza

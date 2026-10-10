@@ -63,7 +63,7 @@ This calendar is the backbone of the business — but it only works if it's buil
 **Local festivals and events — built-in marketing moments:** the Blera area already has a rich calendar of community celebrations that align naturally with the agricultural calendar above and add real festive energy to a trip:
 - **June:** Corpus Domini celebrations
 - **Summer (most weekends):** local "sagre" (food and folk festivals) — frequent, easy to weave into a visit
-- **Second weekend of November:** the Cantine Festival — local wine cellars across town open their doors, and people eat and drink directly inside the cellars; a uniquely atmospheric, only-here event
+- **Weekend ending on the second Sunday of November (Fri–Sun, around San Martino):** the Cantine Festival ("Per San Martino ogni mosto diventa vino", Pro Loco di Blera; 2025: Nov 7–9, 2027: Nov 12–14; see `ITINERARY_NOV2027.md`) — local wine cellars across town open their doors, and people eat and drink directly inside the cellars; a uniquely atmospheric, only-here event
 
 These aren't separate attractions to manage — they're moments the town already creates for itself, which guests get to experience simply by being there at the right time. They make certain departure dates especially compelling and easy to market (e.g., "join us for Cantine Festival weekend").
 
