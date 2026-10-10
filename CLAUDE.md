@@ -1160,3 +1160,24 @@ section, which replaces the old "8–15 tags" guidance.
 unconfirmed. GitHub's default branch should be `main` (it is still set to
 `claude/magical-franklin-58SKM`), which is the root cause of the
 branch-drift incidents. Remind Nikolai if it hasn't been changed.
+
+## 2026-10-10 session: Olive Experience moved to Nov 8–14, 2027
+
+Nikolai asked to move the Olive Experience from 2026 to 2027. Reason found
+this session: the Cantine Festival ("Per San Martino ogni mosto diventa
+vino") runs the weekend ending on the **second Sunday of November**, which
+in 2026 is most likely Nov 6–8, before the old Nov 9–15 departure (see
+`ITINERARY_NOV2027.md`). The 2026 departure had 0 bookings.
+
+- **Site (`main`):** every Nov 9–15 2026 reference across the olive page
+  family, `index.html` hub/hero/JSON-LD, and the guide pages' "Read next"
+  links now says Nov 8–14, 2027; day-by-day dates shifted by one (same
+  weekdays). `DEPARTURE_ID` is `'2027-11-08'` on the pricing and
+  itinerary pages. Early-bird cutoff copy now says Jun 15, 2027 (it was a
+  stale "Sep 15" while the worker said Oct 19).
+- **Worker (`claude/magical-franklin-58SKM`):** `2026-11-09` set
+  `active: false` (kept for history); new `2027-11-08` entry, €1,825
+  early bird until 2027-06-15, €2,125 after. Prices and cutoff are a
+  default carried over from 2026, not confirmed by Nikolai.
+- Not changed: the Oct 2026 Instagram carousel in `instagram/` still
+  shows the 2026 dates and €1,825-until-Oct-19 offer. Don't reuse it as is.

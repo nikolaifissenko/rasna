@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing &amp; Booking | Italian Olive Experience | Rasna</title>
-  <meta name="description" content="Book the Italian Olive Experience, Nov 9-15, 2026 in Blera, Italy. €1,825 per person early bird, €2,125 full price, all-inclusive. Capped at 8 guests.">
+  <meta name="description" content="Book the Italian Olive Experience, Nov 8-14, 2027 in Blera, Italy. €1,825 per person early bird, €2,125 full price, all-inclusive. Capped at 8 guests.">
   <link rel="canonical" href="https://rasnaexperience.com/italian-olive-experience-pricing.html">
   <meta property="og:title" content="Pricing &amp; Booking | Italian Olive Experience">
   <meta property="og:description" content="€1,825 per person early bird, €2,125 full price, all-inclusive. Capped at 8 guests.">
@@ -85,7 +85,7 @@
   <!-- Page intro -->
   <section class="hero" style="min-height:30vh; padding:4rem 2rem 2.5rem; background-image:url('images/card-cantinefestival.jpg');">
     <div class="hero-content">
-      <div class="subtitle">Fixed Departure &middot; Nov 9 to 15, 2026</div>
+      <div class="subtitle">Fixed Departure &middot; Nov 8 to 14, 2027</div>
       <div class="divider"></div>
       <svg class="etruscan-ornament" width="42" height="32" style="color:var(--gold); margin-bottom:0.6rem"><use href="#palmette"/></svg>
       <h1 style="font-size:clamp(2rem, 5vw, 3.4rem); letter-spacing:0.03em; text-transform:none;">Pricing &amp; Booking</h1>
@@ -107,15 +107,15 @@
       <div class="price-cards" id="price-chart-table" style="grid-template-columns:1fr; max-width:420px;">
         <div class="price-card">
           <div class="price-card-icon"><svg width="26" height="26"><use href="#icon-users"/></svg></div>
-          <h3>Nov 9&ndash;15, 2026</h3>
+          <h3>Nov 8&ndash;14, 2027</h3>
           <p class="price-card-sub">Per person, all-inclusive</p>
           <ul class="price-card-tiers">
             <li data-tier="early_bird">
-              <span class="pct-name">Early Bird<em>Book by Sep 15</em></span>
+              <span class="pct-name">Early Bird<em>Book by Jun 15, 2027</em></span>
               <span class="pct-price">&euro;1,825</span>
             </li>
             <li data-tier="full">
-              <span class="pct-name">Full Price<em>After Sep 15</em></span>
+              <span class="pct-name">Full Price<em>After Jun 15, 2027</em></span>
               <span class="pct-price">&euro;2,125</span>
             </li>
           </ul>
@@ -127,7 +127,7 @@
 
       <div class="festival-book fade-in" id="festival-book" style="scroll-margin-top:78px;">
         <div class="section-label">Reserve your spot</div>
-        <h3 id="festival-book-heading">Book the November 9 to 15 departure</h3>
+        <h3 id="festival-book-heading">Book the November 8 to 14 departure</h3>
         <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
 
         <form id="festival-form" class="festival-form">
@@ -210,7 +210,7 @@
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
     const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
-    const DEPARTURE_ID = '2026-11-09';
+    const DEPARTURE_ID = '2027-11-08';
 
     const TIER_LABELS = { early_bird: 'Early Bird', full: 'Full Price' };
 
@@ -237,7 +237,7 @@
 
         if (departure.remaining <= 0) {
           document.getElementById('festival-book-heading').textContent = 'This departure is fully booked';
-          document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for November 9–15, 2026 are taken. Get in touch if you’d like to be notified about future departures.';
+          document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for November 8–14, 2027 are taken. Get in touch if you’d like to be notified about future departures.';
           document.getElementById('festival-form').style.display = 'none';
           return;
         }
