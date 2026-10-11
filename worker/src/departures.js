@@ -30,6 +30,24 @@ export const DEPARTURES = [
     },
   },
   {
+    // Italian Spring Experience: Easter week, 7 nights (Tue to Tue).
+    // Flat price per Nikolai, no early-bird tier; both keys equal, like Summer.
+    id: '2027-03-23',
+    label: 'March 23–30, 2027',
+    start_date: '2027-03-23',
+    end_date: '2027-03-30',
+    capacity: 8,
+    currency: 'eur',
+    active: true,
+    pricing: {
+      early_bird: 2250,
+      full: 2250,
+    },
+    pricing_windows: {
+      early_bird_until: '2027-01-31',
+    },
+  },
+  {
     id: '2027-08-09',
     label: 'August 9–15, 2027',
     start_date: '2027-08-09',
