@@ -51,7 +51,18 @@ Con il paese o gli ulivi dietro:
 - [ ] "What actually happens on a Rasna trip"
 - [ ] "Why only eight people"
 
-## 6. Foto
+## 6. Con gli amici: com'è un viaggio Rasna
+Chiedi prima a ciascuno se va bene apparire su Instagram. Mai presentarli
+come clienti paganti o recensioni: sono amici in un weekend a Blera.
+- [ ] Gruppo che cammina verso l'uliveto o le tombe, ripresa da dietro
+- [ ] Qualcuno che raccoglie per la prima volta: mani, reazione, risate
+- [ ] Il primo assaggio dell'olio nuovo sul pane: la faccia è il contenuto
+- [ ] La tavola: piatti che passano, bicchieri, mani, rumore di voci
+- [ ] Brindisi (mani e bicchieri)
+- [ ] Qualcuno che entra in una tomba con la torcia
+- [ ] Domanda veloce in camera: "What surprised you about Blera?" (solo chi vuole)
+
+## 7. Foto
 - [ ] 10–15 foto tue ovunque: per i caroselli **e per sostituire sul sito le
       foto prese da internet** (risolve il rischio diritti d'autore)
 
