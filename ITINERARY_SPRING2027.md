@@ -1,6 +1,6 @@
-# Rasna — Italian Spring Experience, March 23–29 2027 (draft)
+# Rasna — Italian Spring Experience, March 23–29 2027
 
-First draft of a third fixed departure, built only from activities already
+**Dates chosen by Nikolai 2026-10-11: end of March (Easter week).** Third fixed departure, built only from activities already
 in the catalog and `BUSINESS_PLAN.md`'s seasonal calendar. Not live, no
 vendor quotes yet.
 
@@ -67,12 +67,6 @@ the pilgrimage.
 - **Asparagus** depends on the rain in February and March. Thin year: fall back to artichokes.
 - **Good Friday** is traditionally meatless for many families; the cheese part of the Civitella Cesi day is fine, keep any cured-meat tasting off Friday.
 
-## Alternative window (if Easter can't be staffed)
-**Mon April 19 – Sun April 25 2027**, ending on Liberazione (Apr 25). Warmer,
-asparagus at its peak, hosts free, flights cheaper. Loses the pilgrimage
-and the Easter table, so it is a weaker story.
-
 ## Open decisions (Nikolai)
-- Easter week or late April?
 - Price: flat €2,125 like Summer?
 - Easter Sunday lunch: a family table (best story, hardest to staff) or an agriturismo Easter menu (bookable, reliable)?
