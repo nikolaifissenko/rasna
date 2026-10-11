@@ -1181,3 +1181,23 @@ in 2026 is most likely Nov 6–8, before the old Nov 9–15 departure (see
   default carried over from 2026, not confirmed by Nikolai.
 - Not changed: the Oct 2026 Instagram carousel in `instagram/` still
   shows the 2026 dates and €1,825-until-Oct-19 offer. Don't reuse it as is.
+
+## 2026-10-11 session: Italian Spring Experience added (waitlist only)
+
+Third fixed departure, Easter week **Tue Mar 23 – Tue Mar 30, 2027**, flat
+**€2,250** (7 nights), itinerary agreed day by day with Nikolai (see
+`ITINERARY_SPRING2027.md`). New page family
+`italian-spring-experience-{itinerary,host,highlights,lodging,pricing,faq}.html`,
+generated from the Summer family (same template, own subnav). `index.html`
+gets a fourth panel `#panel-spring` / `#spring-week`, a fourth tab button in
+every tab-switcher copy, an "Easter Spring Experience" nav link, `spring` in
+`showTab()`'s panel map, and an exact-match `#spring-week` on-load exception
+next to the `#summer-week` one. Spring calendar grid has 8 columns via an
+inline `grid-template-columns:84px repeat(8, 1fr)` override (global CSS is 7).
+
+**Booking is deliberately not open:** the pricing page has a Formspree
+waitlist form (`#waitlist`, same `xlgynpjo` endpoint, `_subject` "Spring
+Experience waitlist"), no Stripe, and the worker has **no** spring
+departure yet. Open booking only after Nikolai confirms the Easter hosts;
+the steps are at the bottom of `ITINERARY_SPRING2027.md`. Spring copy names
+no local hosts (standing rule); the Summer pages still do (pre-existing).
