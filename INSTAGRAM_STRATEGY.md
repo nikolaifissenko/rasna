@@ -1,5 +1,7 @@
 # Instagram Strategy
 
+**Account: [@rasna.experience](https://www.instagram.com/rasna.experience/)** (live, confirmed by Nikolai 2026-10-11; linked from every site footer and the `TravelAgency` schema `sameAs`). Instagram blocks logged-out fetches from the sandbox (429/login wall), so Claude can't read the profile directly: ask Nikolai what's posted.
+
 Social is the bigger lever for a business this size — SEO gets you found
 when someone's already searching; Instagram is what makes someone start
 searching in the first place, and it's where "authentic Italy" travelers
