@@ -1195,9 +1195,13 @@ every tab-switcher copy, an "Easter Spring Experience" nav link, `spring` in
 next to the `#summer-week` one. Spring calendar grid has 8 columns via an
 inline `grid-template-columns:84px repeat(8, 1fr)` override (global CSS is 7).
 
-**Booking is deliberately not open:** the pricing page has a Formspree
-waitlist form (`#waitlist`, same `xlgynpjo` endpoint, `_subject` "Spring
-Experience waitlist"), no Stripe, and the worker has **no** spring
-departure yet. Open booking only after Nikolai confirms the Easter hosts;
-the steps are at the bottom of `ITINERARY_SPRING2027.md`. Spring copy names
-no local hosts (standing rule); the Summer pages still do (pre-existing).
+**Bookable (same session, at Nikolai's request):** worker departure
+`2027-03-23` (flat 2250/2250, `early_bird_until` inert) pushed to
+`claude/magical-franklin-58SKM`; `italian-spring-experience-pricing.html`
+rebuilt from the Summer pricing page with `DEPARTURE_ID = '2027-03-23'`
+(real Stripe form, waiver/privacy checkboxes). The interim Formspree
+waitlist is gone. The Spring hub on `index.html` also got a 6-card
+`.hub-activities-grid` (same `.ha-card` component as the Olive hub).
+Easter hosts are **not** confirmed yet (see `ITINERARY_SPRING2027.md`), a
+risk Nikolai accepted. Spring copy names no local hosts (standing rule); the
+Summer pages still do (pre-existing).

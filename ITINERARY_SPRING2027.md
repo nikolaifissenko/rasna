@@ -1,9 +1,10 @@
 # Rasna — Italian Spring Experience, March 23–30 2027
 
-Third fixed departure, Easter week. **Live on the site 2026-10-11 as a
-waitlist only** (`italian-spring-experience-*.html`, `index.html#spring-week`).
-No Stripe departure in the worker yet: booking opens once the Easter hosts
-are confirmed in writing. Itinerary agreed with Nikolai 2026-10-11.
+Third fixed departure, Easter week. **Live and bookable since 2026-10-11**
+(`italian-spring-experience-*.html`, `index.html#spring-week`, worker
+departure `2027-03-23`, Stripe live). Nikolai chose to open booking before
+the Easter hosts are confirmed, so the items below are now urgent, not a
+gate. Itinerary agreed with Nikolai 2026-10-11.
 
 **Price:** flat €2,250 per person, 7 nights (Tue 23 to Tue 30).
 
@@ -19,7 +20,7 @@ are confirmed in writing. Itinerary agreed with Nikolai 2026-10-11.
 | Mon 29 (Pasquetta) | 7:30 pilgrimage, Santa Maria to the grotto of San Vivenzio | Free | Farewell dinner |
 | Tue 30 | Last breakfast | FCO transfer | |
 
-## Before opening booking (lock in writing)
+## Lock in writing as soon as possible (booking is already open)
 - Terrarte for the Easter party (Sunday 28).
 - The cantina for the screening and dinner (Sunday 28).
 - Cheese host on Holy Saturday (27).
@@ -29,10 +30,7 @@ are confirmed in writing. Itinerary agreed with Nikolai 2026-10-11.
   private (guests only, no tickets, nothing promoted beyond the itinerary
   line), or get the distributor's OK.
 
-Then add a `2027-03-23` departure to `worker/src/departures.js` on
-`claude/magical-franklin-58SKM` (flat 2250/2250, like Summer) and swap the
-waitlist form on `italian-spring-experience-pricing.html` for the Stripe
-booking form copied from the Summer pricing page.
+If any of these falls through, use the `CONTINGENCY_PLAN.md` logic and tell booked guests early (a program change is covered by the policies section, a cancellation by us means a full refund).
 
 ## Risks
 - **Easter is a family holiday.** Hosts, restaurants and drivers may not work Easter Sunday or Pasquetta.

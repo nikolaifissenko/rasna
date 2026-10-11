@@ -703,3 +703,12 @@ needed. Numbering below kept as-is from when it was written.)_
   Search Console verification for next session) are tracked in
   `CLAUDE.md`, not here — this file stays scoped to booking/payment
   backend status.
+
+
+## 2026-10-11: departures now on sale
+
+- `2027-03-23` Italian Spring Experience (Easter week, Mar 23–30, 2027), flat €2,250, 7 nights. New.
+- `2027-08-09` Italian Summer Experience, flat €2,125. Unchanged.
+- `2027-11-08` Italian Olive Experience (Nov 8–14, 2027), €1,825 early bird until 2027-06-15, then €2,125. Replaces `2026-11-09`, which is now `active: false` (0 bookings, Cantine Festival likely the weekend before it; see `ITINERARY_NOV2027.md`).
+
+All three take live Stripe payment through the same worker. No D1 migration was needed.

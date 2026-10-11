@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing &amp; Booking | Italian Spring Experience | Rasna</title>
-  <meta name="description" content="The Italian Spring Experience, Easter week, March 23-30, 2027 in Blera, Italy. €2,250 per person, all-inclusive, capped at 8 guests. Join the waitlist.">
+  <meta name="description" content="Book the Italian Spring Experience, Easter week, March 23-30, 2027 in Blera, Italy. €2,250 per person, all-inclusive, 7 nights. Capped at 8 guests.">
   <link rel="canonical" href="https://rasnaexperience.com/italian-spring-experience-pricing.html">
   <meta property="og:title" content="Pricing &amp; Booking | Italian Spring Experience">
-  <meta property="og:description" content="€2,250 per person, all-inclusive, Easter week in Blera. Capped at 8 guests. Join the waitlist.">
+  <meta property="og:description" content="€2,250 per person, all-inclusive, Easter week in Blera. Capped at 8 guests.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://rasnaexperience.com/italian-spring-experience-pricing.html">
   <meta property="og:image" content="https://rasnaexperience.com/images/card-pellegrinaggio.jpg">
@@ -18,7 +18,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-    <script type="application/ld+json">
+  <script>window.RASNA_API_BASE = 'https://rasna-booking-api.nikolai-fissenko1.workers.dev';</script>
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -65,7 +66,7 @@
       <a href="index.html#contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="#waitlist" class="nav-btn">Get a Quote</a>
+      <a href="#festival-book" class="nav-btn">Get a Quote</a>
     </div>
   </nav>
 
@@ -88,7 +89,7 @@
       <div class="divider"></div>
       <svg class="etruscan-ornament" width="42" height="32" style="color:var(--gold); margin-bottom:0.6rem"><use href="#palmette"/></svg>
       <h1 style="font-size:clamp(2rem, 5vw, 3.4rem); letter-spacing:0.03em; text-transform:none;">Pricing &amp; Booking</h1>
-      <p class="tagline" style="margin-top:1rem;">One flat price, all-inclusive. Capped at 8 guests. Booking opens soon: join the waitlist.</p>
+      <p class="tagline" style="margin-top:1rem;">One flat price, all-inclusive. Capped at 8 guests, one departure a year.</p>
     </div>
   </section>
 
@@ -119,29 +120,27 @@
       </div>
       <p class="fade-in" style="text-align:center; margin-top:1.6rem; font-size:0.85rem;"><a href="index.html#policies" style="color:var(--terracotta);">Cancellation policy</a> &middot; <a href="liability-waiver.html" style="color:var(--terracotta);">Liability waiver</a> &middot; <a href="privacy-policy.html" style="color:var(--terracotta);">Privacy policy</a></p>
 
-      <div class="festival-book fade-in" id="waitlist" style="scroll-margin-top:78px;">
-        <div class="section-label">Booking opens soon</div>
-        <h3>Join the waitlist for Easter week</h3>
-        <p>We're confirming the Easter-week hosts now. Leave your details and you'll be the first to hear when booking opens, with first pick of the 8 spots. No payment, no commitment.</p>
+      <div class="festival-book fade-in" id="festival-book" style="scroll-margin-top:78px;">
+        <div class="section-label">Reserve your spot</div>
+        <h3 id="festival-book-heading">Book the March 23 to 30 departure</h3>
+        <p id="festival-book-subtitle">Only <span id="festival-remaining">8</span> spots left for this departure. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.</p>
 
-        <form id="waitlist-form" class="festival-form" action="https://formspree.io/f/xlgynpjo" method="POST">
-          <input type="hidden" name="_subject" value="Spring Experience waitlist">
-          <input type="hidden" name="trip" value="Italian Spring Experience, March 23-30, 2027">
+        <form id="festival-form" class="festival-form">
           <div class="form-row">
             <div class="form-group">
-              <label for="wl-name">Your name</label>
-              <input type="text" id="wl-name" name="name" required placeholder="Full name">
+              <label for="fw-name">Your name</label>
+              <input type="text" id="fw-name" name="name" required placeholder="Full name">
             </div>
             <div class="form-group">
-              <label for="wl-email">Email</label>
-              <input type="email" id="wl-email" name="email" required placeholder="your@email.com">
+              <label for="fw-email">Email</label>
+              <input type="email" id="fw-email" name="email" required placeholder="your@email.com">
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="wl-guests">How many guests?</label>
-              <select id="wl-guests" name="guests" required>
+              <label for="fw-guests">Number of guests</label>
+              <select id="fw-guests" name="guests" required>
                 <option value="">Select...</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -156,16 +155,29 @@
           </div>
 
           <div class="form-group">
-            <label for="wl-notes">Anything else we should know?</label>
-            <textarea id="wl-notes" name="notes" placeholder="Questions about the trip, dietary needs..."></textarea>
+            <label for="fw-notes">Anything else we should know?</label>
+            <textarea id="fw-notes" name="notes" placeholder="Dietary needs, questions about the trip..."></textarea>
           </div>
 
-          <button type="submit" class="cta-button-solid festival-submit">Join the Waitlist &rarr;</button>
+          <div class="form-consent" style="margin:1.4rem 0;">
+            <label style="display:flex; align-items:flex-start; gap:0.7rem; margin-bottom:0.9rem; cursor:pointer; text-transform:none; letter-spacing:normal; font-weight:400; color:var(--earth);">
+              <input type="checkbox" id="fw-accept-waiver" name="accepted_waiver" required style="width:auto; flex:0 0 auto; padding:0; margin-top:0.2rem; border:none; background:none;">
+              <span style="flex:1; font-size:0.85rem; line-height:1.5; opacity:0.85;">I've read and accept the <a href="liability-waiver.html" target="_blank" rel="noopener" style="color:var(--terracotta);">Liability Waiver &amp; Assumption of Risk</a>. I understand this trip includes physical activities that carry inherent risk, and that Rasna isn't liable for injury from the ordinary risk of an activity, only for injury caused by its own fault.</span>
+            </label>
+            <label style="display:flex; align-items:flex-start; gap:0.7rem; cursor:pointer; text-transform:none; letter-spacing:normal; font-weight:400; color:var(--earth);">
+              <input type="checkbox" id="fw-accept-privacy" name="accepted_privacy" required style="width:auto; flex:0 0 auto; padding:0; margin-top:0.2rem; border:none; background:none;">
+              <span style="flex:1; font-size:0.85rem; line-height:1.5; opacity:0.85;">I've read and accept the <a href="privacy-policy.html" target="_blank" rel="noopener" style="color:var(--terracotta);">Privacy Policy</a>, including how my name, email, and payment details are used to process this booking.</span>
+            </label>
+          </div>
+
+          <div class="booking-error" id="festival-error" style="display:none; color:#c0392b; margin-bottom:1rem;"></div>
+
+          <button type="submit" class="cta-button-solid festival-submit" id="festival-submit-btn">Pay &amp; Reserve My Spot &rarr;</button>
         </form>
 
-        <div class="festival-success" id="waitlist-success">
+        <div class="festival-success" id="festival-success">
           <h3>Grazie!</h3>
-          <p>You're on the list. We'll email you as soon as booking opens.</p>
+          <p>Taking you to secure checkout now&hellip;</p>
         </div>
       </div>
     </div>
@@ -179,7 +191,7 @@
   <div class="etruscan-border-dark"><svg width="100%" height="26"><rect width="100%" height="26" fill="url(#meander)"/></svg></div>
 
   <section style="padding:2.5rem 2rem 3.5rem; text-align:center;">
-    <a href="italian-spring-experience-faq.html" class="cta-button">Questions? &rarr;</a>
+    <a href="italian-spring-experience-faq.html" class="cta-button">Questions before you book? &rarr;</a>
   </section>
 
   <footer>
@@ -192,16 +204,85 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+    const API_BASE = window.RASNA_API_BASE || 'http://localhost:4242';
+    const DEPARTURE_ID = '2027-03-23';
+
+    fetch(API_BASE + '/api/departures')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        const departure = (data.departures || []).find(function(d) { return d.id === DEPARTURE_ID; });
+        if (!departure) return;
+        document.getElementById('festival-remaining').textContent = departure.remaining;
+
+        if (departure.price_per_person) {
+          document.getElementById('price-chart-flat').textContent = '€' + departure.price_per_person;
+        }
+
+        if (departure.remaining <= 0) {
+          document.getElementById('festival-book-heading').textContent = 'This departure is fully booked';
+          document.getElementById('festival-book-subtitle').textContent = 'All 8 spots for March 23–30, 2027 are taken. Get in touch if you’d like to be notified about future departures.';
+          document.getElementById('festival-form').style.display = 'none';
+          return;
+        }
+        if (departure.price_per_person) {
+          document.getElementById('festival-book-subtitle').innerHTML =
+            'Only <span id="festival-remaining">' + departure.remaining + '</span> spots left for this departure &middot; ' +
+            '€' + departure.price_per_person + ' per person. Full payment is collected securely via Stripe and your spot is confirmed the moment payment goes through.';
+        }
+      })
+      .catch(function() { /* leave defaults if the API is unreachable */ });
+
+    document.getElementById('festival-form').addEventListener('submit', function(e) {
       e.preventDefault();
+
       const form = this;
-      fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
-        .then(function(r) {
-          if (!r.ok) throw new Error();
-          form.style.display = 'none';
-          document.getElementById('waitlist-success').style.display = 'block';
+      const errorBox = document.getElementById('festival-error');
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const data = new FormData(form);
+      const btn = document.getElementById('festival-submit-btn');
+      errorBox.style.display = 'none';
+      btn.disabled = true;
+      btn.textContent = 'Processing...';
+
+      fetch(API_BASE + '/api/bookings/fixed', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          departure_id: DEPARTURE_ID,
+          name: data.get('name'),
+          email: data.get('email'),
+          num_guests: Number(data.get('guests')),
+          notes: data.get('notes') || '',
+          accepted_waiver: document.getElementById('fw-accept-waiver').checked,
+          accepted_privacy: document.getElementById('fw-accept-privacy').checked
         })
-        .catch(function() { form.submit(); });
+      })
+        .then(function(response) {
+          return response.json().then(function(body) { return { ok: response.ok, body: body }; });
+        })
+        .then(function(result) {
+          if (result.ok && result.body.url) {
+            form.style.display = 'none';
+            document.getElementById('festival-success').style.display = 'block';
+            window.location.href = result.body.url;
+          } else {
+            errorBox.textContent = result.body.error || 'Something went wrong. Please try again.';
+            errorBox.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Pay & Reserve My Spot →';
+          }
+        })
+        .catch(function() {
+          errorBox.textContent = 'Could not reach the booking service. Please try again shortly.';
+          errorBox.style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Pay & Reserve My Spot →';
+        });
     });
   </script>
 
