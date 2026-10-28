@@ -27,9 +27,9 @@ civitavecchia.portmobility.it, siviaggia.it (Blera).
 
 ## Caption
 
-> Most people in Rome queue for an hour to look at ruins from behind a rope. A two-hour drive north, a group from Rome spent the morning walking straight into them.
+> Most people in Rome queue for an hour to look at ruins from behind a rope. Ninety minutes north, a group from Rome spent the morning walking straight into them.
 >
-> We followed a local archaeologist down into the valley below Blera, to the necropolis of Pian del Vescovo. Etruscan families carved these tombs into the tufo from the 7th century BC: cube-shaped tombs cut free from the cliff, chambers you duck into with a torch. Below them runs the Via Clodia, and the Roman bridge the road crossed is still standing. No tickets, no fence, no one else there.
+> We followed a local guide down into the valley below Blera, to the necropolis of Pian del Vescovo. Etruscan families carved these tombs into the tufo from the 7th century BC: cube-shaped tombs cut free from the cliff, burial chambers you step down into. Below them runs the Via Clodia, and what is left of the Roman bridge it crossed, the Ponte della Rocca. No tickets, no fence, no one else there.
 >
 > This is Blera, Tuscia, 90 minutes from Rome. The tombs are part of every Rasna week, walked slowly, with someone who knows what you're looking at. Link in bio.
 >
@@ -37,4 +37,4 @@ civitavecchia.portmobility.it, siviaggia.it (Blera).
 
 Alternative middle paragraph (Casetta):
 
-> We followed a local archaeologist out to the necropolis of the Casetta, on the hill north of Blera. Rows of cube tombs cut from the tufo, like a second village for the dead, and inside the Grotta Penta, chambers still plastered and painted with bands of colour 2,500 years later. No tickets, no fence, no one else there.
+> We followed a local guide out to the necropolis of the Casetta, on the hill north of Blera. Rows of cube tombs cut from the tufo, like a second village for the dead, and inside the Grotta Penta, chambers still plastered and painted with bands of colour 2,500 years later. No tickets, no fence, no one else there.
