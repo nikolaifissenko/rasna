@@ -12,29 +12,22 @@ the same text). The headline says 2,600, not "older than Rome", because
 Blera's tombs date from the 7th century BC onward, after Rome's
 traditional founding date (753 BC).
 
-## Which necropolis (to confirm with Nikolai)
+## Which necropolis
 
-He said "on the right side of Blera". The caption assumes **Pian del
-Vescovo**: the best-known site, on a tufa plateau between the Ricanale
-and Biedano valleys, cube tombs and chamber tombs from the 7th c. BC,
-next to the Via Clodia and the Roman Ponte della Rocca (1st c. BC).
-If it was **Casetta** (north of town: cube and half-cube tombs, the
-plastered and painted Grotta Penta chambers, a Doric column), use the
-alternative middle paragraph below.
+**Casetta**, confirmed by Nikolai 2026-10-28 (not Pian del Vescovo). North
+of town, on the tufo slopes: rows of cube (dado) and half-cube tombs, and
+the Grotta Penta chambers, plastered with traces of painted bands, with a
+Doric column. Sources spell it "Grotta Penta" or "Grotta Pinta"; Penta is
+used here.
 
-Sources: museionline.info (Pian del Vescovo), pleiades.stoa.org/places/413054,
-civitavecchia.portmobility.it, siviaggia.it (Blera).
+Sources: pleiades.stoa.org/places/413054, siviaggia.it (Blera).
 
 ## Caption
 
 > Most people in Rome queue for an hour to look at ruins from behind a rope. Ninety minutes north, a group from Rome spent the morning walking straight into them.
 >
-> We followed a local guide down into the valley below Blera, to the necropolis of Pian del Vescovo. Etruscan families carved these tombs into the tufo from the 7th century BC: cube-shaped tombs cut free from the cliff, burial chambers you step down into. Below them runs the Via Clodia, and what is left of the Roman bridge it crossed, the Ponte della Rocca. No tickets, no fence, no one else there.
+> We followed a local guide out to the necropolis of the Casetta, on the slopes north of Blera. Rows of cube tombs cut out of the tufo, laid out like a second village for the dead, and inside the Grotta Penta, chambers still plastered, with traces of the painted bands the Etruscans left on the walls. No tickets, no fence, no one else there.
 >
 > This is Blera, Tuscia, 90 minutes from Rome. The tombs are part of every Rasna week, walked slowly, with someone who knows what you're looking at. Link in bio.
 >
 > #Blera #Tuscia #EtruscanItaly #SlowTravel #ItalyTravel
-
-Alternative middle paragraph (Casetta):
-
-> We followed a local guide out to the necropolis of the Casetta, on the hill north of Blera. Rows of cube tombs cut from the tufo, like a second village for the dead, and inside the Grotta Penta, chambers still plastered and painted with bands of colour 2,500 years later. No tickets, no fence, no one else there.
