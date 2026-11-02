@@ -366,11 +366,39 @@ next post is picked.
 - **Pillar:** Process (pillar 1). "No Tourists Italy" series (Reel, uses
   the fixed opener).
 - **Footage:** Nikolai's own video at the Colli Etruschi mill in Blera —
-  olives going into the mill during harvest season. Real footage, so no
-  AI cover: cover is a frame pulled from the video (olives mid-pour into
-  the hopper, hands/crates in frame, no worker faces unless they've
-  agreed), warm grade, 9:16, "WELCOME TO NO TOURISTS ITALY" in the
-  standard serif treatment, top third.
+  olives going into the mill during harvest season. Colli Etruschi is a
+  **big industrial mill** (stainless steel, bins, conveyor/wash line), not
+  a small traditional frantoio — keep cover imagery consistent with that.
+- **Cover (Nikolai's call 2026-11-02): AI-generated, same template as
+  earlier covers,** not a frame from the video. Ideal long-term is still
+  a real frame. Prompt used (paste into Gemini/ChatGPT):
+  > A realistic, cinematic photograph (not illustration) of a large modern
+  > industrial olive mill in Blera, Tuscia, Italy, during harvest season.
+  > Freshly picked olives tumbling from a big plastic harvest bin into a
+  > wide stainless-steel intake hopper, then riding up a conveyor belt
+  > toward the washing and leaf-removal line. Olive leaves and twigs mixed
+  > in, dark green and purple olives in motion. Stainless-steel machinery,
+  > pipes and tanks in the background, softly out of focus. A worker's
+  > gloved hands or forearms at the edge of frame, no faces. Warm low
+  > light coming through a big open loading-bay door and mixing with the
+  > mill lights. Color grade: muted sandy cream, olive green, terracotta,
+  > deep bordeaux, dark umber — desaturated, not vivid, no cold blue
+  > fluorescent cast. Documentary handheld feel, natural, unstaged, no
+  > signage, no logos, no brand names on the machines. Vertical 9:16,
+  > cinematic depth of field, natural film grain.
+  > Overlay small serif text near the top third, warm cream/gold,
+  > tracked-out letterforms (style: Cormorant Garamond), reading exactly:
+  > "WELCOME TO NO TOURISTS ITALY" — no box, no bar, sitting directly on
+  > the photo. No other text.
+
+  "No cold blue fluorescent cast" is the key line for any industrial
+  interior — without it generators default to the cold factory look.
+  If the generator garbles the text, regenerate with "no text" and lay a
+  transparent 1080×1920 title PNG on top in CapCut (one was rendered in
+  Cormorant Garamond 500, cream `#ECE0C8`, tracked +9, two lines centred
+  at y≈500 so it survives the 3:4 grid crop — regenerate the same way if
+  needed; no image-gen tool exists in Claude sessions, so the image
+  itself always has to be made by Nikolai in Gemini/ChatGPT).
 - **Caption (final draft):**
   > Welcome to No Tourists Italy.
   >
@@ -389,7 +417,8 @@ next post is picked.
   > #Tuscia #Blera #EtruscanItaly #OliveHarvest #ItalyTravel
 - **CTA context:** live departures as of 2026-11-02 are Mar 23–30 2027,
   Aug 9–15 2027, Nov 8–14 2027 (the harvest one) — all 0/8 booked.
-- **Status:** caption + cover spec delivered; waiting on Nikolai to post.
+- **Status:** caption final + cover prompt delivered 2026-11-02; Nikolai
+  generating the cover and posting. Mark SHIPPED next session once posted.
 
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 
