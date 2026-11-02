@@ -361,6 +361,36 @@ Track what's decided-but-not-yet-shot here so planning survives between
 sessions. Update the top entry when a post ships; add a new one when the
 next post is picked.
 
+### 2026-11-02 — Ready: Colli Etruschi olive mill Reel
+
+- **Pillar:** Process (pillar 1). "No Tourists Italy" series (Reel, uses
+  the fixed opener).
+- **Footage:** Nikolai's own video at the Colli Etruschi mill in Blera —
+  olives going into the mill during harvest season. Real footage, so no
+  AI cover: cover is a frame pulled from the video (olives mid-pour into
+  the hopper, hands/crates in frame, no worker faces unless they've
+  agreed), warm grade, 9:16, "WELCOME TO NO TOURISTS ITALY" in the
+  standard serif treatment, top third.
+- **Caption (final draft):**
+  > Welcome to No Tourists Italy.
+  >
+  > Most people meet olive oil at the very end — a bottle, a label, a
+  > story printed on the back. This is the part before the label: crates
+  > of olives picked that morning, tipped straight into the mill and
+  > coming out the other side as bright green oil. No tasting room, no
+  > tour slot — just harvest season in Tuscia doing what it does every
+  > November.
+  >
+  > This is Colli Etruschi, the olive mill in Blera — 90 minutes from
+  > Rome, 2,800 years of Etruscan history, zero tour buses. On a Rasna
+  > trip you pick in the morning and follow the olives to the mill in
+  > the afternoon. Link in bio if you want to take the oil home yourself.
+  >
+  > #Tuscia #Blera #EtruscanItaly #OliveHarvest #ItalyTravel
+- **CTA context:** live departures as of 2026-11-02 are Mar 23–30 2027,
+  Aug 9–15 2027, Nov 8–14 2027 (the harvest one) — all 0/8 booked.
+- **Status:** caption + cover spec delivered; waiting on Nikolai to post.
+
 ### 2026-08-27 — SHIPPED: Donkey trek carousel (Grotta Porcina)
 
 Posted by Nikolai to Instagram 2026-08-27 — shipped out of queue order
